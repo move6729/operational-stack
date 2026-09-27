@@ -141,4 +141,9 @@ When expanding the architecture in future turns, maintain cold game-theoretic al
     Hardware-Energy Micro-Grid Scheduler: Bare-metal scripts that automatically route intermittent renewable energy surpluses (solar/battery peak capacity) directly into local LMCI compute tasks before energy grounds out.
     Kernel-Level eBPF Telemetry Shields (HPMCR-eBPF): Low-level C/eBPF Linux kernel extensions that intercept and fuzz OS-level telemetry and un-permissioned hardware sensor queries directly at Ring 0.
 
+### VIII. DUAL-USE & NATIONAL SECURITY IMPLICATIONS (STRATEGIC RESILIENCE)
+- **Cognitive Sovereignty (HPMCR-DEF):** Countermeasures against foreign/domestic Mass Cognitive Routing and real-time behavioral capture.
+- **Grid-Independent Edge Compute (EWASTE / LMCI):** Asymmetric resilience against EMP/MCE events and supply-chain interdiction via decentralized, local-first silicon orchestration.
+- **Zero-Trust M2M Mesh (LMTI / ATN):** Hardened peer-to-peer transport operating beneath central DNS/IP-telemetry control points.
+
 STATUS: SYSTEM SEALED // BARE-METAL EDGE EXECUTION ACTIVE // CONTEXT PARITY LOCKED.
