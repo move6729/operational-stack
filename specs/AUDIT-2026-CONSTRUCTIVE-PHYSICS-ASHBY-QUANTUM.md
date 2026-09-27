@@ -1,6 +1,6 @@
-# AUDIT-2026-CONSTRUCTIVE-SIM-ASHBY-QUANTUM
+# AUDIT-2026-CONSTRUCTIVE-PHYSICS-ASHBY-QUANTUM
 
-**Canonical Reference:** `SPEC-2026-CONSTRUCTIVE-SIM-ASHBY-QUANTUM-v1.0`  
+**Canonical Reference:** `SPEC-2026-CONSTRUCTIVE-PHYSICS-ASHBY-QUANTUM-v1.0`  
 **Classification:** Systems Architecture / Quantum Thermodynamics / Cybernetic Defense  
 **License:** Unlicense (Public Domain — Zero-Rent Federation)  
 **Parent System:** `OPERATIONAL-STACK v2.1`  
@@ -11,7 +11,7 @@
 
 1. **The Classical Predictability Bottleneck:** Centralized platforms attempt to construct predictive digital models of high-variety physical environments ($\mathcal{V}_E \to \infty$) using low-entropy optimization metrics ($\mathcal{L}_{\text{Central}}$).
 2. **The Cybernetic Deficit:** By Ashby’s Law ($\mathcal{V}_{\text{System}} \ge \mathcal{V}_{\text{Environment}}$), a low-entropy classical controller cannot predict or govern a high-variety biological operator without systematically degrading the operator's internal state-space.
-3. **The Biological Quantum & Energy Advantage:** Biological neural architectures leverage quantum superposition within sub-cellular structures to achieve exponential state variety ($\mathcal{V}_I = 2^N$) within a minimal power envelope ($\approx 20\text{ W}$).
+3. **The Biological Quantum & Energy Advantage:** Under quantum biology frameworks, biological neural architectures leverage sub-cellular quantum coherence to achieve exponential state variety ($\mathcal{V}_I = 2^N$) within a minimal power envelope ($\approx 20\text{ W}$).
 4. **Physical & Infrastructure Vulnerability:** Monolithic silicon compute clusters rely on fragile supply chains and are susceptible to single-point grid failures (EMP/MCE events). Biological nodes are localized, self-replicating, and resilient across dynamic physical domains.
 
 ---
@@ -29,7 +29,7 @@ $$\text{Power}_{\text{Brain}} \approx 20\text{ Watts} \ll \text{Power}_{\text{Da
 #### 3. Telemetry Loss-Function Divergence (HPMCR-DEF Invariant)
 $$\text{Raw Telemetry } (T) + \text{Uniform Noise } (\mathcal{U}[-a, a]) \implies \nabla \mathcal{L}_{\text{Server}} \to \text{Divergent}$$
 
-#### 4. Closed-Sim Zero-Variety Limit
+#### 4. Closed Physical System Zero-Variety Limit
 $$\lim_{\mathcal{V}_E \to 0} \mathcal{V}_{\text{System}} = 1 \implies \text{Stasis (System Extinction)}$$
 
 ---
