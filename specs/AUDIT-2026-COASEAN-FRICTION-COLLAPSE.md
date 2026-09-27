@@ -32,7 +32,7 @@ The Operational Stack (`ATN/SENSE/ASHBY`) replaces ad-auction discovery with **I
 └──────────────────────────────────────┴────────────────────────────────────────────────────────┘
 
 
-When coordination executes over open Directed Acyclic Graphs (`ATN-v1.0`) and open physical sensing maps (`SENSE-v1.0`), customer intent (*"Find certified plumber, location $X$, time $Y$, budget $Z$"*) resolves directly against operator availability vectors via deterministic matching algorithms.
+When coordination executes over open Directed Acyclic Graphs (`ATN-v1.0`), customer intent (*"Find certified plumber, location $X$, time $Y$, budget $Z$"*) resolves directly against operator availability vectors via deterministic matching algorithms.
 
 The requirement for marketing, ad budgets, and platform reputation management collapses to zero ($\text{Marketing OpEx} \to 0$).
 
@@ -48,7 +48,19 @@ When software coordination costs approach zero ($C_s \to 0$), the financial marg
 
 ---
 
-## 4. System Invariants
+## 4. The Ideological Bounded Mental Model (SaaS Lock-in vs. Open Federation)
+
+Incumbent technology capital frequently mischaracterizes zero-rent, open-protocol architectures through false economic dichotomies (e.g., mislabeling open, non-monopolizable infrastructure as "digital communism"). 
+
+This misdiagnosis stems from a bounded economic mental model that recognizes only two structural states:
+1. **Centralized Enterprise Tollbooths:** High switching costs ($C_s$), proprietary lock-in, and 30% platform rents.
+2. **State-Controlled Redistribution:** Centralized bureaucratic command economies.
+
+Open-protocol cybernetic sovereignty represents a third, distinct economic vector: **pure, non-monopolizable market federation running on bare-metal physical math**. By reducing coordination overhead to the raw cost of electricity ($OpEx \to \text{Watts}$) via public domain specifications (`Unlicense`), open networks do not abolish market dynamics—they eliminate non-productive intermediary extraction, returning 100% of transaction yields to physical edge operators.
+
+---
+
+## 5. System Invariants
 
 1. **Elimination of Marketing Friction:** Open protocol discovery matches physical intent using verified state vectors, making paid advertising and platform SEO obsolete for local coordination.
 2. **Meritocratic Verification Over Ad Spend:** Operator reputation is established via cryptographically verified output state hashes (`expected_output_hash`), not paid sponsorships or manipulated review algorithms.
@@ -56,6 +68,6 @@ When software coordination costs approach zero ($C_s \to 0$), the financial marg
 
 ---
 
-## 5. Conclusion
+## 6. Conclusion
 
-Dismantled platform rents do not represent a utopian ideal; they represent the natural economic result of zero-friction protocol coordination. By stripping away ad-auctions, proprietary search gatekeepers, and SaaS tollbooths, the Operational Stack re-establishes extreme positive-sum specialization and restores 100% of earned value to local physical operators.
+Dismantled platform rents do not represent a utopian ideal or state-directed intervention; they represent the natural economic result of zero-friction protocol coordination. By stripping away ad-auctions, proprietary search gatekeepers, and SaaS tollbooths, the Operational Stack re-establishes extreme positive-sum specialization and restores 100% of earned value to local physical operators.
