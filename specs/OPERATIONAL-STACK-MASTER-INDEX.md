@@ -44,6 +44,12 @@ A concept is approved for execution ONLY if it clears all four binary gates:
 - **Bare-Metal Local Inference:** Mandates open-weight local quantized execution (`llama.cpp`, `vLLM`) on Apple Silicon/GPUs. Bypasses cloud LLM APIs.
 - **Encrypted Local Memory:** Embeddings and context state stored locally on disk via encrypted stores (LanceDB, DuckDB). Zero cloud vector DB telemetry leaks.
 
+### Tier 4: External Federated M2M Transport (`open-m2m-reputation-protocol / OMRP-v1.0`)
+- **Transport Layer:** Federated TCP/25 (SMTP) and HTTPS (`/.well-known/omrp-attestation.json`).
+- **Cryptographic Parity:** Inbound edge receivers evaluate sender legitimacy using DKIM key age (`key_inception_timestamp`) and DMARC alignment.
+- **PoW Warming Elimination:** Overrides host-level IP range discrimination (`SNDS-IP-UNKNOWN`) with zero-cost mathematical key proofs. Key age $\ge 30$ days authorizes unthrottled ingest (`250 2.0.0 OK`).
+- **Deterministic Response Contracts:** Edge receivers are prohibited from returning opaque connection drops. Throttles must return explicit key-age parameters (`451 4.7.500 Key age permits max X msgs/hr`).
+
 ---
 
 ## IV. COGNITIVE DEFENSE LAYER (`HPMCR-DEF v1.0`)
