@@ -1,4 +1,4 @@
-# AUDIT-2026-COASEAN-FRICTION-COLLAPSE: The Elimination of Non-Productive Marketing Rents & Extreme Specialization Mechanics
+# AUDIT-2026-COASEAN-FRICTION-COLLAPSE: The Elimination of Non-Productive Marketing Rents, Extreme Specialization, & Cognitive Capital Reallocation
 
 **Classification:** System Architecture Audit / Economic Friction Analysis  
 **Target Reference:** `AUDIT-2026-COASEAN-FRICTION-COLLAPSE`  
@@ -38,13 +38,13 @@ The requirement for marketing, ad budgets, and platform reputation management co
 
 ---
 
-## 3. Economic Consequences: Extreme Specialization & Margin Expansion
+## 3. Structural Reallocation of Cognitive Labor ($\text{G}_f$)
 
-The elimination of intermediary transaction friction triggers two deterministic economic shifts:
+When software coordination costs approach zero ($C_s \to 0$), the financial margin previously captured by non-productive administrative and marketing software evaporates. This triggers a deterministic shift in the economic returns on cognitive labor:
 
-1. **Extreme Human Specialization:** Physical operators focus 100% of their operational capacity on physical domain execution (atoms). Administrative and marketing overhead is offloaded to bare-metal local nodes (`LMCI-v1.0`) running zero-rent open protocols.
-2. **Direct Margin Recovery:** The 20% to 30% surplus previously captured by centralized database gatekeepers is recovered entirely by the local buyer and local physical operator:
-   $$\lim_{\text{Transaction Friction} \to 0} \text{Operator Margin} \to \text{Gross Value} - \text{Electricity Cost}$$
+1. **Marginal Return on Pure Symbol Manipulation Drops:** Managing cloud SaaS abstractions, tweaking ad-auction loss functions, and writing proprietary dialect wrappers yields diminishing economic returns as bare-metal open protocols automate coordination at raw physical cost ($OpEx \to \text{Watts}$).
+2. **Marginal Return on Physical Domain Mastery Rises:** Economic value shifts entirely to the physical and mathematical boundaries—thermodynamics, hardware fabrication, RF spectrum optimization, energy density, biological synthesis, and complex physical integration.
+3. **Cognitive Realignment:** High fluid intelligence ($\text{G}_f$) capital naturally migrates away from desk-bound administrative management and concentrates at the physical boundaries of reality, driving exponential growth in real-world energy, agricultural, and material infrastructure.
 
 ---
 
@@ -52,7 +52,7 @@ The elimination of intermediary transaction friction triggers two deterministic 
 
 1. **Elimination of Marketing Friction:** Open protocol discovery matches physical intent using verified state vectors, making paid advertising and platform SEO obsolete for local coordination.
 2. **Meritocratic Verification Over Ad Spend:** Operator reputation is established via cryptographically verified output state hashes (`expected_output_hash`), not paid sponsorships or manipulated review algorithms.
-3. **Decentralized Economic Efficiency:** Value collapses away from middleman coordination platforms and concentrates entirely at the physical boundaries: physical labor execution and physical compute infrastructure.
+3. **Decentralized Economic Efficiency:** Value collapses away from middleman coordination platforms and concentrates entirely at the physical boundaries: physical labor execution and bare-metal hardware infrastructure.
 
 ---
 
