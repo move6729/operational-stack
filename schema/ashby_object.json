@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/move6729/ashby-ontology-engine/spec/v1.0.json",
+  "title": "AshbySovereignObject",
+  "type": "object",
+  "properties": {
+    "protocol_version": { "type": "string", "enum": ["ASHBY-v1.0"] },
+    "object_id": { "type": "string", "format": "uuid" },
+    "entity_type": { "type": "string" },
+    "local_state_vector": {
+      "type": "object",
+      "properties": {
+        "state_hash": { "type": "string" },
+        "timestamp_epoch": { "type": "integer" }
+      },
+      "required": ["state_hash", "timestamp_epoch"]
+    },
+    "relations_graph": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "target_object_id": { "type": "string" },
+          "relation_type": { "type": "string" },
+          "cryptographic_proof": { "type": "string" }
+        },
+        "required": ["target_object_id", "relation_type"]
+      }
+    },
+    "security_invariants": {
+      "type": "object",
+      "properties": {
+        "isolated_sandbox_required": { "type": "boolean", "const": true },
+        "statutory_compliance_verified": { "type": "boolean", "const": true }
+      },
+      "required": ["isolated_sandbox_required", "statutory_compliance_verified"]
+    }
+  },
+  "required": ["protocol_version", "object_id", "entity_type", "local_state_vector", "relations_graph", "security_invariants"]
+}

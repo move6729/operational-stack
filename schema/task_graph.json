@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/move6729/atn-protocol/spec/v1.0.json",
+  "title": "AutonomousTaskNetworkGraph",
+  "type": "object",
+  "properties": {
+    "protocol_version": { "type": "string", "enum": ["ATN-v1.0"] },
+    "task_id": { "type": "string", "format": "uuid" },
+    "execution_graph": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "step_id": { "type": "integer" },
+          "instruction_ast": { "type": "string" },
+          "expected_output_hash": { "type": "string" },
+          "max_execution_sec": { "type": "integer", "maximum": 300 },
+          "max_token_budget": { "type": "integer", "maximum": 32768 },
+          "isolated_sandbox_required": { "type": "boolean", "const": true },
+          "statutory_compliance_verified": { "type": "boolean", "const": true },
+          "dependencies": {
+            "type": "array",
+            "items": { "type": "integer" }
+          }
+        },
+        "required": [
+          "step_id",
+          "instruction_ast",
+          "expected_output_hash",
+          "max_execution_sec",
+          "max_token_budget",
+          "isolated_sandbox_required",
+          "statutory_compliance_verified"
+        ]
+      }
+    },
+    "cryptographic_verification": {
+      "type": "object",
+      "properties": {
+        "algorithm": { "type": "string", "enum": ["sha256", "ed25519"] },
+        "signature": { "type": "string" }
+      },
+      "required": ["algorithm", "signature"]
+    }
+  },
+  "required": ["protocol_version", "task_id", "execution_graph", "cryptographic_verification"]
+}
