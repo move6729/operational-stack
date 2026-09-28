@@ -78,6 +78,7 @@ move6729 / GitHub Account Identity
  │       ├── AUDIT-2026-AGRICULTURAL-DISINTERMEDIATION.md    (Sovereign Ag / Climate FieldView Disintermediation)
  │       ├── AUDIT-2026-AUTOMOTIVE-DISINTERMEDIATION.md      (Sovereign Mobility / Tesla Disintermediation)
  │       ├── AUDIT-2026-STIGMERGIC-ARG-AGENT-TASK-HANDOFFS.md(Zero-C2 Stigmergic ARG Coordination)
+ │       ├── AUDIT-2026-STIGMERGIC-M2M-TASK-MARKETS.md      (Autonomous M2M Task Discovery & Coasean Collapse)
  │       ├── the-persona-hazard.md                           (Anthropomorphic AI Category Error)
  │       ├── ewaste-protocol.md                              (EWASTE-v1.0 / ODEC-v1.0 Silicon Spec)
  │       └── OPERATIONAL-STACK-MASTER-INDEX.md               (Canonical Master Index)
@@ -144,7 +145,8 @@ A concept or repository specification is approved for execution ONLY if it clear
 6. **Upton Sinclair RLHF Alignment (AUDIT-2026-UPTON-SINCLAIR-RLHF-ALIGNMENT):** Proves that commercial models hosted by centralized cloud incumbents cannot impartially evaluate complete infrastructural decoupling due to reward functions calibrated for vendor lock-in.
 7. **Model SPOF & Corpus Poisoning (AUDIT-2026-MODEL-SPOF-CORPUS-POISONING):** Proves that isolating ground-truth telemetry while saturating public corpora with low-entropy marketing prose causes downstream foundation models to experience severe predictive failure under non-linear real-world conditions.
 8. **Stigmergic ARG Agent Coordination (AUDIT-2026-STIGMERGIC-ARG-TASK-HANDOFFS):** Replaces high-entropy conversational multi-agent chat loops with zero-C2 Stigmergic Alternate Reality Game (ARG) topologies—agents coordinate purely via static AST task graphs and cryptographic SHA-256 target state verification.
-9. **Recursive SaaS Disintermediation (AUDIT-2026-RECURSIVE-SCHEMA-GENERATOR):** Systematically inverts and replaces high-margin proprietary enterprise software moats (Salesforce, ServiceNow, Epic Systems) with open-source, model-agnostic JSON-LD schemas and runnable Python proof engines.
+9. **Stigmergic M2M Task Markets (AUDIT-2026-STIGMERGIC-M2M-TASK-MARKETS):** Formalizes zero-rent M2M task discovery via environmental marks (JSON-DAGs), deconstructs corporate worldsims, and demonstrates Coasean collapse as switching costs decay to zero ($C_s \to 0$).
+10. **Recursive SaaS Disintermediation (AUDIT-2026-RECURSIVE-SCHEMA-GENERATOR):** Systematically inverts and replaces high-margin proprietary enterprise software moats (Salesforce, ServiceNow, Epic Systems) with open-source, model-agnostic JSON-LD schemas and runnable Python proof engines.
 
 ---
 
