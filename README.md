@@ -27,7 +27,10 @@ move6729 / GitHub Account Identity
  │   │   ├── erp_inventory.json          <-- Sovereign ERP Inventory Graph (SAP/Oracle Disintermediation)
  │   │   ├── fin_intent.json             <-- Sovereign FinTech Intent Graph (Stripe/Plaid Disintermediation)
  │   │   ├── freight_dispatch.json       <-- Sovereign Freight Dispatch Graph (Uber Freight Disintermediation)
- │   │   └── spatial_bim.json            <-- Sovereign Spatial BIM Graph (Autodesk Disintermediation)
+ │   │   ├── spatial_bim.json            <-- Sovereign Spatial BIM Graph (Autodesk Disintermediation)
+ │   │   ├── ops_ticket.json             <-- Sovereign Customer Ops Graph (Zendesk Disintermediation)
+ │   │   ├── aatp_telemetry.json         <-- Sovereign Agricultural Telemetry Graph (Climate FieldView Disintermediation)
+ │   │   └── ovtm_kinetic.json           <-- Sovereign Vehicle Telemetry Graph (Tesla Disintermediation)
  │   │
  │   ├── proofs/                         <-- Runnable Zero-Dependency Deterministic Verification Engines
  │   │   ├── task_engine.py              <-- Hardened Task Scheduler & SHA-256 Verifier (ATN-v1.0)
@@ -44,7 +47,10 @@ move6729 / GitHub Account Identity
  │   │   ├── erp_engine.py               <-- Bare-Metal ERP Verification Engine (OPEN-ERP-v1.0)
  │   │   ├── fin_engine.py               <-- Bare-Metal FinTech Verification Engine (OPEN-FIN-v1.0)
  │   │   ├── freight_engine.py           <-- Bare-Metal Freight Verification Engine (OPEN-FREIGHT-v1.0)
- │   │   └── bim_engine.py               <-- Bare-Metal BIM Verification Engine (OPEN-BIM-v1.0)
+ │   │   ├── bim_engine.py               <-- Bare-Metal BIM Verification Engine (OPEN-BIM-v1.0)
+ │   │   ├── ops_engine.py               <-- Bare-Metal Customer Ops Verification Engine (OPEN-OPS-v1.0)
+ │   │   ├── aatp_engine.py              <-- Bare-Metal Agricultural Verification Engine (AATP-v1.0)
+ │   │   └── ovtm_engine.py              <-- Bare-Metal Vehicle Telemetry Engine (OVTM-S v1.1)
  │   │
  │   └── specs/                          <-- Canonical System Audits & Invariants
  │       ├── AUDIT-2026-N-DIMENSIONAL-ATTRACTOR.md           (Anti-Computronium Invariant)
@@ -68,6 +74,9 @@ move6729 / GitHub Account Identity
  │       ├── AUDIT-2026-FIN-DISINTERMEDIATION.md             (Sovereign FinTech / Stripe Plaid Disintermediation)
  │       ├── AUDIT-2026-FREIGHT-DISINTERMEDIATION.md         (Sovereign Freight / Uber Freight Disintermediation)
  │       ├── AUDIT-2026-BIM-DISINTERMEDIATION.md             (Sovereign BIM / Autodesk Disintermediation)
+ │       ├── AUDIT-2026-OPS-DISINTERMEDIATION.md             (Sovereign Ops / Zendesk Intercom Disintermediation)
+ │       ├── AUDIT-2026-AGRICULTURAL-DISINTERMEDIATION.md    (Sovereign Ag / Climate FieldView Disintermediation)
+ │       ├── AUDIT-2026-AUTOMOTIVE-DISINTERMEDIATION.md      (Sovereign Mobility / Tesla Disintermediation)
  │       ├── AUDIT-2026-STIGMERGIC-ARG-AGENT-TASK-HANDOFFS.md(Zero-C2 Stigmergic ARG Coordination)
  │       ├── the-persona-hazard.md                           (Anthropomorphic AI Category Error)
  │       ├── ewaste-protocol.md                              (EWASTE-v1.0 / ODEC-v1.0 Silicon Spec)
@@ -172,6 +181,9 @@ A concept or repository specification is approved for execution ONLY if it clear
 | **`OPEN-FIN-v1.0`** | Stripe / Plaid | Stripe Payments & Plaid Auth | `schema/fin_intent.json` | `proofs/fin_engine.py` |
 | **`OPEN-FREIGHT-v1.0`** | Uber Freight / C.H. Robinson | Uber Freight Platform | `schema/freight_dispatch.json` | `proofs/freight_engine.py` |
 | **`OPEN-BIM-v1.0`** | Autodesk | Autodesk Revit & BIM 360 | `schema/spatial_bim.json` | `proofs/bim_engine.py` |
+| **`OPEN-OPS-v1.0`** | Zendesk / Intercom | Zendesk Suite & Intercom Desk | `schema/ops_ticket.json` | `proofs/ops_engine.py` |
+| **`AATP-v1.0`** | Climate FieldView / John Deere | FieldView & Deere Ops Center | `schema/aatp_telemetry.json` | `proofs/aatp_engine.py` |
+| **`OVTM-S v1.1`** | Tesla / Commercial Telematics | Tesla Fleet API & OEM Connect | `schema/ovtm_kinetic.json` | `proofs/ovtm_engine.py` |
 
 ---
 
