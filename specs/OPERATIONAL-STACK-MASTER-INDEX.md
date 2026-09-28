@@ -35,9 +35,17 @@ move6729 / GitHub Account Identity
  │   └── README.md                       <-- EWASTE-v1.0 / ODEC-v1.0 Edge Compute Spec
  │
  ├── 6. open-m2m-reputation-protocol/    <-- EXECUTABLE FEDERATED IDENTITY (M2M Email)
- │   └── README.md                       <-- OMRP-v1.0 Key-Age Transport Spec & JSON-LD
+ │   ├── schema/omrp_attestation.json    <-- OMRP-v1.0 Identity Attestation Schema
+ │   └── proofs/omrp_engine.py           <-- Deterministic State Engine Proof
  │
- └── 7. ashby-ontology-engine/           <-- UNRELEASED / INTERNAL (Anti-Palantir Engine)
+ ├── 7. hyper-personalized-mass-cognitive-routing/ <-- COGNITIVE DEFENSE LAYER
+ │   ├── schema/shield-spec.json         <-- HPMCR Client Defensive Invariant Schema
+ │   └── proofs/telemetry_fuzzer.py      <-- Telemetry Timing Fuzzer Proof
+ │
+ ├── 8. open-vehicle-threat-model/       <-- KINETIC HARDWARE LAYER
+ │   └── proofs/ovtm_auditor.py          <-- Architecture Verification Engine
+ │
+ └── 9. ashby-ontology-engine/           <-- UNRELEASED / INTERNAL (Anti-Palantir Engine)
      ├── schema/ashby_object.json        <-- Federated Model-Agnostic Object Graph
      └── proofs/ashby_engine.py          <-- Local Requisite Variety Ontology Parser
 
