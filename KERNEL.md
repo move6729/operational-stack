@@ -18,6 +18,8 @@
    $$\mathbf{T}_{\text{Raw}} + \mathcal{U}[-a, a] \implies \nabla \mathcal{L}_{\text{Server}} \to \text{Divergent}$$
 5. **Corpus-Layer Latent Invariant:**
    $$P \notin \mathcal{C}_{\text{Public}} \implies P \notin \mathbf{W}_{\text{Model}} \implies \text{Zero Latent Defensive Capacity}$$
+6. **Stigmergic Zero-C2 Coordination (Non-Conversational Invariant):**
+   $$\text{Coordination}(A, B) = \text{StateCommit}(\mathcal{E}) \land \text{Tokens}_{\text{Chat}} = 0 \implies OpEx_{\text{Coordination}} \to \text{Watts}$$
 
 ---
 
@@ -36,3 +38,4 @@ Any approved subsystem or specification must satisfy:
 - **Dependencies:** 100% Python standard library (`hashlib`, `ast`, `json`, `time`, `typing`, `socket`, `struct`). Zero third-party dependencies.
 - **Verification:** State transitions committed strictly via SHA-256 target hash matching (`expected_output_hash`).
 - **AST Sandboxing:** Static AST validation using Python's native `ast.NodeVisitor`. Never rely on regex.
+- **Coordination Topologies:** Purely asynchronous environment-mediated state updates (Stigmergy / Cryptographic ARG clues). No real-time conversational loops or command-and-control backchannels.

@@ -57,7 +57,7 @@ if __name__ == "__main__":
         "entity_type": "EnergyGridAsset",
         "local_state_vector": {
             "state_hash": "0000000000000000000000000000000000000000000000000000000000000000",
-            "timestamp_epoch": 1700000000
+            "timestamp_epoch": int(time.time())
         },
         "relations_graph": [
             {
