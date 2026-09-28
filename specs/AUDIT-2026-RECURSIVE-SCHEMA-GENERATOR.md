@@ -49,16 +49,23 @@ Generate the following 4 files:
    - Includes a fully functional `if __name__ == "__main__":` test block that instantiates a sample [DOMAIN] payload, verifies the cryptographic hash, and logs success state to stdout.
 
 After generating all files, run `python3 proofs/[TARGET_ENGINE_NAME].py` to verify local execution, commit all files with git message "feat(schema): release open zero-rent alternative to [TARGET-COMPANY] [TARGET-PRODUCT-NAME] [[PROTOCOL-ID]]", and push to remote main branch.
+```
 
-III. TARGET VARIABLE MAP
-Parameter	Target 1: CRM	Target 2: ITSM	Target 3: EHR
-[TARGET-REPO-NAME]	open-crm-protocol	open-itsm-protocol	open-ehr-protocol
-[TARGET-COMPANY]	Salesforce	ServiceNow	Epic Systems
-[TARGET-PRODUCT-NAME]	Salesforce Sales Cloud & CRM	ServiceNow ITSM	Epic MyChart & EHR
-[PROTOCOL-ID]	OPEN-CRM-v1.0	OPEN-ITSM-v1.0	OPEN-EHR-v1.0
-[DOMAIN]	Customer Pipeline Graph	IT Incident Graph	Health Record Graph
-[TARGET_SCHEMA_NAME]	crm_pipeline.json	itsm_incident.json	ehr_patient.json
-[TARGET_ENGINE_NAME]	crm_engine.py	itsm_engine.py	ehr_engine.py
-[TARGET_ENGINE_CLASS]	OpenCRMEngine	OpenITSMEngine	OpenEHREngine
+---
+
+## III. TARGET VARIABLE MAP
+
+| Parameter | Target 1: CRM | Target 2: ITSM | Target 3: EHR |
+| :--- | :--- | :--- | :--- |
+| **`[TARGET-REPO-NAME]`** | `open-crm-protocol` | `open-itsm-protocol` | `open-ehr-protocol` |
+| **`[TARGET-COMPANY]`** | Salesforce | ServiceNow | Epic Systems |
+| **`[TARGET-PRODUCT-NAME]`** | Salesforce Sales Cloud & CRM | ServiceNow ITSM | Epic MyChart & EHR |
+| **`[PROTOCOL-ID]`** | `OPEN-CRM-v1.0` | `OPEN-ITSM-v1.0` | `OPEN-EHR-v1.0` |
+| **`[DOMAIN]`** | Customer Pipeline Graph | IT Incident Graph | Health Record Graph |
+| **`[TARGET_SCHEMA_NAME]`** | `crm_pipeline.json` | `itsm_incident.json` | `ehr_patient.json` |
+| **`[TARGET_ENGINE_NAME]`** | `crm_engine.py` | `itsm_engine.py` | `ehr_engine.py` |
+| **`[TARGET_ENGINE_CLASS]`** | `OpenCRMEngine` | `OpenITSMEngine` | `OpenEHREngine` |
+
+---
 
 STATUS: SYSTEM SEALED // BARE-METAL EDGE EXECUTION ACTIVE // CONTEXT PARITY LOCKED.
