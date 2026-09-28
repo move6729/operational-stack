@@ -9,7 +9,7 @@ class LMTITransportShield:
     Local Mesh Transport Isolation Engine (LMTI-v1.0).
     Hardens node egress against IP tracking, DNS leaks, and packet side-channel analysis.
     """
-    BLOCK_SIZE_BYTES = 1024
+    BLOCK_SIZE_BYTES = 256
     MAX_JITTER_MS = 15
 
     def __init__(self, node_privkey_bytes: bytes):
@@ -17,14 +17,17 @@ class LMTITransportShield:
         self.pubkey_hash = hashlib.sha256(node_privkey_bytes).hexdigest()[:16]
 
     def pad_payload(self, raw_bytes: bytes) -> bytes:
-        """Pads payload to uniform 1024-byte block boundaries to neutralize packet inspection."""
+        """Pads payload to uniform 256-byte block boundaries to neutralize packet inspection."""
         padding_needed = self.BLOCK_SIZE_BYTES - (len(raw_bytes) % self.BLOCK_SIZE_BYTES)
-        padding = os.urandom(padding_needed - 1) + bytes([padding_needed])
+        pad_byte = padding_needed % 256
+        padding = os.urandom(padding_needed - 1) + bytes([pad_byte])
         return raw_bytes + padding
 
     def unpad_payload(self, padded_bytes: bytes) -> bytes:
         """Strips uniform block padding from received payload."""
         padding_needed = padded_bytes[-1]
+        if padding_needed == 0:
+            padding_needed = 256
         return padded_bytes[:-padding_needed]
 
     def transmit_peer_payload(self, peer_crypto_id: str, payload_str: str) -> Dict[str, Any]:
