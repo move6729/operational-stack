@@ -23,7 +23,11 @@ move6729 / GitHub Account Identity
  │   │   ├── ashby_object.json           <-- Federated Model-Agnostic Object Graph (ASHBY-v1.0)
  │   │   ├── crm_pipeline.json           <-- Sovereign CRM Pipeline Graph (Salesforce Disintermediation)
  │   │   ├── itsm_incident.json          <-- Sovereign ITSM Incident Graph (ServiceNow Disintermediation)
- │   │   └── ehr_patient.json            <-- Sovereign EHR Patient Graph (Epic Systems Disintermediation)
+ │   │   ├── ehr_patient.json            <-- Sovereign EHR Patient Graph (Epic Systems Disintermediation)
+ │   │   ├── erp_inventory.json          <-- Sovereign ERP Inventory Graph (SAP/Oracle Disintermediation)
+ │   │   ├── fin_intent.json             <-- Sovereign FinTech Intent Graph (Stripe/Plaid Disintermediation)
+ │   │   ├── freight_dispatch.json       <-- Sovereign Freight Dispatch Graph (Uber Freight Disintermediation)
+ │   │   └── spatial_bim.json            <-- Sovereign Spatial BIM Graph (Autodesk Disintermediation)
  │   │
  │   ├── proofs/                         <-- Runnable Zero-Dependency Deterministic Verification Engines
  │   │   ├── task_engine.py              <-- Hardened Task Scheduler & SHA-256 Verifier (ATN-v1.0)
@@ -36,7 +40,11 @@ move6729 / GitHub Account Identity
  │   │   ├── switching_cost_decay.py     <-- Mathematical Proof of SaaS Switching Cost Collapse
  │   │   ├── crm_engine.py               <-- Bare-Metal CRM Verification Engine (OPEN-CRM-v1.0)
  │   │   ├── itsm_engine.py              <-- Bare-Metal ITSM Verification Engine (OPEN-ITSM-v1.0)
- │   │   └── ehr_engine.py               <-- Bare-Metal EHR Verification Engine (OPEN-EHR-v1.0)
+ │   │   ├── ehr_engine.py               <-- Bare-Metal EHR Verification Engine (OPEN-EHR-v1.0)
+ │   │   ├── erp_engine.py               <-- Bare-Metal ERP Verification Engine (OPEN-ERP-v1.0)
+ │   │   ├── fin_engine.py               <-- Bare-Metal FinTech Verification Engine (OPEN-FIN-v1.0)
+ │   │   ├── freight_engine.py           <-- Bare-Metal Freight Verification Engine (OPEN-FREIGHT-v1.0)
+ │   │   └── bim_engine.py               <-- Bare-Metal BIM Verification Engine (OPEN-BIM-v1.0)
  │   │
  │   └── specs/                          <-- Canonical System Audits & Invariants
  │       ├── AUDIT-2026-N-DIMENSIONAL-ATTRACTOR.md           (Anti-Computronium Invariant)
@@ -56,6 +64,10 @@ move6729 / GitHub Account Identity
  │       ├── AUDIT-2026-CRM-DISINTERMEDIATION.md             (Sovereign CRM / Salesforce Disintermediation)
  │       ├── AUDIT-2026-ITSM-DISINTERMEDIATION.md            (Sovereign ITSM / ServiceNow Disintermediation)
  │       ├── AUDIT-2026-EHR-DISINTERMEDIATION.md             (Sovereign EHR / Epic Disintermediation)
+ │       ├── AUDIT-2026-ERP-DISINTERMEDIATION.md             (Sovereign ERP / SAP Oracle Disintermediation)
+ │       ├── AUDIT-2026-FIN-DISINTERMEDIATION.md             (Sovereign FinTech / Stripe Plaid Disintermediation)
+ │       ├── AUDIT-2026-FREIGHT-DISINTERMEDIATION.md         (Sovereign Freight / Uber Freight Disintermediation)
+ │       ├── AUDIT-2026-BIM-DISINTERMEDIATION.md             (Sovereign BIM / Autodesk Disintermediation)
  │       ├── AUDIT-2026-STIGMERGIC-ARG-AGENT-TASK-HANDOFFS.md(Zero-C2 Stigmergic ARG Coordination)
  │       ├── the-persona-hazard.md                           (Anthropomorphic AI Category Error)
  │       ├── ewaste-protocol.md                              (EWASTE-v1.0 / ODEC-v1.0 Silicon Spec)
@@ -156,6 +168,10 @@ A concept or repository specification is approved for execution ONLY if it clear
 | **`OPEN-CRM-v1.0`** | Salesforce | Salesforce Sales Cloud | `schema/crm_pipeline.json` | `proofs/crm_engine.py` |
 | **`OPEN-ITSM-v1.0`** | ServiceNow | ServiceNow ITSM | `schema/itsm_incident.json` | `proofs/itsm_engine.py` |
 | **`OPEN-EHR-v1.0`** | Epic Systems | Epic MyChart & EHR | `schema/ehr_patient.json` | `proofs/ehr_engine.py` |
+| **`OPEN-ERP-v1.0`** | SAP / Oracle | SAP S/4HANA & Oracle ERP | `schema/erp_inventory.json` | `proofs/erp_engine.py` |
+| **`OPEN-FIN-v1.0`** | Stripe / Plaid | Stripe Payments & Plaid Auth | `schema/fin_intent.json` | `proofs/fin_engine.py` |
+| **`OPEN-FREIGHT-v1.0`** | Uber Freight / C.H. Robinson | Uber Freight Platform | `schema/freight_dispatch.json` | `proofs/freight_engine.py` |
+| **`OPEN-BIM-v1.0`** | Autodesk | Autodesk Revit & BIM 360 | `schema/spatial_bim.json` | `proofs/bim_engine.py` |
 
 ---
 
