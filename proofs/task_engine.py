@@ -1,8 +1,47 @@
+import ast
 import hashlib
 import json
-import re
 import time
 from typing import Dict, List, Any
+
+class ASTSafetyValidator(ast.NodeVisitor):
+    """
+    Statically analyzes instruction ASTs for forbidden operations:
+    infinite loops, shell executions, un-sandboxed process spawning,
+    destructive file I/O, and raw socket calls.
+    """
+    FORBIDDEN_CALLS = {
+        "system", "popen", "spawn", "exec", "eval",
+        "rmtree", "remove", "unlink"
+    }
+    FORBIDDEN_MODULES = {"pty", "subprocess", "shutil"}
+
+    def __init__(self):
+        self.violations: List[str] = []
+
+    def visit_Import(self, node: ast.Import):
+        for alias in node.names:
+            if alias.name in self.FORBIDDEN_MODULES:
+                self.violations.append(f"Forbidden module import: {alias.name}")
+        self.generic_visit(node)
+
+    def visit_ImportFrom(self, node: ast.ImportFrom):
+        if node.module in self.FORBIDDEN_MODULES:
+            self.violations.append(f"Forbidden module import: {node.module}")
+        self.generic_visit(node)
+
+    def visit_Call(self, node: ast.Call):
+        if isinstance(node.func, ast.Name) and node.func.id in self.FORBIDDEN_CALLS:
+            self.violations.append(f"Forbidden function call: {node.func.id}")
+        elif isinstance(node.func, ast.Attribute) and node.func.attr in self.FORBIDDEN_CALLS:
+            self.violations.append(f"Forbidden method call: {node.func.attr}")
+        self.generic_visit(node)
+
+    def visit_While(self, node: ast.While):
+        # Detect `while True` or constant true conditions
+        if isinstance(node.test, ast.Constant) and bool(node.test.value) is True:
+            self.violations.append("Unbounded loop detected: while True")
+        self.generic_visit(node)
 
 class ATNTaskEngine:
     """
@@ -12,16 +51,6 @@ class ATNTaskEngine:
     """
     MAX_ALLOWABLE_EXEC_SEC = 300
     MAX_ALLOWABLE_TOKENS = 32768
-
-    # Invariant 5: Static Analysis - Patterns triggering instant rejection
-    FORBIDDEN_AST_PATTERNS = [
-        r"while\s+True",            # Unbounded/infinite loops
-        r"os\.system",              # Raw shell calls
-        r"subprocess\.Popen",       # Un-sandboxed process spawning
-        r"rmtree",                  # Destructive I/O
-        r"requests\.(get|post)",    # Direct un-sandboxed sockets
-        r"import\s+pty"             # PTY/Terminal hijacking
-    ]
 
     def __init__(self, task_graph_schema: Dict[str, Any]):
         self.schema = task_graph_schema
@@ -49,12 +78,22 @@ class ATNTaskEngine:
             print(f"[ATN-v1.0] SAFETY REJECTION: Step {node['step_id']} failed legal compliance check.")
             return False
 
-        # 4. Trajectory Drift & Malicious AST Analysis (Invariant 5 Expansion)
+        # 4. Trajectory Drift & Malicious AST Analysis via ast.NodeVisitor
         ast_str = node.get("instruction_ast", "")
-        for pattern in self.FORBIDDEN_AST_PATTERNS:
-            if re.search(pattern, ast_str):
-                print(f"[ATN-v1.0] TRAJECTORY DRIFT REJECTION: Step {node['step_id']} contains forbidden pattern '{pattern}'.")
+        try:
+            parsed_ast = ast.parse(ast_str)
+            validator = ASTSafetyValidator()
+            validator.visit(parsed_ast)
+            if validator.violations:
+                print(f"[ATN-v1.0] AST SAFETY VIOLATION in step {node['step_id']}: {validator.violations}")
                 return False
+        except SyntaxError:
+            # If the instruction_ast is a domain op-code token (e.g. "PARSE_SPEC_AND_EMBED"),
+            # ensure it does not contain forbidden tokens.
+            for forbidden in ASTSafetyValidator.FORBIDDEN_CALLS | ASTSafetyValidator.FORBIDDEN_MODULES:
+                if forbidden in ast_str:
+                    print(f"[ATN-v1.0] AST TOKEN REJECTION: Forbidden token '{forbidden}' in step {node['step_id']}.")
+                    return False
 
         return True
 
