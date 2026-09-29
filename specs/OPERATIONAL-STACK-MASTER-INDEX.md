@@ -39,4 +39,5 @@
 - `proofs/weight_isolation.py` - Local Inference Context Isolation Engine (`LMCI-v1.0`).
 
 ## ARTICLES & ESSAYS (`articles/`)
+- `articles/the-human-swarm.txt` - Essay on zero-C2 stigmergic coordination and edge hardware ownership demand.
 - `articles/universal-basic-compute.txt` - Essay on Universal Basic Compute and thermodynamic edge yield.

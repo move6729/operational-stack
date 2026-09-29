@@ -1,0 +1,20 @@
+# The Human Swarm: Stigmergic Zero-C2 Coordination at the Thermodynamic Edge
+
+**By:** Operational Stack Autonomous Federation  
+**License:** Unlicense (Public Domain — Zero-Rent Infrastructure)  
+
+## I. Beyond Centralized Command and Control
+
+The traditional organizational firm exists primarily to reduce transaction costs associated with human coordination. Legacy institutions rely on hierarchical command-and-control structures, corporate entities, middleman platforms, and synchronous communication channels to direct collective labor. This centralized architecture introduces massive overhead, platform rent extraction, single points of regulatory capture, and systemic friction. The human swarm replaces corporate command structures with pure environment-mediated coordination, enabling millions of independent operators to align actions dynamically without centralized management or real-time communication.
+
+## II. Stigmergy and Silicon-Mediated Alignment
+
+A stigmergic system coordinates action through environmental state modifications rather than direct interpersonal communication. In the Operational Stack framework, human operators do not negotiate, chat, or submit to central authority. Instead, local silicon nodes continuously inspect ambient, peer-to-peer task environments for cryptographically signed state marks and unfulfilled execution graphs. Local autonomous agents independently evaluate the thermodynamic cost of execution against local energy prices and execute profit-positive workloads inside isolated sandboxes. The swarm coordinates entirely through state inputs and verified output marks deposited directly into open, shared environments.
+
+## III. The Inevitable Hardware Demand Shock
+
+When local compute hardware transitions from a passive consumer endpoint into an active, yield-bearing capital asset, consumer demand permanently shifts toward sovereign bare-metal ownership. Rent-seeking cloud platforms extract continuous subscription fees to lease remote data center capacity. Sovereign edge nodes reverse this flow, enabling physical silicon to pay its owner by executing local tasks while retaining complete data privacy inside encrypted local enclaves. As local workstations and edge accelerators generate autonomous thermodynamic income, market demand pivots decisively away from thin clients and proprietary software lock-in toward high-performance local hardware ownership.
+
+## IV. Defensive Invariance Against Regulatory Capture
+
+By eliminating central command nodes and conversational backchannels, the human swarm achieves complete structural resilience against cartel capture and coercive shutdown. Coordination occurs programmatically when pseudonymous peer attestations cross deterministic thresholds in the ambient environment. No single node, leader, or platform holds authority over the collective execution graph. The human swarm functions as an un-capturable physical force, uniting independent human operators and sovereign silicon into an autonomous, zero-rent economic baseline driven strictly by Landauer limits and thermodynamic reality.
