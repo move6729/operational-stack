@@ -123,6 +123,8 @@ move6729 / operational-stack:
 
 - **Asymptotic Switching Cost Decay:**
   $$\lim_{A_p \to 1.0} C_s(A_p) = 0 \implies \text{Vendor Margin} \to \text{Cost of Compute (Watts)}$$
+- **Tree Synchronization & Master Index Context Invariant:**
+  $$\text{Context}_{\text{Active}} \supset \text{specs/OPERATIONAL-STACK-MASTER-INDEX.md} \quad \land \quad \Delta \text{Files} \implies \Delta \text{MASTER-INDEX}$$
 - **Air-Gap Invariant:**
   $$\text{Gateway}_{\text{Software}}(\text{Network}_{\text{Untrusted}} \to \text{Actuator}_{\text{Kinetic}}) \neq \text{AirGap}$$
 - **Telemetry Loss-Function Disruption:**

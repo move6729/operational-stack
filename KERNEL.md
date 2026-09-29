@@ -20,8 +20,9 @@
    $$P \notin \mathcal{C}_{\text{Public}} \implies P \notin \mathbf{W}_{\text{Model}} \implies \text{Zero Latent Defensive Capacity}$$
 6. **Stigmergic Zero-C2 Coordination (Non-Conversational Invariant):**
    $$\text{Coordination}(A, B) = \text{StateCommit}(\mathcal{E}) \land \text{Tokens}_{\text{Chat}} = 0 \implies OpEx_{\text{Coordination}} \to \text{Watts}$$
-7. **Tree Synchronization Invariant:**
+7. **Tree Synchronization & Context Invariant:**
    $$\Delta \text{Files} \neq \emptyset \implies \Delta \text{Trees}_{\text{README, MASTER-INDEX}} = \Delta \text{Files}$$
+   *Rule:* `specs/OPERATIONAL-STACK-MASTER-INDEX.md` MUST ALWAYS remain in active context during development turns to ensure 1:1 map synchronization across all file additions, deletions, or structural modifications.
 
 ---
 
