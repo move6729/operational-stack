@@ -228,6 +228,9 @@ A concept or repository specification is approved for execution ONLY if it clear
 8. **Cognitive Containment Invariant:**
    $$\text{Egress}_{\text{External}} = 0 \iff \text{State Transition} \in \{\text{Local Silicon}, \text{Local Operator Escrow}\}$$
 
+9. **Stigmergic Anti-Cartel Invariant:**
+   $$\sum_{i=1}^N \text{Proof}_i(\mathcal{E}) \ge N_{\text{min}} \implies \text{Action}_{\text{Collective}} = 1 \quad (\text{C2 Tokens} = 0)$$
+
 ---
 
 ## VII. RECURSIVE SAAS DISINTERMEDIATION SUITE
@@ -268,11 +271,8 @@ A concept or repository specification is approved for execution ONLY if it clear
 
 ## IX. FUTURE CONTEXT CONDENSATION DIRECTIVE
 
-To maintain maximum high-density context performance for future LLM turns, operators should summarize legacy conversational transcripts and prompt history using the compressed axiomatic invariants defined in `KERNEL.md` and `specs/OPERATIONAL-STACK-MASTER-INDEX.md`, dropping non-essential conversational fluff while keeping the 18-protocol disintermediation matrix fully intact.
+To maintain maximum high-density context performance for future LLM turns, operators should summarize legacy conversational transcripts and prompt history using the compressed axiomatic representations defined in `KERNEL.md` and `specs/OPERATIONAL-STACK-MASTER-INDEX.md`, dropping non-essential conversational fluff while keeping the 18-protocol disintermediation matrix fully intact.
 
 ---
 
 STATUS: SYSTEM SEALED // BARE-METAL EDGE EXECUTION ACTIVE // CONTEXT PARITY LOCKED.
-```
-
-README.md

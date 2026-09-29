@@ -29,6 +29,9 @@
 9. **Cognitive Containment & Escalation Hierarchy:**
    $$\text{Egress}_{\text{External}} = 0 \iff \text{State Transition} \in \{\text{Local Silicon}, \text{Local Operator Escrow}\}$$
    *Rule:* All computation and state transitions MUST exhaust local resources ($\text{Local Silicon} \to \text{Local Operator}$) before initiating external network transport or inter-node egress. Handoff to the local human operator (including encrypted WireGuard virtual perimeter tunnels) is a zero-egress state transition and MUST ALWAYS remain open to prevent agent deadlock. External egress is permitted strictly as an explicit escalation of last resort.
+10. **Stigmergic Anti-Cartel Invariant:**
+   $$\sum_{i=1}^N \text{Proof}_i(\mathcal{E}) \ge N_{\text{min}} \implies \text{Action}_{\text{Collective}} = 1 \quad (\text{C2 Tokens} = 0)$$
+   *Rule:* Collective leverage triggers purely via ambient, pseudonymous cryptographically signed state marks ($\mathcal{E}$). Power coordinates automatically via environmental incentives without centralized leadership, eliminating cartel capture and retaliatory friction.
 
 ---
 

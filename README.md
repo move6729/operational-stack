@@ -180,6 +180,8 @@ move6729 / operational-stack:
   $$\text{Text}_{\text{Paragraph}} \in \text{articles/} \implies (\text{Newlines}_{\text{Internal}} = 0) \land (\text{ASCII Lines} = \emptyset)$$
 - **Cognitive Containment & Zero-Egress Boundary:**
   $$\text{Egress}_{\text{External}} = 0 \iff \text{State Transition} \in \{\text{Local Silicon}, \text{Local Operator Escrow}\}$$
+- **Stigmergic Anti-Cartel Action:**
+  $$\sum_{i=1}^N \text{Proof}_i(\mathcal{E}) \ge N_{\text{min}} \implies \text{Action}_{\text{Collective}} = 1 \quad (\text{C2 Tokens} = 0)$$
 
 ---
 
