@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "OpenPropLease",
+  "description": "Schema for Sovereign Property, Lease & Real Estate Graph (OPEN-PROP-v1.0)",
+  "type": "object",
+  "properties": {
+    "protocol_version": {
+      "type": "string",
+      "const": "OPEN-PROP-v1.0"
+    },
+    "lease_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "property_id": {
+      "type": "string"
+    },
+    "unit_id": {
+      "type": "string"
+    },
+    "tenant_did": {
+      "type": "string"
+    },
+    "monthly_rent_cents": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "local_state_vector": {
+      "type": "object",
+      "properties": {
+        "state_hash": {
+          "type": "string",
+          "pattern": "^[a-fA-F0-9]{64}$"
+        },
+        "timestamp_epoch": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": ["state_hash", "timestamp_epoch"]
+    },
+    "security_invariants": {
+      "type": "object",
+      "properties": {
+        "isolated_sandbox_required": {
+          "type": "boolean",
+          "const": true
+        },
+        "statutory_compliance_verified": {
+          "type": "boolean",
+          "const": true
+        }
+      },
+      "required": ["isolated_sandbox_required", "statutory_compliance_verified"]
+    }
+  },
+  "required": [
+    "protocol_version",
+    "lease_id",
+    "property_id",
+    "unit_id",
+    "tenant_did",
+    "monthly_rent_cents",
+    "local_state_vector",
+    "security_invariants"
+  ]
+}

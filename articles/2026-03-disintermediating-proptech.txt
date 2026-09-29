@@ -1,0 +1,14 @@
+Eliminating the Real Estate Tollbooth: OPEN-PROP-v1.0
+
+Property managers and landlords pay billions annually to SaaS platforms like Yardi, RealPage, and AppFolio for basic tenant tracking, lease execution, and rent collection.
+
+Beyond extraction fees, centralized PropTech algorithms have come under regulatory scrutiny for algorithmic price-fixing and artificial supply withholding—turning property management software into a cartel coordinator.
+
+In game-theoretic reality, a lease agreement is simply a bilateral state contract between property owner and tenant. Paying a SaaS middleman per unit every month to store lease JSONs is an unnecessary tax on housing and commercial space.
+
+OPEN-PROP-v1.0 replaces proprietary property management platforms with bare-metal local lease verification:
+1. Leases and unit vectors are defined as open cryptographic asset graphs (schema/prop_lease.json).
+2. Rent state transitions and lease execution are verified locally using zero-dependency Python engines (proofs/prop_engine.py).
+3. Identity and tenant credentials verify via sovereign DIDs without exposing tenant PII to third-party data brokers.
+
+By shifting property management to bare-metal open schemas, software rents evaporate and housing transactions regain direct peer-to-peer efficiency.

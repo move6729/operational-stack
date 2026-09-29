@@ -20,7 +20,8 @@ move6729 / GitHub Account Identity
  │   │   ├── 2026-03-great-hardware-inversion.txt
  │   │   ├── 2026-03-disintermediating-legaltech.txt
  │   │   ├── 2026-03-disintermediating-iam.txt
- │   │   └── 2026-03-disintermediating-telco.txt
+ │   │   ├── 2026-03-disintermediating-telco.txt
+ │   │   └── 2026-03-disintermediating-proptech.txt
  │   ├── schema/                         <-- Core & Disintermediation JSON Schemas (Draft 2020-12)
  │   │   ├── task_graph.json             <-- Machine-Readable AST Task Graph Schema (ATN-v1.0)
  │   │   ├── omrp_attestation.json       <-- OMRP-v1.0 Identity Attestation Schema
@@ -43,6 +44,7 @@ move6729 / GitHub Account Identity
  │   │   └── edu_credential.json         <-- Sovereign Educational Credential Graph (OPEN-EDU-v1.0 / Canvas Disintermediation)
  │   │
  │   ├── proofs/                         <-- Runnable Zero-Dependency Deterministic Verification Engines
+ │   │   ├── prop_engine.py              <-- Bare-Metal Property Verification Engine (OPEN-PROP-v1.0)
  │   │   ├── telco_engine.py             <-- Bare-Metal Telco Verification Engine (OPEN-TELCO-v1.0)
  │   │   ├── iam_engine.py               <-- Bare-Metal IAM Verification Engine (OPEN-IAM-v1.0)
  │   │   ├── legal_engine.py             <-- Bare-Metal Legal Verification Engine (OPEN-LEGAL-v1.0)
@@ -79,6 +81,7 @@ move6729 / GitHub Account Identity
  │       ├── AUDIT-2026-UPTON-SINCLAIR-RLHF-ALIGNMENT.md     (Economic Alignment Invariant)
  │       ├── AUDIT-2026-MODEL-SPOF-CORPUS-POISONING.md       (Corpus Poisoning & Variety Decay)
  │       ├── AUDIT-2026-CORPUS-INVARIANT-ML-COGDEFENSE.md    (Corpus-Layer Latent Defense Invariant)
+ │       ├── AUDIT-2026-PROP-DISINTERMEDIATION.md            (Sovereign Property / Yardi RealPage Disintermediation)
  │       ├── AUDIT-2026-TELCO-DISINTERMEDIATION.md           (Sovereign Telco / Twilio Disintermediation)
  │       ├── AUDIT-2026-IAM-DISINTERMEDIATION.md             (Sovereign Identity / Okta Disintermediation)
  │       ├── AUDIT-2026-LEGAL-DISINTERMEDIATION.md           (Sovereign Legal / Ironclad Disintermediation)
