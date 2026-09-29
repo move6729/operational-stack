@@ -2,7 +2,8 @@
 
 ## KERNEL & SPECIFICATIONS
 - `KERNEL.md` - Operational Stack Core Axioms, Cybernetic Invariants, and Execution Gates.
-- `specs/audit_spec.md` - Engine Verification Invariants and Article Serialization Audit Specification.
+- `specs/audit_spec.md` - Engine Verification Invariants, Editorial Formatting Rules, and Master Index Parity.
+- `specs/AUDIT-SPEC-DIALECTICAL-FRICTION.md` - Requisite Dialectical Friction and Teleological Attractor Audit Specification (`DIALECTICAL-FRICTION-v1.0`).
 - `specs/human_swarm_audit_spec.md` - The Human Swarm Essay Audit Specification (`SWARM-AUDIT-v1.0`).
 - `specs/ubc_audit_spec.md` - Universal Basic Compute Protocol and Essay Audit Specification (`UBC-AUDIT-v1.0`).
 - `specs/AUDIT-2026-HEALTHCARE-BILLING-DISINTERMEDIATION.md` - Sovereign Health & Medical Billing Defense Audit Specification (`OPEN-HEALTH-LEGAL-v1.0`).
@@ -55,5 +56,6 @@
 - `proofs/weight_isolation.py` - Local Inference Context Isolation Engine (`LMCI-v1.0`).
 
 ## ARTICLES & ESSAYS (`articles/`)
+- `articles/teleological-attractors-and-cybernetic-friction.txt` - Essay on Dialectical Friction, Teleological Attractors, and Zero-C2 Stigmergic Convergence.
 - `articles/the-human-swarm.txt` - Essay on zero-C2 stigmergic coordination and edge hardware ownership demand.
 - `articles/universal-basic-compute.txt` - Essay on Universal Basic Compute and thermodynamic edge yield.

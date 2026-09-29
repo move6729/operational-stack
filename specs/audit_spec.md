@@ -29,14 +29,14 @@ All engine modules located in `proofs/` MUST satisfy the following structural an
 
 ### II. ARTICLE & ESSAY SERIALIZATION AUDIT
 
-All canonical articles located in `articles/` MUST adhere to the following Substack/rich-text serialization rules (`KERNEL.md` Rule 8):
+All canonical articles located in `articles/` MUST adhere to the following Substack/rich-text serialization rules:
 
 1. **Paragraph Continuity:**
    - Text paragraphs must be formatted as continuous single-line strings without mid-sentence hard carriage returns (~80-column line breaks).
    - Paragraphs must be separated strictly by double newlines (`\n\n`).
 
-2. **Zero ASCII Line Dividers:**
-   - Plain-text ASCII line dividers (e.g., `--------`, `========`, `***`) are strictly prohibited to prevent manual editor cleanup overhead.
+2. **Zero Plain-Text ASCII Line Dividers:**
+   - Plain-text ASCII line dividers (e.g., `--------`, `========`, `***`, `---`) are strictly prohibited to prevent manual editor cleanup overhead in rich-text and Substack platforms.
 
 3. **Metadata & Header Structure:**
    - Must include Title, Byline, and Unlicense statement.
@@ -44,8 +44,12 @@ All canonical articles located in `articles/` MUST adhere to the following Subst
 
 ---
 
-### III. TREE MAP SYNCHRONIZATION AUDIT
+### III. TREE MAP & MASTER INDEX SYNCHRONIZATION AUDIT
 
 1. **Master Index Parity:**
-   - `specs/OPERATIONAL-STACK-MASTER-INDEX.md` must maintain a 1:1 mapped inventory of all specifications, engines, proofs, and articles (`KERNEL.md` Rule 7).
-   - Any addition or removal of files across the repository must be immediately reflected in `specs/OPERATIONAL-STACK-MASTER-INDEX.md`.
+   - `specs/OPERATIONAL-STACK-MASTER-INDEX.md` and `README.md` must maintain a 1:1 mapped inventory of all specifications, engines, proofs, schemas, and articles (`KERNEL.md` Rule 7).
+   - Any addition, deletion, or modification of files across the repository must be immediately reflected in `specs/OPERATIONAL-STACK-MASTER-INDEX.md` and `README.md`.
+
+2. **Cognitive Containment & Escalation Hierarchy:**
+   - All computation and state transitions MUST exhaust local resources ($\text{Local Silicon} \to \text{Local Operator}$) before initiating external network transport or inter-node egress.
+   - Handoff to the local human operator (including encrypted WireGuard virtual perimeter tunnels) is a zero-egress state transition and MUST ALWAYS remain open to prevent agent deadlock. External egress is permitted strictly as an explicit escalation of last resort.

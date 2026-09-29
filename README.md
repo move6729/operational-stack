@@ -27,6 +27,7 @@ move6729 / operational-stack:
 │   ├── 2026-03-the-biological-fiefdom.txt
 │   ├── 2026-03-constructive-discrimination-and-the-open-attractor.txt
 │   ├── 2026-03-the-great-disintermediation-manifesto.txt
+│   ├── teleological-attractors-and-cybernetic-friction.txt [Dialectical Edge & Teleological Attractors]
 │   ├── the-human-swarm.txt         [Stigmergic Zero-C2 Coordination & Hardware Demand]
 │   └── universal-basic-compute.txt [Sovereign Edge Yield & Thermodynamic Economics]
 │
@@ -144,7 +145,8 @@ move6729 / operational-stack:
     ├── AUDIT-2026-STIGMERGIC-M2M-TASK-MARKETS.md
     ├── AUDIT-2026-TELCO-DISINTERMEDIATION.md
     ├── AUDIT-2026-UPTON-SINCLAIR-RLHF-ALIGNMENT.md
-    ├── audit_spec.md               [Engine Verification Invariants]
+    ├── AUDIT-SPEC-DIALECTICAL-FRICTION.md [Dialectical Friction & Teleological Attractor Spec]
+    ├── audit_spec.md               [Engine Verification & Editorial Invariants]
     ├── human_swarm_audit_spec.md   [Human Swarm Essay Audit Specification]
     ├── ubc_audit_spec.md           [Universal Basic Compute Protocol Audit Spec]
     ├── ewaste-protocol.md
@@ -195,8 +197,6 @@ move6729 / operational-stack:
   $$\text{Net Profit} = \text{Revenue}_{\text{Tasks}} - (\text{Power}_{\text{kW}} \times \text{Rate}_{\text{kWh}})$$
 - **Ashby's Requisite Variety:**
   $$\mathcal{V}_{\text{Local Bare-Metal Exocortex}} \ge \mathcal{V}_{\text{External Environmental Perturbations}}$$
-- **Substack / Rich-Text Serialization Invariant:**
-  $$\text{Text}_{\text{Paragraph}} \in \text{articles/} \implies (\text{Newlines}_{\text{Internal}} = 0) \land (\text{ASCII Lines} = \emptyset)$$
 - **Cognitive Containment & Zero-Egress Boundary:**
   $$\text{Egress}_{\text{External}} = 0 \iff \text{State Transition} \in \{\text{Local Silicon}, \text{Local Operator Escrow}\}$$
 - **Stigmergic Anti-Cartel Action:**
