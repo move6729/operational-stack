@@ -1,0 +1,107 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "OpenTenantDefense",
+  "description": "Schema for Bare-Metal Sovereign Tenant Rights & Landlord Compliance Verification (OPEN-TENANT-v1.0)",
+  "type": "object",
+  "properties": {
+    "case_id": {
+      "type": "string",
+      "pattern": "^tenant-[a-f0-9]{12}$"
+    },
+    "timestamp_utc": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "tenant_node_id": {
+      "type": "string"
+    },
+    "jurisdiction_code": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}-[A-Z0-9_]+$"
+    },
+    "lease_start_timestamp": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "monthly_rent_cents": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "habitability_defects": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "defect_type": {
+            "type": "string",
+            "enum": [
+              "plumbing_sanitation",
+              "heating_hvac",
+              "structural_safety",
+              "pest_infestation",
+              "electrical_hazard",
+              "mold_moisture",
+              "security_locks"
+            ]
+          },
+          "date_reported_timestamp": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "notice_method": {
+            "type": "string",
+            "enum": ["written_letter", "certified_mail", "email", "portal_ticket"]
+          },
+          "landlord_cured": {
+            "type": "boolean"
+          },
+          "estimated_rent_abatement_percent": {
+            "type": "number",
+            "minimum": 0.0,
+            "maximum": 100.0
+          }
+        },
+        "required": [
+          "defect_type",
+          "date_reported_timestamp",
+          "notice_method",
+          "landlord_cured",
+          "estimated_rent_abatement_percent"
+        ]
+      }
+    },
+    "landlord_action_timestamp": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "landlord_action_type": {
+      "type": "string",
+      "enum": ["none", "eviction_notice", "rent_increase", "lease_termination", "entry_without_notice"]
+    },
+    "protected_activity_timestamp": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "statutory_retaliation_suspected": {
+      "type": "boolean"
+    },
+    "state_hash": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    }
+  },
+  "required": [
+    "case_id",
+    "timestamp_utc",
+    "tenant_node_id",
+    "jurisdiction_code",
+    "lease_start_timestamp",
+    "monthly_rent_cents",
+    "habitability_defects",
+    "landlord_action_timestamp",
+    "landlord_action_type",
+    "protected_activity_timestamp",
+    "statutory_retaliation_suspected",
+    "state_hash"
+  ]
+}
