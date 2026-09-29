@@ -29,6 +29,7 @@ move6729 / operational-stack:
 ├── schema/                         [Core & Disintermediation JSON Schemas (Draft 2020-12)]
 │   ├── aatp_telemetry.json         [Sovereign Agricultural Telemetry Graph (AATP-v1.0)]
 │   ├── defense_spec_manifest.json  [Sovereign Defense Supply Chain Manifest (OPEN-DEFENSE-v1.0)]
+│   ├── defense_compliance.json     [Sovereign Defense Compliance & ITAR/CMMC Attestation (OPEN-DEFENSE-COMPLIANCE-v1.0)]
 │   ├── grid_energy_dispatch.json   [Sovereign P2P Micro-Grid Power Dispatch (OPEN-P2P-GRID-v1.0)]
 │   ├── tenant_defense.json         [Sovereign Tenant Rights & Landlord Compliance (OPEN-TENANT-v1.0)]
 │   ├── ashby_object.json           [Federated Model-Agnostic Object Graph (ASHBY-v1.0)]
@@ -54,6 +55,7 @@ move6729 / operational-stack:
 │   ├── energy_scheduler.py         [Bare-Metal Micro-Grid Energy Scheduler (ENERGY-v1.0)]
 │   ├── aatp_engine.py              [Bare-Metal Agricultural Verification Engine (AATP-v1.0)]
 │   ├── defense_engine.py           [Bare-Metal Defense Procurement Engine (OPEN-DEFENSE-v1.0)]
+│   ├── defense_compliance_engine.py[Bare-Metal Defense Compliance & Prime API Engine (OPEN-DEFENSE-COMPLIANCE-v1.0)]
 │   ├── grid_engine.py              [Bare-Metal P2P Micro-Grid Power Engine (OPEN-P2P-GRID-v1.0)]
 │   ├── tenant_engine.py            [Bare-Metal Tenant Rights & Compliance Engine (OPEN-TENANT-v1.0)]
 │   ├── ashby_engine.py             [Local Requisite Variety Ontology Parser (ASHBY-v1.0)]
@@ -84,6 +86,7 @@ move6729 / operational-stack:
 └── specs/                          [Canonical System Audits & Invariants]
     ├── AUDIT-2026-AGRICULTURAL-DISINTERMEDIATION.md
     ├── AUDIT-2026-DEFENSE-SUPPLY-DISINTERMEDIATION.md
+    ├── AUDIT-2026-DEFENSE-COMPLIANCE-DISINTERMEDIATION.md
     ├── AUDIT-2026-ENERGY-GRID-DISINTERMEDIATION.md
     ├── AUDIT-2026-TENANT-RIGHTS-DISINTERMEDIATION.md
     ├── AUDIT-2026-ANTI-LUDDITE-BARE-METAL-INVARIANT.md

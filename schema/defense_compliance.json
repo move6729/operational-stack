@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "OpenDefenseCompliance",
+  "description": "Schema for Sovereign Defense Compliance, ITAR Verification, CMMC 2.0 Attestation, and AS9100 Material Traceability (OPEN-DEFENSE-COMPLIANCE-v1.0)",
+  "type": "object",
+  "properties": {
+    "compliance_id": {
+      "type": "string",
+      "pattern": "^defcomp-[a-f0-9]{12}$"
+    },
+    "timestamp_utc": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "node_id": {
+      "type": "string"
+    },
+    "cage_code": {
+      "type": "string",
+      "pattern": "^[A-Z0-9]{5}$"
+    },
+    "itar_registration_number": {
+      "type": "string",
+      "pattern": "^M[0-9]{5}$"
+    },
+    "itar_expiration_timestamp": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "cmmc_level": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 3
+    },
+    "sprs_score": {
+      "type": "integer",
+      "minimum": -203,
+      "maximum": 110
+    },
+    "as9100_material_cert": {
+      "type": "object",
+      "properties": {
+        "heat_number": {
+          "type": "string"
+        },
+        "material_grade": {
+          "type": "string"
+        },
+        "mill_test_report_hash": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        }
+      },
+      "required": ["heat_number", "material_grade", "mill_test_report_hash"]
+    },
+    "manifest_id": {
+      "type": "string",
+      "pattern": "^def-[a-f0-9]{12}$"
+    },
+    "state_hash": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    }
+  },
+  "required": [
+    "compliance_id",
+    "timestamp_utc",
+    "node_id",
+    "cage_code",
+    "itar_registration_number",
+    "itar_expiration_timestamp",
+    "cmmc_level",
+    "sprs_score",
+    "as9100_material_cert",
+    "manifest_id",
+    "state_hash"
+  ]
+}
