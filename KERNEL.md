@@ -37,6 +37,7 @@ Any approved subsystem or specification must satisfy:
 
 ### III. CODE IMPLEMENTATION CONTRACT
 
+- **Target Disintermediation Portfolio:** CRM (`OPEN-CRM`), ITSM (`OPEN-ITSM`), EHR (`OPEN-EHR`), ERP (`OPEN-ERP`), FIN (`OPEN-FIN`), FREIGHT (`OPEN-FREIGHT`), BIM (`OPEN-BIM`), OPS (`OPEN-OPS`), AATP (`AATP`), OVTM (`OVTM-S`), LEGAL (`OPEN-LEGAL`), IAM (`OPEN-IAM`), TELCO (`OPEN-TELCO`), PROP (`OPEN-PROP`), EDU (`OPEN-EDU`).
 - **Dependencies:** 100% Python standard library (`hashlib`, `ast`, `json`, `time`, `typing`, `socket`, `struct`). Zero third-party dependencies.
 - **Verification:** State transitions committed strictly via SHA-256 target hash matching (`expected_output_hash`).
 - **AST Sandboxing:** Static AST validation using Python's native `ast.NodeVisitor`. Never rely on regex.

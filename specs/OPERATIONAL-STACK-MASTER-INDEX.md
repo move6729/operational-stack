@@ -32,7 +32,12 @@ move6729 / GitHub Account Identity
  │   │   ├── spatial_bim.json            <-- Sovereign Spatial BIM Graph (Autodesk Disintermediation)
  │   │   ├── ops_ticket.json             <-- Sovereign Customer Ops Graph (Zendesk Disintermediation)
  │   │   ├── aatp_telemetry.json         <-- Sovereign Agricultural Telemetry Graph (Climate FieldView Disintermediation)
- │   │   └── ovtm_kinetic.json           <-- Sovereign Vehicle Telemetry Graph (Tesla Disintermediation)
+ │   │   ├── ovtm_kinetic.json           <-- Sovereign Vehicle Telemetry Graph (Tesla Disintermediation)
+ │   │   ├── legal_contract.json         <-- Sovereign Legal Contract Graph (OPEN-LEGAL-v1.0 / Ironclad Disintermediation)
+ │   │   ├── iam_identity.json           <-- Sovereign Identity Directory Graph (OPEN-IAM-v1.0 / Okta Disintermediation)
+ │   │   ├── telco_dispatch.json         <-- Sovereign Telco Routing Graph (OPEN-TELCO-v1.0 / Twilio Disintermediation)
+ │   │   ├── prop_lease.json             <-- Sovereign Property Lease Graph (OPEN-PROP-v1.0 / Yardi Disintermediation)
+ │   │   └── edu_credential.json         <-- Sovereign Educational Credential Graph (OPEN-EDU-v1.0 / Canvas Disintermediation)
  │   │
  │   ├── proofs/                         <-- Runnable Zero-Dependency Deterministic Verification Engines
  │   │   ├── task_engine.py              <-- Hardened Task Scheduler & SHA-256 Verifier (ATN-v1.0)
@@ -189,6 +194,11 @@ A concept or repository specification is approved for execution ONLY if it clear
 | **`OPEN-OPS-v1.0`** | Zendesk / Intercom | Zendesk Suite & Intercom Desk | `schema/ops_ticket.json` | `proofs/ops_engine.py` |
 | **`AATP-v1.0`** | Climate FieldView / John Deere | FieldView & Deere Ops Center | `schema/aatp_telemetry.json` | `proofs/aatp_engine.py` |
 | **`OVTM-S v1.1`** | Tesla / Commercial Telematics | Tesla Fleet API & OEM Connect | `schema/ovtm_kinetic.json` | `proofs/ovtm_engine.py` |
+| **`OPEN-LEGAL-v1.0`** | Ironclad / DocuSign / LexisNexis | Ironclad CLM & DocuSign eSign | `schema/legal_contract.json` | `proofs/legal_engine.py` |
+| **`OPEN-IAM-v1.0`** | Okta / Ping / Entra ID | Okta Identity Cloud | `schema/iam_identity.json` | `proofs/iam_engine.py` |
+| **`OPEN-TELCO-v1.0`** | Twilio / Infobip | Twilio Communications API | `schema/telco_dispatch.json` | `proofs/telco_engine.py` |
+| **`OPEN-PROP-v1.0`** | Yardi / RealPage / AppFolio | Yardi Voyager & RealPage | `schema/prop_lease.json` | `proofs/prop_engine.py` |
+| **`OPEN-EDU-v1.0`** | Instructure / Canvas / Blackboard | Canvas LMS & Blackboard | `schema/edu_credential.json` | `proofs/edu_engine.py` |
 
 ---
 
@@ -198,8 +208,8 @@ When expanding the architecture in future turns, maintain cold game-theoretic al
 
 1. **Open Physical Sensing Mesh (`SENSE-v1.0` / Open Palantir):** An open, zero-rent telemetry ingestion protocol connecting cheap local hardware sensors (energy surplus, RF spectrum, logistics, environmental) into a public, real-time macro-systemic map.
 2. **Sovereign Local Ontology Engine (`ASHBY-v1.0` / Anti-Palantir):** A bare-metal, model-agnostic graph engine running locally on scavenged hardware, linking real-world physical objects (`ashby_object.json`) without central corporate database lock-in.
-3. **Hardware-Energy Micro-Grid Scheduler (`ENERGY-v1.0`):** Bare-metal scripts that automatically route intermittent renewable energy surpluses (solar/battery peak capacity) directly into local LMCI compute tasks before energy grounds out ($\text{Yield} > \text{Power Cost}$).
-4. **Kernel-Level eBPF Telemetry Shields (`HPMCR-eBPF`):** Low-level C/eBPF Linux kernel extensions that intercept and fuzz OS-level telemetry and un-permissioned hardware sensor queries directly at Ring 0.
+3. **Hardware-Energy Micro-Grid Scheduler (`ENERGY-v1.0`):** Bare-metal scripts that automatically route intermittent renewable energy surpluses (solar/battery peak capacity) directly into local LMCI compute tasks before energy grounds out ($\text{Yield} > \text{Power Cost}$) — documented in `specs/AUDIT-2026-MICROGRID-COMPUTE-SCHEDULER.md`.
+4. **Kernel-Level eBPF Telemetry Shields (`HPMCR-eBPF`):** Low-level C/eBPF Linux kernel extensions that intercept and fuzz OS-level telemetry and un-permissioned hardware sensor queries directly at Ring 0 — documented in `specs/AUDIT-2026-KERNEL-TELEMETRY-SHIELD.md`.
 
 ---
 

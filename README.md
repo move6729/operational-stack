@@ -31,7 +31,12 @@ move6729 / operational-stack:
 │   ├── ovtm_kinetic.json           [Sovereign Vehicle Telemetry Graph (OVTM-S v1.1)]
 │   ├── shield-spec.json            [HPMCR Client Defensive Invariant Schema]
 │   ├── spatial_bim.json            [Sovereign Spatial BIM Graph (OPEN-BIM-v1.0)]
-│   └── task_graph.json             [Machine-Readable AST Task Graph Schema (ATN-v1.0)]
+│   ├── task_graph.json             [Machine-Readable AST Task Graph Schema (ATN-v1.0)]
+│   ├── legal_contract.json         [Sovereign Legal Contract Graph (OPEN-LEGAL-v1.0)]
+│   ├── iam_identity.json           [Sovereign Identity Directory Graph (OPEN-IAM-v1.0)]
+│   ├── telco_dispatch.json         [Sovereign Telco Routing Graph (OPEN-TELCO-v1.0)]
+│   ├── prop_lease.json             [Sovereign Property Lease Graph (OPEN-PROP-v1.0)]
+│   └── edu_credential.json         [Sovereign Educational Credential Graph (OPEN-EDU-v1.0)]
 │
 ├── proofs/                         [Runnable Zero-Dependency Deterministic Verification Engines]
 │   ├── aatp_engine.py              [Bare-Metal Agricultural Verification Engine (AATP-v1.0)]
