@@ -3,6 +3,7 @@
 ## KERNEL & SPECIFICATIONS
 - `KERNEL.md` - Operational Stack Core Axioms, Cybernetic Invariants, and Execution Gates.
 - `specs/audit_spec.md` - Engine Verification Invariants and Article Serialization Audit Specification.
+- `specs/human_swarm_audit_spec.md` - The Human Swarm Essay Audit Specification (`SWARM-AUDIT-v1.0`).
 - `specs/ubc_audit_spec.md` - Universal Basic Compute Protocol and Essay Audit Specification (`UBC-AUDIT-v1.0`).
 - `specs/OPERATIONAL-STACK-MASTER-INDEX.md` - Active tree synchronization map.
 
