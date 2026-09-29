@@ -23,7 +23,7 @@ When switching costs decay to zero, the SaaS tollbooth evaporates. Software synt
 --------------------------------------------------------------------------------
 II. THE COMPLETE SAAS DISINTERMEDIATION SUITE
 --------------------------------------------------------------------------------
-The Operational Stack (OPSTACK v2.1) provides a complete, runnable, public-domain alternative to the fifteen largest enterprise software tollbooths in existence. 
+The Operational Stack (OPSTACK v2.1) provides a complete, runnable, public-domain alternative to the fifteen largest enterprise software tollbooths in existence.
 
 Every protocol replaces closed proprietary APIs with:
 1. Strict JSON-Schema (Draft 2020-12) defining the domain asset graph.

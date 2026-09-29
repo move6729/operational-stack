@@ -7,7 +7,7 @@ LICENSE: Unlicense (Public Domain)
 
 Public narrative does not emerge spontaneously; it is manufactured through deliberate communications architecture. In the ongoing debate surrounding artificial intelligence policy, a highly sophisticated pipeline has developed to shape public perception and legislative priorities.
 
-At the center of this pipeline are specialized PR firms (such as DEY.is) working alongside effective altruist (EA) philanthropic funds, safety-focused non-profits, and whistleblowers. Together, they form an effective communications engine that places catastrophic risk narratives ("AI Doomerism") into top-tier publications including The New York Times, Politico, and The Washington Post.
+At the center of this pipeline are specialized PR firms (such as DEY.nyc) working alongside effective altruist (EA) philanthropic funds, safety-focused non-profits, and whistleblowers. Together, they form an effective communications engine that places catastrophic risk narratives ("AI Doomerism") into top-tier publications including The New York Times, Politico, and The Washington Post.
 
 2. MECHANISTIC MISMATCH: SAFETY NARRATIVE vs. ECONOMIC OUTCOME
 
