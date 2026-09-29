@@ -7,6 +7,7 @@ by evaluating habitability rent abatements, statutory notice windows, and illega
 
 import hashlib
 import json
+import time
 from typing import Dict, Any, List
 
 class OpenTenantEngine:
@@ -136,7 +137,7 @@ def run_tenant_proof() -> bool:
     """
     engine = OpenTenantEngine(node_id="node-tenant-edge-01")
 
-    base_ts = 1700000000
+    base_ts = int(time.time())
 
     case_data = {
         "case_id": "tenant-a1b2c3d4e5f6",

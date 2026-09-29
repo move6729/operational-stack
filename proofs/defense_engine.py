@@ -7,6 +7,7 @@ by verifying CNC/3D-printing toolpaths (G-code), material specifications, and op
 
 import hashlib
 import json
+import time
 from typing import Dict, Any, List
 
 class OpenDefenseEngine:
@@ -72,7 +73,7 @@ def run_defense_proof() -> bool:
 
     manifest = {
         "manifest_id": "def-1234567890ab",
-        "timestamp_utc": 1774828800,
+        "timestamp_utc": int(time.time()),
         "component_name": "Autonomous Flight Surface Actuator Mount",
         "material_specification": {
             "material_type": "ALUMINUM_7075_T6",

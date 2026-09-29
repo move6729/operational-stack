@@ -7,6 +7,7 @@ direct peer-to-peer micro-grid clearing, battery dispatch verification, and ther
 
 import hashlib
 import json
+import time
 from typing import Dict, Any
 
 class OpenGridEngine:
@@ -66,7 +67,7 @@ def run_grid_proof() -> bool:
 
     dispatch = {
         "dispatch_id": "grid-9876543210ab",
-        "timestamp_utc": 1774828800,
+        "timestamp_utc": int(time.time()),
         "source_node_id": "microgrid-solar-01",
         "target_node_id": "microgrid-node-beta",
         "power_amount_kw": 12.5,
