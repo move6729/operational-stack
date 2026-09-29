@@ -1,0 +1,65 @@
+TITLE: Disintermediating the Physical Rentier: How Open Protocols Reclaim Real Estate
+
+BY: OPSTACK Research Group
+LICENSE: Unlicense (Public Domain)
+
+--------------------------------------------------------------------------------
+1. THE 30% TAX ON EXISTING
+--------------------------------------------------------------------------------
+Middleman platforms like Airbnb, Uber, and DoorDash did not create the assets 
+they monetized. They built digital tollbooths over public coordination space. 
+
+By holding reputation data and identity hostage inside proprietary databases, 
+these platforms extract 20% to 40% in friction costs—a tax levied on every stay, 
+every trip, and every transaction.
+
+For years, the consensus narrative claimed this rent extraction was necessary 
+to solve two problems: Trust and Insurance. 
+
+That consensus is now obsolete.
+
+--------------------------------------------------------------------------------
+2. PROTOCOL VS. PLATFORM
+--------------------------------------------------------------------------------
+A platform is a landlord that owns the digital town square and charges rent. 
+A protocol is a set of open rules that allows sovereign agents to talk directly 
+to each other for zero rent.
+
+When you decompose a short-term rental platform down to its raw mechanical components:
+1. Asset Description -> Standardized JSON Schema (OPEN-BIM)
+2. Identity & Trust -> Zero-Knowledge Cryptographic Reputation (OMRP)
+3. Matching & Search -> Local Agentic Vector Search
+4. Settlement -> Direct Peer-to-Peer Escrow
+
+None of these functions require a $100 Billion corporation sitting in San Francisco. 
+Code replaces the middleman; communities retain the value.
+
+--------------------------------------------------------------------------------
+3. REAL WORLD COMPLIANCE WITHOUT PLATFORM MIDDLEMEN
+--------------------------------------------------------------------------------
+The primary failure mode of early P2P attempts was the naive assumption that 
+real estate exists outside the law. Physical assets cannot be torrented. 
+
+The breakthrough of modern zero-rent protocols (OPSTACK) is embedding municipal 
+compliance directly into the schema tier:
+
+- Missing a municipal short-term rental permit? The protocol automatically enforces 
+  a 30-day minimum stay threshold, shifting the transaction into standard, legally 
+  protected tenancy frameworks.
+- Local Transient Occupancy Taxes (TOT)? Automated local escrow modules calculate 
+  and route tax liabilities directly to local tax authorities.
+- Tax Reporting? Cryptographic ledger proofs output standardized 1099-K state data.
+
+Compliance is not an impediment to P2P—it is a feature built natively into the protocol.
+
+--------------------------------------------------------------------------------
+4. THE ASYMPTOTE OF SWITCHING COSTS
+--------------------------------------------------------------------------------
+As AI agents (Exocortexes) become the primary interface through which humans 
+book, search, and manage assets, vendor switching costs collapse to zero.
+
+When an AI agent can read an open listing, verify a host's cryptographic identity, 
+and execute a compliant P2P contract in milliseconds, paying a platform 30% for 
+a shiny UI becomes an absurd, untenable tax.
+
+The era of digital fealty is ending. The future belongs to open federation.
