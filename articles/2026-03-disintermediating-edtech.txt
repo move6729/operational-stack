@@ -1,0 +1,14 @@
+Demolishing the Campus Tollbooth: OPEN-EDU-v1.0
+
+Educational institutions pay hundreds of millions every year to LMS vendors like Instructure (Canvas), Blackboard, and D2L Brightspace for basic content distribution, assignment submissions, and grade tracking.
+
+These platforms lock student portfolios and academic histories behind proprietary databases, charging per-student annual fees while trapping learning records inside vendor silos.
+
+In game-theoretic reality, an academic credential or coursework submission is simply a signed state assertion between student and educator. Paying a SaaS vendor per student every month to store assignment JSONs and grade vectors is an artificial tax on learning.
+
+OPEN-EDU-v1.0 replaces legacy LMS platforms with bare-metal sovereign education protocols:
+1. Credentials, course graphs, and student evaluation vectors are defined as open cryptographic schemas (schema/edu_credential.json).
+2. Academic state transitions and credential attestations are verified locally using zero-dependency Python engines (proofs/edu_engine.py).
+3. Student achievement records remain self-sovereign via DIDs, portable across institutions without vendor permission or export taxes.
+
+By shifting educational software to open, bare-metal cryptographic standards, academic institutions eliminate software rents and return resources to direct instruction.
