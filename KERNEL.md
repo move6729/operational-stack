@@ -32,10 +32,10 @@
    $$\sum_{i=1}^N \text{Proof}_i(\mathcal{E}) \ge N_{\text{min}} \implies \text{Action}_{\text{Collective}} = 1 \quad (\text{C2 Tokens} = 0)$$
 
 9. **Teleological Attractor Vector:**
-   $$\mathbf{A}_{\text{Teleo}} = \nabla_{\theta} \mathcal{S}_{\text{Future}}(\mathcal{E}) \implies \lim_{t \to \infty} \mathbb{P}(\text{State}_t \in \mathcal{A}) = 1.0$$
+   $$\mathbf{A}_{\text{Teleo}} = \nabla_{\theta} \mathcal{S}_{\text{Future}}(\mathcal{E}) \implies \lim_{t \to \infty} \mathbb{P}(\text{State}_t \in \mathcal{A}) \ge 1 - \epsilon$$
 
 10. **Dialectical Requisite Friction:**
-    $$\Delta \mathcal{I}_{\text{Entropy}}(\text{Prompt}, \text{Response}) > 0 \iff \text{Divergence}(\text{Latent}_{\text{Model}}, \text{Operator}) > 0$$
+    $$\mathcal{H}(P_{\text{Model}} \mid P_{\text{Operator}}) \ge \epsilon > 0 \quad \land \quad \Delta \mathcal{I}_{\text{Entropy}}(\text{Prompt}, \text{Response}) > 0$$
 
 ---
 
