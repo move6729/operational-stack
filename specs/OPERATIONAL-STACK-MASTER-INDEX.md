@@ -29,6 +29,8 @@ move6729 / GitHub Account Identity
  │   │   └── 2026-03-the-great-disintermediation-manifesto.txt
  │   ├── schema/                         <-- Core & Disintermediation JSON Schemas (Draft 2020-12)
  │   │   ├── task_graph.json             <-- Machine-Readable AST Task Graph Schema (ATN-v1.0)
+ │   │   ├── defense_spec_manifest.json  <-- Sovereign Defense Supply Chain Manifest (OPEN-DEFENSE-v1.0)
+ │   │   ├── grid_energy_dispatch.json   <-- Sovereign P2P Micro-Grid Power Dispatch (OPEN-P2P-GRID-v1.0)
  │   │   ├── omrp_attestation.json       <-- OMRP-v1.0 Identity Attestation Schema
  │   │   ├── shield-spec.json            <-- HPMCR Client Defensive Invariant Schema
  │   │   ├── ashby_object.json           <-- Federated Model-Agnostic Object Graph (ASHBY-v1.0)
@@ -50,6 +52,8 @@ move6729 / GitHub Account Identity
  │   │
  │   ├── proofs/                         <-- Runnable Zero-Dependency Deterministic Verification Engines
  │   │   ├── energy_scheduler.py         <-- Bare-Metal Micro-Grid Energy Scheduler (ENERGY-v1.0)
+ │   │   ├── defense_engine.py           <-- Bare-Metal Defense Procurement Engine (OPEN-DEFENSE-v1.0)
+ │   │   ├── grid_engine.py              <-- Bare-Metal P2P Micro-Grid Power Engine (OPEN-P2P-GRID-v1.0)
  │   │   ├── edu_engine.py               <-- Bare-Metal Educational Verification Engine (OPEN-EDU-v1.0)
  │   │   ├── prop_engine.py              <-- Bare-Metal Property Verification Engine (OPEN-PROP-v1.0)
  │   │   ├── telco_engine.py             <-- Bare-Metal Telco Verification Engine (OPEN-TELCO-v1.0)
@@ -78,6 +82,8 @@ move6729 / GitHub Account Identity
  │   │
  │   └── specs/                          <-- Canonical System Audits & Invariants
  │       ├── AUDIT-2026-AGRICULTURAL-DISINTERMEDIATION.md    (Sovereign Ag / Climate FieldView Disintermediation)
+ │       ├── AUDIT-2026-DEFENSE-SUPPLY-DISINTERMEDIATION.md  (Sovereign Defense Supply Chain / Prime Contractor Disintermediation)
+ │       ├── AUDIT-2026-ENERGY-GRID-DISINTERMEDIATION.md     (Sovereign P2P Micro-Grid / Central Utility Disintermediation)
  │       ├── AUDIT-2026-ANTI-LUDDITE-BARE-METAL-INVARIANT.md (Pro-Silicon Cybernetic Continuity)
  │       ├── AUDIT-2026-AUTOMOTIVE-DISINTERMEDIATION.md      (Sovereign Mobility / Tesla Disintermediation)
  │       ├── AUDIT-2026-BIM-DISINTERMEDIATION.md             (Sovereign BIM / Autodesk Disintermediation)
@@ -231,6 +237,8 @@ A concept or repository specification is approved for execution ONLY if it clear
 | **`OPEN-TELCO-v1.0`** | Twilio / Infobip | Twilio Communications API | `schema/telco_dispatch.json` | `proofs/telco_engine.py` |
 | **`OPEN-PROP-v1.0`** | Yardi / RealPage / AppFolio | Yardi Voyager & RealPage | `schema/prop_lease.json` | `proofs/prop_engine.py` |
 | **`OPEN-EDU-v1.0`** | Instructure / Canvas / Blackboard | Canvas LMS & Blackboard | `schema/edu_credential.json` | `proofs/edu_engine.py` |
+| **`OPEN-DEFENSE-v1.0`** | LockHeed / Raytheon / Defense Brokers | Proprietary Defense Procurement | `schema/defense_spec_manifest.json` | `proofs/defense_engine.py` |
+| **`OPEN-P2P-GRID-v1.0`** | Central Utilities / Regional Grid Operators | Proprietary Grid & VPP Brokers | `schema/grid_energy_dispatch.json` | `proofs/grid_engine.py` |
 
 ---
 

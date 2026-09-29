@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "OpenGridEnergyDispatch",
+  "description": "Schema for Bare-Metal Sovereign P2P Micro-Grid Energy Dispatch & Clearing (OPEN-P2P-GRID-v1.0)",
+  "type": "object",
+  "properties": {
+    "dispatch_id": {
+      "type": "string",
+      "pattern": "^grid-[a-f0-9]{12}$"
+    },
+    "timestamp_utc": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "source_node_id": {
+      "type": "string"
+    },
+    "target_node_id": {
+      "type": "string"
+    },
+    "power_amount_kw": {
+      "type": "number",
+      "minimum": 0.001
+    },
+    "duration_seconds": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "clearing_rate_cents_per_kwh": {
+      "type": "number",
+      "minimum": 0.0
+    },
+    "battery_soc_percent": {
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 100.0
+    },
+    "state_hash": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    }
+  },
+  "required": [
+    "dispatch_id",
+    "timestamp_utc",
+    "source_node_id",
+    "target_node_id",
+    "power_amount_kw",
+    "duration_seconds",
+    "clearing_rate_cents_per_kwh",
+    "battery_soc_percent",
+    "state_hash"
+  ]
+}

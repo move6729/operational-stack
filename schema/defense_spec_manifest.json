@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "OpenDefenseSpecManifest",
+  "description": "Schema for Bare-Metal Sovereign Defense & Dual-Use Open Hardware Procurement (OPEN-DEFENSE-v1.0)",
+  "type": "object",
+  "properties": {
+    "manifest_id": {
+      "type": "string",
+      "pattern": "^def-[a-f0-9]{12}$"
+    },
+    "timestamp_utc": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "component_name": {
+      "type": "string"
+    },
+    "material_specification": {
+      "type": "object",
+      "properties": {
+        "material_type": {
+          "type": "string"
+        },
+        "tensile_strength_mpa": {
+          "type": "number",
+          "minimum": 0.0
+        },
+        "tolerance_mm": {
+          "type": "number",
+          "minimum": 0.0
+        }
+      },
+      "required": ["material_type", "tolerance_mm"]
+    },
+    "manufacturing_type": {
+      "type": "string",
+      "enum": ["CNC_MILLING", "3D_PRINTING_SLS", "3D_PRINTING_DMLS", "LATHE_TURNING", "SHEET_METAL_STAMPING"]
+    },
+    "gcode_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "cad_file_hash": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "dual_use_classification": {
+      "type": "string",
+      "enum": ["EAR99", "ECCN_3A001", "ECCN_9A515", "CIVILIAN_DUAL_USE", "UNRESTRICTED_HARDWARE"]
+    },
+    "decentralized_supplier_nodes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "attestation_signature": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    }
+  },
+  "required": [
+    "manifest_id",
+    "timestamp_utc",
+    "component_name",
+    "material_specification",
+    "manufacturing_type",
+    "gcode_sha256",
+    "cad_file_hash",
+    "dual_use_classification",
+    "attestation_signature"
+  ]
+}
