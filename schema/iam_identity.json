@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "OpenIAMIdentity",
+  "description": "Schema for Sovereign Identity, Access & Directory Federation Graph (OPEN-IAM-v1.0)",
+  "type": "object",
+  "properties": {
+    "protocol_version": {
+      "type": "string",
+      "const": "OPEN-IAM-v1.0"
+    },
+    "identity_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "did_identifier": {
+      "type": "string"
+    },
+    "public_keys": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "key_id": { "type": "string" },
+          "key_type": { "type": "string" },
+          "public_key_hex": { "type": "string" }
+        },
+        "required": ["key_id", "key_type", "public_key_hex"]
+      }
+    },
+    "role_claims": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "local_state_vector": {
+      "type": "object",
+      "properties": {
+        "state_hash": {
+          "type": "string",
+          "pattern": "^[a-fA-F0-9]{64}$"
+        },
+        "timestamp_epoch": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": ["state_hash", "timestamp_epoch"]
+    },
+    "security_invariants": {
+      "type": "object",
+      "properties": {
+        "isolated_sandbox_required": {
+          "type": "boolean",
+          "const": true
+        },
+        "statutory_compliance_verified": {
+          "type": "boolean",
+          "const": true
+        }
+      },
+      "required": ["isolated_sandbox_required", "statutory_compliance_verified"]
+    }
+  },
+  "required": [
+    "protocol_version",
+    "identity_id",
+    "did_identifier",
+    "public_keys",
+    "role_claims",
+    "local_state_vector",
+    "security_invariants"
+  ]
+}

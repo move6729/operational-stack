@@ -1,0 +1,14 @@
+Dismantling the SSO Tax: OPEN-IAM-v1.0
+
+Corporate IT departments spend millions annually paying Okta, Ping Identity, and Microsoft Entra ID for the privilege of authenticating their own employees.
+
+Cloud IAM vendors enforce a high-margin "SSO tax"—gatekeeping basic SAML and OIDC features behind enterprise tier pricing. Worse, centralizing all authentication into a single cloud provider creates a massive single point of failure (SPOF).
+
+In game-theoretic reality, zero-trust security does not mean trusting a third-party SaaS cloud. True zero-trust means local cryptographic public key verification (Ed25519/hardware enclaves) and self-sovereign identity assertions.
+
+OPEN-IAM-v1.0 replaces cloud identity middleman tollbooths with local-first, bare-metal identity federation:
+1. Identities and role claims are defined as cryptographic DIDs (schema/iam_identity.json).
+2. Authentication is verified locally using zero-dependency public key signature engines (proofs/iam_engine.py).
+3. State transitions occur without external network calls or monthly per-user licensing taxes.
+
+By decentralizing identity back to public key cryptography, enterprise SSO overhead collapses to zero.
