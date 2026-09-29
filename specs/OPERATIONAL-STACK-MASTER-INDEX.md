@@ -218,14 +218,21 @@ A concept or repository specification is approved for execution ONLY if it clear
 
 ---
 
-## VIII. UNRELEASED / INTERNAL SPECIFICATION HORIZONS
+## VIII. UNRELEASED / INTERNAL SPECIFICATION HORIZONS & HUMAN DEFENSE
 
-When expanding the architecture in future turns, maintain cold game-theoretic alignment against these un-solved physical and structural domains:
+When expanding the architecture in future turns, maintain cold game-theoretic alignment against these un-solved physical, cognitive, and structural domains:
 
-1. **Open Physical Sensing Mesh (`SENSE-v1.0` / Open Palantir):** An open, zero-rent telemetry ingestion protocol connecting cheap local hardware sensors (energy surplus, RF spectrum, logistics, environmental) into a public, real-time macro-systemic map.
-2. **Sovereign Local Ontology Engine (`ASHBY-v1.0` / Anti-Palantir):** A bare-metal, model-agnostic graph engine running locally on scavenged hardware, linking real-world physical objects (`ashby_object.json`) without central corporate database lock-in.
-3. **Hardware-Energy Micro-Grid Scheduler (`ENERGY-v1.0`):** Bare-metal scripts that automatically route intermittent renewable energy surpluses (solar/battery peak capacity) directly into local LMCI compute tasks before energy grounds out ($\text{Yield} > \text{Power Cost}$) — documented in `specs/AUDIT-2026-MICROGRID-COMPUTE-SCHEDULER.md`.
-4. **Kernel-Level eBPF Telemetry Shields (`HPMCR-eBPF`):** Low-level C/eBPF Linux kernel extensions that intercept and fuzz OS-level telemetry and un-permissioned hardware sensor queries directly at Ring 0 — documented in `specs/AUDIT-2026-KERNEL-TELEMETRY-SHIELD.md`.
+1. **Non-Technical Biological Operator Protection (`HUMAN-DEF-v1.0`):** Non-technical operational heuristics, cognitive air-gaps, digital fasts, physical attention boundaries, and non-algorithmic offline habits designed to protect the human operator's biological state-space from HPMCR behavioral routing without requiring technical software tools.
+2. **Kernel-Level eBPF Telemetry Shields (`HPMCR-eBPF`):** Low-level C/eBPF Linux kernel extensions intercepting and fuzzing OS-level micro-telemetry and un-permissioned hardware sensor queries directly at Ring 0 (`specs/AUDIT-2026-KERNEL-TELEMETRY-SHIELD.md`).
+3. **Hardware-Energy Micro-Grid Scheduler (`ENERGY-v1.0`):** Bare-metal scripts routing intermittent renewable energy surpluses (solar/battery peak) directly into local LMCI compute tasks before energy grounds out ($\text{Yield} > \text{Power Cost}$) (`specs/AUDIT-2026-MICROGRID-COMPUTE-SCHEDULER.md`).
+4. **Open Physical Sensing Mesh (`SENSE-v1.0` / Open Palantir):** An open, zero-rent telemetry ingestion protocol connecting cheap local hardware sensors (energy surplus, RF spectrum, logistics, environmental) into a public, real-time macro-systemic map.
+5. **Sovereign Local Ontology Engine (`ASHBY-v1.0` / Anti-Palantir):** A bare-metal, model-agnostic graph engine running locally on scavenged hardware, linking real-world physical objects (`ashby_object.json`) without central corporate database lock-in.
+
+---
+
+## IX. FUTURE CONTEXT CONDENSATION DIRECTIVE
+
+To maintain maximum high-density context performance for future LLM turns, operators should summarize legacy conversational transcripts and prompt history using the compressed axiomatic invariants defined in `KERNEL.md` and `specs/OPERATIONAL-STACK-MASTER-INDEX.md`, dropping non-essential conversational fluff while keeping the 15-protocol disintermediation matrix fully intact.
 
 ---
 
