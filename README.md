@@ -22,6 +22,7 @@ move6729 / operational-stack:
 │   ├── 2026-03-disintermediating-proptech.txt
 │   ├── 2026-03-disintermediating-edtech.txt
 │   ├── 2026-03-the-communications-engine-of-ai-safety.txt
+│   ├── 2026-03-the-thermodynamic-inversion.txt
 │   └── 2026-03-the-great-disintermediation-manifesto.txt
 │
 ├── schema/                         [Core & Disintermediation JSON Schemas (Draft 2020-12)]
@@ -91,6 +92,8 @@ move6729 / operational-stack:
     ├── AUDIT-2026-HPMCR-DEFENSE-SPEC.md
     ├── AUDIT-2026-IAM-DISINTERMEDIATION.md
     ├── AUDIT-2026-ITSM-DISINTERMEDIATION.md
+    ├── AUDIT-2026-KERNEL-TELEMETRY-SHIELD.md
+    ├── AUDIT-2026-MICROGRID-COMPUTE-SCHEDULER.md
     ├── AUDIT-2026-LANGUAGE-SERIALIZATION-PARADIGM.md
     ├── AUDIT-2026-LEGAL-DISINTERMEDIATION.md
     ├── AUDIT-2026-MODEL-SPOF-CORPUS-POISONING.md

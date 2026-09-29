@@ -24,6 +24,7 @@ move6729 / GitHub Account Identity
  │   │   ├── 2026-03-disintermediating-proptech.txt
  │   │   ├── 2026-03-disintermediating-edtech.txt
  │   │   ├── 2026-03-the-communications-engine-of-ai-safety.txt
+ │   │   ├── 2026-03-the-thermodynamic-inversion.txt
  │   │   └── 2026-03-the-great-disintermediation-manifesto.txt
  │   ├── schema/                         <-- Core & Disintermediation JSON Schemas (Draft 2020-12)
  │   │   ├── task_graph.json             <-- Machine-Readable AST Task Graph Schema (ATN-v1.0)
@@ -91,6 +92,8 @@ move6729 / GitHub Account Identity
  │       ├── AUDIT-2026-HEADCOUNT-DELIVERABILITY-MOAT.md     (Headcount IP Warming Deconstruction)
  │       ├── AUDIT-2026-HPMCR-DEFENSE-SPEC.md                (Cognitive Routing & Telemetry Fuzzing)
  │       ├── AUDIT-2026-IAM-DISINTERMEDIATION.md             (Sovereign Identity / Okta Disintermediation)
+ │       ├── AUDIT-2026-KERNEL-TELEMETRY-SHIELD.md           (Ring-0 eBPF Telemetry Interception / HPMCR-eBPF)
+ │       ├── AUDIT-2026-MICROGRID-COMPUTE-SCHEDULER.md      (Landauer Bounds & Bare-Metal Energy Scheduler / ENERGY-v1.0)
  │       ├── AUDIT-2026-ITSM-DISINTERMEDIATION.md            (Sovereign ITSM / ServiceNow Disintermediation)
  │       ├── AUDIT-2026-LANGUAGE-SERIALIZATION-PARADIGM.md   (Strict Liability & Serialization)
  │       ├── AUDIT-2026-LEGAL-DISINTERMEDIATION.md           (Sovereign Legal / Ironclad Disintermediation)
