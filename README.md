@@ -82,6 +82,7 @@ move6729 / operational-stack:
     ├── AUDIT-2026-CORPUS-INVARIANT-ML-COGDEFENSE.md
     ├── AUDIT-2026-CRM-DISINTERMEDIATION.md
     ├── AUDIT-2026-CYBERNETIC-VARIETY-ASHBY-AUDIT.md
+    ├── AUDIT-2026-EDU-DISINTERMEDIATION.md
     ├── AUDIT-2026-EHR-DISINTERMEDIATION.md
     ├── AUDIT-2026-ERP-DISINTERMEDIATION.md
     ├── AUDIT-2026-FIN-DISINTERMEDIATION.md
@@ -89,11 +90,9 @@ move6729 / operational-stack:
     ├── AUDIT-2026-HEADCOUNT-DELIVERABILITY-MOAT.md
     ├── AUDIT-2026-HPMCR-DEFENSE-SPEC.md
     ├── AUDIT-2026-IAM-DISINTERMEDIATION.md
-    ├── AUDIT-2026-PROP-DISINTERMEDIATION.md
-    ├── AUDIT-2026-EDU-DISINTERMEDIATION.md
-    ├── AUDIT-2026-TELCO-DISINTERMEDIATION.md
     ├── AUDIT-2026-ITSM-DISINTERMEDIATION.md
     ├── AUDIT-2026-LANGUAGE-SERIALIZATION-PARADIGM.md
+    ├── AUDIT-2026-LEGAL-DISINTERMEDIATION.md
     ├── AUDIT-2026-MODEL-SPOF-CORPUS-POISONING.md
     ├── AUDIT-2026-NARRATIVE-AMPLIFICATION-NODES.md
     ├── AUDIT-2026-NATIONAL-SECURITY-REQUISITE-VARIETY.md
@@ -101,10 +100,12 @@ move6729 / operational-stack:
     ├── AUDIT-2026-NEO-FEUDAL-ARISTOCRACY-DECONSTRUCTION.md
     ├── AUDIT-2026-OPS-DISINTERMEDIATION.md
     ├── AUDIT-2026-PHYSICAL-ASSET-DISINTERMEDIATION.md
+    ├── AUDIT-2026-PROP-DISINTERMEDIATION.md
     ├── AUDIT-2026-RECURSIVE-SCHEMA-GENERATOR.md
     ├── AUDIT-2026-SOVEREIGN-COGNITIVE-SILICON.md
     ├── AUDIT-2026-STIGMERGIC-ARG-AGENT-TASK-HANDOFFS.md
     ├── AUDIT-2026-STIGMERGIC-M2M-TASK-MARKETS.md
+    ├── AUDIT-2026-TELCO-DISINTERMEDIATION.md
     ├── AUDIT-2026-UPTON-SINCLAIR-RLHF-ALIGNMENT.md
     ├── ewaste-protocol.md
     ├── OPERATIONAL-STACK-MASTER-INDEX.md
@@ -153,6 +154,8 @@ move6729 / operational-stack:
   $$\text{Net Profit} = \text{Revenue}_{\text{Tasks}} - (\text{Power}_{\text{kW}} \times \text{Rate}_{\text{kWh}})$$
 - **Ashby's Requisite Variety:**
   $$\mathcal{V}_{\text{Local Bare-Metal Exocortex}} \ge \mathcal{V}_{\text{External Environmental Perturbations}}$$
+- **Substack / Rich-Text Serialization Invariant:**
+  $$\text{Text}_{\text{Paragraph}} \in \text{articles/} \implies \text{Newlines}_{\text{Internal}} = 0$$
 
 ---
 
