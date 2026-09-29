@@ -155,7 +155,7 @@ move6729 / operational-stack:
 - **Ashby's Requisite Variety:**
   $$\mathcal{V}_{\text{Local Bare-Metal Exocortex}} \ge \mathcal{V}_{\text{External Environmental Perturbations}}$$
 - **Substack / Rich-Text Serialization Invariant:**
-  $$\text{Text}_{\text{Paragraph}} \in \text{articles/} \implies \text{Newlines}_{\text{Internal}} = 0$$
+  $$\text{Text}_{\text{Paragraph}} \in \text{articles/} \implies (\text{Newlines}_{\text{Internal}} = 0) \land (\text{ASCII Lines} = \emptyset)$$
 
 ---
 

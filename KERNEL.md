@@ -24,8 +24,8 @@
    $$\Delta \text{Files} \neq \emptyset \implies \Delta \text{Trees}_{\text{README, MASTER-INDEX}} = \Delta \text{Files}$$
    *Rule:* `specs/OPERATIONAL-STACK-MASTER-INDEX.md` MUST ALWAYS remain in active context during development turns to ensure 1:1 map synchronization across all file additions, deletions, or structural modifications.
 8. **Substack / Rich-Text Serialization Invariant:**
-   $$\text{Text}_{\text{Paragraph}} \in \text{articles/} \implies \text{Newlines}_{\text{Internal}} = 0$$
-   *Rule:* Canonical `.txt` essay artifacts must format paragraphs as continuous strings without mid-sentence hard wraps (~80-char line breaks). Paragraphs are delimited strictly by double newlines (`\n\n`), preventing mid-sentence line truncation when copied into rich-text editors (Substack, Medium).
+   $$\text{Text}_{\text{Paragraph}} \in \text{articles/} \implies (\text{Newlines}_{\text{Internal}} = 0) \land (\text{ASCII Lines} = \emptyset)$$
+   *Rule:* Canonical `.txt` essay artifacts must format paragraphs as continuous strings without mid-sentence hard wraps (~80-char line breaks), delimited strictly by double newlines (`\n\n`). Furthermore, articles MUST NOT contain plain-text ASCII line dividers (e.g., `--------------------------------------------------------------------------------`), preventing manual cleanup effort in Substack and rich-text editors.
 
 ---
 

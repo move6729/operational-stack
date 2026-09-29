@@ -201,8 +201,8 @@ A concept or repository specification is approved for execution ONLY if it clear
    $$\mathcal{V}_{\text{Local Bare-Metal Exocortex}} \ge \mathcal{V}_{\text{Biological Operator}}$$
 
 7. **Substack / Rich-Text Serialization Invariant:**
-   $$\text{Text}_{\text{Paragraph}} \in \text{articles/} \implies \text{Newlines}_{\text{Internal}} = 0$$
-   *(Canonical `.txt` essay artifacts format paragraphs as single un-wrapped strings to ensure zero-friction copy-pasting into Substack and rich-text platforms without mid-sentence line truncation).*
+   $$\text{Text}_{\text{Paragraph}} \in \text{articles/} \implies (\text{Newlines}_{\text{Internal}} = 0) \land (\text{ASCII Lines} = \emptyset)$$
+   *(Canonical `.txt` essay artifacts format paragraphs as single un-wrapped strings without plain-text ASCII line dividers to ensure zero-friction copy-pasting into Substack and rich-text platforms).*
 
 ---
 
