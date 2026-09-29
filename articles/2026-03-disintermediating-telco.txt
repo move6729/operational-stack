@@ -1,0 +1,14 @@
+Bypassing the Telecom API Tollbooth: OPEN-TELCO-v1.0
+
+Enterprise applications spend billions paying API aggregators like Twilio and Infobip to route notifications, SMS messages, and voice calls.
+
+Telecom API vendors act as high-margin middleman tollbooths, taking raw IP/SIP signals and slapping artificial per-message fees, per-lookup markups, and rate limits on top.
+
+In computational reality, messaging between endpoints is simply IP transport and WebRTC/SIP peer signaling. Paying a proprietary cloud aggregator per message is an artificial economic friction.
+
+OPEN-TELCO-v1.0 replaces proprietary telecom APIs with bare-metal P2P messaging:
+1. Routing and signaling are defined as open cryptographic dispatch graphs (schema/telco_dispatch.json).
+2. Delivery and state transitions are verified locally using zero-dependency Python engines (proofs/telco_engine.py).
+3. Transports route over direct P2P mesh links (LMTI-v1.0) or direct SIP peering, bypassing third-party cloud API markups.
+
+By returning communication routing to bare-metal IP and cryptographic P2P mesh protocols, middleman telecom rents evaporate.

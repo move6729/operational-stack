@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "OpenTelcoDispatch",
+  "description": "Schema for Sovereign Telecommunication & P2P Mesh Routing Graph (OPEN-TELCO-v1.0)",
+  "type": "object",
+  "properties": {
+    "protocol_version": {
+      "type": "string",
+      "const": "OPEN-TELCO-v1.0"
+    },
+    "dispatch_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "origin_peer": {
+      "type": "string"
+    },
+    "target_peer": {
+      "type": "string"
+    },
+    "payload_type": {
+      "type": "string",
+      "enum": ["SIP_SIGNAL", "WEBRTC_SDP", "CRYPTOGRAPHIC_MSG", "CARRIER_ATTESTATION"]
+    },
+    "local_state_vector": {
+      "type": "object",
+      "properties": {
+        "state_hash": {
+          "type": "string",
+          "pattern": "^[a-fA-F0-9]{64}$"
+        },
+        "timestamp_epoch": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": ["state_hash", "timestamp_epoch"]
+    },
+    "security_invariants": {
+      "type": "object",
+      "properties": {
+        "isolated_sandbox_required": {
+          "type": "boolean",
+          "const": true
+        },
+        "statutory_compliance_verified": {
+          "type": "boolean",
+          "const": true
+        }
+      },
+      "required": ["isolated_sandbox_required", "statutory_compliance_verified"]
+    }
+  },
+  "required": [
+    "protocol_version",
+    "dispatch_id",
+    "origin_peer",
+    "target_peer",
+    "payload_type",
+    "local_state_vector",
+    "security_invariants"
+  ]
+}

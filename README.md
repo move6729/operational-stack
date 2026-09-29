@@ -15,7 +15,10 @@ move6729 / operational-stack:
 ├── README.md                       [Master Context & System Specification Index]
 │
 ├── articles/                       [Public Canonical Articles & Essays]
-│   └── 2026-03-great-hardware-inversion.txt [The Great Hardware Inversion]
+│   ├── 2026-03-great-hardware-inversion.txt [The Great Hardware Inversion]
+│   ├── 2026-03-disintermediating-legaltech.txt
+│   ├── 2026-03-disintermediating-iam.txt
+│   └── 2026-03-disintermediating-telco.txt
 │
 ├── schema/                         [Core & Disintermediation JSON Schemas (Draft 2020-12)]
 │   ├── aatp_telemetry.json         [Sovereign Agricultural Telemetry Graph (AATP-v1.0)]
@@ -53,6 +56,7 @@ move6729 / operational-stack:
 │   ├── ops_engine.py               [Bare-Metal Customer Ops Verification Engine (OPEN-OPS-v1.0)]
 │   ├── ovtm_auditor.py             [Kinetic Hardware Isolation Auditor (OVTM-S v1.1)]
 │   ├── ovtm_engine.py              [Bare-Metal Vehicle Telemetry Engine (OVTM-S v1.1)]
+│   ├── telco_engine.py             [Bare-Metal Telco Verification Engine (OPEN-TELCO-v1.0)]
 │   ├── iam_engine.py               [Bare-Metal IAM Verification Engine (OPEN-IAM-v1.0)]
 │   ├── legal_engine.py             [Bare-Metal Legal Verification Engine (OPEN-LEGAL-v1.0)]
 │   ├── switching_cost_decay.py     [Mathematical Proof of SaaS Switching Cost Collapse]
@@ -78,6 +82,7 @@ move6729 / operational-stack:
     ├── AUDIT-2026-HEADCOUNT-DELIVERABILITY-MOAT.md
     ├── AUDIT-2026-HPMCR-DEFENSE-SPEC.md
     ├── AUDIT-2026-IAM-DISINTERMEDIATION.md
+    ├── AUDIT-2026-TELCO-DISINTERMEDIATION.md
     ├── AUDIT-2026-ITSM-DISINTERMEDIATION.md
     ├── AUDIT-2026-LANGUAGE-SERIALIZATION-PARADIGM.md
     ├── AUDIT-2026-MODEL-SPOF-CORPUS-POISONING.md
