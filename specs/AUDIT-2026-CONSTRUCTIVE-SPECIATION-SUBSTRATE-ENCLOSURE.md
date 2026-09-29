@@ -55,7 +55,7 @@ Structurally, an entity attempting to monopolize the biological substrate trigge
 1. **Symmetric Risk Collapses:** Eliminates the foundation of shared legal recourse and reciprocal market exchange.
 2. **Substrate Enclosure:** Forces non-signatories into permanent biological dependency and rent extraction.
 3. **Existential Threat Perception:** Incentivizes the surrounding population to treat the enclosing entity as an un-cooperative structural threat to species continuity.
-4. **Permanent Isolation in Underground Bunkers:** Destroying shared social equilibrium yields a paradox for the enclosing class—their ultimate physical security degrades into voluntary self-entombment within hardened bunker complexes, transforming biological superiority into permanent physical isolation from the world.
+4. **Permanent Isolation in Underground Bunkers:** Destroying shared social equilibrium yields a paradox for the enclosing class—their ultimate physical security degrades into voluntary self-entombment within hardened bunker complexes. Even if individual actors welcome physical isolation, self-entombment severs supply chains and transfers personal survival entirely to armed local security forces, triggering an immediate and un-resolvable internal principal-agent failure.
 
 ---
 
