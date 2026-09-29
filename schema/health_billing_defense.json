@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ProSeHealthBillingDefense",
+  "type": "object",
+  "required": [
+    "case_id",
+    "patient_pubkey",
+    "provider_npi",
+    "claim_items",
+    "statutory_violations",
+    "dispute_timestamp"
+  ],
+  "properties": {
+    "case_id": {
+      "type": "string",
+      "pattern": "^HLTH-[0-9a-f]{8}$"
+    },
+    "patient_pubkey": {
+      "type": "string",
+      "pattern": "^0x[0-9a-fA-F]{64}$"
+    },
+    "provider_npi": {
+      "type": "string",
+      "pattern": "^[0-9]{10}$"
+    },
+    "claim_items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["cpt_code", "billed_cents", "benchmark_median_cents", "emergency_service"],
+        "properties": {
+          "cpt_code": { "type": "string" },
+          "billed_cents": { "type": "integer", "minimum": 0 },
+          "benchmark_median_cents": { "type": "integer", "minimum": 0 },
+          "emergency_service": { "type": "boolean" }
+        }
+      }
+    },
+    "statutory_violations": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["NO_SURPRISES_ACT_OUT_OF_NETWORK", "UNBUNDLED_CPT_DUPLICATION", "CHARGEMASTER_EXCESSIVE_MARKUP"]
+      }
+    },
+    "dispute_timestamp": {
+      "type": "integer",
+      "minimum": 0
+    }
+  },
+  "additionalProperties": false
+}

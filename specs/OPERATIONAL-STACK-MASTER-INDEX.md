@@ -5,7 +5,17 @@
 - `specs/audit_spec.md` - Engine Verification Invariants and Article Serialization Audit Specification.
 - `specs/human_swarm_audit_spec.md` - The Human Swarm Essay Audit Specification (`SWARM-AUDIT-v1.0`).
 - `specs/ubc_audit_spec.md` - Universal Basic Compute Protocol and Essay Audit Specification (`UBC-AUDIT-v1.0`).
+- `specs/AUDIT-2026-HEALTHCARE-BILLING-DISINTERMEDIATION.md` - Sovereign Health & Medical Billing Defense Audit Specification (`OPEN-HEALTH-LEGAL-v1.0`).
+- `specs/AUDIT-2026-ZERO-DNS-MESH-DISCOVERY.md` - Zero-DNS Local Physical Mesh Discovery Engine Specification (`OPEN-MESH-DISCOVERY-v1.0`).
+- `specs/AUDIT-2026-THERMODYNAMIC-MICRO-SETTLEMENT.md` - Sub-Cent Thermodynamic Micro-Settlement Ledger Specification (`OPEN-SETTLEMENT-v1.0`).
+- `specs/AUDIT-2026-OFFGRID-ENERGY-DISINTERMEDIATION.md` - Sovereign Physical Infrastructure & Off-Grid Energy Specification (`OPEN-INFRA-v1.0`).
+- `specs/AUDIT-2026-LABOR-COLLECTIVE-LEVERAGE.md` - Agentic Collective Labor Leverage Engine Specification (`OPEN-LABOR-v1.0`).
 - `specs/OPERATIONAL-STACK-MASTER-INDEX.md` - Active tree synchronization map.
+
+## SCHEMAS (`schema/`)
+- `schema/health_billing_defense.json` - Pro Se Healthcare Billing & Statutory Dispute Schema.
+- `schema/offgrid_energy.json` - Off-Grid Energy & Micro-Grid Dispatch Schema.
+- `schema/labor_collective.json` - Agentic Collective Labor Leverage & Rate Floor Schema.
 
 ## PROOFS & ENGINES (`proofs/`)
 - `proofs/aatp_engine.py` - Agricultural & Telemetry Engine (`AATP-v1.0`).
@@ -22,9 +32,14 @@
 - `proofs/fin_engine.py` - Financial & Settlement Engine (`OPEN-FIN-v1.0`).
 - `proofs/freight_engine.py` - Freight & Logistics Brokerage Engine (`OPEN-FREIGHT-v1.0`).
 - `proofs/grid_engine.py` - Micro-Grid Energy Dispatch Engine (`OPEN-P2P-GRID-v1.0`).
+- `proofs/health_legal_engine.py` - Bare-Metal Healthcare Billing Defense Engine (`OPEN-HEALTH-LEGAL-v1.0`).
 - `proofs/iam_engine.py` - Identity & Access Management Engine (`OPEN-IAM-v1.0`).
 - `proofs/itsm_engine.py` - IT Service Management Engine (`OPEN-ITSM-v1.0`).
+- `proofs/labor_engine.py` - Collective Labor Leverage Engine (`OPEN-LABOR-v1.0`).
+- `proofs/mesh_discovery_engine.py` - Zero-DNS Local Physical Mesh Discovery Engine (`OPEN-MESH-DISCOVERY-v1.0`).
+- `proofs/micro_settlement_engine.py` - Sub-Cent Thermodynamic Micro-Settlement Engine (`OPEN-SETTLEMENT-v1.0`).
 - `proofs/narrative_node_engine.py` - Regulatory Capture & Policy Risk Engine.
+- `proofs/offgrid_engine.py` - Self-Sovereign Infrastructure Off-Grid Engine (`OPEN-INFRA-v1.0`).
 - `proofs/omrp_engine.py` - Open Mail Routing Protocol Engine (`OMRP-v1.0`).
 - `proofs/ops_engine.py` - Operations & Support Engine (`OPEN-OPS-v1.0`).
 - `proofs/ovtm_auditor.py` - Kinetic Mobility Safety Isolation Auditor.

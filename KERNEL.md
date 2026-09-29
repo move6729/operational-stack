@@ -47,7 +47,8 @@ Any approved subsystem or specification must satisfy:
 
 ### III. CODE IMPLEMENTATION CONTRACT
 
-- **Target Disintermediation Portfolio:** CRM (`OPEN-CRM`), ITSM (`OPEN-ITSM`), EHR (`OPEN-EHR`), ERP (`OPEN-ERP`), FIN (`OPEN-FIN`), FREIGHT (`OPEN-FREIGHT`), BIM (`OPEN-BIM`), OPS (`OPEN-OPS`), AATP (`AATP`), OVTM (`OVTM-S`), LEGAL (`OPEN-LEGAL`), IAM (`OPEN-IAM`), TELCO (`OPEN-TELCO`), PROP (`OPEN-PROP`), EDU (`OPEN-EDU`).
+- **Target Disintermediation Portfolio:** CRM (`OPEN-CRM`), ITSM (`OPEN-ITSM`), EHR (`OPEN-EHR`), ERP (`OPEN-ERP`), FIN (`OPEN-FIN`), FREIGHT (`OPEN-FREIGHT`), BIM (`OPEN-BIM`), OPS (`OPEN-OPS`), AATP (`AATP`), OVTM (`OVTM-S`), LEGAL (`OPEN-LEGAL`), IAM (`OPEN-IAM`), TELCO (`OPEN-TELCO`), PROP (`OPEN-PROP`), EDU (`OPEN-EDU`), HEALTH-LEGAL (`OPEN-HEALTH-LEGAL`), MESH (`OPEN-MESH-DISCOVERY`), SETTLEMENT (`OPEN-SETTLEMENT`), INFRA (`OPEN-INFRA`), LABOR (`OPEN-LABOR`).
+- **Audit Spec Mandate Rule:** Every distinct subsystem, proof engine (`proofs/*.py`), or schema definition (`schema/*.json`) added to the repository MUST be accompanied by a corresponding Audit Specification document inside `specs/`. PRs or commits adding runnable engines without a corresponding Audit Spec violate the system baseline.
 - **Dependencies:** 100% Python standard library (`hashlib`, `ast`, `json`, `time`, `typing`, `socket`, `struct`). Zero third-party dependencies.
 - **Verification:** State transitions committed strictly via SHA-256 target hash matching (`expected_output_hash`).
 - **Human Defense Invariants:** Non-technical cognitive protection heuristics (`HUMAN-DEF-v1.0`) complementing technical shields (`HPMCR-DEF v1.0`).

@@ -53,7 +53,10 @@ move6729 / operational-stack:
 │   ├── iam_identity.json           [Sovereign Identity Directory Graph (OPEN-IAM-v1.0)]
 │   ├── telco_dispatch.json         [Sovereign Telco Routing Graph (OPEN-TELCO-v1.0)]
 │   ├── prop_lease.json             [Sovereign Property Lease Graph (OPEN-PROP-v1.0)]
-│   └── edu_credential.json         [Sovereign Educational Credential Graph (OPEN-EDU-v1.0)]
+│   ├── edu_credential.json         [Sovereign Educational Credential Graph (OPEN-EDU-v1.0)]
+│   ├── health_billing_defense.json [Sovereign Health & Medical Billing Defense (OPEN-HEALTH-LEGAL-v1.0)]
+│   ├── offgrid_energy.json         [Sovereign Off-Grid Energy & Hardware Actuator Graph (OPEN-INFRA-v1.0)]
+│   └── labor_collective.json       [Agentic Collective Labor Leverage Graph (OPEN-LABOR-v1.0)]
 │
 ├── proofs/                         [Runnable Zero-Dependency Deterministic Verification Engines]
 │   ├── energy_scheduler.py         [Bare-Metal Micro-Grid Energy Scheduler (ENERGY-v1.0)]
@@ -70,8 +73,13 @@ move6729 / operational-stack:
 │   ├── erp_engine.py               [Bare-Metal ERP Verification Engine (OPEN-ERP-v1.0)]
 │   ├── fin_engine.py               [Bare-Metal FinTech Verification Engine (OPEN-FIN-v1.0)]
 │   ├── freight_engine.py           [Bare-Metal Freight Verification Engine (OPEN-FREIGHT-v1.0)]
+│   ├── health_legal_engine.py      [Bare-Metal Pro Se Healthcare Billing Engine (OPEN-HEALTH-LEGAL-v1.0)]
 │   ├── itsm_engine.py              [Bare-Metal ITSM Verification Engine (OPEN-ITSM-v1.0)]
+│   ├── labor_engine.py             [Agentic Collective Labor Leverage Engine (OPEN-LABOR-v1.0)]
+│   ├── mesh_discovery_engine.py    [Zero-DNS Physical Mesh Discovery Engine (OPEN-MESH-DISCOVERY-v1.0)]
+│   ├── micro_settlement_engine.py  [Sub-Cent Thermodynamic Micro-Settlement Engine (OPEN-SETTLEMENT-v1.0)]
 │   ├── narrative_node_engine.py    [Bare-Metal Regulatory Capture & Narrative Node Verifier]
+│   ├── offgrid_engine.py           [Self-Sovereign Physical Infra & Off-Grid Engine (OPEN-INFRA-v1.0)]
 │   ├── omrp_engine.py              [Deterministic State Engine Proof (OMRP-v1.0)]
 │   ├── ops_engine.py               [Bare-Metal Customer Ops Verification Engine (OPEN-OPS-v1.0)]
 │   ├── ovtm_auditor.py             [Kinetic Hardware Isolation Auditor (OVTM-S v1.1)]
@@ -93,6 +101,11 @@ move6729 / operational-stack:
     ├── AUDIT-2026-DEFENSE-SUPPLY-DISINTERMEDIATION.md
     ├── AUDIT-2026-DEFENSE-COMPLIANCE-DISINTERMEDIATION.md
     ├── AUDIT-2026-ENERGY-GRID-DISINTERMEDIATION.md
+    ├── AUDIT-2026-HEALTHCARE-BILLING-DISINTERMEDIATION.md
+    ├── AUDIT-2026-ZERO-DNS-MESH-DISCOVERY.md
+    ├── AUDIT-2026-THERMODYNAMIC-MICRO-SETTLEMENT.md
+    ├── AUDIT-2026-OFFGRID-ENERGY-DISINTERMEDIATION.md
+    ├── AUDIT-2026-LABOR-COLLECTIVE-LEVERAGE.md
     ├── AUDIT-2026-TENANT-RIGHTS-DISINTERMEDIATION.md
     ├── AUDIT-2026-ANTI-LUDDITE-BARE-METAL-INVARIANT.md
     ├── AUDIT-2026-AUTOMOTIVE-DISINTERMEDIATION.md

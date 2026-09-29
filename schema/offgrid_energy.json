@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SelfSovereignOffGridEnergy",
+  "type": "object",
+  "required": [
+    "node_id",
+    "solar_input_watts",
+    "battery_charge_percent",
+    "grid_connected",
+    "actuator_state",
+    "timestamp"
+  ],
+  "properties": {
+    "node_id": {
+      "type": "string"
+    },
+    "solar_input_watts": {
+      "type": "number",
+      "minimum": 0
+    },
+    "battery_charge_percent": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "grid_connected": {
+      "type": "boolean"
+    },
+    "actuator_state": {
+      "type": "string",
+      "enum": ["FULL_COMPUTE_MAX_YIELD", "BATTERY_CONSERVATION", "IDLE"]
+    },
+    "timestamp": {
+      "type": "integer",
+      "minimum": 0
+    }
+  },
+  "additionalProperties": false
+}
