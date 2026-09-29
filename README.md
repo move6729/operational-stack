@@ -20,7 +20,8 @@ move6729 / operational-stack:
 │   ├── 2026-03-disintermediating-iam.txt
 │   ├── 2026-03-disintermediating-telco.txt
 │   ├── 2026-03-disintermediating-proptech.txt
-│   └── 2026-03-disintermediating-edtech.txt
+│   ├── 2026-03-disintermediating-edtech.txt
+│   └── 2026-03-the-great-disintermediation-manifesto.txt
 │
 ├── schema/                         [Core & Disintermediation JSON Schemas (Draft 2020-12)]
 │   ├── aatp_telemetry.json         [Sovereign Agricultural Telemetry Graph (AATP-v1.0)]

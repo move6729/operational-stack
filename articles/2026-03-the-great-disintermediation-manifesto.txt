@@ -1,0 +1,136 @@
+The Great Disintermediation Manifesto: How Open Protocols Eliminate $1 Trillion in SaaS Rents
+
+By OPSTACK Research Group
+License: Unlicense (Public Domain — Zero-Rent Federation)
+
+--------------------------------------------------------------------------------
+I. THE ASYMPTOTE OF SWITCHING COSTS
+--------------------------------------------------------------------------------
+For twenty years, the enterprise software industry operated on a single economic mechanism: high switching costs ($C_s \to \infty$).
+
+Software cartels built billion-dollar business models not by offering superior computational mechanics, but by locking customer data inside proprietary database dialects, enforcing custom API wrappers, charging per-seat or per-student licensing fees, and taking 20% to 30%+ platform tolls on routine economic transactions.
+
+When human developers write code by hand, migrating away from legacy software is a multi-million-dollar, multi-year nightmare. Enterprise platforms like Salesforce, SAP, Epic Systems, and Okta rely on this friction to extract persistent middleman rents.
+
+In 2026, autonomous software agents and local bare-metal runtimes (LMCI-v1.0) have inverted this dynamic.
+
+When an autonomous agent can ingest an entire legacy database, extract its underlying entity relationships, convert the state into an open JSON-LD graph, and execute refactored logic locally at silicon speed, software switching costs collapse to absolute zero:
+
+    Lim_{A_p -> 1.0} SwitchingCost(A_p) = 0 ===> Vendor Margin -> Cost of Compute (Watts)
+
+When switching costs decay to zero, the SaaS tollbooth evaporates. Software syntax becomes a fluid, temporary intermediate representation, and enterprise platforms lose their capacity to lock in customers.
+
+--------------------------------------------------------------------------------
+II. THE COMPLETE SAAS DISINTERMEDIATION SUITE
+--------------------------------------------------------------------------------
+The Operational Stack (OPSTACK v2.1) provides a complete, runnable, public-domain alternative to the fifteen largest enterprise software tollbooths in existence. 
+
+Every protocol replaces closed proprietary APIs with:
+1. Strict JSON-Schema (Draft 2020-12) defining the domain asset graph.
+2. Zero-dependency, bare-metal Python verification engines executing deterministic SHA-256 state transitions locally.
+3. 100% Public Domain licensing (Unlicense) with zero platform fees, zero per-seat licensing, and zero middleman extraction.
+
+Here is the master disintermediation matrix:
+
+1. SOVEREIGN CRM (OPEN-CRM-v1.0)
+   - Target Monopolies: Salesforce (Sales Cloud), HubSpot
+   - Replacement Schema: schema/crm_pipeline.json
+   - Verification Engine: proofs/crm_engine.py
+
+2. SOVEREIGN ITSM (OPEN-ITSM-v1.0)
+   - Target Monopolies: ServiceNow, Atlassian Jira Service Management
+   - Replacement Schema: schema/itsm_incident.json
+   - Verification Engine: proofs/itsm_engine.py
+
+3. SOVEREIGN EHR (OPEN-EHR-v1.0)
+   - Target Monopolies: Epic Systems (MyChart), Cerner / Oracle Health
+   - Replacement Schema: schema/ehr_patient.json
+   - Verification Engine: proofs/ehr_engine.py
+
+4. SOVEREIGN ERP (OPEN-ERP-v1.0)
+   - Target Monopolies: SAP (S/4HANA), Oracle ERP Cloud, NetSuite
+   - Replacement Schema: schema/erp_inventory.json
+   - Verification Engine: proofs/erp_engine.py
+
+5. SOVEREIGN FINTECH (OPEN-FIN-v1.0)
+   - Target Monopolies: Stripe, Plaid
+   - Replacement Schema: schema/fin_intent.json
+   - Verification Engine: proofs/fin_engine.py
+
+6. SOVEREIGN FREIGHT (OPEN-FREIGHT-v1.0)
+   - Target Monopolies: Uber Freight, C.H. Robinson
+   - Replacement Schema: schema/freight_dispatch.json
+   - Verification Engine: proofs/freight_engine.py
+
+7. SOVEREIGN SPATIAL BIM (OPEN-BIM-v1.0)
+   - Target Monopolies: Autodesk (Revit, BIM 360, Autodesk Construction Cloud)
+   - Replacement Schema: schema/spatial_bim.json
+   - Verification Engine: proofs/bim_engine.py
+
+8. SOVEREIGN CUSTOMER OPS (OPEN-OPS-v1.0)
+   - Target Monopolies: Zendesk, Intercom
+   - Replacement Schema: schema/ops_ticket.json
+   - Verification Engine: proofs/ops_engine.py
+
+9. SOVEREIGN AGRI-TELEMETRY (AATP-v1.0)
+   - Target Monopolies: Climate FieldView (Bayer), John Deere Operations Center
+   - Replacement Schema: schema/aatp_telemetry.json
+   - Verification Engine: proofs/aatp_engine.py
+
+10. SOVEREIGN VEHICLE MOBILITY (OVTM-S v1.1)
+    - Target Monopolies: Tesla (Fleet API), OEM Connected Car Telematics
+    - Replacement Schema: schema/ovtm_kinetic.json
+    - Verification Engine: proofs/ovtm_engine.py / proofs/ovtm_auditor.py
+
+11. SOVEREIGN LEGAL & CONTRACTS (OPEN-LEGAL-v1.0)
+    - Target Monopolies: Ironclad, DocuSign, LexisNexis
+    - Replacement Schema: schema/legal_contract.json
+    - Verification Engine: proofs/legal_engine.py
+
+12. SOVEREIGN IDENTITY & ACCESS (OPEN-IAM-v1.0)
+    - Target Monopolies: Okta, Ping Identity, Microsoft Entra ID
+    - Replacement Schema: schema/iam_identity.json
+    - Verification Engine: proofs/iam_engine.py
+
+13. SOVEREIGN TELECOMMUNICATIONS (OPEN-TELCO-v1.0)
+    - Target Monopolies: Twilio, Infobip, Sinch
+    - Replacement Schema: schema/telco_dispatch.json
+    - Verification Engine: proofs/telco_engine.py
+
+14. SOVEREIGN PROPERTY MANAGEMENT (OPEN-PROP-v1.0)
+    - Target Monopolies: Yardi Systems, RealPage, AppFolio
+    - Replacement Schema: schema/prop_lease.json
+    - Verification Engine: proofs/prop_engine.py
+
+15. SOVEREIGN EDUCATION & LMS (OPEN-EDU-v1.0)
+    - Target Monopolies: Instructure (Canvas), Blackboard, D2L Brightspace
+    - Replacement Schema: schema/edu_credential.json
+    - Verification Engine: proofs/edu_engine.py
+
+--------------------------------------------------------------------------------
+III. THE BARE-METAL EXECUTION ARCHITECTURE
+--------------------------------------------------------------------------------
+These fifteen protocols are not abstract concepts. They run on a four-tier sovereign execution stack:
+
+1. Zero-C2 Task Graph Scheduler (ATN-v1.0):
+   Autonomous agents coordinate work asynchronously using static Directed Acyclic Graphs (schema/task_graph.json) and SHA-256 target state hashes, burning zero tokens on performative English chat.
+
+2. Local Weight & Context Isolation (LMCI-v1.0):
+   Inference executes offline on local bare-metal silicon (Apple Silicon, edge GPUs) using open-weight quantized models (GGUF/EXL2). Zero data fallback to commercial cloud APIs.
+
+3. Local Mesh Transport Shielding (LMTI-v1.0):
+   Outbound network frames bypass DNS using direct cryptographic key identities (WireGuard/Yggdrasil), padded to uniform 1024-byte blocks with egress timing jitter to neutralize Deep Packet Inspection (DPI).
+
+4. Scavenged Edge Hardware Orchestration (EWASTE-v1.0):
+   Aggregates scavenged consumer silicon and legacy edge devices into localized, solar-powered compute networks operating at raw electricity cost ($OpEx \to \text{Watts}$).
+
+--------------------------------------------------------------------------------
+IV. CALL TO EXECUTION
+--------------------------------------------------------------------------------
+The era of digital landlordism is over. You do not need to pay monthly per-seat licensing fees to manage pipeline opportunities, run server authentication, store lease agreements, issue academic credentials, or dispatch freight.
+
+All specifications, JSON schemas, and Python verification engines are open, zero-dependency, and dedicated 100% to the public domain under the Unlicense.
+
+Clone the repository. Run compute locally. Eliminate the middleman.
+
+https://github.com/move6729/operational-stack

@@ -22,7 +22,8 @@ move6729 / GitHub Account Identity
  │   │   ├── 2026-03-disintermediating-iam.txt
  │   │   ├── 2026-03-disintermediating-telco.txt
  │   │   ├── 2026-03-disintermediating-proptech.txt
- │   │   └── 2026-03-disintermediating-edtech.txt
+ │   │   ├── 2026-03-disintermediating-edtech.txt
+ │   │   └── 2026-03-the-great-disintermediation-manifesto.txt
  │   ├── schema/                         <-- Core & Disintermediation JSON Schemas (Draft 2020-12)
  │   │   ├── task_graph.json             <-- Machine-Readable AST Task Graph Schema (ATN-v1.0)
  │   │   ├── omrp_attestation.json       <-- OMRP-v1.0 Identity Attestation Schema
