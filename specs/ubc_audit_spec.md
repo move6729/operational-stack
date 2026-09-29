@@ -19,6 +19,9 @@
    - Task completion settlement requires a matching SHA-256 state payload hash (`expected_hash`).
    - Mismatched execution hashes immediately reject settlement and prevent ledger commit.
 
+4. **Distributed Topology Verification:**
+   - Engine instance must track discrete routing network endpoints (`node_ip`) to verify geographically distributed edge execution and anti-sybil topology.
+
 ---
 
 ### II. ARTICLE AUDIT CRITERIA (`articles/universal-basic-compute.txt`)
@@ -26,7 +29,10 @@
 1. **Thermodynamic Alignment:**
    - Article content must maintain 1:1 conceptual fidelity with `proofs/ubc_engine.py` (shifting from legacy paper welfare to self-sovereign edge yield).
 
-2. **Serialization Rules (`KERNEL.md` Rule 8):**
+2. **Network Topology Coverage:**
+   - Article must articulate discrete residential node routing advantages, anti-sybil resilience, and structural anti-fragility against centralized data center IP blocklisting.
+
+3. **Serialization Rules (`KERNEL.md` Rule 8):**
    - Single-line continuous paragraphs (no mid-sentence hard breaks).
    - No ASCII line dividers.
    - Metadata included: Title, Byline, Unlicense declaration, and `##` Markdown subheadings.
