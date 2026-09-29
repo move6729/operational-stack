@@ -9,7 +9,9 @@ For more than two decades, consumer computing operated under an unwritten econom
 
 Operating systems, web browsers, mobile chips, and cloud SDKs were explicitly engineered to harvest physical micro-tells—dwell latency, scroll deceleration, cursor jitter, ambient light profiles, and location vectors. 
 
-In tech discourse, this persistent extraction is usually framed as a moral failure of user privacy or a triumph of surveillance capitalism. That critique misses the underlying computational mechanics. 
+In tech discourse, this persistent extraction is usually framed as a moral failure of user privacy or a triumph of surveillance capitalism. That critique misses the underlying computational mechanics.
+
+Central ML inference engines do not treat these streams as random noise. Deep autoencoders and transformer sequence models map uncurated micro-signals into dense high-dimensional embeddings. Sub-millisecond token-generation latencies, LLC (Last-Level Cache) eviction timing jitter, and packet timing signatures act as structural behavioral biometrics. By correlating these microarchitectural tells across edge sensors, centralized predictive models reconstruct an operator's exact prompt structure, task topology, and intent vector without ever needing to read unencrypted text.
 
 From a systems-engineering perspective, the "leaky" hardware era served a crucial evolutionary function: it provided the massive, uncurated telemetric silt required to train the first generation of artificial intelligence. Without millions of edge devices continuously broadcasting human behavioral states back to central server clusters, the high-dimensional data lakes necessary to parameterize modern foundation models would never have existed. 
 
@@ -45,9 +47,11 @@ Just as a firewall manages raw network ports (TCP/UDP), local AI proxies running
 
 IV. UNIFIED MEMORY AS THE NEW BATTLEFIELD
 
-In modern hardware designs, CPU, GPU, and Neural Processing Units (NPUs) share a single high-bandwidth pool of unified memory. 
+In modern unified memory architectures (e.g., Apple Silicon or integrated APUs), CPU, GPU, and NPU share the same physical LPDDR DRAM bus and Last-Level Cache (LLC). This heterogenous setup introduces severe microarchitectural attack vectors:
 
-In this paradigm, memory side-channels and bus leaks are no longer just minor software bugs; they are direct cognitive breaches. If your local AI agent is holding your private context, personal memory, or proprietary code inside unified RAM, any hardware-level backdoor or side-channel leak exposes your internal thought process directly to external harvesters.
+- Cross-Engine LLC Eviction Attacks: While an NPU or GPU processes local LLM weights, a background thread on the CPU can execute `rdtsc` timer probes on shared LLC lines to measure eviction latency. Because LLM memory access patterns vary deterministically based on context length and attention tokens, cache timing jitter directly leaks prompt structure.
+- Physical DRAM Bus & Power Side-Channels: Shared LPDDR traces draw varying current depending on memory access density. Local or adjacent micro-sensors can perform Differential Power Analysis (DPA) to reconstruct active context vectors.
+- Cross-Enclave Speculative Execution: When heterogeneous accelerators rely on shared hypervisor page tables, speculative execution across Translation Lookaside Buffers (TLB) breaches address space boundaries.
 
 Securing the unified memory bus becomes identical with protecting cognitive liberty.
 
@@ -56,10 +60,11 @@ V. THE ZERO-TRUST SILICON OPPORTUNITY
 
 Regulating central cloud providers does nothing to stop telemetry harvesting. Centralized regulations target the aggregator sink, not the edge leaks. As long as endpoints remain hardware-compromised, data harvesting simply shifts to side-channels, network tapping, and client-side SDKs.
 
-Solving the problem requires a clean-slate hardware layer:
-1. Open Instruction Set Architectures (RISC-V) with fully auditable Register-Transfer Level (RTL) designs.
-2. The total removal of proprietary management engines running below the hypervisor.
-3. Hardware-enforced memory isolation and cryptographically verified boot chains.
+Solving the problem requires a clean-slate hardware layer anchored in concrete open-source microarchitectures:
+1. Physical Memory Protection (PMP/ePMP): RISC-V hardware primitives that lock memory regions into isolated execution domains directly at the register level, bypassing host OS or hypervisor vulnerability.
+2. Open Enclave Runtimes (Keystone Enclave): Replacing opaque Intel SGX microcode and ARM TrustZone firmwares with open-source Machine-mode (M-mode) Security Monitors and 100% auditable RTL.
+3. Silicon Root of Trust (OpenTitan): Open-source cryptographic boot verification, key management, and anti-tamper logic built directly into silicon.
+4. Transparent Memory Controller Encryption: Inline AES-XTS bus encryption at the DRAM controller level to ensure physical DRAM traces remain unreadable to interposers or bus sniffers.
 
 The cloud era was built on cheap compute in exchange for user telemetry. The next paradigm inverts this completely: operators will invest in zero-trust, sovereign silicon specifically to opt out of the central cloud's continuous extraction loop.
 

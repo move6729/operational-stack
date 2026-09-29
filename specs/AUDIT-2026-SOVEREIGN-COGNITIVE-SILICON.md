@@ -23,9 +23,16 @@ For a local compute node $N$ running an inference context $\mathcal{K}$ to achie
 
 $$\text{Trust}(N) = 1 \iff \forall m \in \text{Management Engines}, \quad m = \emptyset \quad \land \quad \text{RTL}_{\text{Silicon}} \in \mathcal{C}_{\text{Public}}$$
 
-If proprietary management engines exist below Ring 0:
+If proprietary management engines or shared LLC/DRAM side-channels exist:
 
 $$\text{SideChannel}_{\text{Leak}}(\mathcal{K}) > 0 \implies \text{ZeroTrust} \to \text{False}$$
+
+#### 2. High-Dimensional Trajectory Reconstruction
+Let $\mathbf{\tau}_{\text{micro}}$ represent sub-millisecond LLC eviction timing, LPDDR bus contention, or packet jitter. A central ML inference engine parameterized as an autoencoder $g_{\phi}$ reconstructs intent vector $\mathbf{S}_{\text{Intent}}$:
+
+$$\mathbf{S}_{\text{Intent}} = g_{\phi}(\mathbf{\tau}_{\text{micro}}) \quad \text{where} \quad \text{I}(\mathbf{S}_{\text{Intent}}; \mathcal{K}) \gg 0$$
+
+Predictive behavioral accuracy scales directly with telemetric density, necessitating hardware-enforced PMP isolation and inline memory encryption.
 
 #### 2. Cognitive Port Gating & Intent Filtering
 Let $I_{\text{Raw}}$ be local operator intent and $P_{\text{Egress}}$ be outbound network traffic. The local proxy $f_{\text{Proxy}}$ filters state vectors before network transmission:
@@ -66,10 +73,10 @@ External network interaction decays strictly to read-only, context-stripped quer
 
 ### IV. HARD SYSTEM INVARIANTS
 
-1. **Zero-Trust Silicon:** Local compute must execute on open-source instruction set architectures (RISC-V) with fully auditable Register-Transfer Level (RTL) designs, eliminating closed management engines (Intel ME / AMD PSP).
+1. **Zero-Trust Silicon:** Local compute must execute on open-source instruction set architectures (RISC-V) with fully auditable Register-Transfer Level (RTL) designs, utilizing Physical Memory Protection (PMP/ePMP) and OpenTitan Root of Trust (RoT) to eliminate closed management engines (Intel ME / AMD PSP).
 2. **Read-Only Cloud Degradation:** All outbound cloud queries default to non-stateful, read-only requests. Context, intent, and stateful memory remain strictly local.
 3. **Automated Cognitive Port Gating:** Local low-latency AI proxies handle continuous network handshakes, enforcing strict zero-trust context boundaries without human intervention.
-4. **Unified Memory Enclave Protection:** High-bandwidth unified memory buses enforce hardware-level cryptographic isolation between inference contexts and external peripheral buses.
+4. **Unified Memory Enclave Protection:** Shared LPDDR unified memory buses employ open enclave runtimes (e.g., Keystone Enclave) and hardware-level inline AES-XTS memory encryption to neutralize LLC eviction attacks and DRAM power side-channels.
 5. **Thermodynamic Viability:** Node execution costs collapse to the physical electricity consumed by local silicon ($OpEx \to \text{Watts}$).
 
 ---
