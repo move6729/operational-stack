@@ -85,6 +85,36 @@
     "statutory_retaliation_suspected": {
       "type": "boolean"
     },
+    "statutory_remedy_matrix": {
+      "type": "object",
+      "properties": {
+        "statute_reference": {
+          "type": "string"
+        },
+        "max_statutory_cure_days": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "daily_statutory_fine_cents": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "rent_withholding_permitted": {
+          "type": "boolean"
+        },
+        "statutory_retaliation_window_days": {
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "required": [
+        "statute_reference",
+        "max_statutory_cure_days",
+        "daily_statutory_fine_cents",
+        "rent_withholding_permitted",
+        "statutory_retaliation_window_days"
+      ]
+    },
     "state_hash": {
       "type": "string",
       "pattern": "^[a-f0-9]{64}$"
@@ -102,6 +132,7 @@
     "landlord_action_type",
     "protected_activity_timestamp",
     "statutory_retaliation_suspected",
+    "statutory_remedy_matrix",
     "state_hash"
   ]
 }

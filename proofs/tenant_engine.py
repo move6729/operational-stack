@@ -80,6 +80,40 @@ class OpenTenantEngine:
 
         return elapsed_days <= statutory_window_days
 
+    def evaluate_jurisdictional_leverage(self, case_id: str, current_timestamp: int) -> Dict[str, Any]:
+        """
+        Evaluates local state and municipal statutory laws to calculate accumulated statutory fines,
+        identify landlord breaches, and determine rent withholding eligibility.
+        """
+        if case_id not in self.cases:
+            return {"statutory_breach_detected": False, "accumulated_fines_cents": 0, "rent_withholding_eligible": False}
+
+        case = self.cases[case_id]
+        matrix = case.get("statutory_remedy_matrix", {})
+        cure_days = matrix.get("max_statutory_cure_days", 14)
+        daily_fine_cents = matrix.get("daily_statutory_fine_cents", 0)
+        withholding_permitted = matrix.get("rent_withholding_permitted", False)
+
+        defects = case.get("habitability_defects", [])
+        total_accumulated_fines = 0
+        statutory_breach_detected = False
+
+        for defect in defects:
+            if not defect.get("landlord_cured", True):
+                reported_ts = defect.get("date_reported_timestamp", 0)
+                if reported_ts > 0 and current_timestamp > reported_ts:
+                    elapsed_days = (current_timestamp - reported_ts) / 86400.0
+                    if elapsed_days > cure_days:
+                        statutory_breach_detected = True
+                        uncured_days_over_limit = int(elapsed_days - cure_days)
+                        total_accumulated_fines += uncured_days_over_limit * daily_fine_cents
+
+        return {
+            "statutory_breach_detected": statutory_breach_detected,
+            "accumulated_fines_cents": total_accumulated_fines,
+            "rent_withholding_eligible": statutory_breach_detected and withholding_permitted
+        }
+
     def commit_state_transition(self, case_id: str, new_payload: str, expected_hash: str) -> bool:
         """
         Commits a deterministic state transition verified via SHA-256 target state hashing.
@@ -143,6 +177,12 @@ def run_tenant_proof() -> bool:
     # Verify statutory retaliation presumption within 180-day window
     is_retaliatory = engine.evaluate_retaliation_presumption("tenant-a1b2c3d4e5f6", statutory_window_days=180)
     if not is_retaliatory:
+        return False
+
+    # Verify jurisdictional statutory leverage (30 days past report, 14-day cure window = 16 uncured days @ $100/day = $1,600 / 160,000 cents)
+    current_eval_ts = 1772323200 + (30 * 86400)
+    leverage = engine.evaluate_jurisdictional_leverage("tenant-a1b2c3d4e5f6", current_timestamp=current_eval_ts)
+    if not leverage["statutory_breach_detected"] or leverage["accumulated_fines_cents"] != 160000 or not leverage["rent_withholding_eligible"]:
         return False
 
     # Test state transition verification

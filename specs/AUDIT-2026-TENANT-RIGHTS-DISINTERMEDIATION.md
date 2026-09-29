@@ -39,8 +39,9 @@ Biological operators facing habitability issues, illegal rent increases, or reta
 
 ### Key Functional Levers:
 1. **Habitability Rent Abatement Calculation:** Quantifies statutory rent offsets based on uncured defects (heating, plumbing, structural, pest, mold) reported via verifiable notice channels.
-2. **Statutory Retaliation Presumption Engine:** Evaluates the timestamp delta between tenant protected actions (written notices, code inspections) and landlord adverse actions (rent hikes, termination notices) to establish legal statutory retaliation presumptions.
-3. **Deterministic Discovery & Pleading Artifacts:** Outputs standardized, machine-readable JSON schemas and AST structures ready for direct conversion into local court pleadings, housing authority complaints, and discovery requests.
+2. **Jurisdictional Statutory Leverage & Breach Verification:** Evaluates state and municipal housing codes to identify statutory landlord breaches, track mandatory cure windows, and calculate accumulated daily municipal non-compliance penalties.
+3. **Statutory Retaliation Presumption Engine:** Evaluates the timestamp delta between tenant protected actions (written notices, code inspections) and landlord adverse actions (rent hikes, termination notices) to establish legal statutory retaliation presumptions.
+4. **Deterministic Discovery & Pleading Artifacts:** Outputs standardized, machine-readable JSON schemas and AST structures ready for direct conversion into local court pleadings, housing authority complaints, and discovery requests.
 
 ---
 
