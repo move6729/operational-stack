@@ -40,7 +40,7 @@ class PhysicalComplianceEngine:
     ) -> Dict[str, Any]:
         """
         Enforces minimum stay threshold constraints, calculates transient occupancy tax (TOT),
-        and formats 1099-K reporting structures.
+        and formats 1099-K reporting structures locally without external network egress.
         """
         permit_id = permit_info.get("permit_id", "")
         permit_valid = (
@@ -61,7 +61,8 @@ class PhysicalComplianceEngine:
             # Long term tenancy transitions are exempt from transient occupancy tax (TOT)
             tot_amount_cents = 0
 
-        tax_escrow_endpoint = f"https://tax.escrow.gov/{municipality.lower()}/tot"
+        # Zero-egress local sovereign escrow URI identifier (Axiom 9)
+        tax_escrow_endpoint = f"escrow://local.sovereign/{municipality.lower()}/tot"
 
         reportable_1099k = gross_amount_cents > 0
         current_year = datetime.now(timezone.utc).year

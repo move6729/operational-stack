@@ -17,6 +17,7 @@
           "max_execution_sec": { "type": "integer", "maximum": 300 },
           "max_token_budget": { "type": "integer", "maximum": 32768 },
           "isolated_sandbox_required": { "type": "boolean", "const": true },
+          "local_containment_required": { "type": "boolean", "const": true },
           "statutory_compliance_verified": { "type": "boolean", "const": true },
           "dependencies": {
             "type": "array",
@@ -30,6 +31,7 @@
           "max_execution_sec",
           "max_token_budget",
           "isolated_sandbox_required",
+          "local_containment_required",
           "statutory_compliance_verified"
         ]
       }
