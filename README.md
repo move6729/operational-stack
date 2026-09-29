@@ -20,6 +20,7 @@ move6729 / operational-stack:
 │   ├── 2026-03-disintermediating-iam.txt
 │   ├── 2026-03-disintermediating-telco.txt
 │   ├── 2026-03-disintermediating-proptech.txt
+│   ├── 2026-03-disintermediating-proptech-and-the-landlord.txt [Disintermediating PropTech & Landlords]
 │   ├── 2026-03-disintermediating-edtech.txt
 │   ├── 2026-03-the-communications-engine-of-ai-safety.txt
 │   ├── 2026-03-the-thermodynamic-inversion.txt

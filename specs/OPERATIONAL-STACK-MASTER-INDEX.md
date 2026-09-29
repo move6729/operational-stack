@@ -22,6 +22,7 @@ move6729 / GitHub Account Identity
  │   │   ├── 2026-03-disintermediating-iam.txt
  │   │   ├── 2026-03-disintermediating-telco.txt
  │   │   ├── 2026-03-disintermediating-proptech.txt
+ │   │   ├── 2026-03-disintermediating-proptech-and-the-landlord.txt
  │   │   ├── 2026-03-disintermediating-edtech.txt
  │   │   ├── 2026-03-the-communications-engine-of-ai-safety.txt
  │   │   ├── 2026-03-the-thermodynamic-inversion.txt
@@ -242,7 +243,7 @@ A concept or repository specification is approved for execution ONLY if it clear
 | **`OPEN-IAM-v1.0`** | Okta / Ping / Entra ID | Okta Identity Cloud | `schema/iam_identity.json` | `proofs/iam_engine.py` |
 | **`OPEN-TELCO-v1.0`** | Twilio / Infobip | Twilio Communications API | `schema/telco_dispatch.json` | `proofs/telco_engine.py` |
 | **`OPEN-PROP-v1.0`** | Yardi / RealPage / AppFolio | Yardi Voyager & RealPage | `schema/prop_lease.json` | `proofs/prop_engine.py` |
-| **`OPEN-EDU-v1.0`** | Instructure / Canvas / Blackboard | Canvas LMS & Blackboard | `schema/edu_credential.json` | `proofs/edu_engine.py` |
+| **`OPEN-EDU-v1.0`** | Instructure / Canvas / Blackboard | Canvas LMS & Blackboard | `schema/edu_credential.json` | `proofs/edu_credential.py` |
 | **`OPEN-DEFENSE-v1.0`** | LockHeed / Raytheon / Defense Brokers | Proprietary Defense Procurement | `schema/defense_spec_manifest.json` | `proofs/defense_engine.py` |
 | **`OPEN-DEFENSE-COMPLIANCE-v1.0`** | Exostar / C3PAOs / JCP Brokers | Exostar Supply Chain Platform | `schema/defense_compliance.json` | `proofs/defense_compliance_engine.py` |
 | **`OPEN-P2P-GRID-v1.0`** | Central Utilities / Regional Grid Operators | Proprietary Grid & VPP Brokers | `schema/grid_energy_dispatch.json` | `proofs/grid_engine.py` |
