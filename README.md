@@ -21,6 +21,7 @@ move6729 / operational-stack:
 │   ├── 2026-03-disintermediating-telco.txt
 │   ├── 2026-03-disintermediating-proptech.txt
 │   ├── 2026-03-disintermediating-edtech.txt
+│   ├── 2026-03-the-communications-engine-of-ai-safety.txt
 │   └── 2026-03-the-great-disintermediation-manifesto.txt
 │
 ├── schema/                         [Core & Disintermediation JSON Schemas (Draft 2020-12)]
@@ -55,6 +56,7 @@ move6729 / operational-stack:
 │   ├── fin_engine.py               [Bare-Metal FinTech Verification Engine (OPEN-FIN-v1.0)]
 │   ├── freight_engine.py           [Bare-Metal Freight Verification Engine (OPEN-FREIGHT-v1.0)]
 │   ├── itsm_engine.py              [Bare-Metal ITSM Verification Engine (OPEN-ITSM-v1.0)]
+│   ├── narrative_node_engine.py    [Bare-Metal Regulatory Capture & Narrative Node Verifier]
 │   ├── omrp_engine.py              [Deterministic State Engine Proof (OMRP-v1.0)]
 │   ├── ops_engine.py               [Bare-Metal Customer Ops Verification Engine (OPEN-OPS-v1.0)]
 │   ├── ovtm_auditor.py             [Kinetic Hardware Isolation Auditor (OVTM-S v1.1)]
@@ -93,6 +95,7 @@ move6729 / operational-stack:
     ├── AUDIT-2026-ITSM-DISINTERMEDIATION.md
     ├── AUDIT-2026-LANGUAGE-SERIALIZATION-PARADIGM.md
     ├── AUDIT-2026-MODEL-SPOF-CORPUS-POISONING.md
+    ├── AUDIT-2026-NARRATIVE-AMPLIFICATION-NODES.md
     ├── AUDIT-2026-NATIONAL-SECURITY-REQUISITE-VARIETY.md
     ├── AUDIT-2026-N-DIMENSIONAL-ATTRACTOR.md
     ├── AUDIT-2026-NEO-FEUDAL-ARISTOCRACY-DECONSTRUCTION.md

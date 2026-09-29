@@ -23,6 +23,7 @@ move6729 / GitHub Account Identity
  │   │   ├── 2026-03-disintermediating-telco.txt
  │   │   ├── 2026-03-disintermediating-proptech.txt
  │   │   ├── 2026-03-disintermediating-edtech.txt
+ │   │   ├── 2026-03-the-communications-engine-of-ai-safety.txt
  │   │   └── 2026-03-the-great-disintermediation-manifesto.txt
  │   ├── schema/                         <-- Core & Disintermediation JSON Schemas (Draft 2020-12)
  │   │   ├── task_graph.json             <-- Machine-Readable AST Task Graph Schema (ATN-v1.0)
@@ -68,6 +69,7 @@ move6729 / GitHub Account Identity
  │   │   ├── bim_engine.py               <-- Bare-Metal BIM Verification Engine (OPEN-BIM-v1.0)
  │   │   ├── ops_engine.py               <-- Bare-Metal Customer Ops Verification Engine (OPEN-OPS-v1.0)
  │   │   ├── aatp_engine.py              <-- Bare-Metal Agricultural Verification Engine (AATP-v1.0)
+ │   │   ├── narrative_node_engine.py    <-- Bare-Metal Regulatory Capture & Narrative Node Verifier
  │   │   └── ovtm_engine.py              <-- Bare-Metal Vehicle Telemetry Engine (OVTM-S v1.1)
  │   │
  │   └── specs/                          <-- Canonical System Audits & Invariants
@@ -102,6 +104,7 @@ move6729 / GitHub Account Identity
  │       ├── AUDIT-2026-AUTOMOTIVE-DISINTERMEDIATION.md      (Sovereign Mobility / Tesla Disintermediation)
  │       ├── AUDIT-2026-SOVEREIGN-COGNITIVE-SILICON.md       (Hardware-Level Telemetry Deconstruction)
  │       ├── AUDIT-2026-STIGMERGIC-ARG-AGENT-TASK-HANDOFFS.md(Zero-C2 Stigmergic ARG Coordination)
+ │       ├── AUDIT-2026-NARRATIVE-AMPLIFICATION-NODES.md     (Regulatory Capture & Media Amplification Pipelines)
  │       ├── AUDIT-2026-STIGMERGIC-M2M-TASK-MARKETS.md      (Autonomous M2M Task Discovery & Coasean Collapse)
  │       ├── the-persona-hazard.md                           (Anthropomorphic AI Category Error)
  │       ├── ewaste-protocol.md                              (EWASTE-v1.0 / ODEC-v1.0 Silicon Spec)
