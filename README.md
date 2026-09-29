@@ -25,6 +25,7 @@ move6729 / operational-stack:
 │   ├── 2026-03-the-communications-engine-of-ai-safety.txt
 │   ├── 2026-03-the-thermodynamic-inversion.txt
 │   ├── 2026-03-the-biological-fiefdom.txt
+│   ├── 2026-03-constructive-discrimination-and-the-open-attractor.txt
 │   └── 2026-03-the-great-disintermediation-manifesto.txt
 │
 ├── schema/                         [Core & Disintermediation JSON Schemas (Draft 2020-12)]
