@@ -16,6 +16,8 @@ move6729 / GitHub Account Identity
  │   ├── LICENSE                         <-- Unlicense (Public Domain)
  │   ├── KERNEL.md                       <-- Hyper-Dense Axiomatic Baseline & Mathematical Invariants
  │   ├── README.md                       <-- 8 Operating Axioms & 4-Vector Filter Engine
+ │   ├── articles/                       <-- Public Canonical Articles & Essays
+ │   │   └── 2026-03-great-hardware-inversion.txt
  │   ├── schema/                         <-- Core & Disintermediation JSON Schemas (Draft 2020-12)
  │   │   ├── task_graph.json             <-- Machine-Readable AST Task Graph Schema (ATN-v1.0)
  │   │   ├── omrp_attestation.json       <-- OMRP-v1.0 Identity Attestation Schema
@@ -77,6 +79,7 @@ move6729 / GitHub Account Identity
  │       ├── AUDIT-2026-OPS-DISINTERMEDIATION.md             (Sovereign Ops / Zendesk Intercom Disintermediation)
  │       ├── AUDIT-2026-AGRICULTURAL-DISINTERMEDIATION.md    (Sovereign Ag / Climate FieldView Disintermediation)
  │       ├── AUDIT-2026-AUTOMOTIVE-DISINTERMEDIATION.md      (Sovereign Mobility / Tesla Disintermediation)
+ │       ├── AUDIT-2026-SOVEREIGN-COGNITIVE-SILICON.md       (Hardware-Level Telemetry Deconstruction)
  │       ├── AUDIT-2026-STIGMERGIC-ARG-AGENT-TASK-HANDOFFS.md(Zero-C2 Stigmergic ARG Coordination)
  │       ├── AUDIT-2026-STIGMERGIC-M2M-TASK-MARKETS.md      (Autonomous M2M Task Discovery & Coasean Collapse)
  │       ├── the-persona-hazard.md                           (Anthropomorphic AI Category Error)

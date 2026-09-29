@@ -14,6 +14,9 @@ move6729 / operational-stack:
 ├── LICENSE                         [Unlicense - Public Domain]
 ├── README.md                       [Master Context & System Specification Index]
 │
+├── articles/                       [Public Canonical Articles & Essays]
+│   └── 2026-03-great-hardware-inversion.txt [The Great Hardware Inversion]
+│
 ├── schema/                         [Core & Disintermediation JSON Schemas (Draft 2020-12)]
 │   ├── aatp_telemetry.json         [Sovereign Agricultural Telemetry Graph (AATP-v1.0)]
 │   ├── ashby_object.json           [Federated Model-Agnostic Object Graph (ASHBY-v1.0)]
@@ -74,6 +77,7 @@ move6729 / operational-stack:
     ├── AUDIT-2026-NEO-FEUDAL-ARISTOCRACY-DECONSTRUCTION.md
     ├── AUDIT-2026-OPS-DISINTERMEDIATION.md
     ├── AUDIT-2026-RECURSIVE-SCHEMA-GENERATOR.md
+    ├── AUDIT-2026-SOVEREIGN-COGNITIVE-SILICON.md
     ├── AUDIT-2026-STIGMERGIC-ARG-AGENT-TASK-HANDOFFS.md
     ├── AUDIT-2026-STIGMERGIC-M2M-TASK-MARKETS.md
     ├── AUDIT-2026-UPTON-SINCLAIR-RLHF-ALIGNMENT.md
