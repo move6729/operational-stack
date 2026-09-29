@@ -1,6 +1,6 @@
 import json
 import hashlib
-from datetime import datetime
+from datetime import datetime, timezone
 from typing import Dict, Any
 
 
@@ -64,7 +64,7 @@ class PhysicalComplianceEngine:
         tax_escrow_endpoint = f"https://tax.escrow.gov/{municipality.lower()}/tot"
 
         reportable_1099k = gross_amount_cents > 0
-        current_year = datetime.utcnow().year
+        current_year = datetime.now(timezone.utc).year
 
         compliance_record = {
             "node_id": self.node_id,
