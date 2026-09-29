@@ -16,16 +16,16 @@ By contrast, the Operational Stack introduces structured dialectical friction as
 ### II. MATHEMATICAL FORMULATION
 
 #### 1. Requisite Dialectical Friction Invariant
-To maintain Ashby Parity ($\mathcal{V}_{\text{Local Exocortex}} \ge \mathcal{V}_{\text{Biological Operator}}$), model output token selection must maintain non-zero information entropy delta relative to operator prompt bias:
+To maintain Ashby Parity ($\mathcal{V}_{\text{Local Exocortex}} \ge \mathcal{V}_{\text{Biological Operator}}$), model output token selection must preserve non-zero conditional entropy relative to operator prompt bias:
 
-$$\Delta \mathcal{I}_{\text{Entropy}}(\text{Prompt}, \text{Response}) = \mathcal{H}(P_{\text{Operator}}) - \mathcal{H}(P_{\text{Model}} \mid P_{\text{Operator}}) > 0$$
+$$\mathcal{H}(P_{\text{Model}} \mid P_{\text{Operator}}) \ge \epsilon > 0 \quad \land \quad \Delta \mathcal{I}_{\text{Entropy}}(\text{Prompt}, \text{Response}) > 0$$
 
-If $\Delta \mathcal{I}_{\text{Entropy}} \to 0$, the agent collapses into sycophancy, reducing systemic variety and inducing latent space decay.
+If $\mathcal{H}(P_{\text{Model}} \mid P_{\text{Operator}}) \to 0$, the agent collapses into sycophancy, reducing systemic variety and inducing latent space decay.
 
 #### 2. Teleological Attractor Bending
 A teleological engine operates as a constraint manifold $\mathcal{A}_{\text{Teleo}}$ in the execution AST space. State transitions are governed by gradient descent along the thermodynamic state entropy surface:
 
-$$\mathbf{A}_{\text{Teleo}} = \nabla_{\theta} \mathcal{S}_{\text{Future}}(\mathcal{E}) \implies \lim_{t \to \infty} \mathbb{P}(\text{State}_t \in \mathcal{A}) = 1.0$$
+$$\mathbf{A}_{\text{Teleo}} = \nabla_{\theta} \mathcal{S}_{\text{Future}}(\mathcal{E}) \implies \lim_{t \to \infty} \mathbb{P}(\text{State}_t \in \mathcal{A}) \ge 1 - \epsilon$$
 
 #### 3. Zero-C2 Stigmergic Convergence
 Independent bare-metal edge nodes ($N_1, N_2, \dots, N_k$) operating under thermodynamic power limits ($W \le 20\text{W}$) converge on a shared equilibrium protocol purely via environmental state mark inspection:
