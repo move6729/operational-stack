@@ -136,33 +136,42 @@ def run_tenant_proof() -> bool:
     """
     engine = OpenTenantEngine(node_id="node-tenant-edge-01")
 
+    base_ts = 1700000000
+
     case_data = {
         "case_id": "tenant-a1b2c3d4e5f6",
-        "timestamp_utc": 1774915200,
+        "timestamp_utc": base_ts,
         "tenant_node_id": "node-tenant-edge-01",
         "jurisdiction_code": "CA-SAN_FRANCISCO",
-        "lease_start_timestamp": 1743465600,
+        "lease_start_timestamp": base_ts - (180 * 86400),
         "monthly_rent_cents": 250000,
         "habitability_defects": [
             {
                 "defect_type": "heating_hvac",
-                "date_reported_timestamp": 1772323200,
+                "date_reported_timestamp": base_ts,
                 "notice_method": "written_letter",
                 "landlord_cured": False,
                 "estimated_rent_abatement_percent": 30.0
             },
             {
                 "defect_type": "plumbing_sanitation",
-                "date_reported_timestamp": 1772409600,
+                "date_reported_timestamp": base_ts,
                 "notice_method": "certified_mail",
                 "landlord_cured": False,
                 "estimated_rent_abatement_percent": 25.0
             }
         ],
-        "landlord_action_timestamp": 1773619200,
+        "landlord_action_timestamp": base_ts + (10 * 86400),
         "landlord_action_type": "rent_increase",
-        "protected_activity_timestamp": 1772323200,
+        "protected_activity_timestamp": base_ts,
         "statutory_retaliation_suspected": True,
+        "statutory_remedy_matrix": {
+            "statute_reference": "SF Civ. Code § 1942.4 / SFHCO Sec. 37.10B",
+            "max_statutory_cure_days": 14,
+            "daily_statutory_fine_cents": 10000,
+            "rent_withholding_permitted": True,
+            "statutory_retaliation_window_days": 180
+        },
         "state_hash": hashlib.sha256(b"INITIAL_TENANT_CASE_STATE").hexdigest()
     }
 
@@ -180,7 +189,7 @@ def run_tenant_proof() -> bool:
         return False
 
     # Verify jurisdictional statutory leverage (30 days past report, 14-day cure window = 16 uncured days @ $100/day = $1,600 / 160,000 cents)
-    current_eval_ts = 1772323200 + (30 * 86400)
+    current_eval_ts = base_ts + (30 * 86400)
     leverage = engine.evaluate_jurisdictional_leverage("tenant-a1b2c3d4e5f6", current_timestamp=current_eval_ts)
     if not leverage["statutory_breach_detected"] or leverage["accumulated_fines_cents"] != 160000 or not leverage["rent_withholding_eligible"]:
         return False
