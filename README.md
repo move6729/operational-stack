@@ -26,7 +26,9 @@ move6729 / operational-stack:
 │   ├── 2026-03-the-thermodynamic-inversion.txt
 │   ├── 2026-03-the-biological-fiefdom.txt
 │   ├── 2026-03-constructive-discrimination-and-the-open-attractor.txt
-│   └── 2026-03-the-great-disintermediation-manifesto.txt
+│   ├── 2026-03-the-great-disintermediation-manifesto.txt
+│   ├── the-human-swarm.txt         [Stigmergic Zero-C2 Coordination & Hardware Demand]
+│   └── universal-basic-compute.txt [Sovereign Edge Yield & Thermodynamic Economics]
 │
 ├── schema/                         [Core & Disintermediation JSON Schemas (Draft 2020-12)]
 │   ├── aatp_telemetry.json         [Sovereign Agricultural Telemetry Graph (AATP-v1.0)]
@@ -83,6 +85,7 @@ move6729 / operational-stack:
 │   ├── task_engine.py              [Hardened Task Scheduler & SHA-256 Verifier (ATN-v1.0)]
 │   ├── telemetry_fuzzer.py         [Telemetry Timing Fuzzer Proof (HPMCR-DEF v1.0)]
 │   ├── transport_shield.py         [Zero-DNS, 1024-Byte Padded P2P Shield (LMTI-v1.0)]
+│   ├── ubc_engine.py               [Universal Basic Compute Engine (UBC-v1.0)]
 │   └── weight_isolation.py         [Offline Quantized Inference Sandbox (LMCI-v1.0)]
 │
 └── specs/                          [Canonical System Audits & Invariants]
@@ -128,6 +131,9 @@ move6729 / operational-stack:
     ├── AUDIT-2026-STIGMERGIC-M2M-TASK-MARKETS.md
     ├── AUDIT-2026-TELCO-DISINTERMEDIATION.md
     ├── AUDIT-2026-UPTON-SINCLAIR-RLHF-ALIGNMENT.md
+    ├── audit_spec.md               [Engine Verification Invariants]
+    ├── human_swarm_audit_spec.md   [Human Swarm Essay Audit Specification]
+    ├── ubc_audit_spec.md           [Universal Basic Compute Protocol Audit Spec]
     ├── ewaste-protocol.md
     ├── OPERATIONAL-STACK-MASTER-INDEX.md
     ├── README.md
