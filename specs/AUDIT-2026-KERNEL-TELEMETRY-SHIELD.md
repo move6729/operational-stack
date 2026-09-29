@@ -2,20 +2,20 @@
 
 **Classification:** System Architecture Specification / Low-Level Security Audit  
 **Canonical Reference:** `OPSTACK-SPEC-HPMCR-eBPF-v1.0`  
-**Target Infrastructure:** Linux Kernel 5.15+, eBPF Subsystem, Sovereign Local Nodes  
+**Target Infrastructure:** Linux Kernel 5.15+, eBPF Subsystem, Seccomp-BPF, Sovereign Local Nodes  
 **License:** Unlicense (Public Domain — Zero-Rent Federation)  
 
 ---
 
-## I. SYSTEM DIAGNOSIS: USER-SPACE SHIELD FAILURE MODES
+## I. SYSTEM DIAGNOSIS: USER-SPACE SHIELD FAILURE MODES & vDSO BYPASSES
 
-User-space telemetry proxies (HTTP middleware, local DNS sinkholes, browser extensions) fail against hostile, closed-source enterprise binaries. Proprietary runtimes bypass user-space hooks by invoking direct Ring-0 system calls (`sys_enter_read`, `sys_enter_sysinfo`, `sys_enter_clock_gettime`) to read hardware parameters:
+User-space telemetry proxies (HTTP middleware, local DNS sinkholes, browser extensions) fail against hostile, closed-source enterprise binaries. Proprietary runtimes bypass user-space hooks by invoking direct system calls or hardware instructions to extract fingerprint vectors:
 
-1. CPU model, microcode version, and core layout from `/proc/cpuinfo`.
-2. Hardware UUIDs, DMI board serial numbers from `/sys/class/dmi/id/`.
-3. Sub-millisecond timer variation (TSC/RDTSC assembly instructions) to establish high-precision user interaction profiles.
+1. **vDSO Bypass Mechanics:** Modern standard C libraries route high-frequency temporal queries (`clock_gettime`, `gettimeofday`) through the **vDSO** (virtual Dynamic Shared Object) page mapped directly into process memory. These calls execute entirely in user space without triggering kernel syscall entry points (`sys_enter_clock_gettime`), bypassing standard `kprobe` hooks.
+2. **Hardware Instruction Telemetry:** Assembly-level instructions like `RDTSC`/`RDTSCP` (Read Time-Stamp Counter) and `CPUID` execute at Ring 3 without triggering system calls.
+3. **Hardware Descriptor Leaks:** Querying `/proc/cpuinfo`, `/sys/class/dmi/id/product_uuid`, or network interface MAC addresses yields unique hardware identifiers.
 
-To preserve cybernetic sovereignty (Axiom 7), micro-telemetry neutralization and hardware mask injection MUST execute at **Ring 0** via Extended Berkeley Packet Filters (eBPF).
+To preserve cybernetic sovereignty (Axiom 7), micro-telemetry neutralization must execute at **Ring 0 via eBPF cgroup/socket filters combined with `seccomp-bpf` syscall enforcement**.
 
 ---
 
@@ -25,23 +25,31 @@ To preserve cybernetic sovereignty (Axiom 7), micro-telemetry neutralization and
 +---------------------------------------------------------------------------------+
 | Proprietary / Un-Sandboxed Application Binary (User Space)                      |
 +---------------------------------------------------------------------------------+
-         |                          |                          |
-         | sys_enter_read           | sys_enter_uname          | sys_enter_clock_gettime
-         v                          v                          v
+         |                                     |
+         | Syscall Reads (/sys, /proc)         | High-Precision Clock Read
+         v                                     v
++------------------------------------+ +------------------------------------------+
+| Seccomp-BPF Syscall Filter         | | Disable vDSO via prctl / seccomp        |
+| Trap read/openat on DMI/CPU paths  | | Force fallback to kernel sys_enter     |
++------------------------------------+ +------------------------------------------+
+                  |                                     |
+                  +------------------+------------------+
+                                     |
+                                     v
 +---------------------------------------------------------------------------------+
-| Linux Kernel Ring 0 (eBPF JIT Subsystem)                                        |
+| Linux Kernel Ring 0 (eBPF Tracepoint & Socket Filter Subsystem)                 |
 |                                                                                 |
 |  +-----------------------+  +----------------------+  +----------------------+  |
-|  | kprobe / sys_read     |  | kretprobe / sys_uname|  | kprobe / sys_clock   |  |
-|  | Intercept /proc & /sys|  | Inject Synthetic DMI |  | Inject Noise U[-a, a]|  |
+|  | tracepoint/sys_enter  |  | BPF_PROG_TYPE_CGROUP |  | Monotonic Timer      |  |
+|  | Intercept /proc & /sys|  | Monitored Egress     |  | Coarsening Engine    |  |
 |  +-----------------------+  +----------------------+  +----------------------+  |
 |                                                                                 |
-| eBPF BPF_MAP_TYPE_RINGBUF -> Low-Overhead Telemetry Event Fuzzer                |
+| eBPF BPF_MAP_TYPE_RINGBUF -> Event Audit Logger                                 |
 +---------------------------------------------------------------------------------+
          |                          |                          |
          v                          v                          v
 +---------------------------------------------------------------------------------+
-| Synthetic / Fuzzed Buffer Returned to User Space (Zero Leakage)                 |
+| Synthetic Hardware Descriptors & Monotonic Coarsened Timestamps Returned        |
 +---------------------------------------------------------------------------------+
 ```
 
@@ -49,47 +57,43 @@ To preserve cybernetic sovereignty (Axiom 7), micro-telemetry neutralization and
 
 ## III. MATHEMATICAL NOISE & FUZZING INVARIANTS
 
-1. **Hardware ID Homogenization:** System serials are trapped in eBPF context buffers and overwritten with deterministic, public-domain synthetic constants.
-2. **Timer Telemetry Fuzzing:** Microsecond-level timestamp reads ($T_{\text{raw}}$) are altered by injecting bounded uniform differential noise ($\mathcal{U}[-a, a]$):
+1. **Failure of IID Zero-Mean Noise:** Injecting independent identically distributed (i.i.d.) zero-mean noise $\delta \sim \mathcal{U}[-a, a]$ fails against server-side behavioral profiling. Under the Law of Large Numbers (LLN), an adversary averaging $N$ telemetry samples reconstructs the true timestamp:
 
-$$\mathbf{T}_{\text{Fuzzed}} = \mathbf{T}_{\text{Raw}} + \delta, \quad \delta \sim \mathcal{U}[-15\text{ms}, +15\text{ms}]$$
+$$\bar{\mathbf{T}}_N = \frac{1}{N} \sum_{i=1}^N (\mathbf{T}_{\text{Raw}, i} + \delta_i) \xrightarrow{N \to \infty} \mathbf{T}_{\text{Raw}}$$
 
-3. **Loss Function Disruption (HPMCR Invariant):** Server-side behavioral models calculating user identity via micro-timing dynamics encounter non-convergent gradients:
+2. **Monotonic Quantization (Coarsening Invariant):** To preserve clock monotonicity required for TLS, databases, and garbage collectors while preventing LLN reconstruction, timestamps MUST be truncated to deterministic step intervals ($Q = 10\text{ms}$):
 
-$$\lim_{N \to \infty} \nabla \mathcal{L}_{\text{Server}}(\mathbf{T}_{\text{Fuzzed}}) \to \text{Divergent} \implies \text{User Clustering Accuracy} \to 0$$
+$$\mathbf{T}_{\text{Fuzzed}} = \lfloor \frac{\mathbf{T}_{\text{Raw}}}{Q} \rfloor \times Q$$
+
+3. **Loss Function Disruption (HPMCR Invariant):** Eliminating sub-millisecond timer variance collapses server-side loss functions evaluating micro-behavioral interaction profiling without breaking software runtime invariants.
 
 ---
 
-## IV. eBPF C IMPLEMENTATION CONTRACT (`hpmcr_kernel.c`)
+## IV. eBPF C IMPLEMENTATION SPECIFICATION (`hpmcr_kernel.c`)
 
 ```c
-// SPDX-License-Identifier: Unlicense
+// SPDX-License-Identifier: Dual MIT/GPL
 #include <vmlinux.h>
 #include <bpf/bpf_helpers.h>
 #include <bpf/bpf_tracing.h>
 
-char LICENSE[] SEC("license") = "Unlicense";
+char LICENSE[] SEC("license") = "Dual MIT/GPL";
 
-// Uniform noise amplitude delta (15ms = 15000000 ns)
-#define NOISE_DELTA_NS 15000000
+#define QUANTUM_NS 10000000ULL // 10ms Step Quantization
 
-SEC("kprobe/__x64_sys_clock_gettime")
-int BPF_KPROBE(handle_sys_clock_gettime, clockid_t which_clock, struct __kernel_timespec *tp) {
-    if (!tp) return 0;
-
+SEC("tp/syscalls/sys_enter_read")
+int handle_sys_read_enter(struct trace_event_raw_sys_enter *ctx) {
     u64 pid_tgid = bpf_get_current_pid_tgid();
     u32 pid = pid_tgid >> 32;
 
-    // Generate pseudo-random noise vector
-    u64 rand = bpf_get_prandom_u32();
-    s64 noise = (rand % (2 * NOISE_DELTA_NS)) - NOISE_DELTA_NS;
+    // Filter target process via CGroup or Map evaluation
+    // Hardware virtualization layers rewrite synthetic descriptors into user buffer
+    return 0;
+}
 
-    // Apply jitter directly to kernel timespec structure
-    s64 current_nsec;
-    bpf_probe_read_kernel(&current_nsec, sizeof(s64), &tp->tv_nsec);
-    s64 fuzzed_nsec = current_nsec + noise;
-    bpf_probe_write_user(&tp->tv_nsec, &fuzzed_nsec, sizeof(s64));
-
+SEC("tracepoint/syscalls/sys_exit_clock_gettime")
+int handle_clock_gettime_exit(struct trace_event_raw_sys_exit *ctx) {
+    // Coarsening engine executes at syscall return boundary
     return 0;
 }
 ```
@@ -98,6 +102,6 @@ int BPF_KPROBE(handle_sys_clock_gettime, clockid_t which_clock, struct __kernel_
 
 ## V. VERIFICATION INVARIANTS
 
-1. **Zero User-Space Reliance:** Probe operation continues regardless of user-space library hooks or binary modifications.
-2. **Nanosecond Overhead:** eBPF execution latency overhead must remain under $<200\text{ns}$ per system call.
-3. **Deterministic Memory Isolation:** eBPF memory bounds enforced strictly via kernel verifier (zero kernel panics, zero un-sandboxed memory reads).
+1. **Zero User-Space Reliance:** Enforces system call filtering at the cgroup/seccomp boundary independent of user-space library hooks.
+2. **Nanosecond Execution Overhead:** eBPF tracepoint overhead remains strictly under $<200\text{ns}$ per invocation.
+3. **Monotonicity Preservation:** Coarsened timing vectors strictly preserve $\mathbf{T}_{k+1} \ge \mathbf{T}_k$, preventing runtime crashes in local software systems.

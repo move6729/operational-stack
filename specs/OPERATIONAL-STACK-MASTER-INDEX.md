@@ -49,6 +49,7 @@ move6729 / GitHub Account Identity
  │   │   └── edu_credential.json         <-- Sovereign Educational Credential Graph (OPEN-EDU-v1.0 / Canvas Disintermediation)
  │   │
  │   ├── proofs/                         <-- Runnable Zero-Dependency Deterministic Verification Engines
+ │   │   ├── energy_scheduler.py         <-- Bare-Metal Micro-Grid Energy Scheduler (ENERGY-v1.0)
  │   │   ├── edu_engine.py               <-- Bare-Metal Educational Verification Engine (OPEN-EDU-v1.0)
  │   │   ├── prop_engine.py              <-- Bare-Metal Property Verification Engine (OPEN-PROP-v1.0)
  │   │   ├── telco_engine.py             <-- Bare-Metal Telco Verification Engine (OPEN-TELCO-v1.0)
@@ -93,6 +94,7 @@ move6729 / GitHub Account Identity
  │       ├── AUDIT-2026-FREIGHT-DISINTERMEDIATION.md         (Sovereign Freight / Uber Freight Disintermediation)
  │       ├── AUDIT-2026-HEADCOUNT-DELIVERABILITY-MOAT.md     (Headcount IP Warming Deconstruction)
  │       ├── AUDIT-2026-HPMCR-DEFENSE-SPEC.md                (Cognitive Routing & Telemetry Fuzzing)
+ │       ├── AUDIT-2026-HUMAN-DEF-OPERATOR-HEURISTICS.md    (Non-Technical Biological Operator Defense / HUMAN-DEF-v1.0)
  │       ├── AUDIT-2026-IAM-DISINTERMEDIATION.md             (Sovereign Identity / Okta Disintermediation)
  │       ├── AUDIT-2026-KERNEL-TELEMETRY-SHIELD.md           (Ring-0 eBPF Telemetry Interception / HPMCR-eBPF)
  │       ├── AUDIT-2026-MICROGRID-COMPUTE-SCHEDULER.md      (Landauer Bounds & Bare-Metal Energy Scheduler / ENERGY-v1.0)
@@ -172,7 +174,7 @@ A concept or repository specification is approved for execution ONLY if it clear
 
 ## V. COGNITIVE DEFENSE & CONTROL THEORY SPECIFICATIONS
 
-1. **Attenual Shield & Micro-Telemetry Fuzzing (HPMCR-DEF v1.0):** Client-side interface drivers inject 15–20% differential privacy uniform noise into sub-second dwell and interaction reports. Spikes the server-side loss function ($\nabla \mathcal{L} \to \text{Divergent}$), collapses behavioral routing, and preserves cybernetic sovereignty.
+1. **Attenual Shield & Micro-Telemetry Fuzzing (HPMCR-DEF v1.0):** Client-side interface drivers inject differential privacy noise into interaction reports. Spikes the server-side loss function ($\nabla \mathcal{L} \to \text{Divergent}$), collapses behavioral routing, and preserves cybernetic sovereignty.
 2. **Cybernetic Requisite Variety Audit (AUDIT-2026-CYBERNETIC-VARIETY):** Proves Ashby's Law violation in centralized platform routing and restores balance via local bare-metal exocortex nodes ($\mathcal{V}_{\text{Local}} \ge \mathcal{V}_{\text{Env}}$).
 3. **Constructive Physics & Ashby Quantum Bounds (AUDIT-2026-CONSTRUCTIVE-PHYSICS-ASHBY-QUANTUM):** Demonstrates that biological cellular quantum coherence operates at 20W at room temperature ($310\text{ K}$), whereas centralized quantum clusters face megawatt cryogenic bounds ($0.01\text{ K}$) and wave-function collapse upon classical network transmission.
 4. **Anti-Luddite Bare-Metal Invariant (AUDIT-2026-ANTI-LUDDITE-BARE-METAL-INVARIANT):** Clarifies that luddite/anti-technology regressions violate thermodynamic survival invariants. Human agency requires technological acceleration, rejecting centralized cloud monopolies in favor of bare-metal sovereign silicon.
@@ -194,7 +196,7 @@ A concept or repository specification is approved for execution ONLY if it clear
    $$\text{Gateway}_{\text{Software}}(\text{Network}_{\text{Untrusted}} \to \text{Actuator}_{\text{Kinetic}}) \neq \text{AirGap}$$
 
 3. **Loss Function Disruption:**
-   $$\text{Raw Telemetry } (T) + \text{Uniform Noise } (\mathcal{U}[-a, a]) \implies \nabla \mathcal{L}_{\text{Server}} \to \text{Divergent}$$
+   $$\text{Raw Telemetry } (T) + \text{Monotonic Quantization } (Q) \implies \nabla \mathcal{L}_{\text{Server}} \to \text{Divergent}$$
 
 4. **Zero-Rent Economic Realism:**
    $$\text{Open Protocol} + \text{Unlicense} \implies \text{Intermediary Rent} = 0$$
@@ -207,7 +209,6 @@ A concept or repository specification is approved for execution ONLY if it clear
 
 7. **Substack / Rich-Text Serialization Invariant:**
    $$\text{Text}_{\text{Paragraph}} \in \text{articles/} \implies (\text{Newlines}_{\text{Internal}} = 0) \land (\text{ASCII Lines} = \emptyset)$$
-   *(Canonical `.txt` essay artifacts format paragraphs as single un-wrapped strings without plain-text ASCII line dividers to ensure zero-friction copy-pasting into Substack and rich-text platforms).*
 
 ---
 
@@ -235,12 +236,10 @@ A concept or repository specification is approved for execution ONLY if it clear
 
 ## VIII. UNRELEASED / INTERNAL SPECIFICATION HORIZONS & HUMAN DEFENSE
 
-When expanding the architecture in future turns, maintain cold game-theoretic alignment against these un-solved physical, cognitive, and structural domains:
-
-1. **Non-Technical Biological Operator Protection (`HUMAN-DEF-v1.0`):** Non-technical operational heuristics, cognitive air-gaps, digital fasts, physical attention boundaries, and non-algorithmic offline habits designed to protect the human operator's biological state-space from HPMCR behavioral routing without requiring technical software tools.
-2. **Kernel-Level eBPF Telemetry Shields (`HPMCR-eBPF`):** Low-level C/eBPF Linux kernel extensions intercepting and fuzzing OS-level micro-telemetry and un-permissioned hardware sensor queries directly at Ring 0 (`specs/AUDIT-2026-KERNEL-TELEMETRY-SHIELD.md`).
-3. **Hardware-Energy Micro-Grid Scheduler (`ENERGY-v1.0`):** Bare-metal scripts routing intermittent renewable energy surpluses (solar/battery peak) directly into local LMCI compute tasks before energy grounds out ($\text{Yield} > \text{Power Cost}$) (`specs/AUDIT-2026-MICROGRID-COMPUTE-SCHEDULER.md`).
-4. **Open Physical Sensing Mesh (`SENSE-v1.0` / Open Palantir):** An open, zero-rent telemetry ingestion protocol connecting cheap local hardware sensors (energy surplus, RF spectrum, logistics, environmental) into a public, real-time macro-systemic map.
+1. **Non-Technical Biological Operator Protection (`HUMAN-DEF-v1.0`):** Non-technical operational heuristics, cognitive air-gaps, digital fasts, physical attention boundaries, and non-algorithmic offline habits (`specs/AUDIT-2026-HUMAN-DEF-OPERATOR-HEURISTICS.md`).
+2. **Kernel-Level eBPF Telemetry Shields (`HPMCR-eBPF`):** Low-level C/eBPF Linux kernel extensions intercepting and coarsening micro-telemetry and un-permissioned hardware sensor queries directly at Ring 0 (`specs/AUDIT-2026-KERNEL-TELEMETRY-SHIELD.md`).
+3. **Hardware-Energy Micro-Grid Scheduler (`ENERGY-v1.0`):** Bare-metal scripts routing intermittent renewable energy surpluses directly into local LMCI compute tasks (`specs/AUDIT-2026-MICROGRID-COMPUTE-SCHEDULER.md` & `proofs/energy_scheduler.py`).
+4. **Open Physical Sensing Mesh (`SENSE-v1.0` / Open Palantir):** An open, zero-rent telemetry ingestion protocol connecting cheap local hardware sensors into a public, real-time macro-systemic map.
 5. **Sovereign Local Ontology Engine (`ASHBY-v1.0` / Anti-Palantir):** A bare-metal, model-agnostic graph engine running locally on scavenged hardware, linking real-world physical objects (`ashby_object.json`) without central corporate database lock-in.
 
 ---

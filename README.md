@@ -48,6 +48,7 @@ move6729 / operational-stack:
 │   └── edu_credential.json         [Sovereign Educational Credential Graph (OPEN-EDU-v1.0)]
 │
 ├── proofs/                         [Runnable Zero-Dependency Deterministic Verification Engines]
+│   ├── energy_scheduler.py         [Bare-Metal Micro-Grid Energy Scheduler (ENERGY-v1.0)]
 │   ├── aatp_engine.py              [Bare-Metal Agricultural Verification Engine (AATP-v1.0)]
 │   ├── ashby_engine.py             [Local Requisite Variety Ontology Parser (ASHBY-v1.0)]
 │   ├── compliance_engine.py        [Physical Asset & Legal Compliance Engine (COMPLIANCE-v1.0)]
@@ -92,6 +93,7 @@ move6729 / operational-stack:
     ├── AUDIT-2026-FREIGHT-DISINTERMEDIATION.md
     ├── AUDIT-2026-HEADCOUNT-DELIVERABILITY-MOAT.md
     ├── AUDIT-2026-HPMCR-DEFENSE-SPEC.md
+    ├── AUDIT-2026-HUMAN-DEF-OPERATOR-HEURISTICS.md
     ├── AUDIT-2026-IAM-DISINTERMEDIATION.md
     ├── AUDIT-2026-ITSM-DISINTERMEDIATION.md
     ├── AUDIT-2026-KERNEL-TELEMETRY-SHIELD.md
@@ -152,7 +154,7 @@ move6729 / operational-stack:
 - **Air-Gap Invariant:**
   $$\text{Gateway}_{\text{Software}}(\text{Network}_{\text{Untrusted}} \to \text{Actuator}_{\text{Kinetic}}) \neq \text{AirGap}$$
 - **Telemetry Loss-Function Disruption:**
-  $$\text{Raw Telemetry } (T) + \text{Uniform Noise } (\mathcal{U}[-a, a]) \implies \nabla \mathcal{L}_{\text{Server}} \to \text{Divergent}$$
+  $$\text{Raw Telemetry } (T) + \text{Monotonic Quantization } (Q) \implies \nabla \mathcal{L}_{\text{Server}} \to \text{Divergent}$$
 - **Zero-Rent Economic Realism:**
   $$\text{Open Protocol} + \text{Unlicense} \implies \text{Intermediary Rent} = 0$$
 - **Thermodynamic Node Viability:**
