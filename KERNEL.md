@@ -41,5 +41,7 @@ Any approved subsystem or specification must satisfy:
 - **Target Disintermediation Portfolio:** CRM (`OPEN-CRM`), ITSM (`OPEN-ITSM`), EHR (`OPEN-EHR`), ERP (`OPEN-ERP`), FIN (`OPEN-FIN`), FREIGHT (`OPEN-FREIGHT`), BIM (`OPEN-BIM`), OPS (`OPEN-OPS`), AATP (`AATP`), OVTM (`OVTM-S`), LEGAL (`OPEN-LEGAL`), IAM (`OPEN-IAM`), TELCO (`OPEN-TELCO`), PROP (`OPEN-PROP`), EDU (`OPEN-EDU`).
 - **Dependencies:** 100% Python standard library (`hashlib`, `ast`, `json`, `time`, `typing`, `socket`, `struct`). Zero third-party dependencies.
 - **Verification:** State transitions committed strictly via SHA-256 target hash matching (`expected_output_hash`).
+- **Human Defense Invariants:** Non-technical cognitive protection heuristics (`HUMAN-DEF-v1.0`) complementing technical shields (`HPMCR-DEF v1.0`).
+- **Context Condensation:** Compress conversational history into high-SNR axiomatic representations during multi-turn LLM sessions.
 - **AST Sandboxing:** Static AST validation using Python's native `ast.NodeVisitor`. Never rely on regex.
 - **Coordination Topologies:** Purely asynchronous environment-mediated state updates (Stigmergy / Cryptographic ARG clues). No real-time conversational loops or command-and-control backchannels.
