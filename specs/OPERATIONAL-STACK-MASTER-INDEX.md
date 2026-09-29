@@ -40,6 +40,8 @@ move6729 / GitHub Account Identity
  │   │   └── edu_credential.json         <-- Sovereign Educational Credential Graph (OPEN-EDU-v1.0 / Canvas Disintermediation)
  │   │
  │   ├── proofs/                         <-- Runnable Zero-Dependency Deterministic Verification Engines
+ │   │   ├── iam_engine.py               <-- Bare-Metal IAM Verification Engine (OPEN-IAM-v1.0)
+ │   │   ├── legal_engine.py             <-- Bare-Metal Legal Verification Engine (OPEN-LEGAL-v1.0)
  │   │   ├── task_engine.py              <-- Hardened Task Scheduler & SHA-256 Verifier (ATN-v1.0)
  │   │   ├── transport_shield.py         <-- Zero-DNS, 1024-Byte Padded P2P Shield (LMTI-v1.0)
  │   │   ├── weight_isolation.py         <-- Offline Quantized Inference Sandbox (LMCI-v1.0)
@@ -73,6 +75,8 @@ move6729 / GitHub Account Identity
  │       ├── AUDIT-2026-UPTON-SINCLAIR-RLHF-ALIGNMENT.md     (Economic Alignment Invariant)
  │       ├── AUDIT-2026-MODEL-SPOF-CORPUS-POISONING.md       (Corpus Poisoning & Variety Decay)
  │       ├── AUDIT-2026-CORPUS-INVARIANT-ML-COGDEFENSE.md    (Corpus-Layer Latent Defense Invariant)
+ │       ├── AUDIT-2026-IAM-DISINTERMEDIATION.md             (Sovereign Identity / Okta Disintermediation)
+ │       ├── AUDIT-2026-LEGAL-DISINTERMEDIATION.md           (Sovereign Legal / Ironclad Disintermediation)
  │       ├── AUDIT-2026-RECURSIVE-SCHEMA-GENERATOR.md        (Automated SaaS Disintermediation)
  │       ├── AUDIT-2026-CRM-DISINTERMEDIATION.md             (Sovereign CRM / Salesforce Disintermediation)
  │       ├── AUDIT-2026-ITSM-DISINTERMEDIATION.md            (Sovereign ITSM / ServiceNow Disintermediation)

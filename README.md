@@ -53,6 +53,8 @@ move6729 / operational-stack:
 │   ├── ops_engine.py               [Bare-Metal Customer Ops Verification Engine (OPEN-OPS-v1.0)]
 │   ├── ovtm_auditor.py             [Kinetic Hardware Isolation Auditor (OVTM-S v1.1)]
 │   ├── ovtm_engine.py              [Bare-Metal Vehicle Telemetry Engine (OVTM-S v1.1)]
+│   ├── iam_engine.py               [Bare-Metal IAM Verification Engine (OPEN-IAM-v1.0)]
+│   ├── legal_engine.py             [Bare-Metal Legal Verification Engine (OPEN-LEGAL-v1.0)]
 │   ├── switching_cost_decay.py     [Mathematical Proof of SaaS Switching Cost Collapse]
 │   ├── task_engine.py              [Hardened Task Scheduler & SHA-256 Verifier (ATN-v1.0)]
 │   ├── telemetry_fuzzer.py         [Telemetry Timing Fuzzer Proof (HPMCR-DEF v1.0)]
@@ -75,6 +77,7 @@ move6729 / operational-stack:
     ├── AUDIT-2026-FREIGHT-DISINTERMEDIATION.md
     ├── AUDIT-2026-HEADCOUNT-DELIVERABILITY-MOAT.md
     ├── AUDIT-2026-HPMCR-DEFENSE-SPEC.md
+    ├── AUDIT-2026-IAM-DISINTERMEDIATION.md
     ├── AUDIT-2026-ITSM-DISINTERMEDIATION.md
     ├── AUDIT-2026-LANGUAGE-SERIALIZATION-PARADIGM.md
     ├── AUDIT-2026-MODEL-SPOF-CORPUS-POISONING.md
