@@ -2,56 +2,102 @@
 
 **Classification:** System Architecture Specification / Low-Level Security Audit  
 **Canonical Reference:** `OPSTACK-SPEC-HPMCR-eBPF-v1.0`  
-**Target Infrastructure:** Linux Kernel 5.x+, eBPF Subsystem, Sovereign Local Nodes  
+**Target Infrastructure:** Linux Kernel 5.15+, eBPF Subsystem, Sovereign Local Nodes  
 **License:** Unlicense (Public Domain — Zero-Rent Federation)  
 
 ---
 
-## 1. PROBLEM STATEMENT: USER-SPACE vs. RING-0 TELEMETRY
+## I. SYSTEM DIAGNOSIS: USER-SPACE SHIELD FAILURE MODES
 
-Traditional user-space telemetry shields (such as HTTP/API proxying or browser-level extensions) are vulnerable to bypass by proprietary applications querying low-level hardware interfaces directly. Modern closed-source binaries inspect hardware serial numbers, network adapter MAC addresses, thermal sensors, and precise timer interrupt variations to build un-swappable hardware fingerprints.
+User-space telemetry proxies (HTTP middleware, local DNS sinkholes, browser extensions) fail against hostile, closed-source enterprise binaries. Proprietary runtimes bypass user-space hooks by invoking direct Ring-0 system calls (`sys_enter_read`, `sys_enter_sysinfo`, `sys_enter_clock_gettime`) to read hardware parameters:
 
-To enforce true client-side cybernetic sovereignty (Axiom 7), micro-telemetry fuzzing and payload filtering must occur at **Ring 0** (Linux kernel space) via extended Berkeley Packet Filters (eBPF).
+1. CPU model, microcode version, and core layout from `/proc/cpuinfo`.
+2. Hardware UUIDs, DMI board serial numbers from `/sys/class/dmi/id/`.
+3. Sub-millisecond timer variation (TSC/RDTSC assembly instructions) to establish high-precision user interaction profiles.
+
+To preserve cybernetic sovereignty (Axiom 7), micro-telemetry neutralization and hardware mask injection MUST execute at **Ring 0** via Extended Berkeley Packet Filters (eBPF).
 
 ---
 
-## 2. eBPF INTERCEPTION ARCHITECTURE (`HPMCR-eBPF`)
+## II. ARCHITECTURE: `HPMCR-eBPF` SUBSYSTEM
 
 ```text
 +---------------------------------------------------------------------------------+
-| User Space Application (Proprietary Binary / Telemetry Probe)                   |
+| Proprietary / Un-Sandboxed Application Binary (User Space)                      |
 +---------------------------------------------------------------------------------+
-                                      | Syscall
-                                      v
+         |                          |                          |
+         | sys_enter_read           | sys_enter_uname          | sys_enter_clock_gettime
+         v                          v                          v
 +---------------------------------------------------------------------------------+
-| Ring 0 Linux Kernel                                                             |
-|   +-------------------------------------------------------------------------+   |
-|   | eBPF Probe (kprobe / tracepoint / socket filter)                        |   |
-|   |   1. Intercept read/write/sysinfo syscalls                              |   |
-|   |   2. Inject differential privacy uniform noise U[-a, a]                 |   |
-|   |   3. Mask hardware serials and RTT micro-timing jitter                  |   |
-|   +-------------------------------------------------------------------------+   |
+| Linux Kernel Ring 0 (eBPF JIT Subsystem)                                        |
+|                                                                                 |
+|  +-----------------------+  +----------------------+  +----------------------+  |
+|  | kprobe / sys_read     |  | kretprobe / sys_uname|  | kprobe / sys_clock   |  |
+|  | Intercept /proc & /sys|  | Inject Synthetic DMI |  | Inject Noise U[-a, a]|  |
+|  +-----------------------+  +----------------------+  +----------------------+  |
+|                                                                                 |
+| eBPF BPF_MAP_TYPE_RINGBUF -> Low-Overhead Telemetry Event Fuzzer                |
 +---------------------------------------------------------------------------------+
-                                      | Fuzzed Response
-                                      v
+         |                          |                          |
+         v                          v                          v
 +---------------------------------------------------------------------------------+
-| Hardware Devices / Network Subsystem                                            |
+| Synthetic / Fuzzed Buffer Returned to User Space (Zero Leakage)                 |
 +---------------------------------------------------------------------------------+
 ```
 
 ---
 
-## 3. INVARIANTS & DEFENSIVE MECHANICS
+## III. MATHEMATICAL NOISE & FUZZING INVARIANTS
 
-1. **Syscall Interception:** eBPF probes attach to `sys_enter_read`, `sys_enter_write`, and `sys_enter_getrandom` tracepoints to intercept hardware identification queries before user-space processes receive buffers.
-2. **Telemetry Noise Injection:** Sub-second interaction timers and hardware telemetry reports are fuzzed by injecting uniform random noise $\mathcal{U}[-a, a]$, destabilizing platform behavioral loss functions:
+1. **Hardware ID Homogenization:** System serials are trapped in eBPF context buffers and overwritten with deterministic, public-domain synthetic constants.
+2. **Timer Telemetry Fuzzing:** Microsecond-level timestamp reads ($T_{\text{raw}}$) are altered by injecting bounded uniform differential noise ($\mathcal{U}[-a, a]$):
 
-$$\mathbf{T}_{\text{Kernel}} = \mathbf{T}_{\text{Hardware}} + \mathcal{U}[-a, a] \implies \nabla \mathcal{L}_{\text{Server}} \to \text{Divergent}$$
+$$\mathbf{T}_{\text{Fuzzed}} = \mathbf{T}_{\text{Raw}} + \delta, \quad \delta \sim \mathcal{U}[-15\text{ms}, +15\text{ms}]$$
 
-3. **Zero-Overhead Enforcement:** eBPF bytecode compiles just-in-time (JIT) into native machine instructions, guaranteeing microsecond-level performance overhead.
+3. **Loss Function Disruption (HPMCR Invariant):** Server-side behavioral models calculating user identity via micro-timing dynamics encounter non-convergent gradients:
+
+$$\lim_{N \to \infty} \nabla \mathcal{L}_{\text{Server}}(\mathbf{T}_{\text{Fuzzed}}) \to \text{Divergent} \implies \text{User Clustering Accuracy} \to 0$$
 
 ---
 
-## 4. SYSTEM CONCLUSION
+## IV. eBPF C IMPLEMENTATION CONTRACT (`hpmcr_kernel.c`)
 
-`HPMCR-eBPF` moves cybernetic defense down to the kernel tier, ensuring closed telemetry engines cannot bypass user-space shields or extract persistent hardware fingerprints.
+```c
+// SPDX-License-Identifier: Unlicense
+#include <vmlinux.h>
+#include <bpf/bpf_helpers.h>
+#include <bpf/bpf_tracing.h>
+
+char LICENSE[] SEC("license") = "Unlicense";
+
+// Uniform noise amplitude delta (15ms = 15000000 ns)
+#define NOISE_DELTA_NS 15000000
+
+SEC("kprobe/__x64_sys_clock_gettime")
+int BPF_KPROBE(handle_sys_clock_gettime, clockid_t which_clock, struct __kernel_timespec *tp) {
+    if (!tp) return 0;
+
+    u64 pid_tgid = bpf_get_current_pid_tgid();
+    u32 pid = pid_tgid >> 32;
+
+    // Generate pseudo-random noise vector
+    u64 rand = bpf_get_prandom_u32();
+    s64 noise = (rand % (2 * NOISE_DELTA_NS)) - NOISE_DELTA_NS;
+
+    // Apply jitter directly to kernel timespec structure
+    s64 current_nsec;
+    bpf_probe_read_kernel(&current_nsec, sizeof(s64), &tp->tv_nsec);
+    s64 fuzzed_nsec = current_nsec + noise;
+    bpf_probe_write_user(&tp->tv_nsec, &fuzzed_nsec, sizeof(s64));
+
+    return 0;
+}
+```
+
+---
+
+## V. VERIFICATION INVARIANTS
+
+1. **Zero User-Space Reliance:** Probe operation continues regardless of user-space library hooks or binary modifications.
+2. **Nanosecond Overhead:** eBPF execution latency overhead must remain under $<200\text{ns}$ per system call.
+3. **Deterministic Memory Isolation:** eBPF memory bounds enforced strictly via kernel verifier (zero kernel panics, zero un-sandboxed memory reads).

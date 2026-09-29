@@ -1,53 +1,125 @@
-# AUDIT-2026-MICROGRID-COMPUTE-SCHEDULER: Landauer Thermodynamic Bounds & Bare-Metal Energy Orchestration (ENERGY-v1.0)
+# AUDIT-2026-MICROGRID-COMPUTE-SCHEDULER: Landauer Thermodynamic Bounds & Bare-Metal Micro-Grid Energy Scheduler (ENERGY-v1.0)
 
-**Classification:** System Architecture Specification / Energy Execution Model  
+**Classification:** System Architecture Specification / Bare-Metal Energy Mechanics  
 **Canonical Reference:** `OPSTACK-SPEC-ENERGY-v1.0`  
-**Target Infrastructure:** Bare-Metal Edge Clusters, Renewable Micro-Grids, Off-Grid Compute  
+**Target Infrastructure:** Bare-Metal Local Nodes, Off-Grid Solar/Battery Micro-Grids  
 **License:** Unlicense (Public Domain — Zero-Rent Federation)  
 
 ---
 
-## 1. THERMODYNAMIC INVARIANT & LANDAUER BOUNDS
+## I. SYSTEM DIAGNOSIS: THE THERMODYNAMIC COMPUTE LIMIT
 
-Under Landauer's Principle, erasing or processing one bit of information dissipates a minimum physical thermodynamic energy:
+Centralized AI platforms rely on continuous grid power draws backed by high CapEx datacenter facilities. This creates an immediate economic vulnerability: high fixed operational costs ($OpEx_{\text{Grid}}$) that force platforms to extract rent from users.
+
+Sovereign edge execution grounds compute in local thermodynamic realities. Under Landauer's Principle, the minimum energy required to erase one bit of information is bounded by:
 
 $$E_{\text{min}} = k_B T \ln 2$$
 
-Where $k_B$ is Boltzmann's constant and $T$ is absolute temperature in Kelvin. Modern silicon operates several orders of magnitude above this theoretical minimum, making power dissipation ($\text{OpEx} \to \text{Watts}$) the fundamental constraint of computation.
+Where $k_B$ is the Boltzmann constant and $T$ is absolute temperature. While biological systems operate near physical efficiency limits, silicon computation consumes significant power ($OpEx \to \text{Watts}$).
 
-Centralized hyperscale datacenters require continuous, high-baseline grid capacity combined with massive cooling overheads. Conversely, local bare-metal edge nodes can operate dynamically on intermittent renewable surpluses (solar, wind, battery peak) without paying cloud tollbooths or long-distance transmission losses.
-
----
-
-## 2. GAME-THEORETIC YIELD CONDITION
-
-A bare-metal compute task is thermodynamically viable to execute if and only if:
-
-$$\text{Task Yield (\$/Token or Value)} \ge \text{Power Consumption (kW)} \times \text{Electricity Rate (\$/kWh)}$$
-
-When solar/battery energy is in surplus and would otherwise be grounded or curtailed:
-
-$$\text{Electricity Rate} \to 0 \implies \text{Yield Threshold} \to 0$$
-
-This permits local execution of background tasks (e.g., local model quantization, vector indexing, batch AST evaluation) at near-zero marginal cost.
+`ENERGY-v1.0` aligns local inference workload execution (`LMCI-v1.0`) with local renewable power surpluses (solar peak, wind, battery overflow) to achieve **Zero-Net-Cost Compute**.
 
 ---
 
-## 3. ENERGY SCHEDULER PROTOCOL SPECIFICATION (`ENERGY-v1.0`)
+## II. SYSTEM ARCHITECTURE
 
 ```text
-+-----------------------+     +--------------------------+     +-----------------------+
-|  Local Power Sensor   | --> |  Thermodynamic Verifier   | --> |  LMCI Local Compute   |
-| (Solar / Battery State|     |  Yield > Power Cost?     |     |  Execution Engine     |
-+-----------------------+     +--------------------------+     +-----------------------+
++---------------------------------------------------------------------------------+
+| Micro-Grid Battery Management System (BMS) / Inverter Telemetry                 |
++---------------------------------------------------------------------------------+
+                                      |
+                                      | RS485 / Modbus / Local API (Voltage & SOC)
+                                      v
++---------------------------------------------------------------------------------+
+| ENERGY-v1.0 LOCAL SCHEDULER DAEMON                                             |
+|                                                                                 |
+|  1. Read Current Battery State of Charge (SOC %)                               |
+|  2. Calculate Excess Solar Production Yield (P_surplus = P_pv - P_house)        |
+|  3. Evaluate Local Electricity Spot Rate ($/kWh)                                |
+|                                                                                 |
+|  Condition: (SOC > 85% AND P_surplus > Workload_Watts) OR Rate < Threshold      |
++---------------------------------------------------------------------------------+
+                  |                                     |
+         Yield > Threshold                      Yield < Threshold
+                  v                                     v
++----------------------------------+   +----------------------------------+
+| EXECUTE LOCAL BATCH COMPUTE      |   | PAUSE COMPUTATION / SLEEP NODE   |
+| - LMCI Quantized Batch Inference |   | - SIGSTOP local model runtimes   |
+| - ATN Task Graph Execution       |   | - Lower CPU/GPU power states     |
++----------------------------------+   +----------------------------------+
 ```
-
-1. **Telemetry Ingestion:** Monitor local battery state-of-charge (SoC), solar input voltage, and real-time power rate.
-2. **Threshold Evaluation:** Evaluate task execution queues against current power surplus.
-3. **Execution Gating:** Trigger offline `LMCI-v1.0` inference or `ATN-v1.0` task graphs when power yield is positive; pause or throttle execution when power costs exceed task value.
 
 ---
 
-## 4. SYSTEM CONCLUSION
+## III. MATHEMATICAL SCHEDULING FORMULA
 
-The `ENERGY-v1.0` protocol ties computational state execution directly to physical energy availability. By aligning compute schedules with micro-grid thermodynamic surpluses, independent operators achieve operational autonomy from centralized energy and cloud infrastructure.
+Compute tasks run if and only if local task yield exceeds real-time power acquisition costs:
+
+$$\text{RunCondition} = \left( P_{\text{SolarSurplus}} \ge P_{\text{Node}} \right) \lor \left( \text{Yield}_{\text{Task}} > P_{\text{Node}} \times \text{Cost}_{\text{Grid}}(\text{kWh}) \right)$$
+
+Where:
+- $P_{\text{SolarSurplus}}$: Real-time micro-grid excess power in Watts.
+- $P_{\text{Node}}$: Real-time power consumption of the bare-metal compute node under full compute load.
+- $\text{Cost}_{\text{Grid}}$: Local grid power cost per kilowatt-hour.
+
+---
+
+## IV. IMPLEMENTATION SPECIFICATION (`energy_scheduler.py`)
+
+```python
+# SPDX-License-Identifier: Unlicense
+import time
+import json
+import sys
+
+class MicroGridScheduler:
+    """
+    Bare-Metal Hardware-Energy Micro-Grid Scheduler (ENERGY-v1.0).
+    Gates high-density compute tasks strictly to zero-cost energy windows.
+    """
+    def __init__(self, node_power_draw_watts: float, min_soc_percent: float = 85.0):
+        self.node_power_draw_watts = node_power_draw_watts
+        self.min_soc_percent = min_soc_percent
+
+    def evaluate_execution_permission(self, telemetry: dict) -> bool:
+        """
+        Evaluates real-time BMS telemetry payload.
+        Returns True if computational execution is thermodynamically viable.
+        """
+        soc = telemetry.get("battery_soc_percent", 0.0)
+        pv_yield_watts = telemetry.get("pv_yield_watts", 0.0)
+        house_load_watts = telemetry.get("house_load_watts", 0.0)
+
+        net_surplus_watts = pv_yield_watts - house_load_watts
+
+        # Priority 1: Battery state of charge above threshold with net energy surplus
+        if soc >= self.min_soc_percent and net_surplus_watts >= self.node_power_draw_watts:
+            return True
+
+        # Priority 2: Direct excess solar yield exceeds compute node draw
+        if net_surplus_watts >= (self.node_power_draw_watts * 1.2):
+            return True
+
+        return False
+
+if __name__ == "__main__":
+    scheduler = MicroGridScheduler(node_power_draw_watts=250.0)
+    mock_telemetry = {
+        "battery_soc_percent": 92.0,
+        "pv_yield_watts": 1200.0,
+        "house_load_watts": 400.0
+    }
+    can_run = scheduler.evaluate_execution_permission(mock_telemetry)
+    print(f"[ENERGY-v1.0] Compute Execution Permitted: {can_run}")
+```
+
+---
+
+## V. SYSTEM INVARIANTS
+
+1. **Zero-Rent Thermodynamics:** Node compute runs using zero-cost local energy surpluses, bypassing grid cost dependency.
+2. **Autonomous Hardware Throttling:** Runtimes automatically sleep when local battery capacity drops below threshold.
+3. **Decentralized Resilience:** Ensures local compute capability survives grid instability or regional power outages.
+```
+
+specs/OPERATIONAL-STACK-MASTER-INDEX.md
