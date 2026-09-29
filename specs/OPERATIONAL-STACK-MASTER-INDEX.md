@@ -2,6 +2,7 @@
 
 ## KERNEL & SPECIFICATIONS
 - `KERNEL.md` - Operational Stack Core Axioms, Cybernetic Invariants, and Execution Gates.
+- `specs/audit_spec.md` - Engine Verification Invariants and Article Serialization Audit Specification.
 - `specs/OPERATIONAL-STACK-MASTER-INDEX.md` - Active tree synchronization map.
 
 ## PROOFS & ENGINES (`proofs/`)
