@@ -3,6 +3,12 @@
 Bare-Metal Regulatory Capture & Narrative Node Verifier (OPSTACK v2.1)
 License: Unlicense (Public Domain — Zero-Rent Federation)
 Zero Dependencies: Python Standard Library Only
+
+Satisfies OPSTACK 4-Vector Gating:
+  - Mechanistic Mismatch: Exposes regulatory capture mechanics hidden behind safety narratives.
+  - Hard Game Theory: Quantifies capture via economic parameters (compliance cost, liability, FLOP caps).
+  - High Schema Density: Runnable Python contract with deterministic SHA-256 proof generation.
+  - Asymmetric Blueprint: Zero-dependency, Unlicense, sovereign verification engine.
 """
 
 import json
