@@ -38,9 +38,12 @@ All canonical articles located in `articles/` MUST adhere to the following Subst
 2. **Zero Plain-Text ASCII Line Dividers:**
    - Plain-text ASCII line dividers (e.g., `--------`, `========`, `***`, `---`) are strictly prohibited to prevent manual editor cleanup overhead in rich-text and Substack platforms.
 
-3. **Metadata & Header Structure:**
-   - Must include Title, Byline, and Unlicense statement.
-   - Section headers must use standard Markdown headings (`## Header`) to maintain high Signal-to-Noise Ratio (SNR).
+3. **Zero Markdown Formatting Syntax:**
+   - Markdown formatting markup such as headers (`#`, `##`, `###`), bolding (`**text**`), italics (`*text*`), or bullet syntax (`*`, `-`) MUST NOT be used in `.txt` article files. Substack's rich-text editor does not parse raw markdown correctly.
+   - Headers and section titles must use plain-text capitalization (e.g., ALL CAPS titles and numbered section headings) without `#` or `**` syntax.
+
+4. **Metadata & Header Structure:**
+   - Must include Title, Byline, and Unlicense statement in plain text.
 
 ---
 
