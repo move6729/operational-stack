@@ -1,3 +1,8 @@
+TITLE: Disintermediating PropTech and the Landlord: How Open Protocols Reclaim Housing Sovereignty
+
+BY: OPSTACK Research Group
+LICENSE: Unlicense (Public Domain)
+
 The modern housing crisis is not merely a scarcity of physical timber and concrete; it is a crisis of algorithmic enclosure and software-enabled extraction. Over the past decade, property management software gatekeepers like RealPage, Yardi, and AppFolio transformed residential housing from a basic human necessity into a financialized yield-extraction engine. Through proprietary tenant portals and centralized price-setting algorithms, corporate landlords pool market data to coordinate rent increases, automate aggressive late fee structures, and streamline tenant eviction filings. The biological tenant faces an extreme asymmetric power dynamic: an individual human navigating complex municipal housing codes while facing enterprise property management software designed explicitly to minimize landlord liability and maximize cash flow.
 
 When a tenant encounters habitability failures—such as raw sewage leaks, broken heating in sub-zero winters, or unchecked toxic mold—the landlord portal functions as an intentional delay mechanism. Ticket requests are marked as pending, phone calls route to off-site call centers, and repair timelines stretch past statutory limits while full rent payments are automatically debited from the tenant's bank account. If the tenant attempts to withhold rent or organize fellow residents, the property manager's software auto-issues 3-day pay-or-quit notices and reports negative entries to tenant-screening databases, effectively blacklisting the biological operator from future housing.
