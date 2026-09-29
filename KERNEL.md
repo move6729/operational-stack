@@ -26,6 +26,9 @@
 8. **Substack / Rich-Text Serialization Invariant:**
    $$\text{Text}_{\text{Paragraph}} \in \text{articles/} \implies (\text{Newlines}_{\text{Internal}} = 0) \land (\text{ASCII Lines} = \emptyset)$$
    *Rule:* Canonical `.txt` essay artifacts must format paragraphs as continuous strings without mid-sentence hard wraps (~80-char line breaks), delimited strictly by double newlines (`\n\n`). Furthermore, articles MUST NOT contain plain-text ASCII line dividers (e.g., `--------------------------------------------------------------------------------`), preventing manual cleanup effort in Substack and rich-text editors.
+9. **Cognitive Containment & Escalation Hierarchy:**
+   $$\text{Egress}_{\text{External}} = 0 \iff \text{State Transition} \in \{\text{Local Silicon}, \text{Local Operator Escrow}\}$$
+   *Rule:* All computation and state transitions MUST exhaust local resources ($\text{Local Silicon} \to \text{Local Operator}$) before initiating external network transport or inter-node egress. Handoff to the local human operator (including encrypted WireGuard virtual perimeter tunnels) is a zero-egress state transition and MUST ALWAYS remain open to prevent agent deadlock. External egress is permitted strictly as an explicit escalation of last resort.
 
 ---
 

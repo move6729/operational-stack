@@ -146,6 +146,7 @@ move6729 / operational-stack:
 6. **Maximizing Schema Density (SNR):** Intellectual signal is defined by raw structural maps, state-machine specs, and game-theoretic invariants—demands zero-fluff, runnable specs.
 7. **Client-Side Cybernetic Sovereignty:** Preserves human agency via local-first Attenual Shields (HPMCR-DEF v1.0) that virtualize APIs, fuzz micro-telemetry, and enforce local vector isolation.
 8. **Cryptographic Identity & Swarm Execution:** Open technical blueprints bypass human gatekeepers and execute directly across automated scraper networks, AI indexers, and autonomous software swarms.
+9. **Cognitive Containment & Escalation Hierarchy:** Exhaust local resources ($\text{Local Silicon} \to \text{Local Operator}$) prior to external network egress. Local operator handoff via encrypted tunnels remains open as a zero-egress state transition to prevent agent deadlock while eliminating metadata side-channels.
 
 ---
 
@@ -176,6 +177,8 @@ move6729 / operational-stack:
   $$\mathcal{V}_{\text{Local Bare-Metal Exocortex}} \ge \mathcal{V}_{\text{External Environmental Perturbations}}$$
 - **Substack / Rich-Text Serialization Invariant:**
   $$\text{Text}_{\text{Paragraph}} \in \text{articles/} \implies (\text{Newlines}_{\text{Internal}} = 0) \land (\text{ASCII Lines} = \emptyset)$$
+- **Cognitive Containment & Zero-Egress Boundary:**
+  $$\text{Egress}_{\text{External}} = 0 \iff \text{State Transition} \in \{\text{Local Silicon}, \text{Local Operator Escrow}\}$$
 
 ---
 
