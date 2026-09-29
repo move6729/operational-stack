@@ -1,138 +1,70 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "OpenTenantDefense",
-  "description": "Schema for Bare-Metal Sovereign Tenant Rights & Landlord Compliance Verification (OPEN-TENANT-v1.0)",
+  "$id": "https://github.com/move6729/operational-stack/schema/tenant_defense.json",
+  "title": "OpenTenantDefenseSchema",
   "type": "object",
   "properties": {
-    "case_id": {
-      "type": "string",
-      "pattern": "^tenant-[a-f0-9]{12}$"
-    },
-    "timestamp_utc": {
-      "type": "integer",
-      "minimum": 0
-    },
-    "tenant_node_id": {
-      "type": "string"
-    },
-    "jurisdiction_code": {
-      "type": "string",
-      "pattern": "^[A-Z]{2}-[A-Z0-9_]+$"
-    },
-    "lease_start_timestamp": {
-      "type": "integer",
-      "minimum": 0
-    },
-    "monthly_rent_cents": {
-      "type": "integer",
-      "minimum": 0
+    "protocol_version": { "type": "string", "enum": ["OPEN-TENANT-v1.0"] },
+    "case_id": { "type": "string", "format": "uuid" },
+    "monthly_rent_cents": { "type": "integer", "minimum": 0 },
+    "property_address": { "type": "string" },
+    "building_id": { "type": "string" },
+    "tenant_identity": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "contact_hash": { "type": "string" }
+      },
+      "required": ["name"]
     },
     "habitability_defects": {
       "type": "array",
       "items": {
         "type": "object",
         "properties": {
-          "defect_type": {
-            "type": "string",
-            "enum": [
-              "plumbing_sanitation",
-              "heating_hvac",
-              "structural_safety",
-              "pest_infestation",
-              "electrical_hazard",
-              "mold_moisture",
-              "security_locks"
-            ]
-          },
-          "date_reported_timestamp": {
-            "type": "integer",
-            "minimum": 0
-          },
-          "notice_method": {
-            "type": "string",
-            "enum": ["written_letter", "certified_mail", "email", "portal_ticket"]
-          },
-          "landlord_cured": {
-            "type": "boolean"
-          },
-          "estimated_rent_abatement_percent": {
-            "type": "number",
-            "minimum": 0.0,
-            "maximum": 100.0
-          }
+          "defect_type": { "type": "string" },
+          "severity_factor": { "type": "number", "minimum": 0.0, "maximum": 1.0 },
+          "duration_days": { "type": "integer", "minimum": 0 },
+          "notice_timestamp": { "type": "integer" },
+          "statutory_cure_days": { "type": "integer", "default": 14 }
         },
-        "required": [
-          "defect_type",
-          "date_reported_timestamp",
-          "notice_method",
-          "landlord_cured",
-          "estimated_rent_abatement_percent"
-        ]
+        "required": ["defect_type", "severity_factor", "duration_days", "notice_timestamp"]
       }
     },
-    "landlord_action_timestamp": {
+    "protected_activities": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "timestamp": { "type": "integer" },
+          "activity": { "type": "string" }
+        },
+        "required": ["timestamp", "activity"]
+      }
+    },
+    "adverse_actions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "timestamp": { "type": "integer" },
+          "action": { "type": "string" }
+        },
+        "required": ["timestamp", "action"]
+      }
+    },
+    "escalation_state": {
       "type": "integer",
-      "minimum": 0
+      "enum": [0, 1, 2, 3],
+      "description": "0: Logging, 1: Statutory Cure Window Active, 2: Rent Escrow Locked, 3: Stigmergic Class Leverage Active"
     },
-    "landlord_action_type": {
-      "type": "string",
-      "enum": ["none", "eviction_notice", "rent_increase", "lease_termination", "entry_without_notice"]
-    },
-    "protected_activity_timestamp": {
-      "type": "integer",
-      "minimum": 0
-    },
-    "statutory_retaliation_suspected": {
-      "type": "boolean"
-    },
-    "statutory_remedy_matrix": {
-      "type": "object",
-      "properties": {
-        "statute_reference": {
-          "type": "string"
-        },
-        "max_statutory_cure_days": {
-          "type": "integer",
-          "minimum": 1
-        },
-        "daily_statutory_fine_cents": {
-          "type": "integer",
-          "minimum": 0
-        },
-        "rent_withholding_permitted": {
-          "type": "boolean"
-        },
-        "statutory_retaliation_window_days": {
-          "type": "integer",
-          "minimum": 1
-        }
-      },
-      "required": [
-        "statute_reference",
-        "max_statutory_cure_days",
-        "daily_statutory_fine_cents",
-        "rent_withholding_permitted",
-        "statutory_retaliation_window_days"
-      ]
-    },
-    "state_hash": {
-      "type": "string",
-      "pattern": "^[a-f0-9]{64}$"
-    }
+    "stigmergic_proof_hash": { "type": "string" }
   },
   "required": [
+    "protocol_version",
     "case_id",
-    "timestamp_utc",
-    "tenant_node_id",
-    "jurisdiction_code",
-    "lease_start_timestamp",
     "monthly_rent_cents",
-    "habitability_defects",
-    "landlord_action_timestamp",
-    "landlord_action_type",
-    "protected_activity_timestamp",
-    "statutory_retaliation_suspected",
-    "statutory_remedy_matrix",
-    "state_hash"
+    "property_address",
+    "habitability_defects"
   ]
 }

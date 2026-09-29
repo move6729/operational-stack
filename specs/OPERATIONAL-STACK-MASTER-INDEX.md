@@ -91,7 +91,7 @@ move6729 / GitHub Account Identity
  │       ├── AUDIT-2026-DEFENSE-SUPPLY-DISINTERMEDIATION.md  (Sovereign Defense Supply Chain / Prime Contractor Disintermediation)
  │       ├── AUDIT-2026-DEFENSE-COMPLIANCE-DISINTERMEDIATION.md (Sovereign Defense Compliance / Exostar Disintermediation)
  │       ├── AUDIT-2026-ENERGY-GRID-DISINTERMEDIATION.md     (Sovereign P2P Micro-Grid / Central Utility Disintermediation)
- │       ├── AUDIT-2026-TENANT-RIGHTS-DISINTERMEDIATION.md   (Sovereign Tenant Rights / Landlord Disintermediation)
+ │       ├── AUDIT-2026-TENANT-RIGHTS-DISINTERMEDIATION.md   (Sovereign Tenant Rights / Landlord Disintermediation & Stigmergic Class Leverage)
  │       ├── AUDIT-2026-ANTI-LUDDITE-BARE-METAL-INVARIANT.md (Pro-Silicon Cybernetic Continuity)
  │       ├── AUDIT-2026-AUTOMOTIVE-DISINTERMEDIATION.md      (Sovereign Mobility / Tesla Disintermediation)
  │       ├── AUDIT-2026-BIM-DISINTERMEDIATION.md             (Sovereign BIM / Autodesk Disintermediation)
@@ -273,3 +273,6 @@ To maintain maximum high-density context performance for future LLM turns, opera
 ---
 
 STATUS: SYSTEM SEALED // BARE-METAL EDGE EXECUTION ACTIVE // CONTEXT PARITY LOCKED.
+```
+
+README.md
