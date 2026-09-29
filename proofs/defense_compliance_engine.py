@@ -105,7 +105,7 @@ def run_compliance_proof() -> bool:
     mtr_raw = "MILL_TEST_REPORT_TITANIUM_HEAT_88203_CHEMISTRY_OK_TENSILE_950MPA"
     mtr_hash = hashlib.sha256(mtr_raw.encode("utf-8")).hexdigest()
 
-    current_time = [PHONE]  # Epoch timestamp in 2026
+    current_time = int(time.time())  # Epoch timestamp in 2026
     future_itar_exp = current_time + (365 * 86400)  # Valid for 1 year
 
     compliance_payload = {
