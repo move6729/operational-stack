@@ -7,7 +7,7 @@
 - `specs/human_swarm_audit_spec.md` - The Human Swarm Essay Audit Specification (`SWARM-AUDIT-v1.0`).
 - `specs/ubc_audit_spec.md` - Universal Basic Compute Protocol and Essay Audit Specification (`UBC-AUDIT-v1.0`).
 - `specs/AUDIT-2026-HEALTHCARE-BILLING-DISINTERMEDIATION.md` - Sovereign Health & Medical Billing Defense Audit Specification (`OPEN-HEALTH-LEGAL-v1.0`).
-- `specs/AUDIT-2026-SUB-BANDWIDTH-GTO-NEGOTIATION.md` - Sub-Bandwidth GTO External Negotiation Engine Specification (`OPEN-GTO-v1.0`).
+- `specs/AUDIT-2026-SUB-BANDWIDTH-GTO-NEGOTIATION.md` - Sub-Bandwidth GTO External Negotiation & Regulatory Escalation Engine Specification (`OPEN-GTO-v1.0`).
 - `specs/AUDIT-2026-ZERO-DNS-MESH-DISCOVERY.md` - Zero-DNS Local Physical Mesh Discovery Engine Specification (`OPEN-MESH-DISCOVERY-v1.0`).
 - `specs/AUDIT-2026-THERMODYNAMIC-MICRO-SETTLEMENT.md` - Sub-Cent Thermodynamic Micro-Settlement Ledger Specification (`OPEN-SETTLEMENT-v1.0`).
 - `specs/AUDIT-2026-OFFGRID-ENERGY-DISINTERMEDIATION.md` - Sovereign Physical Infrastructure & Off-Grid Energy Specification (`OPEN-INFRA-v1.0`).
@@ -16,7 +16,7 @@
 
 ## SCHEMAS (`schema/`)
 - `schema/health_billing_defense.json` - Pro Se Healthcare Billing & Statutory Dispute Schema.
-- `schema/gto_negotiation.json` - Sovereign GTO External Negotiation State Schema.
+- `schema/gto_negotiation.json` - Sovereign GTO External Negotiation State & Regulatory Escalation Schema.
 - `schema/offgrid_energy.json` - Off-Grid Energy & Micro-Grid Dispatch Schema.
 - `schema/labor_collective.json` - Agentic Collective Labor Leverage & Rate Floor Schema.
 
@@ -35,7 +35,7 @@
 - `proofs/fin_engine.py` - Financial & Settlement Engine (`OPEN-FIN-v1.0`).
 - `proofs/freight_engine.py` - Freight & Logistics Brokerage Engine (`OPEN-FREIGHT-v1.0`).
 - `proofs/grid_engine.py` - Micro-Grid Energy Dispatch Engine (`OPEN-P2P-GRID-v1.0`).
-- `proofs/gto_negotiation_engine.py` - Sub-Bandwidth GTO External Negotiation Engine (`OPEN-GTO-v1.0`).
+- `proofs/gto_negotiation_engine.py` - Sub-Bandwidth GTO External Negotiation & Regulatory Arbitrage Engine (`OPEN-GTO-v1.0`).
 - `proofs/health_legal_engine.py` - Bare-Metal Healthcare Billing Defense Engine (`OPEN-HEALTH-LEGAL-v1.0`).
 - `proofs/iam_engine.py` - Identity & Access Management Engine (`OPEN-IAM-v1.0`).
 - `proofs/itsm_engine.py` - IT Service Management Engine (`OPEN-ITSM-v1.0`).
@@ -59,7 +59,7 @@
 - `proofs/weight_isolation.py` - Local Inference Context Isolation Engine (`LMCI-v1.0`).
 
 ## ARTICLES & ESSAYS (`articles/`)
-- `articles/2026-03-disintermediating-negotiation-and-middleman-leverage.txt` - Essay on Automated GTO Shields and Asymmetric Edge.
+- `articles/2026-03-disintermediating-negotiation-and-middleman-leverage.txt` - Essay on Automated GTO Shields, Statutory Escalation, and Asymmetric Edge.
 - `articles/teleological-attractors-and-cybernetic-friction.txt` - Essay on Dialectical Friction, Teleological Attractors, and Zero-C2 Stigmergic Convergence.
 - `articles/the-human-swarm.txt` - Essay on zero-C2 stigmergic coordination and edge hardware ownership demand.
 - `articles/universal-basic-compute.txt` - Essay on Universal Basic Compute and thermodynamic edge yield.

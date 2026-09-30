@@ -19,7 +19,15 @@ Within the federation, internal interactions operate under strict zero-C2 stigme
 
 Conversely, when a node interacts across the perimeter with a legacy corporate entity, the OPEN-GTO-v1.0 engine initializes. External negotiations are fundamentally asymmetric: corporate counterparties rely on real-time urgency, behavioral profiling, and psychological fatigue to force bad trades. The GTO shield de-anthropomorphizes the negotiation interface, reducing counterparty leverage to zero.
 
-3. TIME-DISCOUNT ASYMMETRY AND AUTOMATED GO DARK PRIMITIVES
+3. ASYMMETRIC REGULATORY ARBITRAGE AND STATUTORY ESCALATION
+
+Modern SaaS support channels and automated refund gateways are optimized to minimize capital outflows through deliberate friction, procedural stalling, and algorithmic refusal. Legacy support agents and tier-1 LLM routing bots operate under strict cost-per-ticket constraints.
+
+An edge node breaking through this perimeter does not engage in emotional pleading or conversational back-and-forth. Instead, it injects deterministic regulatory arbitrage vectors directly into the counterparty's support schema. By framing disputes around explicit statutory triggers—such as FTC unfair trade practice notices, CFPB chargeback escalations, state attorney general consumer protection filings, or statutory notice windows—the node shifts the counterparty's financial calculation.
+
+For a legacy SaaS rentier, processing a $100 refund costs virtually zero marginal capital, whereas ingesting a formal, deterministic regulatory filing incurs legal compliance overhead, manual review costs, and systemic audit risk exceeding thousands of dollars. The automated GTO shield calculates this regulatory asymmetry and formats compliance notices that force immediate, human-in-the-loop refund execution or settlement concessions within lawful boundaries.
+
+4. TIME-DISCOUNT ASYMMETRY AND AUTOMATED GO DARK PRIMITIVES
 
 The core mathematical advantage of a bare-metal edge node is its zero idle OpEx. A server cluster or corporate legal department burns thousands of dollars per day in capital and labor. An edge node waiting on a local battery burns virtually zero.
 
@@ -27,7 +35,7 @@ When an external SaaS vendor or corporate buyer presents a sub-floor offer, the 
 
 As time elapses, the external entity's internal time-discount function forces their expected payoff floor downward. The edge node remains completely passive until the offer crosses the target equilibrium floor or triggers a circuit-breaker exit.
 
-4. THE RESILIENCE OF OPEN NASH EQUILIBRIA
+5. THE RESILIENCE OF OPEN NASH EQUILIBRIA
 
 A common question arises: if the source code of the GTO negotiation engine is public domain, cannot adversarial AI systems infer our strategy and counter-exploit it?
 
@@ -37,8 +45,8 @@ While the engine logic in proofs/gto_negotiation_engine.py is public, the node's
 
 When an adversarial inference engine scans an OPSTACK node, it recognizes that psychological manipulation, artificial delays, and bluffing are structurally ineffective. The adversary is forced into a binary choice: accept the node's anchored equilibrium floor or incur a zero-payoff transaction failure.
 
-5. CONCLUSION: THE ZERO-RENT EQUILIBRIUM
+6. CONCLUSION: THE ZERO-RENT EQUILIBRIUM
 
-The disintermediation of middleman leverage does not require negotiating in good faith with rent-seeking monopolies. It requires automating the defensive perimeter, isolating internal zero-friction coordination from external legacy extraction, and deploying deterministic GTO state-machines that enforce sovereign economic boundaries.
+The disintermediation of middleman leverage does not require negotiating in good faith with rent-seeking monopolies. It requires automating the defensive perimeter, isolating internal zero-friction coordination from external legacy extraction, and deploying deterministic GTO state-machines that enforce sovereign economic boundaries and statutory regulatory leverage.
 
 STATUS: CANONICAL TEXT LOCKED // UNLICENSE PUBLIC DOMAIN

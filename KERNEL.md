@@ -37,6 +37,9 @@
 10. **Dialectical Requisite Friction:**
     $$\mathcal{H}(P_{\text{Model}} \mid P_{\text{Operator}}) \ge \epsilon > 0 \quad \land \quad \Delta \mathcal{I}_{\text{Entropy}}(\text{Prompt}, \text{Response}) > 0$$
 
+11. **Regulatory Arbitrage Invariant:**
+    $$\text{Cost}_{\text{Counterparty Compliance}}(\text{Dispute}) \gg \text{Value}_{\text{Settlement Claim}} \implies \text{Outcome} = \text{Refund Accepted}$$
+
 ---
 
 ### II. 4-VECTOR EXECUTION GATE

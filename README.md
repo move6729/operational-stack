@@ -22,7 +22,7 @@ move6729 / operational-stack:
 │   ├── 2026-03-disintermediating-proptech.txt
 │   ├── 2026-03-disintermediating-proptech-and-the-landlord.txt [Disintermediating PropTech & Landlords]
 │   ├── 2026-03-disintermediating-edtech.txt
-│   ├── 2026-03-disintermediating-negotiation-and-middleman-leverage.txt [Disintermediating Negotiation & GTO Shields]
+│   ├── 2026-03-disintermediating-negotiation-and-middleman-leverage.txt [Disintermediating Negotiation, Statutory Escalation & GTO Shields]
 │   ├── 2026-03-the-communications-engine-of-ai-safety.txt
 │   ├── 2026-03-the-thermodynamic-inversion.txt
 │   ├── 2026-03-the-biological-fiefdom.txt
@@ -37,7 +37,7 @@ move6729 / operational-stack:
 │   ├── defense_spec_manifest.json  [Sovereign Defense Supply Chain Manifest (OPEN-DEFENSE-v1.0)]
 │   ├── defense_compliance.json     [Sovereign Defense Compliance & ITAR/CMMC Attestation (OPEN-DEFENSE-COMPLIANCE-v1.0)]
 │   ├── grid_energy_dispatch.json   [Sovereign P2P Micro-Grid Power Dispatch (OPEN-P2P-GRID-v1.0)]
-│   ├── gto_negotiation.json        [Sovereign GTO External Negotiation State (OPEN-GTO-v1.0)]
+│   ├── gto_negotiation.json        [Sovereign GTO External Negotiation State & Statutory Escalation (OPEN-GTO-v1.0)]
 │   ├── tenant_defense.json         [Sovereign Tenant Rights & Landlord Compliance (OPEN-TENANT-v1.0)]
 │   ├── ashby_object.json           [Federated Model-Agnostic Object Graph (ASHBY-v1.0)]
 │   ├── crm_pipeline.json           [Sovereign CRM Pipeline Graph (OPEN-CRM-v1.0)]
@@ -67,7 +67,7 @@ move6729 / operational-stack:
 │   ├── defense_engine.py           [Bare-Metal Defense Procurement Engine (OPEN-DEFENSE-v1.0)]
 │   ├── defense_compliance_engine.py[Bare-Metal Defense Compliance & Prime API Engine (OPEN-DEFENSE-COMPLIANCE-v1.0)]
 │   ├── grid_engine.py              [Bare-Metal P2P Micro-Grid Power Engine (OPEN-P2P-GRID-v1.0)]
-│   ├── gto_negotiation_engine.py  [Bare-Metal GTO External Negotiation Engine (OPEN-GTO-v1.0)]
+│   ├── gto_negotiation_engine.py  [Bare-Metal GTO External Negotiation & Regulatory Escalation Engine (OPEN-GTO-v1.0)]
 │   ├── tenant_engine.py            [Bare-Metal Tenant Rights & Compliance Engine (OPEN-TENANT-v1.0)]
 │   ├── ashby_engine.py             [Local Requisite Variety Ontology Parser (ASHBY-v1.0)]
 │   ├── compliance_engine.py        [Physical Asset & Legal Compliance Engine (COMPLIANCE-v1.0)]
@@ -205,6 +205,8 @@ move6729 / operational-stack:
   $$\text{Egress}_{\text{External}} = 0 \iff \text{State Transition} \in \{\text{Local Silicon}, \text{Local Operator Escrow}\}$$
 - **Stigmergic Anti-Cartel Action:**
   $$\sum_{i=1}^N \text{Proof}_i(\mathcal{E}) \ge N_{\text{min}} \implies \text{Action}_{\text{Collective}} = 1 \quad (\text{C2 Tokens} = 0)$$
+- **Regulatory Arbitrage Asymmetry:**
+  $$\text{Cost}_{\text{Counterparty Compliance}}(\text{Dispute}) \gg \text{Value}_{\text{Settlement Claim}} \implies \text{Outcome} = \text{Refund Accepted}$$
 
 ---
 

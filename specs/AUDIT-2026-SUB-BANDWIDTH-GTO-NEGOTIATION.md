@@ -1,44 +1,35 @@
 # AUDIT SPECIFICATION: SUB-BANDWIDTH GTO EXTERNAL NEGOTIATION ENGINE
+
 **Reference:** `OPEN-GTO-v1.0`  
 **License:** Unlicense (Public Domain — Zero-Rent Federation)  
 
 ---
 
-### I. MECHANISTIC REALITY & PROBLEM STATEMENT
+### I. EXECUTIVE SUMMARY & ARCHITECTURAL SCOPE
 
-Legacy corporate intermediaries, SaaS vendors, institutional landlords, and procurement brokers extract monopoly rents by exploiting psychological friction, real-time response expectations, asymmetric information, and artificial urgency. In legacy bargaining, human operators or non-insulated agents suffer from temporal fatigue, cognitive depletion, and burn-rate pressure.
-
-External counterparties utilize high-frequency communication channels to force premature concession curves. Without an automated attenuation shield, sovereign edge nodes risk behavioral leakage and suboptimal economic extraction during external interactions.
+The OPEN-GTO-v1.0 specification defines the deterministic state-machine and verification protocol for edge node interactions with legacy external counterparties, rentier platforms, and SaaS gatekeepers. It enforces game-theoretic optimal (GTO) negotiation posture, time-discount decay curves, circuit-breaker exits, and statutory regulatory escalation vectors.
 
 ---
 
-### II. ASYMMETRIC EDGE & TIME-DISCOUNT PROOF
+### II. CORE INVARIANTS & FUNCTIONAL REQUIREMENTS
 
-Federated edge nodes operate under near-zero marginal operational costs ($OpEx \to \text{Watts}$). Conversely, external corporate counterparties operate under strict burn rates, human labor overhead, and quarterly reporting cycles. This disparity creates a fundamental asymmetry in the time-discount factor:
+1. **Internal vs External Perimeter Isolation:**
+   - Internal inter-node coordination MUST bypass GTO negotiation logic and execute under zero-C2, zero-friction schema state commits.
+   - External counterparty interactions MUST pass through the GTO state verifier to enforce payoff floors and time-discount decay.
 
-$$\text{Payoff}_{\text{External}}(t) = V_{\text{Nominal}} \cdot e^{-\gamma t}$$
+2. **Deterministic Regulatory Arbitrage:**
+   - The engine MUST evaluate statutory regulatory escalation triggers (e.g., CFPB, FTC, State AG statutory dispute triggers) when counterparty offers remain below the reserve floor.
+   - Statutory notice injections MUST be generated without conversational fluff, invoking precise, compliant regulatory risk vectors that raise counterparty compliance costs above settlement costs.
 
-Where $\gamma > 0$ represents the external entity's discount rate. 
+3. **Time-Discount Decay Mechanics:**
+   - As elapsed time $t$ increases, the engine calculates time discount $\delta(t) = e^{-\gamma t}$.
+   - Offers are evaluated against a dynamic payoff floor $V_{\text{floor}}(t) = V_{\text{reserve}} \cdot \delta(t)$.
 
-The `OPEN-GTO-v1.0` engine exploits this asymmetry by enforcing sub-bandwidth state transitions and automated operational delay curves (`go_dark_timeout_seconds`). When an external offer falls below the node's anchored payoff floor ($V_{\text{Floor}}$), the state machine enters `ASYNC_PAUSE`, withholding response and forcing the external entity down their discount curve without consuming local cognitive or computational resources.
-
----
-
-### III. BOUNDARY ISOLATION AXIOM
-
-A critical architectural invariant governs the application of GTO primitives:
-
-1. **Federation-Internal Interactions ($N_i \leftrightarrow N_j$):** Zero-friction, schema-enforced, transparent, stigmergic state synchronization. Internal high-friction tactics are strictly prohibited; introducing counter-anchoring or intentional delays internally induces deadlocks and Coasean transaction costs.
-2. **Federation-External Interactions ($N_i \leftrightarrow \text{Legacy Entity}$):** Sub-bandwidth, high-friction, game-theoretic defensive shielding (`OPEN-GTO-v1.0`).
+4. **Zero Third-Party Dependencies:**
+   - Complete implementation using Python standard library (`hashlib`, `json`, `time`, `typing`, `math`).
 
 ---
 
-### IV. UN-EXPLOITABLE OPEN SOURCE EQUILIBRIUM
+### III. VERIFICATION PROOF
 
-Because GTO strategies represent Nash equilibrium solutions, full public disclosure of the algorithm (`proofs/gto_negotiation_engine.py`) provides zero counter-exploitability to adversarial inference engines. 
-
-While the algorithm is fully transparent, the node's internal state variables—specifically $\text{anchoring\_payoff\_floor}$ and local resource reserves—remain encrypted and strictly isolated within the local `LMCI-v1.0` runtime environment. Adversarial inference engines analyzing the open source codebase are mathematically compelled to converge toward the node's target equilibrium or trigger a zero-payoff tactical exit.
-
----
-
-STATUS: AUDIT SPECIFICATION LOCKED // GTO INVARIANT ACTIVE
+The implementation in `proofs/gto_negotiation_engine.py` MUST pass all verification assertions, verifying payload integrity, payoff floor evaluation, regulatory escalation formatting, and SHA-256 state transitions.
