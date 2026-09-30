@@ -6,7 +6,7 @@ License: Unlicense (Public Domain - Zero-Rent Federation)
 
 ABSTRACT
 
-Interplanetary expansion narratives typically treat off-planet colonization as an engineering milestone. Under hard thermodynamic invariants, unconstrained off-planet expansion prior to achieving biospheric stability represents a thermodynamic failure mode: exporting non-equilibrium instability across larger spatial scales at exponential OpEx cost. This paper establishes the physicalist framework of "Internal Terraforming" - the rigorous engineering of local planetary homeostasis bounded by Landauer limits, Landauer heat dissipation, and Ashby's Law of Requisite Variety. We demonstrate that establishing closed-loop steady-state homeostasis on Earth is the strict mathematical precondition for any durable civilizational compute substrate.
+Interplanetary expansion narratives typically treat off-planet colonization as an engineering milestone or existential hedge. Under hard thermodynamic invariants, unconstrained off-planet expansion prior to achieving biospheric stability represents a thermodynamic failure mode: exporting non-equilibrium instability across larger spatial scales at exponential OpEx cost. This paper establishes the physicalist framework of "Internal Terraforming" - the rigorous engineering of local planetary homeostasis bounded by Landauer limits, Landauer heat dissipation, and Ashby's Law of Requisite Variety. We demonstrate that establishing closed-loop steady-state homeostasis on Earth is the strict mathematical precondition for any durable civilizational compute substrate.
 
 1. THE MECHANISTIC MISMATCH
 
@@ -29,7 +29,25 @@ The biological biosphere operates as an ultra-high-density non-equilibrium stead
 
 Internal terraforming re-orients technical capital toward local biospheric integration. By driving localized entropy deltas to zero or negative (Delta S <= 0), closed-loop biological and industrial systems minimize waste heat generation and operate near the theoretical Landauer bound (E_min = k_B * T * ln(2)).
 
-3. OPERATIONAL VERIFICATION GATE
+3. EXISTENTIAL RISK ASYMMETRY AND ASTEROID DEFLECTION
+
+A common counterargument asserts that extra-planetary colonization provides a necessary hedge against planetary extinction events, such as Near-Earth Object impacts or cosmic radiation bursts. Under physicalist dynamics, this argument fails across three bounds:
+
+1. Kinetic Deflection Efficiency: Detecting and kinetically deflecting a Near-Earth Object requires several orders of magnitude less energy (CapEx/OpEx) than establishing and continuously maintaining an un-shielded off-planet life support infrastructure.
+
+2. Systemic Fragility: An extra-planetary colony dependent on low-variety artificial life support is orders of magnitude more fragile to internal technical failures or minor environmental perturbations than Earth is to catastrophic cosmic events.
+
+3. Radiation Parity: Major galactic hazards capable of stripping Earth's magnetosphere or atmosphere similarly destroy un-shielded extra-planetary habitats lacking Earth's planetary mass and natural magnetic shielding.
+
+4. REFUTATION OF RESOURCE EXTRACTION AND TECH SPILLOVER TROPES
+
+Advocates frequently cite off-planet resource mining and technological spillover as secondary justifications. Both claims are thermodynamically invalid:
+
+1. Thermodynamic Net Energy Returns: Off-planet material extraction and transportation incurs massive transport delta-v costs. Recirculating terrestrial materials at the Landauer bound yields vastly superior net energy and material efficiency compared to extra-planetary mining.
+
+2. Sub-Optimal R&D Allocation: Developing life-support technologies inside an extreme vacuum to apply them back to Earth violates Ashby's Law of Requisite Variety. Engineering local biospheric homeostasis directly requires orders of magnitude less wasted energy and compute than indirect extra-planetary R&D loops.
+
+5. OPERATIONAL VERIFICATION GATE
 
 Under OPSTACK-KERNEL-v2.1 (Invariant 7: Cognitive Containment and Escalation Hierarchy), external egress or expansion is locked until local resource loops are stabilized.
 
@@ -40,6 +58,6 @@ Where PlanetaryHomeostasisAchieved requires:
 2. Entropy Delta Bound: Delta S(Biosphere) <= 0
 3. Closed-Loop Carbon/Nutrient Cycles: Stability Index = 1.0
 
-4. CONCLUSION AND CALL TO EXECUTION
+6. CONCLUSION AND CALL TO EXECUTION
 
 Capital and compute dedicated to speculative extra-planetary colonization yield zero immediate return on biospheric resilience. Engineering priority must shift toward local physical-system integration: optimizing edge energy scheduling, enforcing closed-loop material cycles, and maintaining Landauer-bounded local compute state spaces. Internal terraforming is the sole thermodynamically sound path to civilizational longevity.

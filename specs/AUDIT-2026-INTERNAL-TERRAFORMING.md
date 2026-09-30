@@ -33,7 +33,22 @@ Popular extra-planetary expansion narratives treat space colonization as an engi
 
 ---
 
-### III. HARD STATE ENGINE EXPANSION GATE
+### III. COUNTERARGUMENT REFUTATION & BOUNDED CONSTRAINTS
+
+1. **Existential Risk & Orbital Deflection Asymmetry:**
+   $$\text{OpEx}_{\text{OrbitalDeflection}} \ll \text{OpEx}_{\text{ExtraPlanetaryHabitation}}$$
+   Detection and kinetic deflection of Near-Earth Objects requires orders of magnitude lower energy scaling than sustaining off-planet closed loops. Brittle extra-planetary colonies exhibit far higher state-transition failure probability under minor perturbations than terrestrial systems under extreme planetary hazards.
+
+2. **Resource Mining Net Energy Bound:**
+   $$\text{NetEnergy}_{\text{ClosedLoopRecycling}} \gg \text{NetEnergy}_{\text{OffPlanetExtraction}}$$
+   Off-planet material extraction delta-v overhead yields negative net-energy returns compared to Landauer-bounded closed-loop terrestrial material recycling.
+
+3. **Technological R&D Efficiency (Ashby Bound):**
+   Developing terrestrial life-support systems indirectly via extra-planetary environments introduces severe control-variety deficits ($\mathcal{V}_{\text{Vacuum}} \ll \mathcal{V}_{\text{Biosphere}}$), wasting compute and power compared to direct local biospheric integration.
+
+---
+
+### IV. HARD STATE ENGINE EXPANSION GATE
 
 Under `OPSTACK-KERNEL-v2.1` Invariant 7 (Cognitive Containment & Escalation Hierarchy), system expansion and off-planet signal/matter egress are strictly locked by a Boolean execution state:
 
