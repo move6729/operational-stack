@@ -28,6 +28,12 @@ The OPEN-GTO-v1.0 specification defines the deterministic state-machine and veri
 4. **Zero Third-Party Dependencies:**
    - Complete implementation using Python standard library (`hashlib`, `json`, `time`, `typing`, `math`).
 
+5. **Cybernetic Tri-Fold Agency Functions:**
+   - The GTO shield MUST algorithmically subsume the three classic representative agent functions (Lax & Sebenius framework):
+     - **Buffer:** Absorb temporal friction and eliminate real-time urgency exploitation via deliberate sub-bandwidth state-machine pauses.
+     - **Lightning Rod:** Intercept and neutralize external psychological posturing, hostile tactics, and coercive anchor shifts without relaying friction to the principal node.
+     - **Heat Shield:** Absorb institutional friction and retain complete structural rigidity on reserve floors, insulating the edge principal from counterparty social leverage or emotional manipulation.
+
 ---
 
 ### III. VERIFICATION PROOF

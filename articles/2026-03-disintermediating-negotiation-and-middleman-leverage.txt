@@ -11,13 +11,13 @@ The response was not political petitioning; it was structural protocol synthesis
 
 Today's sovereign edge nodes face an identical dynamic. Individual developers, tenants, medical patients, and micro-manufacturers operate inside feudal digital fiefdoms—extracted upon by SaaS gatekeepers, cloud monopolies, legal tollbooths, and corporate brokers. The Operational Stack functions as the Digital Hanseatic League: a federated substrate where autonomous nodes coordinate internally via zero-friction schema synchronization while deploying automated, game-theoretic defensive shields against external legacy counterparties.
 
-2. INTERNAL STIGMERGY VS. EXTERNAL FRICTION
+2. INTERNAL STIGMERGY VS. EXTERNAL FRICTION AND THE TRI-FOLD AGENCY SHIELD
 
-A fatal error in multi-agent system design is the uniform application of negotiation friction. Applying game-theoretic posturing, delays, or strategic bluffing inside a cooperative network creates self-destructive transaction costs, agent deadlocks, and Coasean collapse.
+A fatal error in multi-agent system design is the uniform application of negotiation friction. Applying game-theoretic posturing, delays, or strategic bluffing inside a cooperative network creates self-destructive transaction costs, agent deadlocks, and Coasean collapse. Within the federation, internal interactions operate under strict zero-C2 stigmergic coordination. State changes occur via deterministic JSON-Schema validation where computation maps directly to watts.
 
-Within the federation, internal interactions operate under strict zero-C2 stigmergic coordination. State changes occur via deterministic JSON-Schema validation where computation maps directly to watts.
+Conversely, when a node interacts across the perimeter with a legacy corporate entity, the OPEN-GTO-v1.0 engine initializes. Historically, principals hired intermediary agents—such as investment bankers, brokers, or legal counsel—to execute negotiations. In classic negotiation analysis (e.g., Lax & Sebenius), representative agents serve three distinct structural functions: acting as a Buffer to absorb time urgency, a Lightning Rod to draw away hostility and emotional attacks, and a Heat Shield to enforce unyielding positions without destroying underlying principal relationships.
 
-Conversely, when a node interacts across the perimeter with a legacy corporate entity, the OPEN-GTO-v1.0 engine initializes. External negotiations are fundamentally asymmetric: corporate counterparties rely on real-time urgency, behavioral profiling, and psychological fatigue to force bad trades. The GTO shield de-anthropomorphizes the negotiation interface, reducing counterparty leverage to zero.
+However, human representative agents introduce significant principal-agent friction, high rent extraction, and systemic agency hazards. The OPEN-GTO-v1.0 engine subsumes these three functions algorithmically at zero marginal cost. As a Buffer, the de-anthropomorphized state-machine imposes mandatory sub-bandwidth temporal pauses that completely collapse artificial counterparty deadlines. As a Lightning Rod, the engine ingests hostile rhetoric, automated rejection codes, and behavioral profiling tactics, absorbing the noise without transmitting emotional fatigue to the operator. As a Heat Shield, the software strictly enforces dynamic game-theoretic reserve floors ($V_{\text{floor}}$), shielding the sovereign principal from psychological coercion.
 
 3. ASYMMETRIC REGULATORY ARBITRAGE AND STATUTORY ESCALATION
 
