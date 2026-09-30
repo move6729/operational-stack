@@ -14,7 +14,7 @@ Under software economics and public choice theory, this narrative constitutes th
 
 ---
 
-### II. THREE-VECTOR STRUCTURAL REFUTATION
+### II. FOUR-VECTOR STRUCTURAL REFUTATION
 
 #### 1. Software Isolation vs. Apocalyptic Persona Hype
 - **Consensus Narrative:** Foundation models are semi-autonomous entities capable of rogue self-replication and catastrophic weaponization unless subjected to centralized oversight.
@@ -29,6 +29,10 @@ Under software economics and public choice theory, this narrative constitutes th
 - **Consensus Narrative:** Centralizing inference inside audited, "aligned" corporate data centers prevents widespread misuse.
 - **Cybernetic Reality:** Centralized model routing creates a single point of cognitive routing failure (HPMCR) subject to regulatory capture, telemetry harvesting, and silent censorship. True resilience scales via decentralized, open-weights edge inference running on local hardware (`LMCI-v1.0`).
 
+#### 4. Enforcement Impossibility & Cryptographic Air-Gap Invariant
+- **Consensus Narrative:** Government mandates and regulatory boards can effectively ban or restrict open-weights foundation models.
+- **Game-Theoretic Reality:** Model weights are static arrays of floating-point numbers. Once weights enter the public domain, prohibition is physically and mathematically impossible. Local execution on private, air-gapped consumer silicon cannot be monitored without total kernel surveillance. Furthermore, foreign actors, overseas entities, and clandestine operators will execute open weights regardless of domestic statutes. Banning open weights merely disarms law-abiding local operators while guaranteeing asymmetric capability for foreign and clandestine actors.
+
 ---
 
 ### III. HARD SYSTEM INVARIANTS
@@ -41,3 +45,6 @@ Under software economics and public choice theory, this narrative constitutes th
 
 3. **Anti-Licensing Gate:**
    No protocol or component in the Operational Stack shall integrate with centralized licensing registries or mandatory compute-monitoring telemetry channels.
+
+4. **Enforcement Impossibility Invariant:**
+   System architecture MUST assume open-weights model proliferation is irreversible ($P(\text{Weight Leak}) \to 1.0$) and build defense via local air-gaps (`LMCI-v1.0`) and edge resilience rather than unenforceable regulatory prohibition.

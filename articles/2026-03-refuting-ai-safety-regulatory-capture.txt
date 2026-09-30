@@ -33,6 +33,16 @@ Proposals requiring registration for large-scale compute or mandatory safety lic
 
 3. Silicon Enclosure: Outlawing offline local inference converts general-purpose compute hardware into locked digital thin-clients, revoking user ownership over physical silicon.
 
-4. CONCLUSION AND SYSTEM INVARIANT
+4. THE ENFORCEMENT IMPOSSIBILITY AND GAME-THEORETIC LEAKAGE
+
+Demands to outlaw or restrict open-weights models ignore basic computational physics and game-theoretic reality:
+
+1. The Air-Gapped Compute Invariant: Model weights are static arrays of floating-point numbers serialized to storage. Once weights are published, local execution on air-gapped consumer silicon occurs entirely offline without network transport or telemetry egress. Enforcing a prohibition on air-gapped local execution requires total, un-sandboxed kernel surveillance on every physical device - an impossible engineering and legal threshold.
+
+2. Asymmetric Proliferation and Jurisdictional Arbitrage: Clandestine operators, foreign adversaries, and overseas entities will execute open weights regardless of domestic statutory bans. Outlawing open weights domestically creates an asymmetric vulnerability: it disarms law-abiding edge operators, civil society, and domestic researchers while ensuring foreign actors retain un-monitored, open-weights intelligence tools.
+
+3. Irreversibility of Open Weights: In information theory, once a dataset or weight file leaks into public P2P torrent networks, distribution is irreversible. Regulatory attempts to "recall" or ban open weights are mathematically futile. Security must be built at the endpoint boundary via local sandboxing, not through unenforceable prohibitions on mathematical parameters.
+
+5. CONCLUSION AND SYSTEM INVARIANT
 
 "AI Safety" regulatory capture is an economic defense mechanism engineered by tech monopolies to preserve rent extraction against open protocols. System priority must remain strictly locked to bare-metal sovereignty: defending open-weights execution, enforcing strict local air-gapping, and eliminating central API tollbooths through sovereign edge hardware.
