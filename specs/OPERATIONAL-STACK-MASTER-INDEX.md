@@ -30,6 +30,7 @@
 - `specs/AUDIT-2026-HEALTHCARE-BILLING-DISINTERMEDIATION.md` - Sovereign Health & Medical Billing Defense Audit Specification (`OPEN-HEALTH-LEGAL-v1.0`).
 - `specs/AUDIT-2026-HPMCR-DEFENSE-SPEC.md` - Attenual Shield & Micro-Telemetry Fuzzing Specification (`HPMCR-DEF v1.0`).
 - `specs/HUMAN-DEF-OPERATOR-HEURISTICS.md` - Human-in-the-Loop Operator Defensive Heuristics & Escrow Specification.
+- `specs/AUDIT-2026-HUMANOID-ROBOTICS-REFUTATION.md` - Humanoid Robotics & Anthropomorphic Hardware Deconstruction Audit (`HUMANOID-ROBOTICS-REFUTATION-v1.0`).
 - `specs/AUDIT-2026-IAM-DISINTERMEDIATION.md` - Identity & Access Management Disintermediation Specification (`OPEN-IAM-v1.0`).
 - `specs/AUDIT-2026-INTERNAL-TERRAFORMING.md` - Internal Terraforming & Planetary Homeostasis Specification (`INTERNAL-TERRAFORMING-v1.0`).
 - `specs/AUDIT-2026-ITSM-DISINTERMEDIATION.md` - IT Service Management Disintermediation Specification (`OPEN-ITSM-v1.0`).
@@ -139,6 +140,7 @@
 - `articles/2026-03-great-hardware-inversion.txt` - Essay on The Great Hardware Inversion.
 - `articles/2026-03-internal-terraforming-thermodynamic-priority.txt` - Essay on Internal Terraforming and Landauer-Bounded Planetary Homeostasis.
 - `articles/2026-03-refuting-extraplanetary-escapism.txt` - Essay on Refuting Extra-Planetary Escapism and Rentier Capital Tropes.
+- `articles/2026-03-refuting-humanoid-robotics.txt` - Essay on Refuting Humanoid Robotics and Anthropomorphic Hardware Tropes.
 - `articles/2026-03-the-biological-fiefdom.txt` - Essay on the biological fiefdom.
 - `articles/2026-03-the-communications-engine-of-ai-safety.txt` - Essay on the communications engine of AI safety.
 - `articles/2026-03-the-great-disintermediation-manifesto.txt` - Essay on the great disintermediation manifesto.

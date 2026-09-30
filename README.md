@@ -29,6 +29,7 @@ move6729 / operational-stack:
 │   ├── 2026-03-great-hardware-inversion.txt [The Great Hardware Inversion]
 │   ├── 2026-03-internal-terraforming-thermodynamic-priority.txt [Internal Terraforming Essay]
 │   ├── 2026-03-refuting-extraplanetary-escapism.txt [Refuting Extra-Planetary Escapism Essay]
+│   ├── 2026-03-refuting-humanoid-robotics.txt [Refuting Humanoid Robotics Essay]
 │   ├── 2026-03-the-biological-fiefdom.txt
 │   ├── 2026-03-the-communications-engine-of-ai-safety.txt
 │   ├── 2026-03-the-great-disintermediation-manifesto.txt
@@ -129,6 +130,7 @@ move6729 / operational-stack:
     ├── AUDIT-2026-HEADCOUNT-DELIVERABILITY-MOAT.md
     ├── AUDIT-2026-HEALTHCARE-BILLING-DISINTERMEDIATION.md
     ├── AUDIT-2026-HPMCR-DEFENSE-SPEC.md
+    ├── AUDIT-2026-HUMANOID-ROBOTICS-REFUTATION.md [Humanoid Robotics Refutation Spec]
     ├── AUDIT-2026-IAM-DISINTERMEDIATION.md
     ├── AUDIT-2026-INTERNAL-TERRAFORMING.md [Internal Terraforming & Planetary Homeostasis Spec]
     ├── AUDIT-2026-ITSM-DISINTERMEDIATION.md
