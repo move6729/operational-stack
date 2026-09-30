@@ -36,6 +36,13 @@ move6729 / operational-stack:
 │   ├── the-human-swarm.txt         [Stigmergic Zero-C2 Coordination & Hardware Demand]
 │   └── universal-basic-compute.txt [Sovereign Edge Yield & Thermodynamic Economics]
 │
+├── docs/                           [System Architecture Documents & State Schemas]
+│   └── spec/
+│       └── internal-terraforming-v1.json [Internal Terraforming & Planetary Homeostasis State Spec]
+│
+├── posts/                          [Substack Publications & Essays]
+│   └── internal-terraforming-thermodynamic-priority.md [Internal Terraforming Essay]
+│
 ├── schema/                         [Core & Disintermediation JSON Schemas (Draft 2020-12)]
 │   ├── aatp_telemetry.json         [Sovereign Agricultural Telemetry Graph (AATP-v1.0)]
 │   ├── ashby_object.json           [Federated Model-Agnostic Object Graph (ASHBY-v1.0)]

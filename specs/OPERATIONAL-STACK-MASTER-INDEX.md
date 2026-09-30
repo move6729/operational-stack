@@ -58,7 +58,8 @@
 - `specs/the-persona-hazard.md` - Anthropomorphic Persona Hazard & De-Anthropomorphization Audit.
 - `specs/OPERATIONAL-STACK-MASTER-INDEX.md` - Active tree synchronization map.
 
-## SCHEMAS (`schema/`)
+## SCHEMAS (`schema/` and `docs/spec/`)
+- `docs/spec/internal-terraforming-v1.json` - Internal Terraforming & Planetary Homeostasis State Schema.
 - `schema/aatp_telemetry.json` - Sovereign Agricultural Telemetry Graph (`AATP-v1.0`).
 - `schema/ashby_object.json` - Federated Model-Agnostic Object Graph (`ASHBY-v1.0`).
 - `schema/crm_pipeline.json` - Sovereign CRM Pipeline Graph (`OPEN-CRM-v1.0`).
@@ -124,7 +125,7 @@
 - `proofs/ubc_engine.py` - Universal Basic Compute Engine (`UBC-v1.0`).
 - `proofs/weight_isolation.py` - Local Inference Context Isolation Engine (`LMCI-v1.0`).
 
-## ARTICLES & ESSAYS (`articles/`)
+## ARTICLES & PUBLICATIONS (`articles/` and `posts/`)
 - `articles/2026-03-constructive-discrimination-and-the-open-attractor.txt` - Essay on constructive discrimination and the open attractor.
 - `articles/2026-03-disintermediating-edtech.txt` - Essay on disintermediating edtech.
 - `articles/2026-03-disintermediating-iam.txt` - Essay on disintermediating IAM.
@@ -142,6 +143,7 @@
 - `articles/the-human-swarm.txt` - Essay on zero-C2 stigmergic coordination and edge hardware ownership demand.
 - `articles/universal-basic-compute.txt` - Essay on Universal Basic Compute and thermodynamic edge yield.
 - `articles/substack.json` - Substack publishing export configuration and metadata index.
+- `posts/internal-terraforming-thermodynamic-priority.md` - Substack essay on Internal Terraforming and Landauer-Bounded Planetary Homeostasis.
 
 ## ROOT AUXILIARY FILES
 - `CONVENTIONS.md` - System Constraints & Architectural Writing Guidelines.
