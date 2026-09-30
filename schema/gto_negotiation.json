@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://operational-stack.org/schema/gto_negotiation.json",
+  "title": "GTONegotiationState",
+  "type": "object",
+  "properties": {
+    "session_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "counterparty_type": {
+      "type": "string",
+      "enum": [
+        "EXTERNAL_SAAS",
+        "CORPORATE_BUYER",
+        "LANDLORD",
+        "INTERMEDIARY"
+      ]
+    },
+    "tactical_primitives": {
+      "type": "object",
+      "properties": {
+        "go_dark_timeout_seconds": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "tactical_exit_threshold": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 1.0
+        },
+        "anchoring_payoff_floor": {
+          "type": "number",
+          "minimum": 0.0
+        },
+        "step_delay_multiplier": {
+          "type": "number",
+          "minimum": 1.0
+        }
+      },
+      "required": [
+        "go_dark_timeout_seconds",
+        "tactical_exit_threshold",
+        "anchoring_payoff_floor",
+        "step_delay_multiplier"
+      ],
+      "additionalProperties": false
+    },
+    "asymmetric_leverage_invariant": {
+      "type": "boolean",
+      "const": true
+    },
+    "state_machine_status": {
+      "type": "string",
+      "enum": [
+        "INITIATED",
+        "ASYNC_PAUSE",
+        "TACTICAL_EXIT",
+        "EQUILIBRIUM_SETTLED"
+      ]
+    },
+    "payoff_matrix_hash": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{64}$"
+    }
+  },
+  "required": [
+    "session_id",
+    "counterparty_type",
+    "tactical_primitives",
+    "asymmetric_leverage_invariant",
+    "state_machine_status",
+    "payoff_matrix_hash"
+  ],
+  "additionalProperties": false
+}

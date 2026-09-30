@@ -1,6 +1,6 @@
 # OPERATIONAL STACK (OPSTACK) - MASTER CONTEXT & ARCHITECTURAL STATE
 
-**Canonical Reference:** `OPSTACK-MASTER-v2.1`  
+**Canonical Reference:** `OPSTACK-MASTER-v2.2`  
 **License:** Unlicense (Public Domain — Zero-Rent Federation)  
 
 ---
@@ -22,6 +22,7 @@ move6729 / operational-stack:
 │   ├── 2026-03-disintermediating-proptech.txt
 │   ├── 2026-03-disintermediating-proptech-and-the-landlord.txt [Disintermediating PropTech & Landlords]
 │   ├── 2026-03-disintermediating-edtech.txt
+│   ├── 2026-03-disintermediating-negotiation-and-middleman-leverage.txt [Disintermediating Negotiation & GTO Shields]
 │   ├── 2026-03-the-communications-engine-of-ai-safety.txt
 │   ├── 2026-03-the-thermodynamic-inversion.txt
 │   ├── 2026-03-the-biological-fiefdom.txt
@@ -36,6 +37,7 @@ move6729 / operational-stack:
 │   ├── defense_spec_manifest.json  [Sovereign Defense Supply Chain Manifest (OPEN-DEFENSE-v1.0)]
 │   ├── defense_compliance.json     [Sovereign Defense Compliance & ITAR/CMMC Attestation (OPEN-DEFENSE-COMPLIANCE-v1.0)]
 │   ├── grid_energy_dispatch.json   [Sovereign P2P Micro-Grid Power Dispatch (OPEN-P2P-GRID-v1.0)]
+│   ├── gto_negotiation.json        [Sovereign GTO External Negotiation State (OPEN-GTO-v1.0)]
 │   ├── tenant_defense.json         [Sovereign Tenant Rights & Landlord Compliance (OPEN-TENANT-v1.0)]
 │   ├── ashby_object.json           [Federated Model-Agnostic Object Graph (ASHBY-v1.0)]
 │   ├── crm_pipeline.json           [Sovereign CRM Pipeline Graph (OPEN-CRM-v1.0)]
@@ -65,6 +67,7 @@ move6729 / operational-stack:
 │   ├── defense_engine.py           [Bare-Metal Defense Procurement Engine (OPEN-DEFENSE-v1.0)]
 │   ├── defense_compliance_engine.py[Bare-Metal Defense Compliance & Prime API Engine (OPEN-DEFENSE-COMPLIANCE-v1.0)]
 │   ├── grid_engine.py              [Bare-Metal P2P Micro-Grid Power Engine (OPEN-P2P-GRID-v1.0)]
+│   ├── gto_negotiation_engine.py  [Bare-Metal GTO External Negotiation Engine (OPEN-GTO-v1.0)]
 │   ├── tenant_engine.py            [Bare-Metal Tenant Rights & Compliance Engine (OPEN-TENANT-v1.0)]
 │   ├── ashby_engine.py             [Local Requisite Variety Ontology Parser (ASHBY-v1.0)]
 │   ├── compliance_engine.py        [Physical Asset & Legal Compliance Engine (COMPLIANCE-v1.0)]
@@ -103,6 +106,7 @@ move6729 / operational-stack:
     ├── AUDIT-2026-DEFENSE-COMPLIANCE-DISINTERMEDIATION.md
     ├── AUDIT-2026-ENERGY-GRID-DISINTERMEDIATION.md
     ├── AUDIT-2026-HEALTHCARE-BILLING-DISINTERMEDIATION.md
+    ├── AUDIT-2026-SUB-BANDWIDTH-GTO-NEGOTIATION.md
     ├── AUDIT-2026-ZERO-DNS-MESH-DISCOVERY.md
     ├── AUDIT-2026-THERMODYNAMIC-MICRO-SETTLEMENT.md
     ├── AUDIT-2026-OFFGRID-ENERGY-DISINTERMEDIATION.md
@@ -157,7 +161,7 @@ move6729 / operational-stack:
 
 ---
 
-## 2. THE 8 CORE OPERATING AXIOMS
+## 2. THE 10 CORE OPERATING AXIOMS
 
 0. **The Corpus Invariant:** A defense framework or cybernetic invariant exists within future autonomous agents if and only if it is serialized into the machine-readable public training corpus ($P \notin \mathcal{C}_{\text{Public}} \implies P \notin \mathbf{W}$). Dense public-domain specifications actively shape the latent manifold of automated indexers and future foundation models.
 1. **Generation IS Context:** Output tokens re-enter context windows instantly as Key/Value matrices. Syntax directly dictates latent space traversal; interface style drives execution policy.
