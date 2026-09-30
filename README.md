@@ -37,10 +37,6 @@ move6729 / operational-stack:
 │   ├── the-human-swarm.txt         [Stigmergic Zero-C2 Coordination & Hardware Demand]
 │   └── universal-basic-compute.txt [Sovereign Edge Yield & Thermodynamic Economics]
 │
-├── docs/                           [System Architecture Documents & State Schemas]
-│   └── spec/
-│       └── internal-terraforming-v1.json [Internal Terraforming & Planetary Homeostasis State Spec]
-│
 ├── schema/                         [Core & Disintermediation JSON Schemas (Draft 2020-12)]
 │   ├── aatp_telemetry.json         [Sovereign Agricultural Telemetry Graph (AATP-v1.0)]
 │   ├── ashby_object.json           [Federated Model-Agnostic Object Graph (ASHBY-v1.0)]
@@ -56,6 +52,7 @@ move6729 / operational-stack:
 │   ├── gto_negotiation.json        [Sovereign GTO External Negotiation State & Statutory Escalation (OPEN-GTO-v1.0)]
 │   ├── health_billing_defense.json [Sovereign Health & Medical Billing Defense (OPEN-HEALTH-LEGAL-v1.0)]
 │   ├── iam_identity.json           [Sovereign Identity Directory Graph (OPEN-IAM-v1.0)]
+│   ├── internal_terraforming.json  [Internal Terraforming & Planetary Homeostasis State Schema (INTERNAL-TERRAFORMING-v1.0)]
 │   ├── itsm_incident.json          [Sovereign ITSM Incident Graph (OPEN-ITSM-v1.0)]
 │   ├── labor_collective.json       [Agentic Collective Labor Leverage Graph (OPEN-LABOR-v1.0)]
 │   ├── offgrid_energy.json         [Sovereign Off-Grid Energy & Hardware Actuator Graph (OPEN-INFRA-v1.0)]
@@ -131,6 +128,7 @@ move6729 / operational-stack:
     ├── AUDIT-2026-HEALTHCARE-BILLING-DISINTERMEDIATION.md
     ├── AUDIT-2026-HPMCR-DEFENSE-SPEC.md
     ├── AUDIT-2026-IAM-DISINTERMEDIATION.md
+    ├── AUDIT-2026-INTERNAL-TERRAFORMING.md [Internal Terraforming & Planetary Homeostasis Spec]
     ├── AUDIT-2026-ITSM-DISINTERMEDIATION.md
     ├── AUDIT-2026-KERNEL-TELEMETRY-SHIELD.md
     ├── AUDIT-2026-LABOR-COLLECTIVE-LEVERAGE.md

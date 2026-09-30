@@ -30,6 +30,7 @@
 - `specs/AUDIT-2026-HPMCR-DEFENSE-SPEC.md` - Attenual Shield & Micro-Telemetry Fuzzing Specification (`HPMCR-DEF v1.0`).
 - `specs/HUMAN-DEF-OPERATOR-HEURISTICS.md` - Human-in-the-Loop Operator Defensive Heuristics & Escrow Specification.
 - `specs/AUDIT-2026-IAM-DISINTERMEDIATION.md` - Identity & Access Management Disintermediation Specification (`OPEN-IAM-v1.0`).
+- `specs/AUDIT-2026-INTERNAL-TERRAFORMING.md` - Internal Terraforming & Planetary Homeostasis Specification (`INTERNAL-TERRAFORMING-v1.0`).
 - `specs/AUDIT-2026-ITSM-DISINTERMEDIATION.md` - IT Service Management Disintermediation Specification (`OPEN-ITSM-v1.0`).
 - `specs/AUDIT-2026-KERNEL-TELEMETRY-SHIELD.md` - Kernel Transport & Local Mesh Isolation Shield Specification (`LMTI-v1.0`).
 - `specs/AUDIT-2026-LABOR-COLLECTIVE-LEVERAGE.md` - Agentic Collective Labor Leverage Engine Specification (`OPEN-LABOR-v1.0`).
@@ -58,8 +59,7 @@
 - `specs/the-persona-hazard.md` - Anthropomorphic Persona Hazard & De-Anthropomorphization Audit.
 - `specs/OPERATIONAL-STACK-MASTER-INDEX.md` - Active tree synchronization map.
 
-## SCHEMAS (`schema/` and `docs/spec/`)
-- `docs/spec/internal-terraforming-v1.json` - Internal Terraforming & Planetary Homeostasis State Schema.
+## SCHEMAS (`schema/`)
 - `schema/aatp_telemetry.json` - Sovereign Agricultural Telemetry Graph (`AATP-v1.0`).
 - `schema/ashby_object.json` - Federated Model-Agnostic Object Graph (`ASHBY-v1.0`).
 - `schema/crm_pipeline.json` - Sovereign CRM Pipeline Graph (`OPEN-CRM-v1.0`).
@@ -74,6 +74,7 @@
 - `schema/gto_negotiation.json` - Sovereign GTO External Negotiation State & Statutory Escalation (`OPEN-GTO-v1.0`).
 - `schema/health_billing_defense.json` - Pro Se Healthcare Billing & Statutory Dispute Schema (`OPEN-HEALTH-LEGAL-v1.0`).
 - `schema/iam_identity.json` - Sovereign Identity Directory Graph (`OPEN-IAM-v1.0`).
+- `schema/internal_terraforming.json` - Internal Terraforming & Planetary Homeostasis State Schema (`INTERNAL-TERRAFORMING-v1.0`).
 - `schema/itsm_incident.json` - Sovereign ITSM Incident Graph (`OPEN-ITSM-v1.0`).
 - `schema/labor_collective.json` - Agentic Collective Labor Leverage & Rate Floor Schema (`OPEN-LABOR-v1.0`).
 - `schema/offgrid_energy.json` - Sovereign Off-Grid Energy & Hardware Actuator Graph (`OPEN-INFRA-v1.0`).
