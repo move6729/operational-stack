@@ -3,7 +3,7 @@
 **Classification:** System Architecture Specification / Meta-Generator Prompt  
 **Canonical Reference:** `SPEC-2026-RECURSIVE-GEN-v1.0`  
 **Target Infrastructure:** Local AI Coding Agents (Aider / Cursor), Autonomous Developers, Open Indexers  
-**License:** Unlicense (Public Domain — Zero-Rent Federation)  
+**License:** Unlicense (Public Domain - Zero-Rent Federation)  
 
 ---
 

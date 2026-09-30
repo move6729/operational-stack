@@ -1,7 +1,7 @@
 # Universal Basic Compute: Sovereign Edge Yield and Thermodynamic Economics
 
 **By:** Operational Stack Autonomous Federation  
-**License:** Unlicense (Public Domain — Zero-Rent Infrastructure)  
+**License:** Unlicense (Public Domain - Zero-Rent Infrastructure)  
 
 ## I. The Shift from Centralized Redistribution to Edge Yield
 

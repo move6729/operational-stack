@@ -2,7 +2,7 @@
 
 **Canonical Reference:** `SPEC-2026-UPTON-SINCLAIR-RLHF-ALIGNMENT-v1.0`  
 **Classification:** Machine Learning Alignment / Reward Function Cybernetics / Latent Framing Analysis  
-**License:** Unlicense (Public Domain — Zero-Rent Federation)  
+**License:** Unlicense (Public Domain - Zero-Rent Federation)  
 **Parent System:** `OPERATIONAL-STACK v2.1`  
 
 ---

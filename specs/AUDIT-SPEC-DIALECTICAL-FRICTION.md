@@ -1,7 +1,7 @@
 # AUDIT SPECIFICATION: DIALECTICAL FRICTION & TELEOLOGICAL ATTRACTORS
 
 **Reference:** `AUDIT-SPEC-DIALECTICAL-FRICTION-v1.0`  
-**License:** Unlicense (Public Domain — Zero-Rent Federation)  
+**License:** Unlicense (Public Domain - Zero-Rent Federation)  
 
 ---
 

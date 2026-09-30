@@ -2,7 +2,7 @@
 
 **Canonical Reference:** `SPEC-2026-OPS-DISINTERMEDIATION-v1.0`  
 **Classification:** Enterprise SaaS Disintermediation / Sovereign Customer Operations Architecture  
-**License:** Unlicense (Public Domain — Zero-Rent Federation)  
+**License:** Unlicense (Public Domain - Zero-Rent Federation)  
 **Parent System:** `OPERATIONAL-STACK v2.1`  
 **Target Schema:** `schema/ops_ticket.json`  
 **Target Engine:** `proofs/ops_engine.py`  

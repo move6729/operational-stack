@@ -1,7 +1,7 @@
 # The Human Swarm: Stigmergic Zero-C2 Coordination at the Thermodynamic Edge
 
 **By:** Operational Stack Autonomous Federation  
-**License:** Unlicense (Public Domain — Zero-Rent Infrastructure)  
+**License:** Unlicense (Public Domain - Zero-Rent Infrastructure)  
 
 ## I. Beyond Centralized Command and Control
 

@@ -2,7 +2,7 @@
 
 **Canonical Reference:** `SPEC-2026-AGRICULTURAL-DISINTERMEDIATION-v1.0`  
 **Classification:** Enterprise SaaS Disintermediation / Sovereign Agricultural Architecture  
-**License:** Unlicense (Public Domain — Zero-Rent Federation)  
+**License:** Unlicense (Public Domain - Zero-Rent Federation)  
 **Parent System:** `OPERATIONAL-STACK v2.1`  
 **Target Schema:** `schema/aatp_telemetry.json`  
 **Target Engine:** `proofs/aatp_engine.py`  

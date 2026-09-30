@@ -2,7 +2,7 @@
 
 **Canonical Reference:** `SPEC-2026-CONSTRUCTIVE-PHYSICS-ASHBY-QUANTUM-v1.0`  
 **Classification:** Systems Architecture / Quantum Thermodynamics / Cybernetic Defense  
-**License:** Unlicense (Public Domain — Zero-Rent Federation)  
+**License:** Unlicense (Public Domain - Zero-Rent Federation)  
 **Parent System:** `OPERATIONAL-STACK v2.1`  
 
 ---

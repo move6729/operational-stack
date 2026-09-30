@@ -1,4 +1,4 @@
-Bypassing the Telecom API Tollbooth: OPEN-TELCO-v1.0
+Bypassing the Telecom API Tollbooth - OPEN-TELCO-v1.0
 
 Enterprise applications spend billions paying API aggregators like Twilio and Infobip to route notifications, SMS messages, and voice calls.
 

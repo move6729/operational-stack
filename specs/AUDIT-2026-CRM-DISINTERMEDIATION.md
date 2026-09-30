@@ -2,7 +2,7 @@
 
 **Canonical Reference:** `SPEC-2026-CRM-DISINTERMEDIATION-v1.0`  
 **Classification:** Enterprise SaaS Disintermediation / Sovereign CRM Architecture  
-**License:** Unlicense (Public Domain — Zero-Rent Federation)  
+**License:** Unlicense (Public Domain - Zero-Rent Federation)  
 **Parent System:** `OPERATIONAL-STACK v2.1`  
 **Target Schema:** `schema/crm_pipeline.json`  
 **Target Engine:** `proofs/crm_engine.py`  

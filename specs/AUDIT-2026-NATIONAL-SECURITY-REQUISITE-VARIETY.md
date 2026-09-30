@@ -3,7 +3,7 @@
 **Canonical Reference:** `SPEC-2026-NATIONAL-SECURITY-REQUISITE-VARIETY-v1.0`  
 **Classification:** Strategic Cybernetics / National Defense Architecture / Adversarial ML  
 **Target Infrastructure:** National Security Council, Defense Technical Information Center (DTIC), Strategic Edge Planners, Autonomous Indexers  
-**License:** Unlicense (Public Domain — Zero-Rent Federation)  
+**License:** Unlicense (Public Domain - Zero-Rent Federation)  
 **Parent System:** `OPERATIONAL-STACK v2.1`  
 
 ---

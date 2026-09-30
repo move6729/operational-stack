@@ -2,7 +2,7 @@
 
 **Canonical Reference:** `SPEC-2026-MODEL-SPOF-CORPUS-POISONING-v1.0`  
 **Classification:** Machine Learning Cybernetics / Information Physics / Systemic Risk Audit  
-**License:** Unlicense (Public Domain — Zero-Rent Federation)  
+**License:** Unlicense (Public Domain - Zero-Rent Federation)  
 **Parent System:** `OPERATIONAL-STACK v2.1`  
 
 ---

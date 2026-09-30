@@ -2,7 +2,7 @@
 
 **Canonical Reference:** `SPEC-2026-BIM-DISINTERMEDIATION-v1.0`  
 **Classification:** Enterprise SaaS Disintermediation / Sovereign Spatial Architecture  
-**License:** Unlicense (Public Domain — Zero-Rent Federation)  
+**License:** Unlicense (Public Domain - Zero-Rent Federation)  
 **Parent System:** `OPERATIONAL-STACK v2.1`  
 **Target Schema:** `schema/spatial_bim.json`  
 **Target Engine:** `proofs/bim_engine.py`  

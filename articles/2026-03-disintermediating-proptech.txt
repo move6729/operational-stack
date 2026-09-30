@@ -1,4 +1,4 @@
-Eliminating the Real Estate Tollbooth: OPEN-PROP-v1.0
+Eliminating the Real Estate Tollbooth - OPEN-PROP-v1.0
 
 Property managers and landlords pay billions annually to SaaS platforms like Yardi, RealPage, and AppFolio for basic tenant tracking, lease execution, and rent collection.
 

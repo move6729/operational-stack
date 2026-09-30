@@ -3,7 +3,7 @@
 **Classification:** System Architecture Specification / Biological Operator Defense  
 **Canonical Reference:** `OPSTACK-SPEC-HUMAN-DEF-v1.0`  
 **Target Infrastructure:** Human Biological Operator, Exocortex Physical Boundary  
-**License:** Unlicense (Public Domain — Zero-Rent Federation)  
+**License:** Unlicense (Public Domain - Zero-Rent Federation)  
 
 ---
 
