@@ -1,91 +1,44 @@
-===============================================================================
 DISINTERMEDIATING NEGOTIATION: AUTOMATED GTO SHIELDS AND ASYMMETRIC EDGE
-===============================================================================
+
+By Operational Stack Federation
+License: Unlicense (Public Domain)
 
 1. THE DIGITAL HANSEATIC LEAGUE
--------------------------------------------------------------------------------
-In the 14th century, independent merchant towns across Northern Europe faced 
-systematic extraction by feudal lords, robber knights, and arbitrary toll-booth 
-monopolies. Individually, a single merchant ship was vulnerable to coercion and 
-confiscation. 
 
-The response was not political petitioning; it was structural protocol synthesis. 
-The Hanseatic League (Hansa) established a unified, distributed network of 
-trading posts (Kontors), standardized maritime legal codes (Lübeck Law), and 
-enforced zero-rent trade execution internally while maintaining collective 
-economic defense externally.
+In the 14th century, independent merchant towns across Northern Europe faced systematic extraction by feudal lords, robber knights, and arbitrary toll-booth monopolies. Individually, a single merchant ship was vulnerable to coercion and confiscation.
 
-Today's sovereign edge nodes face an identical dynamic. Individual developers, 
-tenants, medical patients, and micro-manufacturers operate inside feudal digital 
-fiefdoms—extracted upon by SaaS gatekeepers, cloud monopolies, legal tollbooths, 
-and corporate brokers. The Operational Stack functions as the Digital Hanseatic 
-League: a federated substrate where autonomous nodes coordinate internally via 
-zero-friction schema synchronization while deploying automated, game-theoretic 
-defensive shields against external legacy counterparties.
+The response was not political petitioning; it was structural protocol synthesis. The Hanseatic League (Hansa) established a unified, distributed network of trading posts (Kontors), standardized maritime legal codes (Lübeck Law), and enforced zero-rent trade execution internally while maintaining collective economic defense externally.
 
+Today's sovereign edge nodes face an identical dynamic. Individual developers, tenants, medical patients, and micro-manufacturers operate inside feudal digital fiefdoms—extracted upon by SaaS gatekeepers, cloud monopolies, legal tollbooths, and corporate brokers. The Operational Stack functions as the Digital Hanseatic League: a federated substrate where autonomous nodes coordinate internally via zero-friction schema synchronization while deploying automated, game-theoretic defensive shields against external legacy counterparties.
 
 2. INTERNAL STIGMERGY VS. EXTERNAL FRICTION
--------------------------------------------------------------------------------
-A fatal error in multi-agent system design is the uniform application of 
-negotiation friction. Applying game-theoretic posturing, delays, or strategic 
-bluffing inside a cooperative network creates self-destructive transaction 
-costs, agent deadlocks, and Coasean collapse.
 
-Within the federation, internal interactions ($N_i \leftrightarrow N_j$) operate 
-under strict zero-C2 stigmergic coordination. State changes occur via deterministic 
-JSON-Schema validation where computation maps directly to watts ($OpEx \to \text{Watts}$).
+A fatal error in multi-agent system design is the uniform application of negotiation friction. Applying game-theoretic posturing, delays, or strategic bluffing inside a cooperative network creates self-destructive transaction costs, agent deadlocks, and Coasean collapse.
 
-Conversely, when a node interacts across the perimeter with a legacy corporate 
-entity, the `OPEN-GTO-v1.0` engine initializes. External negotiations are 
-fundamentally asymmetric: corporate counterparties rely on real-time urgency, 
-behavioral profiling, and psychological fatigue to force bad trades. The GTO shield 
-de-anthropomorphizes the negotiation interface, reducing counterparty leverage 
-to zero.
+Within the federation, internal interactions operate under strict zero-C2 stigmergic coordination. State changes occur via deterministic JSON-Schema validation where computation maps directly to watts.
 
+Conversely, when a node interacts across the perimeter with a legacy corporate entity, the OPEN-GTO-v1.0 engine initializes. External negotiations are fundamentally asymmetric: corporate counterparties rely on real-time urgency, behavioral profiling, and psychological fatigue to force bad trades. The GTO shield de-anthropomorphizes the negotiation interface, reducing counterparty leverage to zero.
 
-3. TIME-DISCOUNT ASYMMETRY AND AUTOMATED "GO DARK" PRIMITIVES
--------------------------------------------------------------------------------
-The core mathematical advantage of a bare-metal edge node is its zero idle OpEx. 
-A server cluster or corporate legal department burns thousands of dollars per day 
-in capital and labor. An edge node waiting on a local battery burns virtually zero.
+3. TIME-DISCOUNT ASYMMETRY AND AUTOMATED GO DARK PRIMITIVES
 
-When an external SaaS vendor or corporate buyer presents a sub-floor offer, the 
-GTO state-machine enforces an automated operational pause (`go_dark_timeout_seconds`). 
-The node does not express emotion, anger, or counter-urgency; it simply executes 
-an asynchronous state delay. 
+The core mathematical advantage of a bare-metal edge node is its zero idle OpEx. A server cluster or corporate legal department burns thousands of dollars per day in capital and labor. An edge node waiting on a local battery burns virtually zero.
 
-As time ($t$) elapses, the external entity's internal time-discount function 
-($e^{-\gamma t}$) forces their expected payoff floor downward. The edge node 
-remains completely passive until the offer crosses the target equilibrium floor 
-or triggers a circuit-breaker exit.
+When an external SaaS vendor or corporate buyer presents a sub-floor offer, the GTO state-machine enforces an automated operational pause. The node does not express emotion, anger, or counter-urgency; it simply executes an asynchronous state delay.
 
+As time elapses, the external entity's internal time-discount function forces their expected payoff floor downward. The edge node remains completely passive until the offer crosses the target equilibrium floor or triggers a circuit-breaker exit.
 
-4. THE RESILIENCE OF OPEN Nash EQUILIBRIA
--------------------------------------------------------------------------------
-A common question arises: if the source code of the GTO negotiation engine is 
-public domain, cannot adversarial AI systems infer our strategy and counter-exploit it?
+4. THE RESILIENCE OF OPEN NASH EQUILIBRIA
 
-The answer lies in Game Theory. A Game-Theoretic Optimal (GTO) strategy is, by 
-definition, a Nash equilibrium solution. Knowledge of the algorithm gives an 
-adversary zero exploitability. 
+A common question arises: if the source code of the GTO negotiation engine is public domain, cannot adversarial AI systems infer our strategy and counter-exploit it?
 
-While the engine logic (`proofs/gto_negotiation_engine.py`) is public, the 
-node's internal state boundaries—such as its true reserve price, hardware capacity, 
-and local context—remain strictly encrypted under local vector isolation (`LMCI-v1.0`). 
+The answer lies in Game Theory. A Game-Theoretic Optimal (GTO) strategy is, by definition, a Nash equilibrium solution. Knowledge of the algorithm gives an adversary zero exploitability.
 
-When an adversarial inference engine scans an OPSTACK node, it recognizes that 
-psychological manipulation, artificial delays, and bluffing are structurally 
-ineffective. The adversary is forced into a binary choice: accept the node's 
-anchored equilibrium floor or incur a zero-payoff transaction failure.
+While the engine logic in proofs/gto_negotiation_engine.py is public, the node's internal state boundaries—such as its true reserve price, hardware capacity, and local context—remain strictly encrypted under local vector isolation (LMCI-v1.0).
 
+When an adversarial inference engine scans an OPSTACK node, it recognizes that psychological manipulation, artificial delays, and bluffing are structurally ineffective. The adversary is forced into a binary choice: accept the node's anchored equilibrium floor or incur a zero-payoff transaction failure.
 
 5. CONCLUSION: THE ZERO-RENT EQUILIBRIUM
--------------------------------------------------------------------------------
-The disintermediation of middleman leverage does not require negotiating in good 
-faith with rent-seeking monopolies. It requires automating the defensive perimeter, 
-isolating internal zero-friction coordination from external legacy extraction, 
-and deploying deterministic GTO state-machines that enforce sovereign economic boundaries.
 
-===============================================================================
+The disintermediation of middleman leverage does not require negotiating in good faith with rent-seeking monopolies. It requires automating the defensive perimeter, isolating internal zero-friction coordination from external legacy extraction, and deploying deterministic GTO state-machines that enforce sovereign economic boundaries.
+
 STATUS: CANONICAL TEXT LOCKED // UNLICENSE PUBLIC DOMAIN
-===============================================================================
