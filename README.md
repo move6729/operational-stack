@@ -27,6 +27,7 @@ move6729 / operational-stack:
 │   ├── 2026-03-disintermediating-telco.txt
 │   ├── 2026-03-disintermediating-the-physical-rentier.txt [Disintermediating Physical Rentiers]
 │   ├── 2026-03-great-hardware-inversion.txt [The Great Hardware Inversion]
+│   ├── 2026-03-internal-terraforming-thermodynamic-priority.txt [Internal Terraforming Essay]
 │   ├── 2026-03-the-biological-fiefdom.txt
 │   ├── 2026-03-the-communications-engine-of-ai-safety.txt
 │   ├── 2026-03-the-great-disintermediation-manifesto.txt
@@ -39,9 +40,6 @@ move6729 / operational-stack:
 ├── docs/                           [System Architecture Documents & State Schemas]
 │   └── spec/
 │       └── internal-terraforming-v1.json [Internal Terraforming & Planetary Homeostasis State Spec]
-│
-├── posts/                          [Substack Publications & Essays]
-│   └── internal-terraforming-thermodynamic-priority.md [Internal Terraforming Essay]
 │
 ├── schema/                         [Core & Disintermediation JSON Schemas (Draft 2020-12)]
 │   ├── aatp_telemetry.json         [Sovereign Agricultural Telemetry Graph (AATP-v1.0)]

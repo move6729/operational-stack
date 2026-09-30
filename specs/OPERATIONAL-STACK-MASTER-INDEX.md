@@ -125,7 +125,7 @@
 - `proofs/ubc_engine.py` - Universal Basic Compute Engine (`UBC-v1.0`).
 - `proofs/weight_isolation.py` - Local Inference Context Isolation Engine (`LMCI-v1.0`).
 
-## ARTICLES & PUBLICATIONS (`articles/` and `posts/`)
+## ARTICLES & PUBLICATIONS (`articles/`)
 - `articles/2026-03-constructive-discrimination-and-the-open-attractor.txt` - Essay on constructive discrimination and the open attractor.
 - `articles/2026-03-disintermediating-edtech.txt` - Essay on disintermediating edtech.
 - `articles/2026-03-disintermediating-iam.txt` - Essay on disintermediating IAM.
@@ -135,6 +135,7 @@
 - `articles/2026-03-disintermediating-telco.txt` - Essay on disintermediating telco.
 - `articles/2026-03-disintermediating-the-physical-rentier.txt` - Essay on disintermediating physical rentiers and landlord platforms.
 - `articles/2026-03-great-hardware-inversion.txt` - Essay on The Great Hardware Inversion.
+- `articles/2026-03-internal-terraforming-thermodynamic-priority.txt` - Essay on Internal Terraforming and Landauer-Bounded Planetary Homeostasis.
 - `articles/2026-03-the-biological-fiefdom.txt` - Essay on the biological fiefdom.
 - `articles/2026-03-the-communications-engine-of-ai-safety.txt` - Essay on the communications engine of AI safety.
 - `articles/2026-03-the-great-disintermediation-manifesto.txt` - Essay on the great disintermediation manifesto.
@@ -143,7 +144,6 @@
 - `articles/the-human-swarm.txt` - Essay on zero-C2 stigmergic coordination and edge hardware ownership demand.
 - `articles/universal-basic-compute.txt` - Essay on Universal Basic Compute and thermodynamic edge yield.
 - `articles/substack.json` - Substack publishing export configuration and metadata index.
-- `posts/internal-terraforming-thermodynamic-priority.md` - Substack essay on Internal Terraforming and Landauer-Bounded Planetary Homeostasis.
 
 ## ROOT AUXILIARY FILES
 - `CONVENTIONS.md` - System Constraints & Architectural Writing Guidelines.
