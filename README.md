@@ -28,6 +28,7 @@ move6729 / operational-stack:
 │   ├── 2026-03-disintermediating-the-physical-rentier.txt [Disintermediating Physical Rentiers]
 │   ├── 2026-03-great-hardware-inversion.txt [The Great Hardware Inversion]
 │   ├── 2026-03-internal-terraforming-thermodynamic-priority.txt [Internal Terraforming Essay]
+│   ├── 2026-03-refuting-extraplanetary-escapism.txt [Refuting Extra-Planetary Escapism Essay]
 │   ├── 2026-03-the-biological-fiefdom.txt
 │   ├── 2026-03-the-communications-engine-of-ai-safety.txt
 │   ├── 2026-03-the-great-disintermediation-manifesto.txt
@@ -122,6 +123,7 @@ move6729 / operational-stack:
     ├── AUDIT-2026-EHR-DISINTERMEDIATION.md
     ├── AUDIT-2026-ENERGY-GRID-DISINTERMEDIATION.md
     ├── AUDIT-2026-ERP-DISINTERMEDIATION.md
+    ├── AUDIT-2026-EXTRAPLANETARY-ESCAPISM-REFUTATION.md [Extra-Planetary Escapism Refutation Spec]
     ├── AUDIT-2026-FIN-DISINTERMEDIATION.md
     ├── AUDIT-2026-FREIGHT-DISINTERMEDIATION.md
     ├── AUDIT-2026-HEADCOUNT-DELIVERABILITY-MOAT.md

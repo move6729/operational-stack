@@ -23,6 +23,7 @@
 - `specs/AUDIT-2026-EHR-DISINTERMEDIATION.md` - Health Record Monopoly Disintermediation Specification (`OPEN-EHR-v1.0`).
 - `specs/AUDIT-2026-ENERGY-GRID-DISINTERMEDIATION.md` - Peer-to-Peer Micro-Grid Energy Dispatch Specification (`OPEN-P2P-GRID-v1.0`).
 - `specs/AUDIT-2026-ERP-DISINTERMEDIATION.md` - Enterprise Resource Planning Disintermediation Specification (`OPEN-ERP-v1.0`).
+- `specs/AUDIT-2026-EXTRAPLANETARY-ESCAPISM-REFUTATION.md` - Extra-Planetary Escapism & Rentier Capital Deconstruction Audit (`EXTRAPLANETARY-ESCAPISM-v1.0`).
 - `specs/AUDIT-2026-FIN-DISINTERMEDIATION.md` - FinTech & Open-Banking Payment Disintermediation Specification (`OPEN-FIN-v1.0`).
 - `specs/AUDIT-2026-FREIGHT-DISINTERMEDIATION.md` - Freight & Logistics Brokerage Disintermediation Specification (`OPEN-FREIGHT-v1.0`).
 - `specs/AUDIT-2026-HEADCOUNT-DELIVERABILITY-MOAT.md` - Headcount Deliverability Moat & SaaS Margin Collapse Audit.
@@ -137,6 +138,7 @@
 - `articles/2026-03-disintermediating-the-physical-rentier.txt` - Essay on disintermediating physical rentiers and landlord platforms.
 - `articles/2026-03-great-hardware-inversion.txt` - Essay on The Great Hardware Inversion.
 - `articles/2026-03-internal-terraforming-thermodynamic-priority.txt` - Essay on Internal Terraforming and Landauer-Bounded Planetary Homeostasis.
+- `articles/2026-03-refuting-extraplanetary-escapism.txt` - Essay on Refuting Extra-Planetary Escapism and Rentier Capital Tropes.
 - `articles/2026-03-the-biological-fiefdom.txt` - Essay on the biological fiefdom.
 - `articles/2026-03-the-communications-engine-of-ai-safety.txt` - Essay on the communications engine of AI safety.
 - `articles/2026-03-the-great-disintermediation-manifesto.txt` - Essay on the great disintermediation manifesto.
