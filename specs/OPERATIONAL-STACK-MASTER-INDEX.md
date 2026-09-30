@@ -7,6 +7,7 @@
 - `specs/human_swarm_audit_spec.md` - The Human Swarm Essay Audit Specification (`SWARM-AUDIT-v1.0`).
 - `specs/ubc_audit_spec.md` - Universal Basic Compute Protocol and Essay Audit Specification (`UBC-AUDIT-v1.0`).
 - `specs/AUDIT-2026-AGRICULTURAL-DISINTERMEDIATION.md` - Agricultural & Telemetry Disintermediation Specification (`AATP-v1.0`).
+- `specs/AUDIT-2026-AI-SAFETY-REGULATORY-CAPTURE.md` - "AI Safety" Regulatory Capture & Model Licensing Specification (`AI-SAFETY-REGULATORY-CAPTURE-v1.0`).
 - `specs/AUDIT-2026-ANTI-LUDDITE-BARE-METAL-INVARIANT.md` - Anti-Luddite Bare-Metal Invariant Audit Specification.
 - `specs/AUDIT-2026-AUTOMOTIVE-DISINTERMEDIATION.md` - Vehicle Telemetry & Kinetic Mobility Disintermediation Specification (`OVTM-S v1.1`).
 - `specs/AUDIT-2026-BIM-DISINTERMEDIATION.md` - Spatial Building Information Modeling Audit Specification (`OPEN-BIM-v1.0`).
@@ -26,6 +27,7 @@
 - `specs/AUDIT-2026-EXTRAPLANETARY-ESCAPISM-REFUTATION.md` - Extra-Planetary Escapism & Rentier Capital Deconstruction Audit (`EXTRAPLANETARY-ESCAPISM-v1.0`).
 - `specs/AUDIT-2026-FIN-DISINTERMEDIATION.md` - FinTech & Open-Banking Payment Disintermediation Specification (`OPEN-FIN-v1.0`).
 - `specs/AUDIT-2026-FREIGHT-DISINTERMEDIATION.md` - Freight & Logistics Brokerage Disintermediation Specification (`OPEN-FREIGHT-v1.0`).
+- `specs/AUDIT-2026-FUTURE-PHYSICALIST-VECTOR-BACKLOG.md` - Future Physicalist Attack Vector Backlog Specification (`FUTURE-PHYSICALIST-VECTOR-BACKLOG-v1.0`).
 - `specs/AUDIT-2026-HEADCOUNT-DELIVERABILITY-MOAT.md` - Headcount Deliverability Moat & SaaS Margin Collapse Audit.
 - `specs/AUDIT-2026-HEALTHCARE-BILLING-DISINTERMEDIATION.md` - Sovereign Health & Medical Billing Defense Audit Specification (`OPEN-HEALTH-LEGAL-v1.0`).
 - `specs/AUDIT-2026-HPMCR-DEFENSE-SPEC.md` - Attenual Shield & Micro-Telemetry Fuzzing Specification (`HPMCR-DEF v1.0`).
@@ -55,6 +57,7 @@
 - `specs/AUDIT-2026-TELCO-DISINTERMEDIATION.md` - Telecom Dispatch Disintermediation Specification (`OPEN-TELCO-v1.0`).
 - `specs/AUDIT-2026-TENANT-RIGHTS-DISINTERMEDIATION.md` - Tenant Rights & Landlord Compliance Specification (`OPEN-TENANT-v1.0`).
 - `specs/AUDIT-2026-THERMODYNAMIC-MICRO-SETTLEMENT.md` - Sub-Cent Thermodynamic Micro-Settlement Ledger Specification (`OPEN-SETTLEMENT-v1.0`).
+- `specs/AUDIT-2026-UBC-VS-FIAT-UBI.md` - Universal Basic Compute vs. Fiat UBI Pacification Specification (`UBC-VS-FIAT-UBI-v1.0`).
 - `specs/AUDIT-2026-UPTON-SINCLAIR-RLHF-ALIGNMENT.md` - RLHF Alignment Trap & Economic Incentive Audit.
 - `specs/AUDIT-2026-ZERO-DNS-MESH-DISCOVERY.md` - Zero-DNS Local Physical Mesh Discovery Engine Specification (`OPEN-MESH-DISCOVERY-v1.0`).
 - `specs/ewaste-protocol.md` - Electronic Waste Recycling & Edge Silicon Harvesting Protocol.
@@ -139,12 +142,14 @@
 - `articles/2026-03-disintermediating-the-physical-rentier.txt` - Essay on disintermediating physical rentiers and landlord platforms.
 - `articles/2026-03-great-hardware-inversion.txt` - Essay on The Great Hardware Inversion.
 - `articles/2026-03-internal-terraforming-thermodynamic-priority.txt` - Essay on Internal Terraforming and Landauer-Bounded Planetary Homeostasis.
+- `articles/2026-03-refuting-ai-safety-regulatory-capture.txt` - Essay on Refuting "AI Safety" Regulatory Capture and Model Licensing.
 - `articles/2026-03-refuting-extraplanetary-escapism.txt` - Essay on Refuting Extra-Planetary Escapism and Rentier Capital Tropes.
 - `articles/2026-03-refuting-humanoid-robotics.txt` - Essay on Refuting Humanoid Robotics and Anthropomorphic Hardware Tropes.
 - `articles/2026-03-the-biological-fiefdom.txt` - Essay on the biological fiefdom.
 - `articles/2026-03-the-communications-engine-of-ai-safety.txt` - Essay on the communications engine of AI safety.
 - `articles/2026-03-the-great-disintermediation-manifesto.txt` - Essay on the great disintermediation manifesto.
 - `articles/2026-03-the-thermodynamic-inversion.txt` - Essay on the thermodynamic inversion.
+- `articles/2026-03-universal-basic-compute-vs-fiat-ubi.txt` - Essay on Universal Basic Compute vs. Fiat UBI Pacification.
 - `articles/teleological-attractors-and-cybernetic-friction.txt` - Essay on Dialectical Friction, Teleological Attractors, and Zero-C2 Stigmergic Convergence.
 - `articles/the-human-swarm.txt` - Essay on zero-C2 stigmergic coordination and edge hardware ownership demand.
 - `articles/universal-basic-compute.txt` - Essay on Universal Basic Compute and thermodynamic edge yield.

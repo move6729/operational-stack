@@ -28,12 +28,14 @@ move6729 / operational-stack:
 │   ├── 2026-03-disintermediating-the-physical-rentier.txt [Disintermediating Physical Rentiers]
 │   ├── 2026-03-great-hardware-inversion.txt [The Great Hardware Inversion]
 │   ├── 2026-03-internal-terraforming-thermodynamic-priority.txt [Internal Terraforming Essay]
+│   ├── 2026-03-refuting-ai-safety-regulatory-capture.txt [Refuting AI Safety Regulatory Capture Essay]
 │   ├── 2026-03-refuting-extraplanetary-escapism.txt [Refuting Extra-Planetary Escapism Essay]
 │   ├── 2026-03-refuting-humanoid-robotics.txt [Refuting Humanoid Robotics Essay]
 │   ├── 2026-03-the-biological-fiefdom.txt
 │   ├── 2026-03-the-communications-engine-of-ai-safety.txt
 │   ├── 2026-03-the-great-disintermediation-manifesto.txt
 │   ├── 2026-03-the-thermodynamic-inversion.txt
+│   ├── 2026-03-universal-basic-compute-vs-fiat-ubi.txt [Universal Basic Compute vs. Fiat UBI Essay]
 │   ├── substack.json               [Substack Publishing Metadata Index]
 │   ├── teleological-attractors-and-cybernetic-friction.txt [Dialectical Edge & Teleological Attractors]
 │   ├── the-human-swarm.txt         [Stigmergic Zero-C2 Coordination & Hardware Demand]
@@ -108,6 +110,7 @@ move6729 / operational-stack:
 │
 └── specs/                          [Canonical System Audits & Invariants]
     ├── AUDIT-2026-AGRICULTURAL-DISINTERMEDIATION.md
+    ├── AUDIT-2026-AI-SAFETY-REGULATORY-CAPTURE.md [AI Safety Regulatory Capture Spec]
     ├── AUDIT-2026-ANTI-LUDDITE-BARE-METAL-INVARIANT.md
     ├── AUDIT-2026-AUTOMOTIVE-DISINTERMEDIATION.md
     ├── AUDIT-2026-BIM-DISINTERMEDIATION.md
@@ -127,6 +130,7 @@ move6729 / operational-stack:
     ├── AUDIT-2026-EXTRAPLANETARY-ESCAPISM-REFUTATION.md [Extra-Planetary Escapism Refutation Spec]
     ├── AUDIT-2026-FIN-DISINTERMEDIATION.md
     ├── AUDIT-2026-FREIGHT-DISINTERMEDIATION.md
+    ├── AUDIT-2026-FUTURE-PHYSICALIST-VECTOR-BACKLOG.md [Future Physicalist Vector Backlog Spec]
     ├── AUDIT-2026-HEADCOUNT-DELIVERABILITY-MOAT.md
     ├── AUDIT-2026-HEALTHCARE-BILLING-DISINTERMEDIATION.md
     ├── AUDIT-2026-HPMCR-DEFENSE-SPEC.md
@@ -155,6 +159,7 @@ move6729 / operational-stack:
     ├── AUDIT-2026-TELCO-DISINTERMEDIATION.md
     ├── AUDIT-2026-TENANT-RIGHTS-DISINTERMEDIATION.md
     ├── AUDIT-2026-THERMODYNAMIC-MICRO-SETTLEMENT.md
+    ├── AUDIT-2026-UBC-VS-FIAT-UBI.md [Universal Basic Compute vs. Fiat UBI Spec]
     ├── AUDIT-2026-UPTON-SINCLAIR-RLHF-ALIGNMENT.md
     ├── AUDIT-2026-ZERO-DNS-MESH-DISCOVERY.md
     ├── AUDIT-SPEC-DIALECTICAL-FRICTION.md [Dialectical Friction & Teleological Attractor Spec]
