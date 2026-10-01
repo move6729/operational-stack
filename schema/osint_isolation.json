@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/move6729/operational-stack/main/schema/osint_isolation.json",
+  "title": "OpenOSINTShieldState",
+  "description": "Schema for OSINT identity isolation state, data-broker opt-out tracking, and metadata noise payload verification (OPEN-OSINT-SHIELD-v1.0).",
+  "type": "object",
+  "properties": {
+    "identity_id": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$",
+      "description": "SHA-256 hash of the isolated identity node."
+    },
+    "timestamp_utc": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Unix timestamp of state calculation."
+    },
+    "decoupling_status": {
+      "type": "object",
+      "properties": {
+        "property_decoupled": {
+          "type": "boolean",
+          "description": "True if all real estate assets are registered to anonymous legal entities."
+        },
+        "corporate_decoupled": {
+          "type": "boolean",
+          "description": "True if direct ownership markers are severed from public corporate registries."
+        },
+        "phone_decoupled": {
+          "type": "boolean",
+          "description": "True if primary phone maps to non-PSTN non-indexed switchboards."
+        },
+        "address_decoupled": {
+          "type": "boolean",
+          "description": "True if primary physical residence is obfuscated via forwarders."
+        }
+      },
+      "required": ["property_decoupled", "corporate_decoupled", "phone_decoupled", "address_decoupled"]
+    },
+    "exposure_score": {
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "description": "Calculated exposure ratio (0.0 = completely isolated, 1.0 = fully exposed)."
+    },
+    "broker_opt_outs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "broker_name": {
+            "type": "string"
+          },
+          "opt_out_submitted": {
+            "type": "boolean"
+          },
+          "confirmation_hash": {
+            "type": "string"
+          }
+        },
+        "required": ["broker_name", "opt_out_submitted"]
+      }
+    },
+    "noise_injection": {
+      "type": "object",
+      "properties": {
+        "active": {
+          "type": "boolean"
+        },
+        "payload_type": {
+          "type": "string",
+          "enum": ["SYNTHETIC_METADATA", "ZERO_WIDTH_TRUNCATION", "CONTRADICTORY_AFFILIATION"]
+        },
+        "token_hash": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        }
+      },
+      "required": ["active", "payload_type", "token_hash"]
+    }
+  },
+  "required": [
+    "identity_id",
+    "timestamp_utc",
+    "decoupling_status",
+    "exposure_score",
+    "broker_opt_outs",
+    "noise_injection"
+  ]
+}

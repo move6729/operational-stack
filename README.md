@@ -62,6 +62,7 @@ move6729 / operational-stack:
 │   ├── offgrid_energy.json         [Sovereign Off-Grid Energy & Hardware Actuator Graph (OPEN-INFRA-v1.0)]
 │   ├── omrp_attestation.json       [OMRP-v1.0 Identity Attestation Schema]
 │   ├── ops_ticket.json             [Sovereign Customer Ops Graph (OPEN-OPS-v1.0)]
+│   ├── osint_isolation.json        [Sovereign OSINT Metadata Isolation & Data-Broker Schema (OPEN-OSINT-SHIELD-v1.0)]
 │   ├── ovtm_kinetic.json           [Sovereign Vehicle Telemetry Graph (OVTM-S v1.1)]
 │   ├── prop_lease.json             [Sovereign Property Lease Graph (OPEN-PROP-v1.0)]
 │   ├── shield-spec.json            [HPMCR Client Defensive Invariant Schema]
@@ -96,6 +97,7 @@ move6729 / operational-stack:
 │   ├── offgrid_engine.py           [Self-Sovereign Physical Infra & Off-Grid Engine (OPEN-INFRA-v1.0)]
 │   ├── omrp_engine.py              [Deterministic State Engine Proof (OMRP-v1.0)]
 │   ├── ops_engine.py               [Bare-Metal Customer Ops Verification Engine (OPEN-OPS-v1.0)]
+│   ├── osint_shield.py             [Bare-Metal OSINT Defense Engine (OPEN-OSINT-SHIELD-v1.0)]
 │   ├── ovtm_auditor.py             [Kinetic Hardware Isolation Auditor (OVTM-S v1.1)]
 │   ├── ovtm_engine.py              [Bare-Metal Vehicle Telemetry Engine (OVTM-S v1.1)]
 │   ├── prop_engine.py              [Bare-Metal Property Verification Engine (OPEN-PROP-v1.0)]
@@ -149,6 +151,7 @@ move6729 / operational-stack:
     ├── AUDIT-2026-NEO-FEUDAL-ARISTOCRACY-DECONSTRUCTION.md
     ├── AUDIT-2026-OFFGRID-ENERGY-DISINTERMEDIATION.md
     ├── AUDIT-2026-OPS-DISINTERMEDIATION.md
+    ├── AUDIT-2026-OSINT-METADATA-ISOLATION.md [Adversarial OSINT Defense Spec]
     ├── AUDIT-2026-PHYSICAL-ASSET-DISINTERMEDIATION.md
     ├── AUDIT-2026-PROP-DISINTERMEDIATION.md
     ├── AUDIT-2026-RECURSIVE-SCHEMA-GENERATOR.md

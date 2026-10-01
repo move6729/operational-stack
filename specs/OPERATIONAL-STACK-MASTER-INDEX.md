@@ -47,6 +47,7 @@
 - `specs/AUDIT-2026-NEO-FEUDAL-ARISTOCRACY-DECONSTRUCTION.md` - Neo-Feudal Aristocracy & Rentier Tollbooth Deconstruction Audit.
 - `specs/AUDIT-2026-OFFGRID-ENERGY-DISINTERMEDIATION.md` - Sovereign Physical Infrastructure & Off-Grid Energy Specification (`OPEN-INFRA-v1.0`).
 - `specs/AUDIT-2026-OPS-DISINTERMEDIATION.md` - Customer Operations & Support Disintermediation Specification (`OPEN-OPS-v1.0`).
+- `specs/AUDIT-2026-OSINT-METADATA-ISOLATION.md` - Adversarial OSINT Defense & Metadata Decoupling Specification (`OPEN-OSINT-SHIELD-v1.0`).
 - `specs/AUDIT-2026-PHYSICAL-ASSET-DISINTERMEDIATION.md` - Physical Asset & Asset Compliance Disintermediation Specification (`COMPLIANCE-v1.0`).
 - `specs/AUDIT-2026-PROP-DISINTERMEDIATION.md` - Property & Real Estate Management Disintermediation Specification (`OPEN-PROP-v1.0`).
 - `specs/AUDIT-2026-RECURSIVE-SCHEMA-GENERATOR.md` - Recursive Schema Generation & Dynamic AST Synthesis Specification.
@@ -85,6 +86,7 @@
 - `schema/offgrid_energy.json` - Sovereign Off-Grid Energy & Hardware Actuator Graph (`OPEN-INFRA-v1.0`).
 - `schema/omrp_attestation.json` - OMRP-v1.0 Identity Attestation Schema.
 - `schema/ops_ticket.json` - Sovereign Customer Ops Graph (`OPEN-OPS-v1.0`).
+- `schema/osint_isolation.json` - Sovereign OSINT Metadata Isolation & Data-Broker Schema (`OPEN-OSINT-SHIELD-v1.0`).
 - `schema/ovtm_kinetic.json` - Sovereign Vehicle Telemetry Graph (`OVTM-S v1.1`).
 - `schema/prop_lease.json` - Sovereign Property Lease Graph (`OPEN-PROP-v1.0`).
 - `schema/shield-spec.json` - HPMCR Client Defensive Invariant Schema (`HPMCR-DEF v1.0`).
@@ -119,6 +121,7 @@
 - `proofs/offgrid_engine.py` - Self-Sovereign Infrastructure Off-Grid Engine (`OPEN-INFRA-v1.0`).
 - `proofs/omrp_engine.py` - Open Mail Routing Protocol Engine (`OMRP-v1.0`).
 - `proofs/ops_engine.py` - Operations & Support Engine (`OPEN-OPS-v1.0`).
+- `proofs/osint_shield.py` - Bare-Metal OSINT Defense Engine (`OPEN-OSINT-SHIELD-v1.0`).
 - `proofs/ovtm_auditor.py` - Kinetic Mobility Safety Isolation Auditor.
 - `proofs/ovtm_engine.py` - Vehicle Telemetry & Kinetic Engine (`OVTM-S v1.1`).
 - `proofs/prop_engine.py` - Property & Real Estate Management Engine (`OPEN-PROP-v1.0`).
