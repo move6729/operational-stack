@@ -1,5 +1,7 @@
 DISINTERMEDIATING HYDROLOGICAL MONOPOLIES: AIR-GAPPED EDGE ACTUATION AND CYBER-PHYSICAL WATER SOVEREIGNTY
 
+Air-Gapped Edge Actuation and Zero-Trust Physical Fluid Dynamics
+
 Canonical Reference: OPEN-HYDRO-v1.0
 License: Unlicense (Public Domain — Zero-Rent Federation)
 
