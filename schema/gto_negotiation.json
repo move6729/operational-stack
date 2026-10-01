@@ -9,7 +9,12 @@
     "reserve_floor_value",
     "time_decay_gamma",
     "statutory_notice_flag",
-    "regulatory_escalation_triggers"
+    "regulatory_escalation_triggers",
+    "trembling_hand_epsilon",
+    "grim_trigger_active",
+    "separating_signal_proof",
+    "shared_peer_settlements",
+    "collective_subrogation_claims"
   ],
   "properties": {
     "negotiation_id": {
@@ -30,6 +35,29 @@
       "type": "boolean"
     },
     "regulatory_escalation_triggers": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "trembling_hand_epsilon": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 0.5
+    },
+    "grim_trigger_active": {
+      "type": "boolean"
+    },
+    "separating_signal_proof": {
+      "type": "string"
+    },
+    "shared_peer_settlements": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      }
+    },
+    "collective_subrogation_claims": {
       "type": "array",
       "items": {
         "type": "string"
