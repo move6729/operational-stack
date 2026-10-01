@@ -34,6 +34,10 @@
           "type": "boolean",
           "description": "True if anti-DoS rate limiting throttling was enforced during extraction"
         },
+        "zero_pii_sanitization_attested": {
+          "type": "boolean",
+          "description": "True if hard regex PII redaction, sensitive key dropping, and spatial/temporal coarsening were applied"
+        },
         "kademlia_target_assignment": {
           "type": "object",
           "properties": {
@@ -69,6 +73,7 @@
         "public_unauthenticated_boundary_verified",
         "zero_auth_bypass_verified",
         "rate_limit_governor_active",
+        "zero_pii_sanitization_attested",
         "kademlia_target_assignment",
         "proof_of_delay",
         "statutory_compliance_attested"

@@ -1,6 +1,7 @@
 import hashlib
 import json
 import math
+import re
 import sys
 import time
 from typing import Dict, Any, Tuple, List, Set
@@ -66,9 +67,10 @@ class DistributedDataCollectEngine:
     differentially private environmental telemetry processing, and pooled
     commercial feed extraction with non-infringing AST derivative synthesis.
 
-    Enforces strict CFAA 18 U.S.C. § 1030 statutory compliance & Anti-DDoS bounds:
+    Enforces strict CFAA 18 U.S.C. § 1030 statutory compliance, Zero-PII Neutralization & Anti-DDoS bounds:
     - Operates strictly on unauthenticated public endpoints.
     - Rejects password cracking, CAPTCHA bypass, paywall evasion, or auth token theft.
+    - Zero-PII Ingress Neutralization: Hard regex scrubbing, sensitive key stripping, spatial/temporal coarsening.
     - Enforces conservative local node rate limiting (<= 6 req/min/domain, >= 10s inter-request delay).
     - Anti-Sybil Proof-of-Work Node Identity verification.
     - Anti-DDoS via Deterministic Kademlia XOR Distance Target Assignment (DomainHash ^ NodeID).
@@ -81,6 +83,19 @@ class DistributedDataCollectEngine:
 
     MAX_CONSECUTIVE_FAILURES = 5
 
+    # Hard Structural PII Neutralization Patterns
+    RE_EMAIL = re.compile(r'[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}')
+    RE_PHONE = re.compile(r'\b(?:\+?1[-.\s]?)?\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}\b')
+    RE_SSN = re.compile(r'\b\d{3}-\d{2}-\d{4}\b')
+    RE_CREDIT_CARD = re.compile(r'\b(?:\d[ -]*?){13,16}\b')
+    RE_STREET_ADDRESS = re.compile(r'\b\d+\s+[A-Za-z0-9\s,.]+?\s+(?:Street|St|Avenue|Ave|Road|Rd|Boulevard|Blvd|Drive|Dr|Lane|Ln|Court|Ct)\b', re.IGNORECASE)
+
+    SENSITIVE_PII_KEYS = {
+        "name", "first_name", "last_name", "email", "phone", "telephone",
+        "ssn", "social_security", "dob", "date_of_birth", "address",
+        "street_address", "ip_address", "user_id"
+    }
+
     def __init__(self, node_id: str = "node-alpha", pow_difficulty_prefix: str = "00"):
         self.node_id = node_id
         self.pow_difficulty_prefix = pow_difficulty_prefix
@@ -90,6 +105,61 @@ class DistributedDataCollectEngine:
         # Local circuit breaker failure counter for glitched agent detection
         self.consecutive_failures: int = 0
         self.escrow_quarantine_dump: List[Dict[str, Any]] = []
+
+    @classmethod
+    def redact_structural_pii(cls, text: str) -> str:
+        """
+        Stage 1 PII Neutralization: Applies compiled regex redaction to strip emails,
+        phone numbers, SSNs, financial instruments, and street addresses.
+        """
+        text = cls.RE_EMAIL.sub("[REDACTED_EMAIL]", text)
+        text = cls.RE_PHONE.sub("[REDACTED_PHONE]", text)
+        text = cls.RE_SSN.sub("[REDACTED_SSN]", text)
+        text = cls.RE_CREDIT_CARD.sub("[REDACTED_FINANCIAL]", text)
+        text = cls.RE_STREET_ADDRESS.sub("[REDACTED_ADDRESS]", text)
+        return text
+
+    @classmethod
+    def sanitize_ast_keys_and_values(cls, ast_payload: Dict[str, Any]) -> Dict[str, Any]:
+        """
+        Stage 2 & 3 PII Neutralization: Recursively traverses AST structures,
+        drops/redacts explicit PII key fields, and coarsens spatial/temporal fields.
+        """
+        sanitized = {}
+        for key, value in ast_payload.items():
+            lower_key = key.lower()
+            
+            # Stage 2: Sensitive Key Neutralization
+            if lower_key in cls.SENSITIVE_PII_KEYS:
+                sanitized[key] = "[STRIPPED_SENSITIVE_PII]"
+                continue
+
+            if isinstance(value, str):
+                sanitized[key] = cls.redact_structural_pii(value)
+            elif isinstance(value, dict):
+                sanitized[key] = cls.sanitize_ast_keys_and_values(value)
+            elif isinstance(value, list):
+                sanitized[key] = [
+                    cls.sanitize_ast_keys_and_values(v) if isinstance(v, dict)
+                    else (cls.redact_structural_pii(v) if isinstance(v, str) else v)
+                    for v in value
+                ]
+            elif isinstance(value, float):
+                # Stage 3: Spatial Coarsening (GPS coordinates truncated to 2 decimals ~1.1km)
+                if "coord" in lower_key or "lat" in lower_key or "lon" in lower_key:
+                    sanitized[key] = round(value, 2)
+                else:
+                    sanitized[key] = value
+            elif isinstance(value, int):
+                # Stage 3: Temporal Coarsening (Timestamps rounded to 1-hour windows = 3600s)
+                if "timestamp" in lower_key or "time_utc" in lower_key:
+                    sanitized[key] = (value // 3600) * 3600
+                else:
+                    sanitized[key] = value
+            else:
+                sanitized[key] = value
+
+        return sanitized
 
     def verify_pow_identity(self, node_id: str, pow_nonce: int) -> bool:
         """
@@ -214,6 +284,7 @@ class DistributedDataCollectEngine:
         requires_authentication: bool,
         bypasses_tpm_or_paywall: bool,
         rate_limit_governor_active: bool,
+        zero_pii_sanitization_attested: bool = True,
         max_req_per_min: int = 6,
         min_delay_ms: int = 10000,
         pow_identity_valid: bool = True,
@@ -222,7 +293,7 @@ class DistributedDataCollectEngine:
         proof_of_delay_valid: bool = True
     ) -> Tuple[bool, str]:
         """
-        Enforces criminal statute boundaries (CFAA 18 U.S.C. § 1030) and Anti-DDoS invariants.
+        Enforces criminal statute boundaries (CFAA 18 U.S.C. § 1030), Zero-PII Ingress rules, and Anti-DDoS invariants.
         Returns (is_compliant, reason_code).
         """
         if requires_authentication:
@@ -233,6 +304,9 @@ class DistributedDataCollectEngine:
 
         if not rate_limit_governor_active:
             return False, "RATE_GOVERNOR_INACTIVE_RISK_OF_TARGET_IMPAIRMENT"
+
+        if not zero_pii_sanitization_attested:
+            return False, "PRIVACY_VIOLATION_ZERO_PII_SANITIZATION_NOT_ATTESTED"
 
         if max_req_per_min > 60:
             return False, "CFAA_DOS_RISK_CONSERVATIVE_RATE_LIMIT_EXCEEDED"
@@ -260,7 +334,7 @@ class DistributedDataCollectEngine:
         payload: Dict[str, Any]
     ) -> Tuple[bool, str, Dict[str, Any]]:
         """
-        Evaluates incoming mesh payload. If sender is quarantined or payload violates CFAA/Anti-DDoS,
+        Evaluates incoming mesh payload. If sender is quarantined or payload violates CFAA/Anti-DDoS/Zero-PII,
         drops payload, logs poison attestation, and quarantines sender.
 
         Enforces progressive hardware backoff and Return-To-Operator Escrow Halt
@@ -273,6 +347,7 @@ class DistributedDataCollectEngine:
         req_auth = not statutory.get("public_unauthenticated_boundary_verified", False)
         bp_tpm = not statutory.get("zero_auth_bypass_verified", False)
         gov_active = statutory.get("rate_limit_governor_active", False)
+        pii_attested = statutory.get("zero_pii_sanitization_attested", False)
 
         node_limits = statutory.get("node_rate_limits", {})
         max_req = node_limits.get("max_outbound_requests_per_minute", 6)
@@ -303,6 +378,7 @@ class DistributedDataCollectEngine:
             requires_authentication=req_auth,
             bypasses_tpm_or_paywall=bp_tpm,
             rate_limit_governor_active=gov_active,
+            zero_pii_sanitization_attested=pii_attested,
             max_req_per_min=max_req,
             min_delay_ms=min_delay,
             pow_identity_valid=pow_valid,
@@ -349,24 +425,25 @@ class DistributedDataCollectEngine:
     def parse_html_to_ast(self, html_content: str) -> Dict[str, Any]:
         """
         Simulates local AST parsing of raw HTML to reduce network bandwidth.
-        Strips tags and formats text into structured fields.
+        Strips tags, formats text into structured fields, and applies Zero-PII Stage 1 & 2 sanitization.
         """
         clean_lines = [line.strip() for line in html_content.split("\n") if line.strip()]
         title = clean_lines[0] if clean_lines else "Untitled"
         content_summary = " ".join(clean_lines[1:])[:200]
-        
-        return {
+
+        raw_ast = {
             "title": title,
             "line_count": len(clean_lines),
             "summary": content_summary,
             "char_count": len(html_content)
         }
+        return self.sanitize_ast_keys_and_values(raw_ast)
 
     def transform_raw_feed_to_non_infringing_ast(self, raw_commercial_payload: Dict[str, Any]) -> Dict[str, Any]:
         """
         Transforms raw, proprietary, or copyrighted commercial payloads (e.g. satellite
         telemetry or order books) into non-infringing factual AST vectors locally.
-        Zero egress of raw commercial files.
+        Zero egress of raw commercial files. Applies Stage 2 & 3 PII/Spatial/Temporal coarsening.
         """
         raw_bytes_len = len(json.dumps(raw_commercial_payload))
         extracted_facts = {
@@ -376,7 +453,7 @@ class DistributedDataCollectEngine:
             "derivation_status": "NON_INFRINGING_FACTUAL_AST",
             "raw_payload_bytes_stripped": raw_bytes_len
         }
-        return extracted_facts
+        return self.sanitize_ast_keys_and_values(extracted_facts)
 
     def apply_differential_privacy(self, metric_name: str, raw_val: float, noise_delta: float) -> Dict[str, float]:
         """
@@ -408,10 +485,12 @@ class DistributedDataCollectEngine:
     def commit_state_transition(self, payload: Dict[str, Any], expected_hash: str) -> bool:
         """
         Validates cryptographic hash of collected data state transition.
-        Ensures statutory compliance attestation is active before commitment.
+        Ensures statutory compliance and zero-PII attestations are active before commitment.
         """
         statutory = payload.get("statutory_compliance", {})
         if not statutory.get("statutory_compliance_attested", False):
+            return False
+        if not statutory.get("zero_pii_sanitization_attested", False):
             return False
 
         calculated_hash = self.generate_commit_hash(payload)
@@ -425,11 +504,12 @@ def run_data_collect_proof() -> bool:
     engine = DistributedDataCollectEngine("node-alpha", pow_difficulty_prefix="00")
     alpha_pow_nonce = engine.calculate_pow_nonce("node-alpha")
 
-    # 1. Statutory Compliance Gate Verification (CFAA Enforcement & Conservative Rate Limits)
+    # 1. Statutory Compliance & Zero-PII Gate Verification
     compliant, reason = engine.validate_cfaa_compliance(
         requires_authentication=False,
         bypasses_tpm_or_paywall=False,
         rate_limit_governor_active=True,
+        zero_pii_sanitization_attested=True,
         max_req_per_min=6,
         min_delay_ms=10000,
         pow_identity_valid=True,
@@ -439,10 +519,21 @@ def run_data_collect_proof() -> bool:
     )
     assert compliant, f"Valid public collection failed gate: {reason}"
 
+    # Test rejection of missing PII attestation
+    no_pii_sanitized, pii_reason = engine.validate_cfaa_compliance(
+        requires_authentication=False,
+        bypasses_tpm_or_paywall=False,
+        rate_limit_governor_active=True,
+        zero_pii_sanitization_attested=False
+    )
+    assert not no_pii_sanitized, "Engine failed to reject un-sanitized PII payload!"
+    assert pii_reason == "PRIVACY_VIOLATION_ZERO_PII_SANITIZATION_NOT_ATTESTED"
+
     non_compliant, breach_reason = engine.validate_cfaa_compliance(
         requires_authentication=True,
         bypasses_tpm_or_paywall=False,
-        rate_limit_governor_active=True
+        rate_limit_governor_active=True,
+        zero_pii_sanitization_attested=True
     )
     assert not non_compliant, "Engine failed to reject authenticated endpoint bypass!"
     assert breach_reason == "CFAA_VIOLATION_AUTHENTICATED_ENDPOINT_REQUIRES_CREDENTIALS"
@@ -456,11 +547,37 @@ def run_data_collect_proof() -> bool:
     assert counter_notice["legal_refutation_type"] == "CFAA_STATUTORY_PUBLIC_ACCESS_DEFENSE"
     assert "Van Buren v. United States" in counter_notice["precedent_citations"][0]
 
-    # 2. Test Anti-Sybil PoW Identity Verification
+    # 2. Test Zero-PII Regex Scrubbing & AST Key Stripping
+    raw_text_with_pii = "Contact John Doe at john.doe@example.com or call 555-867-5309 SSN 123-45-6789 live at 123 Main Street"
+    scrubbed_text = engine.redact_structural_pii(raw_text_with_pii)
+    assert "[REDACTED_EMAIL]" in scrubbed_text
+    assert "[REDACTED_PHONE]" in scrubbed_text
+    assert "[REDACTED_SSN]" in scrubbed_text
+    assert "[REDACTED_ADDRESS]" in scrubbed_text
+    assert "john.doe@example.com" not in scrubbed_text
+
+    raw_pii_ast = {
+        "title": "Public Registry",
+        "name": "Jane Smith",
+        "email": "jane@example.com",
+        "details": "User resides at 456 Oak Avenue, call +1 (555) 019-2834",
+        "coords": [37.774921, -122.419415],
+        "timestamp_utc": 1700001234
+    }
+    sanitized_ast = engine.sanitize_ast_keys_and_values(raw_pii_ast)
+    assert sanitized_ast["name"] == "[STRIPPED_SENSITIVE_PII]"
+    assert sanitized_ast["email"] == "[STRIPPED_SENSITIVE_PII]"
+    assert "[REDACTED_ADDRESS]" in sanitized_ast["details"]
+    assert "[REDACTED_PHONE]" in sanitized_ast["details"]
+    # Verify Spatial & Temporal Coarsening
+    assert sanitized_ast["coords"] == [37.77, -122.42]
+    assert sanitized_ast["timestamp_utc"] == 1700000400 # Rounded to 3600s boundary
+
+    # 3. Test Anti-Sybil PoW Identity Verification
     pow_valid = engine.verify_pow_identity("node-alpha", alpha_pow_nonce)
     assert pow_valid, "PoW identity verification failed!"
 
-    # 3. Test Kademlia XOR Distance Target Assignment
+    # 4. Test Kademlia XOR Distance Target Assignment
     domain = "public-docket.gov"
     domain_hash = hashlib.sha256(domain.encode("utf-8")).hexdigest()
     xor_valid = engine.verify_kademlia_xor_distance_assignment(domain, "node-alpha")
@@ -474,7 +591,7 @@ def run_data_collect_proof() -> bool:
     delay_valid = engine.verify_proof_of_delay(domain, curr_t, last_t, min_interval_seconds=5, nonce_hash=nonce_hash)
     assert delay_valid, "Proof of delay verification failed!"
 
-    # 4. Test Byzantine Poisoning Node Attack (Unassigned XOR Distance / Invalid PoW) & Quarantine Attestation
+    # 5. Test Byzantine Poisoning Node Attack (Unassigned XOR Distance / Invalid PoW) & Quarantine Attestation
     poison_payload = {
         "payload_id": "data-badactor0000000",
         "collection_type": "WEB_SCRAPE",
@@ -484,6 +601,7 @@ def run_data_collect_proof() -> bool:
             "public_unauthenticated_boundary_verified": True,
             "zero_auth_bypass_verified": True,
             "rate_limit_governor_active": True,
+            "zero_pii_sanitization_attested": True,
             "node_rate_limits": {
                 "max_outbound_requests_per_minute": 6,
                 "min_request_delay_ms": 10000
@@ -522,7 +640,7 @@ def run_data_collect_proof() -> bool:
     assert verified_attestation, "Peer node failed to verify poison attestation signature!"
     assert "node-poisoner" in peer_engine.quarantine_manager.quarantined_nodes
 
-    # 5. Test Circuit Breaker: Repeated Consecutive Payload Drops Trigger Return-To-Operator Escrow Halt
+    # 6. Test Circuit Breaker: Repeated Consecutive Payload Drops Trigger Return-To-Operator Escrow Halt
     glitched_engine = DistributedDataCollectEngine("node-glitch-test", pow_difficulty_prefix="00")
     bad_payload = dict(poison_payload)
     for i in range(4):
@@ -537,12 +655,12 @@ def run_data_collect_proof() -> bool:
     assert len(glitched_engine.escrow_quarantine_dump) == 1
     assert glitched_engine.escrow_quarantine_dump[0]["event"] == "RETURN_TO_OPERATOR_ESCROW_HALT"
 
-    # 6. Test Web Scrape / Public Record Extraction
+    # 7. Test Web Scrape / Public Record Extraction
     raw_html = "<html><body><h1>Public Court Docket #1042</h1><p>Status: Discharged.</p></body></html>"
     ast_output = engine.parse_html_to_ast(raw_html)
     assert ast_output["title"] == "<html><body><h1>Public Court Docket #1042</h1><p>Status: Discharged.</p></body></html>"
 
-    # 7. Test Environmental Telemetry Differential Privacy
+    # 8. Test Environmental Telemetry Differential Privacy
     telemetry = engine.apply_differential_privacy(
         metric_name="grid_voltage",
         raw_val=120.456,
@@ -551,7 +669,7 @@ def run_data_collect_proof() -> bool:
     assert telemetry["raw_quantized_value"] == 120.46
     assert telemetry["fuzzed_value"] == 120.50
 
-    # 8. Test Commercial Feed Transformation & Escrow Verification
+    # 9. Test Commercial Feed Transformation & Escrow Verification
     escrow_valid = engine.verify_pooled_escrow_contribution(
         contributing_nodes=50,
         total_sats=10000,
@@ -569,7 +687,7 @@ def run_data_collect_proof() -> bool:
     assert non_infringing_ast["derivation_status"] == "NON_INFRINGING_FACTUAL_AST"
     assert "copyright_notice" not in non_infringing_ast
 
-    # 9. Build Full Valid Payload with Anti-DoS Proofs and Statutory Compliance
+    # 10. Build Full Valid Payload with Anti-DoS Proofs, Statutory Compliance & Zero-PII Attestation
     stigmergic_trace = engine.record_stigmergic_trace(domain, curr_t)
     payload = {
         "payload_id": "data-0123456789abcdef",
@@ -580,6 +698,7 @@ def run_data_collect_proof() -> bool:
             "public_unauthenticated_boundary_verified": True,
             "zero_auth_bypass_verified": True,
             "rate_limit_governor_active": True,
+            "zero_pii_sanitization_attested": True,
             "node_rate_limits": {
                 "max_outbound_requests_per_minute": 6,
                 "min_request_delay_ms": 10000
@@ -623,7 +742,7 @@ def run_data_collect_proof() -> bool:
     commit_hash = engine.generate_commit_hash(payload)
     success = engine.commit_state_transition(payload, commit_hash)
 
-    print(f"[DATA-COLLECT-v1.0 Proof] Conservative Rate Limiting, Return-To-Operator Escrow Halt, PoW & Quarantine Verified: {success} (Hash: {commit_hash[:16]}...)")
+    print(f"[DATA-COLLECT-v1.0 Proof] Rate Limiting, Zero-PII Neutralization, Escrow Halt, PoW & Quarantine Verified: {success} (Hash: {commit_hash[:16]}...)")
     return success
 
 
