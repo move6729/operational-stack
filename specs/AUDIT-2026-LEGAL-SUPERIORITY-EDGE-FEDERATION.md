@@ -15,9 +15,9 @@ While centralized cloud vendors claim compliance superiority through contractual
 
 ### II. CORE STATUTORY COMPLIANCE INVARIANTS
 
-1. **C2 Botnet De-Classification & First Amendment Stigmergic Speech Invariant:**
+1. **Centralized C2 Botnet De-Classification vs. Zero-C2 Stigmergic Swarm Speech Invariant:**
    $$\text{C2\_Channels} = 0 \quad \land \quad \text{Coordination} = \text{ReadPublicSignal}(\text{AST}_{\text{Trace}}) \implies \text{LegalStatus} = \text{First Amendment Protected Speech}$$
-   *Centralized C2 orchestrators directing distributed agents trigger 18 U.S.C. § 1030 botnet controller liability. Zero-C2 edge nodes contain zero remote command channels and coordinate strictly by reading unencrypted public AST traces. Under Packingham v. North Carolina, 582 U.S. 98 (2017), publishing and reading public cryptographic signals is constitutionally protected digital speech.*
+   *Centralized C2 orchestrators directing distributed agents trigger 18 U.S.C. § 1030 botnet controller liability. True biological swarms and zero-C2 edge federations contain zero remote command channels and coordinate strictly by reading unencrypted public AST traces (stigmergy). Under Packingham v. North Carolina, 582 U.S. 98 (2017), publishing and reading public cryptographic signals is constitutionally protected digital speech.*
 
 2. **CFAA Unauthenticated Boundary & Rate-Bounding Invariant (18 U.S.C. § 1030):**
    $$\text{Compliance}_{\text{CFAA}} = 1 \iff \text{AuthRequired} = 0 \quad \land \quad \text{TPM\_Bypass} = 0 \quad \land \quad \mathcal{R}_{\text{Domain}} \le 6 \text{ req/min}$$
