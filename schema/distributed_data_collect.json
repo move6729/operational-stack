@@ -19,6 +19,34 @@
       "type": "integer",
       "minimum": 0
     },
+    "statutory_compliance": {
+      "type": "object",
+      "properties": {
+        "public_unauthenticated_boundary_verified": {
+          "type": "boolean",
+          "description": "True if payload was collected strictly from unauthenticated public endpoints without login or access control bypass (CFAA § 1030 compliance)"
+        },
+        "zero_auth_bypass_verified": {
+          "type": "boolean",
+          "description": "True if no CAPTCHA, session token, paywall, or authentication wall was bypassed"
+        },
+        "rate_limit_governor_active": {
+          "type": "boolean",
+          "description": "True if anti-DoS rate limiting throttling was enforced during extraction"
+        },
+        "statutory_compliance_attested": {
+          "type": "boolean",
+          "description": "True if collection adheres strictly to domestic and international cybercrime statutes"
+        }
+      },
+      "required": [
+        "public_unauthenticated_boundary_verified",
+        "zero_auth_bypass_verified",
+        "rate_limit_governor_active",
+        "statutory_compliance_attested"
+      ],
+      "additionalProperties": false
+    },
     "extracted_ast": {
       "type": "object",
       "description": "Structured JSON parsed locally from HTML, public document, or non-infringing commercial feed derivative"
@@ -63,6 +91,7 @@
     "collection_type",
     "target_identifier",
     "timestamp_utc",
+    "statutory_compliance",
     "node_attestation"
   ],
   "additionalProperties": false
