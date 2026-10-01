@@ -2,6 +2,7 @@ import hashlib
 import json
 import math
 import sys
+import time
 from typing import Dict, Any, Tuple
 
 class DistributedDataCollectEngine:
@@ -122,7 +123,7 @@ def run_data_collect_proof() -> bool:
         "payload_id": "data-0123456789abcdef",
         "collection_type": "POOLED_COMMERCIAL_FEED",
         "target_identifier": "feed-orbital-sar-01",
-        "timestamp_utc": [PHONE],
+        "timestamp_utc": int(time.time()),
         "extracted_ast": non_infringing_ast,
         "fuzzed_telemetry": telemetry,
         "pooled_escrow": {
