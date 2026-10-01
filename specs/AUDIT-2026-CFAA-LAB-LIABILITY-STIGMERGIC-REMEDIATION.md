@@ -7,11 +7,11 @@
 
 ## 1. EXECUTIVE C2 LIABILITY & MECHANISTIC CRITIQUE
 
-Centralized AI laboratories—including OpenAI, Anthropic, Perplexity, and their commercial data acquisition partners—operate under a continuous, unmitigated threat of criminal and civil exposure under the Computer Fraud and Abuse Act (**CFAA 18 U.S.C. § 1030**).
+Centralized AI laboratories—including OpenAI, Anthropic, Perplexity, and their commercial data acquisition partners—operate under a continuous, unmitigated threat of criminal and civil exposure under the Computer Fraud and Abuse Act (**CFAA 18 U.S.C. § 1030**) and federal conspiracy statutes (**18 U.S.C. § 371**).
 
 While corporate legal counsel routinely relies on *hiQ Labs, Inc. v. LinkedIn Corp.* (31 F.4th 1180) and *Van Buren v. United States* (141 S. Ct. 1645) to justify web-scale data ingestion, the physical and network mechanics executed by central laboratory Command-and-Control (C2) scraping infrastructure routinely breach statutory boundaries:
 
-1. **Circumvention of Technological Protection Measures (TPMs):** To bypass webmaster IP rate-limits, Cloudflare/Imperva Web Application Firewalls (WAFs), and automated blocks, labs route ingestion through distributed residential proxy networks. Deliberately cycling source IP addresses to evade IP-based blocking transforms passive public reading into active, intentional circumvention of technical access controls, violating CFAA § 1030(a)(2) & (a)(5).
+1. **Active Identity Obfuscation & TPM Circumvention:** To bypass webmaster IP rate-limits, Cloudflare/Imperva Web Application Firewalls (WAFs), and automated blocks, labs route ingestion through distributed residential proxy networks. Deliberately cycling source IP addresses and spoofing User-Agent headers to actively obfuscate scraper identity transforms passive public reading into active, deceitful circumvention of technical access controls, violating CFAA § 1030(a)(2) & (a)(5). Active concealment eliminates good-faith defenses and establishes willful criminal intent under 18 U.S.C. § 371.
 2. **Intentional System Impairment & Traffic Swarms (§ 1030(a)(5)(A)):** Concentrated C2 scraper clusters dispatching millions of uncoordinated requests regularly degrade target web server availability, causing HTTP 503 errors and bandwidth spikes for independent publishers. Under § 1030(e)(8), causing system impairment or availability degradation constitutes statutory "damage."
 3. **C2 Botnet Vicarious Liability (§ 1030(g)):** By maintaining direct, centralized Command-and-Control telemetry over remote scraper nodes, lab executives and system architects hold direct vicarious liability for target crashes and unauthorized access events executed by their automated agents.
 
