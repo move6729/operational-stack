@@ -32,6 +32,15 @@
     "statutory_compliance": {
       "type": "object",
       "properties": {
+        "cfaa_18_usc_1030_mandatory_bound": {
+          "type": "boolean",
+          "const": true,
+          "description": "Mandatory attestation that execution strictly conforms to US CFAA authorization bounds."
+        },
+        "gdpr_ccpa_privacy_framework_active": {
+          "type": "boolean",
+          "description": "True if European GDPR or US CCPA privacy protection transforms are enabled."
+        },
         "public_unauthenticated_boundary_verified": {
           "type": "boolean",
           "description": "True if endpoint operated without authentication gates per Van Buren v. US."
@@ -142,6 +151,8 @@
         }
       },
       "required": [
+        "cfaa_18_usc_1030_mandatory_bound",
+        "gdpr_ccpa_privacy_framework_active",
         "public_unauthenticated_boundary_verified",
         "ephemeral_sandbox_context_verified",
         "zero_auth_bypass_verified",

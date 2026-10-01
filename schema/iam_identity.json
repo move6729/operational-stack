@@ -15,6 +15,23 @@
     "did_identifier": {
       "type": "string"
     },
+    "jurisdiction_context": {
+      "type": "object",
+      "properties": {
+        "jurisdiction_code": {
+          "type": "string",
+          "pattern": "^[A-Z]{2}$",
+          "description": "ISO 3166-1 alpha-2 country code of node operator (e.g., US, DE, FR, GB)."
+        },
+        "cfaa_compliance_attested": {
+          "type": "boolean",
+          "const": true,
+          "description": "Non-negotiable attestation of strict compliance with US CFAA 18 U.S.C. § 1030."
+        }
+      },
+      "required": ["jurisdiction_code", "cfaa_compliance_attested"],
+      "additionalProperties": false
+    },
     "public_keys": {
       "type": "array",
       "items": {
@@ -57,15 +74,20 @@
         "statutory_compliance_verified": {
           "type": "boolean",
           "const": true
+        },
+        "cfaa_compliance_attested": {
+          "type": "boolean",
+          "const": true
         }
       },
-      "required": ["isolated_sandbox_required", "statutory_compliance_verified"]
+      "required": ["isolated_sandbox_required", "statutory_compliance_verified", "cfaa_compliance_attested"]
     }
   },
   "required": [
     "protocol_version",
     "identity_id",
     "did_identifier",
+    "jurisdiction_context",
     "public_keys",
     "role_claims",
     "local_state_vector",

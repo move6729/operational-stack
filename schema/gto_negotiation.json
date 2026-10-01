@@ -6,10 +6,13 @@
   "required": [
     "negotiation_id",
     "counterparty_id",
+    "jurisdiction_code",
+    "cfaa_boundary_verified",
     "reserve_floor_value",
     "time_decay_gamma",
     "statutory_notice_flag",
     "regulatory_escalation_triggers",
+    "cross_border_dispute_framework",
     "trembling_hand_epsilon",
     "grim_trigger_active",
     "separating_signal_proof",
@@ -22,6 +25,14 @@
     },
     "counterparty_id": {
       "type": "string"
+    },
+    "jurisdiction_code": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}$"
+    },
+    "cfaa_boundary_verified": {
+      "type": "boolean",
+      "const": true
     },
     "reserve_floor_value": {
       "type": "number",
@@ -39,6 +50,10 @@
       "items": {
         "type": "string"
       }
+    },
+    "cross_border_dispute_framework": {
+      "type": "string",
+      "enum": ["UNCITRAL", "ICC", "US_FEDERAL_ARBITRATION", "LOCAL_STATUTORY"]
     },
     "trembling_hand_epsilon": {
       "type": "number",

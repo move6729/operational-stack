@@ -10,6 +10,24 @@
       "pattern": "^[a-f0-9]{64}$",
       "description": "SHA-256 hash of the isolated identity node."
     },
+    "jurisdiction_context": {
+      "type": "object",
+      "properties": {
+        "jurisdiction_code": {
+          "type": "string",
+          "pattern": "^[A-Z]{2}$"
+        },
+        "cfaa_compliance_attested": {
+          "type": "boolean",
+          "const": true
+        },
+        "gdpr_erasure_supported": {
+          "type": "boolean"
+        }
+      },
+      "required": ["jurisdiction_code", "cfaa_compliance_attested", "gdpr_erasure_supported"],
+      "additionalProperties": false
+    },
     "timestamp_utc": {
       "type": "integer",
       "minimum": 0,
@@ -104,6 +122,7 @@
   },
   "required": [
     "identity_id",
+    "jurisdiction_context",
     "timestamp_utc",
     "decoupling_status",
     "exposure_score",

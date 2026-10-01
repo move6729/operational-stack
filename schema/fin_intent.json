@@ -16,6 +16,24 @@
       "type": "string",
       "enum": ["payment_intent", "settlement_batch", "liquidity_pool", "escrow_lock", "account_attestation"]
     },
+    "jurisdiction_context": {
+      "type": "object",
+      "properties": {
+        "jurisdiction_code": {
+          "type": "string",
+          "pattern": "^[A-Z]{2}$"
+        },
+        "cross_border_vat_tax_flag": {
+          "type": "boolean"
+        },
+        "cfaa_compliance_attested": {
+          "type": "boolean",
+          "const": true
+        }
+      },
+      "required": ["jurisdiction_code", "cross_border_vat_tax_flag", "cfaa_compliance_attested"],
+      "additionalProperties": false
+    },
     "local_state_vector": {
       "type": "object",
       "properties": {
@@ -49,15 +67,20 @@
         "statutory_compliance_verified": {
           "type": "boolean",
           "const": true
+        },
+        "cfaa_compliance_attested": {
+          "type": "boolean",
+          "const": true
         }
       },
-      "required": ["isolated_sandbox_required", "statutory_compliance_verified"]
+      "required": ["isolated_sandbox_required", "statutory_compliance_verified", "cfaa_compliance_attested"]
     }
   },
   "required": [
     "protocol_version",
     "object_id",
     "entity_type",
+    "jurisdiction_context",
     "local_state_vector",
     "relations_graph",
     "security_invariants"

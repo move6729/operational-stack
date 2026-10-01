@@ -15,6 +15,25 @@
     "node_id": {
       "type": "string"
     },
+    "jurisdiction_context": {
+      "type": "object",
+      "properties": {
+        "jurisdiction_code": {
+          "type": "string",
+          "pattern": "^[A-Z]{2}$"
+        },
+        "cfaa_compliance_attested": {
+          "type": "boolean",
+          "const": true
+        },
+        "non_us_export_isolated": {
+          "type": "boolean",
+          "description": "True if non-US node is logically and physically partitioned from ITAR technical data."
+        }
+      },
+      "required": ["jurisdiction_code", "cfaa_compliance_attested", "non_us_export_isolated"],
+      "additionalProperties": false
+    },
     "cage_code": {
       "type": "string",
       "pattern": "^[A-Z0-9]{5}$"
@@ -66,6 +85,7 @@
     "compliance_id",
     "timestamp_utc",
     "node_id",
+    "jurisdiction_context",
     "cage_code",
     "itar_registration_number",
     "itar_expiration_timestamp",
