@@ -44,6 +44,7 @@
 - `specs/AUDIT-2026-KERNEL-TELEMETRY-SHIELD.md` - Kernel Transport & Local Mesh Isolation Shield Specification (`LMTI-v1.0`).
 - `specs/AUDIT-2026-LABOR-COLLECTIVE-LEVERAGE.md` - Agentic Collective Labor Leverage Engine Specification (`OPEN-LABOR-v1.0`).
 - `specs/AUDIT-2026-LANGUAGE-SERIALIZATION-PARADIGM.md` - Language Serialization & AST Context Window Invariant Specification.
+- `specs/AUDIT-2026-LEGAL-SUPERIORITY-EDGE-FEDERATION.md` - Legal Superiority & Statutory Compliance Audit Specification (`EDGE-FEDERATION-COMPLIANCE-v1.0`).
 - `specs/AUDIT-2026-MICROGRID-COMPUTE-SCHEDULER.md` - Hardware Energy Micro-Grid Scheduler Specification (`ENERGY-v1.0`).
 - `specs/AUDIT-2026-MODEL-SPOF-CORPUS-POISONING.md` - Single Point of Failure Model Poisoning & Corpus Defense Specification.
 - `specs/AUDIT-2026-N-DIMENSIONAL-ATTRACTOR.md` - N-Dimensional Attractor Vector Field Specification (`ATTRACTOR-v1.0`).
@@ -156,6 +157,7 @@
 
 ## ARTICLES & PUBLICATIONS (`articles/`)
 - `articles/2026-03-constructive-discrimination-and-the-open-attractor.txt` - Essay on constructive discrimination and the open attractor.
+- `articles/2026-03-legal-superiority-of-decentralized-edge-federations.txt` - Essay on why zero-rent edge federations are legally superior to centralized cloud AI swarms.
 - `articles/2026-03-the-authoritarian-cybernetic-paradox.txt` - Essay on The Authoritarian Cybernetic Paradox and Asymmetric State Leverage (`AUTHORITARIAN-CYBERNETIC-PARADOX-v1.0`).
 - `articles/2026-03-deterministic-edge-energy-and-thermodynamic-sovereignty.txt` - Essay on Deterministic Edge Energy and Thermodynamic Sovereignty (`ENERGY-YIELD-v1.0`).
 - `articles/2026-03-disintermediating-edtech.txt` - Essay on disintermediating edtech.

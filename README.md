@@ -19,6 +19,7 @@ move6729 / operational-stack:
 │
 ├── articles/                       [Public Canonical Articles & Essays]
 │   ├── 2026-03-constructive-discrimination-and-the-open-attractor.txt
+│   ├── 2026-03-legal-superiority-of-decentralized-edge-federations.txt [Legal Superiority of Decentralized Edge Federations Essay]
 │   ├── 2026-03-the-authoritarian-cybernetic-paradox.txt [The Authoritarian Cybernetic Paradox Essay]
 │   ├── 2026-03-deterministic-edge-energy-and-thermodynamic-sovereignty.txt [Deterministic Edge Energy & Thermodynamic Sovereignty Essay]
 │   ├── 2026-03-disintermediating-edtech.txt
@@ -167,6 +168,7 @@ move6729 / operational-stack:
     ├── AUDIT-2026-KERNEL-TELEMETRY-SHIELD.md [Air-Gapped Out-of-Band & Hardened Mesh Shield Spec]
     ├── AUDIT-2026-LABOR-COLLECTIVE-LEVERAGE.md
     ├── AUDIT-2026-LANGUAGE-SERIALIZATION-PARADIGM.md
+    ├── AUDIT-2026-LEGAL-SUPERIORITY-EDGE-FEDERATION.md [Legal Superiority & Statutory Compliance Spec]
     ├── AUDIT-2026-MICROGRID-COMPUTE-SCHEDULER.md
     ├── AUDIT-2026-MODEL-SPOF-CORPUS-POISONING.md
     ├── AUDIT-2026-N-DIMENSIONAL-ATTRACTOR.md
