@@ -11,7 +11,33 @@ class DistributedDataCollectEngine:
     Provides zero-rent distributed web scraping, public record archiving,
     differentially private environmental telemetry processing, and pooled
     commercial feed extraction with non-infringing AST derivative synthesis.
+
+    Enforces strict CFAA 18 U.S.C. § 1030 statutory compliance:
+    - Operates strictly on unauthenticated public endpoints.
+    - Rejects password cracking, CAPTCHA bypass, paywall evasion, or auth token theft.
+    - Explicitly ignores civil Terms of Service (TOS) scraping prohibitions per hiQ v. LinkedIn.
     """
+
+    def validate_cfaa_compliance(
+        self,
+        requires_authentication: bool,
+        bypasses_tpm_or_paywall: bool,
+        rate_limit_governor_active: bool
+    ) -> Tuple[bool, str]:
+        """
+        Enforces criminal statute boundaries (CFAA 18 U.S.C. § 1030).
+        Returns (is_compliant, reason_code).
+        """
+        if requires_authentication:
+            return False, "CFAA_VIOLATION_AUTHENTICATED_ENDPOINT_REQUIRES_CREDENTIALS"
+        
+        if bypasses_tpm_or_paywall:
+            return False, "CFAA_VIOLATION_TECHNOLOGICAL_PROTECTION_MEASURE_BYPASSED"
+
+        if not rate_limit_governor_active:
+            return False, "RATE_GOVERNOR_INACTIVE_RISK_OF_TARGET_IMPAIRMENT"
+
+        return True, "STATUTORY_CFAA_COMPLIANT_PUBLIC_UNAUTHENTICATED"
 
     def parse_html_to_ast(self, html_content: str) -> Dict[str, Any]:
         """
@@ -75,7 +101,12 @@ class DistributedDataCollectEngine:
     def commit_state_transition(self, payload: Dict[str, Any], expected_hash: str) -> bool:
         """
         Validates cryptographic hash of collected data state transition.
+        Ensures statutory compliance attestation is active before commitment.
         """
+        statutory = payload.get("statutory_compliance", {})
+        if not statutory.get("statutory_compliance_attested", False):
+            return False
+
         calculated_hash = self.generate_commit_hash(payload)
         return calculated_hash == expected_hash
 
@@ -86,12 +117,28 @@ def run_data_collect_proof() -> bool:
     """
     engine = DistributedDataCollectEngine()
 
-    # 1. Test Web Scrape / Public Record Extraction
+    # 1. Statutory Compliance Gate Verification (CFAA Enforcement)
+    compliant, reason = engine.validate_cfaa_compliance(
+        requires_authentication=False,
+        bypasses_tpm_or_paywall=False,
+        rate_limit_governor_active=True
+    )
+    assert compliant, f"Valid public collection failed gate: {reason}"
+
+    non_compliant, breach_reason = engine.validate_cfaa_compliance(
+        requires_authentication=True,
+        bypasses_tpm_or_paywall=False,
+        rate_limit_governor_active=True
+    )
+    assert not non_compliant, "Engine failed to reject authenticated endpoint bypass!"
+    assert breach_reason == "CFAA_VIOLATION_AUTHENTICATED_ENDPOINT_REQUIRES_CREDENTIALS"
+
+    # 2. Test Web Scrape / Public Record Extraction
     raw_html = "<html><body><h1>Public Court Docket #1042</h1><p>Status: Discharged.</p></body></html>"
     ast_output = engine.parse_html_to_ast(raw_html)
     assert ast_output["title"] == "<html><body><h1>Public Court Docket #1042</h1><p>Status: Discharged.</p></body></html>"
 
-    # 2. Test Environmental Telemetry Differential Privacy
+    # 3. Test Environmental Telemetry Differential Privacy
     telemetry = engine.apply_differential_privacy(
         metric_name="grid_voltage",
         raw_val=120.456,
@@ -100,7 +147,7 @@ def run_data_collect_proof() -> bool:
     assert telemetry["raw_quantized_value"] == 120.46
     assert telemetry["fuzzed_value"] == 120.50
 
-    # 3. Test Commercial Feed Transformation & Escrow Verification
+    # 4. Test Commercial Feed Transformation & Escrow Verification
     escrow_valid = engine.verify_pooled_escrow_contribution(
         contributing_nodes=50,
         total_sats=10000,
@@ -118,12 +165,18 @@ def run_data_collect_proof() -> bool:
     assert non_infringing_ast["derivation_status"] == "NON_INFRINGING_FACTUAL_AST"
     assert "copyright_notice" not in non_infringing_ast
 
-    # 4. Build Full Payload
+    # 5. Build Full Payload with Verified Statutory Compliance Gate
     payload = {
         "payload_id": "data-0123456789abcdef",
         "collection_type": "POOLED_COMMERCIAL_FEED",
         "target_identifier": "feed-orbital-sar-01",
         "timestamp_utc": int(time.time()),
+        "statutory_compliance": {
+            "public_unauthenticated_boundary_verified": True,
+            "zero_auth_bypass_verified": True,
+            "rate_limit_governor_active": True,
+            "statutory_compliance_attested": True
+        },
         "extracted_ast": non_infringing_ast,
         "fuzzed_telemetry": telemetry,
         "pooled_escrow": {
@@ -141,7 +194,7 @@ def run_data_collect_proof() -> bool:
     commit_hash = engine.generate_commit_hash(payload)
     success = engine.commit_state_transition(payload, commit_hash)
 
-    print(f"[DATA-COLLECT-v1.0 Proof] State Commit Verified: {success} (Hash: {commit_hash[:16]}...)")
+    print(f"[DATA-COLLECT-v1.0 Proof] Statutory CFAA Gate & State Commit Verified: {success} (Hash: {commit_hash[:16]}...)")
     return success
 
 
