@@ -19,6 +19,7 @@ move6729 / operational-stack:
 │
 ├── articles/                       [Public Canonical Articles & Essays]
 │   ├── 2026-03-constructive-discrimination-and-the-open-attractor.txt
+│   ├── 2026-03-the-authoritarian-cybernetic-paradox.txt [The Authoritarian Cybernetic Paradox Essay]
 │   ├── 2026-03-deterministic-edge-energy-and-thermodynamic-sovereignty.txt [Deterministic Edge Energy & Thermodynamic Sovereignty Essay]
 │   ├── 2026-03-disintermediating-edtech.txt
 │   ├── 2026-03-disintermediating-hydrological-monopolies.txt [Disintermediating Hydrological Monopolies & SCADA]
@@ -119,6 +120,7 @@ move6729 / operational-stack:
 │
 └── specs/                          [Canonical System Audits & Invariants]
     ├── AUDIT-2026-AGRICULTURAL-DISINTERMEDIATION.md
+    ├── AUDIT-2026-AUTHORITARIAN-CYBERNETIC-PARADOX.md [Authoritarian Cybernetic Paradox Spec]
     ├── AUDIT-2026-AI-SAFETY-REGULATORY-CAPTURE.md [AI Safety Regulatory Capture Spec]
     ├── AUDIT-2026-ANTI-LUDDITE-BARE-METAL-INVARIANT.md
     ├── AUDIT-2026-AUTOMOTIVE-DISINTERMEDIATION.md

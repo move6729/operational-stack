@@ -7,6 +7,7 @@
 - `specs/human_swarm_audit_spec.md` - The Human Swarm Essay Audit Specification (`SWARM-AUDIT-v1.0`).
 - `specs/ubc_audit_spec.md` - Universal Basic Compute Protocol and Essay Audit Specification (`UBC-AUDIT-v1.0`).
 - `specs/AUDIT-2026-AGRICULTURAL-DISINTERMEDIATION.md` - Agricultural & Telemetry Disintermediation Specification (`AATP-v1.0`).
+- `specs/AUDIT-2026-AUTHORITARIAN-CYBERNETIC-PARADOX.md` - Authoritarian Cybernetic Paradox & Asymmetric State Leverage Specification (`AUTHORITARIAN-CYBERNETIC-PARADOX-v1.0`).
 - `specs/AUDIT-2026-AI-SAFETY-REGULATORY-CAPTURE.md` - "AI Safety" Regulatory Capture & Model Licensing Specification (`AI-SAFETY-REGULATORY-CAPTURE-v1.0`).
 - `specs/AUDIT-2026-ANTI-LUDDITE-BARE-METAL-INVARIANT.md` - Anti-Luddite Bare-Metal Invariant Audit Specification.
 - `specs/AUDIT-2026-AUTOMOTIVE-DISINTERMEDIATION.md` - Vehicle Telemetry & Kinetic Mobility Disintermediation Specification (`OVTM-S v1.1`).
@@ -144,6 +145,7 @@
 
 ## ARTICLES & PUBLICATIONS (`articles/`)
 - `articles/2026-03-constructive-discrimination-and-the-open-attractor.txt` - Essay on constructive discrimination and the open attractor.
+- `articles/2026-03-the-authoritarian-cybernetic-paradox.txt` - Essay on The Authoritarian Cybernetic Paradox and Asymmetric State Leverage (`AUTHORITARIAN-CYBERNETIC-PARADOX-v1.0`).
 - `articles/2026-03-deterministic-edge-energy-and-thermodynamic-sovereignty.txt` - Essay on Deterministic Edge Energy and Thermodynamic Sovereignty (`ENERGY-YIELD-v1.0`).
 - `articles/2026-03-disintermediating-edtech.txt` - Essay on disintermediating edtech.
 - `articles/2026-03-disintermediating-hydrological-monopolies.txt` - Essay on disintermediating hydrological monopolies and SCADA.
