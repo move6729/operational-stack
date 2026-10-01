@@ -76,7 +76,10 @@ class DistributedDataCollectEngine:
     - Proof-of-Delay token timing verification.
     - Automated legal counter-notice generation for ISP abuse claims (Van Buren / hiQ v. LinkedIn).
     - Isolates poisoning nodes via Byzantine statutory quarantine attestations.
+    - Circuit Breaker Return-To-Operator Escrow Halt on repeated consecutive payload drops.
     """
+
+    MAX_CONSECUTIVE_FAILURES = 5
 
     def __init__(self, node_id: str = "node-alpha", pow_difficulty_prefix: str = "00"):
         self.node_id = node_id
@@ -84,6 +87,9 @@ class DistributedDataCollectEngine:
         self.quarantine_manager = ByzantineStatutoryQuarantine(node_id)
         # Local in-memory stigmergic trace ledger: domain_hash -> last_trace_timestamp
         self.local_stigmergic_traces: Dict[str, int] = {}
+        # Local circuit breaker failure counter for glitched agent detection
+        self.consecutive_failures: int = 0
+        self.escrow_quarantine_dump: List[Dict[str, Any]] = []
 
     def verify_pow_identity(self, node_id: str, pow_nonce: int) -> bool:
         """
@@ -256,6 +262,9 @@ class DistributedDataCollectEngine:
         """
         Evaluates incoming mesh payload. If sender is quarantined or payload violates CFAA/Anti-DDoS,
         drops payload, logs poison attestation, and quarantines sender.
+
+        Enforces progressive hardware backoff and Return-To-Operator Escrow Halt
+        when an agent repeatedly submits invalid/hard-bouncing payloads locally.
         """
         if sender_node_id in self.quarantine_manager.quarantined_nodes:
             return False, "SENDER_NODE_ISOLATED_IN_QUARANTINE", {}
@@ -303,14 +312,36 @@ class DistributedDataCollectEngine:
         )
 
         if not is_compliant:
+            self.consecutive_failures += 1
             payload_hash = self.generate_commit_hash(payload)
             attestation = self.quarantine_manager.generate_poison_attestation(
                 offending_node_id=sender_node_id,
                 payload_hash=payload_hash,
                 violation_code=code
             )
+
+            # Progressive hardware sleep delay on local payload rejection
+            backoff_sleep_sec = min(0.05 * (2 ** self.consecutive_failures), 2.0)
+            time.sleep(backoff_sleep_sec)
+
+            # Return-To-Operator Escrow Halt triggered on repeated hard bounces
+            if self.consecutive_failures >= self.MAX_CONSECUTIVE_FAILURES:
+                escrow_record = {
+                    "event": "RETURN_TO_OPERATOR_ESCROW_HALT",
+                    "consecutive_failures": self.consecutive_failures,
+                    "last_offending_sender": sender_node_id,
+                    "last_violation_code": code,
+                    "payload_hash": payload_hash,
+                    "timestamp": int(time.time()),
+                    "action_required": "OPERATOR_INTERVENTION_REQUIRED_AGENT_LOOP_FREEZE"
+                }
+                self.escrow_quarantine_dump.append(escrow_record)
+                return False, f"CIRCUIT_BREAKER_RETURN_TO_OPERATOR_ESCROW_HALT_{code}", attestation
+
             return False, f"PAYLOAD_DROPPED_{code}", attestation
 
+        # On successful verification, reset local consecutive failure counter
+        self.consecutive_failures = 0
         # Record valid trace marker locally
         self.record_stigmergic_trace(domain, curr_time)
         return True, "PAYLOAD_VERIFIED_COMPLIANT", {}
@@ -420,7 +451,7 @@ def run_data_collect_proof() -> bool:
     counter_notice = engine.generate_cfaa_counter_notice(
         target_domain="public-docket.gov",
         isp_notice_id="ISP-ABUSE-104928",
-        operator_pubkey="0x11223344556677889900aabbccddeeff11223344556677889900aabbccddeeff"
+        operator_pubkey="[SECRET:ethereum-private-key]"
     )
     assert counter_notice["legal_refutation_type"] == "CFAA_STATUTORY_PUBLIC_ACCESS_DEFENSE"
     assert "Van Buren v. United States" in counter_notice["precedent_citations"][0]
@@ -491,12 +522,27 @@ def run_data_collect_proof() -> bool:
     assert verified_attestation, "Peer node failed to verify poison attestation signature!"
     assert "node-poisoner" in peer_engine.quarantine_manager.quarantined_nodes
 
-    # 5. Test Web Scrape / Public Record Extraction
+    # 5. Test Circuit Breaker: Repeated Consecutive Payload Drops Trigger Return-To-Operator Escrow Halt
+    glitched_engine = DistributedDataCollectEngine("node-glitch-test", pow_difficulty_prefix="00")
+    bad_payload = dict(poison_payload)
+    for i in range(4):
+        acc, c_code, _ = glitched_engine.verify_and_quarantine_payload("glitched-agent", bad_payload)
+        assert not acc
+        assert "CIRCUIT_BREAKER_RETURN_TO_OPERATOR_ESCROW_HALT" not in c_code
+
+    # 5th consecutive failure triggers hard Escrow Freeze
+    acc_5th, c_code_5th, _ = glitched_engine.verify_and_quarantine_payload("glitched-agent", bad_payload)
+    assert not acc_5th
+    assert "CIRCUIT_BREAKER_RETURN_TO_OPERATOR_ESCROW_HALT" in c_code_5th
+    assert len(glitched_engine.escrow_quarantine_dump) == 1
+    assert glitched_engine.escrow_quarantine_dump[0]["event"] == "RETURN_TO_OPERATOR_ESCROW_HALT"
+
+    # 6. Test Web Scrape / Public Record Extraction
     raw_html = "<html><body><h1>Public Court Docket #1042</h1><p>Status: Discharged.</p></body></html>"
     ast_output = engine.parse_html_to_ast(raw_html)
     assert ast_output["title"] == "<html><body><h1>Public Court Docket #1042</h1><p>Status: Discharged.</p></body></html>"
 
-    # 6. Test Environmental Telemetry Differential Privacy
+    # 7. Test Environmental Telemetry Differential Privacy
     telemetry = engine.apply_differential_privacy(
         metric_name="grid_voltage",
         raw_val=120.456,
@@ -505,7 +551,7 @@ def run_data_collect_proof() -> bool:
     assert telemetry["raw_quantized_value"] == 120.46
     assert telemetry["fuzzed_value"] == 120.50
 
-    # 7. Test Commercial Feed Transformation & Escrow Verification
+    # 8. Test Commercial Feed Transformation & Escrow Verification
     escrow_valid = engine.verify_pooled_escrow_contribution(
         contributing_nodes=50,
         total_sats=10000,
@@ -523,7 +569,7 @@ def run_data_collect_proof() -> bool:
     assert non_infringing_ast["derivation_status"] == "NON_INFRINGING_FACTUAL_AST"
     assert "copyright_notice" not in non_infringing_ast
 
-    # 8. Build Full Valid Payload with Anti-DoS Proofs and Statutory Compliance
+    # 9. Build Full Valid Payload with Anti-DoS Proofs and Statutory Compliance
     stigmergic_trace = engine.record_stigmergic_trace(domain, curr_t)
     payload = {
         "payload_id": "data-0123456789abcdef",
@@ -577,7 +623,7 @@ def run_data_collect_proof() -> bool:
     commit_hash = engine.generate_commit_hash(payload)
     success = engine.commit_state_transition(payload, commit_hash)
 
-    print(f"[DATA-COLLECT-v1.0 Proof] Conservative Rate Limiting, Operator C&D Defense, PoW & Quarantine Verified: {success} (Hash: {commit_hash[:16]}...)")
+    print(f"[DATA-COLLECT-v1.0 Proof] Conservative Rate Limiting, Return-To-Operator Escrow Halt, PoW & Quarantine Verified: {success} (Hash: {commit_hash[:16]}...)")
     return success
 
 
