@@ -1,5 +1,6 @@
 import os
 import time
+import math
 import random
 import hashlib
 from typing import Dict, Any
@@ -7,7 +8,8 @@ from typing import Dict, Any
 class LMTITransportShield:
     """
     Local Mesh Transport Isolation Engine (LMTI-v1.0).
-    Hardens node egress against IP tracking, DNS leaks, and packet side-channel analysis.
+    Hardens node egress against IP tracking, DNS leaks, and packet side-channel analysis,
+    while enforcing Shannon Channel Capacity limits to prevent network desynchronization.
     """
     BLOCK_SIZE_BYTES = 256
     MAX_JITTER_MS = 15
@@ -30,23 +32,45 @@ class LMTITransportShield:
             padding_needed = 256
         return padded_bytes[:-padding_needed]
 
-    def transmit_peer_payload(self, peer_crypto_id: str, payload_str: str) -> Dict[str, Any]:
+    def calculate_shannon_capacity(self, bandwidth_hz: float, snr_linear: float) -> float:
+        """
+        Calculates maximum theoretical Shannon channel capacity in bits/sec:
+        C = B * log2(1 + S/N)
+        """
+        if bandwidth_hz <= 0 or snr_linear <= 0:
+            return 0.0
+        return round(bandwidth_hz * math.log2(1.0 + snr_linear), 2)
+
+    def transmit_peer_payload(
+        self,
+        peer_crypto_id: str,
+        payload_str: str,
+        bandwidth_hz: float = 1000000.0,
+        snr_linear: float = 10.0
+    ) -> Dict[str, Any]:
         """
         Simulates padded, jitter-equalized transmission to a peer cryptographic identity.
-        Bypasses standard DNS resolution.
+        Throttles transmission to respect physical Shannon channel capacity bounds.
         """
         raw_bytes = payload_str.encode('utf-8')
         padded_payload = self.pad_payload(raw_bytes)
         
+        # Enforce Shannon capacity bound
+        shannon_cap_bps = self.calculate_shannon_capacity(bandwidth_hz, snr_linear)
+        payload_bits = len(padded_payload) * 8
+        min_tx_time_sec = payload_bits / max(1.0, shannon_cap_bps)
+
         # Apply latency fuzzing to neutralize timing side-channels
         jitter_sec = random.uniform(0.001, self.MAX_JITTER_MS / 1000.0)
-        time.sleep(jitter_sec)
+        total_delay_sec = max(jitter_sec, min_tx_time_sec)
+        time.sleep(total_delay_sec)
 
         return {
             "source_node": self.pubkey_hash,
             "target_peer": peer_crypto_id,
             "bytes_sent": len(padded_payload),
-            "latency_fuzz_ms": round(jitter_sec * 1000, 2),
+            "shannon_capacity_bps": shannon_cap_bps,
+            "latency_fuzz_ms": round(total_delay_sec * 1000, 2),
             "payload_hash": hashlib.sha256(padded_payload).hexdigest()
         }
 

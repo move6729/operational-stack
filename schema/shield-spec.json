@@ -24,6 +24,10 @@
           "type": "integer",
           "description": "Frequency (in seconds) of local hardware network identifier rotation."
         },
+        "max_shannon_bandwidth_bps": {
+          "type": "number",
+          "description": "Maximum physical channel capacity rate bound (bits/sec) allowed to prevent state desynchronization."
+        },
         "context_pruning_policy": {
           "type": "string",
           "enum": ["STOCHASTIC_FUZZING", "HARD_CONTEXT_RESET", "LOCAL_VECTOR_DECOUPLE"]
@@ -34,6 +38,7 @@
         "telemetry_fuzzing_enabled", 
         "hardware_api_virtualization",
         "ephemeral_mac_rotation_interval_sec",
+        "max_shannon_bandwidth_bps",
         "context_pruning_policy"
       ]
     }

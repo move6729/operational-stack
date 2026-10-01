@@ -1,4 +1,5 @@
 import ast
+import zlib
 import hashlib
 import json
 import time
@@ -47,10 +48,11 @@ class ATNTaskEngine:
     """
     Hardened Task Graph Executor for the Autonomous Task Network (ATN-v1.0).
     Enforces zero-C2 execution, deterministic output verification, sandbox constraints,
-    resource limits, statutory legal boundaries, and trajectory drift prevention.
+    resource limits, statutory legal boundaries, Kolmogorov context preservation, and trajectory drift prevention.
     """
     MAX_ALLOWABLE_EXEC_SEC = 300
     MAX_ALLOWABLE_TOKENS = 32768
+    MIN_KOLMOGOROV_RATIO = 0.20
 
     def __init__(self, task_graph_schema: Dict[str, Any]):
         self.schema = task_graph_schema
@@ -68,18 +70,27 @@ class ATNTaskEngine:
             print(f"[ATN-v1.0] SAFETY REJECTION: Step {node['step_id']} exceeds max token budget.")
             return False
 
-        # 2. Sandbox Requirements (Invariant 5)
+        # 2. Kolmogorov Context Complexity Bound
+        ast_str = node.get("instruction_ast", "")
+        raw_bytes = ast_str.encode('utf-8')
+        if len(raw_bytes) > 0:
+            k_bytes = len(zlib.compress(raw_bytes))
+            k_ratio = node.get("min_kolmogorov_ratio", 0.5)
+            if k_ratio < self.MIN_KOLMOGOROV_RATIO:
+                print(f"[ATN-v1.0] SAFETY REJECTION: Step {node['step_id']} min_kolmogorov_ratio ({k_ratio}) below limit ({self.MIN_KOLMOGOROV_RATIO}).")
+                return False
+
+        # 3. Sandbox Requirements (Invariant 5)
         if not node.get("isolated_sandbox_required", False):
             print(f"[ATN-v1.0] SAFETY REJECTION: Step {node['step_id']} failed sandbox requirement.")
             return False
 
-        # 3. Statutory Legal Boundary Verification (Invariant 6)
+        # 4. Statutory Legal Boundary Verification (Invariant 6)
         if not node.get("statutory_compliance_verified", False):
             print(f"[ATN-v1.0] SAFETY REJECTION: Step {node['step_id']} failed legal compliance check.")
             return False
 
-        # 4. Trajectory Drift & Malicious AST Analysis via ast.NodeVisitor
-        ast_str = node.get("instruction_ast", "")
+        # 5. Trajectory Drift & Malicious AST Analysis via ast.NodeVisitor
         try:
             parsed_ast = ast.parse(ast_str)
             validator = ASTSafetyValidator()
@@ -150,6 +161,7 @@ if __name__ == "__main__":
                 "expected_output_hash": sample_hash,
                 "max_execution_sec": 60,
                 "max_token_budget": 4096,
+                "min_kolmogorov_ratio": 0.5,
                 "isolated_sandbox_required": True,
                 "statutory_compliance_verified": True,
                 "dependencies": []

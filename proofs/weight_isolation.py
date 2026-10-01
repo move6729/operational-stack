@@ -1,4 +1,5 @@
 import os
+import zlib
 import hashlib
 import json
 from typing import Dict, Any, List
@@ -6,7 +7,8 @@ from typing import Dict, Any, List
 class LMCIRuntimeEngine:
     """
     Local Model Weights & Context Isolation Engine (LMCI-v1.0).
-    Verifies bare-metal local inference capability and local encrypted context storage.
+    Verifies bare-metal local inference capability, local encrypted context storage,
+    and enforces Kolmogorov context preservation bounds to prevent state loss.
     """
     ALLOWED_QUANT_FORMATS = ["GGUF", "EXL2", "AWQ", "GPTQ"]
 
@@ -29,12 +31,33 @@ class LMCIRuntimeEngine:
 
         return True
 
-    def execute_local_inference(self, prompt_ast: str) -> Dict[str, Any]:
+    def evaluate_kolmogorov_context_preservation(self, raw_ast_state: str, compressed_prompt: str) -> bool:
+        """
+        Validates Kolmogorov Context Preservation Bound:
+        Tokens_Context >= K(AST_State)
+        Prevents prompt truncation from destroying irreducible algorithmic complexity.
+        """
+        raw_bytes = raw_ast_state.encode('utf-8')
+        prompt_bytes = compressed_prompt.encode('utf-8')
+        
+        # Approximate K(AST_State) using zlib compression bound
+        irreducible_k_bytes = len(zlib.compress(raw_bytes))
+        
+        if len(prompt_bytes) < irreducible_k_bytes:
+            print(f"[LMCI-v1.0] REJECTION: Prompt bytes ({len(prompt_bytes)}) < Irreducible Kolmogorov Complexity ({irreducible_k_bytes}). Context corrupted.")
+            return False
+        return True
+
+    def execute_local_inference(self, prompt_ast: str, compressed_context: str = None) -> Dict[str, Any]:
         """
         Simulates local offline inference execution on bare-metal hardware.
         """
         if not self.is_hardened:
             raise RuntimeError("Engine failed local isolation verification.")
+
+        if compressed_context is not None:
+            if not self.evaluate_kolmogorov_context_preservation(prompt_ast, compressed_context):
+                raise ValueError("Execution halted: Kolmogorov context preservation bound violated.")
 
         # Simulate local token generation and local context retrieval
         simulated_output = f"LOCAL_EXECUTION_RESULT({hashlib.sha256(prompt_ast.encode()).hexdigest()[:8]})"

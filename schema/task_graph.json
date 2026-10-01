@@ -16,6 +16,7 @@
           "expected_output_hash": { "type": "string" },
           "max_execution_sec": { "type": "integer", "maximum": 300 },
           "max_token_budget": { "type": "integer", "maximum": 32768 },
+          "min_kolmogorov_ratio": { "type": "number", "minimum": 0.20, "maximum": 1.0 },
           "isolated_sandbox_required": { "type": "boolean", "const": true },
           "local_containment_required": { "type": "boolean", "const": true },
           "statutory_compliance_verified": { "type": "boolean", "const": true },
@@ -30,6 +31,7 @@
           "expected_output_hash",
           "max_execution_sec",
           "max_token_budget",
+          "min_kolmogorov_ratio",
           "isolated_sandbox_required",
           "local_containment_required",
           "statutory_compliance_verified"

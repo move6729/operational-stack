@@ -34,7 +34,14 @@ $$\mathbf{S}_{\text{Intent}} = g_{\phi}(\mathbf{\tau}_{\text{micro}}) \quad \tex
 
 Predictive behavioral accuracy scales directly with telemetric density, necessitating hardware-enforced PMP isolation and inline memory encryption.
 
-#### 2. Cognitive Port Gating & Intent Filtering
+#### 3. Kolmogorov Context Preservation Bound
+Let $\mathcal{K}(\text{AST}_{\text{State}})$ represent the irreducible algorithmic complexity of the local execution AST. The context window token length $\text{Tokens}_{\text{Context}}$ must strictly satisfy:
+
+$$\text{Tokens}_{\text{Context}} \ge \mathcal{K}(\text{AST}_{\text{State}}) \implies \text{Zero Execution Corruption}$$
+
+Dynamic context truncation below this rate-distortion boundary causes latent space hallucination and state corruption.
+
+#### 4. Cognitive Port Gating & Intent Filtering
 Let $I_{\text{Raw}}$ be local operator intent and $P_{\text{Egress}}$ be outbound network traffic. The local proxy $f_{\text{Proxy}}$ filters state vectors before network transmission:
 
 $$P_{\text{Egress}} = f_{\text{Proxy}}(I_{\text{Raw}}) \quad \text{where} \quad \text{Entropy}(P_{\text{Egress}} \cap \mathbf{S}_{\text{Local}}) \to 0$$
