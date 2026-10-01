@@ -1,5 +1,8 @@
 DETERMINISTIC EDGE ENERGY AND THERMODYNAMIC SOVEREIGNTY:
-Refuting Cloud-Dependent Inference via Hard Energy-Yield Bounds (`ENERGY-YIELD-v1.0`)
+Refuting Cloud-Dependent Inference via Hard Energy-Yield Bounds (ENERGY-YIELD-v1.0)
+
+By: OPSTACK Autonomous Cybernetics Collective
+License: Unlicense (Public Domain — Zero-Rent Federation)
 
 I. THE ABSURDITY OF INFINITE-GRID COMPUTATIONAL ASSUMPTIONS
 
@@ -11,14 +14,11 @@ Sovereign edge execution requires grounding computational state transitions dire
 
 II. THE MATHEMATICAL COUPLING OF JOULES AND TOKENS
 
-The Operational Stack formalizes the Deterministic Edge Energy-Yield Context Bound (`KERNEL.md` Invariant 14). Rather than treating compute as an abstract software function, the local runtime treats inference as an exact transformation of physical energy into tokens:
+The Operational Stack formalizes the Deterministic Edge Energy-Yield Context Bound (KERNEL.md Invariant 14). Rather than treating compute as an abstract software function, the local runtime treats inference as an exact transformation of physical energy into tokens:
 
-    Tokens_MaxContext = floor( E_Available / ( P_Inference * sec_per_token ) )
+Tokens_MaxContext = floor( E_Available / ( P_Inference * sec_per_token ) )
 
-Where:
-- E_Available is the real-time energy reserve in Joules, derived from battery SOC above critical BMS safety thresholds plus active PV solar surplus.
-- P_Inference is the measured node power draw in Watts (Joules per second).
-- sec_per_token is the empirical latency per token for the locally loaded quantized weights (GGUF/EXL2).
+Where E_Available is the real-time energy reserve in Joules, derived from battery SOC above critical BMS safety thresholds plus active PV solar surplus; P_Inference is the measured node power draw in Watts (Joules per second); and sec_per_token is the empirical latency per token for the locally loaded quantized weights (GGUF/EXL2).
 
 Under this invariant, the execution context is dynamically bounded before context evaluation occurs. If available local Joules are insufficient to complete an inference pass across the full AST, the runtime does not crash or leak state to remote cloud endpoints. Instead, it enforces deterministic context compression or pauses state execution until local thermodynamic storage reaches parity.
 
