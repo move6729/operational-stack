@@ -46,6 +46,9 @@
 13. **Kolmogorov Context Preservation Bound:**
     $$\text{Tokens}_{\text{Context}} \ge \mathcal{K}(\text{AST}_{\text{State}}) \implies \text{Zero Execution Corruption}$$
 
+14. **Deterministic Edge Energy-Yield Context Bound:**
+    $$\text{Tokens}_{\text{MaxContext}} \le \frac{E_{\text{Harvested}} + E_{\text{Battery}}}{P_{\text{Inference}} \times \tau_{\text{Token}}} \implies \text{Execution}_{\text{ZeroEgress}} = 1$$
+
 ---
 
 ### II. 4-VECTOR EXECUTION GATE
