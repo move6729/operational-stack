@@ -53,6 +53,7 @@
 - `specs/AUDIT-2026-PHYSICAL-ASSET-DISINTERMEDIATION.md` - Physical Asset & Asset Compliance Disintermediation Specification (`COMPLIANCE-v1.0`).
 - `specs/AUDIT-2026-PROP-DISINTERMEDIATION.md` - Property & Real Estate Management Disintermediation Specification (`OPEN-PROP-v1.0`).
 - `specs/AUDIT-2026-RECURSIVE-SCHEMA-GENERATOR.md` - Recursive Schema Generation & Dynamic AST Synthesis Specification.
+- `specs/AUDIT-2026-REFLEXIVE-ASHBY-PARITY.md` - Reflexive Ashby Parity & The Abstractor Fallacy Specification.
 - `specs/AUDIT-2026-SOVEREIGN-COGNITIVE-SILICON.md` - Sovereign Cognitive Silicon & Quantized Edge Inference Specification (`LMCI-v1.0`).
 - `specs/AUDIT-2026-STIGMERGIC-ARG-AGENT-TASK-HANDOFFS.md` - Stigmergic Agent Task Graph Handoff Specification (`ATN-v1.0`).
 - `specs/AUDIT-2026-STIGMERGIC-M2M-TASK-MARKETS.md` - Machine-to-Machine Stigmergic Task Market Specification.
