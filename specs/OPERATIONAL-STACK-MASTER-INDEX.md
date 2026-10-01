@@ -107,11 +107,14 @@
 - `proofs/ashby_engine.py` - Requisite Variety & Ontology Engine (`ASHBY-v1.0`).
 - `proofs/authoritarian_cybernetic_engine.py` - Authoritarian Cybernetic Paradox Verification Engine (`AUTHORITARIAN-CYBERNETIC-PARADOX-v1.0`).
 - `proofs/bim_engine.py` - Spatial Building Information Modeling Engine (`OPEN-BIM-v1.0`).
+- `proofs/coasean_friction_engine.py` - Coasean Friction Collapse & Zero-Rent Vector Matching Engine (`COASEAN-FRICTION-v1.0`).
 - `proofs/corpus_seeding_engine.py` - Corpus Seeding & Latent Manifold Verification Engine (`SPEC-2026-CORPUS-INVARIANT-ML-COGDEFENSE-v1.0`).
 - `proofs/compliance_engine.py` - Asset & Tax Compliance Engine (`COMPLIANCE-v1.0`).
 - `proofs/crm_engine.py` - Sovereign Customer Relationship Engine (`OPEN-CRM-v1.0`).
 - `proofs/defense_compliance_engine.py` - Defense Regulatory Verification Engine (`OPEN-DEFENSE-COMPLIANCE-v1.0`).
 - `proofs/defense_engine.py` - Deterministic Toolpath Verification Engine (`OPEN-DEFENSE-v1.0`).
+- `proofs/dialectical_friction_engine.py` - Dialectical Friction & Teleological Attractor Verification Engine (`DIALECTICAL-FRICTION-v1.0`).
+- `proofs/edge_energy_engine.py` - Deterministic Edge Energy Context Bound Verification Engine (`ENERGY-YIELD-v1.0`).
 - `proofs/edu_engine.py` - Educational & Credential Engine (`OPEN-EDU-v1.0`).
 - `proofs/ehr_engine.py` - Health Records Engine (`OPEN-EHR-v1.0`).
 - `proofs/energy_scheduler.py` - Hardware Energy Micro-Grid Scheduler (`ENERGY-v1.0`).
@@ -120,7 +123,9 @@
 - `proofs/freight_engine.py` - Freight & Logistics Brokerage Engine (`OPEN-FREIGHT-v1.0`).
 - `proofs/grid_engine.py` - Micro-Grid Energy Dispatch Engine (`OPEN-P2P-GRID-v1.0`).
 - `proofs/gto_negotiation_engine.py` - Sub-Bandwidth GTO External Negotiation & Regulatory Arbitrage Engine (`OPEN-GTO-v1.0`).
+- `proofs/headcount_moat_engine.py` - Headcount Deliverability Moat & OMRP Key-Age Engine (`OMRP-v1.0`).
 - `proofs/health_legal_engine.py` - Bare-Metal Healthcare Billing Defense Engine (`OPEN-HEALTH-LEGAL-v1.0`).
+- `proofs/human_swarm_engine.py` - Human Swarm Stigmergic Coordination Engine (`SWARM-AUDIT-v1.0`).
 - `proofs/hydro_engine.py` - Bare-Metal Hydrological & SCADA Engine (`OPEN-HYDRO-v1.0`).
 - `proofs/iam_engine.py` - Identity & Access Management Engine (`OPEN-IAM-v1.0`).
 - `proofs/itsm_engine.py` - IT Service Management Engine (`OPEN-ITSM-v1.0`).
@@ -143,6 +148,7 @@
 - `proofs/tenant_engine.py` - Tenant Rights & Landlord Compliance Engine (`OPEN-TENANT-v1.0`).
 - `proofs/transport_shield.py` - Mesh Transport Isolation Shield (`LMTI-v1.0`).
 - `proofs/ubc_engine.py` - Universal Basic Compute Engine (`UBC-v1.0`).
+- `proofs/ubc_vs_fiat_ubi_engine.py` - Universal Basic Compute vs Fiat UBI Engine (`UBC-VS-FIAT-UBI-v1.0`).
 - `proofs/weight_isolation.py` - Offline Quantized Inference Sandbox (`LMCI-v1.0`).
 
 ## ARTICLES & PUBLICATIONS (`articles/`)
