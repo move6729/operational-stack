@@ -21,6 +21,7 @@
 - `specs/AUDIT-2026-CYBERNETIC-VARIETY-ASHBY-AUDIT.md` - Cybernetic Variety & Ashby Control Law Specification.
 - `specs/AUDIT-2026-DEFENSE-COMPLIANCE-DISINTERMEDIATION.md` - Defense Prime Compliance & Regulatory Automation Specification (`OPEN-DEFENSE-COMPLIANCE-v1.0`).
 - `specs/AUDIT-2026-DEFENSE-SUPPLY-DISINTERMEDIATION.md` - Sovereign Defense Supply Chain Disintermediation Specification (`OPEN-DEFENSE-v1.0`).
+- `specs/AUDIT-2026-EDGE-ENERGY-INVARIANT.md` - Deterministic Edge Energy-Yield Context Bound Specification (`ENERGY-YIELD-v1.0`).
 - `specs/AUDIT-2026-EDU-DISINTERMEDIATION.md` - Educational Portfolio & Credential Disintermediation Specification (`OPEN-EDU-v1.0`).
 - `specs/AUDIT-2026-EHR-DISINTERMEDIATION.md` - Health Record Monopoly Disintermediation Specification (`OPEN-EHR-v1.0`).
 - `specs/AUDIT-2026-ENERGY-GRID-DISINTERMEDIATION.md` - Peer-to-Peer Micro-Grid Energy Dispatch Specification (`OPEN-P2P-GRID-v1.0`).
@@ -139,10 +140,11 @@
 - `proofs/tenant_engine.py` - Tenant Rights & Landlord Compliance Engine (`OPEN-TENANT-v1.0`).
 - `proofs/transport_shield.py` - Mesh Transport Isolation Shield (`LMTI-v1.0`).
 - `proofs/ubc_engine.py` - Universal Basic Compute Engine (`UBC-v1.0`).
-- `proofs/weight_isolation.py` - Local Inference Context Isolation Engine (`LMCI-v1.0`).
+- `proofs/weight_isolation.py` - Offline Quantized Inference Sandbox (`LMCI-v1.0`).
 
 ## ARTICLES & PUBLICATIONS (`articles/`)
 - `articles/2026-03-constructive-discrimination-and-the-open-attractor.txt` - Essay on constructive discrimination and the open attractor.
+- `articles/2026-03-deterministic-edge-energy-and-thermodynamic-sovereignty.txt` - Essay on Deterministic Edge Energy and Thermodynamic Sovereignty (`ENERGY-YIELD-v1.0`).
 - `articles/2026-03-disintermediating-edtech.txt` - Essay on disintermediating edtech.
 - `articles/2026-03-disintermediating-hydrological-monopolies.txt` - Essay on disintermediating hydrological monopolies and SCADA.
 - `articles/2026-03-disintermediating-iam.txt` - Essay on disintermediating IAM.

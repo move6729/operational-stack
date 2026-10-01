@@ -1,0 +1,34 @@
+DETERMINISTIC EDGE ENERGY AND THERMODYNAMIC SOVEREIGNTY:
+Refuting Cloud-Dependent Inference via Hard Energy-Yield Bounds (`ENERGY-YIELD-v1.0`)
+
+I. THE ABSURDITY OF INFINITE-GRID COMPUTATIONAL ASSUMPTIONS
+
+Modern AI architectures are built on an implicit thermodynamic lie: the assumption of infinite grid power and low-latency central compute access. Current agent frameworks assume that whenever context windows expand or inference latency spikes, the local runtime can simply dispatch unbounded API requests to centralized hyperscale datacenters.
+
+This assumption fails under real-world physical constraints. When regional power grids experience brownouts, when edge micro-grids operate off-grid via local PV/battery storage, or when network egress is intentionally severed, cloud-dependent AI systems instantly freeze. They suffer process terminations, unhandled HTTP timeouts, or catastrophic state loss.
+
+Sovereign edge execution requires grounding computational state transitions directly in local thermodynamic reality. A model runtime cannot evaluate a 32,000-token context window if the edge node only possesses 10 Joules of stored energy in its battery system.
+
+II. THE MATHEMATICAL COUPLING OF JOULES AND TOKENS
+
+The Operational Stack formalizes the Deterministic Edge Energy-Yield Context Bound (`KERNEL.md` Invariant 14). Rather than treating compute as an abstract software function, the local runtime treats inference as an exact transformation of physical energy into tokens:
+
+    Tokens_MaxContext = floor( E_Available / ( P_Inference * sec_per_token ) )
+
+Where:
+- E_Available is the real-time energy reserve in Joules, derived from battery SOC above critical BMS safety thresholds plus active PV solar surplus.
+- P_Inference is the measured node power draw in Watts (Joules per second).
+- sec_per_token is the empirical latency per token for the locally loaded quantized weights (GGUF/EXL2).
+
+Under this invariant, the execution context is dynamically bounded before context evaluation occurs. If available local Joules are insufficient to complete an inference pass across the full AST, the runtime does not crash or leak state to remote cloud endpoints. Instead, it enforces deterministic context compression or pauses state execution until local thermodynamic storage reaches parity.
+
+III. HUMAN OPERATOR ESCROW AND ZERO-EGRESS ESCALATION
+
+While OPSTACK strictly prohibits automated, silent egress to commercial cloud APIs, human operators retain explicit, cryptographic authority to override energy bounds when connectivity and external power permit.
+
+This hierarchy enforces absolute cybernetic containment:
+1. Local Bare-Metal Silicon (Strictly bounded by local PV/Battery Joules).
+2. Local Operator Escrow (Physical human authorization via local encrypted tunnel).
+3. Zero Egress Fallback (Process pauses deterministically when local energy falls below the Kolmogorov state threshold).
+
+By tying context windows directly to local Joules, edge nodes achieve complete operational resilience—operating reliably off-grid, immune to central cloud decay, network isolation, or utility tollbooths.

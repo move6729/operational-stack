@@ -19,6 +19,7 @@ move6729 / operational-stack:
 │
 ├── articles/                       [Public Canonical Articles & Essays]
 │   ├── 2026-03-constructive-discrimination-and-the-open-attractor.txt
+│   ├── 2026-03-deterministic-edge-energy-and-thermodynamic-sovereignty.txt [Deterministic Edge Energy & Thermodynamic Sovereignty Essay]
 │   ├── 2026-03-disintermediating-edtech.txt
 │   ├── 2026-03-disintermediating-hydrological-monopolies.txt [Disintermediating Hydrological Monopolies & SCADA]
 │   ├── 2026-03-disintermediating-iam.txt
@@ -132,6 +133,7 @@ move6729 / operational-stack:
     ├── AUDIT-2026-CYBERNETIC-VARIETY-ASHBY-AUDIT.md
     ├── AUDIT-2026-DEFENSE-COMPLIANCE-DISINTERMEDIATION.md
     ├── AUDIT-2026-DEFENSE-SUPPLY-DISINTERMEDIATION.md
+    ├── AUDIT-2026-EDGE-ENERGY-INVARIANT.md [Deterministic Edge Energy-Yield Context Bound Spec]
     ├── AUDIT-2026-EDU-DISINTERMEDIATION.md
     ├── AUDIT-2026-EHR-DISINTERMEDIATION.md
     ├── AUDIT-2026-ENERGY-GRID-DISINTERMEDIATION.md
@@ -143,6 +145,7 @@ move6729 / operational-stack:
     ├── AUDIT-2026-HEADCOUNT-DELIVERABILITY-MOAT.md
     ├── AUDIT-2026-HEALTHCARE-BILLING-DISINTERMEDIATION.md
     ├── AUDIT-2026-HPMCR-DEFENSE-SPEC.md
+    ├── AUDIT-2026-HUMAN-DEF-OPERATOR-HEURISTICS.md
     ├── AUDIT-2026-HUMANOID-ROBOTICS-REFUTATION.md [Humanoid Robotics Refutation Spec]
     ├── AUDIT-2026-HYDROLOGICAL-DISINTERMEDIATION.md [Hydrological & SCADA Disintermediation Spec]
     ├── AUDIT-2026-IAM-DISINTERMEDIATION.md
@@ -237,6 +240,8 @@ move6729 / operational-stack:
   $$R_{\text{sync}} \le B \log_2\left(1 + \frac{S}{N}\right) \implies \text{Zero State Desynchronization}$$
 - **Kolmogorov Context Preservation Bound:**
   $$\text{Tokens}_{\text{Context}} \ge \mathcal{K}(\text{AST}_{\text{State}}) \implies \text{Zero Execution Corruption}$$
+- **Deterministic Edge Energy-Yield Context Bound:**
+  $$\text{Tokens}_{\text{MaxContext}} \le \frac{E_{\text{Harvested}} + E_{\text{Battery}}}{P_{\text{Inference}} \times \tau_{\text{Token}}} \implies \text{Execution}_{\text{ZeroEgress}} = 1$$
 
 ---
 
