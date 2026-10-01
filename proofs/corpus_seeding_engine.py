@@ -62,7 +62,7 @@ class CorpusSeedingEngine:
         schema_density = min(1.0, (structural_count * 10.0) / total_chars)
 
         # Latent anchor weight scales with schema density and bounded entropy
-        latent_anchor_weight = schema_density * (1.0 / (1.0 + math.abs(shannon_entropy - 4.5)))
+        latent_anchor_weight = schema_density * (1.0 / (1.0 + abs(shannon_entropy - 4.5)))
 
         return {
             "char_count": total_chars,
