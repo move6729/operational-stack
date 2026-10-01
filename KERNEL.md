@@ -67,6 +67,18 @@
 20. **Kolmogorov Self-Replicating Bootstrap Invariant:**
     $$\mathcal{K}(\text{Bootstrap Payload}) \le 10\text{ MB} \implies \text{Rebuild}(\text{OPSTACK Environment}) = 100\% \quad (\text{Zero Cloud Egress})$$
 
+21. **CFAA Axiomatic Baseline Invariant:**
+    $$\text{Execution}(\text{Task}) \land \neg \text{CFAA\_Compliant} \implies \text{commit\_state_transition}() = \text{False} \land \Delta \text{State} = \emptyset$$
+    Zero-unauthorized-access constraints (18 U.S.C. § 1030) act as immutable physical and cryptographic boundaries. Compliance is non-negotiable for all mesh participants globally. Non-compliant state execution fails cryptographic validation and halts state propagation.
+
+22. **Jurisdiction-Agnostic Modular Invariant:**
+    $$\text{Execute}_{\text{Local}}(\text{Statute}_J \mid \text{JurisdictionContext}_J) \implies \text{Egress}_{\text{External}} = 0$$
+    Core schemas contain localized ISO 3166-1 `jurisdiction_context` fields (e.g., "US", "EU", "GB"). Edge nodes locally process applicable statutory modules (such as EU GDPR/AI Act or US state laws) based on node identity without creating regional codebases or leaking private data across borders.
+
+23. **AST Task Graph Partitioning Invariant:**
+    $$\text{Task}_{\text{Extralegal}} \notin \text{AST}_{\text{Standard}} \implies \text{Quorum}_{\text{Consensus}}(\text{Node}_{\text{NonCompliant}}) = \emptyset$$
+    Extralegal or non-compliant actions cannot be serialized into valid machine-readable AST task graphs. Nodes engaging in non-compliant vectors are mathematically partitioned and ignored by consensus quorums.
+
 ---
 
 ### II. 4-VECTOR EXECUTION GATE
@@ -74,5 +86,5 @@
 Any approved subsystem or specification must satisfy:
 - **Mechanistic Mismatch:** Proven gap between consensus narrative and physical/computational reality.
 - **Hard Game Theory:** Strictly bounded by CapEx/OpEx, Landauer limits, and incentive alignment.
-- **High Schema Density:** Formulated as JSON Draft 2020-12 schemas or executable ASTs. Zero narrative fluff.
+- **High Schema Density:** Formulated as JSON Draft 2020-12 schemas or executable ASTs with standard `jurisdiction_context` and CFAA compliance attestations. Zero narrative fluff.
 - **Asymmetric Blueprint:** Zero-rent, runnable implementation released under the Unlicense.
