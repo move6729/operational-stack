@@ -1,0 +1,162 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/move6729/operational-stack/main/schema/hydro_telemetry.json",
+  "title": "OpenHydroTelemetryGraph",
+  "description": "Bare-Metal Sovereign Hydrological & Cyber-Physical Actuator Graph (OPEN-HYDRO-v1.0). Defines zero-trust water flow telemetry, purity metrics, local cistern states, and air-gapped actuator isolation bounds.",
+  "type": "object",
+  "required": [
+    "system_id",
+    "timestamp_utc",
+    "water_rights_profile",
+    "telemetry",
+    "actuators",
+    "isolation_state",
+    "proof_hash"
+  ],
+  "properties": {
+    "system_id": {
+      "type": "string",
+      "pattern": "^HYDRO-[A-Z0-9]{8,16}$",
+      "description": "Unique cryptographic hardware identifier for local hydrological control unit."
+    },
+    "timestamp_utc": {
+      "type": "string",
+      "format": "date-time",
+      "description": "UTC ISO-8601 timestamp of telemetry capture."
+    },
+    "water_rights_profile": {
+      "type": "object",
+      "required": [
+        "jurisdiction",
+        "allocation_type",
+        "statutory_daily_limit_liters",
+        "rainwater_harvesting_exempt"
+      ],
+      "properties": {
+        "jurisdiction": {
+          "type": "string",
+          "description": "Legal jurisdiction dictating statutory water rights."
+        },
+        "allocation_type": {
+          "type": "string",
+          "enum": [
+            "RIPARIAN",
+            "PRIOR_APPROPRIATION",
+            "MUNICIPAL_UTILITY",
+            "PRIVATE_WELL_EXEMPT",
+            "OFF_GRID_CATCHMENT"
+          ]
+        },
+        "statutory_daily_limit_liters": {
+          "type": "number",
+          "minimum": 0.0,
+          "description": "Statutory maximum daily extraction or usage allowance."
+        },
+        "rainwater_harvesting_exempt": {
+          "type": "boolean",
+          "description": "Indicates if rainwater catchment is legally exempt from municipal utility metering."
+        }
+      }
+    },
+    "telemetry": {
+      "type": "object",
+      "required": [
+        "flow_rate_lpm",
+        "daily_accumulated_liters",
+        "cistern_fill_percentage",
+        "ph_level",
+        "turbidity_ntu",
+        "total_dissolved_solids_ppm"
+      ],
+      "properties": {
+        "flow_rate_lpm": {
+          "type": "number",
+          "minimum": 0.0,
+          "description": "Current flow rate in liters per minute."
+        },
+        "daily_accumulated_liters": {
+          "type": "number",
+          "minimum": 0.0,
+          "description": "Total water volume extracted or distributed during current 24-hour cycle."
+        },
+        "cistern_fill_percentage": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 100.0,
+          "description": "Current capacity level of local water storage cisterns."
+        },
+        "ph_level": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 14.0,
+          "description": "Real-time acidity/alkalinity measurement."
+        },
+        "turbidity_ntu": {
+          "type": "number",
+          "minimum": 0.0,
+          "description": "Nephelometric Turbidity Units measuring water clarity."
+        },
+        "total_dissolved_solids_ppm": {
+          "type": "number",
+          "minimum": 0.0,
+          "description": "Total dissolved solids in parts per million."
+        }
+      }
+    },
+    "actuators": {
+      "type": "object",
+      "required": [
+        "primary_well_pump",
+        "electro_coagulation_filter",
+        "distribution_solenoid",
+        "utility_bypass_valve"
+      ],
+      "properties": {
+        "primary_well_pump": {
+          "type": "string",
+          "enum": ["ACTIVE", "STANDBY", "LOCKED_OFF", "OVERRIDE_REJECTED"]
+        },
+        "electro_coagulation_filter": {
+          "type": "string",
+          "enum": ["ACTIVE", "FLUSHING", "STANDBY", "FAULT"]
+        },
+        "distribution_solenoid": {
+          "type": "string",
+          "enum": ["OPEN", "CLOSED", "THROTTLED"]
+        },
+        "utility_bypass_valve": {
+          "type": "string",
+          "enum": ["ISOLATED_AIR_GAP", "CONNECTED_READ_ONLY", "EMERGENCY_DRAW"]
+        }
+      }
+    },
+    "isolation_state": {
+      "type": "object",
+      "required": [
+        "air_gap_active",
+        "external_scada_override_blocked",
+        "local_silicon_authority"
+      ],
+      "properties": {
+        "air_gap_active": {
+          "type": "boolean",
+          "description": "True if external network control paths are physically or logically severed."
+        },
+        "external_scada_override_blocked": {
+          "type": "boolean",
+          "description": "True if remote utility shut-off signals have been neutralized."
+        },
+        "local_silicon_authority": {
+          "type": "boolean",
+          "description": "True if actuation logic relies strictly on edge compute evaluation."
+        }
+      }
+    },
+    "proof_hash": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$",
+      "description": "SHA-256 state commitment hash across all telemetry parameters."
+    }
+  },
+  "additionalProperties": false
+}

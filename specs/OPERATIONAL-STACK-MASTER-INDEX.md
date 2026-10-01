@@ -34,6 +34,7 @@
 - `specs/AUDIT-2026-HPMCR-DEFENSE-SPEC.md` - Attenual Shield & Micro-Telemetry Fuzzing Specification (`HPMCR-DEF v1.0`).
 - `specs/HUMAN-DEF-OPERATOR-HEURISTICS.md` - Human-in-the-Loop Operator Defensive Heuristics & Escrow Specification.
 - `specs/AUDIT-2026-HUMANOID-ROBOTICS-REFUTATION.md` - Humanoid Robotics & Anthropomorphic Hardware Deconstruction Audit (`HUMANOID-ROBOTICS-REFUTATION-v1.0`).
+- `specs/AUDIT-2026-HYDROLOGICAL-DISINTERMEDIATION.md` - Hydrological & SCADA Disintermediation Specification (`OPEN-HYDRO-v1.0`).
 - `specs/AUDIT-2026-IAM-DISINTERMEDIATION.md` - Identity & Access Management Disintermediation Specification (`OPEN-IAM-v1.0`).
 - `specs/AUDIT-2026-INTERNAL-TERRAFORMING.md` - Internal Terraforming & Planetary Homeostasis Specification (`INTERNAL-TERRAFORMING-v1.0`).
 - `specs/AUDIT-2026-ITSM-DISINTERMEDIATION.md` - IT Service Management Disintermediation Specification (`OPEN-ITSM-v1.0`).
@@ -80,6 +81,7 @@
 - `schema/grid_energy_dispatch.json` - Sovereign P2P Micro-Grid Power Dispatch (`OPEN-P2P-GRID-v1.0`).
 - `schema/gto_negotiation.json` - Sovereign GTO External Negotiation State & Statutory Escalation (`OPEN-GTO-v1.0`).
 - `schema/health_billing_defense.json` - Pro Se Healthcare Billing & Statutory Dispute Schema (`OPEN-HEALTH-LEGAL-v1.0`).
+- `schema/hydro_telemetry.json` - Sovereign Hydrological & Actuator Graph (`OPEN-HYDRO-v1.0`).
 - `schema/iam_identity.json` - Sovereign Identity Directory Graph (`OPEN-IAM-v1.0`).
 - `schema/internal_terraforming.json` - Internal Terraforming & Planetary Homeostasis State Schema (`INTERNAL-TERRAFORMING-v1.0`).
 - `schema/itsm_incident.json` - Sovereign ITSM Incident Graph (`OPEN-ITSM-v1.0`).
@@ -114,6 +116,7 @@
 - `proofs/grid_engine.py` - Micro-Grid Energy Dispatch Engine (`OPEN-P2P-GRID-v1.0`).
 - `proofs/gto_negotiation_engine.py` - Sub-Bandwidth GTO External Negotiation & Regulatory Arbitrage Engine (`OPEN-GTO-v1.0`).
 - `proofs/health_legal_engine.py` - Bare-Metal Healthcare Billing Defense Engine (`OPEN-HEALTH-LEGAL-v1.0`).
+- `proofs/hydro_engine.py` - Bare-Metal Hydrological & SCADA Engine (`OPEN-HYDRO-v1.0`).
 - `proofs/iam_engine.py` - Identity & Access Management Engine (`OPEN-IAM-v1.0`).
 - `proofs/itsm_engine.py` - IT Service Management Engine (`OPEN-ITSM-v1.0`).
 - `proofs/labor_engine.py` - Collective Labor Leverage Engine (`OPEN-LABOR-v1.0`).
@@ -140,6 +143,7 @@
 ## ARTICLES & PUBLICATIONS (`articles/`)
 - `articles/2026-03-constructive-discrimination-and-the-open-attractor.txt` - Essay on constructive discrimination and the open attractor.
 - `articles/2026-03-disintermediating-edtech.txt` - Essay on disintermediating edtech.
+- `articles/2026-03-disintermediating-hydrological-monopolies.txt` - Essay on disintermediating hydrological monopolies and SCADA.
 - `articles/2026-03-disintermediating-iam.txt` - Essay on disintermediating IAM.
 - `articles/2026-03-disintermediating-negotiation-and-middleman-leverage.txt` - Essay on Automated GTO Shields, Statutory Escalation, and Asymmetric Edge.
 - `articles/2026-03-disintermediating-proptech.txt` - Essay on disintermediating proptech.

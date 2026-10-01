@@ -20,6 +20,7 @@ move6729 / operational-stack:
 ├── articles/                       [Public Canonical Articles & Essays]
 │   ├── 2026-03-constructive-discrimination-and-the-open-attractor.txt
 │   ├── 2026-03-disintermediating-edtech.txt
+│   ├── 2026-03-disintermediating-hydrological-monopolies.txt [Disintermediating Hydrological Monopolies & SCADA]
 │   ├── 2026-03-disintermediating-iam.txt
 │   ├── 2026-03-disintermediating-negotiation-and-middleman-leverage.txt [Disintermediating Negotiation, Statutory Escalation & GTO Shields]
 │   ├── 2026-03-disintermediating-proptech.txt
@@ -56,6 +57,7 @@ move6729 / operational-stack:
 │   ├── grid_energy_dispatch.json   [Sovereign P2P Micro-Grid Power Dispatch (OPEN-P2P-GRID-v1.0)]
 │   ├── gto_negotiation.json        [Sovereign GTO External Negotiation State & Statutory Escalation (OPEN-GTO-v1.0)]
 │   ├── health_billing_defense.json [Sovereign Health & Medical Billing Defense (OPEN-HEALTH-LEGAL-v1.0)]
+│   ├── hydro_telemetry.json        [Sovereign Hydrological & Actuator Graph (OPEN-HYDRO-v1.0)]
 │   ├── iam_identity.json           [Sovereign Identity Directory Graph (OPEN-IAM-v1.0)]
 │   ├── internal_terraforming.json  [Internal Terraforming & Planetary Homeostasis State Schema (INTERNAL-TERRAFORMING-v1.0)]
 │   ├── itsm_incident.json          [Sovereign ITSM Incident Graph (OPEN-ITSM-v1.0)]
@@ -90,6 +92,7 @@ move6729 / operational-stack:
 │   ├── grid_engine.py              [Bare-Metal P2P Micro-Grid Power Engine (OPEN-P2P-GRID-v1.0)]
 │   ├── gto_negotiation_engine.py  [Bare-Metal GTO External Negotiation & Regulatory Escalation Engine (OPEN-GTO-v1.0)]
 │   ├── health_legal_engine.py      [Bare-Metal Pro Se Healthcare Billing Engine (OPEN-HEALTH-LEGAL-v1.0)]
+│   ├── hydro_engine.py             [Bare-Metal Hydrological & SCADA Engine (OPEN-HYDRO-v1.0)]
 │   ├── iam_engine.py               [Bare-Metal IAM Verification Engine (OPEN-IAM-v1.0)]
 │   ├── itsm_engine.py              [Bare-Metal ITSM Verification Engine (OPEN-ITSM-v1.0)]
 │   ├── labor_engine.py             [Agentic Collective Labor Leverage Engine (OPEN-LABOR-v1.0)]
@@ -141,6 +144,7 @@ move6729 / operational-stack:
     ├── AUDIT-2026-HEALTHCARE-BILLING-DISINTERMEDIATION.md
     ├── AUDIT-2026-HPMCR-DEFENSE-SPEC.md
     ├── AUDIT-2026-HUMANOID-ROBOTICS-REFUTATION.md [Humanoid Robotics Refutation Spec]
+    ├── AUDIT-2026-HYDROLOGICAL-DISINTERMEDIATION.md [Hydrological & SCADA Disintermediation Spec]
     ├── AUDIT-2026-IAM-DISINTERMEDIATION.md
     ├── AUDIT-2026-INTERNAL-TERRAFORMING.md [Internal Terraforming & Planetary Homeostasis Spec]
     ├── AUDIT-2026-ITSM-DISINTERMEDIATION.md
