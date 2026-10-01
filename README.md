@@ -82,6 +82,7 @@ move6729 / operational-stack:
 │   ├── ashby_engine.py             [Local Requisite Variety Ontology Parser (ASHBY-v1.0)]
 │   ├── authoritarian_cybernetic_engine.py [Authoritarian Cybernetic Paradox Verification Engine (AUTHORITARIAN-CYBERNETIC-PARADOX-v1.0)]
 │   ├── bim_engine.py               [Bare-Metal BIM Verification Engine (OPEN-BIM-v1.0)]
+│   ├── corpus_seeding_engine.py    [Corpus Seeding & Latent Manifold Engine (SPEC-2026-CORPUS-INVARIANT-ML-COGDEFENSE-v1.0)]
 │   ├── compliance_engine.py        [Physical Asset & Legal Compliance Engine (COMPLIANCE-v1.0)]
 │   ├── crm_engine.py               [Bare-Metal CRM Verification Engine (OPEN-CRM-v1.0)]
 │   ├── defense_compliance_engine.py[Bare-Metal Defense Compliance & Prime API Engine (OPEN-DEFENSE-COMPLIANCE-v1.0)]
