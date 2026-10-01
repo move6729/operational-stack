@@ -4,7 +4,7 @@ import math
 import random
 import hashlib
 import ipaddress
-from typing import Dict, Any, Tuple, List
+from typing import Dict, Any, Tuple, List, Optional
 
 class LMTITransportShield:
     """
@@ -17,6 +17,7 @@ class LMTITransportShield:
     - Drops payloads containing Authorization / Bearer headers or session tokens.
     - Uniform 1024-byte static block padding alignment to prevent packet length inspection.
     - Payload chunking/fragmentation into 1024-byte uniform blocks.
+    - Deterministic chunk reassembly to unpack chunk sequence headers.
     - Random latency fuzzing (1-15ms) to neutralize timing side-channels.
     """
     BLOCK_SIZE_BYTES = 1024
@@ -62,20 +63,72 @@ class LMTITransportShield:
         padding = os.urandom(padding_needed - 1) + bytes([pad_byte])
         return raw_bytes + padding
 
+    def unpad_payload_chunk(self, padded_bytes: bytes) -> bytes:
+        """Strips uniform block padding from received chunk."""
+        if len(padded_bytes) % self.BLOCK_SIZE_BYTES != 0 or len(padded_bytes) == 0:
+            return padded_bytes
+        padding_needed = padded_bytes[-1]
+        if padding_needed == 0:
+            padding_needed = self.BLOCK_SIZE_BYTES
+        return padded_bytes[:-padding_needed]
+
     def chunk_and_pad_payload(self, raw_bytes: bytes) -> List[bytes]:
         """Chunks payloads > 1024 bytes and pads each fragment to uniform 1024-byte block boundaries."""
         chunks = []
-        max_chunk_payload = self.BLOCK_SIZE_BYTES - 16  # Leave room for chunk sequence header
-        offset = 0
+        # Header: 4 bytes index, 4 bytes total chunks, 8 bytes payload length
+        max_chunk_payload = self.BLOCK_SIZE_BYTES - 16
         total_len = len(raw_bytes)
+        total_chunks = max(1, math.ceil(total_len / max_chunk_payload))
 
+        offset = 0
+        chunk_idx = 0
         while offset < total_len or len(chunks) == 0:
             chunk_data = raw_bytes[offset:offset + max_chunk_payload]
-            padded = self.pad_payload_chunk(chunk_data)
+            header = chunk_idx.to_bytes(4, 'big') + total_chunks.to_bytes(4, 'big') + len(chunk_data).to_bytes(8, 'big')
+            padded = self.pad_payload_chunk(header + chunk_data)
             chunks.append(padded)
             offset += max_chunk_payload
+            chunk_idx += 1
 
         return chunks
+
+    def reassemble_chunk_frames(self, chunked_frames: List[bytes]) -> Optional[bytes]:
+        """Reassembles 1024-byte chunked frames back into original payload."""
+        if not chunked_frames:
+            return None
+
+        reassembled_chunks: Dict[int, bytes] = {}
+        expected_total_chunks = None
+
+        for frame in chunked_frames:
+            if len(frame) % self.BLOCK_SIZE_BYTES != 0:
+                return None
+            unpadded = self.unpad_payload_chunk(frame)
+            if len(unpadded) < 16:
+                return None
+
+            chunk_idx = int.from_bytes(unpadded[:4], 'big')
+            total_chunks = int.from_bytes(unpadded[4:8], 'big')
+            data_len = int.from_bytes(unpadded[8:16], 'big')
+            chunk_data = unpadded[16:16 + data_len]
+
+            if expected_total_chunks is None:
+                expected_total_chunks = total_chunks
+            elif expected_total_chunks != total_chunks:
+                return None
+
+            reassembled_chunks[chunk_idx] = chunk_data
+
+        if len(reassembled_chunks) != expected_total_chunks:
+            return None
+
+        reconstructed = bytearray()
+        for idx in range(expected_total_chunks):
+            if idx not in reassembled_chunks:
+                return None
+            reconstructed.extend(reassembled_chunks[idx])
+
+        return bytes(reconstructed)
 
     def calculate_shannon_capacity(self, bandwidth_hz: float, snr_linear: float) -> float:
         """Calculates maximum theoretical Shannon channel capacity in bits/sec."""
@@ -123,6 +176,10 @@ class LMTITransportShield:
         jitter_sec = random.uniform(0.001, self.MAX_JITTER_MS / 1000.0)
         total_delay_sec = max(jitter_sec, min_tx_time_sec)
         time.sleep(total_delay_sec)
+
+        # Verify chunk reassembly invariant
+        reassembled = self.reassemble_chunk_frames(chunked_frames)
+        assert reassembled == raw_bytes, "Chunk reassembly parity check failed!"
 
         return {
             "source_node": self.pubkey_hash,
