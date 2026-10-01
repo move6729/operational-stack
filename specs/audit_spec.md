@@ -45,6 +45,9 @@ All canonical articles located in `articles/` MUST adhere to the following Subst
 4. **Metadata & Header Structure:**
    - Must include Title, Byline, and Unlicense statement in plain text.
 
+5. **Substack Index Immutability:**
+   - `articles/substack.json` is a read-only metadata export index populated exclusively via execution of `fetch_substack.py`. Manual edits or synthetic generation of `articles/substack.json` are strictly prohibited.
+
 ---
 
 ### III. TREE MAP & MASTER INDEX SYNCHRONIZATION AUDIT
