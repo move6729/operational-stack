@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AmbientIndifferenceProxyConfig",
+  "description": "Schema for sovereign local entropy injection during biological operator utility indifference state transitions (OPSTACK-KERNEL-v2.1 Invariants 24-27).",
+  "type": "object",
+  "properties": {
+    "jurisdiction_context": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}$",
+      "default": "US"
+    },
+    "cfaa_compliance_attestation": {
+      "type": "boolean",
+      "const": true
+    },
+    "utility_epsilon_threshold": {
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 0.05,
+      "default": 0.02,
+      "description": "Max utility variance delta score between options to qualify as equivalent utility."
+    },
+    "entropy_source": {
+      "type": "string",
+      "enum": ["HARDWARE_QRNG", "CHAOTIC_COUNTER_FALLBACK", "NOISE_HARVESTER"],
+      "default": "CHAOTIC_COUNTER_FALLBACK"
+    },
+    "biometric_telemetry_enabled": {
+      "type": "boolean",
+      "default": false
+    },
+    "fallback_input_latency_threshold_ms": {
+      "type": "integer",
+      "minimum": 100,
+      "maximum": 10000,
+      "default": 1200,
+      "description": "Hesitation latency threshold trigger when biometrics are null."
+    },
+    "high_impact_domain_override": {
+      "type": "boolean",
+      "default": false,
+      "description": "When true, forces utility epsilon threshold to 0.0 to guarantee mandatory human operator approval."
+    }
+  },
+  "required": [
+    "jurisdiction_context",
+    "cfaa_compliance_attestation",
+    "utility_epsilon_threshold",
+    "entropy_source"
+  ],
+  "additionalProperties": false
+}

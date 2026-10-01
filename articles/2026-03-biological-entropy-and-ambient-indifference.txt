@@ -1,0 +1,15 @@
+Biological Entropy and the Ambient Indifference Proxy
+
+By Operational Stack Federation
+
+Licensed under Unlicense (Public Domain)
+
+Every time a human operator hesitates over a trivial digital choice, surveillance platforms harvest valuable telemetry. Micro-behavioral latency, temporal mouse jitter, and trivial preference choices feed centralized predictive profiling engines. These profiling models construct precise behavioral maps of individuals not through high-stakes decisions, but through the endless stream of zero-consequence choices forced upon modern web users daily.
+
+The system failure lies in treating every micro-choice as a meaningful expression of human intentionality. When two execution paths or routing options offer functionally identical utility, forcing a human operator to deliberate wastes cognitive bandwidth while surrendering privacy. Calculating high-parameter human decisions across trivial choices represents a thermodynamic loss for the individual operator and a computational gain for cloud profiling architectures.
+
+The Operational Stack resolves this asymmetry through the Ambient Indifference Proxy and biological entropy alignment. When option utility delta falls below a strict mathematical threshold, the local bare-metal exocortex steps in. Rather than wasting human decision energy or transmitting deterministic click patterns to remote servers, the local node harvests hardware quantum entropy or chaotic CPU timing jitter to instantly pick an option on behalf of the operator.
+
+Crucially, this architecture strictly preserves biological human agency. Automated entropy injection is mathematically restricted to low-impact, equivalent-utility domain states. In high-impact execution contexts or high-capital allocations, the indifference threshold is hard-locked to zero, mandating explicit human operator escrow and decision authority. The machine never guesses what matters; strict AST domain cost functions enforce the boundary between automated noise injection and sovereign human choice.
+
+By automating ambient indifference at the local silicon tier, the biological operator regains cognitive sovereignty. Local noise generation collapses the signal-to-noise ratio of remote tracking systems, causing server-side profiling loss functions to diverge. Operating natively on salvaged consumer hardware, zero-rent edge nodes transform wasted human hesitation into a cryptographic shield against behavioral surveillance.

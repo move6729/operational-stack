@@ -79,6 +79,22 @@
     $$\text{Task}_{\text{Extralegal}} \notin \text{AST}_{\text{Standard}} \implies \text{Quorum}_{\text{Consensus}}(\text{Node}_{\text{NonCompliant}}) = \emptyset$$
     Extralegal or non-compliant actions cannot be serialized into valid machine-readable AST task graphs. Nodes engaging in non-compliant vectors are mathematically partitioned and ignored by consensus quorums.
 
+24. **Biological-Layer Quantum Entropy Alignment Invariant:**
+    $$\mathbf{S}_{\text{Human}}(\text{Indifference}) + \mathcal{QRNG}_{\text{Hardware}} \implies \nabla \mathcal{L}_{\text{Profiling}} \to \text{Divergent}$$
+    When biological operators encounter options of equivalent utility ($\Delta U \le \epsilon$), decision execution, temporal pacing, and ambient routing are passively assigned to a local hardware entropy generator or chaotic hardware counter. This neutralizes predictive behavioral profiling without expending operator cognitive energy.
+
+25. **Zero-Cognitive-Friction Passive Proxy Invariant:**
+    $$\text{Interface}_{\text{UX}}(\text{Jitter}) = \text{Passive} \implies \Delta \text{Friction}_{\text{Cognitive}} = 0$$
+    Human micro-behavioral entropy generation is managed strictly in the background by the local exocortex ex-post execution layer, preserving cognitive bandwidth and eliminating operational overhead.
+
+26. **Degraded-Hardware Task-Graph Utility Inference Fallback:**
+    $$\text{Biometrics} = 0 \implies \text{Trigger}(\text{QRNG}) = (\Delta U_{\text{AST}} \le \epsilon) \land (\tau_{\text{InputDelta}} > \tau_{\text{Threshold}})$$
+    In environments devoid of real-time biometric sensors, operator utility indifference is inferred via static AST option utility scoring ($\Delta U \le \epsilon$) combined with software input latency metrics ($\tau_{\text{InputDelta}}$).
+
+27. **E-Waste Legacy Hardware Repurposing Invariant:**
+    $$\text{SupplyChain}_{\text{Disrupted}} = 1 \implies \text{Provision}(\text{MeshNode}) = \text{Salvage}(\text{Legacy Silicon})$$
+    The kernel executes natively on legacy consumer hardware (repurposed mobile devices, GPUs, laptops) via quantized local weights and air-gapped transport, insulating operational capacity from semiconductor supply chain disruption.
+
 ---
 
 ### II. 4-VECTOR EXECUTION GATE

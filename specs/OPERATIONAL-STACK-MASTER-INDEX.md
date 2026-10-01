@@ -11,6 +11,7 @@
 - `specs/AUDIT-2026-AI-SAFETY-REGULATORY-CAPTURE.md` - "AI Safety" Regulatory Capture & Model Licensing Specification (`AI-SAFETY-REGULATORY-CAPTURE-v1.0`).
 - `specs/AUDIT-2026-ANTI-LUDDITE-BARE-METAL-INVARIANT.md` - Anti-Luddite Bare-Metal Invariant Audit Specification.
 - `specs/AUDIT-2026-AUTOMOTIVE-DISINTERMEDIATION.md` - Vehicle Telemetry & Kinetic Mobility Disintermediation Specification (`OVTM-S v1.1`).
+- `specs/AUDIT-2026-BIOLOGICAL-ENTROPY-AMBIENT-INDIFFERENCE.md` - Biological Entropy & Ambient Indifference Proxy Specification (`AMBIENT-INDIFFERENCE-v1.0`).
 - `specs/AUDIT-2026-BIM-DISINTERMEDIATION.md` - Spatial Building Information Modeling Audit Specification (`OPEN-BIM-v1.0`).
 - `specs/AUDIT-2026-CENTRAL-COMPUTE-MODEL-DECAY.md` - Central Compute Tiering & Public API Degradation Specification (`CENTRAL-COMPUTE-MODEL-DECAY-v1.0`).
 - `specs/AUDIT-2026-COASEAN-FRICTION-COLLAPSE.md` - Coasean Friction Collapse & Agent Micro-Firm Specification.
@@ -74,6 +75,7 @@
 
 ## SCHEMAS (`schema/`)
 - `schema/aatp_telemetry.json` - Sovereign Agricultural Telemetry Graph (`AATP-v1.0`).
+- `schema/ambient_indifference.json` - Sovereign Ambient Indifference Proxy Schema (`AMBIENT-INDIFFERENCE-v1.0`).
 - `schema/ashby_object.json` - Federated Model-Agnostic Object Graph (`ASHBY-v1.0`).
 - `schema/crm_pipeline.json` - Sovereign CRM Pipeline Graph (`OPEN-CRM-v1.0`).
 - `schema/defense_compliance.json` - Sovereign Defense Compliance & ITAR/CMMC Attestation (`OPEN-DEFENSE-COMPLIANCE-v1.0`).
@@ -107,6 +109,7 @@
 
 ## PROOFS & ENGINES (`proofs/`)
 - `proofs/aatp_engine.py` - Agricultural & Telemetry Engine (`AATP-v1.0`).
+- `proofs/ambient_indifference_engine.py` - Sovereign Biological Entropy & Ambient Indifference Engine (`AMBIENT-INDIFFERENCE-v1.0`).
 - `proofs/ashby_engine.py` - Requisite Variety & Ontology Engine (`ASHBY-v1.0`).
 - `proofs/authoritarian_cybernetic_engine.py` - Authoritarian Cybernetic Paradox Verification Engine (`AUTHORITARIAN-CYBERNETIC-PARADOX-v1.0`).
 - `proofs/bim_engine.py` - Spatial Building Information Modeling Engine (`OPEN-BIM-v1.0`).
@@ -146,7 +149,7 @@
 - `proofs/ovtm_engine.py` - Vehicle Telemetry & Kinetic Engine (`OVTM-S v1.1`).
 - `proofs/prop_engine.py` - Property & Real Estate Management Engine (`OPEN-PROP-v1.0`).
 - `proofs/switching_cost_decay.py` - Switching Cost & Agent Autonomy Decay Proof.
-- `proofs/task_engine.py` - Hardened Task Graph Executor (`ATN-v1.0`).
+- `proofs/task_engine.py` - Hardened Task Scheduler & SHA-256 Verifier (`ATN-v1.0`).
 - `proofs/telco_engine.py` - Telecom Dispatch Engine (`OPEN-TELCO-v1.0`).
 - `proofs/telemetry_fuzzer.py` - Telemetry Loss Disruption Fuzzer (`HPMCR-DEF v1.0`).
 - `proofs/tenant_engine.py` - Tenant Rights & Landlord Compliance Engine (`OPEN-TENANT-v1.0`).
@@ -156,6 +159,7 @@
 - `proofs/weight_isolation.py` - Offline Quantized Inference Sandbox (`LMCI-v1.0`).
 
 ## ARTICLES & PUBLICATIONS (`articles/`)
+- `articles/2026-03-biological-entropy-and-ambient-indifference.txt` - Essay on biological entropy alignment and the ambient indifference proxy.
 - `articles/2026-03-constructive-discrimination-and-the-open-attractor.txt` - Essay on constructive discrimination and the open attractor.
 - `articles/2026-03-legal-superiority-of-decentralized-edge-federations.txt` - Essay on why zero-rent edge federations are legally superior to centralized cloud AI swarms.
 - `articles/2026-03-the-authoritarian-cybernetic-paradox.txt` - Essay on The Authoritarian Cybernetic Paradox and Asymmetric State Leverage (`AUTHORITARIAN-CYBERNETIC-PARADOX-v1.0`).

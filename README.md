@@ -18,6 +18,7 @@ move6729 / operational-stack:
 ├── README.md                       [Master Context & System Specification Index]
 │
 ├── articles/                       [Public Canonical Articles & Essays]
+│   ├── 2026-03-biological-entropy-and-ambient-indifference.txt [Biological Entropy & Ambient Indifference Essay]
 │   ├── 2026-03-constructive-discrimination-and-the-open-attractor.txt
 │   ├── 2026-03-legal-superiority-of-decentralized-edge-federations.txt [Legal Superiority of Decentralized Edge Federations Essay]
 │   ├── 2026-03-the-authoritarian-cybernetic-paradox.txt [The Authoritarian Cybernetic Paradox Essay]
@@ -48,6 +49,7 @@ move6729 / operational-stack:
 │
 ├── schema/                         [Core & Disintermediation JSON Schemas (Draft 2020-12)]
 │   ├── aatp_telemetry.json         [Sovereign Agricultural Telemetry Graph (AATP-v1.0)]
+│   ├── ambient_indifference.json   [Sovereign Ambient Indifference Proxy Schema (AMBIENT-INDIFFERENCE-v1.0)]
 │   ├── ashby_object.json           [Federated Model-Agnostic Object Graph (ASHBY-v1.0)]
 │   ├── crm_pipeline.json           [Sovereign CRM Pipeline Graph (OPEN-CRM-v1.0)]
 │   ├── defense_compliance.json     [Sovereign Defense Compliance & ITAR/CMMC Attestation (OPEN-DEFENSE-COMPLIANCE-v1.0)]
@@ -81,6 +83,7 @@ move6729 / operational-stack:
 │
 ├── proofs/                         [Runnable Zero-Dependency Deterministic Verification Engines]
 │   ├── aatp_engine.py              [Bare-Metal Agricultural Verification Engine (AATP-v1.0)]
+│   ├── ambient_indifference_engine.py [Sovereign Biological Entropy Engine (AMBIENT-INDIFFERENCE-v1.0)]
 │   ├── ashby_engine.py             [Local Requisite Variety Ontology Parser (ASHBY-v1.0)]
 │   ├── authoritarian_cybernetic_engine.py [Authoritarian Cybernetic Paradox Verification Engine (AUTHORITARIAN-CYBERNETIC-PARADOX-v1.0)]
 │   ├── bim_engine.py               [Bare-Metal BIM Verification Engine (OPEN-BIM-v1.0)]
@@ -110,13 +113,13 @@ move6729 / operational-stack:
 │   ├── labor_engine.py             [Agentic Collective Labor Leverage Engine (OPEN-LABOR-v1.0)]
 │   ├── mesh_discovery_engine.py    [Zero-DNS Physical Mesh Discovery Engine (OPEN-MESH-DISCOVERY-v1.0)]
 │   ├── micro_settlement_engine.py  [Sub-Cent Thermodynamic Micro-Settlement Engine (OPEN-SETTLEMENT-v1.0)]
-│   ├── model_tiering_engine.py     [Bare-Metal Model Tiering Verifier (CENTRAL-COMPUTE-MODEL-DECAY-v1.0)]
+│   ├── model_tiering_engine.py     [Bare-Metal Central Compute Model Tiering Verifier (CENTRAL-COMPUTE-MODEL-DECAY-v1.0)]
 │   ├── narrative_node_engine.py    [Bare-Metal Regulatory Capture & Narrative Node Verifier]
 │   ├── offgrid_engine.py           [Self-Sovereign Physical Infra & Off-Grid Engine (OPEN-INFRA-v1.0)]
 │   ├── omrp_engine.py              [Deterministic State Engine Proof (OMRP-v1.0)]
 │   ├── ops_engine.py               [Bare-Metal Customer Ops Verification Engine (OPEN-OPS-v1.0)]
 │   ├── osint_shield.py             [Bare-Metal OSINT Defense Engine (OPEN-OSINT-SHIELD-v1.0)]
-│   ├── ovtm_auditor.py             [Kinetic Hardware Isolation Auditor (OVTM-S v1.1)]
+│   ├── ovtm_auditor.py             [Kinetic Mobility Safety Isolation Auditor (OVTM-S v1.1)]
 │   ├── ovtm_engine.py              [Bare-Metal Vehicle Telemetry Engine (OVTM-S v1.1)]
 │   ├── prop_engine.py              [Bare-Metal Property Verification Engine (OPEN-PROP-v1.0)]
 │   ├── switching_cost_decay.py     [Mathematical Proof of SaaS Switching Cost Collapse]
@@ -135,6 +138,7 @@ move6729 / operational-stack:
     ├── AUDIT-2026-AI-SAFETY-REGULATORY-CAPTURE.md [AI Safety Regulatory Capture Spec]
     ├── AUDIT-2026-ANTI-LUDDITE-BARE-METAL-INVARIANT.md
     ├── AUDIT-2026-AUTOMOTIVE-DISINTERMEDIATION.md
+    ├── AUDIT-2026-BIOLOGICAL-ENTROPY-AMBIENT-INDIFFERENCE.md [Biological Entropy & Ambient Indifference Spec]
     ├── AUDIT-2026-BIM-DISINTERMEDIATION.md
     ├── AUDIT-2026-CENTRAL-COMPUTE-MODEL-DECAY.md [Central Compute Model Tiering Spec]
     ├── AUDIT-2026-COASEAN-FRICTION-COLLAPSE.md
