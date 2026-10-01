@@ -161,7 +161,7 @@ move6729 / operational-stack:
     ├── AUDIT-2026-IAM-DISINTERMEDIATION.md
     ├── AUDIT-2026-INTERNAL-TERRAFORMING.md [Internal Terraforming & Planetary Homeostasis Spec]
     ├── AUDIT-2026-ITSM-DISINTERMEDIATION.md
-    ├── AUDIT-2026-KERNEL-TELEMETRY-SHIELD.md
+    ├── AUDIT-2026-KERNEL-TELEMETRY-SHIELD.md [Air-Gapped Out-of-Band & Hardened Mesh Shield Spec]
     ├── AUDIT-2026-LABOR-COLLECTIVE-LEVERAGE.md
     ├── AUDIT-2026-LANGUAGE-SERIALIZATION-PARADIGM.md
     ├── AUDIT-2026-MICROGRID-COMPUTE-SCHEDULER.md
@@ -252,6 +252,18 @@ move6729 / operational-stack:
   $$\text{Tokens}_{\text{Context}} \ge \mathcal{K}(\text{AST}_{\text{State}}) \implies \text{Zero Execution Corruption}$$
 - **Deterministic Edge Energy-Yield Context Bound:**
   $$\text{Tokens}_{\text{MaxContext}} \le \frac{E_{\text{Harvested}} + E_{\text{Battery}}}{P_{\text{Inference}} \times \tau_{\text{Token}}} \implies \text{Execution}_{\text{ZeroEgress}} = 1$$
+- **Air-Gapped Out-of-Band Transport:**
+  $$\text{Status}(\text{IP}) = 0 \implies \text{Transport}(\text{StateCommit}) \in \{\text{Sub-GHz}, \text{Ambient BLE}, \text{Optical}, \text{Sneakernet}\}$$
+- **Ephemeral RAM Purge:**
+  $$\text{Sensor}(\text{Tamper} \lor \text{PowerLoss}) = 1 \implies \text{Wipe}(\mathbf{K}_{\text{Ephemeral RAM}}) < 100\mu\text{s}$$
+- **Byzantine Fault Tolerant Quorum:**
+  $$N \ge 3f + 1 \implies \text{Consensus}(\mathcal{E}_{\text{Local}}) = \text{True} \quad (\text{Tolerating } f \text{ Malicious Nodes})$$
+- **Optical & Ultrasonic Free-Space Physical Layer:**
+  $$\text{Status}(\text{RF Jamming}) = 1 \implies \text{Transport}(\text{MeshFrame}) \in \{\text{Optical}_{\text{LineOfSight}}, \text{Acoustic}_{\text{Ultrasonic}}\}$$
+- **Event-Driven Power Anti-Correlation Fuzzing:**
+  $$\text{Sensor}(\text{SideChannelAttack}) = 1 \implies P_{\text{Total}}(t) = P_{\text{Inference}}(t) + P_{\text{Noise}}(t) = C_{\text{Constant}}$$
+- **Kolmogorov Self-Replicating Bootstrap Seed:**
+  $$\mathcal{K}(\text{Bootstrap Payload}) \le 10\text{ MB} \implies \text{Rebuild}(\text{OPSTACK Environment}) = 100\% \quad (\text{Zero Cloud Egress})$$
 
 ---
 

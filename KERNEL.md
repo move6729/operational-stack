@@ -49,6 +49,24 @@
 14. **Deterministic Edge Energy-Yield Context Bound:**
     $$\text{Tokens}_{\text{MaxContext}} \le \frac{E_{\text{Harvested}} + E_{\text{Battery}}}{P_{\text{Inference}} \times \tau_{\text{Token}}} \implies \text{Execution}_{\text{ZeroEgress}} = 1$$
 
+15. **Air-Gapped Out-of-Band Physical Transport Invariant:**
+    $$\text{Status}(\text{IP}) = 0 \implies \text{Transport}(\text{StateCommit}) \in \{\text{Sub-GHz}, \text{Ambient BLE}, \text{Optical}, \text{Sneakernet}\}$$
+
+16. **Ephemeral Volatile Memory Purge Invariant:**
+    $$\text{Sensor}(\text{Tamper} \lor \text{PowerLoss}) = 1 \implies \text{Wipe}(\mathbf{K}_{\text{Ephemeral RAM}}) < 100\mu\text{s}$$
+
+17. **Byzantine Fault Tolerant Quorum Invariant:**
+    $$N \ge 3f + 1 \implies \text{Consensus}(\mathcal{E}_{\text{Local}}) = \text{True} \quad (\text{Tolerating } f \text{ Malicious Nodes})$$
+
+18. **Optical & Acoustic Free-Space Physical Layer Invariant:**
+    $$\text{Status}(\text{RF Jamming}) = 1 \implies \text{Transport}(\text{MeshFrame}) \in \{\text{Optical}_{\text{LineOfSight}}, \text{Acoustic}_{\text{Ultrasonic}}\}$$
+
+19. **Event-Driven Power Anti-Correlation Fuzzing Invariant:**
+    $$\text{Sensor}(\text{SideChannelAttack}) = 1 \implies P_{\text{Total}}(t) = P_{\text{Inference}}(t) + P_{\text{Noise}}(t) = C_{\text{Constant}}$$
+
+20. **Kolmogorov Self-Replicating Bootstrap Invariant:**
+    $$\mathcal{K}(\text{Bootstrap Payload}) \le 10\text{ MB} \implies \text{Rebuild}(\text{OPSTACK Environment}) = 100\% \quad (\text{Zero Cloud Egress})$$
+
 ---
 
 ### II. 4-VECTOR EXECUTION GATE

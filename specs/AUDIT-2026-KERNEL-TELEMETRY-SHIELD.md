@@ -1,118 +1,53 @@
-# AUDIT-2026-KERNEL-TELEMETRY-SHIELD: Ring-0 eBPF Telemetry Interception & Hardware Isolation (HPMCR-eBPF)
+# AUDIT SPECIFICATION: KERNEL TRANSPORT & LOCAL MESH ISOLATION SHIELD
 
-**Classification:** System Architecture Specification / Low-Level Security Audit  
-**Canonical Reference:** `OPSTACK-SPEC-HPMCR-eBPF-v1.0`  
-**Target Infrastructure:** Linux Kernel 5.15+, eBPF Subsystem, Seccomp-BPF, Sovereign Local Nodes  
+**Reference:** `LMTI-v1.0`  
 **License:** Unlicense (Public Domain — Zero-Rent Federation)  
 
 ---
 
-## I. SYSTEM DIAGNOSIS: USER-SPACE SHIELD FAILURE MODES & vDSO BYPASSES
+### I. EXECUTIVE SUMMARY & ARCHITECTURAL SCOPE
 
-User-space telemetry proxies (HTTP middleware, local DNS sinkholes, browser extensions) fail against hostile, closed-source enterprise binaries. Proprietary runtimes bypass user-space hooks by invoking direct system calls or hardware instructions to extract fingerprint vectors:
-
-1. **vDSO Bypass Mechanics:** Modern standard C libraries route high-frequency temporal queries (`clock_gettime`, `gettimeofday`) through the **vDSO** (virtual Dynamic Shared Object) page mapped directly into process memory. These calls execute entirely in user space without triggering kernel syscall entry points (`sys_enter_clock_gettime`), bypassing standard `kprobe` hooks.
-2. **Hardware Instruction Telemetry:** Assembly-level instructions like `RDTSC`/`RDTSCP` (Read Time-Stamp Counter) and `CPUID` execute at Ring 3 without triggering system calls.
-3. **Hardware Descriptor Leaks:** Querying `/proc/cpuinfo`, `/sys/class/dmi/id/product_uuid`, or network interface MAC addresses yields unique hardware identifiers.
-
-To preserve cybernetic sovereignty (Axiom 7), micro-telemetry neutralization must execute at **Ring 0 via eBPF cgroup/socket filters combined with `seccomp-bpf` syscall enforcement**.
+The LMTI-v1.0 specification defines the local-first mesh transport and telemetry shield for edge nodes operating under adversarial environmental conditions, state surveillance, spectrum jamming, physical power-line sniffing, or network partition. It enforces zero-DNS local peer discovery, zero-leak packet padding (1024-byte static frame alignment), out-of-band physical transport fallbacks, optical/acoustic free-space communication, event-driven TEMPEST power anti-correlation fuzzing, ephemeral RAM purge triggers, self-replicating bootstrap payloads, and $3f + 1$ Byzantine Fault Tolerant (BFT) state reconciliation.
 
 ---
 
-## II. ARCHITECTURE: `HPMCR-eBPF` SUBSYSTEM
+### II. CORE INVARIANTS & FUNCTIONAL REQUIREMENTS
 
-```text
-+---------------------------------------------------------------------------------+
-| Proprietary / Un-Sandboxed Application Binary (User Space)                      |
-+---------------------------------------------------------------------------------+
-         |                                     |
-         | Syscall Reads (/sys, /proc)         | High-Precision Clock Read
-         v                                     v
-+------------------------------------+ +------------------------------------------+
-| Seccomp-BPF Syscall Filter         | | Disable vDSO via prctl / seccomp        |
-| Trap read/openat on DMI/CPU paths  | | Force fallback to kernel sys_enter     |
-+------------------------------------+ +------------------------------------------+
-                  |                                     |
-                  +------------------+------------------+
-                                     |
-                                     v
-+---------------------------------------------------------------------------------+
-| Linux Kernel Ring 0 (eBPF Tracepoint & Socket Filter Subsystem)                 |
-|                                                                                 |
-|  +-----------------------+  +----------------------+  +----------------------+  |
-|  | tracepoint/sys_enter  |  | BPF_PROG_TYPE_CGROUP |  | Monotonic Timer      |  |
-|  | Intercept /proc & /sys|  | Monitored Egress     |  | Coarsening Engine    |  |
-|  +-----------------------+  +----------------------+  +----------------------+  |
-|                                                                                 |
-| eBPF BPF_MAP_TYPE_RINGBUF (Max 256K Entries) -> Event Audit Logger / Drop       |
-+---------------------------------------------------------------------------------+
-         |                          |                          |
-         v                          v                          v
-+---------------------------------------------------------------------------------+
-| Synthetic Hardware Descriptors & Monotonic Coarsened Timestamps Returned        |
-+---------------------------------------------------------------------------------+
-```
+1. **Zero-DNS Local Physical Discovery:**
+   - Peer discovery MUST bypass centralized DNS servers, public WHOIS records, and ISP routing tables.
+   - Discovery MUST execute via cryptographically authenticated local broadcast frames, local mDNS/Gossip protocols, or direct sub-GHz radio links.
 
----
+2. **Fixed-Frame Packet Padding (Traffic-Analysis Defusal):**
+   - Every mesh transport frame MUST be padded to exactly 1024 bytes regardless of payload length.
+   - Micro-timing delay fuzzing ($\tau \in [5\text{ms}, 25\text{ms}]$) MUST be applied to prevent statistical side-channel inference.
 
-## III. MATHEMATICAL NOISE & FUZZING INVARIANTS
+3. **Air-Gapped Out-of-Band Physical Transport Invariant (KERNEL.md Rule 15):**
+   - Upon IP connectivity partition or network shutdown ($\text{Status}(\text{IP}) = 0$), the node MUST automatically switch transport interfaces to out-of-band physical mediums (sub-GHz/LoRa radio, ambient BLE, optical pulses, or Sneakernet USB storage commits):
+     $$\text{Status}(\text{IP}) = 0 \implies \text{Transport}(\text{StateCommit}) \in \{\text{Sub-GHz}, \text{Ambient BLE}, \text{Optical}, \text{Sneakernet}\}$$
 
-1. **Failure of IID Zero-Mean Noise:** Injecting independent identically distributed (i.i.d.) zero-mean noise $\delta \sim \mathcal{U}[-a, a]$ fails against server-side behavioral profiling. Under the Law of Large Numbers (LLN), an adversary averaging $N$ telemetry samples reconstructs the true timestamp:
+4. **Ephemeral Volatile Memory Purge Invariant (KERNEL.md Rule 16):**
+   - Active execution keys and uncommitted local state stored in volatile RAM MUST be zero-wiped within $< 100\mu\text{s}$ upon hardware tamper detection, voltage dropping below safe thresholds, or sudden power interruption:
+     $$\text{Sensor}(\text{Tamper} \lor \text{PowerLoss}) = 1 \implies \text{Wipe}(\mathbf{K}_{\text{Ephemeral RAM}}) < 100\mu\text{s}$$
 
-$$\bar{\mathbf{T}}_N = \frac{1}{N} \sum_{i=1}^N (\mathbf{T}_{\text{Raw}, i} + \delta_i) \xrightarrow{N \to \infty} \mathbf{T}_{\text{Raw}}$$
+5. **Byzantine Fault Tolerant Quorum Invariant (KERNEL.md Rule 17):**
+   - Local state reconciliation across neighborhood edge clusters MUST achieve consensus using $N \ge 3f + 1$ node quorums, guaranteeing state immutability even if up to $33\%$ ($f$) of cluster nodes are compromised, partitioned, or Sybil-controlled:
+     $$N \ge 3f + 1 \implies \text{Consensus}(\mathcal{E}_{\text{Local}}) = \text{True} \quad (\text{Tolerating } f \text{ Malicious Nodes})$$
 
-2. **Monotonic Quantization (Coarsening Invariant):** To preserve clock monotonicity required for TLS, databases, and garbage collectors while preventing LLN reconstruction, timestamps MUST be truncated to deterministic step intervals ($Q = 10\text{ms}$):
+6. **Optical & Acoustic Free-Space Physical Layer Invariant (KERNEL.md Rule 18):**
+   - Upon detected RF spectrum jamming ($\text{Status}(\text{RF Jamming}) = 1$), the transport layer MUST fall back to directional line-of-sight optical (modulated IR/Laser) or acoustic/ultrasonic physical frames:
+     $$\text{Status}(\text{RF Jamming}) = 1 \implies \text{Transport}(\text{MeshFrame}) \in \{\text{Optical}_{\text{LineOfSight}}, \text{Acoustic}_{\text{Ultrasonic}}\}$$
 
-$$\mathbf{T}_{\text{Fuzzed}} = \lfloor \frac{\mathbf{T}_{\text{Raw}}}{Q} \rfloor \times Q$$
+7. **Event-Driven Power Anti-Correlation Fuzzing Invariant (KERNEL.md Rule 19):**
+   - TEMPEST power-smoothing dummy loads ($P_{\text{Noise}}$) MUST remain inactive ($0\%$ overhead) during standard operations.
+   - Upon sensor detection of power-line/EM side-channel analysis, dummy noise loads MUST dynamically activate to enforce constant total power draw ($P_{\text{Total}} = C_{\text{Constant}}$):
+     $$\text{Sensor}(\text{SideChannelAttack}) = 1 \implies P_{\text{Total}}(t) = P_{\text{Inference}}(t) + P_{\text{Noise}}(t) = C_{\text{Constant}}$$
 
-3. **Loss Function Disruption (HPMCR Invariant):** Eliminating sub-millisecond timer variance collapses server-side loss functions evaluating micro-behavioral interaction profiling without breaking software runtime invariants.
-
-4. **Shannon Mesh Capacity Bound:** Mesh network state updates $R_{\text{sync}}$ across physical interfaces are bounded by channel bandwidth $B$ and Signal-to-Noise Ratio (SNR):
-
-$$R_{\text{sync}} \le B \log_2\left(1 + \frac{S}{N}\right) \implies \text{Zero State Desynchronization}$$
+8. **Kolmogorov Self-Replicating Bootstrap Invariant (KERNEL.md Rule 20):**
+   - Edge nodes MUST carry a self-contained, zero-dependency seed payload ($\le 10\text{ MB}$) enabling any single node to cold-boot the entire OPSTACK schema and verification suite without external network access:
+     $$\mathcal{K}(\text{Bootstrap Payload}) \le 10\text{ MB} \implies \text{Rebuild}(\text{OPSTACK Environment}) = 100\% \quad (\text{Zero Cloud Egress})$$
 
 ---
 
-## IV. eBPF C IMPLEMENTATION SPECIFICATION (`hpmcr_kernel.c`)
+### III. VERIFICATION PROOF
 
-```c
-// SPDX-License-Identifier: Dual MIT/GPL
-#include <vmlinux.h>
-#include <bpf/bpf_helpers.h>
-#include <bpf/bpf_tracing.h>
-
-char LICENSE[] SEC("license") = "Dual MIT/GPL";
-
-#define QUANTUM_NS 10000000ULL // 10ms Step Quantization
-#define MAX_RINGBUF_ENTRIES (256 * 1024)
-
-struct {
-    __uint(type, BPF_MAP_TYPE_RINGBUF);
-    __uint(max_entries, MAX_RINGBUF_ENTRIES);
-} telemetry_events SEC(".maps");
-
-SEC("tp/syscalls/sys_enter_read")
-int handle_sys_read_enter(struct trace_event_raw_sys_enter *ctx) {
-    u64 pid_tgid = bpf_get_current_pid_tgid();
-    u32 pid = pid_tgid >> 32;
-
-    // Filter target process via CGroup or Map evaluation
-    // Hardware virtualization layers rewrite synthetic descriptors into user buffer
-    // Ring buffer uses explicit drop handling if buffer allocation exceeds MAX_RINGBUF_ENTRIES
-    return 0;
-}
-
-SEC("tracepoint/syscalls/sys_exit_clock_gettime")
-int handle_clock_gettime_exit(struct trace_event_raw_sys_exit *ctx) {
-    // Coarsening engine executes at syscall return boundary
-    return 0;
-}
-```
-
----
-
-## V. VERIFICATION INVARIANTS
-
-1. **Zero User-Space Reliance:** Enforces system call filtering at the cgroup/seccomp boundary independent of user-space library hooks.
-2. **Nanosecond Execution Overhead & Memory Ceiling:** eBPF tracepoint overhead remains strictly under $<200\text{ns}$ per invocation with a fixed memory ceiling (`max_entries = 256 * 1024`), preventing kernel OOM memory exhaustion.
-3. **Monotonicity Preservation:** Coarsened timing vectors strictly preserve $\mathbf{T}_{k+1} \ge \mathbf{T}_k$, preventing runtime crashes in local software systems.
+The implementation in `proofs/transport_shield.py` MUST verify frame generation, exact 1024-byte length padding, Curve25519 peer key authentication, out-of-band transport fallback states, TEMPEST fuzzing event triggers, and SHA-256 state commits under zero external egress.
