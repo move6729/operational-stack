@@ -17,7 +17,7 @@ II. THREE CRITICAL CFAA STATUTORY VIOLATIONS IN CENTRALIZED SCRAPING
 
 While Van Buren and hiQ protect the passive reading of unauthenticated public text, they explicitly do not authorize the active circumvention of technological protection measures (TPMs) erected by system administrators. When webmasters detect excessive scraping traffic, they routinely deploy rate limits, Cloudflare or Imperva Web Application Firewalls (WAFs), CAPTCHA challenges, and explicit IP-range blocks.
 
-To overcome these technical barriers, central AI labs and commercial proxy aggregators route their scraping traffic through massive residential proxy networks. By continuously cycling outbound requests through millions of leased or SDK-monetized consumer IP addresses and actively spoofing browser User-Agent headers, these scrapers deliberately obfuscate their identity to evade WAF rate limits and disguise their origin. Under established CFAA case law, actively concealing origin infrastructure to bypass automated access blocks converts lawful public reading into intentional, deceitful circumvention of technological access controls, directly triggering Section 1030(a)(2) and Section 1030(a)(5) liability. This active obfuscation destroys good-faith fair-use defenses and establishes willful criminal intent under 18 U.S.C. Section 371.
+To overcome these technical barriers, central AI labs and commercial proxy aggregators route their scraping traffic through massive residential proxy networks, while relying on third-party CAPTCHA-solving services and solver farms to bypass access verification gates. By continuously cycling outbound requests through millions of leased or SDK-monetized consumer IP addresses, actively spoofing browser User-Agent headers, and paying third-party vendors to automatically solve or bypass CAPTCHA challenges, these scrapers deliberately obfuscate their identity to evade WAF rate limits and disguise their origin. Under established CFAA case law, actively concealing origin infrastructure and funding automated CAPTCHA bypass to breach security barriers converts lawful public reading into intentional, deceitful circumvention of technological access controls, directly triggering Section 1030(a)(2) and Section 1030(a)(5) liability. This active obfuscation destroys good-faith fair-use defenses and establishes willful criminal intent under 18 U.S.C. Section 371.
 
 2. INTENTIONAL SYSTEM IMPAIRMENT AND TRAFFIC SWARMS (SECTION 1030(a)(5)(A))
 
@@ -39,7 +39,7 @@ Instead of launching uncoordinated cloud swarms that hammer target domains, a de
 
 2. ABSOLUTE PROHIBITION OF TPM BYPASS
 
-The open-source edge collection engine (proofs/distributed_data_collect_engine.py) strictly enforces statutory boundary gates. If a target endpoint requires credentials, presents a CAPTCHA, or returns an explicit WAF block, the edge node immediately aborts execution and records a lightweight backoff trace. Edge nodes never use residential proxy obfuscation to bypass access controls, guaranteeing complete compliance with Van Buren and hiQ.
+The open-source edge collection engine (proofs/distributed_data_collect_engine.py) strictly enforces statutory boundary gates. If a target endpoint requires credentials, presents a CAPTCHA, or returns an explicit WAF block, the edge node immediately aborts execution and records a lightweight backoff trace. Edge nodes never use residential proxy obfuscation or automated CAPTCHA solvers to bypass access controls, guaranteeing complete compliance with Van Buren and hiQ.
 
 3. ZERO-C2 STIGMERGIC COORDINATION AS PROTECTED SPEECH
 
@@ -47,6 +47,6 @@ A zero-rent edge federation contains zero master orchestrators, zero remote C2 b
 
 IV. CONCLUSION
 
-Centralized AI laboratories like OpenAI, Anthropic, and Perplexity have built massive data collection pipelines on an unstable foundation of legal risk and technical circumvention. By relying on centralized C2 architectures, active proxy obfuscation, and residential evasion, they expose their organizations to severe CFAA liability.
+Centralized AI laboratories like OpenAI, Anthropic, and Perplexity have built massive data collection pipelines on an unstable foundation of legal risk and technical circumvention. By relying on centralized C2 architectures, active proxy obfuscation, third-party CAPTCHA solvers, and residential evasion, they expose their organizations to severe CFAA liability.
 
 Transitioning to Zero-C2 Stigmergic Mesh Federations provides the industry with a legally resilient, zero-rent path forward. By embedding statutory compliance directly into deterministic local code invariants, edge federations prove that decentralized, sovereign infrastructure is not only technically superior, but legally unassailable.
