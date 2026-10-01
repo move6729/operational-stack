@@ -28,6 +28,13 @@ Relying on central compute APIs introduces an existential cybernetic failure. Pe
 
 When a central API provider dynamically quantizes weights, truncates context windows, or alters alignment system prompts, the effective variety of the public model collapses. The operator loses control over deterministic state transitions and becomes trapped in continuous migration technical debt.
 
+Furthermore, remote central endpoints violate hard physical and information-theoretic limits:
+- Shannon Channel Capacity Bound: Transmitting real-time agent execution state over noisy public network transports bound by bandwidth B and Signal-to-Noise Ratio (SNR) introduces packet drop storms and state desynchronization:
+    R_sync <= B * log2(1 + S/N)
+- Kolmogorov Context Preservation Bound: Dynamic context truncation and system-prompt overhead force prompt compression past the irreducible algorithmic complexity K(AST_State) of the required execution state:
+    Tokens_Context >= K(AST_State)
+Attempting to compress prompts past this rate-distortion bound results in state corruption and latent hallucination.
+
 The only physical solution is sovereign edge compute executing open-weight architectures.
 
 Running open-weight models locally on bare-metal silicon (Apple Silicon, CUDA, ROCm, or open RISC-V accelerators) guarantees complete mathematical determinism:

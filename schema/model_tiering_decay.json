@@ -38,6 +38,8 @@
         "quantization_bits_estimated",
         "latency_ms_per_token",
         "system_prompt_overhead_tokens",
+        "kolmogorov_complexity_ratio",
+        "shannon_channel_capacity_bps",
         "deterministic_pass"
       ],
       "properties": {
@@ -61,6 +63,17 @@
           "type": "integer",
           "minimum": 0,
           "description": "Number of mandatory safety/guardrail system tokens injected by provider."
+        },
+        "kolmogorov_complexity_ratio": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 1.0,
+          "description": "Ratio of compressed context length to raw AST state size. Values < 0.20 indicate state distortion risk."
+        },
+        "shannon_channel_capacity_bps": {
+          "type": "number",
+          "minimum": 0.0,
+          "description": "Max theoretical channel capacity bits per second over physical transport layer."
         },
         "deterministic_pass": {
           "type": "boolean",
