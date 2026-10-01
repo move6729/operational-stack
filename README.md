@@ -29,6 +29,7 @@ move6729 / operational-stack:
 │   ├── 2026-03-great-hardware-inversion.txt [The Great Hardware Inversion]
 │   ├── 2026-03-internal-terraforming-thermodynamic-priority.txt [Internal Terraforming Essay]
 │   ├── 2026-03-refuting-ai-safety-regulatory-capture.txt [Refuting AI Safety Regulatory Capture Essay]
+│   ├── 2026-03-refuting-central-compute-model-tiering.txt [Refuting Central Compute Model Tiering Essay]
 │   ├── 2026-03-refuting-extraplanetary-escapism.txt [Refuting Extra-Planetary Escapism Essay]
 │   ├── 2026-03-refuting-humanoid-robotics.txt [Refuting Humanoid Robotics Essay]
 │   ├── 2026-03-the-biological-fiefdom.txt
@@ -59,6 +60,7 @@ move6729 / operational-stack:
 │   ├── internal_terraforming.json  [Internal Terraforming & Planetary Homeostasis State Schema (INTERNAL-TERRAFORMING-v1.0)]
 │   ├── itsm_incident.json          [Sovereign ITSM Incident Graph (OPEN-ITSM-v1.0)]
 │   ├── labor_collective.json       [Agentic Collective Labor Leverage Graph (OPEN-LABOR-v1.0)]
+│   ├── model_tiering_decay.json    [Central Compute Model Tiering Schema (CENTRAL-COMPUTE-MODEL-DECAY-v1.0)]
 │   ├── offgrid_energy.json         [Sovereign Off-Grid Energy & Hardware Actuator Graph (OPEN-INFRA-v1.0)]
 │   ├── omrp_attestation.json       [OMRP-v1.0 Identity Attestation Schema]
 │   ├── ops_ticket.json             [Sovereign Customer Ops Graph (OPEN-OPS-v1.0)]
@@ -93,6 +95,7 @@ move6729 / operational-stack:
 │   ├── labor_engine.py             [Agentic Collective Labor Leverage Engine (OPEN-LABOR-v1.0)]
 │   ├── mesh_discovery_engine.py    [Zero-DNS Physical Mesh Discovery Engine (OPEN-MESH-DISCOVERY-v1.0)]
 │   ├── micro_settlement_engine.py  [Sub-Cent Thermodynamic Micro-Settlement Engine (OPEN-SETTLEMENT-v1.0)]
+│   ├── model_tiering_engine.py     [Bare-Metal Model Tiering Verifier (CENTRAL-COMPUTE-MODEL-DECAY-v1.0)]
 │   ├── narrative_node_engine.py    [Bare-Metal Regulatory Capture & Narrative Node Verifier]
 │   ├── offgrid_engine.py           [Self-Sovereign Physical Infra & Off-Grid Engine (OPEN-INFRA-v1.0)]
 │   ├── omrp_engine.py              [Deterministic State Engine Proof (OMRP-v1.0)]
@@ -116,6 +119,7 @@ move6729 / operational-stack:
     ├── AUDIT-2026-ANTI-LUDDITE-BARE-METAL-INVARIANT.md
     ├── AUDIT-2026-AUTOMOTIVE-DISINTERMEDIATION.md
     ├── AUDIT-2026-BIM-DISINTERMEDIATION.md
+    ├── AUDIT-2026-CENTRAL-COMPUTE-MODEL-DECAY.md [Central Compute Model Tiering Spec]
     ├── AUDIT-2026-COASEAN-FRICTION-COLLAPSE.md
     ├── AUDIT-2026-COGNITIVE-THIN-CLIENT-DECAY.md
     ├── AUDIT-2026-CONSTRUCTIVE-PHYSICS-ASHBY-QUANTUM.md

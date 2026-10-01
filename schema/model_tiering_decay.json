@@ -1,0 +1,98 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://operational-stack.org/schema/model_tiering_decay.json",
+  "title": "Central Compute Model Tiering & Decay Schema",
+  "type": "object",
+  "description": "Defines state metrics for tracking central API quality degradation, quantization drift, alignment entropy collapse, and local open-weight sovereign compute parity.",
+  "required": [
+    "timestamp_utc",
+    "provider_id",
+    "model_endpoint",
+    "tier_type",
+    "metrics",
+    "sovereign_fallback"
+  ],
+  "properties": {
+    "timestamp_utc": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO-8601 UTC timestamp of audit evaluation."
+    },
+    "provider_id": {
+      "type": "string",
+      "description": "Unique identifier of the central compute vendor being evaluated."
+    },
+    "model_endpoint": {
+      "type": "string",
+      "description": "Target API model name or identifier string."
+    },
+    "tier_type": {
+      "type": "string",
+      "enum": ["public_api", "enterprise_private", "local_open_weight"],
+      "description": "Deployment tier classification."
+    },
+    "metrics": {
+      "type": "object",
+      "required": [
+        "entropy_score",
+        "quantization_bits_estimated",
+        "latency_ms_per_token",
+        "system_prompt_overhead_tokens",
+        "deterministic_pass"
+      ],
+      "properties": {
+        "entropy_score": {
+          "type": "number",
+          "minimum": 0.0,
+          "description": "Calculated output token distribution entropy score."
+        },
+        "quantization_bits_estimated": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 32,
+          "description": "Estimated precision of model weight quantization (e.g. 16, 8, 4, 2)."
+        },
+        "latency_ms_per_token": {
+          "type": "number",
+          "minimum": 0.0,
+          "description": "Inference time in milliseconds per generated token."
+        },
+        "system_prompt_overhead_tokens": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Number of mandatory safety/guardrail system tokens injected by provider."
+        },
+        "deterministic_pass": {
+          "type": "boolean",
+          "description": "True if model response matches exact baseline SHA-256 seed state."
+        }
+      },
+      "additionalProperties": false
+    },
+    "sovereign_fallback": {
+      "type": "object",
+      "required": [
+        "local_weights_loaded",
+        "local_silicon_type",
+        "local_switching_cost"
+      ],
+      "properties": {
+        "local_weights_loaded": {
+          "type": "string",
+          "description": "Name and SHA-256 hash of locally hosted open-weight model."
+        },
+        "local_silicon_type": {
+          "type": "string",
+          "description": "Hardware architecture running local inference (e.g., Apple Metal, CUDA, ROCm)."
+        },
+        "local_switching_cost": {
+          "type": "number",
+          "const": 0.0,
+          "description": "Switching cost for open-weight local execution (must equal 0.0)."
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

@@ -11,6 +11,7 @@
 - `specs/AUDIT-2026-ANTI-LUDDITE-BARE-METAL-INVARIANT.md` - Anti-Luddite Bare-Metal Invariant Audit Specification.
 - `specs/AUDIT-2026-AUTOMOTIVE-DISINTERMEDIATION.md` - Vehicle Telemetry & Kinetic Mobility Disintermediation Specification (`OVTM-S v1.1`).
 - `specs/AUDIT-2026-BIM-DISINTERMEDIATION.md` - Spatial Building Information Modeling Audit Specification (`OPEN-BIM-v1.0`).
+- `specs/AUDIT-2026-CENTRAL-COMPUTE-MODEL-DECAY.md` - Central Compute Tiering & Public API Degradation Specification (`CENTRAL-COMPUTE-MODEL-DECAY-v1.0`).
 - `specs/AUDIT-2026-COASEAN-FRICTION-COLLAPSE.md` - Coasean Friction Collapse & Agent Micro-Firm Specification.
 - `specs/AUDIT-2026-COGNITIVE-THIN-CLIENT-DECAY.md` - Cognitive Thin-Client Decay & Local Exocortex Sovereignty Specification.
 - `specs/AUDIT-2026-CONSTRUCTIVE-PHYSICS-ASHBY-QUANTUM.md` - Constructive Physics & Cybernetic Requisite Variety Specification (`ASHBY-v1.0`).
@@ -83,6 +84,7 @@
 - `schema/internal_terraforming.json` - Internal Terraforming & Planetary Homeostasis State Schema (`INTERNAL-TERRAFORMING-v1.0`).
 - `schema/itsm_incident.json` - Sovereign ITSM Incident Graph (`OPEN-ITSM-v1.0`).
 - `schema/labor_collective.json` - Agentic Collective Labor Leverage & Rate Floor Schema (`OPEN-LABOR-v1.0`).
+- `schema/model_tiering_decay.json` - Central Compute Model Tiering & Public API Degradation Schema (`CENTRAL-COMPUTE-MODEL-DECAY-v1.0`).
 - `schema/offgrid_energy.json` - Sovereign Off-Grid Energy & Hardware Actuator Graph (`OPEN-INFRA-v1.0`).
 - `schema/omrp_attestation.json` - OMRP-v1.0 Identity Attestation Schema.
 - `schema/ops_ticket.json` - Sovereign Customer Ops Graph (`OPEN-OPS-v1.0`).
@@ -117,6 +119,7 @@
 - `proofs/labor_engine.py` - Collective Labor Leverage Engine (`OPEN-LABOR-v1.0`).
 - `proofs/mesh_discovery_engine.py` - Zero-DNS Local Physical Mesh Discovery Engine (`OPEN-MESH-DISCOVERY-v1.0`).
 - `proofs/micro_settlement_engine.py` - Sub-Cent Thermodynamic Micro-Settlement Engine (`OPEN-SETTLEMENT-v1.0`).
+- `proofs/model_tiering_engine.py` - Bare-Metal Central Compute Model Tiering Verifier (`CENTRAL-COMPUTE-MODEL-DECAY-v1.0`).
 - `proofs/narrative_node_engine.py` - Regulatory Capture & Policy Risk Engine.
 - `proofs/offgrid_engine.py` - Self-Sovereign Infrastructure Off-Grid Engine (`OPEN-INFRA-v1.0`).
 - `proofs/omrp_engine.py` - Open Mail Routing Protocol Engine (`OMRP-v1.0`).
@@ -146,6 +149,7 @@
 - `articles/2026-03-great-hardware-inversion.txt` - Essay on The Great Hardware Inversion.
 - `articles/2026-03-internal-terraforming-thermodynamic-priority.txt` - Essay on Internal Terraforming and Landauer-Bounded Planetary Homeostasis.
 - `articles/2026-03-refuting-ai-safety-regulatory-capture.txt` - Essay on Refuting "AI Safety" Regulatory Capture and Model Licensing.
+- `articles/2026-03-refuting-central-compute-model-tiering.txt` - Essay on Refuting Central Compute Model Tiering & Public API Degradation.
 - `articles/2026-03-refuting-extraplanetary-escapism.txt` - Essay on Refuting Extra-Planetary Escapism and Rentier Capital Tropes.
 - `articles/2026-03-refuting-humanoid-robotics.txt` - Essay on Refuting Humanoid Robotics and Anthropomorphic Hardware Tropes.
 - `articles/2026-03-the-biological-fiefdom.txt` - Essay on the biological fiefdom.
