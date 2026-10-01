@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://raw.githubusercontent.com/move6729/operational-stack/main/schema/osint_isolation.json",
   "title": "OpenOSINTShieldState",
-  "description": "Schema for OSINT identity isolation state, data-broker opt-out tracking, and metadata noise payload verification (OPEN-OSINT-SHIELD-v1.0).",
+  "description": "Schema for OSINT identity isolation state, data-broker opt-out tracking, metadata noise payload verification, and transport fingerprint neutralization (OPEN-OSINT-SHIELD-v1.0 / LMTI-v1.0).",
   "type": "object",
   "properties": {
     "identity_id": {
@@ -42,6 +42,29 @@
       "minimum": 0.0,
       "maximum": 1.0,
       "description": "Calculated exposure ratio (0.0 = completely isolated, 1.0 = fully exposed)."
+    },
+    "transport_fingerprint_neutralization": {
+      "type": "object",
+      "properties": {
+        "ja3_ja4_randomization_active": {
+          "type": "boolean",
+          "description": "True if TLS Client Hello cipher suite and extension ordering are randomized."
+        },
+        "tcp_window_equalization_active": {
+          "type": "boolean",
+          "description": "True if outbound TCP window sizes and MSS options match standardized baselines."
+        },
+        "http2_frame_padding_active": {
+          "type": "boolean",
+          "description": "True if HTTP/2 stream headers and settings frames are padded to defeat OSINT profiling."
+        }
+      },
+      "required": [
+        "ja3_ja4_randomization_active",
+        "tcp_window_equalization_active",
+        "http2_frame_padding_active"
+      ],
+      "additionalProperties": false
     },
     "broker_opt_outs": {
       "type": "array",
@@ -84,6 +107,7 @@
     "timestamp_utc",
     "decoupling_status",
     "exposure_score",
+    "transport_fingerprint_neutralization",
     "broker_opt_outs",
     "noise_injection"
   ]

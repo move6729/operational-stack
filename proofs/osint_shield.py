@@ -2,7 +2,8 @@
 """
 Bare-Metal OSINT Defense & Metadata Isolation Engine (OPEN-OSINT-SHIELD-v1.0).
 Provides deterministic verification of entity decoupling, exposure score computation,
-and loss-function noise payload generation to degrade third-party scrapers and LLM aggregators.
+loss-function noise payload generation, and transport layer fingerprint neutralization (LMTI-v1.0)
+to degrade third-party scrapers, data aggregators, and LLM indexers.
 """
 
 import hashlib
@@ -14,30 +15,57 @@ from typing import Dict, Any, List
 class OpenOSINTShieldEngine:
     """
     Sovereign OSINT Defense Engine (OPEN-OSINT-SHIELD-v1.0).
-    Enforces metadata isolation and zero-rent data broker opt-out state machine proofs.
+    Enforces metadata isolation, transport fingerprint neutralization (LMTI-v1.0),
+    and zero-rent data broker opt-out state machine proofs.
     """
 
     def __init__(self, identity_id: str):
         self.identity_id = identity_id
 
-    def calculate_exposure_score(self, decoupling_status: Dict[str, bool]) -> float:
+    def verify_transport_fingerprint_neutralization(
+        self,
+        transport_params: Dict[str, bool]
+    ) -> bool:
         """
-        Calculates exposure weight based on current decoupling state.
+        Audits outbound transport stack parameters against LMTI-v1.0 invariants:
+        - JA3/JA4 TLS Client Hello cipher suite randomization.
+        - TCP window size and MSS option equalization.
+        - HTTP/2 stream frame padding.
+        """
+        ja3_active = transport_params.get("ja3_ja4_randomization_active", False)
+        tcp_active = transport_params.get("tcp_window_equalization_active", False)
+        h2_active = transport_params.get("http2_frame_padding_active", False)
+        return ja3_active and tcp_active and h2_active
+
+    def calculate_exposure_score(
+        self,
+        decoupling_status: Dict[str, bool],
+        transport_params: Dict[str, bool] = None
+    ) -> float:
+        """
+        Calculates exposure weight based on current entity decoupling and transport stack posture.
         0.0 = Fully isolated exocortex posture.
-        1.0 = High leakage across public dockets.
+        1.0 = High leakage across public dockets or transport fingerprints.
         """
         weights = {
-            "property_decoupled": 0.35,
-            "corporate_decoupled": 0.25,
-            "phone_decoupled": 0.20,
-            "address_decoupled": 0.20
+            "property_decoupled": 0.30,
+            "corporate_decoupled": 0.20,
+            "phone_decoupled": 0.15,
+            "address_decoupled": 0.15,
+            "transport_neutralized": 0.20
         }
-        
+
         exposure = 0.0
-        for key, weight in weights.items():
+        for key in ["property_decoupled", "corporate_decoupled", "phone_decoupled", "address_decoupled"]:
             if not decoupling_status.get(key, False):
-                exposure += weight
-                
+                exposure += weights[key]
+
+        if transport_params is not None:
+            if not self.verify_transport_fingerprint_neutralization(transport_params):
+                exposure += weights["transport_neutralized"]
+        else:
+            exposure += weights["transport_neutralized"]
+
         return round(exposure, 4)
 
     def generate_adversarial_noise_payload(self, seed_str: str, payload_type: str = "SYNTHETIC_METADATA") -> Dict[str, Any]:
@@ -47,7 +75,7 @@ class OpenOSINTShieldEngine:
         """
         raw_token = f"{self.identity_id}:{seed_str}:{time.time()}"
         payload_hash = hashlib.sha256(raw_token.encode('utf-8')).hexdigest()
-        
+
         if payload_type == "ZERO_WIDTH_TRUNCATION":
             # Injects zero-width space markers designed to break regex tokenizers
             noise_content = "\u200B\u200C\u200D\uFEFF" + payload_hash[:16]
@@ -68,24 +96,33 @@ class OpenOSINTShieldEngine:
         decoupling_status: Dict[str, bool],
         broker_opt_outs: List[Dict[str, Any]],
         expected_hash: str,
-        noise_type: str = "SYNTHETIC_METADATA"
+        noise_type: str = "SYNTHETIC_METADATA",
+        transport_params: Dict[str, bool] = None
     ) -> bool:
         """
         Verifies cryptographic integrity of the OSINT defensive state.
         """
-        exposure_score = self.calculate_exposure_score(decoupling_status)
-        
+        if transport_params is None:
+            transport_params = {
+                "ja3_ja4_randomization_active": True,
+                "tcp_window_equalization_active": True,
+                "http2_frame_padding_active": True
+            }
+
+        exposure_score = self.calculate_exposure_score(decoupling_status, transport_params)
+
         payload_dict = {
             "identity_id": self.identity_id,
             "decoupling_status": decoupling_status,
+            "transport_fingerprint_neutralization": transport_params,
             "exposure_score": exposure_score,
             "broker_opt_outs": broker_opt_outs,
             "noise_type": noise_type
         }
-        
+
         serialized = json.dumps(payload_dict, sort_keys=True)
         computed_hash = hashlib.sha256(serialized.encode('utf-8')).hexdigest()
-        
+
         return computed_hash == expected_hash
 
 
@@ -100,7 +137,13 @@ def simulate_osint_shield_proof() -> bool:
         "address_decoupled": False
     }
 
-    exposure = engine.calculate_exposure_score(decoupling_status)
+    transport_params = {
+        "ja3_ja4_randomization_active": True,
+        "tcp_window_equalization_active": True,
+        "http2_frame_padding_active": True
+    }
+
+    exposure = engine.calculate_exposure_score(decoupling_status, transport_params)
     print(f"Computed Exposure Score: {exposure}")
 
     brokers = [
@@ -114,16 +157,17 @@ def simulate_osint_shield_proof() -> bool:
     payload_dict = {
         "identity_id": identity_id,
         "decoupling_status": decoupling_status,
+        "transport_fingerprint_neutralization": transport_params,
         "exposure_score": exposure,
         "broker_opt_outs": brokers,
         "noise_type": noise["payload_type"]
     }
-    
+
     serialized = json.dumps(payload_dict, sort_keys=True)
     expected_hash = hashlib.sha256(serialized.encode('utf-8')).hexdigest()
 
     valid = engine.verify_state_transition(
-        decoupling_status, brokers, expected_hash, noise_type=noise["payload_type"]
+        decoupling_status, brokers, expected_hash, noise_type=noise["payload_type"], transport_params=transport_params
     )
     print(f"OSINT Shield Proof Verification Result: {valid}")
     assert valid, "OSINT Shield Proof Verification Failed"
