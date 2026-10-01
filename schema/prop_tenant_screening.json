@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://operational-stack.org/schema/prop_tenant_screening.json",
+  "title": "PropTechTenantScreeningDefense",
+  "description": "Schema for sovereign pro se disputes against automated PropTech screening vendors and consumer reporting agencies under FCRA 15 U.S.C. § 1681i and § 1681n.",
+  "type": "object",
+  "properties": {
+    "case_id": {
+      "type": "string",
+      "pattern": "^PROP-SCREEN-[A-FA-f0-9]{12}$"
+    },
+    "jurisdiction_context": {
+      "type": "string",
+      "default": "US"
+    },
+    "screening_vendor": {
+      "type": "string",
+      "description": "Name of automated PropTech tenant screening vendor."
+    },
+    "erroneous_record_type": {
+      "type": "string",
+      "enum": ["EXPUNGED_EVICTION", "INCORRECT_IDENTITY", "MISREPORTED_ARREARS", "UNVERIFIED_CRIMINAL_RECORD"]
+    },
+    "statutory_notice_sent_timestamp": {
+      "type": "integer",
+      "description": "Unix timestamp when 30-day FCRA dispute notice was delivered."
+    },
+    "days_elapsed_since_notice": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "willful_noncompliance_detected": {
+      "type": "boolean",
+      "description": "True if vendor failed to conduct reasonable reinvestigation within 30 days."
+    },
+    "statutory_damages_claim_usd": {
+      "type": "number",
+      "default": 1000.0,
+      "description": "Statutory damages cap under 15 U.S.C. § 1681n per willful violation."
+    },
+    "estimated_vendor_defense_cost": {
+      "type": "number",
+      "default": 12000.0
+    },
+    "cfaa_compliant": {
+      "type": "boolean",
+      "const": true
+    },
+    "pro_se_complaint_ready": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "case_id",
+    "jurisdiction_context",
+    "screening_vendor",
+    "erroneous_record_type",
+    "statutory_notice_sent_timestamp",
+    "days_elapsed_since_notice",
+    "willful_noncompliance_detected",
+    "statutory_damages_claim_usd",
+    "cfaa_compliant"
+  ]
+}

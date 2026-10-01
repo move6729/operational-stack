@@ -11,6 +11,7 @@
 - `specs/AUDIT-2026-AI-SAFETY-REGULATORY-CAPTURE.md` - "AI Safety" Regulatory Capture & Model Licensing Specification (`AI-SAFETY-REGULATORY-CAPTURE-v1.0`).
 - `specs/AUDIT-2026-ANTI-LUDDITE-BARE-METAL-INVARIANT.md` - Anti-Luddite Bare-Metal Invariant Audit Specification.
 - `specs/AUDIT-2026-AUTOMOTIVE-DISINTERMEDIATION.md` - Vehicle Telemetry & Kinetic Mobility Disintermediation Specification (`OVTM-S v1.1`).
+- `specs/AUDIT-2026-AUTOMOTIVE-TELEMETRY-LEGAL-DEFENSE.md` - Automotive Telemetry Pro Se Legal Defense & Regulatory Arbitrage Specification (`OVTM-LEGAL-v1.0`).
 - `specs/AUDIT-2026-BIOLOGICAL-ENTROPY-AMBIENT-INDIFFERENCE.md` - Biological Entropy & Ambient Indifference Proxy Specification (`AMBIENT-INDIFFERENCE-v1.0`).
 - `specs/AUDIT-2026-BIM-DISINTERMEDIATION.md` - Spatial Building Information Modeling Audit Specification (`OPEN-BIM-v1.0`).
 - `specs/AUDIT-2026-CENTRAL-COMPUTE-MODEL-DECAY.md` - Central Compute Tiering & Public API Degradation Specification (`CENTRAL-COMPUTE-MODEL-DECAY-v1.0`).
@@ -58,6 +59,7 @@
 - `specs/AUDIT-2026-OSINT-METADATA-ISOLATION.md` - Adversarial OSINT Defense & Metadata Decoupling Specification (`OPEN-OSINT-SHIELD-v1.0`).
 - `specs/AUDIT-2026-PHYSICAL-ASSET-DISINTERMEDIATION.md` - Physical Asset & Asset Compliance Disintermediation Specification (`COMPLIANCE-v1.0`).
 - `specs/AUDIT-2026-PROP-DISINTERMEDIATION.md` - Property & Real Estate Management Disintermediation Specification (`OPEN-PROP-v1.0`).
+- `specs/AUDIT-2026-PROPTECH-TENANT-SCREENING-DEFENSE.md` - PropTech Tenant Screening FCRA Defense Specification (`OPEN-PROP-SCREEN-v1.0`).
 - `specs/AUDIT-2026-RECURSIVE-SCHEMA-GENERATOR.md` - Recursive Schema Generation & Dynamic AST Synthesis Specification.
 - `specs/AUDIT-2026-REFLEXIVE-ASHBY-PARITY.md` - Reflexive Ashby Parity & The Abstractor Fallacy Specification.
 - `specs/AUDIT-2026-SOVEREIGN-COGNITIVE-SILICON.md` - Sovereign Cognitive Silicon & Quantized Edge Inference Specification (`LMCI-v1.0`).
@@ -102,7 +104,9 @@
 - `schema/ops_ticket.json` - Sovereign Customer Ops Graph (`OPEN-OPS-v1.0`).
 - `schema/osint_isolation.json` - Sovereign OSINT Metadata Isolation & Data-Broker Schema (`OPEN-OSINT-SHIELD-v1.0`).
 - `schema/ovtm_kinetic.json` - Sovereign Vehicle Telemetry Graph (`OVTM-S v1.1`).
+- `schema/ovtm_legal_defense.json` - Automotive Telemetry Wiretap & Statutory Privacy Dispute Schema (`OVTM-LEGAL-v1.0`).
 - `schema/prop_lease.json` - Sovereign Property Lease Graph (`OPEN-PROP-v1.0`).
+- `schema/prop_tenant_screening.json` - PropTech Tenant Screening FCRA Dispute Schema (`OPEN-PROP-SCREEN-v1.0`).
 - `schema/shield-spec.json` - HPMCR Client Defensive Invariant Schema (`HPMCR-DEF v1.0`).
 - `schema/spatial_bim.json` - Sovereign Spatial BIM Graph (`OPEN-BIM-v1.0`).
 - `schema/sub_bandwidth_delay.json` - Sub-Bandwidth Delay Curve & Rate-Shaping Schema (`SUB-BANDWIDTH-DELAY-v1.0`).
@@ -151,7 +155,9 @@
 - `proofs/osint_shield.py` - Bare-Metal OSINT Defense Engine (`OPEN-OSINT-SHIELD-v1.0`).
 - `proofs/ovtm_auditor.py` - Kinetic Mobility Safety Isolation Auditor.
 - `proofs/ovtm_engine.py` - Vehicle Telemetry & Kinetic Engine (`OVTM-S v1.1`).
+- `proofs/ovtm_legal_engine.py` - Automotive Telemetry Legal Defense Engine (`OVTM-LEGAL-v1.0`).
 - `proofs/prop_engine.py` - Property & Real Estate Management Engine (`OPEN-PROP-v1.0`).
+- `proofs/prop_tenant_screening_engine.py` - PropTech Tenant Screening Defense Engine (`OPEN-PROP-SCREEN-v1.0`).
 - `proofs/sub_bandwidth_delay_engine.py` - Sub-Bandwidth Delay Curve & Temporal Rate-Shaping Engine (`SUB-BANDWIDTH-DELAY-v1.0`).
 - `proofs/switching_cost_decay.py` - Switching Cost & Agent Autonomy Decay Proof.
 - `proofs/task_engine.py` - Hardened Task Scheduler & SHA-256 Verifier (`ATN-v1.0`).

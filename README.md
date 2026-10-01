@@ -76,7 +76,9 @@ move6729 / operational-stack:
 │   ├── ops_ticket.json             [Sovereign Customer Ops Graph (OPEN-OPS-v1.0)]
 │   ├── osint_isolation.json        [Sovereign OSINT Metadata Isolation & Data-Broker Schema (OPEN-OSINT-SHIELD-v1.0)]
 │   ├── ovtm_kinetic.json           [Sovereign Vehicle Telemetry Graph (OVTM-S v1.1)]
+│   ├── ovtm_legal_defense.json     [Automotive Telemetry Wiretap & Privacy Dispute Schema (OVTM-LEGAL-v1.0)]
 │   ├── prop_lease.json             [Sovereign Property Lease Graph (OPEN-PROP-v1.0)]
+│   ├── prop_tenant_screening.json  [PropTech Tenant Screening FCRA Dispute Schema (OPEN-PROP-SCREEN-v1.0)]
 │   ├── shield-spec.json            [HPMCR Client Defensive Invariant Schema]
 │   ├── spatial_bim.json            [Sovereign Spatial BIM Graph (OPEN-BIM-v1.0)]
 │   ├── sub_bandwidth_delay.json    [Sub-Bandwidth Delay Curve & Rate-Shaping Schema (SUB-BANDWIDTH-DELAY-v1.0)]
@@ -125,7 +127,9 @@ move6729 / operational-stack:
 │   ├── osint_shield.py             [Bare-Metal OSINT Defense Engine (OPEN-OSINT-SHIELD-v1.0)]
 │   ├── ovtm_auditor.py             [Kinetic Mobility Safety Isolation Auditor (OVTM-S v1.1)]
 │   ├── ovtm_engine.py              [Bare-Metal Vehicle Telemetry Engine (OVTM-S v1.1)]
+│   ├── ovtm_legal_engine.py        [Automotive Telemetry Legal Defense Engine (OVTM-LEGAL-v1.0)]
 │   ├── prop_engine.py              [Bare-Metal Property Verification Engine (OPEN-PROP-v1.0)]
+│   ├── prop_tenant_screening_engine.py [PropTech Tenant Screening Defense Engine (OPEN-PROP-SCREEN-v1.0)]
 │   ├── sub_bandwidth_delay_engine.py [Sub-Bandwidth Delay Curve & Temporal Rate-Shaping Engine (SUB-BANDWIDTH-DELAY-v1.0)]
 │   ├── switching_cost_decay.py     [Mathematical Proof of SaaS Switching Cost Collapse]
 │   ├── task_engine.py              [Hardened Task Scheduler & SHA-256 Verifier (ATN-v1.0)]
@@ -143,6 +147,7 @@ move6729 / operational-stack:
     ├── AUDIT-2026-AI-SAFETY-REGULATORY-CAPTURE.md [AI Safety Regulatory Capture Spec]
     ├── AUDIT-2026-ANTI-LUDDITE-BARE-METAL-INVARIANT.md
     ├── AUDIT-2026-AUTOMOTIVE-DISINTERMEDIATION.md
+    ├── AUDIT-2026-AUTOMOTIVE-TELEMETRY-LEGAL-DEFENSE.md [Automotive Telemetry Pro Se Legal Defense Spec]
     ├── AUDIT-2026-BIOLOGICAL-ENTROPY-AMBIENT-INDIFFERENCE.md [Biological Entropy & Ambient Indifference Spec]
     ├── AUDIT-2026-BIM-DISINTERMEDIATION.md
     ├── AUDIT-2026-CENTRAL-COMPUTE-MODEL-DECAY.md [Central Compute Model Tiering Spec]
@@ -190,6 +195,7 @@ move6729 / operational-stack:
     ├── AUDIT-2026-OSINT-METADATA-ISOLATION.md [Adversarial OSINT Defense Spec]
     ├── AUDIT-2026-PHYSICAL-ASSET-DISINTERMEDIATION.md
     ├── AUDIT-2026-PROP-DISINTERMEDIATION.md
+    ├── AUDIT-2026-PROPTECH-TENANT-SCREENING-DEFENSE.md [PropTech Tenant Screening FCRA Defense Spec]
     ├── AUDIT-2026-RECURSIVE-SCHEMA-GENERATOR.md
     ├── AUDIT-2026-REFLEXIVE-ASHBY-PARITY.md
     ├── AUDIT-2026-SOVEREIGN-COGNITIVE-SILICON.md

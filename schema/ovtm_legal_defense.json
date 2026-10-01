@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://operational-stack.org/schema/ovtm_legal_defense.json",
+  "title": "AutomotiveTelemetryLegalDefense",
+  "description": "Schema for sovereign pro se legal claims against automotive OEMs and data brokers for surreptitious telemetry exfiltration and statutory privacy violations (CIPA/CCPA/CPRA).",
+  "type": "object",
+  "properties": {
+    "case_id": {
+      "type": "string",
+      "pattern": "^OVTM-LEGAL-[A-FA-f0-9]{12}$"
+    },
+    "jurisdiction_context": {
+      "type": "string",
+      "default": "US-CA"
+    },
+    "oem_identifier": {
+      "type": "string",
+      "description": "Automotive OEM targeted by the claim."
+    },
+    "data_broker_recipient": {
+      "type": "string",
+      "description": "Third-party data broker or InsurTech underwriter receiving raw telemetry."
+    },
+    "vin_hash": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "wiretap_violation_count": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Number of discrete surreptitious kinetic packet exfiltrations detected."
+    },
+    "statutory_damages_per_violation": {
+      "type": "number",
+      "default": 2500.0,
+      "description": "Statutory damage floor per violation under California Invasion of Privacy Act / CCPA."
+    },
+    "total_statutory_claim_usd": {
+      "type": "number",
+      "minimum": 0.0
+    },
+    "counterparty_defense_hourly_rate": {
+      "type": "number",
+      "default": 650.0,
+      "description": "Estimated billable rate of defense counsel per hour."
+    },
+    "estimated_counterparty_defense_cost": {
+      "type": "number",
+      "minimum": 0.0
+    },
+    "cfaa_compliant": {
+      "type": "boolean",
+      "const": true
+    },
+    "pro_se_pleading_generated": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "case_id",
+    "jurisdiction_context",
+    "oem_identifier",
+    "data_broker_recipient",
+    "vin_hash",
+    "wiretap_violation_count",
+    "statutory_damages_per_violation",
+    "total_statutory_claim_usd",
+    "cfaa_compliant"
+  ]
+}
