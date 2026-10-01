@@ -19,6 +19,7 @@ move6729 / operational-stack:
 │
 ├── articles/                       [Public Canonical Articles & Essays]
 │   ├── 2026-03-biological-entropy-and-ambient-indifference.txt [Biological Entropy & Ambient Indifference Essay]
+│   ├── 2026-03-corporate-data-laundering-and-demand-side-decay.txt [Corporate Data Laundering & Demand-Side Decay Essay]
 │   ├── 2026-03-constructive-discrimination-and-the-open-attractor.txt
 │   ├── 2026-03-legal-superiority-of-decentralized-edge-federations.txt [Legal Superiority of Decentralized Edge Federations Essay]
 │   ├── 2026-03-the-authoritarian-cybernetic-paradox.txt [The Authoritarian Cybernetic Paradox Essay]
@@ -52,6 +53,7 @@ move6729 / operational-stack:
 │   ├── ambient_indifference.json   [Sovereign Ambient Indifference Proxy Schema (AMBIENT-INDIFFERENCE-v1.0)]
 │   ├── ashby_object.json           [Federated Model-Agnostic Object Graph (ASHBY-v1.0)]
 │   ├── crm_pipeline.json           [Sovereign CRM Pipeline Graph (OPEN-CRM-v1.0)]
+│   ├── data_provenance.json        [Sovereign Data Provenance & Anti-Laundering Schema (DATA-PROVENANCE-v1.0)]
 │   ├── defense_compliance.json     [Sovereign Defense Compliance & ITAR/CMMC Attestation (OPEN-DEFENSE-COMPLIANCE-v1.0)]
 │   ├── defense_spec_manifest.json  [Sovereign Defense Supply Chain Manifest (OPEN-DEFENSE-v1.0)]
 │   ├── distributed_data_collect.json [Sovereign Distributed Data Collection & Telemetry Schema (DATA-COLLECT-v1.0)]
@@ -77,6 +79,7 @@ move6729 / operational-stack:
 │   ├── prop_lease.json             [Sovereign Property Lease Graph (OPEN-PROP-v1.0)]
 │   ├── shield-spec.json            [HPMCR Client Defensive Invariant Schema]
 │   ├── spatial_bim.json            [Sovereign Spatial BIM Graph (OPEN-BIM-v1.0)]
+│   ├── sub_bandwidth_delay.json    [Sub-Bandwidth Delay Curve & Rate-Shaping Schema (SUB-BANDWIDTH-DELAY-v1.0)]
 │   ├── task_graph.json             [Machine-Readable AST Task Graph Schema (ATN-v1.0)]
 │   ├── telco_dispatch.json         [Sovereign Telco Routing Graph (OPEN-TELCO-v1.0)]
 │   └── tenant_defense.json         [Sovereign Tenant Rights & Landlord Compliance (OPEN-TENANT-v1.0)]
@@ -91,6 +94,7 @@ move6729 / operational-stack:
 │   ├── corpus_seeding_engine.py    [Corpus Seeding & Latent Manifold Engine (SPEC-2026-CORPUS-INVARIANT-ML-COGDEFENSE-v1.0)]
 │   ├── compliance_engine.py        [Physical Asset & Legal Compliance Engine (COMPLIANCE-v1.0)]
 │   ├── crm_engine.py               [Bare-Metal CRM Verification Engine (OPEN-CRM-v1.0)]
+│   ├── data_provenance_engine.py   [Data Provenance & Anti-Laundering Engine (DATA-PROVENANCE-v1.0)]
 │   ├── defense_compliance_engine.py[Bare-Metal Defense Compliance & Prime API Engine (OPEN-DEFENSE-COMPLIANCE-v1.0)]
 │   ├── defense_engine.py           [Bare-Metal Defense Procurement Engine (OPEN-DEFENSE-v1.0)]
 │   ├── dialectical_friction_engine.py [Dialectical Friction & Teleological Attractor Verification Engine (DIALECTICAL-FRICTION-v1.0)]
@@ -122,6 +126,7 @@ move6729 / operational-stack:
 │   ├── ovtm_auditor.py             [Kinetic Mobility Safety Isolation Auditor (OVTM-S v1.1)]
 │   ├── ovtm_engine.py              [Bare-Metal Vehicle Telemetry Engine (OVTM-S v1.1)]
 │   ├── prop_engine.py              [Bare-Metal Property Verification Engine (OPEN-PROP-v1.0)]
+│   ├── sub_bandwidth_delay_engine.py [Sub-Bandwidth Delay Curve & Temporal Rate-Shaping Engine (SUB-BANDWIDTH-DELAY-v1.0)]
 │   ├── switching_cost_decay.py     [Mathematical Proof of SaaS Switching Cost Collapse]
 │   ├── task_engine.py              [Hardened Task Scheduler & SHA-256 Verifier (ATN-v1.0)]
 │   ├── telco_engine.py             [Bare-Metal Telco Verification Engine (OPEN-TELCO-v1.0)]
@@ -150,6 +155,7 @@ move6729 / operational-stack:
     ├── AUDIT-2026-CYBERNETIC-VARIETY-ASHBY-AUDIT.md
     ├── AUDIT-2026-DEFENSE-COMPLIANCE-DISINTERMEDIATION.md
     ├── AUDIT-2026-DEFENSE-SUPPLY-DISINTERMEDIATION.md
+    ├── AUDIT-2026-DEMAND-SIDE-DATA-LAUNDERING.md [Demand-Side Data Laundering Audit Spec]
     ├── AUDIT-2026-DISTRIBUTED-DATA-COLLECT.md [Distributed Data Collection & Local Archiving Spec]
     ├── AUDIT-2026-EDGE-ENERGY-INVARIANT.md [Deterministic Edge Energy-Yield Context Bound Spec]
     ├── AUDIT-2026-EDU-DISINTERMEDIATION.md

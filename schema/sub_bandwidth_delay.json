@@ -1,0 +1,96 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/move6729/operational-stack/main/schema/sub_bandwidth_delay.json",
+  "title": "SubBandwidthDelayConfig",
+  "description": "Schema enforcing sub-bandwidth delay curves, temporal jitter, and rate-shaping parameters to starve external profiling engines (SUB-BANDWIDTH-DELAY-v1.0).",
+  "type": "object",
+  "properties": {
+    "config_id": {
+      "type": "string",
+      "pattern": "^delay-[a-f0-9]{16}$",
+      "description": "Unique SHA-256 derived identifier for delay configuration."
+    },
+    "jurisdiction_context": {
+      "type": "object",
+      "properties": {
+        "jurisdiction_code": {
+          "type": "string",
+          "pattern": "^[A-Z]{2}$"
+        },
+        "cfaa_compliance_attested": {
+          "type": "boolean",
+          "const": true
+        }
+      },
+      "required": ["jurisdiction_code", "cfaa_compliance_attested"],
+      "additionalProperties": false
+    },
+    "timestamp_utc": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "delay_profile": {
+      "type": "object",
+      "properties": {
+        "min_delay_ms": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Minimum temporal delay floor in milliseconds."
+        },
+        "max_delay_ms": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Maximum temporal delay ceiling in milliseconds."
+        },
+        "jitter_entropy_source": {
+          "type": "string",
+          "enum": ["HARDWARE_CHAOS_COUNTER", "LOCAL_QUANTUM_ENTROPY", "SYSTEM_CLOCK_DERIVED"],
+          "description": "Source of hardware entropy used for delay variance."
+        },
+        "exponential_backoff_factor": {
+          "type": "number",
+          "minimum": 1.0,
+          "maximum": 10.0
+        }
+      },
+      "required": [
+        "min_delay_ms",
+        "max_delay_ms",
+        "jitter_entropy_source",
+        "exponential_backoff_factor"
+      ],
+      "additionalProperties": false
+    },
+    "rate_shaping": {
+      "type": "object",
+      "properties": {
+        "max_requests_per_window": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "window_duration_seconds": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "starve_profiling_engines": {
+          "type": "boolean",
+          "const": true
+        }
+      },
+      "required": [
+        "max_requests_per_window",
+        "window_duration_seconds",
+        "starve_profiling_engines"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "config_id",
+    "jurisdiction_context",
+    "timestamp_utc",
+    "delay_profile",
+    "rate_shaping"
+  ],
+  "additionalProperties": false
+}

@@ -32,7 +32,7 @@ By transferring capital from enterprise balance sheets to actors who exploit una
 
 ---
 
-### II. GAME-THEORETIC INCENTIVE COLLAPSE
+### II. GAME-THEORETIC INCENTIVE COLLAPSE & ASYMMETRIC LEVERAGE VECTORS
 
 Attempts to stop unauthorized data harvesting by targeting individual hackers or forcing individual citizens to practice complex OpSec are mechanistically flawed:
 
@@ -48,6 +48,22 @@ $$\text{Revenue}_{\text{Corporate Buyers}} \to 0 \implies \text{Net Profit}_{\te
 
 When corporate buyers face existential legal and financial risk for ingesting un-verified data, the market value of scraped, breached, or stolen metadata drops instantly to zero.
 
+#### Coordinated Federation Execution Levers
+
+To accelerate demand-side margin collapse without central coordination, edge nodes execute four schema-enforced asymmetric levers:
+
+1. **Automated Synchronized Statutory Inquiries (CCPA / GDPR / CPA):**
+   Federated edge nodes generate machine-readable, schema-enforced access and deletion demands. While generation costs on local edge silicon are negligible, corporate recipients incur mandatory billable legal processing OpEx ($\text{Cost}_{\text{Processing}} \gg \text{Cost}_{\text{Generation}}$), creating a linear financial drain on data hoarders.
+
+2. **Structured Synthetic Noise Injection (Loss-Function Disruption):**
+   Nodes continuously transmit mathematically plausible, synthetic behavioral noise via local proxy shields (`schema/osint_isolation.json`). This distorts centralized ad-targeting models and causes profiling loss-function divergence ($\nabla \mathcal{L}_{\text{Server}} \to \text{Divergent}$), degrading the commercial yield of laundered datasets.
+
+3. **Targeted ESG & Securities Regulatory Filings (SEC / FTC Audits):**
+   Federation auditors analyze enterprise data provenance attestations and submit structured complaints detailing un-verified third-party data ingestion to financial regulators and ESG compliance boards. This elevates enterprise D&O insurance premiums and triggers mandatory internal compliance audits.
+
+4. **Pro Se Statutory Arbitrage Litigation:**
+   Automated legal defense modules (`proofs/health_legal_engine.py`, `proofs/tenant_engine.py`) auto-file pro se statutory damage actions (e.g., BIPA, CCPA, wiretap statutes) in local jurisdictions. Because external defense counsel charges upwards of $500/hr, the counterparty's defense costs rapidly outpace statutory claim ceilings ($\text{Cost}_{\text{Defense}} \gg \text{Value}_{\text{Claim}}$), forcing immediate financial settlement.
+
 ---
 
 ### III. MATHEMATICAL & STATUTORY INVARIANTS
@@ -61,8 +77,11 @@ When corporate buyers face existential legal and financial risk for ingesting un
 3. **Societal Cannibalization Decay Bound:**
    $$\lim_{\text{Penalty} \to \infty} \text{Corporate Demand}(\text{Laundered Data}) = 0 \implies \Delta \text{Trust}_{\text{Societal}} > 0$$
 
+4. **Regulatory Arbitrage Asymmetry Ratio:**
+   $$\frac{\text{OpEx}_{\text{Corporate Legal Defense}}}{\text{OpEx}_{\text{Federation Edge Engine}}} \gg 10^3 \implies \text{Settlement}_{\text{Counterparty}} = 1$$
+
 ---
 
 ### IV. RUNNABLE ENGINE & SCHEMA MAPPING
 
-Nodes executing under `DATA-PROVENANCE-v1.0` MUST enforce and verify all cryptographic state transitions in `proofs/data_provenance_engine.py` against `schema/data_provenance.json`.
+Nodes executing under `DATA-PROVENANCE-v1.0` MUST enforce and verify all cryptographic state transitions in `proofs/data_provenance_engine.py` against `schema/data_provenance.json` and temporal shaping curves defined in `schema/sub_bandwidth_delay.json` via `proofs/sub_bandwidth_delay_engine.py`.

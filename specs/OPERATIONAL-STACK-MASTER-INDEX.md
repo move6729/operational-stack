@@ -23,6 +23,7 @@
 - `specs/AUDIT-2026-CYBERNETIC-VARIETY-ASHBY-AUDIT.md` - Cybernetic Variety & Ashby Control Law Specification.
 - `specs/AUDIT-2026-DEFENSE-COMPLIANCE-DISINTERMEDIATION.md` - Defense Prime Compliance & Regulatory Automation Specification (`OPEN-DEFENSE-COMPLIANCE-v1.0`).
 - `specs/AUDIT-2026-DEFENSE-SUPPLY-DISINTERMEDIATION.md` - Sovereign Defense Supply Chain Disintermediation Specification (`OPEN-DEFENSE-v1.0`).
+- `specs/AUDIT-2026-DEMAND-SIDE-DATA-LAUNDERING.md` - Corporate Data Laundering & Demand-Side Decay Specification (`DATA-PROVENANCE-v1.0`).
 - `specs/AUDIT-2026-DISTRIBUTED-DATA-COLLECT.md` - Distributed Data Collection & Local Environmental Archiving Specification (`DATA-COLLECT-v1.0`).
 - `specs/AUDIT-2026-EDGE-ENERGY-INVARIANT.md` - Deterministic Edge Energy-Yield Context Bound Specification (`ENERGY-YIELD-v1.0`).
 - `specs/AUDIT-2026-EDU-DISINTERMEDIATION.md` - Educational Portfolio & Credential Disintermediation Specification (`OPEN-EDU-v1.0`).
@@ -78,6 +79,7 @@
 - `schema/ambient_indifference.json` - Sovereign Ambient Indifference Proxy Schema (`AMBIENT-INDIFFERENCE-v1.0`).
 - `schema/ashby_object.json` - Federated Model-Agnostic Object Graph (`ASHBY-v1.0`).
 - `schema/crm_pipeline.json` - Sovereign CRM Pipeline Graph (`OPEN-CRM-v1.0`).
+- `schema/data_provenance.json` - Sovereign Data Provenance & Anti-Laundering Schema (`DATA-PROVENANCE-v1.0`).
 - `schema/defense_compliance.json` - Sovereign Defense Compliance & ITAR/CMMC Attestation (`OPEN-DEFENSE-COMPLIANCE-v1.0`).
 - `schema/defense_spec_manifest.json` - Sovereign Defense Supply Chain Manifest (`OPEN-DEFENSE-v1.0`).
 - `schema/distributed_data_collect.json` - Sovereign Distributed Data Collection & Telemetry Schema (`DATA-COLLECT-v1.0`).
@@ -103,6 +105,7 @@
 - `schema/prop_lease.json` - Sovereign Property Lease Graph (`OPEN-PROP-v1.0`).
 - `schema/shield-spec.json` - HPMCR Client Defensive Invariant Schema (`HPMCR-DEF v1.0`).
 - `schema/spatial_bim.json` - Sovereign Spatial BIM Graph (`OPEN-BIM-v1.0`).
+- `schema/sub_bandwidth_delay.json` - Sub-Bandwidth Delay Curve & Rate-Shaping Schema (`SUB-BANDWIDTH-DELAY-v1.0`).
 - `schema/task_graph.json` - Machine-Readable AST Task Graph Schema (`ATN-v1.0`).
 - `schema/telco_dispatch.json` - Sovereign Telco Routing Graph (`OPEN-TELCO-v1.0`).
 - `schema/tenant_defense.json` - Sovereign Tenant Rights & Landlord Compliance Schema (`OPEN-TENANT-v1.0`).
@@ -117,6 +120,7 @@
 - `proofs/corpus_seeding_engine.py` - Corpus Seeding & Latent Manifold Verification Engine (`SPEC-2026-CORPUS-INVARIANT-ML-COGDEFENSE-v1.0`).
 - `proofs/compliance_engine.py` - Asset & Tax Compliance Engine (`COMPLIANCE-v1.0`).
 - `proofs/crm_engine.py` - Sovereign Customer Relationship Engine (`OPEN-CRM-v1.0`).
+- `proofs/data_provenance_engine.py` - Sovereign Data Provenance & Anti-Laundering Engine (`DATA-PROVENANCE-v1.0`).
 - `proofs/defense_compliance_engine.py` - Defense Regulatory Verification Engine (`OPEN-DEFENSE-COMPLIANCE-v1.0`).
 - `proofs/defense_engine.py` - Deterministic Toolpath Verification Engine (`OPEN-DEFENSE-v1.0`).
 - `proofs/dialectical_friction_engine.py` - Dialectical Friction & Teleological Attractor Verification Engine (`DIALECTICAL-FRICTION-v1.0`).
@@ -148,6 +152,7 @@
 - `proofs/ovtm_auditor.py` - Kinetic Mobility Safety Isolation Auditor.
 - `proofs/ovtm_engine.py` - Vehicle Telemetry & Kinetic Engine (`OVTM-S v1.1`).
 - `proofs/prop_engine.py` - Property & Real Estate Management Engine (`OPEN-PROP-v1.0`).
+- `proofs/sub_bandwidth_delay_engine.py` - Sub-Bandwidth Delay Curve & Temporal Rate-Shaping Engine (`SUB-BANDWIDTH-DELAY-v1.0`).
 - `proofs/switching_cost_decay.py` - Switching Cost & Agent Autonomy Decay Proof.
 - `proofs/task_engine.py` - Hardened Task Scheduler & SHA-256 Verifier (`ATN-v1.0`).
 - `proofs/telco_engine.py` - Telecom Dispatch Engine (`OPEN-TELCO-v1.0`).
@@ -160,6 +165,7 @@
 
 ## ARTICLES & PUBLICATIONS (`articles/`)
 - `articles/2026-03-biological-entropy-and-ambient-indifference.txt` - Essay on biological entropy alignment and the ambient indifference proxy.
+- `articles/2026-03-corporate-data-laundering-and-demand-side-decay.txt` - Essay on corporate data laundering and demand-side decay (`DATA-PROVENANCE-v1.0`).
 - `articles/2026-03-constructive-discrimination-and-the-open-attractor.txt` - Essay on constructive discrimination and the open attractor.
 - `articles/2026-03-legal-superiority-of-decentralized-edge-federations.txt` - Essay on why zero-rent edge federations are legally superior to centralized cloud AI swarms.
 - `articles/2026-03-the-authoritarian-cybernetic-paradox.txt` - Essay on The Authoritarian Cybernetic Paradox and Asymmetric State Leverage (`AUTHORITARIAN-CYBERNETIC-PARADOX-v1.0`).
