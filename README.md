@@ -228,6 +228,10 @@ move6729 / operational-stack:
   $$\sum_{i=1}^N \text{Proof}_i(\mathcal{E}) \ge N_{\text{min}} \implies \text{Action}_{\text{Collective}} = 1 \quad (\text{C2 Tokens} = 0)$$
 - **Regulatory Arbitrage Asymmetry:**
   $$\text{Cost}_{\text{Counterparty Compliance}}(\text{Dispute}) \gg \text{Value}_{\text{Settlement Claim}} \implies \text{Outcome} = \text{Refund Accepted}$$
+- **Shannon Mesh Capacity Bound:**
+  $$R_{\text{sync}} \le B \log_2\left(1 + \frac{S}{N}\right) \implies \text{Zero State Desynchronization}$$
+- **Kolmogorov Context Preservation Bound:**
+  $$\text{Tokens}_{\text{Context}} \ge \mathcal{K}(\text{AST}_{\text{State}}) \implies \text{Zero Execution Corruption}$$
 
 ---
 
