@@ -9,11 +9,11 @@
     },
     "collection_type": {
       "type": "string",
-      "enum": ["WEB_SCRAPE", "PUBLIC_ARCHIVE", "ENVIRONMENTAL_TELEMETRY"]
+      "enum": ["WEB_SCRAPE", "PUBLIC_ARCHIVE", "ENVIRONMENTAL_TELEMETRY", "POOLED_COMMERCIAL_FEED"]
     },
     "target_identifier": {
       "type": "string",
-      "description": "URI, public record key, or sensor metric name"
+      "description": "URI, public record key, sensor metric name, or commercial feed identifier"
     },
     "timestamp_utc": {
       "type": "integer",
@@ -21,7 +21,7 @@
     },
     "extracted_ast": {
       "type": "object",
-      "description": "Structured JSON parsed locally from HTML or public document"
+      "description": "Structured JSON parsed locally from HTML, public document, or non-infringing commercial feed derivative"
     },
     "fuzzed_telemetry": {
       "type": "object",
@@ -32,6 +32,17 @@
         "fuzzed_value": { "type": "number" }
       },
       "required": ["metric_name", "raw_quantized_value", "noise_delta", "fuzzed_value"],
+      "additionalProperties": false
+    },
+    "pooled_escrow": {
+      "type": "object",
+      "properties": {
+        "escrow_id": { "type": "string" },
+        "contributing_nodes_count": { "type": "integer", "minimum": 1 },
+        "total_micro_settlement_sats": { "type": "integer", "minimum": 1 },
+        "non_infringing_derivative_attested": { "type": "boolean" }
+      },
+      "required": ["escrow_id", "contributing_nodes_count", "total_micro_settlement_sats", "non_infringing_derivative_attested"],
       "additionalProperties": false
     },
     "node_attestation": {

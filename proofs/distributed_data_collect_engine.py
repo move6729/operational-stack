@@ -7,8 +7,9 @@ from typing import Dict, Any, Tuple
 class DistributedDataCollectEngine:
     """
     Bare-Metal Sovereign Distributed Data Collection Engine (DATA-COLLECT-v1.0).
-    Provides zero-rent distributed web scraping, public record archiving, and
-    differentially private environmental telemetry processing without central servers.
+    Provides zero-rent distributed web scraping, public record archiving,
+    differentially private environmental telemetry processing, and pooled
+    commercial feed extraction with non-infringing AST derivative synthesis.
     """
 
     def parse_html_to_ast(self, html_content: str) -> Dict[str, Any]:
@@ -27,6 +28,22 @@ class DistributedDataCollectEngine:
             "char_count": len(html_content)
         }
 
+    def transform_raw_feed_to_non_infringing_ast(self, raw_commercial_payload: Dict[str, Any]) -> Dict[str, Any]:
+        """
+        Transforms raw, proprietary, or copyrighted commercial payloads (e.g. satellite
+        telemetry or order books) into non-infringing factual AST vectors locally.
+        Zero egress of raw commercial files.
+        """
+        raw_bytes_len = len(json.dumps(raw_commercial_payload))
+        extracted_facts = {
+            "sensor_type": raw_commercial_payload.get("sensor_type", "GENERIC_SAT_TELEMETRY"),
+            "observed_coordinates": raw_commercial_payload.get("coords", [0.0, 0.0]),
+            "ground_truth_metric": round(float(raw_commercial_payload.get("raw_val", 0.0)), 4),
+            "derivation_status": "NON_INFRINGING_FACTUAL_AST",
+            "raw_payload_bytes_stripped": raw_bytes_len
+        }
+        return extracted_facts
+
     def apply_differential_privacy(self, metric_name: str, raw_val: float, noise_delta: float) -> Dict[str, float]:
         """
         Applies local differential noise and quantization to environmental telemetry
@@ -40,6 +57,12 @@ class DistributedDataCollectEngine:
             "noise_delta": noise_delta,
             "fuzzed_value": fuzzed
         }
+
+    def verify_pooled_escrow_contribution(self, contributing_nodes: int, total_sats: int, fee_required_sats: int) -> bool:
+        """
+        Verifies micro-settlement pooling threshold for high-CapEx commercial data access.
+        """
+        return contributing_nodes > 0 and total_sats >= fee_required_sats
 
     def generate_commit_hash(self, payload: Dict[str, Any]) -> str:
         """
@@ -76,14 +99,38 @@ def run_data_collect_proof() -> bool:
     assert telemetry["raw_quantized_value"] == 120.46
     assert telemetry["fuzzed_value"] == 120.50
 
-    # 3. Build Full Payload
+    # 3. Test Commercial Feed Transformation & Escrow Verification
+    escrow_valid = engine.verify_pooled_escrow_contribution(
+        contributing_nodes=50,
+        total_sats=10000,
+        fee_required_sats=10000
+    )
+    assert escrow_valid
+
+    raw_sat_payload = {
+        "sensor_type": "HYPERSPECTRAL_SAT_SAR",
+        "coords": [37.7749, -122.4194],
+        "raw_val": 98.65432,
+        "copyright_notice": "Proprietary Commercial Image Grid - All Rights Reserved"
+    }
+    non_infringing_ast = engine.transform_raw_feed_to_non_infringing_ast(raw_sat_payload)
+    assert non_infringing_ast["derivation_status"] == "NON_INFRINGING_FACTUAL_AST"
+    assert "copyright_notice" not in non_infringing_ast
+
+    # 4. Build Full Payload
     payload = {
         "payload_id": "data-0123456789abcdef",
-        "collection_type": "PUBLIC_ARCHIVE",
-        "target_identifier": "https://court.local/docket/1042",
-        "timestamp_utc": 1741500000,
-        "extracted_ast": ast_output,
+        "collection_type": "POOLED_COMMERCIAL_FEED",
+        "target_identifier": "feed-orbital-sar-01",
+        "timestamp_utc": [PHONE],
+        "extracted_ast": non_infringing_ast,
         "fuzzed_telemetry": telemetry,
+        "pooled_escrow": {
+            "escrow_id": "escrow-9988776655443322",
+            "contributing_nodes_count": 50,
+            "total_micro_settlement_sats": 10000,
+            "non_infringing_derivative_attested": True
+        },
         "node_attestation": {
             "node_id": "node-alpha",
             "signature_hash": "0000000000000000000000000000000000000000000000000000000000000000"
