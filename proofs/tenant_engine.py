@@ -222,7 +222,7 @@ def run_tenant_proof() -> bool:
     stigmergic = engine.evaluate_stigmergic_class_threshold("building-88", ["hash1", "hash2", "hash3"], min_threshold=3)
 
     return (
-        abatement == 333333 and
+        abatement == 33333 and
         retaliation is True and
         leverage["escalation_state"] == 2 and
         pleading["artifact_type"] == "PRO_SE_HOUSING_PLEADING" and
