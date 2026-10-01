@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Fetch Substack RSS feed and export all articles into articles/substack.json.
+Fetch complete Substack publication archive and export all articles into articles/substack.json.
 Zero external dependencies (uses standard library only).
 """
 
@@ -12,35 +12,78 @@ import xml.etree.ElementTree as ET
 
 def fetch_substack(publication_or_url: str) -> None:
     if publication_or_url.startswith("http://") or publication_or_url.startswith("https://"):
-        feed_url = publication_or_url
+        host = publication_or_url.split("//")[-1].split("/")[0]
+        subdomain = host.split(".")[0]
     else:
-        feed_url = f"https://{publication_or_url}.substack.com/feed"
+        subdomain = publication_or_url
 
-    print(f"Fetching RSS feed from: {feed_url}")
-    req = urllib.request.Request(
-        feed_url,
-        headers={"User-Agent": "Mozilla/5.0 (OperationalStack-CorpusFetcher/1.0)"}
-    )
-
-    with urllib.request.urlopen(req) as response:
-        xml_data = response.read()
-
-    root = ET.fromstring(xml_data)
-    namespaces = {"content": "http://purl.org/rss/1.0/modules/content/"}
+    base_api_url = f"https://{subdomain}.substack.com/api/v1/posts"
+    print(f"Fetching complete post archive from: {subdomain}.substack.com")
 
     items = []
-    for item in root.findall(".//item"):
-        title = item.findtext("title") or ""
-        link = item.findtext("link") or ""
-        pub_date = item.findtext("pubDate") or ""
-        content = item.findtext("content:encoded", namespaces=namespaces) or item.findtext("description") or ""
+    limit = 50
+    offset = 0
 
-        items.append({
-            "title": title,
-            "link": link,
-            "pubDate": pub_date,
-            "content": content
-        })
+    while True:
+        api_url = f"{base_api_url}?limit={limit}&offset={offset}"
+        req = urllib.request.Request(
+            api_url,
+            headers={"User-Agent": "Mozilla/5.0 (OperationalStack-CorpusFetcher/1.0)"}
+        )
+
+        try:
+            with urllib.request.urlopen(req) as response:
+                raw_data = response.read().decode("utf-8")
+                posts = json.loads(raw_data)
+        except Exception:
+            break
+
+        if not posts:
+            break
+
+        for post in posts:
+            title = post.get("title") or ""
+            link = post.get("canonical_url") or f"https://{subdomain}.substack.com/p/{post.get('slug', '')}"
+            pub_date = post.get("post_date") or ""
+            content = post.get("body_html") or post.get("description") or ""
+
+            items.append({
+                "title": title,
+                "link": link,
+                "pubDate": pub_date,
+                "content": content
+            })
+
+        if len(posts) < limit:
+            break
+
+        offset += limit
+
+    if not items:
+        feed_url = f"https://{subdomain}.substack.com/feed"
+        print(f"API returned 0 posts. Falling back to RSS feed: {feed_url}")
+        req = urllib.request.Request(
+            feed_url,
+            headers={"User-Agent": "Mozilla/5.0 (OperationalStack-CorpusFetcher/1.0)"}
+        )
+        with urllib.request.urlopen(req) as response:
+            xml_data = response.read()
+
+        root = ET.fromstring(xml_data)
+        namespaces = {"content": "http://purl.org/rss/1.0/modules/content/"}
+
+        for item in root.findall(".//item"):
+            title = item.findtext("title") or ""
+            link = item.findtext("link") or ""
+            pub_date = item.findtext("pubDate") or ""
+            content = item.findtext("content:encoded", namespaces=namespaces) or item.findtext("description") or ""
+
+            items.append({
+                "title": title,
+                "link": link,
+                "pubDate": pub_date,
+                "content": content
+            })
 
     os.makedirs("articles", exist_ok=True)
     output_path = os.path.join("articles", "substack.json")
