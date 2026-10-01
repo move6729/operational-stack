@@ -7,7 +7,7 @@
 
 ### I. EXECUTIVE SUMMARY & ARCHITECTURAL SCOPE
 
-The OPEN-GTO-v1.0 specification defines the deterministic state-machine and verification protocol for edge node interactions with legacy external counterparties, rentier platforms, and SaaS gatekeepers. It enforces game-theoretic optimal (GTO) negotiation posture, time-discount decay curves, circuit-breaker exits, state TTL purging, statutory regulatory escalation vectors, trembling-hand noise filtering, subgame-perfect grim triggers, peer settlement transparency, and collective subrogation claims.
+The OPEN-GTO-v1.0 specification defines the deterministic state-machine and verification protocol for edge node interactions with legacy external counterparties, rentier platforms, and SaaS gatekeepers. It enforces game-theoretic optimal (GTO) negotiation posture, time-discount decay curves, circuit-breaker exits, state TTL purging, statutory regulatory escalation vectors, trembling-hand noise filtering, subgame-perfect grim triggers, peer settlement transparency, and collective claim aggregation.
 
 ---
 
@@ -25,7 +25,7 @@ The OPEN-GTO-v1.0 specification defines the deterministic state-machine and veri
    - **Trembling-Hand Noise Filtering ($\epsilon$):** Evaluates noise bounds on counterparty offers to prevent accidental state lockouts from micro-deviations while maintaining floor rigidity.
    - **Subgame-Perfect Grim Trigger:** Permanently locks a counterparty into a non-interactive, zero-egress blackout state upon detected bad-faith defects or breaches.
    - **Peer Settlement Transparency & Information Sharing:** Informs dynamic local reserve floors by integrating ZK/cryptographically signed peer settlement graphs ($\mathcal{E}$), eliminating counterparty price discrimination.
-   - **Collective Subrogation & Litigation Aggregation:** Pools cryptographically signed dispute proof marks across independent nodes to trigger automated class action / statutory subrogation vectors without central command-and-control overhead.
+   - **Collective Claim Aggregation & Dispute Pooling:** Pools cryptographically signed dispute proof marks across independent nodes to trigger automated class action / statutory claim filings without central command-and-control overhead.
 
 4. **Time-Discount Decay Mechanics & TTL State Purging:**
    - As elapsed time $t$ increases, the engine calculates time discount $\delta(t) = e^{-\gamma t}$.
@@ -45,4 +45,4 @@ The OPEN-GTO-v1.0 specification defines the deterministic state-machine and veri
 
 ### III. VERIFICATION PROOF
 
-The implementation in `proofs/gto_negotiation_engine.py` MUST pass all verification assertions, verifying payload integrity, payoff floor evaluation, regulatory escalation formatting, grim-trigger lockouts, peer settlement graph integrations, collective subrogation triggers, and SHA-256 state transitions.
+The implementation in `proofs/gto_negotiation_engine.py` MUST pass all verification assertions, verifying payload integrity, payoff floor evaluation, regulatory escalation formatting, grim-trigger lockouts, peer settlement graph integrations, collective claim aggregation triggers, and SHA-256 state transitions.

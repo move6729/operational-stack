@@ -14,7 +14,7 @@
     "grim_trigger_active",
     "separating_signal_proof",
     "shared_peer_settlements",
-    "collective_subrogation_claims"
+    "collective_claim_aggregation"
   ],
   "properties": {
     "negotiation_id": {
@@ -57,7 +57,7 @@
         "type": "number"
       }
     },
-    "collective_subrogation_claims": {
+    "collective_claim_aggregation": {
       "type": "array",
       "items": {
         "type": "string"

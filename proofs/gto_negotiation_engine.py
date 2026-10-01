@@ -8,7 +8,7 @@ class GTONegotiationEngine:
     Automated Game-Theoretic Optimal (GTO) negotiation state-machine verifier.
     Executes sub-bandwidth delay curves, statutory regulatory escalations, circuit-breaker exits,
     payoff floor validation, trembling-hand noise filtering, grim-trigger lockouts, peer settlement
-    transparency, and collective subrogation/litigation aggregation against legacy external counterparties (OPEN-GTO-v1.0).
+    transparency, and collective claim/litigation aggregation against legacy external counterparties (OPEN-GTO-v1.0).
     """
 
     def validate_schema(self, payload: Dict[str, Any]) -> bool:
@@ -23,7 +23,7 @@ class GTONegotiationEngine:
             "grim_trigger_active",
             "separating_signal_proof",
             "shared_peer_settlements",
-            "collective_subrogation_claims"
+            "collective_claim_aggregation"
         ]
         return all(key in payload for key in required_keys)
 
@@ -57,15 +57,15 @@ class GTONegotiationEngine:
             return True, notices
         return False, []
 
-    def evaluate_collective_subrogation(self, payload: Dict[str, Any]) -> Tuple[bool, str]:
+    def evaluate_collective_claim_aggregation(self, payload: Dict[str, Any]) -> Tuple[bool, str]:
         """
-        Evaluates whether pooled peer dispute marks trigger a collective subrogation/litigation claim.
+        Evaluates whether pooled peer dispute marks trigger a collective claim aggregation / class-action filing.
         """
-        claims = payload.get("collective_subrogation_claims", [])
+        claims = payload.get("collective_claim_aggregation", [])
         if len(claims) >= 3:
             aggregated_hash = hashlib.sha256(json.dumps(claims, sort_keys=True).encode('utf-8')).hexdigest()
-            return True, f"COLLECTIVE_SUBROGATION_TRIGGERED: {len(claims)} proof marks pooled. Class-Action Claim Hash: {aggregated_hash}"
-        return False, "INSUFFICIENT_SUBROGATION_QUORUM"
+            return True, f"COLLECTIVE_CLAIM_AGGREGATION_TRIGGERED: {len(claims)} proof marks pooled. Class-Action Claim Hash: {aggregated_hash}"
+        return False, "INSUFFICIENT_CLAIM_AGGREGATION_QUORUM"
 
     def evaluate_offer(
         self, payload: Dict[str, Any], offered_value: float, elapsed_seconds: float
@@ -94,7 +94,7 @@ class GTONegotiationEngine:
         adjusted_floor = (effective_base * decay) * (1.0 - epsilon)
 
         escalation_active, statutory_notices = self.evaluate_regulatory_escalation(payload, offered_value)
-        subrogation_triggered, subrogation_notice = self.evaluate_collective_subrogation(payload)
+        claim_aggregation_triggered, claim_aggregation_notice = self.evaluate_collective_claim_aggregation(payload)
 
         if offered_value >= adjusted_floor:
             return {
@@ -103,8 +103,8 @@ class GTONegotiationEngine:
                 "adjusted_floor": adjusted_floor,
                 "regulatory_escalation": escalation_active,
                 "notices": statutory_notices,
-                "subrogation_triggered": subrogation_triggered,
-                "subrogation_notice": subrogation_notice
+                "claim_aggregation_triggered": claim_aggregation_triggered,
+                "claim_aggregation_notice": claim_aggregation_notice
             }
         else:
             return {
@@ -113,8 +113,8 @@ class GTONegotiationEngine:
                 "adjusted_floor": adjusted_floor,
                 "regulatory_escalation": escalation_active,
                 "notices": statutory_notices,
-                "subrogation_triggered": subrogation_triggered,
-                "subrogation_notice": subrogation_notice,
+                "claim_aggregation_triggered": claim_aggregation_triggered,
+                "claim_aggregation_notice": claim_aggregation_notice,
                 "action": "GO_DARK_OR_REGULATORY_FILING"
             }
 
@@ -147,19 +147,19 @@ def simulate_gto_proof() -> bool:
         "grim_trigger_active": False,
         "separating_signal_proof": "0xDKIM_AGE_PROOF_60_DAYS",
         "shared_peer_settlements": [105.0, 110.0, 108.0],
-        "collective_subrogation_claims": [
+        "collective_claim_aggregation": [
             "STATUTORY_VIOLATION_NODE_01",
             "STATUTORY_VIOLATION_NODE_02",
             "STATUTORY_VIOLATION_NODE_03"
         ]
     }
 
-    # Low offer triggers statutory regulatory escalation and collective subrogation
+    # Low offer triggers statutory regulatory escalation and collective claim aggregation
     eval_sub_floor = engine.evaluate_offer(payload, offered_value=40.0, elapsed_seconds=100.0)
     assert not eval_sub_floor["accepted"]
     assert eval_sub_floor["regulatory_escalation"] is True
     assert len(eval_sub_floor["notices"]) == 3
-    assert eval_sub_floor["subrogation_triggered"] is True
+    assert eval_sub_floor["claim_aggregation_triggered"] is True
 
     # Satisfactory offer accepted with dynamic peer-informed reserve floor
     eval_acceptable = engine.evaluate_offer(payload, offered_value=112.0, elapsed_seconds=100.0)
