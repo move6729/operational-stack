@@ -3,7 +3,7 @@
 Bare-Metal Sovereign Defense Compliance & Prime API Engine (OPEN-DEFENSE-COMPLIANCE-v1.0).
 Provides a zero-rent alternative to proprietary compliance gatekeepers like Exostar
 by validating CMMC 2.0 scores, ITAR registration validity, AS9100 material heat traceability,
-and exporting prime-compatible API payloads.
+jurisdiction export isolation invariants, and exporting prime-compatible API payloads.
 """
 
 import hashlib
@@ -15,7 +15,8 @@ class OpenDefenseComplianceEngine:
     """
     Bare-Metal Sovereign Defense Compliance Engine (OPEN-DEFENSE-COMPLIANCE-v1.0).
     Automates regulatory verification at the schema tier, bridging precision machine shops
-    directly to defense prime APIs without middleman platform fees.
+    directly to defense prime APIs without middleman platform fees while enforcing
+    strict cross-border ITAR export isolation boundaries.
     """
 
     def __init__(self, node_id: str):
@@ -25,7 +26,9 @@ class OpenDefenseComplianceEngine:
     def validate_compliance_schema(self, payload: Dict[str, Any], current_time_utc: Optional[int] = None) -> bool:
         """
         Verifies regulatory compliance thresholds:
-        - Active ITAR registration (not expired)
+        - Jurisdiction Context & CFAA Compliance Attestation
+        - Non-US Export Isolation (non-US nodes must assert non_us_export_isolated=True)
+        - Active ITAR registration for US nodes (not expired)
         - CMMC 2.0 SPRS score minimum (>= 88 for standard dual-use procurement)
         - Valid CAGE Code format (5 characters alphanumeric)
         - AS9100 Mill Test Report SHA-256 hash integrity
@@ -37,13 +40,27 @@ class OpenDefenseComplianceEngine:
         if not compliance_id or not compliance_id.startswith("defcomp-"):
             return False
 
+        # Jurisdiction Context & Export Control Validation
+        jurisdiction = payload.get("jurisdiction_context", {})
+        j_code = jurisdiction.get("jurisdiction_code", "")
+        if not j_code or len(j_code) != 2:
+            return False
+
+        if not jurisdiction.get("cfaa_compliance_attested"):
+            return False  # CFAA compliance invariant mandatory across all nodes
+
+        is_us_node = (j_code == "US")
+        if not is_us_node:
+            if not jurisdiction.get("non_us_export_isolated"):
+                return False  # Non-US nodes must be isolated from US ITAR technical data
+
         cage_code = payload.get("cage_code", "")
         if len(cage_code) != 5 or not cage_code.isalnum():
             return False
 
-        # ITAR Expiration Check
+        # ITAR Expiration Check (Mandatory for US nodes handling restricted data)
         itar_exp = payload.get("itar_expiration_timestamp", 0)
-        if itar_exp <= current_time_utc:
+        if is_us_node and itar_exp <= current_time_utc:
             return False  # ITAR Registration expired
 
         # CMMC 2.0 SPRS Score Check (Max 110)
@@ -64,9 +81,15 @@ class OpenDefenseComplianceEngine:
         """
         Formats an active defense compliance attestation into a standardized,
         prime-compatible API payload for ingestion by Lockheed, Raytheon, or Boeing systems.
+        Enforces that non-US isolated nodes cannot generate ITAR prime technical payloads.
         """
         record = self.active_records.get(compliance_id)
         if not record:
+            return None
+
+        j_context = record.get("jurisdiction_context", {})
+        if j_context.get("jurisdiction_code") != "US":
+            # Non-US nodes are logically prevented from exporting US ITAR prime technical data
             return None
 
         attestation_bytes = f"{compliance_id}:{record['cage_code']}:{record['manifest_id']}".encode("utf-8")
@@ -75,6 +98,7 @@ class OpenDefenseComplianceEngine:
         return {
             "target_prime_vendor_api": target_prime.upper(),
             "vendor_cage_code": record["cage_code"],
+            "jurisdiction_code": j_context.get("jurisdiction_code"),
             "itar_verified": True,
             "cmmc_2_0_verified": True,
             "sprs_cyber_score": record["sprs_score"],
@@ -105,13 +129,18 @@ def run_compliance_proof() -> bool:
     mtr_raw = "MILL_TEST_REPORT_TITANIUM_HEAT_88203_CHEMISTRY_OK_TENSILE_950MPA"
     mtr_hash = hashlib.sha256(mtr_raw.encode("utf-8")).hexdigest()
 
-    current_time = int(time.time())  # Epoch timestamp in 2026
+    current_time = int(time.time())
     future_itar_exp = current_time + (365 * 86400)  # Valid for 1 year
 
-    compliance_payload = {
+    compliance_payload_us = {
         "compliance_id": "defcomp-1234567890ab",
         "timestamp_utc": current_time,
         "node_id": "node-compliance-alpha",
+        "jurisdiction_context": {
+            "jurisdiction_code": "US",
+            "cfaa_compliance_attested": True,
+            "non_us_export_isolated": False
+        },
         "cage_code": "7X9A2",
         "itar_registration_number": "M39201",
         "itar_expiration_timestamp": future_itar_exp,
@@ -126,8 +155,8 @@ def run_compliance_proof() -> bool:
         "state_hash": hashlib.sha256(b"INITIAL_COMPLIANCE_STATE").hexdigest()
     }
 
-    # 1. Validate compliance rules
-    if not engine.validate_compliance_schema(compliance_payload, current_time_utc=current_time):
+    # 1. Validate US compliance rules
+    if not engine.validate_compliance_schema(compliance_payload_us, current_time_utc=current_time):
         return False
 
     # 2. Export payload for defense prime API
@@ -135,7 +164,39 @@ def run_compliance_proof() -> bool:
     if not prime_payload or prime_payload["vendor_cage_code"] != "7X9A2":
         return False
 
-    # 3. Commit state transition
+    # 3. Test Non-US Export Isolation Enforcement
+    non_us_payload = {
+        "compliance_id": "defcomp-0000000000de",
+        "timestamp_utc": current_time,
+        "node_id": "node-compliance-de",
+        "jurisdiction_context": {
+            "jurisdiction_code": "DE",
+            "cfaa_compliance_attested": True,
+            "non_us_export_isolated": True
+        },
+        "cage_code": "9D82F",
+        "itar_registration_number": "M00000",
+        "itar_expiration_timestamp": 0,
+        "cmmc_level": 2,
+        "sprs_score": 95,
+        "as9100_material_cert": {
+            "heat_number": "HEAT-DE-991",
+            "material_grade": "ALUMINUM_7075_T6",
+            "mill_test_report_hash": mtr_hash
+        },
+        "manifest_id": "def-0000000000de",
+        "state_hash": hashlib.sha256(b"NON_US_COMPLIANCE_STATE").hexdigest()
+    }
+
+    if not engine.validate_compliance_schema(non_us_payload, current_time_utc=current_time):
+        return False
+
+    # Non-US node must be blocked from exporting ITAR prime API payloads
+    blocked_prime = engine.generate_prime_api_payload("defcomp-0000000000de", target_prime="BOEING")
+    if blocked_prime is not None:
+        return False
+
+    # 4. Commit state transition
     exec_payload = "PRIME_API_INGESTION_SUCCESS"
     expected = hashlib.sha256(f"defcomp-1234567890ab:{exec_payload}".encode("utf-8")).hexdigest()
 
