@@ -20,13 +20,16 @@ The Distributed Data Collection Protocol (`DATA-COLLECT-v1.0`) bridges the sensi
 |  [ Web Scraping / Public Archive / Sensor / Pooled Commercial Feed ]  |
 |                     │                                                 |
 |                     ▼                                                 |
-|  [ Statutory Compliance Gate: CFAA / Auth-Boundary / Anti-DoS Check ] |
+|  [ Statutory Compliance Gate: CFAA / Auth-Boundary Check ]            |
 |                     │                                                 |
 |                     ▼                                                 |
-|  [ Byzantine Statutory Quarantine: Drop & Broadcast Poison Proof ]   |
+|  [ Anti-DoS Gate: Target Hash Slicing + Proof-of-Delay Tokens ]       |
 |                     │                                                 |
 |                     ▼                                                 |
-|  [ Micro-Settlement Capital Pooling ] <-- OPEN-SETTLEMENT-v1.0       |
+|  [ Byzantine Statutory Quarantine: Drop & Broadcast Poison Proof ]    |
+|                     │                                                 |
+|                     ▼                                                 |
+|  [ Micro-Settlement Capital Pooling ] <-- OPEN-SETTLEMENT-v1.0        |
 |                     │                                                 |
 |                     ▼                                                 |
 |  [ Non-Infringing AST Vector Derivation ] <-- Zero Raw Egress         |
@@ -35,7 +38,7 @@ The Distributed Data Collection Protocol (`DATA-COLLECT-v1.0`) bridges the sensi
 |  [ Differential Noise & Quantization ] <-- HPMCR-DEF Telemetry Shield |
 |                     │                                                 |
 |                     ▼                                                 |
-|  [ Cryptographic Attestation ]       <-- SHA-256 Payload Hash         |
+|  [ Cryptographic Attestation ]       <-- SHA-256 Payload Hash          |
 |                     │                                                 |
 |                     ▼                                                 |
 |  [ Zero-C2 Peer Mesh Gossip ]        <-- OPEN-MESH-DISCOVERY          |
@@ -58,31 +61,35 @@ The Distributed Data Collection Protocol (`DATA-COLLECT-v1.0`) bridges the sensi
    $$\text{Attestation}_{\text{Poison}} = \text{Sign}_{\text{Node}}\big(\text{PayloadHash} \mathbin{\Vert} \text{CFAA\_Violation\_Code}\big)$$
    *Upon detecting a statutory violation, a node drops the payload and broadcasts a cryptographic poison attestation across peer gossip. Receiving nodes verify the attestation, validate the payload violation locally, and automatically quarantine the sending node without central C2 coordination.*
 
-4. **System Integrity & Anti-DoS Rate Limiting Invariant:**
-   $$\text{Rate}_{\text{Request}} \le \text{Threshold}_{\text{MaxSafe}} \implies \text{Impact}_{\text{TargetServer}} = 0$$
-   *Nodes enforce active rate-limiting governors to ensure collection never impairs, degrades, or disrupts target system availability.*
+4. **Deterministic Target Hash Slicing Invariant (CFAA 18 U.S.C. § 1030(a)(5)(A) Anti-DDoS):**
+   $$\text{AssignedSlice} = \text{SHA-256}(\text{Target\_Domain}) \pmod{N}$$
+   *To eliminate target server collisions and prevent accidental or weaponized Distributed Denial of Service (DDoS) charges, nodes only scrape domains deterministically mapped to their assigned modulo slice.*
 
-5. **Local Privacy Isolation Invariant:**
+5. **Proof-of-Delay Token Invariant:**
+   $$t_{\text{current}} - t_{\text{last\_request}} \ge \tau_{\text{min}} \implies \text{Nonce}_{\text{Delay}} = \text{SHA-256}(t_{\text{current}} \mathbin{\Vert} \text{Domain})$$
+   *Nodes must produce a verifiable proof-of-delay token verifying that a minimum delay interval ($\tau_{\text{min}}$) was respected between sequential requests to the same target domain.*
+
+6. **Local Privacy Isolation Invariant:**
    $$\text{Egress}(\text{Private Operator Data}) = \emptyset$$
    *Personal files, private keys, identity metadata, and private activity log files are strictly air-gapped from data collection pipelines. Collection is limited exclusively to public web targets, public environmental sensors, and pooled commercial feeds.*
 
-6. **Differential Noise Telemetry Invariant:**
+7. **Differential Noise Telemetry Invariant:**
    $$\mathbf{T}_{\text{Published}} = \mathcal{Q}(\mathbf{T}_{\text{Raw}}) + \mathcal{N}(0, \sigma^2)$$
    *Public environmental telemetry is locally fuzzed with controlled Laplace or Gaussian noise ($\mathcal{N}$) and quantized ($\mathcal{Q}$) prior to egress. Server-side reconstruction of exact household coordinates is impossible, while macro-level statistical utility remains intact.*
 
-7. **Deterministic Local AST Reduction Invariant:**
+8. **Deterministic Local AST Reduction Invariant:**
    $$\text{Tokens}_{\text{Payload}} = \mathcal{K}(\text{AST}(\text{Raw HTML})) \ll \text{Tokens}_{\text{Raw HTML}}$$
    *Edge nodes parse unstructured HTML or commercial data locally into clean AST/JSON objects before network gossip, minimizing mesh bandwidth consumption by orders of magnitude.*
 
-8. **SHA-256 Attestation & Deduplication Invariant:**
+9. **SHA-256 Attestation & Deduplication Invariant:**
    $$\text{Proof}(\mathcal{D}) = \text{SHA-256}(\text{Target\_URI} \mathbin{\Vert} \text{Payload\_AST} \mathbin{\Vert} \text{Timestamp})$$
    *Every collected dataset must produce a verifiable state commit hash. Duplicate requests across the swarm are recognized and dropped via SHA-256 target matching.*
 
-9. **Pooled Micro-CapEx Data Escrow Invariant:**
-   $$\sum_{i=1}^N \text{Settlement}_i \ge \text{Fee}_{\text{Access}} \implies \text{State}_{\text{Feed}} = \text{UNLOCKED}$$
-   *Edge nodes aggregate sub-cent thermodynamic micro-settlements into multi-node escrow contracts to purchase proprietary data streams without single-node financial strain or individual identity exposure.*
+10. **Pooled Micro-CapEx Data Escrow Invariant:**
+    $$\sum_{i=1}^N \text{Settlement}_i \ge \text{Fee}_{\text{Access}} \implies \text{State}_{\text{Feed}} = \text{UNLOCKED}$$
+    *Edge nodes aggregate sub-cent thermodynamic micro-settlements into multi-node escrow contracts to purchase proprietary data streams without single-node financial strain or individual identity exposure.*
 
-10. **Non-Infringing AST Derivative Transformation Invariant:**
+11. **Non-Infringing AST Derivative Transformation Invariant:**
     $$\text{Egress}(\text{Raw Commercial Payload}) = 0 \quad \land \quad \text{Egress}(\text{AST}_{\text{GroundTruthFacts}}) = 1$$
     *Raw copyrighted binaries or satellite pixel arrays are processed exclusively on local silicon. Only non-infringing structural facts, numerical vectors, and synthesized inferences enter mesh distribution.*
 

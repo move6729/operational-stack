@@ -34,6 +34,32 @@
           "type": "boolean",
           "description": "True if anti-DoS rate limiting throttling was enforced during extraction"
         },
+        "target_hash_slice": {
+          "type": "object",
+          "properties": {
+            "assigned_slice": { "type": "integer", "minimum": 0 },
+            "total_slices": { "type": "integer", "minimum": 1 },
+            "domain_hash": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            }
+          },
+          "required": ["assigned_slice", "total_slices", "domain_hash"],
+          "additionalProperties": false
+        },
+        "proof_of_delay": {
+          "type": "object",
+          "properties": {
+            "last_request_timestamp": { "type": "integer", "minimum": 0 },
+            "min_interval_seconds": { "type": "integer", "minimum": 1 },
+            "nonce_hash": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            }
+          },
+          "required": ["last_request_timestamp", "min_interval_seconds", "nonce_hash"],
+          "additionalProperties": false
+        },
         "statutory_compliance_attested": {
           "type": "boolean",
           "description": "True if collection adheres strictly to domestic and international cybercrime statutes"
@@ -43,6 +69,8 @@
         "public_unauthenticated_boundary_verified",
         "zero_auth_bypass_verified",
         "rate_limit_governor_active",
+        "target_hash_slice",
+        "proof_of_delay",
         "statutory_compliance_attested"
       ],
       "additionalProperties": false

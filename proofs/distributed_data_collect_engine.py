@@ -70,6 +70,7 @@ class DistributedDataCollectEngine:
     - Operates strictly on unauthenticated public endpoints.
     - Rejects password cracking, CAPTCHA bypass, paywall evasion, or auth token theft.
     - Explicitly ignores civil Terms of Service (TOS) scraping prohibitions per hiQ v. LinkedIn.
+    - Prevents target server DoS via Deterministic Target Hash Slicing and Proof-of-Delay Tokens.
     - Isolates poisoning nodes via Byzantine statutory quarantine attestations.
     """
 
@@ -77,11 +78,50 @@ class DistributedDataCollectEngine:
         self.node_id = node_id
         self.quarantine_manager = ByzantineStatutoryQuarantine(node_id)
 
+    def verify_target_hash_slice(
+        self,
+        domain: str,
+        node_slice: int,
+        total_slices: int
+    ) -> bool:
+        """
+        Calculates deterministic target modulo hash slice:
+        AssignedSlice = SHA256(Domain) % TotalSlices.
+        Ensures nodes only scrape domains deterministically assigned to their slice,
+        preventing target collisions and swarm DoS.
+        """
+        if total_slices <= 0 or node_slice < 0 or node_slice >= total_slices:
+            return False
+        domain_hash_int = int(hashlib.sha256(domain.encode("utf-8")).hexdigest(), 16)
+        expected_slice = domain_hash_int % total_slices
+        return node_slice == expected_slice
+
+    def verify_proof_of_delay(
+        self,
+        domain: str,
+        current_time: int,
+        last_request_time: int,
+        min_interval_seconds: int,
+        nonce_hash: str
+    ) -> bool:
+        """
+        Verifies minimum request interval timing (tau_min) between requests to same target domain.
+        Prevents DDoS liability under CFAA § 1030(a)(5)(A).
+        """
+        if current_time - last_request_time < min_interval_seconds:
+            return False
+        
+        expected_raw = f"{current_time}:{domain}:{last_request_time}"
+        expected_nonce = hashlib.sha256(expected_raw.encode("utf-8")).hexdigest()
+        return nonce_hash == expected_nonce
+
     def validate_cfaa_compliance(
         self,
         requires_authentication: bool,
         bypasses_tpm_or_paywall: bool,
-        rate_limit_governor_active: bool
+        rate_limit_governor_active: bool,
+        target_slice_valid: bool = True,
+        proof_of_delay_valid: bool = True
     ) -> Tuple[bool, str]:
         """
         Enforces criminal statute boundaries (CFAA 18 U.S.C. § 1030).
@@ -95,6 +135,12 @@ class DistributedDataCollectEngine:
 
         if not rate_limit_governor_active:
             return False, "RATE_GOVERNOR_INACTIVE_RISK_OF_TARGET_IMPAIRMENT"
+
+        if not target_slice_valid:
+            return False, "CFAA_DOS_RISK_TARGET_HASH_SLICE_MISMATCH"
+
+        if not proof_of_delay_valid:
+            return False, "CFAA_DOS_RISK_PROOF_OF_DELAY_INVALID"
 
         return True, "STATUTORY_CFAA_COMPLIANT_PUBLIC_UNAUTHENTICATED"
 
@@ -115,10 +161,29 @@ class DistributedDataCollectEngine:
         bp_tpm = not statutory.get("zero_auth_bypass_verified", False)
         gov_active = statutory.get("rate_limit_governor_active", False)
 
+        target_id = payload.get("target_identifier", "")
+        domain = target_id.split("/")[2] if "://" in target_id else target_id
+
+        # Target Hash Slice Validation
+        slice_info = statutory.get("target_hash_slice", {})
+        a_slice = slice_info.get("assigned_slice", -1)
+        t_slices = slice_info.get("total_slices", 0)
+        target_slice_valid = self.verify_target_hash_slice(domain, a_slice, t_slices)
+
+        # Proof of Delay Validation
+        delay_info = statutory.get("proof_of_delay", {})
+        curr_time = payload.get("timestamp_utc", 0)
+        last_time = delay_info.get("last_request_timestamp", 0)
+        min_sec = delay_info.get("min_interval_seconds", 1)
+        n_hash = delay_info.get("nonce_hash", "")
+        delay_valid = self.verify_proof_of_delay(domain, curr_time, last_time, min_sec, n_hash)
+
         is_compliant, code = self.validate_cfaa_compliance(
             requires_authentication=req_auth,
             bypasses_tpm_or_paywall=bp_tpm,
-            rate_limit_governor_active=gov_active
+            rate_limit_governor_active=gov_active,
+            target_slice_valid=target_slice_valid,
+            proof_of_delay_valid=delay_valid
         )
 
         if not is_compliant:
@@ -214,7 +279,9 @@ def run_data_collect_proof() -> bool:
     compliant, reason = engine.validate_cfaa_compliance(
         requires_authentication=False,
         bypasses_tpm_or_paywall=False,
-        rate_limit_governor_active=True
+        rate_limit_governor_active=True,
+        target_slice_valid=True,
+        proof_of_delay_valid=True
     )
     assert compliant, f"Valid public collection failed gate: {reason}"
 
@@ -226,17 +293,44 @@ def run_data_collect_proof() -> bool:
     assert not non_compliant, "Engine failed to reject authenticated endpoint bypass!"
     assert breach_reason == "CFAA_VIOLATION_AUTHENTICATED_ENDPOINT_REQUIRES_CREDENTIALS"
 
-    # 2. Test Byzantine Poisoning Node Attack & Quarantine Attestation
+    # 2. Test Anti-DoS Target Hash Slice & Proof of Delay Verification
+    domain = "public-docket.gov"
+    domain_hash_int = int(hashlib.sha256(domain.encode("utf-8")).hexdigest(), 16)
+    total_slices = 10
+    assigned_slice = domain_hash_int % total_slices
+
+    slice_valid = engine.verify_target_hash_slice(domain, assigned_slice, total_slices)
+    assert slice_valid, "Target hash slice calculation mismatch!"
+
+    curr_t = int(time.time())
+    last_t = curr_t - 10
+    nonce_raw = f"{curr_t}:{domain}:{last_t}"
+    nonce_hash = hashlib.sha256(nonce_raw.encode("utf-8")).hexdigest()
+
+    delay_valid = engine.verify_proof_of_delay(domain, curr_t, last_t, min_interval_seconds=5, nonce_hash=nonce_hash)
+    assert delay_valid, "Proof of delay verification failed!"
+
+    # 3. Test Byzantine Poisoning Node Attack (Unassigned Slice / DoS Attack) & Quarantine Attestation
     poison_payload = {
         "payload_id": "data-badactor0000000",
         "collection_type": "WEB_SCRAPE",
-        "target_identifier": "http://private-portal.internal/login",
-        "timestamp_utc": int(time.time()),
+        "target_identifier": f"http://{domain}/docket",
+        "timestamp_utc": curr_t,
         "statutory_compliance": {
-            "public_unauthenticated_boundary_verified": False,  # AUTH WALL
-            "zero_auth_bypass_verified": False,                 # BYPASSED LOGIN
+            "public_unauthenticated_boundary_verified": True,
+            "zero_auth_bypass_verified": True,
             "rate_limit_governor_active": True,
-            "statutory_compliance_attested": False
+            "target_hash_slice": {
+                "assigned_slice": (assigned_slice + 1) % total_slices, # INVALID SLICE
+                "total_slices": total_slices,
+                "domain_hash": hashlib.sha256(domain.encode("utf-8")).hexdigest()
+            },
+            "proof_of_delay": {
+                "last_request_timestamp": last_t,
+                "min_interval_seconds": 5,
+                "nonce_hash": nonce_hash
+            },
+            "statutory_compliance_attested": True
         },
         "node_attestation": {
             "node_id": "node-poisoner",
@@ -246,7 +340,7 @@ def run_data_collect_proof() -> bool:
 
     accepted, drop_code, poison_attestation = engine.verify_and_quarantine_payload("node-poisoner", poison_payload)
     assert not accepted, "Engine accepted non-compliant poison payload!"
-    assert "CFAA_VIOLATION" in drop_code
+    assert "TARGET_HASH_SLICE_MISMATCH" in drop_code
     assert poison_attestation["quarantined_node_id"] == "node-poisoner"
     assert "node-poisoner" in engine.quarantine_manager.quarantined_nodes
 
@@ -256,12 +350,12 @@ def run_data_collect_proof() -> bool:
     assert verified_attestation, "Peer node failed to verify poison attestation signature!"
     assert "node-poisoner" in peer_engine.quarantine_manager.quarantined_nodes
 
-    # 3. Test Web Scrape / Public Record Extraction
+    # 4. Test Web Scrape / Public Record Extraction
     raw_html = "<html><body><h1>Public Court Docket #1042</h1><p>Status: Discharged.</p></body></html>"
     ast_output = engine.parse_html_to_ast(raw_html)
     assert ast_output["title"] == "<html><body><h1>Public Court Docket #1042</h1><p>Status: Discharged.</p></body></html>"
 
-    # 4. Test Environmental Telemetry Differential Privacy
+    # 5. Test Environmental Telemetry Differential Privacy
     telemetry = engine.apply_differential_privacy(
         metric_name="grid_voltage",
         raw_val=120.456,
@@ -270,7 +364,7 @@ def run_data_collect_proof() -> bool:
     assert telemetry["raw_quantized_value"] == 120.46
     assert telemetry["fuzzed_value"] == 120.50
 
-    # 5. Test Commercial Feed Transformation & Escrow Verification
+    # 6. Test Commercial Feed Transformation & Escrow Verification
     escrow_valid = engine.verify_pooled_escrow_contribution(
         contributing_nodes=50,
         total_sats=10000,
@@ -288,16 +382,26 @@ def run_data_collect_proof() -> bool:
     assert non_infringing_ast["derivation_status"] == "NON_INFRINGING_FACTUAL_AST"
     assert "copyright_notice" not in non_infringing_ast
 
-    # 6. Build Full Payload with Verified Statutory Compliance Gate
+    # 7. Build Full Valid Payload with Anti-DoS Proofs and Statutory Compliance
     payload = {
         "payload_id": "data-0123456789abcdef",
         "collection_type": "POOLED_COMMERCIAL_FEED",
-        "target_identifier": "feed-orbital-sar-01",
-        "timestamp_utc": int(time.time()),
+        "target_identifier": f"http://{domain}/feed",
+        "timestamp_utc": curr_t,
         "statutory_compliance": {
             "public_unauthenticated_boundary_verified": True,
             "zero_auth_bypass_verified": True,
             "rate_limit_governor_active": True,
+            "target_hash_slice": {
+                "assigned_slice": assigned_slice,
+                "total_slices": total_slices,
+                "domain_hash": hashlib.sha256(domain.encode("utf-8")).hexdigest()
+            },
+            "proof_of_delay": {
+                "last_request_timestamp": last_t,
+                "min_interval_seconds": 5,
+                "nonce_hash": nonce_hash
+            },
             "statutory_compliance_attested": True
         },
         "extracted_ast": non_infringing_ast,
@@ -322,7 +426,7 @@ def run_data_collect_proof() -> bool:
     commit_hash = engine.generate_commit_hash(payload)
     success = engine.commit_state_transition(payload, commit_hash)
 
-    print(f"[DATA-COLLECT-v1.0 Proof] Statutory CFAA Gate, Poison Node Isolation & State Commit Verified: {success} (Hash: {commit_hash[:16]}...)")
+    print(f"[DATA-COLLECT-v1.0 Proof] Anti-DoS Target Hash Slice, Proof-of-Delay, Poison Quarantine & State Commit Verified: {success} (Hash: {commit_hash[:16]}...)")
     return success
 
 
