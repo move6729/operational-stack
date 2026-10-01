@@ -49,9 +49,11 @@ Highlighting this statutory exposure is not an attempt to stifle artificial inte
 
 Instead of launching uncoordinated cloud swarms that hammer target domains, a decentralized edge federation partitions data collection deterministically. Under Kademlia XOR target assignment, a target domain is assigned exclusively to the local node neighborhood whose cryptographic IDs are closest to the domain's SHA-256 hash. Nodes outside this metric distance instantly drop requests locally. Combined with cryptographic Proof-of-Delay nonces that enforce a mandatory inter-request interval (tau_min >= 10 seconds), total network request volume against any domain is mathematically bounded. Target server impairment is rendered physically and algorithmically impossible.
 
-2. ABSOLUTE PROHIBITION OF TPM BYPASS
+2. ABSOLUTE PROHIBITION OF TPM BYPASS & PASSIVE HUMAN-IN-THE-LOOP INGESTION
 
-The open-source edge collection engine (proofs/distributed_data_collect_engine.py) strictly enforces statutory boundary gates. If a target endpoint requires credentials, presents a CAPTCHA, or returns an explicit WAF block, the edge node immediately aborts execution and records a lightweight backoff trace. Edge nodes never use residential proxy obfuscation or automated CAPTCHA solvers to bypass access controls, guaranteeing complete compliance with Van Buren and hiQ.
+The open-source edge collection engine (proofs/distributed_data_collect_engine.py) strictly enforces statutory boundary gates. If an automated target endpoint requires credentials, presents a CAPTCHA, or returns an explicit WAF block, the edge node immediately aborts automated execution and records a lightweight backoff trace. Edge nodes never use residential proxy obfuscation or automated CAPTCHA solvers to bypass access controls, guaranteeing complete compliance with Van Buren and hiQ.
+
+To ingest protected public data legally without dedicated human effort, local edge nodes operate as passive background daemons during routine operator web browsing. When a human user manually solves a CAPTCHA in their browser during standard daily activity, the local daemon passively ingests the resulting unauthenticated DOM state, strips all PII, synthesizes an abstracted AST derivative graph, and commits the state marker to the P2P mesh. A single natural human resolution instantly satisfies data requirements across the network via Kademlia target partitioning, eliminating both automated TPM bypass liabilities and manual worker overhead.
 
 3. ZERO-C2 STIGMERGIC COORDINATION AS PROTECTED SPEECH
 
