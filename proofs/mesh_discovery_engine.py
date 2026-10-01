@@ -4,6 +4,7 @@ import json
 import os
 import socket
 import struct
+import time
 from typing import Dict, Any, List, Tuple
 
 
@@ -118,7 +119,8 @@ def run_mesh_discovery_proof() -> bool:
     node_a = ZeroDNSMeshDiscoveryEngine(node_id="NODE-ALPHA-01")
     node_b = ZeroDNSMeshDiscoveryEngine(node_id="NODE-BETA-02")
 
-    beacon_a = node_a.construct_beacon_packet(timestamp=[PHONE], capabilities=["LMCI", "ATN", "UBC"])
+    current_time = int(time.time())
+    beacon_a = node_a.construct_beacon_packet(timestamp=current_time, capabilities=["LMCI", "ATN", "UBC"])
 
     # Verify beacon frame is aligned to 1024-byte boundary (+ 4 byte header)
     assert (len(beacon_a) - 4) % 1024 == 0
