@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "DistributedDataCollectPayload",
+  "type": "object",
+  "properties": {
+    "payload_id": {
+      "type": "string",
+      "pattern": "^data-[a-f0-9]{16}$"
+    },
+    "collection_type": {
+      "type": "string",
+      "enum": ["WEB_SCRAPE", "PUBLIC_ARCHIVE", "ENVIRONMENTAL_TELEMETRY"]
+    },
+    "target_identifier": {
+      "type": "string",
+      "description": "URI, public record key, or sensor metric name"
+    },
+    "timestamp_utc": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "extracted_ast": {
+      "type": "object",
+      "description": "Structured JSON parsed locally from HTML or public document"
+    },
+    "fuzzed_telemetry": {
+      "type": "object",
+      "properties": {
+        "metric_name": { "type": "string" },
+        "raw_quantized_value": { "type": "number" },
+        "noise_delta": { "type": "number" },
+        "fuzzed_value": { "type": "number" }
+      },
+      "required": ["metric_name", "raw_quantized_value", "noise_delta", "fuzzed_value"],
+      "additionalProperties": false
+    },
+    "node_attestation": {
+      "type": "object",
+      "properties": {
+        "node_id": { "type": "string" },
+        "signature_hash": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        }
+      },
+      "required": ["node_id", "signature_hash"],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "payload_id",
+    "collection_type",
+    "target_identifier",
+    "timestamp_utc",
+    "node_attestation"
+  ],
+  "additionalProperties": false
+}

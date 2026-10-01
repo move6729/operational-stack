@@ -51,6 +51,7 @@ move6729 / operational-stack:
 │   ├── crm_pipeline.json           [Sovereign CRM Pipeline Graph (OPEN-CRM-v1.0)]
 │   ├── defense_compliance.json     [Sovereign Defense Compliance & ITAR/CMMC Attestation (OPEN-DEFENSE-COMPLIANCE-v1.0)]
 │   ├── defense_spec_manifest.json  [Sovereign Defense Supply Chain Manifest (OPEN-DEFENSE-v1.0)]
+│   ├── distributed_data_collect.json [Sovereign Distributed Data Collection & Telemetry Schema (DATA-COLLECT-v1.0)]
 │   ├── edu_credential.json         [Sovereign Educational Credential Graph (OPEN-EDU-v1.0)]
 │   ├── ehr_patient.json            [Sovereign EHR Patient Graph (OPEN-EHR-v1.0)]
 │   ├── erp_inventory.json          [Sovereign ERP Inventory Graph (OPEN-ERP-v1.0)]
@@ -89,6 +90,7 @@ move6729 / operational-stack:
 │   ├── defense_compliance_engine.py[Bare-Metal Defense Compliance & Prime API Engine (OPEN-DEFENSE-COMPLIANCE-v1.0)]
 │   ├── defense_engine.py           [Bare-Metal Defense Procurement Engine (OPEN-DEFENSE-v1.0)]
 │   ├── dialectical_friction_engine.py [Dialectical Friction & Teleological Attractor Verification Engine (DIALECTICAL-FRICTION-v1.0)]
+│   ├── distributed_data_collect_engine.py [Distributed Data Collection Engine (DATA-COLLECT-v1.0)]
 │   ├── edge_energy_engine.py       [Deterministic Edge Energy Context Bound Engine (ENERGY-YIELD-v1.0)]
 │   ├── edu_engine.py               [Bare-Metal Educational Verification Engine (OPEN-EDU-v1.0)]
 │   ├── ehr_engine.py               [Bare-Metal EHR Verification Engine (OPEN-EHR-v1.0)]
@@ -143,6 +145,7 @@ move6729 / operational-stack:
     ├── AUDIT-2026-CYBERNETIC-VARIETY-ASHBY-AUDIT.md
     ├── AUDIT-2026-DEFENSE-COMPLIANCE-DISINTERMEDIATION.md
     ├── AUDIT-2026-DEFENSE-SUPPLY-DISINTERMEDIATION.md
+    ├── AUDIT-2026-DISTRIBUTED-DATA-COLLECT.md [Distributed Data Collection & Local Archiving Spec]
     ├── AUDIT-2026-EDGE-ENERGY-INVARIANT.md [Deterministic Edge Energy-Yield Context Bound Spec]
     ├── AUDIT-2026-EDU-DISINTERMEDIATION.md
     ├── AUDIT-2026-EHR-DISINTERMEDIATION.md
@@ -151,7 +154,7 @@ move6729 / operational-stack:
     ├── AUDIT-2026-EXTRAPLANETARY-ESCAPISM-REFUTATION.md [Extra-Planetary Escapism Refutation Spec]
     ├── AUDIT-2026-FIN-DISINTERMEDIATION.md
     ├── AUDIT-2026-FREIGHT-DISINTERMEDIATION.md
-    ├── AUDIT-2026-FUTURE-PHYSICALIST-VECTOR-BACKLOG.md [Future Physicalist Vector Backlog Spec]
+    ├── AUDIT-2026-FUTURE-PHYSICALIST-VECTOR-BACKLOG.md [Future Physicalist Attack Vector Backlog Spec]
     ├── AUDIT-2026-HEADCOUNT-DELIVERABILITY-MOAT.md
     ├── AUDIT-2026-HEALTHCARE-BILLING-DISINTERMEDIATION.md
     ├── AUDIT-2026-HPMCR-DEFENSE-SPEC.md

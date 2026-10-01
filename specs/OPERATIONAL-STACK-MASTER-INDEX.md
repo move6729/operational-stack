@@ -22,6 +22,7 @@
 - `specs/AUDIT-2026-CYBERNETIC-VARIETY-ASHBY-AUDIT.md` - Cybernetic Variety & Ashby Control Law Specification.
 - `specs/AUDIT-2026-DEFENSE-COMPLIANCE-DISINTERMEDIATION.md` - Defense Prime Compliance & Regulatory Automation Specification (`OPEN-DEFENSE-COMPLIANCE-v1.0`).
 - `specs/AUDIT-2026-DEFENSE-SUPPLY-DISINTERMEDIATION.md` - Sovereign Defense Supply Chain Disintermediation Specification (`OPEN-DEFENSE-v1.0`).
+- `specs/AUDIT-2026-DISTRIBUTED-DATA-COLLECT.md` - Distributed Data Collection & Local Environmental Archiving Specification (`DATA-COLLECT-v1.0`).
 - `specs/AUDIT-2026-EDGE-ENERGY-INVARIANT.md` - Deterministic Edge Energy-Yield Context Bound Specification (`ENERGY-YIELD-v1.0`).
 - `specs/AUDIT-2026-EDU-DISINTERMEDIATION.md` - Educational Portfolio & Credential Disintermediation Specification (`OPEN-EDU-v1.0`).
 - `specs/AUDIT-2026-EHR-DISINTERMEDIATION.md` - Health Record Monopoly Disintermediation Specification (`OPEN-EHR-v1.0`).
@@ -76,6 +77,7 @@
 - `schema/crm_pipeline.json` - Sovereign CRM Pipeline Graph (`OPEN-CRM-v1.0`).
 - `schema/defense_compliance.json` - Sovereign Defense Compliance & ITAR/CMMC Attestation (`OPEN-DEFENSE-COMPLIANCE-v1.0`).
 - `schema/defense_spec_manifest.json` - Sovereign Defense Supply Chain Manifest (`OPEN-DEFENSE-v1.0`).
+- `schema/distributed_data_collect.json` - Sovereign Distributed Data Collection & Telemetry Schema (`DATA-COLLECT-v1.0`).
 - `schema/edu_credential.json` - Sovereign Educational Credential Graph (`OPEN-EDU-v1.0`).
 - `schema/ehr_patient.json` - Sovereign EHR Patient Graph (`OPEN-EHR-v1.0`).
 - `schema/erp_inventory.json` - Sovereign ERP Inventory Graph (`OPEN-ERP-v1.0`).
@@ -114,6 +116,7 @@
 - `proofs/defense_compliance_engine.py` - Defense Regulatory Verification Engine (`OPEN-DEFENSE-COMPLIANCE-v1.0`).
 - `proofs/defense_engine.py` - Deterministic Toolpath Verification Engine (`OPEN-DEFENSE-v1.0`).
 - `proofs/dialectical_friction_engine.py` - Dialectical Friction & Teleological Attractor Verification Engine (`DIALECTICAL-FRICTION-v1.0`).
+- `proofs/distributed_data_collect_engine.py` - Distributed Data Collection Engine (`DATA-COLLECT-v1.0`).
 - `proofs/edge_energy_engine.py` - Deterministic Edge Energy Context Bound Verification Engine (`ENERGY-YIELD-v1.0`).
 - `proofs/edu_engine.py` - Educational & Credential Engine (`OPEN-EDU-v1.0`).
 - `proofs/ehr_engine.py` - Health Records Engine (`OPEN-EHR-v1.0`).
