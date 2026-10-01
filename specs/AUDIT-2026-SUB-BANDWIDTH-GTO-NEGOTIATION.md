@@ -7,7 +7,7 @@
 
 ### I. EXECUTIVE SUMMARY & ARCHITECTURAL SCOPE
 
-The OPEN-GTO-v1.0 specification defines the deterministic state-machine and verification protocol for edge node interactions with legacy external counterparties, rentier platforms, and SaaS gatekeepers. It enforces game-theoretic optimal (GTO) negotiation posture, time-discount decay curves, circuit-breaker exits, and statutory regulatory escalation vectors.
+The OPEN-GTO-v1.0 specification defines the deterministic state-machine and verification protocol for edge node interactions with legacy external counterparties, rentier platforms, and SaaS gatekeepers. It enforces game-theoretic optimal (GTO) negotiation posture, time-discount decay curves, circuit-breaker exits, state TTL purging, and statutory regulatory escalation vectors.
 
 ---
 
@@ -21,9 +21,10 @@ The OPEN-GTO-v1.0 specification defines the deterministic state-machine and veri
    - The engine MUST evaluate statutory regulatory escalation triggers (e.g., CFPB, FTC, State AG statutory dispute triggers) when counterparty offers remain below the reserve floor.
    - Statutory notice injections MUST be generated without conversational fluff, invoking precise, compliant regulatory risk vectors that raise counterparty compliance costs above settlement costs.
 
-3. **Time-Discount Decay Mechanics:**
+3. **Time-Discount Decay Mechanics & TTL State Purging:**
    - As elapsed time $t$ increases, the engine calculates time discount $\delta(t) = e^{-\gamma t}$.
    - Offers are evaluated against a dynamic payoff floor $V_{\text{floor}}(t) = V_{\text{reserve}} \cdot \delta(t)$.
+   - Unaccepted negotiation states exceeding a maximum Time-To-Live (TTL = 72 hours) MUST be automatically purged and cryptographically sealed to prevent state-bloat RAM exhaustion attacks on edge nodes.
 
 4. **Zero Third-Party Dependencies:**
    - Complete implementation using Python standard library (`hashlib`, `json`, `time`, `typing`, `math`).
@@ -38,4 +39,4 @@ The OPEN-GTO-v1.0 specification defines the deterministic state-machine and veri
 
 ### III. VERIFICATION PROOF
 
-The implementation in `proofs/gto_negotiation_engine.py` MUST pass all verification assertions, verifying payload integrity, payoff floor evaluation, regulatory escalation formatting, and SHA-256 state transitions.
+The implementation in `proofs/gto_negotiation_engine.py` MUST pass all verification assertions, verifying payload integrity, payoff floor evaluation, regulatory escalation formatting, TTL purging thresholds, and SHA-256 state transitions.

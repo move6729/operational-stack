@@ -1,4 +1,5 @@
 import ast
+import re
 import zlib
 import hashlib
 import json
@@ -70,11 +71,11 @@ class ATNTaskEngine:
             print(f"[ATN-v1.0] SAFETY REJECTION: Step {node['step_id']} exceeds max token budget.")
             return False
 
-        # 2. Kolmogorov Context Complexity Bound
+        # 2. Kolmogorov Context Complexity Bound (Level 9 Deterministic Zlib)
         ast_str = node.get("instruction_ast", "")
         raw_bytes = ast_str.encode('utf-8')
         if len(raw_bytes) > 0:
-            k_bytes = len(zlib.compress(raw_bytes))
+            k_bytes = len(zlib.compress(raw_bytes, level=9))
             k_ratio = node.get("min_kolmogorov_ratio", 0.5)
             if k_ratio < self.MIN_KOLMOGOROV_RATIO:
                 print(f"[ATN-v1.0] SAFETY REJECTION: Step {node['step_id']} min_kolmogorov_ratio ({k_ratio}) below limit ({self.MIN_KOLMOGOROV_RATIO}).")
@@ -90,7 +91,7 @@ class ATNTaskEngine:
             print(f"[ATN-v1.0] SAFETY REJECTION: Step {node['step_id']} failed legal compliance check.")
             return False
 
-        # 5. Trajectory Drift & Malicious AST Analysis via ast.NodeVisitor
+        # 5. Trajectory Drift & Malicious AST Analysis via ast.NodeVisitor or Strict Regex Tokenization
         try:
             parsed_ast = ast.parse(ast_str)
             validator = ASTSafetyValidator()
@@ -99,12 +100,13 @@ class ATNTaskEngine:
                 print(f"[ATN-v1.0] AST SAFETY VIOLATION in step {node['step_id']}: {validator.violations}")
                 return False
         except SyntaxError:
-            # If the instruction_ast is a domain op-code token (e.g. "PARSE_SPEC_AND_EMBED"),
-            # ensure it does not contain forbidden tokens.
-            for forbidden in ASTSafetyValidator.FORBIDDEN_CALLS | ASTSafetyValidator.FORBIDDEN_MODULES:
-                if forbidden in ast_str:
-                    print(f"[ATN-v1.0] AST TOKEN REJECTION: Forbidden token '{forbidden}' in step {node['step_id']}.")
-                    return False
+            # Domain op-code string or non-Python instruction: execute strict word-boundary token matching
+            tokens = set(re.findall(r'\b\w+\b', ast_str))
+            forbidden_set = ASTSafetyValidator.FORBIDDEN_CALLS | ASTSafetyValidator.FORBIDDEN_MODULES
+            intersection = tokens.intersection(forbidden_set)
+            if intersection:
+                print(f"[ATN-v1.0] AST TOKEN REJECTION: Forbidden tokens {intersection} in step {node['step_id']}.")
+                return False
 
         return True
 

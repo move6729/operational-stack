@@ -36,12 +36,13 @@ class LMCIRuntimeEngine:
         Validates Kolmogorov Context Preservation Bound:
         Tokens_Context >= K(AST_State)
         Prevents prompt truncation from destroying irreducible algorithmic complexity.
+        Uses explicit level=9 zlib compression to ensure deterministic cross-platform bounds.
         """
         raw_bytes = raw_ast_state.encode('utf-8')
         prompt_bytes = compressed_prompt.encode('utf-8')
         
-        # Approximate K(AST_State) using zlib compression bound
-        irreducible_k_bytes = len(zlib.compress(raw_bytes))
+        # Approximate K(AST_State) using deterministic max zlib compression bound
+        irreducible_k_bytes = len(zlib.compress(raw_bytes, level=9))
         
         if len(prompt_bytes) < irreducible_k_bytes:
             print(f"[LMCI-v1.0] REJECTION: Prompt bytes ({len(prompt_bytes)}) < Irreducible Kolmogorov Complexity ({irreducible_k_bytes}). Context corrupted.")

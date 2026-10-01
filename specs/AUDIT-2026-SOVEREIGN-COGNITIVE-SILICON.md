@@ -57,7 +57,7 @@ External network interaction decays strictly to read-only, context-stripped quer
   │ SOVEREIGN HARDWARE BOUNDARY (Open RISC-V RTL / Auditable Boot)         │
   │                                                                        │
   │   ┌────────────────────────────────────────────────────────────────┐   │
-  │   │ Encrypted Unified Memory Pool (Zero-Leak Bus Architecture)     │   │
+  │   │ Encrypted Unified Memory Pool (AES-XTS Inline Latency < 50ns)   │   │
   │   └───────────────────────────────┬────────────────────────────────┘   │
   │                                   │                                    │
   │        ┌──────────────────────────┴──────────────────────────┐         │
@@ -83,7 +83,7 @@ External network interaction decays strictly to read-only, context-stripped quer
 1. **Zero-Trust Silicon:** Local compute must execute on open-source instruction set architectures (RISC-V) with fully auditable Register-Transfer Level (RTL) designs, utilizing Physical Memory Protection (PMP/ePMP) and OpenTitan Root of Trust (RoT) to eliminate closed management engines (Intel ME / AMD PSP).
 2. **Read-Only Cloud Degradation:** All outbound cloud queries default to non-stateful, read-only requests. Context, intent, and stateful memory remain strictly local.
 3. **Automated Cognitive Port Gating:** Local low-latency AI proxies handle continuous network handshakes, enforcing strict zero-trust context boundaries without human intervention.
-4. **Unified Memory Enclave Protection:** Shared LPDDR unified memory buses employ open enclave runtimes (e.g., Keystone Enclave) and hardware-level inline AES-XTS memory encryption to neutralize LLC eviction attacks and DRAM power side-channels.
+4. **Unified Memory Enclave Protection & Latency Cap:** Shared LPDDR unified memory buses employ open enclave runtimes (e.g., Keystone Enclave) and hardware-level inline AES-XTS memory encryption. Encryption overhead MUST NOT exceed $50\text{ns}$ per memory access to prevent KV-cache retrieval stalls during local model inference.
 5. **Thermodynamic Viability:** Node execution costs collapse to the physical electricity consumed by local silicon ($OpEx \to \text{Watts}$).
 
 ---

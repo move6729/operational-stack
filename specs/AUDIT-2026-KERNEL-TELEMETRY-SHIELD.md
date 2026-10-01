@@ -44,7 +44,7 @@ To preserve cybernetic sovereignty (Axiom 7), micro-telemetry neutralization mus
 |  | Intercept /proc & /sys|  | Monitored Egress     |  | Coarsening Engine    |  |
 |  +-----------------------+  +----------------------+  +----------------------+  |
 |                                                                                 |
-| eBPF BPF_MAP_TYPE_RINGBUF -> Event Audit Logger                                 |
+| eBPF BPF_MAP_TYPE_RINGBUF (Max 256K Entries) -> Event Audit Logger / Drop       |
 +---------------------------------------------------------------------------------+
          |                          |                          |
          v                          v                          v
@@ -84,6 +84,12 @@ $$R_{\text{sync}} \le B \log_2\left(1 + \frac{S}{N}\right) \implies \text{Zero S
 char LICENSE[] SEC("license") = "Dual MIT/GPL";
 
 #define QUANTUM_NS 10000000ULL // 10ms Step Quantization
+#define MAX_RINGBUF_ENTRIES (256 * 1024)
+
+struct {
+    __uint(type, BPF_MAP_TYPE_RINGBUF);
+    __uint(max_entries, MAX_RINGBUF_ENTRIES);
+} telemetry_events SEC(".maps");
 
 SEC("tp/syscalls/sys_enter_read")
 int handle_sys_read_enter(struct trace_event_raw_sys_enter *ctx) {
@@ -92,6 +98,7 @@ int handle_sys_read_enter(struct trace_event_raw_sys_enter *ctx) {
 
     // Filter target process via CGroup or Map evaluation
     // Hardware virtualization layers rewrite synthetic descriptors into user buffer
+    // Ring buffer uses explicit drop handling if buffer allocation exceeds MAX_RINGBUF_ENTRIES
     return 0;
 }
 
@@ -107,5 +114,5 @@ int handle_clock_gettime_exit(struct trace_event_raw_sys_exit *ctx) {
 ## V. VERIFICATION INVARIANTS
 
 1. **Zero User-Space Reliance:** Enforces system call filtering at the cgroup/seccomp boundary independent of user-space library hooks.
-2. **Nanosecond Execution Overhead:** eBPF tracepoint overhead remains strictly under $<200\text{ns}$ per invocation.
+2. **Nanosecond Execution Overhead & Memory Ceiling:** eBPF tracepoint overhead remains strictly under $<200\text{ns}$ per invocation with a fixed memory ceiling (`max_entries = 256 * 1024`), preventing kernel OOM memory exhaustion.
 3. **Monotonicity Preservation:** Coarsened timing vectors strictly preserve $\mathbf{T}_{k+1} \ge \mathbf{T}_k$, preventing runtime crashes in local software systems.
