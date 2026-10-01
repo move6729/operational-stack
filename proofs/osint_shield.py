@@ -67,20 +67,20 @@ class OpenOSINTShieldEngine:
         self,
         decoupling_status: Dict[str, bool],
         broker_opt_outs: List[Dict[str, Any]],
-        expected_hash: str
+        expected_hash: str,
+        noise_type: str = "SYNTHETIC_METADATA"
     ) -> bool:
         """
         Verifies cryptographic integrity of the OSINT defensive state.
         """
         exposure_score = self.calculate_exposure_score(decoupling_status)
-        noise_payload = self.generate_adversarial_noise_payload("VERIFICATION_SEED")
         
         payload_dict = {
             "identity_id": self.identity_id,
             "decoupling_status": decoupling_status,
             "exposure_score": exposure_score,
             "broker_opt_outs": broker_opt_outs,
-            "noise_type": noise_payload["payload_type"]
+            "noise_type": noise_type
         }
         
         serialized = json.dumps(payload_dict, sort_keys=True)
@@ -89,7 +89,7 @@ class OpenOSINTShieldEngine:
         return computed_hash == expected_hash
 
 
-def simulate_osint_shield_proof():
+def simulate_osint_shield_proof() -> bool:
     identity_id = hashlib.sha256(b"NODE_EXOCORTEX_772").hexdigest()
     engine = OpenOSINTShieldEngine(identity_id)
 
@@ -122,8 +122,12 @@ def simulate_osint_shield_proof():
     serialized = json.dumps(payload_dict, sort_keys=True)
     expected_hash = hashlib.sha256(serialized.encode('utf-8')).hexdigest()
 
-    valid = engine.verify_state_transition(decoupling_status, brokers, expected_hash)
+    valid = engine.verify_state_transition(
+        decoupling_status, brokers, expected_hash, noise_type=noise["payload_type"]
+    )
     print(f"OSINT Shield Proof Verification Result: {valid}")
+    assert valid, "OSINT Shield Proof Verification Failed"
+    return True
 
 
 if __name__ == "__main__":
