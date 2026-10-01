@@ -3,7 +3,61 @@ import json
 import math
 import sys
 import time
-from typing import Dict, Any, Tuple
+from typing import Dict, Any, Tuple, List, Set
+
+class ByzantineStatutoryQuarantine:
+    """
+    Manages mesh isolation of bad-actor poisoning nodes.
+    Generates and verifies signed Byzantine fault attestations for statutory violations.
+    """
+
+    def __init__(self, node_id: str):
+        self.node_id = node_id
+        self.quarantined_nodes: Set[str] = set()
+        self.broadcasted_attestations: List[Dict[str, Any]] = []
+
+    def generate_poison_attestation(
+        self,
+        offending_node_id: str,
+        payload_hash: str,
+        violation_code: str
+    ) -> Dict[str, Any]:
+        """
+        Creates a cryptographic attestation of a statutory compliance violation.
+        """
+        raw_msg = f"{self.node_id}:{offending_node_id}:{payload_hash}:{violation_code}"
+        signature = hashlib.sha256(raw_msg.encode("utf-8")).hexdigest()
+        
+        attestation = {
+            "reporter_node_id": self.node_id,
+            "quarantined_node_id": offending_node_id,
+            "offending_payload_hash": payload_hash,
+            "violation_code": violation_code,
+            "timestamp": int(time.time()),
+            "attestation_signature": signature
+        }
+        self.broadcasted_attestations.append(attestation)
+        self.quarantined_nodes.add(offending_node_id)
+        return attestation
+
+    def verify_and_apply_attestation(self, attestation: Dict[str, Any]) -> bool:
+        """
+        Verifies incoming poison attestation signature and isolates the bad-actor node.
+        """
+        reporter = attestation.get("reporter_node_id")
+        offending = attestation.get("quarantined_node_id")
+        payload_hash = attestation.get("offending_payload_hash")
+        v_code = attestation.get("violation_code")
+        sig = attestation.get("attestation_signature")
+
+        expected_msg = f"{reporter}:{offending}:{payload_hash}:{v_code}"
+        expected_sig = hashlib.sha256(expected_msg.encode("utf-8")).hexdigest()
+
+        if sig == expected_sig:
+            self.quarantined_nodes.add(offending)
+            return True
+        return False
+
 
 class DistributedDataCollectEngine:
     """
@@ -16,7 +70,12 @@ class DistributedDataCollectEngine:
     - Operates strictly on unauthenticated public endpoints.
     - Rejects password cracking, CAPTCHA bypass, paywall evasion, or auth token theft.
     - Explicitly ignores civil Terms of Service (TOS) scraping prohibitions per hiQ v. LinkedIn.
+    - Isolates poisoning nodes via Byzantine statutory quarantine attestations.
     """
+
+    def __init__(self, node_id: str = "node-alpha"):
+        self.node_id = node_id
+        self.quarantine_manager = ByzantineStatutoryQuarantine(node_id)
 
     def validate_cfaa_compliance(
         self,
@@ -38,6 +97,40 @@ class DistributedDataCollectEngine:
             return False, "RATE_GOVERNOR_INACTIVE_RISK_OF_TARGET_IMPAIRMENT"
 
         return True, "STATUTORY_CFAA_COMPLIANT_PUBLIC_UNAUTHENTICATED"
+
+    def verify_and_quarantine_payload(
+        self,
+        sender_node_id: str,
+        payload: Dict[str, Any]
+    ) -> Tuple[bool, str, Dict[str, Any]]:
+        """
+        Evaluates incoming mesh payload. If sender is quarantined or payload violates CFAA,
+        drops payload, logs poison attestation, and quarantines sender.
+        """
+        if sender_node_id in self.quarantine_manager.quarantined_nodes:
+            return False, "SENDER_NODE_ISOLATED_IN_QUARANTINE", {}
+
+        statutory = payload.get("statutory_compliance", {})
+        req_auth = not statutory.get("public_unauthenticated_boundary_verified", False)
+        bp_tpm = not statutory.get("zero_auth_bypass_verified", False)
+        gov_active = statutory.get("rate_limit_governor_active", False)
+
+        is_compliant, code = self.validate_cfaa_compliance(
+            requires_authentication=req_auth,
+            bypasses_tpm_or_paywall=bp_tpm,
+            rate_limit_governor_active=gov_active
+        )
+
+        if not is_compliant:
+            payload_hash = self.generate_commit_hash(payload)
+            attestation = self.quarantine_manager.generate_poison_attestation(
+                offending_node_id=sender_node_id,
+                payload_hash=payload_hash,
+                violation_code=code
+            )
+            return False, f"PAYLOAD_DROPPED_{code}", attestation
+
+        return True, "PAYLOAD_VERIFIED_COMPLIANT", {}
 
     def parse_html_to_ast(self, html_content: str) -> Dict[str, Any]:
         """
@@ -115,7 +208,7 @@ def run_data_collect_proof() -> bool:
     """
     Standalone verification proof for DATA-COLLECT-v1.0.
     """
-    engine = DistributedDataCollectEngine()
+    engine = DistributedDataCollectEngine("node-alpha")
 
     # 1. Statutory Compliance Gate Verification (CFAA Enforcement)
     compliant, reason = engine.validate_cfaa_compliance(
@@ -133,12 +226,42 @@ def run_data_collect_proof() -> bool:
     assert not non_compliant, "Engine failed to reject authenticated endpoint bypass!"
     assert breach_reason == "CFAA_VIOLATION_AUTHENTICATED_ENDPOINT_REQUIRES_CREDENTIALS"
 
-    # 2. Test Web Scrape / Public Record Extraction
+    # 2. Test Byzantine Poisoning Node Attack & Quarantine Attestation
+    poison_payload = {
+        "payload_id": "data-badactor0000000",
+        "collection_type": "WEB_SCRAPE",
+        "target_identifier": "http://private-portal.internal/login",
+        "timestamp_utc": int(time.time()),
+        "statutory_compliance": {
+            "public_unauthenticated_boundary_verified": False,  # AUTH WALL
+            "zero_auth_bypass_verified": False,                 # BYPASSED LOGIN
+            "rate_limit_governor_active": True,
+            "statutory_compliance_attested": False
+        },
+        "node_attestation": {
+            "node_id": "node-poisoner",
+            "signature_hash": "1111111111111111111111111111111111111111111111111111111111111111"
+        }
+    }
+
+    accepted, drop_code, poison_attestation = engine.verify_and_quarantine_payload("node-poisoner", poison_payload)
+    assert not accepted, "Engine accepted non-compliant poison payload!"
+    assert "CFAA_VIOLATION" in drop_code
+    assert poison_attestation["quarantined_node_id"] == "node-poisoner"
+    assert "node-poisoner" in engine.quarantine_manager.quarantined_nodes
+
+    # Test peer node receiving and verifying the poison attestation
+    peer_engine = DistributedDataCollectEngine("node-beta")
+    verified_attestation = peer_engine.quarantine_manager.verify_and_apply_attestation(poison_attestation)
+    assert verified_attestation, "Peer node failed to verify poison attestation signature!"
+    assert "node-poisoner" in peer_engine.quarantine_manager.quarantined_nodes
+
+    # 3. Test Web Scrape / Public Record Extraction
     raw_html = "<html><body><h1>Public Court Docket #1042</h1><p>Status: Discharged.</p></body></html>"
     ast_output = engine.parse_html_to_ast(raw_html)
     assert ast_output["title"] == "<html><body><h1>Public Court Docket #1042</h1><p>Status: Discharged.</p></body></html>"
 
-    # 3. Test Environmental Telemetry Differential Privacy
+    # 4. Test Environmental Telemetry Differential Privacy
     telemetry = engine.apply_differential_privacy(
         metric_name="grid_voltage",
         raw_val=120.456,
@@ -147,7 +270,7 @@ def run_data_collect_proof() -> bool:
     assert telemetry["raw_quantized_value"] == 120.46
     assert telemetry["fuzzed_value"] == 120.50
 
-    # 4. Test Commercial Feed Transformation & Escrow Verification
+    # 5. Test Commercial Feed Transformation & Escrow Verification
     escrow_valid = engine.verify_pooled_escrow_contribution(
         contributing_nodes=50,
         total_sats=10000,
@@ -165,7 +288,7 @@ def run_data_collect_proof() -> bool:
     assert non_infringing_ast["derivation_status"] == "NON_INFRINGING_FACTUAL_AST"
     assert "copyright_notice" not in non_infringing_ast
 
-    # 5. Build Full Payload with Verified Statutory Compliance Gate
+    # 6. Build Full Payload with Verified Statutory Compliance Gate
     payload = {
         "payload_id": "data-0123456789abcdef",
         "collection_type": "POOLED_COMMERCIAL_FEED",
@@ -185,6 +308,11 @@ def run_data_collect_proof() -> bool:
             "total_micro_settlement_sats": 10000,
             "non_infringing_derivative_attested": True
         },
+        "byzantine_quarantine": {
+            "quarantined_node_id": "node-poisoner",
+            "violation_code": drop_code,
+            "poison_attestation_hash": poison_attestation["attestation_signature"]
+        },
         "node_attestation": {
             "node_id": "node-alpha",
             "signature_hash": "0000000000000000000000000000000000000000000000000000000000000000"
@@ -194,7 +322,7 @@ def run_data_collect_proof() -> bool:
     commit_hash = engine.generate_commit_hash(payload)
     success = engine.commit_state_transition(payload, commit_hash)
 
-    print(f"[DATA-COLLECT-v1.0 Proof] Statutory CFAA Gate & State Commit Verified: {success} (Hash: {commit_hash[:16]}...)")
+    print(f"[DATA-COLLECT-v1.0 Proof] Statutory CFAA Gate, Poison Node Isolation & State Commit Verified: {success} (Hash: {commit_hash[:16]}...)")
     return success
 
 

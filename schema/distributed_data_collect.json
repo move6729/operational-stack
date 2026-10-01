@@ -73,6 +73,19 @@
       "required": ["escrow_id", "contributing_nodes_count", "total_micro_settlement_sats", "non_infringing_derivative_attested"],
       "additionalProperties": false
     },
+    "byzantine_quarantine": {
+      "type": "object",
+      "properties": {
+        "quarantined_node_id": { "type": "string" },
+        "violation_code": { "type": "string" },
+        "poison_attestation_hash": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        }
+      },
+      "required": ["quarantined_node_id", "violation_code", "poison_attestation_hash"],
+      "additionalProperties": false
+    },
     "node_attestation": {
       "type": "object",
       "properties": {
