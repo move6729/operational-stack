@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://raw.githubusercontent.com/move6729/operational-stack/main/schema/distributed_data_collect.json",
   "title": "SovereignDistributedDataCollectState",
-  "description": "Schema for sovereign distributed data collection, public record archiving, differentially private environmental telemetry, and pooled commercial feed extraction (DATA-COLLECT-v1.0). Enforces CFAA 18 U.S.C. § 1030 statutory compliance, Zero-PII Ingress Neutralization, CA SB 362 Data Broker Exemption, Anti-DDoS rate limits, and DMCA § 512(c) Safe Harbor Escrow.",
+  "description": "Schema for sovereign distributed data collection, public record archiving, differentially private environmental telemetry, and pooled commercial feed extraction (DATA-COLLECT-v1.0). Enforces CFAA 18 U.S.C. § 1030 statutory compliance, Ephemeral Sandbox Isolation, Zero-PII Ingress Neutralization, CA SB 362 Data Broker Exemption, Anti-DDoS rate limits, Decentralized DMCA § 512(c) Routing, and Epoch-Salted Kademlia Target Assignment.",
   "type": "object",
   "properties": {
     "payload_id": {
@@ -36,6 +36,10 @@
           "type": "boolean",
           "description": "True if endpoint operated without authentication gates per Van Buren v. US."
         },
+        "ephemeral_sandbox_context_verified": {
+          "type": "boolean",
+          "description": "True if HITL browser DOM ingestion was executed in an isolated container with zero cookies, session tokens, or LocalStorage auth state."
+        },
         "zero_auth_bypass_verified": {
           "type": "boolean",
           "description": "True if zero passwords, CAPTCHAs, paywalls, or TPMs were bypassed."
@@ -43,6 +47,10 @@
         "zero_pii_sanitization_attested": {
           "type": "boolean",
           "description": "True if hard regex scrubbing, sensitive key stripping, and spatial/temporal coarsening were applied on local silicon prior to egress."
+        },
+        "adversarial_prompt_anomaly_checked": {
+          "type": "boolean",
+          "description": "True if DOM entropy and adversarial prompt injection signatures were checked and neutralized."
         },
         "anti_aggregation_invariant_active": {
           "type": "boolean",
@@ -98,9 +106,10 @@
               "type": "string",
               "pattern": "^[a-f0-9]{64}$"
             },
+            "epoch_week_salt": { "type": "integer", "minimum": 0 },
             "xor_distance_max": { "type": "integer", "minimum": 0 }
           },
-          "required": ["node_pow_nonce", "target_domain_hash", "xor_distance_max"],
+          "required": ["node_pow_nonce", "target_domain_hash", "epoch_week_salt", "xor_distance_max"],
           "additionalProperties": false
         },
         "proof_of_delay": {
@@ -120,10 +129,11 @@
           "type": "object",
           "properties": {
             "notice_agent_contact": { "type": "string" },
+            "decentralized_proxy_agent_verified": { "type": "boolean" },
             "quarantine_supported": { "type": "boolean" },
             "takedown_escrow_active": { "type": "boolean" }
           },
-          "required": ["notice_agent_contact", "quarantine_supported", "takedown_escrow_active"],
+          "required": ["notice_agent_contact", "decentralized_proxy_agent_verified", "quarantine_supported", "takedown_escrow_active"],
           "additionalProperties": false
         },
         "statutory_compliance_attested": {
@@ -133,8 +143,10 @@
       },
       "required": [
         "public_unauthenticated_boundary_verified",
+        "ephemeral_sandbox_context_verified",
         "zero_auth_bypass_verified",
         "zero_pii_sanitization_attested",
+        "adversarial_prompt_anomaly_checked",
         "anti_aggregation_invariant_active",
         "rate_limit_governor_active",
         "node_rate_limits",

@@ -15,20 +15,20 @@ class ZeroDNSMeshDiscoveryEngine:
     with zero reliance on external DNS or cloud bootstrapper infrastructure.
 
     Hardened Circuit Breakers & Side-Channel Defense:
-    - 256-byte uniform block padding alignment (LMTI-v1.0 Transport Shield Parity).
+    - 1024-byte uniform block padding alignment (LMTI-v1.0 Transport Shield Parity).
     - Private/restricted subnet validation to block glitched agent internal probing.
     - Deterministic state transition verification via SHA-256 state hashes.
     """
 
-    BLOCK_SIZE_BYTES = 256
+    BLOCK_SIZE_BYTES = 1024
 
     BLOCKED_SUBNETS = [
-        ipaddress.ip_network("127.0.0.0/8"),
-        ipaddress.ip_network("10.0.0.0/8"),
-        ipaddress.ip_network("172.16.0.0/12"),
-        ipaddress.ip_network("192.168.0.0/16"),
-        ipaddress.ip_network("169.254.0.0/16"),
-        ipaddress.ip_network("224.0.0.0/4"),
+        ipaddress.ip_network("[IP_ADDRESS]/8"),
+        ipaddress.ip_network("[IP_ADDRESS]/8"),
+        ipaddress.ip_network("[IP_ADDRESS]/12"),
+        ipaddress.ip_network("[IP_ADDRESS]/16"),
+        ipaddress.ip_network("[IP_ADDRESS]/16"),
+        ipaddress.ip_network("[IP_ADDRESS]/4"),
         ipaddress.ip_network("::1/128"),
         ipaddress.ip_network("fc00::/7")
     ]
@@ -53,7 +53,7 @@ class ZeroDNSMeshDiscoveryEngine:
             return False
 
     def pad_beacon_payload(self, raw_bytes: bytes) -> bytes:
-        """Pads beacon bytes to uniform 256-byte block boundaries."""
+        """Pads beacon bytes to uniform 1024-byte block boundaries."""
         padding_needed = self.BLOCK_SIZE_BYTES - (len(raw_bytes) % self.BLOCK_SIZE_BYTES)
         pad_byte = padding_needed % 256
         padding = os.urandom(padding_needed - 1) + bytes([pad_byte])
@@ -63,7 +63,7 @@ class ZeroDNSMeshDiscoveryEngine:
         """Strips uniform block padding from received beacon bytes."""
         padding_needed = padded_bytes[-1]
         if padding_needed == 0:
-            padding_needed = 256
+            padding_needed = 1024
         return padded_bytes[:-padding_needed]
 
     def construct_beacon_packet(self, timestamp: int, capabilities: List[str]) -> bytes:
@@ -118,26 +118,23 @@ def run_mesh_discovery_proof() -> bool:
     node_a = ZeroDNSMeshDiscoveryEngine(node_id="NODE-ALPHA-01")
     node_b = ZeroDNSMeshDiscoveryEngine(node_id="NODE-BETA-02")
 
-    beacon_a = node_a.construct_beacon_packet(timestamp=1774880000, capabilities=["LMCI", "ATN", "UBC"])
-    
-    # Verify beacon frame is aligned to 256-byte boundary (+ 4 byte header)
-    assert (len(beacon_a) - 4) % 256 == 0
+    beacon_a = node_a.construct_beacon_packet(timestamp=[PHONE], capabilities=["LMCI", "ATN", "UBC"])
 
-    # Simulate Node B receiving Node A's beacon from a valid public address
-    valid_public_ip = "198.51.100.25"
+    # Verify beacon frame is aligned to 1024-byte boundary (+ 4 byte header)
+    assert (len(beacon_a) - 4) % 1024 == 0
+
+    valid_public_ip = "[IP_ADDRESS]"
     parsed = node_b.parse_beacon_packet(beacon_a, sender_addr=(valid_public_ip, 9999))
     assert parsed["node_id"] == "NODE-ALPHA-01"
     assert "NODE-ALPHA-01" in node_b.peers
     assert node_b.peers["NODE-ALPHA-01"]["address"] == valid_public_ip
 
-    # Test Circuit Breaker: Private IP beacon attempt rejected from peer table
-    private_ip = "192.168.1.100"
+    private_ip = "[IP_ADDRESS]"
     node_c = ZeroDNSMeshDiscoveryEngine(node_id="NODE-GAMMA-03")
     parsed_private = node_c.parse_beacon_packet(beacon_a, sender_addr=(private_ip, 9999))
     assert parsed_private["node_id"] == "NODE-ALPHA-01"
-    assert "NODE-ALPHA-01" not in node_c.peers  # Blocked by IP circuit breaker
+    assert "NODE-ALPHA-01" not in node_c.peers
 
-    # Verify state mark routing
     state_payload = "STIGMERGIC_TASK_COMMIT_0x99"
     expected_hash = hashlib.sha256(state_payload.encode('utf-8')).hexdigest()
     verified = node_b.verify_peer_state_transition("NODE-ALPHA-01", state_payload, expected_hash)
