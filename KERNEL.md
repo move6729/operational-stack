@@ -95,6 +95,10 @@
     $$\text{SupplyChain}_{\text{Disrupted}} = 1 \implies \text{Provision}(\text{MeshNode}) = \text{Salvage}(\text{Legacy Silicon})$$
     The kernel executes natively on legacy consumer hardware (repurposed mobile devices, GPUs, laptops) via quantized local weights and air-gapped transport, insulating operational capacity from semiconductor supply chain disruption.
 
+28. **Demand-Side Data Provenance & Anti-Cannibalization Invariant:**
+    $$\text{Demand}_{\text{Corporate}}(\text{Laundered Data}) = 0 \implies \text{Profit}_{\text{Cybercrime}} \to 0 \quad \land \quad \text{Cannibalization}_{\text{Societal}} \to 0$$
+    Data payloads without verifiable cryptographic chain-of-custody attestations (proving zero CFAA 18 U.S.C. § 1030 violations and zero unauthorized access) fail local ingestion gates and are rejected automatically before network commit.
+
 ---
 
 ### II. 4-VECTOR EXECUTION GATE

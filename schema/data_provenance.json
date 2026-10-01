@@ -1,0 +1,104 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/move6729/operational-stack/main/schema/data_provenance.json",
+  "title": "SovereignDataProvenanceState",
+  "description": "Schema for cryptographic data provenance verification, CFAA 18 U.S.C. § 1030 chain-of-custody verification, and corporate demand-side data laundering rejection (DATA-PROVENANCE-v1.0).",
+  "type": "object",
+  "properties": {
+    "payload_id": {
+      "type": "string",
+      "pattern": "^provenance-[a-f0-9]{16}$",
+      "description": "Unique SHA-256 derived provenance tracking ID."
+    },
+    "jurisdiction_context": {
+      "type": "object",
+      "properties": {
+        "jurisdiction_code": {
+          "type": "string",
+          "pattern": "^[A-Z]{2}$"
+        },
+        "cfaa_compliance_attested": {
+          "type": "boolean",
+          "const": true
+        }
+      },
+      "required": ["jurisdiction_code", "cfaa_compliance_attested"],
+      "additionalProperties": false
+    },
+    "timestamp_utc": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Unix timestamp of provenance evaluation."
+    },
+    "data_origin": {
+      "type": "object",
+      "properties": {
+        "source_uri": {
+          "type": "string",
+          "description": "Public domain URI or sensor key of original extraction."
+        },
+        "public_unauthenticated_endpoint": {
+          "type": "boolean",
+          "description": "Must be true. Asserts data was extracted without crossing authentication gates."
+        },
+        "zero_auth_bypass": {
+          "type": "boolean",
+          "const": true,
+          "description": "Mandatory attestation that zero passwords, paywalls, or TPMs were bypassed."
+        },
+        "zero_pii_sanitized": {
+          "type": "boolean",
+          "description": "True if PII redaction and coarsening occurred at local ingress."
+        }
+      },
+      "required": [
+        "source_uri",
+        "public_unauthenticated_endpoint",
+        "zero_auth_bypass",
+        "zero_pii_sanitized"
+      ],
+      "additionalProperties": false
+    },
+    "chain_of_custody": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "hop_index": { "type": "integer", "minimum": 0 },
+          "handler_node_id": { "type": "string" },
+          "custody_action": { "type": "string" },
+          "signature_sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          }
+        },
+        "required": ["hop_index", "handler_node_id", "custody_action", "signature_sha256"],
+        "additionalProperties": false
+      }
+    },
+    "corporate_demand_verification": {
+      "type": "object",
+      "properties": {
+        "data_broker_laundered_flag": {
+          "type": "boolean",
+          "description": "True if payload originated from or passed through unverified third-party data broker aggregation."
+        },
+        "provenance_verified": {
+          "type": "boolean",
+          "description": "Master boolean attesting payload is clean and verified."
+        }
+      },
+      "required": ["data_broker_laundered_flag", "provenance_verified"],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "payload_id",
+    "jurisdiction_context",
+    "timestamp_utc",
+    "data_origin",
+    "chain_of_custody",
+    "corporate_demand_verification"
+  ],
+  "additionalProperties": false
+}
