@@ -105,6 +105,7 @@
 ## PROOFS & ENGINES (`proofs/`)
 - `proofs/aatp_engine.py` - Agricultural & Telemetry Engine (`AATP-v1.0`).
 - `proofs/ashby_engine.py` - Requisite Variety & Ontology Engine (`ASHBY-v1.0`).
+- `proofs/authoritarian_cybernetic_engine.py` - Authoritarian Cybernetic Paradox Verification Engine (`AUTHORITARIAN-CYBERNETIC-PARADOX-v1.0`).
 - `proofs/bim_engine.py` - Spatial Building Information Modeling Engine (`OPEN-BIM-v1.0`).
 - `proofs/compliance_engine.py` - Asset & Tax Compliance Engine (`COMPLIANCE-v1.0`).
 - `proofs/crm_engine.py` - Sovereign Customer Relationship Engine (`OPEN-CRM-v1.0`).

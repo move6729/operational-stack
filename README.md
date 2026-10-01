@@ -80,6 +80,7 @@ move6729 / operational-stack:
 ├── proofs/                         [Runnable Zero-Dependency Deterministic Verification Engines]
 │   ├── aatp_engine.py              [Bare-Metal Agricultural Verification Engine (AATP-v1.0)]
 │   ├── ashby_engine.py             [Local Requisite Variety Ontology Parser (ASHBY-v1.0)]
+│   ├── authoritarian_cybernetic_engine.py [Authoritarian Cybernetic Paradox Verification Engine (AUTHORITARIAN-CYBERNETIC-PARADOX-v1.0)]
 │   ├── bim_engine.py               [Bare-Metal BIM Verification Engine (OPEN-BIM-v1.0)]
 │   ├── compliance_engine.py        [Physical Asset & Legal Compliance Engine (COMPLIANCE-v1.0)]
 │   ├── crm_engine.py               [Bare-Metal CRM Verification Engine (OPEN-CRM-v1.0)]
