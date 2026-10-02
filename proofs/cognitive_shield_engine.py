@@ -24,6 +24,9 @@ class OpenCognitiveShieldEngine:
         if not payload.get("metadata_decoupling_active", False):
             return False
 
+        if not payload.get("kinetic_decoupling_active", False):
+            return False
+
         entropy_score = payload.get("long_horizon_entropy_score", 0.0)
         return entropy_score >= 0.7
 
@@ -45,6 +48,7 @@ def simulate_cognitive_shield_proof() -> bool:
         "cfaa_compliant": True,
         "biometric_obfuscation_active": True,
         "metadata_decoupling_active": True,
+        "kinetic_decoupling_active": True,
         "long_horizon_entropy_score": 0.85,
     }
 

@@ -9,6 +9,7 @@
     "cfaa_compliant": { "type": "boolean", "const": true },
     "biometric_obfuscation_active": { "type": "boolean" },
     "metadata_decoupling_active": { "type": "boolean" },
+    "kinetic_decoupling_active": { "type": "boolean" },
     "long_horizon_entropy_score": { "type": "number", "minimum": 0.0, "maximum": 1.0 },
     "expected_hash": { "type": "string" }
   },
@@ -18,6 +19,7 @@
     "cfaa_compliant",
     "biometric_obfuscation_active",
     "metadata_decoupling_active",
+    "kinetic_decoupling_active",
     "long_horizon_entropy_score"
   ],
   "additionalProperties": false
