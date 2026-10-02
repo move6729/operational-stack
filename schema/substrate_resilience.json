@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://opstack.org/schema/substrate_resilience.json",
+  "title": "OpenSubstrateResilienceSchema",
+  "type": "object",
+  "properties": {
+    "node_id": { "type": "string" },
+    "jurisdiction_context": { "type": "string", "default": "US" },
+    "cfaa_compliant": { "type": "boolean", "const": true },
+    "offgrid_power_capacity_wh": { "type": "number", "minimum": 0 },
+    "water_storage_liters": { "type": "number", "minimum": 0 },
+    "salvaged_hardware_count": { "type": "integer", "minimum": 0 },
+    "expected_blackout_days": { "type": "number", "minimum": 0 },
+    "daily_power_draw_wh": { "type": "number", "minimum": 0 },
+    "daily_water_draw_liters": { "type": "number", "minimum": 0 },
+    "expected_hash": { "type": "string" }
+  },
+  "required": [
+    "node_id",
+    "jurisdiction_context",
+    "cfaa_compliant",
+    "offgrid_power_capacity_wh",
+    "water_storage_liters",
+    "salvaged_hardware_count",
+    "expected_blackout_days",
+    "daily_power_draw_wh",
+    "daily_water_draw_liters"
+  ],
+  "additionalProperties": false
+}
