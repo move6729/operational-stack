@@ -73,6 +73,7 @@ move6729 / operational-stack:
 │   ├── iam_identity.json           [Sovereign Identity Directory Graph (OPEN-IAM-v1.0)]
 │   ├── internal_terraforming.json  [Internal Terraforming & Planetary Homeostasis State Schema (INTERNAL-TERRAFORMING-v1.0)]
 │   ├── itsm_incident.json          [Sovereign ITSM Incident Graph (OPEN-ITSM-v1.0)]
+│   ├── asset_defense.json          [Sovereign Physical Asset Defense & Forfeiture Isolation Schema (OPEN-ASSET-DEFENSE-v1.0)]
 │   ├── jurisdictional_exit.json    [Sovereign Inter-Jurisdictional Exit & Tax Arbitrage Schema (OPEN-EXIT-v1.0)]
 │   ├── labor_collective.json       [Agentic Collective Labor Leverage Graph (OPEN-LABOR-v1.0)]
 │   ├── model_tiering_decay.json    [Central Compute Model Tiering Schema (CENTRAL-COMPUTE-MODEL-DECAY-v1.0)]
@@ -124,6 +125,7 @@ move6729 / operational-stack:
 │   ├── hydro_engine.py             [Bare-Metal Hydrological & SCADA Engine (OPEN-HYDRO-v1.0)]
 │   ├── iam_engine.py               [Bare-Metal IAM Verification Engine (OPEN-IAM-v1.0)]
 │   ├── itsm_engine.py              [Bare-Metal ITSM Verification Engine (OPEN-ITSM-v1.0)]
+│   ├── asset_defense_engine.py     [Sovereign Physical Asset Defense Engine (OPEN-ASSET-DEFENSE-v1.0)]
 │   ├── jurisdictional_exit_engine.py [Sovereign Inter-Jurisdictional Exit Engine (OPEN-EXIT-v1.0)]
 │   ├── labor_engine.py             [Agentic Collective Labor Leverage Engine (OPEN-LABOR-v1.0)]
 │   ├── mesh_discovery_engine.py    [Zero-DNS Physical Mesh Discovery Engine (OPEN-MESH-DISCOVERY-v1.0)]
@@ -213,6 +215,7 @@ move6729 / operational-stack:
     ├── AUDIT-2026-REFLEXIVE-ASHBY-PARITY.md
     ├── AUDIT-2026-SOVEREIGN-COGNITIVE-SILICON.md
     ├── AUDIT-2026-SOVEREIGN-JURISDICTIONAL-EXIT.md [Inter-Jurisdictional Exit & Tax Arbitrage Spec]
+    ├── AUDIT-2026-SOVEREIGN-PHYSICAL-ASSET-DEFENSE.md [Sovereign Physical Asset Defense & Forfeiture Isolation Spec]
     ├── AUDIT-2026-STIGMERGIC-ARG-AGENT-TASK-HANDOFFS.md
     ├── AUDIT-2026-STIGMERGIC-M2M-TASK-MARKETS.md
     ├── AUDIT-2026-SUB-BANDWIDTH-GTO-NEGOTIATION.md

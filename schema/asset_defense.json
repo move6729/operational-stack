@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://opstack.org/schema/asset_defense.json",
+  "title": "Sovereign Physical Asset Defense & Asset Forfeiture Isolation Schema (OPEN-ASSET-DEFENSE-v1.0)",
+  "type": "object",
+  "required": [
+    "asset_id",
+    "timestamp",
+    "jurisdiction_context",
+    "asset_type",
+    "valuation_usd",
+    "encumbrance_ratio",
+    "multi_jurisdictional_partitioning",
+    "statutory_homestead_exemption",
+    "cfaa_compliance_attestation"
+  ],
+  "properties": {
+    "asset_id": {
+      "type": "string",
+      "pattern": "^ASSET-[0-9A-FA-F]{8}$"
+    },
+    "timestamp": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "jurisdiction_context": {
+      "type": "string",
+      "default": "US"
+    },
+    "asset_type": {
+      "type": "string",
+      "enum": ["REAL_ESTATE", "OFFGRID_POWER_SUBSTRATE", "HARDWARE_SILICON", "WATER_RIGHTS", "FARMLAND"]
+    },
+    "valuation_usd": {
+      "type": "number",
+      "minimum": 0
+    },
+    "encumbrance_ratio": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1.0
+    },
+    "multi_jurisdictional_partitioning": {
+      "type": "boolean"
+    },
+    "statutory_homestead_exemption": {
+      "type": "boolean"
+    },
+    "cfaa_compliance_attestation": {
+      "type": "boolean",
+      "const": true
+    }
+  },
+  "additionalProperties": false
+}
