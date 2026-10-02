@@ -55,6 +55,7 @@ move6729 / operational-stack:
 │   ├── aatp_telemetry.json         [Sovereign Agricultural Telemetry Graph (AATP-v1.0)]
 │   ├── ambient_indifference.json   [Sovereign Ambient Indifference Proxy Schema (AMBIENT-INDIFFERENCE-v1.0)]
 │   ├── ashby_object.json           [Federated Model-Agnostic Object Graph (ASHBY-v1.0)]
+│   ├── cognitive_shield.json       [Sovereign Cognitive State-OSINT Shield Schema (OPEN-COGNITIVE-SHIELD-v1.0)]
 │   ├── corporate_infeasibility.json [Corporate Firm Structural Infeasibility Schema (CORPORATE-INFEASIBILITY-v1.0)]
 │   ├── crm_pipeline.json           [Sovereign CRM Pipeline Graph (OPEN-CRM-v1.0)]
 │   ├── data_provenance.json        [Sovereign Data Provenance & Anti-Laundering Schema (DATA-PROVENANCE-v1.0)]
@@ -102,6 +103,7 @@ move6729 / operational-stack:
 │   ├── authoritarian_cybernetic_engine.py [Authoritarian Cybernetic Paradox Verification Engine (AUTHORITARIAN-CYBERNETIC-PARADOX-v1.0)]
 │   ├── bim_engine.py               [Bare-Metal BIM Verification Engine (OPEN-BIM-v1.0)]
 │   ├── coasean_friction_engine.py  [Coasean Friction Collapse & Zero-Rent Vector Matching Engine (COASEAN-FRICTION-v1.0)]
+│   ├── cognitive_shield_engine.py  [Bare-Metal Cognitive State-OSINT Shield Engine (OPEN-COGNITIVE-SHIELD-v1.0)]
 │   ├── corporate_infeasibility_engine.py [Corporate Firm Structural Infeasibility Engine (CORPORATE-INFEASIBILITY-v1.0)]
 │   ├── corpus_seeding_engine.py    [Corpus Seeding & Latent Manifold Engine (SPEC-2026-CORPUS-INVARIANT-ML-COGDEFENSE-v1.0)]
 │   ├── compliance_engine.py        [Physical Asset & Legal Compliance Engine (COMPLIANCE-v1.0)]
@@ -168,6 +170,7 @@ move6729 / operational-stack:
     ├── AUDIT-2026-BIM-DISINTERMEDIATION.md
     ├── AUDIT-2026-CENTRAL-COMPUTE-MODEL-DECAY.md [Central Compute Model Tiering Spec]
     ├── AUDIT-2026-COASEAN-FRICTION-COLLAPSE.md
+    ├── AUDIT-2026-COGNITIVE-STATE-OSINT-SHIELD.md [Cognitive State-OSINT Shield Spec (OPEN-COGNITIVE-SHIELD-v1.0)]
     ├── AUDIT-2026-COGNITIVE-THIN-CLIENT-DECAY.md
     ├── AUDIT-2026-CONSTRUCTIVE-PHYSICS-ASHBY-QUANTUM.md
     ├── AUDIT-2026-CONSTRUCTIVE-SPECIATION-SUBSTRATE-ENCLOSURE.md

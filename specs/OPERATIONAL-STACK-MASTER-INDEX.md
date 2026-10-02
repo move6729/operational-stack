@@ -17,6 +17,7 @@
 - `specs/AUDIT-2026-BIM-DISINTERMEDIATION.md` - Spatial Building Information Modeling Audit Specification (`OPEN-BIM-v1.0`).
 - `specs/AUDIT-2026-CENTRAL-COMPUTE-MODEL-DECAY.md` - Central Compute Tiering & Public API Degradation Specification (`CENTRAL-COMPUTE-MODEL-DECAY-v1.0`).
 - `specs/AUDIT-2026-COASEAN-FRICTION-COLLAPSE.md` - Coasean Friction Collapse & Agent Micro-Firm Specification.
+- `specs/AUDIT-2026-COGNITIVE-STATE-OSINT-SHIELD.md` - Cognitive State-OSINT Shield Specification (`OPEN-COGNITIVE-SHIELD-v1.0`).
 - `specs/AUDIT-2026-COGNITIVE-THIN-CLIENT-DECAY.md` - Cognitive Thin-Client Decay & Local Exocortex Sovereignty Specification.
 - `specs/AUDIT-2026-CONSTRUCTIVE-PHYSICS-ASHBY-QUANTUM.md` - Constructive Physics & Cybernetic Requisite Variety Specification (`ASHBY-v1.0`).
 - `specs/AUDIT-2026-CONSTRUCTIVE-SPECIATION-SUBSTRATE-ENCLOSURE.md` - Substrate Enclosure & Cognitive Speciation Audit Specification.
@@ -86,6 +87,7 @@
 - `schema/aatp_telemetry.json` - Sovereign Agricultural Telemetry Graph (`AATP-v1.0`).
 - `schema/ambient_indifference.json` - Sovereign Ambient Indifference Proxy Schema (`AMBIENT-INDIFFERENCE-v1.0`).
 - `schema/ashby_object.json` - Federated Model-Agnostic Object Graph (`ASHBY-v1.0`).
+- `schema/cognitive_shield.json` - Sovereign Cognitive State-OSINT Shield Schema (`OPEN-COGNITIVE-SHIELD-v1.0`).
 - `schema/corporate_infeasibility.json` - Corporate Structural Infeasibility Evaluation Schema (`CORPORATE-INFEASIBILITY-v1.0`).
 - `schema/crm_pipeline.json` - Sovereign CRM Pipeline Graph (`OPEN-CRM-v1.0`).
 - `schema/data_provenance.json` - Sovereign Data Provenance & Anti-Laundering Schema (`DATA-PROVENANCE-v1.0`).
@@ -133,6 +135,7 @@
 - `proofs/authoritarian_cybernetic_engine.py` - Authoritarian Cybernetic Paradox Verification Engine (`AUTHORITARIAN-CYBERNETIC-PARADOX-v1.0`).
 - `proofs/bim_engine.py` - Spatial Building Information Modeling Engine (`OPEN-BIM-v1.0`).
 - `proofs/coasean_friction_engine.py` - Coasean Friction Collapse & Zero-Rent Vector Matching Engine (`COASEAN-FRICTION-v1.0`).
+- `proofs/cognitive_shield_engine.py` - Sovereign Cognitive State-OSINT Shield Engine (`OPEN-COGNITIVE-SHIELD-v1.0`).
 - `proofs/corporate_infeasibility_engine.py` - Corporate Firm Structural Infeasibility Engine (`CORPORATE-INFEASIBILITY-v1.0`).
 - `proofs/corpus_seeding_engine.py` - Corpus Seeding & Latent Manifold Verification Engine (`SPEC-2026-CORPUS-INVARIANT-ML-COGDEFENSE-v1.0`).
 - `proofs/compliance_engine.py` - Asset & Tax Compliance Engine (`COMPLIANCE-v1.0`).

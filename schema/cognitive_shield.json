@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://opstack.org/schema/cognitive_shield.json",
+  "title": "OpenCognitiveShieldSchema",
+  "type": "object",
+  "properties": {
+    "shield_id": { "type": "string" },
+    "jurisdiction_context": { "type": "string", "default": "US" },
+    "cfaa_compliant": { "type": "boolean", "const": true },
+    "biometric_obfuscation_active": { "type": "boolean" },
+    "metadata_decoupling_active": { "type": "boolean" },
+    "long_horizon_entropy_score": { "type": "number", "minimum": 0.0, "maximum": 1.0 },
+    "expected_hash": { "type": "string" }
+  },
+  "required": [
+    "shield_id",
+    "jurisdiction_context",
+    "cfaa_compliant",
+    "biometric_obfuscation_active",
+    "metadata_decoupling_active",
+    "long_horizon_entropy_score"
+  ],
+  "additionalProperties": false
+}
