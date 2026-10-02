@@ -1,7 +1,8 @@
 #!/bin/sh
-''''[ -z "$PYTHON_EXECUTABLE" ] && PYTHON_EXECUTABLE=python3
-exec "$PYTHON_EXECUTABLE" "$0" "$@"
-'''
+# Real shell script that hands off execution to Python
+""":"
+exec python3 "$0" "$@"
+"""
 
 import glob
 import subprocess
