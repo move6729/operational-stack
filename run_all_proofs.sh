@@ -1,4 +1,7 @@
-#!/usr/bin/env python3
+#!/bin/sh
+''''[ -z "$PYTHON_EXECUTABLE" ] && PYTHON_EXECUTABLE=python3
+exec "$PYTHON_EXECUTABLE" "$0" "$@"
+'''
 
 import glob
 import subprocess
