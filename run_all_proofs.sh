@@ -1,5 +1,5 @@
 #!/bin/sh
-# Real shell script that hands off execution to Python
+# Shell re-exec wrapper for Python
 """:"
 exec python3 "$0" "$@"
 """
