@@ -40,7 +40,8 @@ class OpenSubstrateEngine:
         if not self.evaluate_resilience_status(new_payload):
             return False
 
-        raw_bytes = json.dumps(new_payload, sort_keys=True).encode("utf-8")
+        payload_copy = {k: v for k, v in new_payload.items() if k != "expected_hash"}
+        raw_bytes = json.dumps(payload_copy, sort_keys=True).encode("utf-8")
         computed_hash = hashlib.sha256(raw_bytes).hexdigest()
         return computed_hash == expected_hash
 
