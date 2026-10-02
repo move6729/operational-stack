@@ -125,13 +125,13 @@ def run_mesh_discovery_proof() -> bool:
     # Verify beacon frame is aligned to 1024-byte boundary (+ 4 byte header)
     assert (len(beacon_a) - 4) % 1024 == 0
 
-    valid_public_ip = "203.0.113.1"
+    valid_public_ip = "198.51.100.1"
     parsed = node_b.parse_beacon_packet(beacon_a, sender_addr=(valid_public_ip, 9999))
     assert parsed["node_id"] == "NODE-ALPHA-01"
     assert "NODE-ALPHA-01" in node_b.peers
     assert node_b.peers["NODE-ALPHA-01"]["address"] == valid_public_ip
 
-    private_ip = "10.0.0.5"
+    private_ip = "10.0.0.1"
     node_c = ZeroDNSMeshDiscoveryEngine(node_id="NODE-GAMMA-03")
     parsed_private = node_c.parse_beacon_packet(beacon_a, sender_addr=(private_ip, 9999))
     assert parsed_private["node_id"] == "NODE-ALPHA-01"
