@@ -45,7 +45,7 @@ class CorporateInfeasibilityEngine:
 
         node_count = analysis_schema.get("active_edge_nodes_disputing", 1)
         hourly_rate = analysis_schema.get("corporate_defense_hourly_rate_usd", self.DEFAULT_HOURLY_DEFENSE_RATE)
-        hours_per_dispute = analysis_schema.get("defense_hours_per_dispute", self.DEFAULT_DEFENSE_HOURLY_RATE)
+        hours_per_dispute = analysis_schema.get("defense_hours_per_dispute", self.DEFAULT_DEFENSE_HOURS_PER_DISPUTE)
         edge_cost_per_node = analysis_schema.get("edge_generation_cost_per_node_usd", 0.01)
 
         total_corporate_defense_opex = node_count * (hourly_rate * hours_per_dispute)

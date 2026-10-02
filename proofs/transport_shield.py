@@ -13,7 +13,7 @@ class LMTITransportShield:
     while enforcing Shannon Channel Capacity limits and hard network circuit breakers.
 
     Circuit Breakers Enforced at Socket Layer:
-    - Blocks all private / LAN / localhost IP egress ([IP_ADDRESS]/8, [IP_ADDRESS]/8, [IP_ADDRESS]/16, [IP_ADDRESS]/12).
+    - Blocks all private / LAN / localhost IP egress (127.0.0.0/8, 10.0.0.0/8, 192.168.0.0/16, 172.16.0.0/12).
     - Drops payloads containing Authorization / Bearer headers or session tokens.
     - Uniform 1024-byte static block padding alignment to prevent packet length inspection.
     - Payload chunking/fragmentation into 1024-byte uniform blocks.
@@ -24,11 +24,11 @@ class LMTITransportShield:
     MAX_JITTER_MS = 15
 
     BLOCKED_SUBNETS = [
-        ipaddress.ip_network("[IP_ADDRESS]/8"),
-        ipaddress.ip_network("[IP_ADDRESS]/8"),
-        ipaddress.ip_network("[IP_ADDRESS]/12"),
-        ipaddress.ip_network("[IP_ADDRESS]/16"),
-        ipaddress.ip_network("[IP_ADDRESS]/16"),
+        ipaddress.ip_network("127.0.0.0/8"),
+        ipaddress.ip_network("10.0.0.0/8"),
+        ipaddress.ip_network("172.16.0.0/12"),
+        ipaddress.ip_network("192.168.0.0/16"),
+        ipaddress.ip_network("169.254.0.0/16"),
         ipaddress.ip_network("::1/128"),
         ipaddress.ip_network("fc00::/7")
     ]
@@ -140,7 +140,7 @@ class LMTITransportShield:
         self,
         peer_crypto_id: str,
         payload_str: str,
-        destination_ip: str = "[IP_ADDRESS]",
+        destination_ip: str = "8.8.8.8",
         bandwidth_hz: float = 1000000.0,
         snr_linear: float = 10.0
     ) -> Dict[str, Any]:
@@ -200,10 +200,10 @@ if __name__ == "__main__":
     mock_payload = '{"step_id": 1, "status": "COMPLETED", "hash": "e3b0c442..."}'
     peer_id = "peer_curve25519_a8f92c10b2"
 
-    result = shield.transmit_peer_payload(peer_id, mock_payload, destination_ip="[IP_ADDRESS]")
+    result = shield.transmit_peer_payload(peer_id, mock_payload, destination_ip="8.8.8.8")
     print(f"[LMTI-v1.0] Transport Frame Dispatched: {result}")
     assert result["status"] == "DISPATCHED"
     assert result["frame_size_bytes"] == 1024
 
-    lan_result = shield.transmit_peer_payload(peer_id, mock_payload, destination_ip="[IP_ADDRESS]")
+    lan_result = shield.transmit_peer_payload(peer_id, mock_payload, destination_ip="10.0.0.1")
     assert lan_result["status"] == "DROPPED_BY_CIRCUIT_BREAKER"
