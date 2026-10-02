@@ -81,7 +81,7 @@ def run_health_legal_proof() -> bool:
     engine = OpenHealthLegalEngine()
     case_data = {
         "case_id": "HLTH-1234abcd",
-        "patient_pubkey": "0x1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef",
+        "patient_pubkey": "0x1111222233334444555566667777888899990000aaaabbbbccccddddeeeeffff",
         "provider_npi": "1234567890",
         "claim_items": [
             {
