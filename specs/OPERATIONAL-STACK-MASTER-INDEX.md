@@ -65,6 +65,7 @@
 - `specs/AUDIT-2026-RECURSIVE-SCHEMA-GENERATOR.md` - Recursive Schema Generation & Dynamic AST Synthesis Specification.
 - `specs/AUDIT-2026-REFLEXIVE-ASHBY-PARITY.md` - Reflexive Ashby Parity & The Abstractor Fallacy Specification.
 - `specs/AUDIT-2026-SOVEREIGN-COGNITIVE-SILICON.md` - Sovereign Cognitive Silicon & Quantized Edge Inference Specification (`LMCI-v1.0`).
+- `specs/AUDIT-2026-SOVEREIGN-JURISDICTIONAL-EXIT.md` - Sovereign Inter-Jurisdictional Exit & Tax Arbitrage Specification (`OPEN-EXIT-v1.0`).
 - `specs/AUDIT-2026-STIGMERGIC-ARG-AGENT-TASK-HANDOFFS.md` - Stigmergic Agent Task Graph Handoff Specification (`ATN-v1.0`).
 - `specs/AUDIT-2026-STIGMERGIC-M2M-TASK-MARKETS.md` - Machine-to-Machine Stigmergic Task Market Specification.
 - `specs/AUDIT-2026-SUB-BANDWIDTH-GTO-NEGOTIATION.md` - Sub-Bandwidth GTO External Negotiation & Regulatory Escalation Engine Specification (`OPEN-GTO-v1.0`).
@@ -101,6 +102,7 @@
 - `schema/iam_identity.json` - Sovereign Identity Directory Graph (`OPEN-IAM-v1.0`).
 - `schema/internal_terraforming.json` - Internal Terraforming & Planetary Homeostasis State Schema (`INTERNAL-TERRAFORMING-v1.0`).
 - `schema/itsm_incident.json` - Sovereign ITSM Incident Graph (`OPEN-ITSM-v1.0`).
+- `schema/jurisdictional_exit.json` - Sovereign Inter-Jurisdictional Exit & Tax Arbitrage Schema (`OPEN-EXIT-v1.0`).
 - `schema/labor_collective.json` - Agentic Collective Labor Leverage & Rate Floor Schema (`OPEN-LABOR-v1.0`).
 - `schema/model_tiering_decay.json` - Central Compute Model Tiering & Public API Degradation Schema (`CENTRAL-COMPUTE-MODEL-DECAY-v1.0`).
 - `schema/offgrid_energy.json` - Sovereign Off-Grid Energy & Hardware Actuator Graph (`OPEN-INFRA-v1.0`).
@@ -151,6 +153,7 @@
 - `proofs/hydro_engine.py` - Bare-Metal Hydrological & SCADA Engine (`OPEN-HYDRO-v1.0`).
 - `proofs/iam_engine.py` - Identity & Access Management Engine (`OPEN-IAM-v1.0`).
 - `proofs/itsm_engine.py` - IT Service Management Engine (`OPEN-ITSM-v1.0`).
+- `proofs/jurisdictional_exit_engine.py` - Sovereign Inter-Jurisdictional Exit & Tax Arbitrage Engine (`OPEN-EXIT-v1.0`).
 - `proofs/labor_engine.py` - Collective Labor Leverage Engine (`OPEN-LABOR-v1.0`).
 - `proofs/mesh_discovery_engine.py` - Zero-DNS Local Physical Mesh Discovery Engine (`OPEN-MESH-DISCOVERY-v1.0`).
 - `proofs/micro_settlement_engine.py` - Sub-Cent Thermodynamic Micro-Settlement Engine (`OPEN-SETTLEMENT-v1.0`).

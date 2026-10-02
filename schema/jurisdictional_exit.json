@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://opstack.org/schema/jurisdictional_exit.json",
+  "title": "Sovereign Inter-Jurisdictional Exit & Tax Arbitrage Schema (OPEN-EXIT-v1.0)",
+  "type": "object",
+  "required": [
+    "exit_id",
+    "timestamp",
+    "jurisdiction_context",
+    "origin_jurisdiction",
+    "destination_jurisdiction",
+    "financial_metrics",
+    "regulatory_metrics",
+    "cfaa_compliance_attestation"
+  ],
+  "properties": {
+    "exit_id": {
+      "type": "string",
+      "pattern": "^EXIT-[0-9A-FA-F]{8}$"
+    },
+    "timestamp": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "jurisdiction_context": {
+      "type": "string",
+      "default": "US"
+    },
+    "origin_jurisdiction": {
+      "type": "object",
+      "required": ["state", "effective_tax_rate", "property_tax_rate"],
+      "properties": {
+        "state": { "type": "string", "length": 2 },
+        "effective_tax_rate": { "type": "number", "minimum": 0, "maximum": 1.0 },
+        "property_tax_rate": { "type": "number", "minimum": 0, "maximum": 1.0 },
+        "regulatory_friction_score": { "type": "number", "minimum": 0, "maximum": 100.0 }
+      }
+    },
+    "destination_jurisdiction": {
+      "type": "object",
+      "required": ["state", "effective_tax_rate", "property_tax_rate"],
+      "properties": {
+        "state": { "type": "string", "length": 2 },
+        "effective_tax_rate": { "type": "number", "minimum": 0, "maximum": 1.0 },
+        "property_tax_rate": { "type": "number", "minimum": 0, "maximum": 1.0 },
+        "regulatory_friction_score": { "type": "number", "minimum": 0, "maximum": 100.0 }
+      }
+    },
+    "financial_metrics": {
+      "type": "object",
+      "required": ["gross_annual_income", "estimated_relocation_capex"],
+      "properties": {
+        "gross_annual_income": { "type": "number", "minimum": 0 },
+        "estimated_relocation_capex": { "type": "number", "minimum": 0 }
+      }
+    },
+    "regulatory_metrics": {
+      "type": "object",
+      "required": ["exit_threshold_years"],
+      "properties": {
+        "exit_threshold_years": { "type": "number", "minimum": 0.1 }
+      }
+    },
+    "cfaa_compliance_attestation": {
+      "type": "boolean",
+      "const": true
+    }
+  },
+  "additionalProperties": false
+}
