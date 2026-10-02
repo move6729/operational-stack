@@ -18,6 +18,9 @@ This specification captures and codifies future physicalist attack, defense, and
 |  [ Passive Physical Masking ]        <--- Thermal / Optical / Faraday |
 |  [ Statutory Pro Se Arbitrage ]      <--- OPEN-GTO-v1.0 / Legal AST  |
 |  [ Out-of-Band Physical Trust ]       <--- Sneakernet / Optical Mesh  |
+|  [ Off-Grid Substrate Resilience ]   <--- OPEN-SUBSTRATE-v1.0        |
+|  [ Cognitive State-OSINT Shield ]   <--- OPEN-COGNITIVE-SHIELD-v1.0  |
+|  [ Multi-Generational Continuity ]   <--- OPEN-CONTINUITY-v1.0       |
 +-----------------------------------------------------------------------+
 ```
 
@@ -44,6 +47,18 @@ This specification captures and codifies future physicalist attack, defense, and
 #### 5. Out-of-Band Physical Mesh & Sneakernet Trust Bootstrap (`LMTI-v1.0`)
 - **Mechanistic Gap:** Centralized identity providers and certificate authorities monitor network ingress/egress and execute DNS-level censorship.
 - **Physicalist Invariant:** Bootstraps cryptographic trust using physical human-to-human key exchanges, directional line-of-sight lasers/LEDs, ultrasonic acoustics, and encrypted local sneakernets. Guarantees zero-desynchronization mesh communication even during total RF spectrum denial or global internet partitioning.
+
+#### 6. Off-Grid Long-Term Energy & Substrate Resilience (`OPEN-SUBSTRATE-v1.0`)
+- **Mechanistic Gap:** Centralized utility grids and corporate agricultural supply chains leverage localized energy rationing and targeted embargoes to force compliance.
+- **Physicalist Invariant:** Coordinates deep-cycle thermodynamic energy storage, hardware component salvage standards, and local closed-loop water/food automation to withstand extended regional utility blackouts or supply-chain blockades.
+
+#### 7. Cognitive & Generative Defense Against State-Level OSINT (`OPEN-COGNITIVE-SHIELD-v1.0`)
+- **Mechanistic Gap:** Automated state-level surveillance swarms and data-broker graphs map physical human identity via biometric tracking and metadata aggregation over decade horizons.
+- **Physicalist Invariant:** Enforces long-horizon metadata decoupling, adversarial biometric obfuscation, and persistent local-first hardware cryptographic identity protection against automated OSINT swarms.
+
+#### 8. Multi-Generational Federated Continuity (`OPEN-CONTINUITY-v1.0`)
+- **Mechanistic Gap:** Jurisdictional collapses and centralized probate/trust courts freeze physical assets and revoke digital credentials upon operator incapacitation or state enforcement actions.
+- **Physicalist Invariant:** Enforces schema-driven inheritance, key-custody escrow without central trust dependencies, and peer-to-peer physical asset transfer protocols designed to survive jurisdictional collapses across generational timelines.
 
 ---
 
