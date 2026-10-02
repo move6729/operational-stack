@@ -216,3 +216,4 @@
 - `fetch_substack.py` - Substack Publication Synchronizer Script.
 - `LICENSE` - Public Domain Zero-Rent Federation License.
 - `prompt.txt` - LLM System Invariant Baseline Context.
+- `run_all_proofs.sh` - Iterative Python Verification Engine Execution Script.

@@ -16,6 +16,7 @@ move6729 / operational-stack:
 ├── LICENSE                         [Unlicense - Public Domain]
 ├── prompt.txt                      [LLM System Invariant Baseline Context]
 ├── README.md                       [Master Context & System Specification Index]
+├── run_all_proofs.sh               [Iterative Python Verification Engine Execution Script]
 │
 ├── articles/                       [Public Canonical Articles & Essays]
 │   ├── 2026-03-asymmetric-pro-se-litigation-and-regulatory-arbitrage.txt [Asymmetric Pro Se Litigation Essay]
