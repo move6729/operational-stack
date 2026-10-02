@@ -213,6 +213,7 @@
 - `articles/2026-03-refuting-central-compute-model-tiering.txt` - Essay on Refuting Central Compute Model Tiering & Public API Degradation.
 - `articles/2026-03-refuting-extraplanetary-escapism.txt` - Essay on Refuting Extra-Planetary Escapism and Rentier Capital Tropes.
 - `articles/2026-03-refuting-humanoid-robotics.txt` - Essay on Refuting Humanoid Robotics and Anthropomorphic Hardware Tropes.
+- `articles/2026-03-state-surveillance-swarms-and-4th-amendment-arbitrage.txt` - Essay on State Surveillance Swarms, Third-Party Doctrine Loopholes, and Fourth Amendment Arbitrage (`OPEN-COGNITIVE-SHIELD-v1.0`).
 - `articles/2026-03-the-biological-fiefdom.txt` - Essay on the biological fiefdom.
 - `articles/2026-03-the-communications-engine-of-ai-safety.txt` - Essay on the communications engine of AI safety.
 - `articles/2026-03-the-great-disintermediation-manifesto.txt` - Essay on the great disintermediation manifesto.

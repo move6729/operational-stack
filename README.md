@@ -41,6 +41,7 @@ move6729 / operational-stack:
 │   ├── 2026-03-refuting-central-compute-model-tiering.txt [Refuting Central Compute Model Tiering Essay]
 │   ├── 2026-03-refuting-extraplanetary-escapism.txt [Refuting Extra-Planetary Escapism Essay]
 │   ├── 2026-03-refuting-humanoid-robotics.txt [Refuting Humanoid Robotics Essay]
+│   ├── 2026-03-state-surveillance-swarms-and-4th-amendment-arbitrage.txt [State Surveillance Swarms & 4th Amendment Arbitrage Essay]
 │   ├── 2026-03-the-biological-fiefdom.txt
 │   ├── 2026-03-the-communications-engine-of-ai-safety.txt
 │   ├── 2026-03-the-great-disintermediation-manifesto.txt
