@@ -1,6 +1,6 @@
 # OPERATIONAL STACK (OPSTACK) - MASTER CONTEXT & ARCHITECTURAL STATE
 
-**Canonical Reference:** `OPSTACK-MASTER-v2.2`  
+**Canonical Reference:** `OPSTACK-MASTER-v2.3`  
 **License:** Unlicense (Public Domain — Zero-Rent Federation)  
 
 ---
@@ -18,6 +18,7 @@ move6729 / operational-stack:
 ├── README.md                       [Master Context & System Specification Index]
 │
 ├── articles/                       [Public Canonical Articles & Essays]
+│   ├── 2026-03-asymmetric-pro-se-litigation-and-regulatory-arbitrage.txt [Asymmetric Pro Se Litigation Essay]
 │   ├── 2026-03-biological-entropy-and-ambient-indifference.txt [Biological Entropy & Ambient Indifference Essay]
 │   ├── 2026-03-corporate-data-laundering-and-demand-side-decay.txt [Corporate Data Laundering & Demand-Side Decay Essay]
 │   ├── 2026-03-constructive-discrimination-and-the-open-attractor.txt
@@ -77,6 +78,7 @@ move6729 / operational-stack:
 │   ├── osint_isolation.json        [Sovereign OSINT Metadata Isolation & Data-Broker Schema (OPEN-OSINT-SHIELD-v1.0)]
 │   ├── ovtm_kinetic.json           [Sovereign Vehicle Telemetry Graph (OVTM-S v1.1)]
 │   ├── ovtm_legal_defense.json     [Automotive Telemetry Wiretap & Privacy Dispute Schema (OVTM-LEGAL-v1.0)]
+│   ├── pro_se_arbitrage.json       [Generalized Pro Se Regulatory Arbitrage Schema (OPEN-PRO-SE-v1.0)]
 │   ├── prop_lease.json             [Sovereign Property Lease Graph (OPEN-PROP-v1.0)]
 │   ├── prop_tenant_screening.json  [PropTech Tenant Screening FCRA Dispute Schema (OPEN-PROP-SCREEN-v1.0)]
 │   ├── shield-spec.json            [HPMCR Client Defensive Invariant Schema]
@@ -128,6 +130,7 @@ move6729 / operational-stack:
 │   ├── ovtm_auditor.py             [Kinetic Mobility Safety Isolation Auditor (OVTM-S v1.1)]
 │   ├── ovtm_engine.py              [Bare-Metal Vehicle Telemetry Engine (OVTM-S v1.1)]
 │   ├── ovtm_legal_engine.py        [Automotive Telemetry Legal Defense Engine (OVTM-LEGAL-v1.0)]
+│   ├── pro_se_arbitrage_engine.py  [Sovereign Pro Se Regulatory Arbitrage Engine (OPEN-PRO-SE-v1.0)]
 │   ├── prop_engine.py              [Bare-Metal Property Verification Engine (OPEN-PROP-v1.0)]
 │   ├── prop_tenant_screening_engine.py [PropTech Tenant Screening Defense Engine (OPEN-PROP-SCREEN-v1.0)]
 │   ├── sub_bandwidth_delay_engine.py [Sub-Bandwidth Delay Curve & Temporal Rate-Shaping Engine (SUB-BANDWIDTH-DELAY-v1.0)]
@@ -143,6 +146,7 @@ move6729 / operational-stack:
 │
 └── specs/                          [Canonical System Audits & Invariants]
     ├── AUDIT-2026-AGRICULTURAL-DISINTERMEDIATION.md
+    ├── AUDIT-2026-ASYMMETRIC-PRO-SE-REGULATORY-ARBITRAGE.md [Generalized Asymmetric Pro Se Regulatory Arbitrage Spec]
     ├── AUDIT-2026-AUTHORITARIAN-CYBERNETIC-PARADOX.md [Authoritarian Cybernetic Paradox Spec]
     ├── AUDIT-2026-AI-SAFETY-REGULATORY-CAPTURE.md [AI Safety Regulatory Capture Spec]
     ├── AUDIT-2026-ANTI-LUDDITE-BARE-METAL-INVARIANT.md

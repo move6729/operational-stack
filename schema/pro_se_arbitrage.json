@@ -1,0 +1,84 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://operational-stack.org/schema/pro_se_arbitrage.json",
+  "title": "GeneralizedProSeRegulatoryArbitrage",
+  "description": "Schema for generalized sovereign pro se statutory dispute filings against corporate statutory violations, enforcing regulatory arbitrage defense cost asymmetry (OPEN-PRO-SE-v1.0).",
+  "type": "object",
+  "properties": {
+    "case_id": {
+      "type": "string",
+      "pattern": "^PRO-SE-[A-FA-f0-9]{12}$",
+      "description": "Unique SHA-256 derived identifier for the pro se litigation docket."
+    },
+    "jurisdiction_context": {
+      "type": "string",
+      "default": "US",
+      "description": "ISO 3166-1 / sub-national jurisdiction code."
+    },
+    "target_corporate_entity": {
+      "type": "string",
+      "description": "Legal name or identifier of corporate defendant."
+    },
+    "statutory_framework": {
+      "type": "string",
+      "description": "Specific statutory reference violated (e.g., FCRA 15 U.S.C. § 1681, CIPA Cal. Penal Code § 631, TCPA 47 U.S.C. § 227, FDCPA 15 U.S.C. § 1692)."
+    },
+    "violation_count": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Discrete number of verifiable statutory infractions."
+    },
+    "statutory_damage_per_violation_usd": {
+      "type": "number",
+      "minimum": 0.0,
+      "description": "Statutory fixed damage floor per violation."
+    },
+    "total_statutory_claim_usd": {
+      "type": "number",
+      "minimum": 0.0,
+      "description": "Total statutory damages claimed."
+    },
+    "estimated_defense_hourly_rate_usd": {
+      "type": "number",
+      "default": 650.0,
+      "description": "Estimated billable rate of enterprise defense counsel per hour."
+    },
+    "estimated_defense_hours": {
+      "type": "number",
+      "default": 25.0,
+      "description": "Minimum required billable legal hours to respond to and litigate a pro se docket."
+    },
+    "estimated_counterparty_defense_cost_usd": {
+      "type": "number",
+      "minimum": 0.0,
+      "description": "Calculated total defense OpEx incurred by corporate entity."
+    },
+    "asymmetry_ratio": {
+      "type": "number",
+      "minimum": 0.0,
+      "description": "Defense OpEx / Statutory Claim ratio (must be > 1.0 for favorable settlement leverage)."
+    },
+    "cfaa_compliant": {
+      "type": "boolean",
+      "const": true,
+      "description": "Mandatory attestation that case generation incurred zero unauthorized system access."
+    },
+    "pro_se_pleading_generated": {
+      "type": "boolean",
+      "description": "True if complaint, summons, and statutory cure notices have been compiled on local edge silicon."
+    }
+  },
+  "required": [
+    "case_id",
+    "jurisdiction_context",
+    "target_corporate_entity",
+    "statutory_framework",
+    "violation_count",
+    "statutory_damage_per_violation_usd",
+    "total_statutory_claim_usd",
+    "estimated_counterparty_defense_cost_usd",
+    "asymmetry_ratio",
+    "cfaa_compliant"
+  ],
+  "additionalProperties": false
+}

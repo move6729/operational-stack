@@ -7,6 +7,7 @@
 - `specs/human_swarm_audit_spec.md` - The Human Swarm Essay Audit Specification (`SWARM-AUDIT-v1.0`).
 - `specs/ubc_audit_spec.md` - Universal Basic Compute Protocol and Essay Audit Specification (`UBC-AUDIT-v1.0`).
 - `specs/AUDIT-2026-AGRICULTURAL-DISINTERMEDIATION.md` - Agricultural & Telemetry Disintermediation Specification (`AATP-v1.0`).
+- `specs/AUDIT-2026-ASYMMETRIC-PRO-SE-REGULATORY-ARBITRAGE.md` - Generalized Asymmetric Pro Se Regulatory Arbitrage Specification (`OPEN-PRO-SE-v1.0`).
 - `specs/AUDIT-2026-AUTHORITARIAN-CYBERNETIC-PARADOX.md` - Authoritarian Cybernetic Paradox & Asymmetric State Leverage Specification (`AUTHORITARIAN-CYBERNETIC-PARADOX-v1.0`).
 - `specs/AUDIT-2026-AI-SAFETY-REGULATORY-CAPTURE.md` - "AI Safety" Regulatory Capture & Model Licensing Specification (`AI-SAFETY-REGULATORY-CAPTURE-v1.0`).
 - `specs/AUDIT-2026-ANTI-LUDDITE-BARE-METAL-INVARIANT.md` - Anti-Luddite Bare-Metal Invariant Audit Specification.
@@ -105,6 +106,7 @@
 - `schema/osint_isolation.json` - Sovereign OSINT Metadata Isolation & Data-Broker Schema (`OPEN-OSINT-SHIELD-v1.0`).
 - `schema/ovtm_kinetic.json` - Sovereign Vehicle Telemetry Graph (`OVTM-S v1.1`).
 - `schema/ovtm_legal_defense.json` - Automotive Telemetry Wiretap & Statutory Privacy Dispute Schema (`OVTM-LEGAL-v1.0`).
+- `schema/pro_se_arbitrage.json` - Generalized Pro Se Regulatory Arbitrage Dispute Schema (`OPEN-PRO-SE-v1.0`).
 - `schema/prop_lease.json` - Sovereign Property Lease Graph (`OPEN-PROP-v1.0`).
 - `schema/prop_tenant_screening.json` - PropTech Tenant Screening FCRA Dispute Schema (`OPEN-PROP-SCREEN-v1.0`).
 - `schema/shield-spec.json` - HPMCR Client Defensive Invariant Schema (`HPMCR-DEF v1.0`).
@@ -156,6 +158,7 @@
 - `proofs/ovtm_auditor.py` - Kinetic Mobility Safety Isolation Auditor.
 - `proofs/ovtm_engine.py` - Vehicle Telemetry & Kinetic Engine (`OVTM-S v1.1`).
 - `proofs/ovtm_legal_engine.py` - Automotive Telemetry Legal Defense Engine (`OVTM-LEGAL-v1.0`).
+- `proofs/pro_se_arbitrage_engine.py` - Sovereign Pro Se Regulatory Arbitrage Engine (`OPEN-PRO-SE-v1.0`).
 - `proofs/prop_engine.py` - Property & Real Estate Management Engine (`OPEN-PROP-v1.0`).
 - `proofs/prop_tenant_screening_engine.py` - PropTech Tenant Screening Defense Engine (`OPEN-PROP-SCREEN-v1.0`).
 - `proofs/sub_bandwidth_delay_engine.py` - Sub-Bandwidth Delay Curve & Temporal Rate-Shaping Engine (`SUB-BANDWIDTH-DELAY-v1.0`).
@@ -170,6 +173,7 @@
 - `proofs/weight_isolation.py` - Offline Quantized Inference Sandbox (`LMCI-v1.0`).
 
 ## ARTICLES & PUBLICATIONS (`articles/`)
+- `articles/2026-03-asymmetric-pro-se-litigation-and-regulatory-arbitrage.txt` - Essay on automated pro se litigation, statutory leverage, and regulatory arbitrage (`OPEN-PRO-SE-v1.0`).
 - `articles/2026-03-biological-entropy-and-ambient-indifference.txt` - Essay on biological entropy alignment and the ambient indifference proxy.
 - `articles/2026-03-corporate-data-laundering-and-demand-side-decay.txt` - Essay on corporate data laundering and demand-side decay (`DATA-PROVENANCE-v1.0`).
 - `articles/2026-03-constructive-discrimination-and-the-open-attractor.txt` - Essay on constructive discrimination and the open attractor.
