@@ -54,17 +54,22 @@ class ZeroDNSMeshDiscoveryEngine:
             return False
 
     def pad_beacon_payload(self, raw_bytes: bytes) -> bytes:
-        """Pads beacon bytes to uniform 1024-byte block boundaries."""
-        padding_needed = self.BLOCK_SIZE_BYTES - (len(raw_bytes) % self.BLOCK_SIZE_BYTES)
-        pad_byte = padding_needed % 256
-        padding = os.urandom(padding_needed - 1) + bytes([pad_byte])
-        return raw_bytes + padding
+        """Pads beacon bytes to uniform 1024-byte block boundaries with 2-byte trailer."""
+        rem = len(raw_bytes) % self.BLOCK_SIZE_BYTES
+        padding_needed = self.BLOCK_SIZE_BYTES - rem
+        if padding_needed < 2:
+            padding_needed += self.BLOCK_SIZE_BYTES
+        random_fill = os.urandom(padding_needed - 2)
+        trailer = struct.pack(">H", padding_needed)
+        return raw_bytes + random_fill + trailer
 
     def unpad_beacon_payload(self, padded_bytes: bytes) -> bytes:
         """Strips uniform block padding from received beacon bytes."""
-        padding_needed = padded_bytes[-1]
-        if padding_needed == 0:
-            padding_needed = 1024
+        if len(padded_bytes) < 2:
+            return b""
+        padding_needed = struct.unpack(">H", padded_bytes[-2:])[0]
+        if padding_needed > len(padded_bytes) or padding_needed < 2:
+            return b""
         return padded_bytes[:-padding_needed]
 
     def construct_beacon_packet(self, timestamp: int, capabilities: List[str]) -> bytes:
