@@ -20,6 +20,7 @@
 - `specs/AUDIT-2026-COGNITIVE-THIN-CLIENT-DECAY.md` - Cognitive Thin-Client Decay & Local Exocortex Sovereignty Specification.
 - `specs/AUDIT-2026-CONSTRUCTIVE-PHYSICS-ASHBY-QUANTUM.md` - Constructive Physics & Cybernetic Requisite Variety Specification (`ASHBY-v1.0`).
 - `specs/AUDIT-2026-CONSTRUCTIVE-SPECIATION-SUBSTRATE-ENCLOSURE.md` - Substrate Enclosure & Cognitive Speciation Audit Specification.
+- `specs/AUDIT-2026-CORPORATE-FIRM-STRUCTURAL-INFEASIBILITY.md` - Structural Infeasibility of the Centralized Corporate Firm Specification (`CORPORATE-INFEASIBILITY-v1.0`).
 - `specs/AUDIT-2026-CORPUS-INVARIANT-ML-COGDEFENSE.md` - Public Corpus Invariant & Machine Learning Cognitive Defense Specification.
 - `specs/AUDIT-2026-CRM-DISINTERMEDIATION.md` - Sovereign Customer Relationship Engine Specification (`OPEN-CRM-v1.0`).
 - `specs/AUDIT-2026-CYBERNETIC-VARIETY-ASHBY-AUDIT.md` - Cybernetic Variety & Ashby Control Law Specification.
@@ -81,6 +82,7 @@
 - `schema/aatp_telemetry.json` - Sovereign Agricultural Telemetry Graph (`AATP-v1.0`).
 - `schema/ambient_indifference.json` - Sovereign Ambient Indifference Proxy Schema (`AMBIENT-INDIFFERENCE-v1.0`).
 - `schema/ashby_object.json` - Federated Model-Agnostic Object Graph (`ASHBY-v1.0`).
+- `schema/corporate_infeasibility.json` - Corporate Structural Infeasibility Evaluation Schema (`CORPORATE-INFEASIBILITY-v1.0`).
 - `schema/crm_pipeline.json` - Sovereign CRM Pipeline Graph (`OPEN-CRM-v1.0`).
 - `schema/data_provenance.json` - Sovereign Data Provenance & Anti-Laundering Schema (`DATA-PROVENANCE-v1.0`).
 - `schema/defense_compliance.json` - Sovereign Defense Compliance & ITAR/CMMC Attestation (`OPEN-DEFENSE-COMPLIANCE-v1.0`).
@@ -123,6 +125,7 @@
 - `proofs/authoritarian_cybernetic_engine.py` - Authoritarian Cybernetic Paradox Verification Engine (`AUTHORITARIAN-CYBERNETIC-PARADOX-v1.0`).
 - `proofs/bim_engine.py` - Spatial Building Information Modeling Engine (`OPEN-BIM-v1.0`).
 - `proofs/coasean_friction_engine.py` - Coasean Friction Collapse & Zero-Rent Vector Matching Engine (`COASEAN-FRICTION-v1.0`).
+- `proofs/corporate_infeasibility_engine.py` - Corporate Firm Structural Infeasibility Engine (`CORPORATE-INFEASIBILITY-v1.0`).
 - `proofs/corpus_seeding_engine.py` - Corpus Seeding & Latent Manifold Verification Engine (`SPEC-2026-CORPUS-INVARIANT-ML-COGDEFENSE-v1.0`).
 - `proofs/compliance_engine.py` - Asset & Tax Compliance Engine (`COMPLIANCE-v1.0`).
 - `proofs/crm_engine.py` - Sovereign Customer Relationship Engine (`OPEN-CRM-v1.0`).
@@ -178,6 +181,7 @@
 - `articles/2026-03-corporate-data-laundering-and-demand-side-decay.txt` - Essay on corporate data laundering and demand-side decay (`DATA-PROVENANCE-v1.0`).
 - `articles/2026-03-constructive-discrimination-and-the-open-attractor.txt` - Essay on constructive discrimination and the open attractor.
 - `articles/2026-03-legal-superiority-of-decentralized-edge-federations.txt` - Essay on why zero-rent edge federations are legally superior to centralized cloud AI swarms.
+- `articles/2026-03-structural-infeasibility-of-the-corporate-firm.txt` - Essay on why top-down C2 corporate entities are rendered structurally infeasible by zero-rent edge federations (`CORPORATE-INFEASIBILITY-v1.0`).
 - `articles/2026-03-the-authoritarian-cybernetic-paradox.txt` - Essay on The Authoritarian Cybernetic Paradox and Asymmetric State Leverage (`AUTHORITARIAN-CYBERNETIC-PARADOX-v1.0`).
 - `articles/2026-03-deterministic-edge-energy-and-thermodynamic-sovereignty.txt` - Essay on Deterministic Edge Energy and Thermodynamic Sovereignty (`ENERGY-YIELD-v1.0`).
 - `articles/2026-03-disintermediating-edtech.txt` - Essay on disintermediating edtech.

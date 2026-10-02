@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://operational-stack.org/schema/corporate_infeasibility.json",
+  "title": "CorporateFirmStructuralInfeasibility",
+  "description": "Schema for evaluating the game-theoretic and financial infeasibility of centralized corporate entities vs zero-rent federated edge nodes (CORPORATE-INFEASIBILITY-v1.0).",
+  "type": "object",
+  "properties": {
+    "analysis_id": {
+      "type": "string",
+      "pattern": "^INFEASIBILITY-[A-FA-f0-9]{12}$",
+      "description": "Unique SHA-256 derived identifier for the corporate infeasibility evaluation."
+    },
+    "jurisdiction_context": {
+      "type": "string",
+      "default": "US",
+      "description": "ISO 3166-1 / sub-national jurisdiction code."
+    },
+    "target_firm_name": {
+      "type": "string",
+      "description": "Name or identifier of target corporate entity."
+    },
+    "corporate_headcount": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Total human administrative headcount inside top-down corporate hierarchy."
+    },
+    "active_edge_nodes_disputing": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Number of federated edge nodes deploying automated pro se or zero-rent competitive actions."
+    },
+    "statutory_claim_per_node_usd": {
+      "type": "number",
+      "minimum": 0.0,
+      "description": "Average statutory damages or market displacement value per edge node."
+    },
+    "corporate_defense_hourly_rate_usd": {
+      "type": "number",
+      "default": 650.0,
+      "description": "Hourly billable rate for corporate defense counsel / management overhead."
+    },
+    "defense_hours_per_dispute": {
+      "type": "number",
+      "default": 25.0,
+      "description": "Required billable hours for corporate legal team per edge interaction."
+    },
+    "edge_generation_cost_per_node_usd": {
+      "type": "number",
+      "default": 0.01,
+      "description": "Local electricity / compute cost incurred by edge node."
+    },
+    "total_corporate_defense_opex_usd": {
+      "type": "number",
+      "minimum": 0.0,
+      "description": "Total legal defense OpEx forced onto corporate entity."
+    },
+    "total_edge_federation_opex_usd": {
+      "type": "number",
+      "minimum": 0.0,
+      "description": "Total operational cost incurred across all active edge nodes."
+    },
+    "asymmetry_exhaustion_factor": {
+      "type": "number",
+      "minimum": 0.0,
+      "description": "Corporate Defense OpEx / Federation OpEx ratio."
+    },
+    "corporate_insolvency_proven": {
+      "type": "boolean",
+      "description": "True if corporate defense and administrative costs exceed market revenue bounds."
+    },
+    "cfaa_compliant": {
+      "type": "boolean",
+      "const": true,
+      "description": "Mandatory attestation that analysis executed within CFAA boundaries."
+    }
+  },
+  "required": [
+    "analysis_id",
+    "jurisdiction_context",
+    "target_firm_name",
+    "corporate_headcount",
+    "active_edge_nodes_disputing",
+    "total_corporate_defense_opex_usd",
+    "total_edge_federation_opex_usd",
+    "asymmetry_exhaustion_factor",
+    "corporate_insolvency_proven",
+    "cfaa_compliant"
+  ],
+  "additionalProperties": false
+}

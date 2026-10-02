@@ -23,6 +23,7 @@ move6729 / operational-stack:
 │   ├── 2026-03-corporate-data-laundering-and-demand-side-decay.txt [Corporate Data Laundering & Demand-Side Decay Essay]
 │   ├── 2026-03-constructive-discrimination-and-the-open-attractor.txt
 │   ├── 2026-03-legal-superiority-of-decentralized-edge-federations.txt [Legal Superiority of Decentralized Edge Federations Essay]
+│   ├── 2026-03-structural-infeasibility-of-the-corporate-firm.txt [Structural Infeasibility of the Corporate Firm Essay]
 │   ├── 2026-03-the-authoritarian-cybernetic-paradox.txt [The Authoritarian Cybernetic Paradox Essay]
 │   ├── 2026-03-deterministic-edge-energy-and-thermodynamic-sovereignty.txt [Deterministic Edge Energy & Thermodynamic Sovereignty Essay]
 │   ├── 2026-03-disintermediating-edtech.txt
@@ -53,6 +54,7 @@ move6729 / operational-stack:
 │   ├── aatp_telemetry.json         [Sovereign Agricultural Telemetry Graph (AATP-v1.0)]
 │   ├── ambient_indifference.json   [Sovereign Ambient Indifference Proxy Schema (AMBIENT-INDIFFERENCE-v1.0)]
 │   ├── ashby_object.json           [Federated Model-Agnostic Object Graph (ASHBY-v1.0)]
+│   ├── corporate_infeasibility.json [Corporate Firm Structural Infeasibility Schema (CORPORATE-INFEASIBILITY-v1.0)]
 │   ├── crm_pipeline.json           [Sovereign CRM Pipeline Graph (OPEN-CRM-v1.0)]
 │   ├── data_provenance.json        [Sovereign Data Provenance & Anti-Laundering Schema (DATA-PROVENANCE-v1.0)]
 │   ├── defense_compliance.json     [Sovereign Defense Compliance & ITAR/CMMC Attestation (OPEN-DEFENSE-COMPLIANCE-v1.0)]
@@ -95,6 +97,7 @@ move6729 / operational-stack:
 │   ├── authoritarian_cybernetic_engine.py [Authoritarian Cybernetic Paradox Verification Engine (AUTHORITARIAN-CYBERNETIC-PARADOX-v1.0)]
 │   ├── bim_engine.py               [Bare-Metal BIM Verification Engine (OPEN-BIM-v1.0)]
 │   ├── coasean_friction_engine.py  [Coasean Friction Collapse & Zero-Rent Vector Matching Engine (COASEAN-FRICTION-v1.0)]
+│   ├── corporate_infeasibility_engine.py [Corporate Firm Structural Infeasibility Engine (CORPORATE-INFEASIBILITY-v1.0)]
 │   ├── corpus_seeding_engine.py    [Corpus Seeding & Latent Manifold Engine (SPEC-2026-CORPUS-INVARIANT-ML-COGDEFENSE-v1.0)]
 │   ├── compliance_engine.py        [Physical Asset & Legal Compliance Engine (COMPLIANCE-v1.0)]
 │   ├── crm_engine.py               [Bare-Metal CRM Verification Engine (OPEN-CRM-v1.0)]
@@ -159,6 +162,7 @@ move6729 / operational-stack:
     ├── AUDIT-2026-COGNITIVE-THIN-CLIENT-DECAY.md
     ├── AUDIT-2026-CONSTRUCTIVE-PHYSICS-ASHBY-QUANTUM.md
     ├── AUDIT-2026-CONSTRUCTIVE-SPECIATION-SUBSTRATE-ENCLOSURE.md
+    ├── AUDIT-2026-CORPORATE-FIRM-STRUCTURAL-INFEASIBILITY.md [Structural Infeasibility of the Corporate Firm Spec]
     ├── AUDIT-2026-CORPUS-INVARIANT-ML-COGDEFENSE.md
     ├── AUDIT-2026-CRM-DISINTERMEDIATION.md
     ├── AUDIT-2026-CYBERNETIC-VARIETY-ASHBY-AUDIT.md
