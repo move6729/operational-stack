@@ -1,31 +1,35 @@
-#!/usr/bin/env bash
+#!/usr/bin/env python3
 
-set -euo pipefail
+import glob
+import subprocess
+import sys
 
-echo "=========================================="
-echo " Running All Operational Stack Proofs"
-echo "=========================================="
+def main():
+    print("==========================================")
+    print(" Running All Operational Stack Proofs")
+    print("==========================================")
 
-FAILED=0
-PASSED=0
+    failed = 0
+    passed = 0
 
-for proof in proofs/*.py; do
-    if [ -f "$proof" ]; then
-        echo -n "Running ${proof}... "
-        if python3 "$proof" > /dev/null 2>&1; then
-            echo "[PASS]"
-            PASSED=$((PASSED + 1))
-        else
-            echo "[FAIL]"
-            FAILED=$((FAILED + 1))
-        fi
-    fi
-done
+    proof_files = sorted(glob.glob("proofs/*.py"))
 
-echo "=========================================="
-echo "Summary: ${PASSED} Passed, ${FAILED} Failed"
-echo "=========================================="
+    for proof in proof_files:
+        print(f"Running {proof}... ", end="", flush=True)
+        res = subprocess.run([sys.executable, proof], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        if res.returncode == 0:
+            print("[PASS]")
+            passed += 1
+        else:
+            print("[FAIL]")
+            failed += 1
 
-if [ "$FAILED" -ne 0 ]; then
-    exit 1
-fi
+    print("==========================================")
+    print(f"Summary: {passed} Passed, {failed} Failed")
+    print("==========================================")
+
+    if failed != 0:
+        sys.exit(1)
+
+if __name__ == '__main__':
+    main()
