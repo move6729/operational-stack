@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://operational-stack.org/schema/micro_settlement.json",
+  "title": "SubCentMicroSettlementLedgerSchema",
+  "description": "Schema for OPEN-SETTLEMENT-v1.0 Sub-Cent Thermodynamic Micro-Settlement Ledger incorporating energy and hardware depreciation bounds.",
+  "type": "object",
+  "required": [
+    "settlement_id",
+    "sender_pubkey",
+    "receiver_pubkey",
+    "amount_subcents",
+    "task_execution_metrics",
+    "task_proof_hash",
+    "timestamp_utc"
+  ],
+  "properties": {
+    "settlement_id": {
+      "type": "string",
+      "pattern": "^SETTLE-[A-Za-z0-9_-]+$"
+    },
+    "sender_pubkey": {
+      "type": "string"
+    },
+    "receiver_pubkey": {
+      "type": "string"
+    },
+    "amount_subcents": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Settlement amount in sub-cents (1/1000th cent USD)."
+    },
+    "task_execution_metrics": {
+      "type": "object",
+      "required": [
+        "execution_duration_sec",
+        "power_draw_watts",
+        "electricity_rate_kwh_usd",
+        "hardware_capex_usd",
+        "hardware_lifespan_hours"
+      ],
+      "properties": {
+        "execution_duration_sec": {
+          "type": "number",
+          "minimum": 0.001,
+          "description": "Compute task runtime in seconds."
+        },
+        "power_draw_watts": {
+          "type": "number",
+          "minimum": 0.1,
+          "description": "Average hardware power draw in Watts during task execution."
+        },
+        "electricity_rate_kwh_usd": {
+          "type": "number",
+          "minimum": 0.0,
+          "description": "Local power cost per kWh in USD."
+        },
+        "hardware_capex_usd": {
+          "type": "number",
+          "minimum": 0.0,
+          "description": "Hardware replacement or acquisition CapEx cost in USD."
+        },
+        "hardware_lifespan_hours": {
+          "type": "number",
+          "minimum": 1.0,
+          "description": "Total expected active silicon compute lifespan in hours."
+        }
+      }
+    },
+    "task_proof_hash": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{64}$"
+    },
+    "timestamp_utc": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "jurisdiction_context": {
+      "type": "string",
+      "default": "US"
+    }
+  },
+  "additionalProperties": false
+}

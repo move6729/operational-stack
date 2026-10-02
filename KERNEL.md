@@ -99,6 +99,10 @@
     $$\text{Demand}_{\text{Corporate}}(\text{Laundered Data}) = 0 \implies \text{Profit}_{\text{Cybercrime}} \to 0 \quad \land \quad \text{Cannibalization}_{\text{Societal}} \to 0$$
     Data payloads without verifiable cryptographic chain-of-custody attestations (proving zero CFAA 18 U.S.C. § 1030 violations and zero unauthorized access) fail local ingestion gates and are rejected automatically before network commit.
 
+29. **Hardware Amortization & Thermodynamic Pricing Floor Invariant:**
+    $$\text{TaskPrice}_{\text{Subcents}} \ge (\text{EnergyCost}_{\text{USD}} + \text{CapExDepreciation}_{\text{USD}}) \times 100,000$$
+    Peer-to-peer compute task bounties must exceed direct electricity costs plus silicon lifespan wear ($\text{CapEx} / \text{Lifespan}_{\text{Hours}}$). Nodes automatically reject task requests below this thermodynamic floor.
+
 ---
 
 ### II. 4-VECTOR EXECUTION GATE
@@ -108,3 +112,6 @@ Any approved subsystem or specification must satisfy:
 - **Hard Game Theory:** Strictly bounded by CapEx/OpEx, Landauer limits, and incentive alignment.
 - **High Schema Density:** Formulated as JSON Draft 2020-12 schemas or executable ASTs with standard `jurisdiction_context` and CFAA compliance attestations. Zero narrative fluff.
 - **Asymmetric Blueprint:** Zero-rent, runnable implementation released under the Unlicense.
+```
+
+README.md
