@@ -71,6 +71,7 @@
 - `specs/AUDIT-2026-TELCO-DISINTERMEDIATION.md` - Telecom Dispatch Disintermediation Specification (`OPEN-TELCO-v1.0`).
 - `specs/AUDIT-2026-TENANT-RIGHTS-DISINTERMEDIATION.md` - Tenant Rights & Landlord Compliance Specification (`OPEN-TENANT-v1.0`).
 - `specs/AUDIT-2026-THERMODYNAMIC-MICRO-SETTLEMENT.md` - Sub-Cent Thermodynamic Micro-Settlement Ledger Specification (`OPEN-SETTLEMENT-v1.0`).
+- `specs/AUDIT-2026-TICKETING-JUNK-FEE-DISINTERMEDIATION.md` - Live Event Ticketing Junk Fee Disintermediation Specification (`OPEN-TICKET-v1.0`).
 - `specs/AUDIT-2026-UBC-VS-FIAT-UBI.md` - Universal Basic Compute vs. Fiat UBI Pacification Specification (`UBC-VS-FIAT-UBI-v1.0`).
 - `specs/AUDIT-2026-UPTON-SINCLAIR-RLHF-ALIGNMENT.md` - RLHF Alignment Trap & Economic Incentive Audit.
 - `specs/AUDIT-2026-ZERO-DNS-MESH-DISCOVERY.md` - Zero-DNS Local Physical Mesh Discovery Engine Specification (`OPEN-MESH-DISCOVERY-v1.0`).
@@ -117,6 +118,7 @@
 - `schema/task_graph.json` - Machine-Readable AST Task Graph Schema (`ATN-v1.0`).
 - `schema/telco_dispatch.json` - Sovereign Telco Routing Graph (`OPEN-TELCO-v1.0`).
 - `schema/tenant_defense.json` - Sovereign Tenant Rights & Landlord Compliance Schema (`OPEN-TENANT-v1.0`).
+- `schema/ticket_junk_fee.json` - Ticketing Monopoly Junk Fee Dispute Schema (`OPEN-TICKET-v1.0`).
 
 ## PROOFS & ENGINES (`proofs/`)
 - `proofs/aatp_engine.py` - Agricultural & Telemetry Engine (`AATP-v1.0`).
@@ -170,6 +172,7 @@
 - `proofs/telco_engine.py` - Telecom Dispatch Engine (`OPEN-TELCO-v1.0`).
 - `proofs/telemetry_fuzzer.py` - Telemetry Loss Disruption Fuzzer (`HPMCR-DEF v1.0`).
 - `proofs/tenant_engine.py` - Tenant Rights & Landlord Compliance Engine (`OPEN-TENANT-v1.0`).
+- `proofs/ticket_engine.py` - Ticketing Monopoly Junk Fee Dispute Engine (`OPEN-TICKET-v1.0`).
 - `proofs/transport_shield.py` - Mesh Transport Isolation Shield (`LMTI-v1.0`).
 - `proofs/ubc_engine.py` - Universal Basic Compute Engine (`UBC-v1.0`).
 - `proofs/ubc_vs_fiat_ubi_engine.py` - Universal Basic Compute vs Fiat UBI Engine (`UBC-VS-FIAT-UBI-v1.0`).

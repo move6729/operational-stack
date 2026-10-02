@@ -88,7 +88,8 @@ move6729 / operational-stack:
 │   ├── sub_bandwidth_delay.json    [Sub-Bandwidth Delay Curve & Rate-Shaping Schema (SUB-BANDWIDTH-DELAY-v1.0)]
 │   ├── task_graph.json             [Machine-Readable AST Task Graph Schema (ATN-v1.0)]
 │   ├── telco_dispatch.json         [Sovereign Telco Routing Graph (OPEN-TELCO-v1.0)]
-│   └── tenant_defense.json         [Sovereign Tenant Rights & Landlord Compliance (OPEN-TENANT-v1.0)]
+│   ├── tenant_defense.json         [Sovereign Tenant Rights & Landlord Compliance (OPEN-TENANT-v1.0)]
+│   └── ticket_junk_fee.json        [Ticketing Monopoly Junk Fee Dispute Schema (OPEN-TICKET-v1.0)]
 │
 ├── proofs/                         [Runnable Zero-Dependency Deterministic Verification Engines]
 │   ├── aatp_engine.py              [Bare-Metal Agricultural Verification Engine (AATP-v1.0)]
@@ -139,9 +140,10 @@ move6729 / operational-stack:
 │   ├── sub_bandwidth_delay_engine.py [Sub-Bandwidth Delay Curve & Temporal Rate-Shaping Engine (SUB-BANDWIDTH-DELAY-v1.0)]
 │   ├── switching_cost_decay.py     [Mathematical Proof of SaaS Switching Cost Collapse]
 │   ├── task_engine.py              [Hardened Task Scheduler & SHA-256 Verifier (ATN-v1.0)]
-│   ├── telco_engine.py             [Bare-Metal Telco Verification Engine (OPEN-TELCO-v1.0)]
+│   ├── telco_dispatch.py           [Bare-Metal Telco Verification Engine (OPEN-TELCO-v1.0)]
 │   ├── telemetry_fuzzer.py         [Telemetry Timing Fuzzer Proof (HPMCR-DEF v1.0)]
 │   ├── tenant_engine.py            [Bare-Metal Tenant Rights & Compliance Engine (OPEN-TENANT-v1.0)]
+│   ├── ticket_engine.py            [Ticketing Monopoly Junk Fee Dispute Engine (OPEN-TICKET-v1.0)]
 │   ├── transport_shield.py         [Zero-DNS, 1024-Byte Padded P2P Shield (LMTI-v1.0)]
 │   ├── ubc_engine.py               [Universal Basic Compute Engine (UBC-v1.0)]
 │   ├── ubc_vs_fiat_ubi_engine.py   [Universal Basic Compute vs Fiat UBI Engine (UBC-VS-FIAT-UBI-v1.0)]
@@ -213,6 +215,7 @@ move6729 / operational-stack:
     ├── AUDIT-2026-TELCO-DISINTERMEDIATION.md
     ├── AUDIT-2026-TENANT-RIGHTS-DISINTERMEDIATION.md
     ├── AUDIT-2026-THERMODYNAMIC-MICRO-SETTLEMENT.md
+    ├── AUDIT-2026-TICKETING-JUNK-FEE-DISINTERMEDIATION.md [Live Event Ticketing Junk Fee Disintermediation Spec]
     ├── AUDIT-2026-UBC-VS-FIAT-UBI.md [Universal Basic Compute vs. Fiat UBI Spec]
     ├── AUDIT-2026-UPTON-SINCLAIR-RLHF-ALIGNMENT.md
     ├── AUDIT-2026-ZERO-DNS-MESH-DISCOVERY.md
