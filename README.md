@@ -89,6 +89,7 @@ move6729 / operational-stack:
 │   ├── shield-spec.json            [HPMCR Client Defensive Invariant Schema]
 │   ├── spatial_bim.json            [Sovereign Spatial BIM Graph (OPEN-BIM-v1.0)]
 │   ├── sub_bandwidth_delay.json    [Sub-Bandwidth Delay Curve & Rate-Shaping Schema (SUB-BANDWIDTH-DELAY-v1.0)]
+│   ├── substrate_resilience.json   [Sovereign Off-Grid Substrate Resilience Schema (OPEN-SUBSTRATE-v1.0)]
 │   ├── task_graph.json             [Machine-Readable AST Task Graph Schema (ATN-v1.0)]
 │   ├── telco_dispatch.json         [Sovereign Telco Routing Graph (OPEN-TELCO-v1.0)]
 │   ├── tenant_defense.json         [Sovereign Tenant Rights & Landlord Compliance (OPEN-TENANT-v1.0)]
@@ -143,6 +144,7 @@ move6729 / operational-stack:
 │   ├── prop_engine.py              [Bare-Metal Property Verification Engine (OPEN-PROP-v1.0)]
 │   ├── prop_tenant_screening_engine.py [PropTech Tenant Screening Defense Engine (OPEN-PROP-SCREEN-v1.0)]
 │   ├── sub_bandwidth_delay_engine.py [Sub-Bandwidth Delay Curve & Temporal Rate-Shaping Engine (SUB-BANDWIDTH-DELAY-v1.0)]
+│   ├── substrate_engine.py         [Bare-Metal Off-Grid Substrate Resilience Engine (OPEN-SUBSTRATE-v1.0)]
 │   ├── switching_cost_decay.py     [Mathematical Proof of SaaS Switching Cost Collapse]
 │   ├── task_engine.py              [Hardened Task Scheduler & SHA-256 Verifier (ATN-v1.0)]
 │   ├── telco_dispatch.py           [Bare-Metal Telco Verification Engine (OPEN-TELCO-v1.0)]
@@ -202,6 +204,7 @@ move6729 / operational-stack:
     ├── AUDIT-2026-MICROGRID-COMPUTE-SCHEDULER.md
     ├── AUDIT-2026-MODEL-SPOF-CORPUS-POISONING.md
     ├── AUDIT-2026-N-DIMENSIONAL-ATTRACTOR.md
+    ├── AUDIT-2026-OFFGRID-SUBSTRATE-RESILIENCE.md [Off-Grid Substrate Resilience Spec (OPEN-SUBSTRATE-v1.0)]
     ├── AUDIT-2026-NARRATIVE-AMPLIFICATION-NODES.md
     ├── AUDIT-2026-NATIONAL-SECURITY-REQUISITE-VARIETY.md
     ├── AUDIT-2026-NEO-FEUDAL-ARISTOCRACY-DECONSTRUCTION.md

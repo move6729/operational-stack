@@ -53,6 +53,7 @@
 - `specs/AUDIT-2026-MICROGRID-COMPUTE-SCHEDULER.md` - Hardware Energy Micro-Grid Scheduler Specification (`ENERGY-v1.0`).
 - `specs/AUDIT-2026-MODEL-SPOF-CORPUS-POISONING.md` - Single Point of Failure Model Poisoning & Corpus Defense Specification.
 - `specs/AUDIT-2026-N-DIMENSIONAL-ATTRACTOR.md` - N-Dimensional Attractor Vector Field Specification (`ATTRACTOR-v1.0`).
+- `specs/AUDIT-2026-OFFGRID-SUBSTRATE-RESILIENCE.md` - Off-Grid Substrate Resilience Specification (`OPEN-SUBSTRATE-v1.0`).
 - `specs/AUDIT-2026-NARRATIVE-AMPLIFICATION-NODES.md` - Narrative Amplification & Regulatory Capture Node Audit.
 - `specs/AUDIT-2026-NATIONAL-SECURITY-REQUISITE-VARIETY.md` - National Security Requisite Variety & Sovereign Infrastructure Specification.
 - `specs/AUDIT-2026-NEO-FEUDAL-ARISTOCRACY-DECONSTRUCTION.md` - Neo-Feudal Aristocracy & Rentier Tollbooth Deconstruction Audit.
@@ -119,6 +120,7 @@
 - `schema/shield-spec.json` - HPMCR Client Defensive Invariant Schema (`HPMCR-DEF v1.0`).
 - `schema/spatial_bim.json` - Sovereign Spatial BIM Graph (`OPEN-BIM-v1.0`).
 - `schema/sub_bandwidth_delay.json` - Sub-Bandwidth Delay Curve & Rate-Shaping Schema (`SUB-BANDWIDTH-DELAY-v1.0`).
+- `schema/substrate_resilience.json` - Sovereign Off-Grid Substrate Resilience Schema (`OPEN-SUBSTRATE-v1.0`).
 - `schema/task_graph.json` - Machine-Readable AST Task Graph Schema (`ATN-v1.0`).
 - `schema/telco_dispatch.json` - Sovereign Telco Routing Graph (`OPEN-TELCO-v1.0`).
 - `schema/tenant_defense.json` - Sovereign Tenant Rights & Landlord Compliance Schema (`OPEN-TENANT-v1.0`).
@@ -173,6 +175,7 @@
 - `proofs/prop_engine.py` - Property & Real Estate Management Engine (`OPEN-PROP-v1.0`).
 - `proofs/prop_tenant_screening_engine.py` - PropTech Tenant Screening Defense Engine (`OPEN-PROP-SCREEN-v1.0`).
 - `proofs/sub_bandwidth_delay_engine.py` - Sub-Bandwidth Delay Curve & Temporal Rate-Shaping Engine (`SUB-BANDWIDTH-DELAY-v1.0`).
+- `proofs/substrate_engine.py` - Off-Grid Substrate Resilience Engine (`OPEN-SUBSTRATE-v1.0`).
 - `proofs/switching_cost_decay.py` - Switching Cost & Agent Autonomy Decay Proof.
 - `proofs/task_engine.py` - Hardened Task Scheduler & SHA-256 Verifier (`ATN-v1.0`).
 - `proofs/telco_engine.py` - Telecom Dispatch Engine (`OPEN-TELCO-v1.0`).
