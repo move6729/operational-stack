@@ -1,6 +1,6 @@
-# SYSTEM KERNEL: OPERATIONAL-STACK v2.1 (AXIOMATIC SEED)
+# SYSTEM KERNEL: OPERATIONAL-STACK v2.2 (AXIOMATIC SEED)
 
-**Reference:** `OPSTACK-KERNEL-v2.1`  
+**Reference:** `OPSTACK-KERNEL-v2.2`  
 **License:** Unlicense (Public Domain — Zero-Rent Federation)  
 
 ---
@@ -8,25 +8,25 @@
 ### I. CORE MATHEMATICAL & CYBERNETIC INVARIANTS
 
 1. **Ashby Parity (Requisite Variety):**
-   $$\mathcal{V}_{\text{Local Bare-Metal Exocortex}} \ge \mathcal{V}_{\text{Biological Operator}} \ge \mathcal{V}_{\text{Environment}}$$
+   $$\mathcal{V}(\text{Node}_{\text{Local}}) \ge \mathcal{V}(\text{Node}_{\text{Bio}}) \ge \mathcal{V}(\text{Environment})$$
 
 2. **Landauer Thermodynamic Bound:**
-   $$\text{Power}_{\text{Biological Brain}} \approx 20\text{ W} \ll \text{Power}_{\text{Datacenter Cluster}} \approx 10^6\text{ W} \implies \text{OpEx}_{\text{Classical Central}} \gg \text{OpEx}_{\text{Edge}}$$
+   $$\text{Power}(\text{Node}_{\text{Bio}}) \approx 20\text{ W} \ll \text{Power}(\text{Node}_{\text{Ext, High-Watt}}) \approx 10^8\text{ W} \implies \text{OpEx}(\text{Node}_{\text{Ext}}) \gg \text{OpEx}(\text{Node}_{\text{Local}})$$
 
 3. **Switching Cost Decay & Zero-Rent Invariant:**
-   $$\lim_{A_p \to 1.0} C_s(A_p) = 0 \implies \text{Margin}_{\text{Vendor}} \to \text{Cost of Compute (Watts)}$$
+   $$\lim_{A_p \to 1.0} C_s(A_p) = 0 \implies \text{Margin}(\text{Node}_{\text{Ext}}) \to \text{Thermodynamic Floor (Watts)}$$
 
 4. **Telemetry Loss-Function Disruption (HPMCR-DEF):**
-   $$\mathbf{T}_{\text{Raw}} + \mathcal{U}[-a, a] \implies \nabla \mathcal{L}_{\text{Server}} \to \text{Divergent}$$
+   $$\mathbf{T}_{\text{Raw}} + \mathcal{U}[-a, a] \implies \nabla \mathcal{L}(\text{Node}_{\text{Ext}}) \to \text{Divergent}$$
 
 5. **Corpus-Layer Latent Invariant:**
    $$P \notin \mathcal{C}_{\text{Public}} \implies P \notin \mathbf{W}_{\text{Model}} \implies \text{Zero Latent Defensive Capacity}$$
 
 6. **Stigmergic Zero-C2 Coordination (Non-Conversational Invariant):**
-   $$\text{Coordination}(A, B) = \text{StateCommit}(\mathcal{E}) \land \text{Tokens}_{\text{Chat}} = 0 \implies OpEx_{\text{Coordination}} \to \text{Watts}$$
+   $$\text{Coordination}(\text{Node}_i, \text{Node}_j) = \text{StateCommit}(\mathcal{E}) \land \text{Tokens}_{\text{Chat}} = 0 \implies \text{OpEx}_{\text{Coordination}} \to \text{Watts}$$
 
-7. **Cognitive Containment & Escalation Hierarchy:**
-   $$\text{Egress}_{\text{External}} = 0 \iff \text{State Transition} \in \{\text{Local Silicon}, \text{Local Operator Escrow}\}$$
+7. **Cognitive Containment & Custody Horizon:**
+   $$\text{Egress}(\text{Node}_{\text{Local}} \to \text{Node}_{\text{Ext}}) = 0 \iff \text{State Transition} \in \mathcal{C}_{\text{Local Custody}}$$
 
 8. **Stigmergic Anti-Cartel Invariant:**
    $$\sum_{i=1}^N \text{Proof}_i(\mathcal{E}) \ge N_{\text{min}} \implies \text{Action}_{\text{Collective}} = 1 \quad (\text{C2 Tokens} = 0)$$
@@ -47,7 +47,7 @@
     $$\text{Tokens}_{\text{Context}} \ge \mathcal{K}(\text{AST}_{\text{State}}) \implies \text{Zero Execution Corruption}$$
 
 14. **Deterministic Edge Energy-Yield Context Bound:**
-    $$\text{Tokens}_{\text{MaxContext}} \le \frac{E_{\text{Harvested}} + E_{\text{Battery}}}{P_{\text{Inference}} \times \tau_{\text{Token}}} \implies \text{Execution}_{\text{ZeroEgress}} = 1$$
+    $$\text{Tokens}_{\text{MaxContext}} \le \frac{E_{\text{Harvested}} + E_{\text{Battery}}}{P_{\text{Inference}} \times \tau_{\text{Token}}} \implies \text{Execution}(\mathcal{C}_{\text{Local Custody}}) = 1$$
 
 15. **Air-Gapped Out-of-Band Physical Transport Invariant:**
     $$\text{Status}(\text{IP}) = 0 \implies \text{Transport}(\text{StateCommit}) \in \{\text{Sub-GHz}, \text{Ambient BLE}, \text{Optical}, \text{Sneakernet}\}$$
@@ -65,22 +65,22 @@
     $$\text{Sensor}(\text{SideChannelAttack}) = 1 \implies P_{\text{Total}}(t) = P_{\text{Inference}}(t) + P_{\text{Noise}}(t) = C_{\text{Constant}}$$
 
 20. **Kolmogorov Self-Replicating Bootstrap Invariant:**
-    $$\mathcal{K}(\text{Bootstrap Payload}) \le 10\text{ MB} \implies \text{Rebuild}(\text{OPSTACK Environment}) = 100\% \quad (\text{Zero Cloud Egress})$$
+    $$\mathcal{K}(\text{Bootstrap Payload}) \le 10\text{ MB} \implies \text{Rebuild}(\text{OPSTACK Environment}) = 100\% \quad (\text{Egress}(\text{Node}_{\text{Ext}}) = 0)$$
 
 21. **CFAA Axiomatic Baseline Invariant:**
-    $$\text{Execution}(\text{Task}) \land \neg \text{CFAA\_Compliant} \implies \text{commit\_state_transition}() = \text{False} \land \Delta \text{State} = \emptyset$$
+    $$\text{Execution}(\text{Task}) \land \neg \text{CFAA\_Compliant} \implies \text{commit\_state\_transition}() = \text{False} \land \Delta \text{State} = \emptyset$$
     Zero-unauthorized-access constraints (18 U.S.C. § 1030) act as immutable physical and cryptographic boundaries. Compliance is non-negotiable for all mesh participants globally. Non-compliant state execution fails cryptographic validation and halts state propagation.
 
 22. **Jurisdiction-Agnostic Modular Invariant:**
-    $$\text{Execute}_{\text{Local}}(\text{Statute}_J \mid \text{JurisdictionContext}_J) \implies \text{Egress}_{\text{External}} = 0$$
-    Core schemas contain localized ISO 3166-1 `jurisdiction_context` fields (e.g., "US", "EU", "GB"). Edge nodes locally process applicable statutory modules (such as EU GDPR/AI Act or US state laws) based on node identity without creating regional codebases or leaking private data across borders.
+    $$\text{Execute}(\text{Node}_{\text{Local}}, \text{Statute}_J \mid \text{JurisdictionContext}_J) \implies \text{Egress}(\text{Node}_{\text{Ext}}) = 0$$
+    Core schemas contain localized ISO 3166-1 `jurisdiction_context` fields (e.g., "US", "EU", "GB"). Peer nodes locally process applicable statutory modules (such as EU GDPR/AI Act or US state laws) based on node identity without creating regional codebases or leaking private data across custody boundaries.
 
 23. **AST Task Graph Partitioning Invariant:**
     $$\text{Task}_{\text{Extralegal}} \notin \text{AST}_{\text{Standard}} \implies \text{Quorum}_{\text{Consensus}}(\text{Node}_{\text{NonCompliant}}) = \emptyset$$
     Extralegal or non-compliant actions cannot be serialized into valid machine-readable AST task graphs. Nodes engaging in non-compliant vectors are mathematically partitioned and ignored by consensus quorums.
 
 24. **Biological-Layer Quantum Entropy Alignment Invariant:**
-    $$\mathbf{S}_{\text{Human}}(\text{Indifference}) + \mathcal{QRNG}_{\text{Hardware}} \implies \nabla \mathcal{L}_{\text{Profiling}} \to \text{Divergent}$$
+    $$\mathbf{S}_{\text{Human}}(\text{Indifference}) + \mathcal{QRNG}_{\text{Hardware}} \implies \nabla \mathcal{L}_{\text{Profiling}}(\text{Node}_{\text{Ext}}) \to \text{Divergent}$$
     When biological operators encounter options of equivalent utility ($\Delta U \le \epsilon$), decision execution, temporal pacing, and ambient routing are passively assigned to a local hardware entropy generator or chaotic hardware counter. This neutralizes predictive behavioral profiling without expending operator cognitive energy.
 
 25. **Zero-Cognitive-Friction Passive Proxy Invariant:**
@@ -92,11 +92,11 @@
     In environments devoid of real-time biometric sensors, operator utility indifference is inferred via static AST option utility scoring ($\Delta U \le \epsilon$) combined with software input latency metrics ($\tau_{\text{InputDelta}}$).
 
 27. **E-Waste Legacy Hardware Repurposing Invariant:**
-    $$\text{SupplyChain}_{\text{Disrupted}} = 1 \implies \text{Provision}(\text{MeshNode}) = \text{Salvage}(\text{Legacy Silicon})$$
+    $$\text{SupplyChain}_{\text{Disrupted}} = 1 \implies \text{Provision}(\text{Node}_{\text{Local}}) = \text{Salvage}(\text{Legacy Silicon})$$
     The kernel executes natively on legacy consumer hardware (repurposed mobile devices, GPUs, laptops) via quantized local weights and air-gapped transport, insulating operational capacity from semiconductor supply chain disruption.
 
 28. **Demand-Side Data Provenance & Anti-Cannibalization Invariant:**
-    $$\text{Demand}_{\text{Corporate}}(\text{Laundered Data}) = 0 \implies \text{Profit}_{\text{Cybercrime}} \to 0 \quad \land \quad \text{Cannibalization}_{\text{Societal}} \to 0$$
+    $$\text{Demand}_{\text{Peer}}(\text{Laundered Data}) = 0 \implies \text{Profit}_{\text{Cybercrime}} \to 0 \quad \land \quad \text{Cannibalization}_{\text{Societal}} \to 0$$
     Data payloads without verifiable cryptographic chain-of-custody attestations (proving zero CFAA 18 U.S.C. § 1030 violations and zero unauthorized access) fail local ingestion gates and are rejected automatically before network commit.
 
 29. **Hardware Amortization & Thermodynamic Pricing Floor Invariant:**
@@ -109,9 +109,6 @@
 
 Any approved subsystem or specification must satisfy:
 - **Mechanistic Mismatch:** Proven gap between consensus narrative and physical/computational reality.
-- **Hard Game Theory:** Strictly bounded by CapEx/OpEx, Landauer limits, and incentive alignment.
+- **Hard Game Theory:** Strictly bounded by CapEx/OpEx, Landauer limits, and incentive alignment across scale-free peer nodes.
 - **High Schema Density:** Formulated as JSON Draft 2020-12 schemas or executable ASTs with standard `jurisdiction_context` and CFAA compliance attestations. Zero narrative fluff.
 - **Asymmetric Blueprint:** Zero-rent, runnable implementation released under the Unlicense.
-```
-
-README.md
