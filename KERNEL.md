@@ -64,8 +64,8 @@
 19. **Event-Driven Power Anti-Correlation Fuzzing Invariant:**
     $$\text{Sensor}(\text{SideChannelAttack}) = 1 \implies P_{\text{Total}}(t) = P_{\text{Inference}}(t) + P_{\text{Noise}}(t) = C_{\text{Constant}}$$
 
-20. **Kolmogorov Self-Replicating Bootstrap Invariant:**
-    $$\mathcal{K}(\text{Bootstrap Payload}) \le 10\text{ MB} \implies \text{Rebuild}(\text{OPSTACK Environment}) = 100\% \quad (\text{Egress}(\text{Node}_{\text{Ext}}) = 0)$$
+20. **Kolmogorov Self-Replicating Bootstrap Invariant (Feynman Generative Bound):**
+    $$\mathcal{K}(\text{Axiomatic Seed}) \le 10\text{ KB} \implies \text{Re-Derive}(\text{Full OPSTACK State Tree} \mid \text{Node}_{\text{Local}}) = 100\% \quad (\text{Egress}(\text{Node}_{\text{Ext}}) = 0)$$
 
 21. **CFAA Axiomatic Baseline Invariant:**
     $$\text{Execution}(\text{Task}) \land \neg \text{CFAA\_Compliant} \implies \text{commit\_state\_transition}() = \text{False} \land \Delta \text{State} = \emptyset$$
