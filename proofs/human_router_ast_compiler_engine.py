@@ -5,9 +5,10 @@ Provides a domain-agnostic, zero-dependency verification proof demonstrating:
 1. Compilation of human-audited domain invariants (k=1) into universal AST execution graphs (k>1).
 2. AST static analysis sandboxing via ast.NodeVisitor (forbidding eval/exec/import side-effects).
 3. Orthogonal decomposition of any procurement/routing candidate across arbitrary domains into:
+   - Stale-AST Drift Circuit Breaker (Delta_Drift -> Escalates Phase 3 back to Phase 1 Human Audit)
    - Systemic Coupling Criticality (Phi_Coupling)
    - Mechanistic Spec Parity (Omega_Parity)
-   - Rent Extraction Ratio (R_Rent = Market_Price / Thermodynamic_Floor)
+   - Lifecycle-Amortized Rent Ratio (R_Amortized = (Price / Lifespan) / (Floor / Baseline_Lifespan))
 4. Deterministic SHA-256 state transition commits with CFAA 18 U.S.C. § 1030 compliance.
 
 License: Unlicense (Public Domain — Zero-Rent Federation)
@@ -46,14 +47,17 @@ ALLOWED_AST_NODES = (
 )
 
 ALLOWED_IDENTIFIERS = {
+    "bom_revision_matched",
     "coupling_criticality",
     "coupling_threshold",
     "spec_parity_satisfied",
     "provenance_verified",
     "market_price_usd",
     "thermodynamic_floor_usd",
-    "computed_rent_ratio",
-    "max_decoupled_rent_ratio",
+    "expected_lifespan_cycles",
+    "baseline_lifespan_cycles",
+    "amortized_rent_ratio",
+    "max_amortized_rent_ratio",
 }
 
 
@@ -83,18 +87,19 @@ class UniversalASTSandbox(ast.NodeVisitor):
 class UniversalHumanRouterASTCompiler:
     """
     General-purpose cybernetic compiler translating human-audited domain trade-offs
-    into autonomous, zero-cognitive-friction procurement and routing decisions.
+    into autonomous, zero-cognitive-friction procurement and routing decisions,
+    bounded by a Stale-AST Drift Circuit Breaker and Lifecycle Amortization.
     """
 
     def __init__(
         self,
         node_id: str = "H2A-UNIVERSAL-COMPILER-01",
         coupling_threshold: float = 0.60,
-        max_decoupled_rent_ratio: float = 1.75
+        max_amortized_rent_ratio: float = 1.75
     ) -> None:
         self.node_id = node_id
         self.coupling_threshold = coupling_threshold
-        self.max_decoupled_rent_ratio = max_decoupled_rent_ratio
+        self.max_amortized_rent_ratio = max_amortized_rent_ratio
         self.state_ledger: List[Dict[str, Any]] = []
 
     @staticmethod
@@ -117,28 +122,41 @@ class UniversalHumanRouterASTCompiler:
     def evaluate_candidate(self, candidate: Dict[str, Any]) -> Dict[str, Any]:
         """
         Executes the universal routing law across any domain candidate vector:
-        1. Reject if physical/protocol/chemical spec parity is violated (Omega_Parity == False).
-        2. If highly coupled (Phi >= threshold), enforce verified provenance to prevent systemic fault.
-        3. If decoupled (Phi < threshold), enforce thermodynamic floor bound to strip brand rent.
+        0. Circuit Breaker: If BOM/SKU revision drifted from t=0 snapshot, escalate to Phase 1 Human Re-Audit.
+        1. Spec Gate: Reject if physical/protocol/chemical spec parity is violated (Omega_Parity == False).
+        2. Provenance Gate: If highly coupled (Phi >= threshold), enforce verified provenance.
+        3. Lifecycle Amortization Gate: If decoupled (Phi < threshold), enforce lifecycle-amortized
+           rent ratio bound to reject both high-margin OEM brand rent and low-lifespan cheap junk.
         """
+        bom_matched = bool(candidate["bom_revision_matched"])
         phi = float(candidate["coupling_criticality"])
         omega = bool(candidate["spec_parity_satisfied"])
         provenance = bool(candidate["provenance_verified"])
         price = float(candidate["market_price_usd"])
         floor = float(candidate["thermodynamic_floor_usd"])
-        rent_ratio = round(price / floor, 4)
+        lifespan = int(candidate["expected_lifespan_cycles"])
+        baseline_lifespan = int(candidate["baseline_lifespan_cycles"])
 
-        if not omega:
+        cost_per_cycle = price / float(lifespan)
+        floor_per_cycle = floor / float(baseline_lifespan)
+        amortized_rent_ratio = round(cost_per_cycle / floor_per_cycle, 4)
+
+        re_audit_triggered = not bom_matched
+
+        if re_audit_triggered:
+            decision = "ESCALATE_HUMAN_REAUDIT"
+        elif not omega:
             decision = "REJECT_INVARIANT_VIOLATION"
         elif phi >= self.coupling_threshold and not provenance:
             decision = "REJECT_PROVENANCE_HAZARD"
-        elif phi < self.coupling_threshold and rent_ratio > self.max_decoupled_rent_ratio:
-            decision = "REJECT_RENT_EXTRACTION"
+        elif phi < self.coupling_threshold and amortized_rent_ratio > self.max_amortized_rent_ratio:
+            decision = "REJECT_RENT_OR_LIFESPAN_DECAY"
         else:
             decision = "APPROVE_AUTONOMOUS_COMMIT"
 
         evaluated = dict(candidate)
-        evaluated["computed_rent_ratio"] = rent_ratio
+        evaluated["amortized_rent_ratio"] = amortized_rent_ratio
+        evaluated["re_audit_triggered"] = re_audit_triggered
         evaluated["routing_decision"] = decision
         return evaluated
 
@@ -174,12 +192,12 @@ class UniversalHumanRouterASTCompiler:
 def run_human_router_ast_compiler_proof() -> bool:
     """
     Standalone verification proof for SPEC-2026-HUMAN-ROUTER-AST-COMPILATION-v1.0.
-    Verifies universal AST compilation and autonomous routing across four distinct sectors:
-    Compute Silicon, Biochemistry/Pharma, Industrial Thermal Hardware, and Enterprise Software.
+    Verifies universal AST compilation, lifecycle amortization, and stale-AST drift
+    circuit breaking across Compute Silicon, Biochemistry/Pharma, Thermal Hardware, and Tooling.
     """
     compiler = UniversalHumanRouterASTCompiler(
         coupling_threshold=0.60,
-        max_decoupled_rent_ratio=1.75
+        max_amortized_rent_ratio=1.75
     )
 
     # 1. Verify AST Sandbox blocks arbitrary code injection
@@ -189,76 +207,120 @@ def run_human_router_ast_compiler_proof() -> bool:
 
     # 2. Verify Universal Compiled AST Expression
     universal_ast_expr = (
-        "spec_parity_satisfied and ("
+        "bom_revision_matched and spec_parity_satisfied and ("
         "provenance_verified if coupling_criticality >= coupling_threshold "
-        "else computed_rent_ratio <= max_decoupled_rent_ratio"
+        "else amortized_rent_ratio <= max_amortized_rent_ratio"
         ")"
     )
     if not compiler.validate_compiled_ast(universal_ast_expr):
         print("[FAIL] UniversalASTSandbox rejected valid invariant expression.")
         return False
 
-    # 3. Cross-Domain Candidate Matrix (Compute, Pharma, Hardware, Software)
+    # 3. Cross-Domain Candidate Matrix
     cross_domain_candidates = [
-        # Sector 1: Compute Silicon (High Coupling ECC Server RAM from unverified gray-market broker)
+        # Case 1: Compute Silicon (High Coupling ECC Server RAM from unverified broker)
         {
             "domain_sector": "COMPUTE_SILICON",
             "candidate_id": "GRAY_MARKET_DDR5_ECC_RDIMM_64GB",
             "coupling_criticality": 0.95,
             "spec_parity_satisfied": True,
             "provenance_verified": False,
+            "bom_revision_matched": True,
             "market_price_usd": 180.0,
             "thermodynamic_floor_usd": 160.0,
+            "expected_lifespan_cycles": 50000,
+            "baseline_lifespan_cycles": 50000,
         },
-        # Sector 1b: Compute Silicon (Verified OEM ECC Server RAM)
+        # Case 2: Compute Silicon (Verified OEM ECC Server RAM)
         {
             "domain_sector": "COMPUTE_SILICON",
             "candidate_id": "OEM_ATTESTED_DDR5_ECC_RDIMM_64GB",
             "coupling_criticality": 0.95,
             "spec_parity_satisfied": True,
             "provenance_verified": True,
+            "bom_revision_matched": True,
             "market_price_usd": 240.0,
             "thermodynamic_floor_usd": 160.0,
+            "expected_lifespan_cycles": 50000,
+            "baseline_lifespan_cycles": 50000,
         },
-        # Sector 2: Biochemistry / Pharma (Decoupled Brand-Name OTC Molecule vs Generic USP Floor)
+        # Case 3: Compute Silicon (Silent BOM/Controller Swap -> Triggers Phase 1 Re-Audit Circuit Breaker)
+        {
+            "domain_sector": "COMPUTE_SILICON",
+            "candidate_id": "SILENT_BOM_SWAPPED_NVME_2TB",
+            "coupling_criticality": 0.85,
+            "spec_parity_satisfied": True,
+            "provenance_verified": True,
+            "bom_revision_matched": False,
+            "market_price_usd": 140.0,
+            "thermodynamic_floor_usd": 120.0,
+            "expected_lifespan_cycles": 15000,
+            "baseline_lifespan_cycles": 50000,
+        },
+        # Case 4: Biochemistry / Pharma (Decoupled Brand-Name OTC Molecule -> High Brand Rent)
         {
             "domain_sector": "BIOCHEMISTRY_PHARMA",
             "candidate_id": "BRANDED_OTC_IBUPROFEN_200MG_100CT",
             "coupling_criticality": 0.15,
             "spec_parity_satisfied": True,
             "provenance_verified": True,
+            "bom_revision_matched": True,
             "market_price_usd": 14.50,
             "thermodynamic_floor_usd": 2.50,
+            "expected_lifespan_cycles": 100,
+            "baseline_lifespan_cycles": 100,
         },
-        # Sector 2b: Biochemistry / Pharma (USP-Verified Generic Equivalent at Floor Price)
+        # Case 5: Biochemistry / Pharma (USP-Verified Generic Equivalent at Floor Price)
         {
             "domain_sector": "BIOCHEMISTRY_PHARMA",
             "candidate_id": "USP_GENERIC_IBUPROFEN_200MG_100CT",
             "coupling_criticality": 0.15,
             "spec_parity_satisfied": True,
             "provenance_verified": True,
+            "bom_revision_matched": True,
             "market_price_usd": 3.25,
             "thermodynamic_floor_usd": 2.50,
+            "expected_lifespan_cycles": 100,
+            "baseline_lifespan_cycles": 100,
         },
-        # Sector 3: Industrial / Thermal Hardware (Counterfeit 3rd-party component failing spec parity)
+        # Case 6: Thermal Hardware (Counterfeit 3rd-party component failing spec parity)
         {
             "domain_sector": "THERMAL_HARDWARE",
             "candidate_id": "UNCOATED_304SS_INDUCTION_VESSEL_16WMK",
             "coupling_criticality": 0.90,
             "spec_parity_satisfied": False,
             "provenance_verified": False,
+            "bom_revision_matched": True,
             "market_price_usd": 29.0,
             "thermodynamic_floor_usd": 25.0,
+            "expected_lifespan_cycles": 2000,
+            "baseline_lifespan_cycles": 2000,
         },
-        # Sector 4: Passive Tooling / Accessory (Low coupling commodity at low rent ratio)
+        # Case 7: Passive Tooling (Ultra-cheap upfront price $2.50, but degrades in 150 cycles vs 1500 baseline -> 7.14x amortized cost)
         {
             "domain_sector": "PASSIVE_TOOLING",
-            "candidate_id": "COMMODITY_SILICONE_INTERFACE_TOOL",
+            "candidate_id": "LOW_DURABILITY_CHEAP_POLYMER_TOOL",
             "coupling_criticality": 0.05,
             "spec_parity_satisfied": True,
             "provenance_verified": False,
+            "bom_revision_matched": True,
+            "market_price_usd": 2.50,
+            "thermodynamic_floor_usd": 3.50,
+            "expected_lifespan_cycles": 150,
+            "baseline_lifespan_cycles": 1500,
+        },
+        # Case 8: Passive Tooling (Durable commodity tool $4.50 lasting full 1500 cycles -> 1.2857x amortized cost)
+        {
+            "domain_sector": "PASSIVE_TOOLING",
+            "candidate_id": "DURABLE_COMMODITY_SILICONE_TOOL",
+            "coupling_criticality": 0.05,
+            "spec_parity_satisfied": True,
+            "provenance_verified": False,
+            "bom_revision_matched": True,
             "market_price_usd": 4.50,
             "thermodynamic_floor_usd": 3.50,
+            "expected_lifespan_cycles": 1500,
+            "baseline_lifespan_cycles": 1500,
         },
     ]
 
@@ -268,10 +330,12 @@ def run_human_router_ast_compiler_proof() -> bool:
     expected_decisions = {
         "GRAY_MARKET_DDR5_ECC_RDIMM_64GB": "REJECT_PROVENANCE_HAZARD",
         "OEM_ATTESTED_DDR5_ECC_RDIMM_64GB": "APPROVE_AUTONOMOUS_COMMIT",
-        "BRANDED_OTC_IBUPROFEN_200MG_100CT": "REJECT_RENT_EXTRACTION",
+        "SILENT_BOM_SWAPPED_NVME_2TB": "ESCALATE_HUMAN_REAUDIT",
+        "BRANDED_OTC_IBUPROFEN_200MG_100CT": "REJECT_RENT_OR_LIFESPAN_DECAY",
         "USP_GENERIC_IBUPROFEN_200MG_100CT": "APPROVE_AUTONOMOUS_COMMIT",
         "UNCOATED_304SS_INDUCTION_VESSEL_16WMK": "REJECT_INVARIANT_VIOLATION",
-        "COMMODITY_SILICONE_INTERFACE_TOOL": "APPROVE_AUTONOMOUS_COMMIT",
+        "LOW_DURABILITY_CHEAP_POLYMER_TOOL": "REJECT_RENT_OR_LIFESPAN_DECAY",
+        "DURABLE_COMMODITY_SILICONE_TOOL": "APPROVE_AUTONOMOUS_COMMIT",
     }
 
     for cid, expected in expected_decisions.items():
@@ -288,7 +352,7 @@ def run_human_router_ast_compiler_proof() -> bool:
         "compiler_phase": "PHASE_3_AUTONOMOUS_STIGMERGIC_EXECUTION",
         "ast_invariant_expression": universal_ast_expr,
         "coupling_threshold": compiler.coupling_threshold,
-        "max_decoupled_rent_ratio": compiler.max_decoupled_rent_ratio,
+        "max_amortized_rent_ratio": compiler.max_amortized_rent_ratio,
         "domain_evaluations": evaluated,
     }
     expected_hash = compiler.compute_payload_hash(state_payload)
@@ -306,8 +370,8 @@ def run_human_router_ast_compiler_proof() -> bool:
     for item in evaluated:
         print(
             f"  [{item['domain_sector']}] {item['candidate_id']} "
-            f"(Phi={item['coupling_criticality']}, Rent={item['computed_rent_ratio']}x) "
-            f"-> {item['routing_decision']}"
+            f"(Phi={item['coupling_criticality']}, AmortizedRent={item['amortized_rent_ratio']}x, "
+            f"Drift={item['re_audit_triggered']}) -> {item['routing_decision']}"
         )
     return True
 

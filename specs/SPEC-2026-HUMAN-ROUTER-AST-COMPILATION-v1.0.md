@@ -13,25 +13,28 @@ Autonomous agent frameworks fail across real-world physical, financial, and oper
 1. **Unverified Agent Delegation (Probabilistic Drift & Adversarial Capture):** Delegating unmapped real-world decisions directly to probabilistic LLM agents exposes the operator to SEO-poisoned corpora, vendor rent extraction, counterfeit supply chains, and catastrophic physical/systemic coupling failures.
 2. **Perpetual Human-in-the-Loop Cognitive Tax:** Relying on the biological operator to manually research, filter, and route recurring decisions across every domain violates **Landauer Thermodynamic Bounds** ($\text{Power}_{\text{Bio}} \approx 20\text{ W}$) and **Invariant 25 (Zero-Cognitive-Friction Passive Proxy)**.
 
-`SPEC-2026-HUMAN-ROUTER-AST-COMPILATION-v1.0` defines a **Universal Cybernetic Compiler** where the human operator acts as an exploratory router **strictly at $t=0$ (Out-of-Distribution Discovery)** to audit a domain via dialectical friction, extract its true physical/mechanistic invariants, and compile those invariants into a `SHA-256` sealed Abstract Syntax Tree (AST). All subsequent executions ($t > 0$) run autonomously on local silicon with zero conversational tokens ($\text{Tokens}_{\text{Chat}} = 0$).
+`SPEC-2026-HUMAN-ROUTER-AST-COMPILATION-v1.0` defines a **Universal Cybernetic Compiler** where the human operator acts as an exploratory router **strictly at $t=0$ (Out-of-Distribution Discovery)** to audit a domain via dialectical friction, extract its true physical/mechanistic invariants, and compile those invariants into a `SHA-256` sealed Abstract Syntax Tree (AST). Subsequent executions ($t > 0$) run autonomously on local silicon with zero conversational tokens ($\text{Tokens}_{\text{Chat}} = 0$), bounded by an automatic **Drift Circuit Breaker** that escalates back to the human router if physical BOM specifications or pricing bounds drift.
 
 ---
 
 ## 2. CORE MATHEMATICAL & CYBERNETIC INVARIANTS
 
-1. **Universal Coupling & Rent Decomposition Vector ($\vec{\Psi}$):**
-   Any real-world acquisition, procurement, or state-routing candidate $x \in \mathcal{X}$ across any domain $\mathcal{D}$ is decomposed into three orthogonal invariant vectors:
+1. **Universal Coupling & Lifecycle-Amortized Rent Vector ($\vec{\Psi}$):**
+   Any real-world acquisition, procurement, or state-routing candidate $x \in \mathcal{X}$ across any domain $\mathcal{D}$ is decomposed into four orthogonal invariant vectors:
    - **Systemic Coupling Criticality ($\Phi_{\text{Coupling}} \in [0, 1]$):** Degree of physical, cryptographic, electrical, chemical, or statutory coupling between candidate $x$ and the host system's failure boundary.
    - **Mechanistic Spec Parity ($\Omega_{\text{Parity}} \in \{0, 1\}$):** Binary satisfaction of hard physical/protocol constraints:
      $$\Omega_{\text{Parity}}(x) = \prod_{m=1}^{M} \mathbb{I}\left(\text{Metric}_m(x) \in [\theta_{m,\min}, \theta_{m,\max}]\right)$$
-   - **Rent Extraction Ratio ($R_{\text{Rent}} \ge 1.0$):** Ratio of market price to thermodynamic/bom/compute floor cost:
-     $$R_{\text{Rent}}(x) = \frac{\text{Cost}_{\text{Asked}}(x)}{\text{Cost}_{\text{ThermodynamicFloor}}(x)}$$
+   - **Lifecycle-Amortized Rent Ratio ($R_{\text{Amortized}} \ge 1.0$, Invariant 29):** Normalizes upfront cost by expected operational lifespan cycles $L_{\text{Cycles}}(x)$ relative to the thermodynamic/BOM baseline floor ($C_{\text{Floor}}, L_{\text{Baseline}}$) to prevent cheap, low-durability degradation:
+     $$R_{\text{Amortized}}(x) = \frac{\text{Cost}_{\text{Asked}}(x) / L_{\text{Cycles}}(x)}{C_{\text{Floor}} / L_{\text{Baseline}}}$$
+   - **Stale-AST Concept Drift Detector ($\Delta_{\text{Drift}} \in \{0, 1\}$):** Detects silent BOM degradation ("cheapflation"), SKU revision hash mismatches, or anomalous supply-chain price shocks ($\lvert \Delta P \rvert > \delta_{\max}$):
+     $$\Delta_{\text{Drift}}(x) = \mathbb{I}\left(\text{Hash}_{\text{BOM}}(x) \neq \text{Hash}_{\text{BOM}, t_0} \;\lor\; \text{FailureTelemetry}(x) > 0\right)$$
 
-2. **General-Purpose Deterministic Routing Law:**
-   $$\text{Decision}(x) = \begin{cases} \text{REJECT\_INVARIANT\_VIOLATION} & \text{if } \Omega_{\text{Parity}}(x) = 0 \\ \text{REJECT\_PROVENANCE\_HAZARD} & \text{if } \Phi_{\text{Coupling}}(x) \ge \tau_{\Phi} \land \neg \text{Provenance}_{\text{Verified}}(x) \\ \text{REJECT\_RENT\_EXTRACTION} & \text{if } \Phi_{\text{Coupling}}(x) < \tau_{\Phi} \land R_{\text{Rent}}(x) > R_{\max} \\ \text{APPROVE\_AUTONOMOUS\_COMMIT} & \text{otherwise} \end{cases}$$
+2. **General-Purpose Deterministic Routing Law (with Phase 3 $\to$ Phase 1 Circuit Breaker):**
+   $$\text{Decision}(x) = \begin{cases} \text{ESCALATE\_HUMAN\_REAUDIT} & \text{if } \Delta_{\text{Drift}}(x) = 1 \quad (\text{Phase 3} \to \text{Phase 1 Circuit Breaker}) \\ \text{REJECT\_INVARIANT\_VIOLATION} & \text{if } \Omega_{\text{Parity}}(x) = 0 \\ \text{REJECT\_PROVENANCE\_HAZARD} & \text{if } \Phi_{\text{Coupling}}(x) \ge \tau_{\Phi} \land \neg \text{Provenance}_{\text{Verified}}(x) \\ \text{REJECT\_RENT\_OR\_LIFESPAN\_DECAY} & \text{if } \Phi_{\text{Coupling}}(x) < \tau_{\Phi} \land R_{\text{Amortized}}(x) > R_{\max} \\ \text{APPROVE\_AUTONOMOUS\_COMMIT} & \text{otherwise} \end{cases}$$
 
-3. **One-Shot Cognitive Amortization ($k=1 \to \infty$):**
-   $$\mathcal{V}(\text{Operator}_{k=1}) \xrightarrow{\text{Dialectical Audit}} \text{AST}_{\mathcal{D}} \implies \lim_{k \to \infty} \frac{\text{CognitiveLoad}_{\text{Bio}}}{k} = 0 \quad (\text{OpEx}_{k>1} \to \text{Watts})$$
+3. **Bounded Cognitive Amortization:**
+   $$\lim_{k \to \infty} \frac{\text{CognitiveLoad}_{\text{Bio}}}{k} \to 0 \quad \forall \; \Delta_{\text{Drift}} = 0 \implies \text{OpEx}_{\text{Routing}} \to \text{Watts}_{\text{Local Silicon}}$$
+   Human cognitive bandwidth is invoked exclusively on initial domain discovery ($k=1$) or verified structural drift ($\Delta_{\text{Drift}} = 1$).
 
 4. **Kolmogorov AST Sandbox & CFAA Baseline (Invariant 20, 21, 23):**
    Compiled domain rules are serialized as pure side-effect-free AST expressions verified via `ast.NodeVisitor` and anchored by `SHA-256` state commits.
@@ -44,15 +47,17 @@ Autonomous agent frameworks fail across real-world physical, financial, and oper
 graph TD
     A[Unmapped Domain Encountered: k = 1] --> B[Phase 1: Human Router + Local Exocortex Dialectical Audit]
     B --> C[Deconstruct Narrative vs Physical/Thermodynamic Reality]
-    C --> D[Isolate Coupling Criticality Phi, Spec Bounds Omega, and Rent Floor R]
+    C --> D[Isolate Coupling Phi, Spec Bounds Omega, Lifecycle Floor R_Amortized, BOM Hash]
     D --> E[Phase 2: Compile to General-Purpose AST Rule & JSON Schema]
     E --> F[Static Sandbox Verification via ast.NodeVisitor + SHA-256 Seal]
     F --> G[Phase 3: Autonomous Local Execution Engine k > 1]
-    G --> H{Evaluate Candidate Vector x}
-    H -->|Omega = 0| I[REJECT: Physical/Protocol Invariant Violation]
-    H -->|Phi >= tau & Unverified| J[REJECT: Supply-Chain / Provenance Hazard]
-    H -->|Phi < tau & Rent > R_max| K[REJECT: Brand / Intermediary Rent Extraction]
-    H -->|All Gates Satisfied| L[COMMIT: Zero-Friction Autonomous Execution]
+    G --> H{Drift Detector Delta_Drift == 1?}
+    H -->|Yes: BOM/SKU Changed or Failure > 0| B
+    H -->|No: Invariants Stable| I{Evaluate Candidate Vector x}
+    I -->|Omega = 0| J[REJECT: Physical/Protocol Invariant Violation]
+    I -->|Phi >= tau & Unverified| K[REJECT: Supply-Chain / Provenance Hazard]
+    I -->|Phi < tau & R_Amortized > R_max| L[REJECT: Brand Rent or Low-Durability Junk]
+    I -->|All Gates Satisfied| M[COMMIT: Zero-Friction Autonomous Execution]
 ```
 
 ---
@@ -61,12 +66,12 @@ graph TD
 
 Once compiled, the identical AST engine (`proofs/human_router_ast_compiler_engine.py`) evaluates arbitrary domains without structural modification:
 
-| Domain ($\mathcal{D}$) | Coupled Subsystem ($\Phi_{\text{Coupling}} \ge \tau_{\Phi}$) -> *Enforce Verified Spec & Provenance* | Decoupled Commodity ($\Phi_{\text{Coupling}} < \tau_{\Phi}$) -> *Enforce Thermodynamic Floor ($R_{\text{Rent}} \to 1$)* |
-| :--- | :--- | :--- |
-| **Compute & Silicon Infrastructure** | ECC VRAM modules, PSU rails, cryptographic HSMs (strict impedance/timing/attestation parity). | Chassis enclosures, passive heatsinks, patch cables (pure commodity material floor). |
-| **Biochemistry & Healthcare** | Active pharmaceutical ingredients (USP/BP assay purity, cold-chain provenance). | Brand-name OTC analgesics vs. identical generic molecule (eliminate brand markup rent). |
-| **Industrial & Domestic Hardware** | Induction/pressure-coupled thermal vessels, hydraulic seals, load-bearing fasteners. | Non-coupled ergonomic interfaces, passive Polymer/Silicone tooling. |
-| **Enterprise Software & SaaS** | Core cryptographic state kernels, deterministic local databases. | Wrapper SaaS CRUD interfaces (disintermediated via local AST scripts). |
+| Domain ($\mathcal{D}$) | Coupled Subsystem ($\Phi_{\text{Coupling}} \ge \tau_{\Phi}$) -> *Enforce Verified Spec & Provenance* | Decoupled Commodity ($\Phi_{\text{Coupling}} < \tau_{\Phi}$) -> *Enforce Lifecycle-Amortized Floor ($R_{\text{Amortized}} \le R_{\max}$)* | Drift Circuit Breaker ($\Delta_{\text{Drift}} = 1$) -> *Escalate to Phase 1* |
+| :--- | :--- | :--- | :--- |
+| **Compute & Silicon Infrastructure** | ECC VRAM modules, PSU rails, cryptographic HSMs. | Chassis enclosures, passive heatsinks, patch cables. | Silent controller/die stepping swap on SSD/RAM SKU. |
+| **Biochemistry & Healthcare** | Active pharmaceutical ingredients (USP/BP assay purity, cold-chain provenance). | Brand-name OTC analgesics vs. identical generic molecule. | Excipient formulation change or assay variance alert. |
+| **Industrial & Domestic Hardware** | Induction/pressure-coupled thermal vessels, hydraulic seals, load-bearing fasteners. | Non-coupled ergonomic interfaces, passive Polymer/Silicone tooling (filtered by cycle lifespan). | OEM transitions metal sub-assembly to polymer under same part number. |
+| **Enterprise Software & SaaS** | Core cryptographic state kernels, deterministic local databases. | Wrapper SaaS CRUD interfaces (disintermediated via local AST scripts). | Upstream API schema breaking change or license enclosure. |
 
 ---
 
@@ -74,5 +79,6 @@ Once compiled, the identical AST engine (`proofs/human_router_ast_compiler_engin
 
 - **Schema Contract:** `schema/human_router_ast_compiler.json`
 - **Verification Engine:** `proofs/human_router_ast_compiler_engine.py`
-  - **Domain-Agnostic AST Compiler:** Compiles any audited domain vector (`coupling_criticality`, `spec_parity_satisfied`, `provenance_verified`, `market_price_usd`, `thermodynamic_floor_usd`) into a sandboxed AST evaluator.
-  - **Multi-Domain Proof Suite:** Verifies autonomous routing across heterogeneous domains (Compute Hardware, Pharmaceutical/Chemical Sourcing, Industrial Thermal Tooling, and SaaS Disintermediation) under a single unified mathematical invariant.
+  - **Domain-Agnostic AST Compiler:** Compiles any audited domain vector into a sandboxed AST evaluator.
+  - **Lifecycle Amortization Filter:** Rejects both high-margin OEM brand rent *and* cheap low-lifespan junk that inflates per-cycle cost.
+  - **Stale-AST Circuit Breaker:** Detects silent BOM/SKU drift and halts autonomous execution, escalating cleanly to `ESCALATE_HUMAN_REAUDIT`.

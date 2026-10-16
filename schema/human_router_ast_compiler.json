@@ -11,7 +11,7 @@
     "compiler_phase",
     "ast_invariant_expression",
     "coupling_threshold",
-    "max_decoupled_rent_ratio",
+    "max_amortized_rent_ratio",
     "domain_evaluations",
     "expected_state_hash"
   ],
@@ -50,7 +50,7 @@
       "minimum": 0.0,
       "maximum": 1.0
     },
-    "max_decoupled_rent_ratio": {
+    "max_amortized_rent_ratio": {
       "type": "number",
       "minimum": 1.0
     },
@@ -65,9 +65,13 @@
           "coupling_criticality",
           "spec_parity_satisfied",
           "provenance_verified",
+          "bom_revision_matched",
           "market_price_usd",
           "thermodynamic_floor_usd",
-          "computed_rent_ratio",
+          "expected_lifespan_cycles",
+          "baseline_lifespan_cycles",
+          "amortized_rent_ratio",
+          "re_audit_triggered",
           "routing_decision"
         ],
         "properties": {
@@ -88,6 +92,9 @@
           "provenance_verified": {
             "type": "boolean"
           },
+          "bom_revision_matched": {
+            "type": "boolean"
+          },
           "market_price_usd": {
             "type": "number",
             "minimum": 0.0
@@ -96,9 +103,20 @@
             "type": "number",
             "exclusiveMinimum": 0.0
           },
-          "computed_rent_ratio": {
+          "expected_lifespan_cycles": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "baseline_lifespan_cycles": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "amortized_rent_ratio": {
             "type": "number",
             "minimum": 0.0
+          },
+          "re_audit_triggered": {
+            "type": "boolean"
           },
           "routing_decision": {
             "type": "string",
@@ -106,7 +124,8 @@
               "APPROVE_AUTONOMOUS_COMMIT",
               "REJECT_INVARIANT_VIOLATION",
               "REJECT_PROVENANCE_HAZARD",
-              "REJECT_RENT_EXTRACTION"
+              "REJECT_RENT_OR_LIFESPAN_DECAY",
+              "ESCALATE_HUMAN_REAUDIT"
             ]
           }
         },
