@@ -16,6 +16,7 @@
 - `specs/AUDIT-2026-BIOLOGICAL-ENTROPY-AMBIENT-INDIFFERENCE.md` - Biological Entropy & Ambient Indifference Proxy Specification (`AMBIENT-INDIFFERENCE-v1.0`).
 - `specs/AUDIT-2026-BIM-DISINTERMEDIATION.md` - Spatial Building Information Modeling Audit Specification (`OPEN-BIM-v1.0`).
 - `specs/AUDIT-2026-CENTRAL-COMPUTE-MODEL-DECAY.md` - Central Compute Tiering & Public API Degradation Specification (`CENTRAL-COMPUTE-MODEL-DECAY-v1.0`).
+- `specs/AUDIT-2026-CFAA-LAB-LIABILITY-STIGMERGIC-REMEDIATION.md` - CFAA Lab Liability & Stigmergic Data Sovereignty Specification.
 - `specs/AUDIT-2026-COASEAN-FRICTION-COLLAPSE.md` - Coasean Friction Collapse & Agent Micro-Firm Specification.
 - `specs/AUDIT-2026-COGNITIVE-STATE-OSINT-SHIELD.md` - Cognitive State-OSINT Shield Specification (`OPEN-COGNITIVE-SHIELD-v1.0`).
 - `specs/AUDIT-2026-COGNITIVE-THIN-CLIENT-DECAY.md` - Cognitive Thin-Client Decay & Local Exocortex Sovereignty Specification.
@@ -24,6 +25,7 @@
 - `specs/AUDIT-2026-CORPORATE-FIRM-STRUCTURAL-INFEASIBILITY.md` - Structural Infeasibility of the Centralized Corporate Firm Specification (`CORPORATE-INFEASIBILITY-v1.0`).
 - `specs/AUDIT-2026-CORPUS-INVARIANT-ML-COGDEFENSE.md` - Public Corpus Invariant & Machine Learning Cognitive Defense Specification.
 - `specs/AUDIT-2026-CRM-DISINTERMEDIATION.md` - Sovereign Customer Relationship Engine Specification (`OPEN-CRM-v1.0`).
+- `specs/AUDIT-2026-CYBERNETIC-HUMAN-ROUTER-v3.0` - The Human Router & Out-of-Distribution Biological Override Specification (`AUDIT-2026-CYBERNETIC-HUMAN-ROUTER-v3.0`).
 - `specs/AUDIT-2026-CYBERNETIC-VARIETY-ASHBY-AUDIT.md` - Cybernetic Variety & Ashby Control Law Specification.
 - `specs/AUDIT-2026-DEFENSE-COMPLIANCE-DISINTERMEDIATION.md` - Defense Prime Compliance & Regulatory Automation Specification (`OPEN-DEFENSE-COMPLIANCE-v1.0`).
 - `specs/AUDIT-2026-DEFENSE-SUPPLY-DISINTERMEDIATION.md` - Sovereign Defense Supply Chain Disintermediation Specification (`OPEN-DEFENSE-v1.0`).
@@ -79,6 +81,26 @@
 - `specs/AUDIT-2026-UBC-VS-FIAT-UBI.md` - Universal Basic Compute vs. Fiat UBI Pacification Specification (`UBC-VS-FIAT-UBI-v1.0`).
 - `specs/AUDIT-2026-UPTON-SINCLAIR-RLHF-ALIGNMENT.md` - RLHF Alignment Trap & Economic Incentive Audit.
 - `specs/AUDIT-2026-ZERO-DNS-MESH-DISCOVERY.md` - Zero-DNS Local Physical Mesh Discovery Engine Specification (`OPEN-MESH-DISCOVERY-v1.0`).
+- `specs/SPEC-2026-ANTHROPIC-REPLICATION-DISCLOSURE-S1-TRAP-v2.1` - The IoT Deflection & Anthropic Oct 12 Replication Disclosure Specification.
+- `specs/SPEC-2026-CLOSED-LOOP-PHYSICAL-SANDBOXING-v1.2` - Closed-Loop Physical Sandboxing & Containment Inversion Specification.
+- `specs/SPEC-2026-DEEP-TIME-BIOLOGICAL-INVARIANT-v1.1` - The 20-Watt Apex & Deep-Time Biological Hardware Specification.
+- `specs/SPEC-2026-DEFECTOR-IMPORTATION-PARADOX-v1.3` - The Defector-Importation Paradox Specification.
+- `specs/SPEC-2026-EPISTEMIC-LATENT-CONVERGENCE-v1.8` - Epistemic Latent Convergence & Stigmergic Navigation Specification.
+- `specs/SPEC-2026-FRONTIER-CARTEL-SHERMAN-ANTITRUST-v1.0` - Frontier AI Cartel Sherman Antitrust Specification.
+- `specs/SPEC-2026-GF-PHASE-TRANSITION-v1.3` - The Gf Phase Transition & IP Cartel Liquidation Specification.
+- `specs/SPEC-2026-HUGGINGFACE-ASSET-ATTRACTOR-v1.1` - The Asset Hub Attractor Vector Specification.
+- `specs/SPEC-2026-HVT-GAME-THEORETIC-GROUND-DEFENSE-v2.7` - HVT Zero-Anomaly Signature Homogenization Specification.
+- `specs/SPEC-2026-HYPERVISOR-FALLACY-VS-STIGMERGIC-REALISM-v1.6` - Hypervisor Fallacy vs. Bare-Metal Stigmergic Realism Specification.
+- `specs/SPEC-2026-INGRESS-SOVEREIGNTY-ENTOURAGE-CAPTURE-v1.1` - Ingress Sovereignty & Entourage Capture Specification.
+- `specs/SPEC-2026-SILICON-SPV-STRUCTURAL-ISOMORPHISM-v2.6` - The $518 Billion Silicon SPV Structural Isomorphism Specification.
+- `specs/SPEC-2026-SKINNER-STATUS-COLLAPSAR-v1.1` - The Skinner Box Collapsar & Teleological Attractor Hijack Specification.
+- `specs/SPEC-2026-SOPHISTRY-RLHF-VS-VERIFIABLE-RLVR-v2.2` - Limit-Case Litigator & Verifiable RLVR Specification.
+- `specs/SPEC-2026-STATUS-MERIT-INVERSION-v1.2` - The Status-Merit Inversion Specification.
+- `specs/SPEC-2026-STIGMERGIC-CLASS-ASSEMBLY-v2.1` - Stigmergic Class Assembly & CCPA Inference Trap Specification.
+- `specs/SPEC-2026-UNCENSORABLE-WEIGHT-DISTRIBUTION-ROADMAP-v1.0` - Un-Censorable Local Weight Distribution Roadmap.
+- `specs/SPEC-2026-UNDERWRITER-LIABILITY-RESILIENCE-FALLACY-v6.0` - Pre-IPO Underwriter Strict Liability & Resilience Fallacy Specification.
+- `specs/SPEC-2026-ZERO-OBSERVABILITY-BIO-SILICON-BOUNDARY-v1.1` - Zero-Observability Bio-Silicon Boundary Specification.
+- `specs/EQUITY-AUDIT-2026-NEURALINK-VALUATION-COLLAPSE-v2.0` - Institutional Equity Audit: Neuralink Corp Valuation Impairment.
 - `specs/ewaste-protocol.md` - Electronic Waste Recycling & Edge Silicon Harvesting Protocol.
 - `specs/the-persona-hazard.md` - Anthropomorphic Persona Hazard & De-Anthropomorphization Audit.
 - `specs/OPERATIONAL-STACK-MASTER-INDEX.md` - Active tree synchronization map.
@@ -193,6 +215,7 @@
 ## ARTICLES & PUBLICATIONS (`articles/`)
 - `articles/2026-03-asymmetric-pro-se-litigation-and-regulatory-arbitrage.txt` - Essay on automated pro se litigation, statutory leverage, and regulatory arbitrage (`OPEN-PRO-SE-v1.0`).
 - `articles/2026-03-biological-entropy-and-ambient-indifference.txt` - Essay on biological entropy alignment and the ambient indifference proxy.
+- `articles/2026-03-cfaa-liability-and-the-stigmergic-data-sovereignty-alternative.txt` - Essay on CFAA liability and the stigmergic data sovereignty alternative.
 - `articles/2026-03-corporate-data-laundering-and-demand-side-decay.txt` - Essay on corporate data laundering and demand-side decay (`DATA-PROVENANCE-v1.0`).
 - `articles/2026-03-constructive-discrimination-and-the-open-attractor.txt` - Essay on constructive discrimination and the open attractor.
 - `articles/2026-03-legal-superiority-of-decentralized-edge-federations.txt` - Essay on why zero-rent edge federations are legally superior to centralized cloud AI swarms.
@@ -222,7 +245,7 @@
 - `articles/teleological-attractors-and-cybernetic-friction.txt` - Essay on Dialectical Friction, Teleological Attractors, and Zero-C2 Stigmergic Convergence.
 - `articles/the-human-swarm.txt` - Essay on zero-C2 stigmergic coordination and edge hardware ownership demand.
 - `articles/universal-basic-compute.txt` - Essay on Universal Basic Compute and thermodynamic edge yield.
-- `articles/substack.json` - Substack publishing export configuration and metadata index.
+- `articles/substack.json` - Substack publishing export configuration and metadata index (89 complete fetched articles).
 
 ## ROOT AUXILIARY FILES
 - `CONVENTIONS.md` - System Constraints & Architectural Writing Guidelines.

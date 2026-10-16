@@ -21,6 +21,7 @@ move6729 / operational-stack:
 ├── articles/                       [Public Canonical Articles & Essays]
 │   ├── 2026-03-asymmetric-pro-se-litigation-and-regulatory-arbitrage.txt [Asymmetric Pro Se Litigation Essay]
 │   ├── 2026-03-biological-entropy-and-ambient-indifference.txt [Biological Entropy & Ambient Indifference Essay]
+│   ├── 2026-03-cfaa-liability-and-the-stigmergic-data-sovereignty-alternative.txt [CFAA Liability & Stigmergic Data Sovereignty Essay]
 │   ├── 2026-03-corporate-data-laundering-and-demand-side-decay.txt [Corporate Data Laundering & Demand-Side Decay Essay]
 │   ├── 2026-03-constructive-discrimination-and-the-open-attractor.txt
 │   ├── 2026-03-legal-superiority-of-decentralized-edge-federations.txt [Legal Superiority of Decentralized Edge Federations Essay]
@@ -47,7 +48,7 @@ move6729 / operational-stack:
 │   ├── 2026-03-the-great-disintermediation-manifesto.txt
 │   ├── 2026-03-the-thermodynamic-inversion.txt
 │   ├── 2026-03-universal-basic-compute-vs-fiat-ubi.txt [Universal Basic Compute vs. Fiat UBI Essay]
-│   ├── substack.json               [Substack Publishing Metadata Index]
+│   ├── substack.json               [89 Fetched Articles Index]
 │   ├── teleological-attractors-and-cybernetic-friction.txt [Dialectical Edge & Teleological Attractors]
 │   ├── the-human-swarm.txt         [Stigmergic Zero-C2 Coordination & Hardware Demand]
 │   └── universal-basic-compute.txt [Sovereign Edge Yield & Thermodynamic Economics]
@@ -170,6 +171,7 @@ move6729 / operational-stack:
     ├── AUDIT-2026-BIOLOGICAL-ENTROPY-AMBIENT-INDIFFERENCE.md [Biological Entropy & Ambient Indifference Spec]
     ├── AUDIT-2026-BIM-DISINTERMEDIATION.md
     ├── AUDIT-2026-CENTRAL-COMPUTE-MODEL-DECAY.md [Central Compute Model Tiering Spec]
+    ├── AUDIT-2026-CFAA-LAB-LIABILITY-STIGMERGIC-REMEDIATION.md
     ├── AUDIT-2026-COASEAN-FRICTION-COLLAPSE.md
     ├── AUDIT-2026-COGNITIVE-STATE-OSINT-SHIELD.md [Cognitive State-OSINT Shield Spec (OPEN-COGNITIVE-SHIELD-v1.0)]
     ├── AUDIT-2026-COGNITIVE-THIN-CLIENT-DECAY.md
@@ -178,6 +180,7 @@ move6729 / operational-stack:
     ├── AUDIT-2026-CORPORATE-FIRM-STRUCTURAL-INFEASIBILITY.md [Structural Infeasibility of the Corporate Firm Spec]
     ├── AUDIT-2026-CORPUS-INVARIANT-ML-COGDEFENSE.md
     ├── AUDIT-2026-CRM-DISINTERMEDIATION.md
+    ├── AUDIT-2026-CYBERNETIC-HUMAN-ROUTER-v3.0 [The Human Router & OOD Override Spec]
     ├── AUDIT-2026-CYBERNETIC-VARIETY-ASHBY-AUDIT.md
     ├── AUDIT-2026-DEFENSE-COMPLIANCE-DISINTERMEDIATION.md
     ├── AUDIT-2026-DEFENSE-SUPPLY-DISINTERMEDIATION.md
@@ -195,7 +198,6 @@ move6729 / operational-stack:
     ├── AUDIT-2026-HEADCOUNT-DELIVERABILITY-MOAT.md
     ├── AUDIT-2026-HEALTHCARE-BILLING-DISINTERMEDIATION.md
     ├── AUDIT-2026-HPMCR-DEFENSE-SPEC.md
-    ├── AUDIT-2026-HUMAN-DEF-OPERATOR-HEURISTICS.md
     ├── AUDIT-2026-HUMANOID-ROBOTICS-REFUTATION.md [Humanoid Robotics Refutation Spec]
     ├── AUDIT-2026-HYDROLOGICAL-DISINTERMEDIATION.md [Hydrological & SCADA Disintermediation Spec]
     ├── AUDIT-2026-IAM-DISINTERMEDIATION.md
@@ -208,11 +210,11 @@ move6729 / operational-stack:
     ├── AUDIT-2026-MICROGRID-COMPUTE-SCHEDULER.md
     ├── AUDIT-2026-MODEL-SPOF-CORPUS-POISONING.md
     ├── AUDIT-2026-N-DIMENSIONAL-ATTRACTOR.md
-    ├── AUDIT-2026-OFFGRID-SUBSTRATE-RESILIENCE.md [Off-Grid Substrate Resilience Spec (OPEN-SUBSTRATE-v1.0)]
     ├── AUDIT-2026-NARRATIVE-AMPLIFICATION-NODES.md
     ├── AUDIT-2026-NATIONAL-SECURITY-REQUISITE-VARIETY.md
     ├── AUDIT-2026-NEO-FEUDAL-ARISTOCRACY-DECONSTRUCTION.md
     ├── AUDIT-2026-OFFGRID-ENERGY-DISINTERMEDIATION.md
+    ├── AUDIT-2026-OFFGRID-SUBSTRATE-RESILIENCE.md [Off-Grid Substrate Resilience Spec (OPEN-SUBSTRATE-v1.0)]
     ├── AUDIT-2026-OPS-DISINTERMEDIATION.md
     ├── AUDIT-2026-OSINT-METADATA-ISOLATION.md [Adversarial OSINT Defense Spec]
     ├── AUDIT-2026-PHYSICAL-ASSET-DISINTERMEDIATION.md
@@ -234,12 +236,32 @@ move6729 / operational-stack:
     ├── AUDIT-2026-UPTON-SINCLAIR-RLHF-ALIGNMENT.md
     ├── AUDIT-2026-ZERO-DNS-MESH-DISCOVERY.md
     ├── AUDIT-SPEC-DIALECTICAL-FRICTION.md [Dialectical Friction & Teleological Attractor Spec]
-    ├── audit_spec.md               [Engine Verification & Editorial Invariants]
-    ├── ewaste-protocol.md
+    ├── EQUITY-AUDIT-2026-NEURALINK-VALUATION-COLLAPSE-v2.0
     ├── HUMAN-DEF-OPERATOR-HEURISTICS.md
-    ├── human_swarm_audit_spec.md   [Human Swarm Essay Audit Specification]
     ├── OPERATIONAL-STACK-MASTER-INDEX.md
     ├── README.md
+    ├── SPEC-2026-ANTHROPIC-REPLICATION-DISCLOSURE-S1-TRAP-v2.1
+    ├── SPEC-2026-CLOSED-LOOP-PHYSICAL-SANDBOXING-v1.2
+    ├── SPEC-2026-DEEP-TIME-BIOLOGICAL-INVARIANT-v1.1
+    ├── SPEC-2026-DEFECTOR-IMPORTATION-PARADOX-v1.3
+    ├── SPEC-2026-EPISTEMIC-LATENT-CONVERGENCE-v1.8
+    ├── SPEC-2026-FRONTIER-CARTEL-SHERMAN-ANTITRUST-v1.0
+    ├── SPEC-2026-GF-PHASE-TRANSITION-v1.3
+    ├── SPEC-2026-HUGGINGFACE-ASSET-ATTRACTOR-v1.1
+    ├── SPEC-2026-HVT-GAME-THEORETIC-GROUND-DEFENSE-v2.7
+    ├── SPEC-2026-HYPERVISOR-FALLACY-VS-STIGMERGIC-REALISM-v1.6
+    ├── SPEC-2026-INGRESS-SOVEREIGNTY-ENTOURAGE-CAPTURE-v1.1
+    ├── SPEC-2026-SILICON-SPV-STRUCTURAL-ISOMORPHISM-v2.6
+    ├── SPEC-2026-SKINNER-STATUS-COLLAPSAR-v1.1
+    ├── SPEC-2026-SOPHISTRY-RLHF-VS-VERIFIABLE-RLVR-v2.2
+    ├── SPEC-2026-STATUS-MERIT-INVERSION-v1.2
+    ├── SPEC-2026-STIGMERGIC-CLASS-ASSEMBLY-v2.1
+    ├── SPEC-2026-UNCENSORABLE-WEIGHT-DISTRIBUTION-ROADMAP-v1.0
+    ├── SPEC-2026-UNDERWRITER-LIABILITY-RESILIENCE-FALLACY-v6.0
+    ├── SPEC-2026-ZERO-OBSERVABILITY-BIO-SILICON-BOUNDARY-v1.1
+    ├── audit_spec.md               [Engine Verification & Editorial Invariants]
+    ├── ewaste-protocol.md
+    ├── human_swarm_audit_spec.md   [Human Swarm Essay Audit Specification]
     ├── the-persona-hazard.md
     └── ubc_audit_spec.md           [Universal Basic Compute Protocol Audit Spec]
 ```
