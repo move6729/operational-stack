@@ -99,6 +99,7 @@
 - `specs/SPEC-2026-FRONTIER-CARTEL-SHERMAN-ANTITRUST-v1.0`
 - `specs/SPEC-2026-GF-PHASE-TRANSITION-v1.3`
 - `specs/SPEC-2026-HUGGINGFACE-ASSET-ATTRACTOR-v1.1`
+- `specs/SPEC-2026-HUMAN-ROUTER-AST-COMPILATION-v1.0.md`
 - `specs/SPEC-2026-HVT-GAME-THEORETIC-GROUND-DEFENSE-v2.7`
 - `specs/SPEC-2026-HYPERVISOR-FALLACY-VS-STIGMERGIC-REALISM-v1.6`
 - `specs/SPEC-2026-INGRESS-SOVEREIGNTY-ENTOURAGE-CAPTURE-v1.1`
@@ -146,6 +147,7 @@
 - `schema/gto_negotiation.json`
 - `schema/harm_beacon_manifest.json`
 - `schema/health_billing_defense.json`
+- `schema/human_router_ast_compiler.json`
 - `schema/hydro_telemetry.json`
 - `schema/hypervisor_fallacy_vs_stigmergic_realism.json`
 - `schema/iam_identity.json`
@@ -226,6 +228,7 @@
 - `proofs/gto_negotiation_engine.py`
 - `proofs/headcount_moat_engine.py`
 - `proofs/health_legal_engine.py`
+- `proofs/human_router_ast_compiler_engine.py`
 - `proofs/human_swarm_engine.py`
 - `proofs/hydro_engine.py`
 - `proofs/hypervisor_fallacy_engine.py`

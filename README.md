@@ -82,6 +82,7 @@ move6729 / operational-stack:
 │   ├── gto_negotiation.json
 │   ├── harm_beacon_manifest.json
 │   ├── health_billing_defense.json
+│   ├── human_router_ast_compiler.json
 │   ├── hydro_telemetry.json
 │   ├── hypervisor_fallacy_vs_stigmergic_realism.json
 │   ├── iam_identity.json
@@ -161,6 +162,7 @@ move6729 / operational-stack:
 │   ├── gto_negotiation_engine.py
 │   ├── headcount_moat_engine.py
 │   ├── health_legal_engine.py
+│   ├── human_router_ast_compiler_engine.py
 │   ├── human_swarm_engine.py
 │   ├── hydro_engine.py
 │   ├── hypervisor_fallacy_engine.py
@@ -309,6 +311,7 @@ move6729 / operational-stack:
     ├── SPEC-2026-FRONTIER-CARTEL-SHERMAN-ANTITRUST-v1.0
     ├── SPEC-2026-GF-PHASE-TRANSITION-v1.3
     ├── SPEC-2026-HUGGINGFACE-ASSET-ATTRACTOR-v1.1
+    ├── SPEC-2026-HUMAN-ROUTER-AST-COMPILATION-v1.0.md
     ├── SPEC-2026-HVT-GAME-THEORETIC-GROUND-DEFENSE-v2.7
     ├── SPEC-2026-HYPERVISOR-FALLACY-VS-STIGMERGIC-REALISM-v1.6
     ├── SPEC-2026-INGRESS-SOVEREIGNTY-ENTOURAGE-CAPTURE-v1.1

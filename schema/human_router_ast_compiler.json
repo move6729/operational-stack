@@ -1,0 +1,122 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://opstack.org/schema/human_router_ast_compiler.json",
+  "title": "Universal Human-to-AST Stigmergic Router & Procurement Contract",
+  "type": "object",
+  "required": [
+    "spec_version",
+    "jurisdiction_context",
+    "cfaa_compliance_attestation",
+    "zero_egress_attestation",
+    "compiler_phase",
+    "ast_invariant_expression",
+    "coupling_threshold",
+    "max_decoupled_rent_ratio",
+    "domain_evaluations",
+    "expected_state_hash"
+  ],
+  "properties": {
+    "spec_version": {
+      "type": "string",
+      "const": "SPEC-2026-HUMAN-ROUTER-AST-COMPILATION-v1.0"
+    },
+    "jurisdiction_context": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}$",
+      "default": "US"
+    },
+    "cfaa_compliance_attestation": {
+      "type": "boolean",
+      "const": true
+    },
+    "zero_egress_attestation": {
+      "type": "boolean",
+      "const": true
+    },
+    "compiler_phase": {
+      "type": "string",
+      "enum": [
+        "PHASE_1_DIALECTICAL_HUMAN_DISCOVERY",
+        "PHASE_2_DETERMINISTIC_AST_COMPILATION",
+        "PHASE_3_AUTONOMOUS_STIGMERGIC_EXECUTION"
+      ]
+    },
+    "ast_invariant_expression": {
+      "type": "string",
+      "description": "Domain-agnostic Python boolean expression validated via ast.NodeVisitor sandbox"
+    },
+    "coupling_threshold": {
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0
+    },
+    "max_decoupled_rent_ratio": {
+      "type": "number",
+      "minimum": 1.0
+    },
+    "domain_evaluations": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "domain_sector",
+          "candidate_id",
+          "coupling_criticality",
+          "spec_parity_satisfied",
+          "provenance_verified",
+          "market_price_usd",
+          "thermodynamic_floor_usd",
+          "computed_rent_ratio",
+          "routing_decision"
+        ],
+        "properties": {
+          "domain_sector": {
+            "type": "string"
+          },
+          "candidate_id": {
+            "type": "string"
+          },
+          "coupling_criticality": {
+            "type": "number",
+            "minimum": 0.0,
+            "maximum": 1.0
+          },
+          "spec_parity_satisfied": {
+            "type": "boolean"
+          },
+          "provenance_verified": {
+            "type": "boolean"
+          },
+          "market_price_usd": {
+            "type": "number",
+            "minimum": 0.0
+          },
+          "thermodynamic_floor_usd": {
+            "type": "number",
+            "exclusiveMinimum": 0.0
+          },
+          "computed_rent_ratio": {
+            "type": "number",
+            "minimum": 0.0
+          },
+          "routing_decision": {
+            "type": "string",
+            "enum": [
+              "APPROVE_AUTONOMOUS_COMMIT",
+              "REJECT_INVARIANT_VIOLATION",
+              "REJECT_PROVENANCE_HAZARD",
+              "REJECT_RENT_EXTRACTION"
+            ]
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "expected_state_hash": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    }
+  },
+  "additionalProperties": false
+}
