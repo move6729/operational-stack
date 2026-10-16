@@ -1,0 +1,121 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://opstack.org/schema/proof_of_stake_filing.json",
+  "title": "ProofOfStakeDualFormatFilingPayload",
+  "type": "object",
+  "required": [
+    "spec_version",
+    "jurisdiction_context",
+    "cfaa_compliance_attestation",
+    "filing_id",
+    "identity_attestation",
+    "capital_stake_escrow",
+    "canonical_ast_graph",
+    "document_compilation_binding"
+  ],
+  "properties": {
+    "spec_version": {
+      "type": "string",
+      "const": "OPEN-POS-DUAL-v1.0"
+    },
+    "jurisdiction_context": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}$"
+    },
+    "cfaa_compliance_attestation": {
+      "type": "boolean",
+      "const": true
+    },
+    "filing_id": {
+      "type": "string"
+    },
+    "identity_attestation": {
+      "type": "object",
+      "required": [
+        "pubkey",
+        "hardware_root_of_trust",
+        "jurisdiction_bar_or_citizen_id"
+      ],
+      "properties": {
+        "pubkey": {
+          "type": "string"
+        },
+        "hardware_root_of_trust": {
+          "type": "boolean",
+          "const": true
+        },
+        "jurisdiction_bar_or_citizen_id": {
+          "type": "string"
+        }
+      }
+    },
+    "capital_stake_escrow": {
+      "type": "object",
+      "required": [
+        "statutory_authority",
+        "stake_amount_usd",
+        "slashing_conditions_acknowledged"
+      ],
+      "properties": {
+        "statutory_authority": {
+          "type": "string",
+          "default": "FRCP_RULE_83_CCP_1030"
+        },
+        "stake_amount_usd": {
+          "type": "number",
+          "minimum": 100.0
+        },
+        "slashing_conditions_acknowledged": {
+          "type": "boolean",
+          "const": true
+        }
+      }
+    },
+    "canonical_ast_graph": {
+      "type": "object",
+      "required": [
+        "statutory_basis",
+        "factual_elements",
+        "citations_valid"
+      ],
+      "properties": {
+        "statutory_basis": {
+          "type": "string"
+        },
+        "factual_elements": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "citations_valid": {
+          "type": "boolean"
+        },
+        "is_frivolous_duplicate": {
+          "type": "boolean"
+        }
+      }
+    },
+    "document_compilation_binding": {
+      "type": "object",
+      "required": [
+        "compiled_pdf_sha256",
+        "compiler_engine",
+        "canonical_priority_declaration"
+      ],
+      "properties": {
+        "compiled_pdf_sha256": {
+          "type": "string"
+        },
+        "compiler_engine": {
+          "type": "string",
+          "default": "typst-v0.11"
+        },
+        "canonical_priority_declaration": {
+          "type": "string",
+          "const": "AST_IS_CANONICAL_SOURCE_OF_TRUTH"
+        }
+      }
+    }
+  }
+}

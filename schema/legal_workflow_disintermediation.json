@@ -1,0 +1,100 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://opstack.org/schema/legal_workflow_disintermediation.json",
+  "title": "LegalWorkflowDisintermediationPayload",
+  "type": "object",
+  "required": [
+    "spec_version",
+    "jurisdiction_context",
+    "cfaa_compliance_attestation",
+    "workflow_id",
+    "local_execution_environment",
+    "pipeline_stages",
+    "verification_signoff"
+  ],
+  "properties": {
+    "spec_version": {
+      "type": "string",
+      "const": "OPEN-WORKFLOW-v1.0"
+    },
+    "jurisdiction_context": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}$"
+    },
+    "cfaa_compliance_attestation": {
+      "type": "boolean",
+      "const": true
+    },
+    "workflow_id": {
+      "type": "string"
+    },
+    "local_execution_environment": {
+      "type": "object",
+      "required": [
+        "is_air_gapped",
+        "inference_engine",
+        "storage_engine"
+      ],
+      "properties": {
+        "is_air_gapped": {
+          "type": "boolean",
+          "const": true
+        },
+        "inference_engine": {
+          "type": "string",
+          "default": "llama.cpp"
+        },
+        "storage_engine": {
+          "type": "string",
+          "default": "DuckDB"
+        }
+      }
+    },
+    "pipeline_stages": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "stage_id",
+          "stage_type",
+          "execution_latency_ms",
+          "cost_usd"
+        ],
+        "properties": {
+          "stage_id": {
+            "type": "string"
+          },
+          "stage_type": {
+            "type": "string"
+          },
+          "execution_latency_ms": {
+            "type": "number"
+          },
+          "cost_usd": {
+            "type": "number",
+            "default": 0.0
+          }
+        }
+      }
+    },
+    "verification_signoff": {
+      "type": "object",
+      "required": [
+        "is_verified",
+        "operator_id",
+        "timestamp"
+      ],
+      "properties": {
+        "is_verified": {
+          "type": "boolean"
+        },
+        "operator_id": {
+          "type": "string"
+        },
+        "timestamp": {
+          "type": "integer"
+        }
+      }
+    }
+  }
+}

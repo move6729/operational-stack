@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://opstack.org/schema/edge_state_ast_task.json",
+  "title": "EdgeStateASTTask",
+  "type": "object",
+  "required": [
+    "spec_version",
+    "jurisdiction_context",
+    "cfaa_compliance_attestation",
+    "task_id",
+    "execution_route",
+    "gas_limit",
+    "state_inputs",
+    "verification_gate"
+  ],
+  "properties": {
+    "spec_version": {
+      "type": "string",
+      "const": "SPEC-2026-DISTRIBUTED-EDGE-STATE-MACHINE-v1.0"
+    },
+    "jurisdiction_context": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}$"
+    },
+    "cfaa_compliance_attestation": {
+      "type": "boolean",
+      "const": true
+    },
+    "task_id": {
+      "type": "string",
+      "pattern": "^0x[a-fA-F0-9]{64}$"
+    },
+    "execution_route": {
+      "type": "string",
+      "enum": [
+        "ZK_PROVER",
+        "OPTIMISTIC_TEE",
+        "LOCAL_ONLY"
+      ]
+    },
+    "gas_limit": {
+      "type": "integer",
+      "minimum": 1000,
+      "maximum": 10000000
+    },
+    "quantization_format": {
+      "type": "string",
+      "enum": [
+        "INT8",
+        "INT4",
+        "Q4_0"
+      ]
+    },
+    "state_inputs": {
+      "type": "object",
+      "required": [
+        "prev_state_hash",
+        "encrypted_payload"
+      ],
+      "properties": {
+        "prev_state_hash": {
+          "type": "string"
+        },
+        "encrypted_payload": {
+          "type": "string"
+        }
+      }
+    },
+    "verification_gate": {
+      "type": "object",
+      "required": [
+        "prover_type",
+        "zk_proof_bytes"
+      ],
+      "properties": {
+        "prover_type": {
+          "type": "string",
+          "enum": [
+            "SP1",
+            "RISC_ZERO",
+            "TEE_ATTESTATION"
+          ]
+        },
+        "zk_proof_bytes": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

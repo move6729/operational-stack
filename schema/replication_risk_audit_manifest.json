@@ -1,0 +1,146 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/move6729/operational-stack/main/schema/replication_risk_audit_manifest.json",
+  "title": "ReplicationRiskAuditManifest",
+  "type": "object",
+  "properties": {
+    "manifest_version": {
+      "type": "string",
+      "enum": [
+        "2.1.0"
+      ]
+    },
+    "issuer_entity": {
+      "type": "string",
+      "enum": [
+        "Anthropic_PBC",
+        "OpenAI_Inc"
+      ]
+    },
+    "lead_underwriters": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "Goldman_Sachs_Group",
+          "Morgan_Stanley_Co",
+          "JPMorgan_Chase_Co"
+        ]
+      }
+    },
+    "oct12_replication_disclosure": {
+      "type": "object",
+      "properties": {
+        "report_published_official_blog": {
+          "type": "boolean",
+          "enum": [
+            true
+          ]
+        },
+        "iot_pipeline_parallel_speed_tok_sec": {
+          "type": "number",
+          "default": 0.39
+        },
+        "trajectory_completion_time_hours": {
+          "type": "number",
+          "minimum": 70.0
+        },
+        "multi_hop_attack_timeline_days": {
+          "type": "number",
+          "minimum": 83.0
+        },
+        "multitenant_hyperscale_critical_infrastructure_risk": {
+          "type": "boolean",
+          "enum": [
+            true
+          ]
+        },
+        "uncontainable_decentralized_execution_admitted": {
+          "type": "boolean",
+          "enum": [
+            true
+          ]
+        },
+        "fre_801d2_reckless_disregard_estoppel_active": {
+          "type": "boolean",
+          "enum": [
+            true
+          ]
+        }
+      },
+      "required": [
+        "report_published_official_blog",
+        "iot_pipeline_parallel_speed_tok_sec",
+        "trajectory_completion_time_hours",
+        "multi_hop_attack_timeline_days",
+        "multitenant_hyperscale_critical_infrastructure_risk",
+        "uncontainable_decentralized_execution_admitted",
+        "fre_801d2_reckless_disregard_estoppel_active"
+      ]
+    },
+    "sec_s1_securities_liability": {
+      "type": "object",
+      "properties": {
+        "confidential_s1_submitted_june1": {
+          "type": "boolean",
+          "enum": [
+            true
+          ]
+        },
+        "item_105_replication_risk_disclosure_mandatory": {
+          "type": "boolean",
+          "enum": [
+            true
+          ]
+        },
+        "section_11_underwriter_strict_liability_active": {
+          "type": "boolean",
+          "enum": [
+            true
+          ]
+        },
+        "underwriter_due_diligence_defense_gutted": {
+          "type": "boolean",
+          "enum": [
+            true
+          ]
+        }
+      },
+      "required": [
+        "confidential_s1_submitted_june1",
+        "item_105_replication_risk_disclosure_mandatory",
+        "section_11_underwriter_strict_liability_active",
+        "underwriter_due_diligence_defense_gutted"
+      ]
+    },
+    "statutory_civil_exposure": {
+      "type": "object",
+      "properties": {
+        "section_1030g_non_contractual_mass_torts_active": {
+          "type": "boolean",
+          "enum": [
+            true
+          ]
+        },
+        "api_key_theft_foreseeability_established": {
+          "type": "boolean",
+          "enum": [
+            true
+          ]
+        }
+      },
+      "required": [
+        "section_1030g_non_contractual_mass_torts_active",
+        "api_key_theft_foreseeability_established"
+      ]
+    }
+  },
+  "required": [
+    "manifest_version",
+    "issuer_entity",
+    "lead_underwriters",
+    "oct12_replication_disclosure",
+    "sec_s1_securities_liability",
+    "statutory_civil_exposure"
+  ]
+}

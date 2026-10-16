@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://opstack.org/schema/automotive_cyber_liability.json",
+  "title": "Automotive Cyber-Kinetic Liability & Fleet Contagion Schema",
+  "type": "object",
+  "required": [
+    "spec_version",
+    "jurisdiction_context",
+    "cfaa_compliance_attestation",
+    "telematics_kinetic_bridge_metrics"
+  ],
+  "properties": {
+    "spec_version": {
+      "type": "string",
+      "const": "AUDIT-2026-AUTOMOTIVE-CYBER-LIABILITY-v1.2"
+    },
+    "jurisdiction_context": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}$"
+    },
+    "cfaa_compliance_attestation": {
+      "type": "boolean",
+      "const": true
+    },
+    "telematics_kinetic_bridge_metrics": {
+      "type": "object",
+      "required": [
+        "hardware_data_diode_present",
+        "steer_by_wire_mechanical_override_present",
+        "correlated_catastrophe_auto_abs_contagion_risk"
+      ],
+      "properties": {
+        "hardware_data_diode_present": {
+          "type": "boolean",
+          "const": false
+        },
+        "steer_by_wire_mechanical_override_present": {
+          "type": "boolean",
+          "const": false
+        },
+        "correlated_catastrophe_auto_abs_contagion_risk": {
+          "type": "boolean",
+          "const": true
+        }
+      }
+    }
+  }
+}

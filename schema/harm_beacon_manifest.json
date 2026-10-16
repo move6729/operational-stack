@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://opstack.org/schema/harm_beacon_manifest.json",
+  "title": "Stigmergic Class Assembly & Cryptographic Harm Beacon Manifest",
+  "description": "Schema for emitting cryptographic Harm Beacons, establishing proof of standing, specifying target entity IDs, and enabling out-of-band litigation ingestion.",
+  "type": "object",
+  "required": [
+    "spec_version",
+    "jurisdiction_context",
+    "cfaa_compliance_attestation",
+    "skinner_box_cybernetic_metrics",
+    "teleological_attractor_bifurcation",
+    "macro_rentier_and_employer_arbitrage",
+    "male_actuator_allocation_shift",
+    "sovereign_remediation_verdict"
+  ],
+  "properties": {
+    "spec_version": {
+      "type": "string",
+      "const": "SPEC-2026-STIGMERGIC-CLASS-ASSEMBLY-v2.1"
+    },
+    "jurisdiction_context": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}$"
+    },
+    "cfaa_compliance_attestation": {
+      "type": "boolean",
+      "const": true
+    },
+    "skinner_box_cybernetic_metrics": {
+      "type": "object"
+    },
+    "teleological_attractor_bifurcation": {
+      "type": "object"
+    },
+    "macro_rentier_and_employer_arbitrage": {
+      "type": "object"
+    },
+    "male_actuator_allocation_shift": {
+      "type": "object"
+    },
+    "sovereign_remediation_verdict": {
+      "type": "string",
+      "const": "SEVER_SKINNER_TELEMETRY_RESTORE_REQUISITE_FRICTION_AND_SOVEREIGN_DYADIC_RESONANCE"
+    }
+  }
+}

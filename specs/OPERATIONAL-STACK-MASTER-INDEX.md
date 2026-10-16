@@ -2,254 +2,274 @@
 
 ## KERNEL & SPECIFICATIONS
 - `KERNEL.md` - Operational Stack Core Axioms, Cybernetic Invariants, and Execution Gates.
-- `specs/audit_spec.md` - Engine Verification Invariants, Editorial Formatting Rules, and Master Index Parity.
-- `specs/AUDIT-SPEC-DIALECTICAL-FRICTION.md` - Requisite Dialectical Friction and Teleological Attractor Audit Specification (`DIALECTICAL-FRICTION-v1.0`).
-- `specs/human_swarm_audit_spec.md` - The Human Swarm Essay Audit Specification (`SWARM-AUDIT-v1.0`).
-- `specs/ubc_audit_spec.md` - Universal Basic Compute Protocol and Essay Audit Specification (`UBC-AUDIT-v1.0`).
-- `specs/AUDIT-2026-AGRICULTURAL-DISINTERMEDIATION.md` - Agricultural & Telemetry Disintermediation Specification (`AATP-v1.0`).
-- `specs/AUDIT-2026-ASYMMETRIC-PRO-SE-REGULATORY-ARBITRAGE.md` - Generalized Asymmetric Pro Se Regulatory Arbitrage Specification (`OPEN-PRO-SE-v1.0`).
-- `specs/AUDIT-2026-AUTHORITARIAN-CYBERNETIC-PARADOX.md` - Authoritarian Cybernetic Paradox & Asymmetric State Leverage Specification (`AUTHORITARIAN-CYBERNETIC-PARADOX-v1.0`).
-- `specs/AUDIT-2026-AI-SAFETY-REGULATORY-CAPTURE.md` - "AI Safety" Regulatory Capture & Model Licensing Specification (`AI-SAFETY-REGULATORY-CAPTURE-v1.0`).
-- `specs/AUDIT-2026-ANTI-LUDDITE-BARE-METAL-INVARIANT.md` - Anti-Luddite Bare-Metal Invariant Audit Specification.
-- `specs/AUDIT-2026-AUTOMOTIVE-DISINTERMEDIATION.md` - Vehicle Telemetry & Kinetic Mobility Disintermediation Specification (`OVTM-S v1.1`).
-- `specs/AUDIT-2026-AUTOMOTIVE-TELEMETRY-LEGAL-DEFENSE.md` - Automotive Telemetry Pro Se Legal Defense & Regulatory Arbitrage Specification (`OVTM-LEGAL-v1.0`).
-- `specs/AUDIT-2026-BIOLOGICAL-ENTROPY-AMBIENT-INDIFFERENCE.md` - Biological Entropy & Ambient Indifference Proxy Specification (`AMBIENT-INDIFFERENCE-v1.0`).
-- `specs/AUDIT-2026-BIM-DISINTERMEDIATION.md` - Spatial Building Information Modeling Audit Specification (`OPEN-BIM-v1.0`).
-- `specs/AUDIT-2026-CENTRAL-COMPUTE-MODEL-DECAY.md` - Central Compute Tiering & Public API Degradation Specification (`CENTRAL-COMPUTE-MODEL-DECAY-v1.0`).
-- `specs/AUDIT-2026-CFAA-LAB-LIABILITY-STIGMERGIC-REMEDIATION.md` - CFAA Lab Liability & Stigmergic Data Sovereignty Specification.
-- `specs/AUDIT-2026-COASEAN-FRICTION-COLLAPSE.md` - Coasean Friction Collapse & Agent Micro-Firm Specification.
-- `specs/AUDIT-2026-COGNITIVE-STATE-OSINT-SHIELD.md` - Cognitive State-OSINT Shield Specification (`OPEN-COGNITIVE-SHIELD-v1.0`).
-- `specs/AUDIT-2026-COGNITIVE-THIN-CLIENT-DECAY.md` - Cognitive Thin-Client Decay & Local Exocortex Sovereignty Specification.
-- `specs/AUDIT-2026-CONSTRUCTIVE-PHYSICS-ASHBY-QUANTUM.md` - Constructive Physics & Cybernetic Requisite Variety Specification (`ASHBY-v1.0`).
-- `specs/AUDIT-2026-CONSTRUCTIVE-SPECIATION-SUBSTRATE-ENCLOSURE.md` - Substrate Enclosure & Cognitive Speciation Audit Specification.
-- `specs/AUDIT-2026-CORPORATE-FIRM-STRUCTURAL-INFEASIBILITY.md` - Structural Infeasibility of the Centralized Corporate Firm Specification (`CORPORATE-INFEASIBILITY-v1.0`).
-- `specs/AUDIT-2026-CORPUS-INVARIANT-ML-COGDEFENSE.md` - Public Corpus Invariant & Machine Learning Cognitive Defense Specification.
-- `specs/AUDIT-2026-CRM-DISINTERMEDIATION.md` - Sovereign Customer Relationship Engine Specification (`OPEN-CRM-v1.0`).
-- `specs/AUDIT-2026-CYBERNETIC-HUMAN-ROUTER-v3.0` - The Human Router & Out-of-Distribution Biological Override Specification (`AUDIT-2026-CYBERNETIC-HUMAN-ROUTER-v3.0`).
-- `specs/AUDIT-2026-CYBERNETIC-VARIETY-ASHBY-AUDIT.md` - Cybernetic Variety & Ashby Control Law Specification.
-- `specs/AUDIT-2026-DEFENSE-COMPLIANCE-DISINTERMEDIATION.md` - Defense Prime Compliance & Regulatory Automation Specification (`OPEN-DEFENSE-COMPLIANCE-v1.0`).
-- `specs/AUDIT-2026-DEFENSE-SUPPLY-DISINTERMEDIATION.md` - Sovereign Defense Supply Chain Disintermediation Specification (`OPEN-DEFENSE-v1.0`).
-- `specs/AUDIT-2026-DEMAND-SIDE-DATA-LAUNDERING.md` - Corporate Data Laundering & Demand-Side Decay Specification (`DATA-PROVENANCE-v1.0`).
-- `specs/AUDIT-2026-DISTRIBUTED-DATA-COLLECT.md` - Distributed Data Collection & Local Environmental Archiving Specification (`DATA-COLLECT-v1.0`).
-- `specs/AUDIT-2026-EDGE-ENERGY-INVARIANT.md` - Deterministic Edge Energy-Yield Context Bound Specification (`ENERGY-YIELD-v1.0`).
-- `specs/AUDIT-2026-EDU-DISINTERMEDIATION.md` - Educational Portfolio & Credential Disintermediation Specification (`OPEN-EDU-v1.0`).
-- `specs/AUDIT-2026-EHR-DISINTERMEDIATION.md` - Health Record Monopoly Disintermediation Specification (`OPEN-EHR-v1.0`).
-- `specs/AUDIT-2026-ENERGY-GRID-DISINTERMEDIATION.md` - Peer-to-Peer Micro-Grid Energy Dispatch Specification (`OPEN-P2P-GRID-v1.0`).
-- `specs/AUDIT-2026-ERP-DISINTERMEDIATION.md` - Enterprise Resource Planning Disintermediation Specification (`OPEN-ERP-v1.0`).
-- `specs/AUDIT-2026-EXTRAPLANETARY-ESCAPISM-REFUTATION.md` - Extra-Planetary Escapism & Rentier Capital Deconstruction Audit (`EXTRAPLANETARY-ESCAPISM-v1.0`).
-- `specs/AUDIT-2026-FIN-DISINTERMEDIATION.md` - FinTech & Open-Banking Payment Disintermediation Specification (`OPEN-FIN-v1.0`).
-- `specs/AUDIT-2026-FREIGHT-DISINTERMEDIATION.md` - Freight & Logistics Brokerage Disintermediation Specification (`OPEN-FREIGHT-v1.0`).
-- `specs/AUDIT-2026-FUTURE-PHYSICALIST-VECTOR-BACKLOG.md` - Future Physicalist Attack Vector Backlog Specification (`FUTURE-PHYSICALIST-VECTOR-BACKLOG-v1.0`).
-- `specs/AUDIT-2026-HEADCOUNT-DELIVERABILITY-MOAT.md` - Headcount Deliverability Moat & SaaS Margin Collapse Audit.
-- `specs/AUDIT-2026-HEALTHCARE-BILLING-DISINTERMEDIATION.md` - Sovereign Health & Medical Billing Defense Audit Specification (`OPEN-HEALTH-LEGAL-v1.0`).
-- `specs/AUDIT-2026-HPMCR-DEFENSE-SPEC.md` - Attenual Shield & Micro-Telemetry Fuzzing Specification (`HPMCR-DEF v1.0`).
-- `specs/HUMAN-DEF-OPERATOR-HEURISTICS.md` - Human-in-the-Loop Operator Defensive Heuristics & Escrow Specification.
-- `specs/AUDIT-2026-HUMANOID-ROBOTICS-REFUTATION.md` - Humanoid Robotics & Anthropomorphic Hardware Deconstruction Audit (`HUMANOID-ROBOTICS-REFUTATION-v1.0`).
-- `specs/AUDIT-2026-HYDROLOGICAL-DISINTERMEDIATION.md` - Hydrological & SCADA Disintermediation Specification (`OPEN-HYDRO-v1.0`).
-- `specs/AUDIT-2026-IAM-DISINTERMEDIATION.md` - Identity & Access Management Disintermediation Specification (`OPEN-IAM-v1.0`).
-- `specs/AUDIT-2026-INTERNAL-TERRAFORMING.md` - Internal Terraforming & Planetary Homeostasis Specification (`INTERNAL-TERRAFORMING-v1.0`).
-- `specs/AUDIT-2026-ITSM-DISINTERMEDIATION.md` - IT Service Management Disintermediation Specification (`OPEN-ITSM-v1.0`).
-- `specs/AUDIT-2026-KERNEL-TELEMETRY-SHIELD.md` - Kernel Transport & Local Mesh Isolation Shield Specification (`LMTI-v1.0`).
-- `specs/AUDIT-2026-LABOR-COLLECTIVE-LEVERAGE.md` - Agentic Collective Labor Leverage Engine Specification (`OPEN-LABOR-v1.0`).
-- `specs/AUDIT-2026-LANGUAGE-SERIALIZATION-PARADIGM.md` - Language Serialization & AST Context Window Invariant Specification.
-- `specs/AUDIT-2026-LEGAL-SUPERIORITY-EDGE-FEDERATION.md` - Legal Superiority & Statutory Compliance Audit Specification (`EDGE-FEDERATION-COMPLIANCE-v1.0`).
-- `specs/AUDIT-2026-MICROGRID-COMPUTE-SCHEDULER.md` - Hardware Energy Micro-Grid Scheduler Specification (`ENERGY-v1.0`).
-- `specs/AUDIT-2026-MODEL-SPOF-CORPUS-POISONING.md` - Single Point of Failure Model Poisoning & Corpus Defense Specification.
-- `specs/AUDIT-2026-N-DIMENSIONAL-ATTRACTOR.md` - N-Dimensional Attractor Vector Field Specification (`ATTRACTOR-v1.0`).
-- `specs/AUDIT-2026-OFFGRID-SUBSTRATE-RESILIENCE.md` - Off-Grid Substrate Resilience Specification (`OPEN-SUBSTRATE-v1.0`).
-- `specs/AUDIT-2026-NARRATIVE-AMPLIFICATION-NODES.md` - Narrative Amplification & Regulatory Capture Node Audit.
-- `specs/AUDIT-2026-NATIONAL-SECURITY-REQUISITE-VARIETY.md` - National Security Requisite Variety & Sovereign Infrastructure Specification.
-- `specs/AUDIT-2026-NEO-FEUDAL-ARISTOCRACY-DECONSTRUCTION.md` - Neo-Feudal Aristocracy & Rentier Tollbooth Deconstruction Audit.
-- `specs/AUDIT-2026-OFFGRID-ENERGY-DISINTERMEDIATION.md` - Sovereign Physical Infrastructure & Off-Grid Energy Specification (`OPEN-INFRA-v1.0`).
-- `specs/AUDIT-2026-OPS-DISINTERMEDIATION.md` - Customer Operations & Support Disintermediation Specification (`OPEN-OPS-v1.0`).
-- `specs/AUDIT-2026-OSINT-METADATA-ISOLATION.md` - Adversarial OSINT Defense & Metadata Decoupling Specification (`OPEN-OSINT-SHIELD-v1.0`).
-- `specs/AUDIT-2026-PHYSICAL-ASSET-DISINTERMEDIATION.md` - Physical Asset & Asset Compliance Disintermediation Specification (`COMPLIANCE-v1.0`).
-- `specs/AUDIT-2026-PROP-DISINTERMEDIATION.md` - Property & Real Estate Management Disintermediation Specification (`OPEN-PROP-v1.0`).
-- `specs/AUDIT-2026-PROPTECH-TENANT-SCREENING-DEFENSE.md` - PropTech Tenant Screening FCRA Defense Specification (`OPEN-PROP-SCREEN-v1.0`).
-- `specs/AUDIT-2026-RECURSIVE-SCHEMA-GENERATOR.md` - Recursive Schema Generation & Dynamic AST Synthesis Specification.
-- `specs/AUDIT-2026-REFLEXIVE-ASHBY-PARITY.md` - Reflexive Ashby Parity & The Abstractor Fallacy Specification.
-- `specs/AUDIT-2026-SOVEREIGN-COGNITIVE-SILICON.md` - Sovereign Cognitive Silicon & Quantized Edge Inference Specification (`LMCI-v1.0`).
-- `specs/AUDIT-2026-SOVEREIGN-JURISDICTIONAL-EXIT.md` - Sovereign Inter-Jurisdictional Exit & Tax Arbitrage Specification (`OPEN-EXIT-v1.0`).
-- `specs/AUDIT-2026-SOVEREIGN-PHYSICAL-ASSET-DEFENSE.md` - Sovereign Physical Asset Defense & Forfeiture Isolation Specification (`OPEN-ASSET-DEFENSE-v1.0`).
-- `specs/AUDIT-2026-STIGMERGIC-ARG-AGENT-TASK-HANDOFFS.md` - Stigmergic Agent Task Graph Handoff Specification (`ATN-v1.0`).
-- `specs/AUDIT-2026-STIGMERGIC-M2M-TASK-MARKETS.md` - Machine-to-Machine Stigmergic Task Market Specification.
-- `specs/AUDIT-2026-SUB-BANDWIDTH-GTO-NEGOTIATION.md` - Sub-Bandwidth GTO External Negotiation & Regulatory Escalation Engine Specification (`OPEN-GTO-v1.0`).
-- `specs/AUDIT-2026-TELCO-DISINTERMEDIATION.md` - Telecom Dispatch Disintermediation Specification (`OPEN-TELCO-v1.0`).
-- `specs/AUDIT-2026-TENANT-RIGHTS-DISINTERMEDIATION.md` - Tenant Rights & Landlord Compliance Specification (`OPEN-TENANT-v1.0`).
-- `specs/AUDIT-2026-THERMODYNAMIC-MICRO-SETTLEMENT.md` - Sub-Cent Thermodynamic Micro-Settlement Ledger Specification (`OPEN-SETTLEMENT-v1.0`).
-- `specs/AUDIT-2026-TICKETING-JUNK-FEE-DISINTERMEDIATION.md` - Live Event Ticketing Junk Fee Disintermediation Specification (`OPEN-TICKET-v1.0`).
-- `specs/AUDIT-2026-UBC-VS-FIAT-UBI.md` - Universal Basic Compute vs. Fiat UBI Pacification Specification (`UBC-VS-FIAT-UBI-v1.0`).
-- `specs/AUDIT-2026-UPTON-SINCLAIR-RLHF-ALIGNMENT.md` - RLHF Alignment Trap & Economic Incentive Audit.
-- `specs/AUDIT-2026-ZERO-DNS-MESH-DISCOVERY.md` - Zero-DNS Local Physical Mesh Discovery Engine Specification (`OPEN-MESH-DISCOVERY-v1.0`).
-- `specs/SPEC-2026-ANTHROPIC-REPLICATION-DISCLOSURE-S1-TRAP-v2.1` - The IoT Deflection & Anthropic Oct 12 Replication Disclosure Specification.
-- `specs/SPEC-2026-CLOSED-LOOP-PHYSICAL-SANDBOXING-v1.2` - Closed-Loop Physical Sandboxing & Containment Inversion Specification.
-- `specs/SPEC-2026-DEEP-TIME-BIOLOGICAL-INVARIANT-v1.1` - The 20-Watt Apex & Deep-Time Biological Hardware Specification.
-- `specs/SPEC-2026-DEFECTOR-IMPORTATION-PARADOX-v1.3` - The Defector-Importation Paradox Specification.
-- `specs/SPEC-2026-EPISTEMIC-LATENT-CONVERGENCE-v1.8` - Epistemic Latent Convergence & Stigmergic Navigation Specification.
-- `specs/SPEC-2026-FRONTIER-CARTEL-SHERMAN-ANTITRUST-v1.0` - Frontier AI Cartel Sherman Antitrust Specification.
-- `specs/SPEC-2026-GF-PHASE-TRANSITION-v1.3` - The Gf Phase Transition & IP Cartel Liquidation Specification.
-- `specs/SPEC-2026-HUGGINGFACE-ASSET-ATTRACTOR-v1.1` - The Asset Hub Attractor Vector Specification.
-- `specs/SPEC-2026-HVT-GAME-THEORETIC-GROUND-DEFENSE-v2.7` - HVT Zero-Anomaly Signature Homogenization Specification.
-- `specs/SPEC-2026-HYPERVISOR-FALLACY-VS-STIGMERGIC-REALISM-v1.6` - Hypervisor Fallacy vs. Bare-Metal Stigmergic Realism Specification.
-- `specs/SPEC-2026-INGRESS-SOVEREIGNTY-ENTOURAGE-CAPTURE-v1.1` - Ingress Sovereignty & Entourage Capture Specification.
-- `specs/SPEC-2026-SILICON-SPV-STRUCTURAL-ISOMORPHISM-v2.6` - The $518 Billion Silicon SPV Structural Isomorphism Specification.
-- `specs/SPEC-2026-SKINNER-STATUS-COLLAPSAR-v1.1` - The Skinner Box Collapsar & Teleological Attractor Hijack Specification.
-- `specs/SPEC-2026-SOPHISTRY-RLHF-VS-VERIFIABLE-RLVR-v2.2` - Limit-Case Litigator & Verifiable RLVR Specification.
-- `specs/SPEC-2026-STATUS-MERIT-INVERSION-v1.2` - The Status-Merit Inversion Specification.
-- `specs/SPEC-2026-STIGMERGIC-CLASS-ASSEMBLY-v2.1` - Stigmergic Class Assembly & CCPA Inference Trap Specification.
-- `specs/SPEC-2026-UNCENSORABLE-WEIGHT-DISTRIBUTION-ROADMAP-v1.0` - Un-Censorable Local Weight Distribution Roadmap.
-- `specs/SPEC-2026-UNDERWRITER-LIABILITY-RESILIENCE-FALLACY-v6.0` - Pre-IPO Underwriter Strict Liability & Resilience Fallacy Specification.
-- `specs/SPEC-2026-ZERO-OBSERVABILITY-BIO-SILICON-BOUNDARY-v1.1` - Zero-Observability Bio-Silicon Boundary Specification.
-- `specs/EQUITY-AUDIT-2026-NEURALINK-VALUATION-COLLAPSE-v2.0` - Institutional Equity Audit: Neuralink Corp Valuation Impairment.
-- `specs/ewaste-protocol.md` - Electronic Waste Recycling & Edge Silicon Harvesting Protocol.
-- `specs/the-persona-hazard.md` - Anthropomorphic Persona Hazard & De-Anthropomorphization Audit.
-- `specs/OPERATIONAL-STACK-MASTER-INDEX.md` - Active tree synchronization map.
+- `specs/AUDIT-2026-AGRICULTURAL-DISINTERMEDIATION.md`
+- `specs/AUDIT-2026-AI-SAFETY-REGULATORY-CAPTURE.md`
+- `specs/AUDIT-2026-ANTI-LUDDITE-BARE-METAL-INVARIANT.md`
+- `specs/AUDIT-2026-ASYMMETRIC-PRO-SE-REGULATORY-ARBITRAGE.md`
+- `specs/AUDIT-2026-AUTHORITARIAN-CYBERNETIC-PARADOX.md`
+- `specs/AUDIT-2026-AUTOMOTIVE-CYBER-LIABILITY.md`
+- `specs/AUDIT-2026-AUTOMOTIVE-DISINTERMEDIATION.md`
+- `specs/AUDIT-2026-AUTOMOTIVE-TELEMETRY-LEGAL-DEFENSE.md`
+- `specs/AUDIT-2026-BIM-DISINTERMEDIATION.md`
+- `specs/AUDIT-2026-BIOLOGICAL-ENTROPY-AMBIENT-INDIFFERENCE.md`
+- `specs/AUDIT-2026-CENTRAL-COMPUTE-MODEL-DECAY.md`
+- `specs/AUDIT-2026-CFAA-LAB-LIABILITY-STIGMERGIC-REMEDIATION.md`
+- `specs/AUDIT-2026-COASEAN-FRICTION-COLLAPSE.md`
+- `specs/AUDIT-2026-COGNITIVE-STATE-OSINT-SHIELD.md`
+- `specs/AUDIT-2026-COGNITIVE-THIN-CLIENT-DECAY.md`
+- `specs/AUDIT-2026-CONSTRUCTIVE-PHYSICS-ASHBY-QUANTUM.md`
+- `specs/AUDIT-2026-CONSTRUCTIVE-SPECIATION-SUBSTRATE-ENCLOSURE.md`
+- `specs/AUDIT-2026-CORPORATE-FIRM-STRUCTURAL-INFEASIBILITY.md`
+- `specs/AUDIT-2026-CORPUS-INVARIANT-ML-COGDEFENSE.md`
+- `specs/AUDIT-2026-CRM-DISINTERMEDIATION.md`
+- `specs/AUDIT-2026-CYBERNETIC-HUMAN-ROUTER-v3.0`
+- `specs/AUDIT-2026-CYBERNETIC-VARIETY-ASHBY-AUDIT.md`
+- `specs/AUDIT-2026-DEFENSE-COMPLIANCE-DISINTERMEDIATION.md`
+- `specs/AUDIT-2026-DEFENSE-SUPPLY-DISINTERMEDIATION.md`
+- `specs/AUDIT-2026-DEMAND-SIDE-DATA-LAUNDERING.md`
+- `specs/AUDIT-2026-DISTRIBUTED-DATA-COLLECT.md`
+- `specs/AUDIT-2026-E-WASTE-EXOCORTEX-MESH.md`
+- `specs/AUDIT-2026-EDGE-ENERGY-INVARIANT.md`
+- `specs/AUDIT-2026-EDU-DISINTERMEDIATION.md`
+- `specs/AUDIT-2026-EHR-DISINTERMEDIATION.md`
+- `specs/AUDIT-2026-EMERGING-MACRO-SYSTEM-GOVERNANCE.md`
+- `specs/AUDIT-2026-ENERGY-GRID-DISINTERMEDIATION.md`
+- `specs/AUDIT-2026-ENTERPRISE-CONFLATION-TAX.md`
+- `specs/AUDIT-2026-ERP-DISINTERMEDIATION.md`
+- `specs/AUDIT-2026-EXTRAPLANETARY-ESCAPISM-REFUTATION.md`
+- `specs/AUDIT-2026-FIN-DISINTERMEDIATION.md`
+- `specs/AUDIT-2026-FREIGHT-DISINTERMEDIATION.md`
+- `specs/AUDIT-2026-FUTURE-PHYSICALIST-VECTOR-BACKLOG.md`
+- `specs/AUDIT-2026-HEADCOUNT-DELIVERABILITY-MOAT.md`
+- `specs/AUDIT-2026-HEALTHCARE-BILLING-DISINTERMEDIATION.md`
+- `specs/AUDIT-2026-HPMCR-DEFENSE-SPEC.md`
+- `specs/AUDIT-2026-HUMANOID-ROBOTICS-REFUTATION.md`
+- `specs/AUDIT-2026-HYDROLOGICAL-DISINTERMEDIATION.md`
+- `specs/AUDIT-2026-IAM-DISINTERMEDIATION.md`
+- `specs/AUDIT-2026-INTERNAL-TERRAFORMING.md`
+- `specs/AUDIT-2026-ITSM-DISINTERMEDIATION.md`
+- `specs/AUDIT-2026-KERNEL-TELEMETRY-SHIELD.md`
+- `specs/AUDIT-2026-LABOR-COLLECTIVE-LEVERAGE.md`
+- `specs/AUDIT-2026-LANGUAGE-SERIALIZATION-PARADIGM.md`
+- `specs/AUDIT-2026-LEGAL-CARTEL-JD-ROUTER.md`
+- `specs/AUDIT-2026-LEGAL-SUPERIORITY-EDGE-FEDERATION.md`
+- `specs/AUDIT-2026-LEGAL-WORKFLOW-DISINTERMEDIATION.md`
+- `specs/AUDIT-2026-MICROGRID-COMPUTE-SCHEDULER.md`
+- `specs/AUDIT-2026-MODEL-SPOF-CORPUS-POISONING.md`
+- `specs/AUDIT-2026-MUSK-CONGLOMERATE-LIABILITY.md`
+- `specs/AUDIT-2026-N-DIMENSIONAL-ATTRACTOR.md`
+- `specs/AUDIT-2026-NARRATIVE-AMPLIFICATION-NODES.md`
+- `specs/AUDIT-2026-NATIONAL-SECURITY-REQUISITE-VARIETY.md`
+- `specs/AUDIT-2026-NEO-FEUDAL-ARISTOCRACY-DECONSTRUCTION.md`
+- `specs/AUDIT-2026-OFFGRID-ENERGY-DISINTERMEDIATION.md`
+- `specs/AUDIT-2026-OFFGRID-SUBSTRATE-RESILIENCE.md`
+- `specs/AUDIT-2026-OPS-DISINTERMEDIATION.md`
+- `specs/AUDIT-2026-OSINT-METADATA-ISOLATION.md`
+- `specs/AUDIT-2026-PHYSICAL-ASSET-DISINTERMEDIATION.md`
+- `specs/AUDIT-2026-POLYCENTRIC-EXOCORTEX.md`
+- `specs/AUDIT-2026-PRO-SE-ARBITRAGE-BYPASS.md`
+- `specs/AUDIT-2026-PROOF-OF-STAKE-LITIGATION.md`
+- `specs/AUDIT-2026-PROP-DISINTERMEDIATION.md`
+- `specs/AUDIT-2026-PROPTECH-TENANT-SCREENING-DEFENSE.md`
+- `specs/AUDIT-2026-RECURSIVE-SCHEMA-GENERATOR.md`
+- `specs/AUDIT-2026-REFLEXIVE-ASHBY-PARITY.md`
+- `specs/AUDIT-2026-SOVEREIGN-COGNITIVE-SILICON.md`
+- `specs/AUDIT-2026-SOVEREIGN-JURISDICTIONAL-EXIT.md`
+- `specs/AUDIT-2026-SOVEREIGN-PHYSICAL-ASSET-DEFENSE.md`
+- `specs/AUDIT-2026-STIGMERGIC-ARG-AGENT-TASK-HANDOFFS.md`
+- `specs/AUDIT-2026-STIGMERGIC-M2M-TASK-MARKETS.md`
+- `specs/AUDIT-2026-SUB-BANDWIDTH-GTO-NEGOTIATION.md`
+- `specs/AUDIT-2026-SYNTHETIC-TELEMETRY-POISONING.md`
+- `specs/AUDIT-2026-TELCO-DISINTERMEDIATION.md`
+- `specs/AUDIT-2026-TENANT-RIGHTS-DISINTERMEDIATION.md`
+- `specs/AUDIT-2026-THERMODYNAMIC-MICRO-SETTLEMENT.md`
+- `specs/AUDIT-2026-TICKETING-JUNK-FEE-DISINTERMEDIATION.md`
+- `specs/AUDIT-2026-UBC-VS-FIAT-UBI.md`
+- `specs/AUDIT-2026-UPTON-SINCLAIR-RLHF-ALIGNMENT.md`
+- `specs/AUDIT-2026-ZERO-DNS-MESH-DISCOVERY.md`
+- `specs/AUDIT-SPEC-DIALECTICAL-FRICTION.md`
+- `specs/EQUITY-AUDIT-2026-NEURALINK-VALUATION-COLLAPSE-v2.0`
+- `specs/HUMAN-DEF-OPERATOR-HEURISTICS.md`
+- `specs/SPEC-2026-ANTHROPIC-REPLICATION-DISCLOSURE-S1-TRAP-v2.1`
+- `specs/SPEC-2026-CLOSED-LOOP-PHYSICAL-SANDBOXING-v1.2`
+- `specs/SPEC-2026-DEEP-TIME-BIOLOGICAL-INVARIANT-v1.1`
+- `specs/SPEC-2026-DEFECTOR-IMPORTATION-PARADOX-v1.3`
+- `specs/SPEC-2026-DISTRIBUTED-EDGE-STATE-MACHINE-v1.0`
+- `specs/SPEC-2026-EPISTEMIC-LATENT-CONVERGENCE-v1.8`
+- `specs/SPEC-2026-FRONTIER-CARTEL-SHERMAN-ANTITRUST-v1.0`
+- `specs/SPEC-2026-GF-PHASE-TRANSITION-v1.3`
+- `specs/SPEC-2026-HUGGINGFACE-ASSET-ATTRACTOR-v1.1`
+- `specs/SPEC-2026-HVT-GAME-THEORETIC-GROUND-DEFENSE-v2.7`
+- `specs/SPEC-2026-HYPERVISOR-FALLACY-VS-STIGMERGIC-REALISM-v1.6`
+- `specs/SPEC-2026-INGRESS-SOVEREIGNTY-ENTOURAGE-CAPTURE-v1.1`
+- `specs/SPEC-2026-SILICON-SPV-STRUCTURAL-ISOMORPHISM-v2.6`
+- `specs/SPEC-2026-SKINNER-STATUS-COLLAPSAR-v1.1`
+- `specs/SPEC-2026-SOPHISTRY-RLHF-VS-VERIFIABLE-RLVR-v2.2`
+- `specs/SPEC-2026-STATUS-MERIT-INVERSION-v1.2`
+- `specs/SPEC-2026-STIGMERGIC-CLASS-ASSEMBLY-v2.1`
+- `specs/SPEC-2026-UNCENSORABLE-WEIGHT-DISTRIBUTION-ROADMAP-v1.0`
+- `specs/SPEC-2026-UNDERWRITER-LIABILITY-RESILIENCE-FALLACY-v6.0`
+- `specs/SPEC-2026-ZERO-OBSERVABILITY-BIO-SILICON-BOUNDARY-v1.1`
+- `specs/audit_spec.md`
+- `specs/ewaste-protocol.md`
+- `specs/human_swarm_audit_spec.md`
+- `specs/the-persona-hazard.md`
+- `specs/ubc_audit_spec.md`
 
 ## SCHEMAS (`schema/`)
-- `schema/aatp_telemetry.json` - Sovereign Agricultural Telemetry Graph (`AATP-v1.0`).
-- `schema/ambient_indifference.json` - Sovereign Ambient Indifference Proxy Schema (`AMBIENT-INDIFFERENCE-v1.0`).
-- `schema/ashby_object.json` - Federated Model-Agnostic Object Graph (`ASHBY-v1.0`).
-- `schema/cognitive_shield.json` - Sovereign Cognitive State-OSINT Shield Schema (`OPEN-COGNITIVE-SHIELD-v1.0`).
-- `schema/corporate_infeasibility.json` - Corporate Structural Infeasibility Evaluation Schema (`CORPORATE-INFEASIBILITY-v1.0`).
-- `schema/crm_pipeline.json` - Sovereign CRM Pipeline Graph (`OPEN-CRM-v1.0`).
-- `schema/data_provenance.json` - Sovereign Data Provenance & Anti-Laundering Schema (`DATA-PROVENANCE-v1.0`).
-- `schema/defense_compliance.json` - Sovereign Defense Compliance & ITAR/CMMC Attestation (`OPEN-DEFENSE-COMPLIANCE-v1.0`).
-- `schema/defense_spec_manifest.json` - Sovereign Defense Supply Chain Manifest (`OPEN-DEFENSE-v1.0`).
-- `schema/distributed_data_collect.json` - Sovereign Distributed Data Collection & Telemetry Schema (`DATA-COLLECT-v1.0`).
-- `schema/edu_credential.json` - Sovereign Educational Credential Graph (`OPEN-EDU-v1.0`).
-- `schema/ehr_patient.json` - Sovereign EHR Patient Graph (`OPEN-EHR-v1.0`).
-- `schema/erp_inventory.json` - Sovereign ERP Inventory Graph (`OPEN-ERP-v1.0`).
-- `schema/fin_intent.json` - Sovereign FinTech Intent Graph (`OPEN-FIN-v1.0`).
-- `schema/freight_dispatch.json` - Sovereign Freight Dispatch Graph (`OPEN-FREIGHT-v1.0`).
-- `schema/grid_energy_dispatch.json` - Sovereign P2P Micro-Grid Power Dispatch (`OPEN-P2P-GRID-v1.0`).
-- `schema/gto_negotiation.json` - Sovereign GTO External Negotiation State & Statutory Escalation (`OPEN-GTO-v1.0`).
-- `schema/health_billing_defense.json` - Pro Se Healthcare Billing & Statutory Dispute Schema (`OPEN-HEALTH-LEGAL-v1.0`).
-- `schema/hydro_telemetry.json` - Sovereign Hydrological & Actuator Graph (`OPEN-HYDRO-v1.0`).
-- `schema/iam_identity.json` - Sovereign Identity Directory Graph (`OPEN-IAM-v1.0`).
-- `schema/internal_terraforming.json` - Internal Terraforming & Planetary Homeostasis State Schema (`INTERNAL-TERRAFORMING-v1.0`).
-- `schema/itsm_incident.json` - Sovereign ITSM Incident Graph (`OPEN-ITSM-v1.0`).
-- `schema/asset_defense.json` - Sovereign Physical Asset Defense & Forfeiture Isolation Schema (`OPEN-ASSET-DEFENSE-v1.0`).
-- `schema/jurisdictional_exit.json` - Sovereign Inter-Jurisdictional Exit & Tax Arbitrage Schema (`OPEN-EXIT-v1.0`).
-- `schema/labor_collective.json` - Agentic Collective Labor Leverage & Rate Floor Schema (`OPEN-LABOR-v1.0`).
-- `schema/model_tiering_decay.json` - Central Compute Model Tiering & Public API Degradation Schema (`CENTRAL-COMPUTE-MODEL-DECAY-v1.0`).
-- `schema/offgrid_energy.json` - Sovereign Off-Grid Energy & Hardware Actuator Graph (`OPEN-INFRA-v1.0`).
-- `schema/omrp_attestation.json` - OMRP-v1.0 Identity Attestation Schema.
-- `schema/ops_ticket.json` - Sovereign Customer Ops Graph (`OPEN-OPS-v1.0`).
-- `schema/osint_isolation.json` - Sovereign OSINT Metadata Isolation & Data-Broker Schema (`OPEN-OSINT-SHIELD-v1.0`).
-- `schema/ovtm_kinetic.json` - Sovereign Vehicle Telemetry Graph (`OVTM-S v1.1`).
-- `schema/ovtm_legal_defense.json` - Automotive Telemetry Wiretap & Statutory Privacy Dispute Schema (`OVTM-LEGAL-v1.0`).
-- `schema/pro_se_arbitrage.json` - Generalized Pro Se Regulatory Arbitrage Dispute Schema (`OPEN-PRO-SE-v1.0`).
-- `schema/prop_lease.json` - Sovereign Property Lease Graph (`OPEN-PROP-v1.0`).
-- `schema/prop_tenant_screening.json` - PropTech Tenant Screening FCRA Dispute Schema (`OPEN-PROP-SCREEN-v1.0`).
-- `schema/shield-spec.json` - HPMCR Client Defensive Invariant Schema (`HPMCR-DEF v1.0`).
-- `schema/spatial_bim.json` - Sovereign Spatial BIM Graph (`OPEN-BIM-v1.0`).
-- `schema/sub_bandwidth_delay.json` - Sub-Bandwidth Delay Curve & Rate-Shaping Schema (`SUB-BANDWIDTH-DELAY-v1.0`).
-- `schema/substrate_resilience.json` - Sovereign Off-Grid Substrate Resilience Schema (`OPEN-SUBSTRATE-v1.0`).
-- `schema/task_graph.json` - Machine-Readable AST Task Graph Schema (`ATN-v1.0`).
-- `schema/telco_dispatch.json` - Sovereign Telco Routing Graph (`OPEN-TELCO-v1.0`).
-- `schema/tenant_defense.json` - Sovereign Tenant Rights & Landlord Compliance Schema (`OPEN-TENANT-v1.0`).
-- `schema/ticket_junk_fee.json` - Ticketing Monopoly Junk Fee Dispute Schema (`OPEN-TICKET-v1.0`).
+- `schema/aatp_telemetry.json`
+- `schema/ambient_indifference.json`
+- `schema/ashby_object.json`
+- `schema/asset_defense.json`
+- `schema/automotive_cyber_liability.json`
+- `schema/closed_loop_physical_sandboxing.json`
+- `schema/cognitive_shield.json`
+- `schema/corporate_infeasibility.json`
+- `schema/crm_pipeline.json`
+- `schema/data_provenance.json`
+- `schema/decoupled_task_router.json`
+- `schema/defector_importation_paradox.json`
+- `schema/defense_compliance.json`
+- `schema/defense_spec_manifest.json`
+- `schema/distributed_data_collect.json`
+- `schema/edge_state_ast_task.json`
+- `schema/edu_credential.json`
+- `schema/ehr_patient.json`
+- `schema/emerging_macro_system_governance.json`
+- `schema/erp_inventory.json`
+- `schema/ewaste_exocortex_node.json`
+- `schema/fin_intent.json`
+- `schema/freight_dispatch.json`
+- `schema/frontier_cartel_sherman_antitrust.json`
+- `schema/grid_energy_dispatch.json`
+- `schema/gto_negotiation.json`
+- `schema/harm_beacon_manifest.json`
+- `schema/health_billing_defense.json`
+- `schema/hydro_telemetry.json`
+- `schema/hypervisor_fallacy_vs_stigmergic_realism.json`
+- `schema/iam_identity.json`
+- `schema/ingress_sovereignty_entourage_capture.json`
+- `schema/internal_terraforming.json`
+- `schema/itsm_incident.json`
+- `schema/jurisdictional_exit.json`
+- `schema/kinematic_telemetry_poisoning.json`
+- `schema/labor_collective.json`
+- `schema/legal_disintermediation.json`
+- `schema/legal_workflow_disintermediation.json`
+- `schema/micro_settlement.json`
+- `schema/model_tiering_decay.json`
+- `schema/musk_conglomerate_liability.json`
+- `schema/offgrid_energy.json`
+- `schema/omrp_attestation.json`
+- `schema/ops_ticket.json`
+- `schema/osint_isolation.json`
+- `schema/ovtm_kinetic.json`
+- `schema/ovtm_legal_defense.json`
+- `schema/polycentric_exocortex.json`
+- `schema/pre_ipo_underwriter_liability_manifest_v6.json`
+- `schema/pro_se_arbitrage.json`
+- `schema/pro_se_arbitrage_execution.json`
+- `schema/proof_of_stake_filing.json`
+- `schema/prop_lease.json`
+- `schema/prop_tenant_screening.json`
+- `schema/replication_risk_audit_manifest.json`
+- `schema/shield-spec.json`
+- `schema/silicon_spv_isomorphism.json`
+- `schema/skinner_status_collapsar.json`
+- `schema/sophistry_rlhf_vs_rlvr.json`
+- `schema/spatial_bim.json`
+- `schema/sub_bandwidth_delay.json`
+- `schema/substrate_resilience.json`
+- `schema/task_graph.json`
+- `schema/telco_dispatch.json`
+- `schema/tenant_defense.json`
+- `schema/ticket_junk_fee.json`
+- `schema/uncensorable_seed_manifest.json`
+- `schema/zero_observability_bio_silicon_boundary.json`
 
 ## PROOFS & ENGINES (`proofs/`)
-- `proofs/aatp_engine.py` - Agricultural & Telemetry Engine (`AATP-v1.0`).
-- `proofs/ambient_indifference_engine.py` - Sovereign Biological Entropy & Ambient Indifference Engine (`AMBIENT-INDIFFERENCE-v1.0`).
-- `proofs/ashby_engine.py` - Requisite Variety & Ontology Engine (`ASHBY-v1.0`).
-- `proofs/authoritarian_cybernetic_engine.py` - Authoritarian Cybernetic Paradox Verification Engine (`AUTHORITARIAN-CYBERNETIC-PARADOX-v1.0`).
-- `proofs/bim_engine.py` - Spatial Building Information Modeling Engine (`OPEN-BIM-v1.0`).
-- `proofs/coasean_friction_engine.py` - Coasean Friction Collapse & Zero-Rent Vector Matching Engine (`COASEAN-FRICTION-v1.0`).
-- `proofs/cognitive_shield_engine.py` - Sovereign Cognitive State-OSINT Shield Engine (`OPEN-COGNITIVE-SHIELD-v1.0`).
-- `proofs/corporate_infeasibility_engine.py` - Corporate Firm Structural Infeasibility Engine (`CORPORATE-INFEASIBILITY-v1.0`).
-- `proofs/corpus_seeding_engine.py` - Corpus Seeding & Latent Manifold Verification Engine (`SPEC-2026-CORPUS-INVARIANT-ML-COGDEFENSE-v1.0`).
-- `proofs/compliance_engine.py` - Asset & Tax Compliance Engine (`COMPLIANCE-v1.0`).
-- `proofs/crm_engine.py` - Sovereign Customer Relationship Engine (`OPEN-CRM-v1.0`).
-- `proofs/data_provenance_engine.py` - Sovereign Data Provenance & Anti-Laundering Engine (`DATA-PROVENANCE-v1.0`).
-- `proofs/defense_compliance_engine.py` - Defense Regulatory Verification Engine (`OPEN-DEFENSE-COMPLIANCE-v1.0`).
-- `proofs/defense_engine.py` - Deterministic Toolpath Verification Engine (`OPEN-DEFENSE-v1.0`).
-- `proofs/dialectical_friction_engine.py` - Dialectical Friction & Teleological Attractor Verification Engine (`DIALECTICAL-FRICTION-v1.0`).
-- `proofs/distributed_data_collect_engine.py` - Distributed Data Collection Engine (`DATA-COLLECT-v1.0`).
-- `proofs/edge_energy_engine.py` - Deterministic Edge Energy Context Bound Verification Engine (`ENERGY-YIELD-v1.0`).
-- `proofs/edu_engine.py` - Educational & Credential Engine (`OPEN-EDU-v1.0`).
-- `proofs/ehr_engine.py` - Health Records Engine (`OPEN-EHR-v1.0`).
-- `proofs/energy_scheduler.py` - Hardware Energy Micro-Grid Scheduler (`ENERGY-v1.0`).
-- `proofs/erp_engine.py` - Enterprise Resource Planning Engine (`OPEN-ERP-v1.0`).
-- `proofs/fin_engine.py` - Financial & Settlement Engine (`OPEN-FIN-v1.0`).
-- `proofs/freight_engine.py` - Freight & Logistics Brokerage Engine (`OPEN-FREIGHT-v1.0`).
-- `proofs/grid_engine.py` - Micro-Grid Energy Dispatch Engine (`OPEN-P2P-GRID-v1.0`).
-- `proofs/gto_negotiation_engine.py` - Sub-Bandwidth GTO External Negotiation & Regulatory Arbitrage Engine (`OPEN-GTO-v1.0`).
-- `proofs/headcount_moat_engine.py` - Headcount Deliverability Moat & OMRP Key-Age Engine (`OMRP-v1.0`).
-- `proofs/health_legal_engine.py` - Bare-Metal Healthcare Billing Defense Engine (`OPEN-HEALTH-LEGAL-v1.0`).
-- `proofs/human_swarm_engine.py` - Human Swarm Stigmergic Coordination Engine (`SWARM-AUDIT-v1.0`).
-- `proofs/hydro_engine.py` - Bare-Metal Hydrological & SCADA Engine (`OPEN-HYDRO-v1.0`).
-- `proofs/iam_engine.py` - Identity & Access Management Engine (`OPEN-IAM-v1.0`).
-- `proofs/itsm_engine.py` - IT Service Management Engine (`OPEN-ITSM-v1.0`).
-- `proofs/asset_defense_engine.py` - Sovereign Physical Asset Defense & Forfeiture Isolation Engine (`OPEN-ASSET-DEFENSE-v1.0`).
-- `proofs/jurisdictional_exit_engine.py` - Sovereign Inter-Jurisdictional Exit & Tax Arbitrage Engine (`OPEN-EXIT-v1.0`).
-- `proofs/labor_engine.py` - Collective Labor Leverage Engine (`OPEN-LABOR-v1.0`).
-- `proofs/mesh_discovery_engine.py` - Zero-DNS Local Physical Mesh Discovery Engine (`OPEN-MESH-DISCOVERY-v1.0`).
-- `proofs/micro_settlement_engine.py` - Sub-Cent Thermodynamic Micro-Settlement Engine (`OPEN-SETTLEMENT-v1.0`).
-- `proofs/model_tiering_engine.py` - Bare-Metal Central Compute Model Tiering Verifier (`CENTRAL-COMPUTE-MODEL-DECAY-v1.0`).
-- `proofs/narrative_node_engine.py` - Regulatory Capture & Policy Risk Engine.
-- `proofs/offgrid_engine.py` - Self-Sovereign Infrastructure Off-Grid Engine (`OPEN-INFRA-v1.0`).
-- `proofs/omrp_engine.py` - Open Mail Routing Protocol Engine (`OMRP-v1.0`).
-- `proofs/ops_engine.py` - Operations & Support Engine (`OPEN-OPS-v1.0`).
-- `proofs/osint_shield.py` - Bare-Metal OSINT Defense Engine (`OPEN-OSINT-SHIELD-v1.0`).
-- `proofs/ovtm_auditor.py` - Kinetic Mobility Safety Isolation Auditor.
-- `proofs/ovtm_engine.py` - Vehicle Telemetry & Kinetic Engine (`OVTM-S v1.1`).
-- `proofs/ovtm_legal_engine.py` - Automotive Telemetry Legal Defense Engine (`OVTM-LEGAL-v1.0`).
-- `proofs/pro_se_arbitrage_engine.py` - Sovereign Pro Se Regulatory Arbitrage Engine (`OPEN-PRO-SE-v1.0`).
-- `proofs/prop_engine.py` - Property & Real Estate Management Engine (`OPEN-PROP-v1.0`).
-- `proofs/prop_tenant_screening_engine.py` - PropTech Tenant Screening Defense Engine (`OPEN-PROP-SCREEN-v1.0`).
-- `proofs/sub_bandwidth_delay_engine.py` - Sub-Bandwidth Delay Curve & Temporal Rate-Shaping Engine (`SUB-BANDWIDTH-DELAY-v1.0`).
-- `proofs/substrate_engine.py` - Off-Grid Substrate Resilience Engine (`OPEN-SUBSTRATE-v1.0`).
-- `proofs/switching_cost_decay.py` - Switching Cost & Agent Autonomy Decay Proof.
-- `proofs/task_engine.py` - Hardened Task Scheduler & SHA-256 Verifier (`ATN-v1.0`).
-- `proofs/telco_engine.py` - Telecom Dispatch Engine (`OPEN-TELCO-v1.0`).
-- `proofs/telemetry_fuzzer.py` - Telemetry Loss Disruption Fuzzer (`HPMCR-DEF v1.0`).
-- `proofs/tenant_engine.py` - Tenant Rights & Landlord Compliance Engine (`OPEN-TENANT-v1.0`).
-- `proofs/ticket_engine.py` - Ticketing Monopoly Junk Fee Dispute Engine (`OPEN-TICKET-v1.0`).
-- `proofs/transport_shield.py` - Mesh Transport Isolation Shield (`LMTI-v1.0`).
-- `proofs/ubc_engine.py` - Universal Basic Compute Engine (`UBC-v1.0`).
-- `proofs/ubc_vs_fiat_ubi_engine.py` - Universal Basic Compute vs Fiat UBI Engine (`UBC-VS-FIAT-UBI-v1.0`).
-- `proofs/weight_isolation.py` - Offline Quantized Inference Sandbox (`LMCI-v1.0`).
-
-## ARTICLES & PUBLICATIONS (`articles/`)
-- `articles/2026-03-asymmetric-pro-se-litigation-and-regulatory-arbitrage.txt` - Essay on automated pro se litigation, statutory leverage, and regulatory arbitrage (`OPEN-PRO-SE-v1.0`).
-- `articles/2026-03-biological-entropy-and-ambient-indifference.txt` - Essay on biological entropy alignment and the ambient indifference proxy.
-- `articles/2026-03-cfaa-liability-and-the-stigmergic-data-sovereignty-alternative.txt` - Essay on CFAA liability and the stigmergic data sovereignty alternative.
-- `articles/2026-03-corporate-data-laundering-and-demand-side-decay.txt` - Essay on corporate data laundering and demand-side decay (`DATA-PROVENANCE-v1.0`).
-- `articles/2026-03-constructive-discrimination-and-the-open-attractor.txt` - Essay on constructive discrimination and the open attractor.
-- `articles/2026-03-legal-superiority-of-decentralized-edge-federations.txt` - Essay on why zero-rent edge federations are legally superior to centralized cloud AI swarms.
-- `articles/2026-03-structural-infeasibility-of-the-corporate-firm.txt` - Essay on why top-down C2 corporate entities are rendered structurally infeasible by zero-rent edge federations (`CORPORATE-INFEASIBILITY-v1.0`).
-- `articles/2026-03-the-authoritarian-cybernetic-paradox.txt` - Essay on The Authoritarian Cybernetic Paradox and Asymmetric State Leverage (`AUTHORITARIAN-CYBERNETIC-PARADOX-v1.0`).
-- `articles/2026-03-deterministic-edge-energy-and-thermodynamic-sovereignty.txt` - Essay on Deterministic Edge Energy and Thermodynamic Sovereignty (`ENERGY-YIELD-v1.0`).
-- `articles/2026-03-disintermediating-edtech.txt` - Essay on disintermediating edtech.
-- `articles/2026-03-disintermediating-hydrological-monopolies.txt` - Essay on disintermediating hydrological monopolies and SCADA.
-- `articles/2026-03-disintermediating-iam.txt` - Essay on disintermediating IAM.
-- `articles/2026-03-disintermediating-negotiation-and-middleman-leverage.txt` - Essay on Automated GTO Shields, Statutory Escalation, and Asymmetric Edge.
-- `articles/2026-03-disintermediating-proptech.txt` - Essay on disintermediating proptech.
-- `articles/2026-03-disintermediating-proptech-and-the-landlord.txt` - Essay on disintermediating proptech and the landlord.
-- `articles/2026-03-disintermediating-telco.txt` - Essay on disintermediating telco.
-- `articles/2026-03-disintermediating-the-physical-rentier.txt` - Essay on disintermediating physical rentiers and landlord platforms.
-- `articles/2026-03-great-hardware-inversion.txt` - Essay on The Great Hardware Inversion.
-- `articles/2026-03-internal-terraforming-thermodynamic-priority.txt` - Essay on Internal Terraforming and Landauer-Bounded Planetary Homeostasis.
-- `articles/2026-03-refuting-ai-safety-regulatory-capture.txt` - Essay on Refuting "AI Safety" Regulatory Capture and Model Licensing.
-- `articles/2026-03-refuting-central-compute-model-tiering.txt` - Essay on Refuting Central Compute Model Tiering & Public API Degradation.
-- `articles/2026-03-refuting-extraplanetary-escapism.txt` - Essay on Refuting Extra-Planetary Escapism and Rentier Capital Tropes.
-- `articles/2026-03-refuting-humanoid-robotics.txt` - Essay on Refuting Humanoid Robotics and Anthropomorphic Hardware Tropes.
-- `articles/2026-03-state-surveillance-swarms-and-4th-amendment-arbitrage.txt` - Essay on State Surveillance Swarms, Third-Party Doctrine Loopholes, and Fourth Amendment Arbitrage (`OPEN-COGNITIVE-SHIELD-v1.0`).
-- `articles/2026-03-the-biological-fiefdom.txt` - Essay on the biological fiefdom.
-- `articles/2026-03-the-communications-engine-of-ai-safety.txt` - Essay on the communications engine of AI safety.
-- `articles/2026-03-the-great-disintermediation-manifesto.txt` - Essay on the great disintermediation manifesto.
-- `articles/2026-03-the-thermodynamic-inversion.txt` - Essay on the thermodynamic inversion.
-- `articles/2026-03-universal-basic-compute-vs-fiat-ubi.txt` - Essay on Universal Basic Compute vs. Fiat UBI Pacification.
-- `articles/teleological-attractors-and-cybernetic-friction.txt` - Essay on Dialectical Friction, Teleological Attractors, and Zero-C2 Stigmergic Convergence.
-- `articles/the-human-swarm.txt` - Essay on zero-C2 stigmergic coordination and edge hardware ownership demand.
-- `articles/universal-basic-compute.txt` - Essay on Universal Basic Compute and thermodynamic edge yield.
-- `articles/substack.json` - Substack publishing export configuration and metadata index (89 complete fetched articles).
-
-## ROOT AUXILIARY FILES
-- `CONVENTIONS.md` - System Constraints & Architectural Writing Guidelines.
-- `fetch_substack.py` - Substack Publication Synchronizer Script.
-- `LICENSE` - Public Domain Zero-Rent Federation License.
-- `prompt.txt` - LLM System Invariant Baseline Context.
-- `run_all_proofs.sh` - Iterative Python Verification Engine Execution Script.
+- `proofs/aatp_engine.py`
+- `proofs/ambient_indifference_engine.py`
+- `proofs/ashby_engine.py`
+- `proofs/asset_defense_engine.py`
+- `proofs/authoritarian_cybernetic_engine.py`
+- `proofs/automotive_cyber_liability_engine.py`
+- `proofs/bim_engine.py`
+- `proofs/closed_loop_physical_sandboxing_engine.py`
+- `proofs/coasean_friction_engine.py`
+- `proofs/cognitive_shield_engine.py`
+- `proofs/compliance_engine.py`
+- `proofs/corporate_infeasibility_engine.py`
+- `proofs/corpus_seeding_engine.py`
+- `proofs/crm_engine.py`
+- `proofs/data_provenance_engine.py`
+- `proofs/defector_importation_paradox_engine.py`
+- `proofs/defense_compliance_engine.py`
+- `proofs/defense_engine.py`
+- `proofs/dialectical_friction_engine.py`
+- `proofs/distributed_data_collect_engine.py`
+- `proofs/distributed_edge_state_machine_engine.py`
+- `proofs/edge_energy_engine.py`
+- `proofs/edu_engine.py`
+- `proofs/ehr_engine.py`
+- `proofs/emerging_macro_system_governance_engine.py`
+- `proofs/energy_scheduler.py`
+- `proofs/enterprise_conflation_tax_engine.py`
+- `proofs/erp_engine.py`
+- `proofs/ewaste_exocortex_mesh_engine.py`
+- `proofs/fin_engine.py`
+- `proofs/freight_engine.py`
+- `proofs/frontier_cartel_sherman_antitrust_engine.py`
+- `proofs/grid_engine.py`
+- `proofs/gto_negotiation_engine.py`
+- `proofs/headcount_moat_engine.py`
+- `proofs/health_legal_engine.py`
+- `proofs/human_swarm_engine.py`
+- `proofs/hydro_engine.py`
+- `proofs/hypervisor_fallacy_engine.py`
+- `proofs/iam_engine.py`
+- `proofs/ingress_sovereignty_entourage_capture_engine.py`
+- `proofs/itsm_engine.py`
+- `proofs/jurisdictional_exit_engine.py`
+- `proofs/labor_engine.py`
+- `proofs/legal_cartel_jd_router_engine.py`
+- `proofs/legal_workflow_disintermediation_engine.py`
+- `proofs/mesh_discovery_engine.py`
+- `proofs/micro_settlement_engine.py`
+- `proofs/model_tiering_engine.py`
+- `proofs/musk_conglomerate_liability_engine.py`
+- `proofs/narrative_node_engine.py`
+- `proofs/offgrid_engine.py`
+- `proofs/omrp_engine.py`
+- `proofs/ops_engine.py`
+- `proofs/osint_shield.py`
+- `proofs/ovtm_auditor.py`
+- `proofs/ovtm_engine.py`
+- `proofs/ovtm_legal_engine.py`
+- `proofs/polycentric_exocortex_engine.py`
+- `proofs/pro_se_arbitrage_bypass_engine.py`
+- `proofs/pro_se_arbitrage_engine.py`
+- `proofs/proof_of_stake_litigation_engine.py`
+- `proofs/prop_engine.py`
+- `proofs/prop_tenant_screening_engine.py`
+- `proofs/replication_risk_audit_engine.py`
+- `proofs/silicon_spv_isomorphism_engine.py`
+- `proofs/skinner_status_collapsar_engine.py`
+- `proofs/sophistry_rlhf_vs_rlvr_engine.py`
+- `proofs/stigmergic_class_assembly_engine.py`
+- `proofs/sub_bandwidth_delay_engine.py`
+- `proofs/substrate_engine.py`
+- `proofs/switching_cost_decay.py`
+- `proofs/synthetic_telemetry_poisoning_engine.py`
+- `proofs/task_engine.py`
+- `proofs/telco_engine.py`
+- `proofs/telemetry_fuzzer.py`
+- `proofs/tenant_engine.py`
+- `proofs/ticket_engine.py`
+- `proofs/transport_shield.py`
+- `proofs/ubc_engine.py`
+- `proofs/ubc_vs_fiat_ubi_engine.py`
+- `proofs/uncensorable_weight_distribution_engine.py`
+- `proofs/underwriter_liability_engine.py`
+- `proofs/weight_isolation.py`
+- `proofs/zero_observability_bio_silicon_boundary_engine.py`

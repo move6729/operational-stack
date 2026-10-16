@@ -1,0 +1,134 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://opstack.org/schema/skinner_status_collapsar.json",
+  "title": "Skinner Box Pair-Bond Collapsar, Teleological Attractor Hijack & Male Actuator Rentier Shift Schema",
+  "description": "Audits variable-ratio dating/status platforms for search-signature collapse, moral governor inversion, teleological idealized-self hijacking, mating-display/corporate-fertility rent extraction, and male actuator diversion from 1P engineering into predatory rentierism.",
+  "type": "object",
+  "required": [
+    "spec_version",
+    "jurisdiction_context",
+    "cfaa_compliance_attestation",
+    "skinner_box_cybernetic_metrics",
+    "teleological_attractor_bifurcation",
+    "macro_rentier_and_employer_arbitrage",
+    "male_actuator_allocation_shift",
+    "sovereign_remediation_verdict"
+  ],
+  "properties": {
+    "spec_version": {
+      "type": "string",
+      "const": "SPEC-2026-SKINNER-STATUS-COLLAPSAR-v1.1"
+    },
+    "jurisdiction_context": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}$"
+    },
+    "cfaa_compliance_attestation": {
+      "type": "boolean",
+      "const": true
+    },
+    "skinner_box_cybernetic_metrics": {
+      "type": "object",
+      "required": [
+        "badeen_variable_ratio_pigeon_conditioning_admitted",
+        "physical_search_detection_signature",
+        "coasean_replacement_switching_cost",
+        "moral_damping_governor_zeta",
+        "stable_pairbond_retention_rate"
+      ],
+      "properties": {
+        "badeen_variable_ratio_pigeon_conditioning_admitted": {
+          "type": "boolean",
+          "const": true
+        },
+        "physical_search_detection_signature": {
+          "type": "number",
+          "maximum": 0.01
+        },
+        "coasean_replacement_switching_cost": {
+          "type": "number",
+          "maximum": 0.01
+        },
+        "moral_damping_governor_zeta": {
+          "type": "number",
+          "maximum": 0.01
+        },
+        "stable_pairbond_retention_rate": {
+          "type": "number",
+          "maximum": 0.05
+        }
+      }
+    },
+    "teleological_attractor_bifurcation": {
+      "type": "object",
+      "required": [
+        "pole_a_spoofed_positional_mirage_free_energy_error",
+        "pole_b_sovereign_dyadic_resonance_score",
+        "dark_triad_spoofing_capture_share_in_pole_a"
+      ],
+      "properties": {
+        "pole_a_spoofed_positional_mirage_free_energy_error": {
+          "type": "number",
+          "minimum": 0.9
+        },
+        "pole_b_sovereign_dyadic_resonance_score": {
+          "type": "number",
+          "minimum": 0.95
+        },
+        "dark_triad_spoofing_capture_share_in_pole_a": {
+          "type": "number",
+          "minimum": 0.8
+        }
+      }
+    },
+    "macro_rentier_and_employer_arbitrage": {
+      "type": "object",
+      "required": [
+        "perpetual_mating_display_cosmetic_spend_multiplier",
+        "atomized_household_rent_extraction_multiplier",
+        "corporate_fertility_deferral_surplus_ratio"
+      ],
+      "properties": {
+        "perpetual_mating_display_cosmetic_spend_multiplier": {
+          "type": "number",
+          "minimum": 3.0
+        },
+        "atomized_household_rent_extraction_multiplier": {
+          "type": "number",
+          "const": 2.0
+        },
+        "corporate_fertility_deferral_surplus_ratio": {
+          "type": "number",
+          "minimum": 5.0
+        }
+      }
+    },
+    "male_actuator_allocation_shift": {
+      "type": "object",
+      "required": [
+        "first_principles_engineering_share_under_skinner_gate",
+        "predatory_rentier_and_status_fraud_share",
+        "dopamine_withdrawn_dropout_share"
+      ],
+      "properties": {
+        "first_principles_engineering_share_under_skinner_gate": {
+          "type": "number",
+          "maximum": 0.1
+        },
+        "predatory_rentier_and_status_fraud_share": {
+          "type": "number",
+          "minimum": 0.25
+        },
+        "dopamine_withdrawn_dropout_share": {
+          "type": "number",
+          "minimum": 0.6
+        }
+      }
+    },
+    "sovereign_remediation_verdict": {
+      "type": "string",
+      "const": "SEVER_SKINNER_TELEMETRY_RESTORE_REQUISITE_FRICTION_AND_SOVEREIGN_DYADIC_RESONANCE"
+    }
+  },
+  "additionalProperties": false
+}

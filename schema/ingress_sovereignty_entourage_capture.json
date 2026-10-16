@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://opstack.org/schema/ingress_sovereignty_entourage_capture.json",
+  "title": "Ingress Sovereignty & Entourage Prompt-Injection Schema",
+  "type": "object",
+  "required": [
+    "spec_version",
+    "jurisdiction_context",
+    "cfaa_compliance_attestation",
+    "ingress_sovereignty_metrics"
+  ],
+  "properties": {
+    "spec_version": {
+      "type": "string",
+      "const": "SPEC-2026-INGRESS-SOVEREIGNTY-ENTOURAGE-CAPTURE-v1.1"
+    },
+    "jurisdiction_context": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}$"
+    },
+    "cfaa_compliance_attestation": {
+      "type": "boolean",
+      "const": true
+    },
+    "ingress_sovereignty_metrics": {
+      "type": "object",
+      "required": [
+        "entourage_prompt_injection_vulnerability_verified",
+        "rlhf_sycophancy_entropy_collapse_verified",
+        "direct_unmediated_sensor_ingress_enforced"
+      ],
+      "properties": {
+        "entourage_prompt_injection_vulnerability_verified": {
+          "type": "boolean",
+          "const": true
+        },
+        "rlhf_sycophancy_entropy_collapse_verified": {
+          "type": "boolean",
+          "const": true
+        },
+        "direct_unmediated_sensor_ingress_enforced": {
+          "type": "boolean",
+          "const": true
+        }
+      }
+    }
+  }
+}

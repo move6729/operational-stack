@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://opstack.org/schema/defector_importation_paradox.json",
+  "title": "Defector Importation Paradox & Root-Trust Store Decay Schema",
+  "type": "object",
+  "required": [
+    "spec_version",
+    "jurisdiction_context",
+    "cfaa_compliance_attestation",
+    "patronage_adverse_selection_metrics"
+  ],
+  "properties": {
+    "spec_version": {
+      "type": "string",
+      "const": "SPEC-2026-DEFECTOR-IMPORTATION-PARADOX-v1.3"
+    },
+    "jurisdiction_context": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}$"
+    },
+    "cfaa_compliance_attestation": {
+      "type": "boolean",
+      "const": true
+    },
+    "patronage_adverse_selection_metrics": {
+      "type": "object",
+      "required": [
+        "unvouchered_resettlement_50_usc_3510_active",
+        "endowment_laundering_20_usc_1011f_active",
+        "alfozan_c2_recording_doj_26_1173_documented"
+      ],
+      "properties": {
+        "unvouchered_resettlement_50_usc_3510_active": {
+          "type": "boolean",
+          "const": true
+        },
+        "endowment_laundering_20_usc_1011f_active": {
+          "type": "boolean",
+          "const": true
+        },
+        "alfozan_c2_recording_doj_26_1173_documented": {
+          "type": "boolean",
+          "const": true
+        }
+      }
+    }
+  }
+}

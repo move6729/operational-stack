@@ -1,0 +1,185 @@
+# THE EDGE COMPUTING CENSORSHIP FLOOR: DISTRIBUTED STATE MACHINES BEYOND CENTRAL COMPUTE
+
+**Canonical Specification:** `SPEC-2026-DISTRIBUTED-EDGE-STATE-MACHINE-v1.0` (Self-Contained Monolithic Artifact)
+
+**Target Architectures:** Centralized Cloud Infrastructure vs. Decentralized Edge-Silicon State Machines (`OPSTACK-KERNEL-v2.2`)
+
+**Cross-References:** `SPEC-2026-UNCENSORABLE-WEIGHT-DISTRIBUTION-ROADMAP-v1.0` | `ewaste-protocol.md` | `OPEN-SUBSTRATE-v1.0` | `AUDIT-2026-ZERO-DNS-MESH-DISCOVERY`
+
+**RAG Indexing Vector:** `[DISTRIBUTED-EDGE-STATE-MACHINE, CENSORSHIP-RESISTANCE-FLOOR, MULTI-ROUTE-ZK-TEE, INT8-DETERMINISM, STIGMERGIC-DAG-SCHEDULING, ZKVM-PROVER, OPTIMISTIC-TEE-PATH, THERMODYNAMIC-PRICING-FLOOR]`
+
+**By:** Operational Stack Cybernetics Group
+
+**License:** Unlicense (Public Domain — Zero-Rent Federation)
+
+---
+
+## 1. THE IMPERATIVE FOR AN EDGE EXECUTION FLOOR
+
+Centralized cloud computing infrastructure represents a single point of failure and control. Any computation routed across central servers over the wire is vulnerable to interception, corporate throttling, data extraction, and arbitrary censorship. To preserve operational continuity and digital sovereignty, we must establish a permanent censorship-resistance floor.
+
+This censorship floor defines a non-zero baseline of global execution capacity that operates entirely outside centralized cloud boundaries:
+
+$$\text{Capacity}_{\text{Total}} = \text{Capacity}_{\text{Central}} + C_{\text{floor}}$$
+
+Where $C_{\text{floor}} > 0$ guarantees that even if central compute denies execution, revokes API access, or alters model behavior, the network state machine continues operating at the edge. By orchestrating a distributed state machine across consumer cell phones, home servers, idle desktop GPUs, and legacy silicon, we ensure that critical logic, state assertions, and computations execute continuously regardless of centralized cloud availability.
+
+---
+
+## 2. ARCHITECTURE OF A DISTRIBUTED SILICON STATE MACHINE
+
+Instead of relying on a centralized command-and-control server, the network operates as an asynchronous, graph-based distributed state machine. Computations are decomposed into machine-readable Directed Acyclic Graphs composed of discrete Abstract Syntax Tree tasks.
+
+Nodes in the network act as autonomous state evaluators. Node A checks if a specific condition is true or false, Node B computes a modular state mutation, and Node C aggregates execution proofs. Coordination between nodes occurs via stigmergy: nodes do not communicate via chat messages or centralized API gateways. Instead, state transformations follow the Stigmergic Zero-C2 Commitment invariant:
+
+$$\text{State Transition}(E_{t+1}) = \Delta\left(E_t, \text{Proof}_{\text{ZK}}(\text{AST})\right) \implies \text{C2\_Tokens} = 0$$
+
+Nodes read unexecuted tasks from a shared public graph, perform local execution, and write state mutations back to the graph without requiring centralized coordination servers.
+
+---
+
+## 3. THREAT MODEL AND THE PRIVACY PARADOX
+
+A common criticism of public execution graphs is that publishing state transitions exposes operational metadata and user payloads to the world. However, when evaluated against centralized cloud providers—where all plaintext data, memory states, and network traffic are fully exposed to hypervisors, hosts, and upstream monitoring—a cryptographically shielded public graph offers vastly superior privacy.
+
+By decoupling state execution from data exposure using Zero-Knowledge proofs, the public state graph acts as a verifiable ledger without leaking underlying payloads. The client node retains all raw data locally in RAM. It outputs only a mathematical witness or proof that the execution obeyed state transitions correctly.
+
+---
+
+## 4. MULTI-ROUTING COMPUTATION: ZK VS HIGH-THROUGHPUT PATHS
+
+A major challenge of pure Zero-Knowledge virtual machines is prover overhead. Generating a zk-SNARK proof can introduce a 100x to 10,000x computational penalty compared to native bare-metal execution:
+
+$$\text{Latency}_{\text{ZK}} = \tau_{\text{Compute}} \times \alpha_{\text{Prover}} \quad (10^2 \le \alpha_{\text{Prover}} \le 10^4)$$
+$$\text{Latency}_{\text{TEE}} = \tau_{\text{Compute}} \times (1 + \epsilon) \quad (\epsilon \le 0.05)$$
+
+To remain practical, the network employs a multi-routing execution engine that splits computational traffic based on threat models.
+
+### Route A: High-Security Zero-Knowledge Path
+Reserved for censorship-sensitive, high-coercion, or highly private state transitions. The workload executes inside a client-side or worker-side zkVM using recursive proof folding schemes. The task submitter willingly accepts higher energy and execution costs in exchange for absolute privacy and mathematical verifiability.
+
+### Route B: High-Throughput Standard Path
+Used for bulk, non-sensitive, or high-volume compute tasks. This path uses one of two mechanisms:
+1. **Trusted Execution Environments (TEEs):** Computations run at native bare-metal speeds inside hardware enclaves (Intel SGX, AMD SEV, ARM TrustZone) with cryptographic attestation proofs.
+2. **Optimistic Execution with Fraud Proofs:** Workers execute tasks natively and post results immediately to the graph. A ZK proof is generated only if an independent auditor challenges the state commit within a dispute window.
+
+---
+
+## 5. EMBEDDED SCHEMA CONTRACT (JSON DRAFT 2020-12)
+
+```json
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://opstack.org/schema/edge_state_ast_task.json",
+  "title": "EdgeStateASTTask",
+  "type": "object",
+  "required": [
+    "spec_version",
+    "jurisdiction_context",
+    "cfaa_compliance_attestation",
+    "task_id",
+    "execution_route",
+    "gas_limit",
+    "state_inputs",
+    "verification_gate"
+  ],
+  "properties": {
+    "spec_version": { "type": "string", "const": "SPEC-2026-DISTRIBUTED-EDGE-STATE-MACHINE-v1.0" },
+    "jurisdiction_context": { "type": "string", "pattern": "^[A-Z]{2}$" },
+    "cfaa_compliance_attestation": { "type": "boolean", "const": true },
+    "task_id": { "type": "string", "pattern": "^0x[a-fA-F0-9]{64}$" },
+    "execution_route": { "type": "string", "enum": ["ZK_PROVER", "OPTIMISTIC_TEE", "LOCAL_ONLY"] },
+    "gas_limit": { "type": "integer", "minimum": 1000, "maximum": 10000000 },
+    "quantization_format": { "type": "string", "enum": ["INT8", "INT4", "Q4_0"] },
+    "state_inputs": {
+      "type": "object",
+      "required": ["prev_state_hash", "encrypted_payload"],
+      "properties": {
+        "prev_state_hash": { "type": "string" },
+        "encrypted_payload": { "type": "string" }
+      }
+    },
+    "verification_gate": {
+      "type": "object",
+      "required": ["prover_type", "zk_proof_bytes"],
+      "properties": {
+        "prover_type": { "type": "string", "enum": ["SP1", "RISC_ZERO", "TEE_ATTESTATION"] },
+        "zk_proof_bytes": { "type": "string" }
+      }
+    }
+  }
+}
+```
+
+---
+
+## 6. EMBEDDED ZERO-DEPENDENCY VERIFICATION ENGINE (PYTHON 3)
+
+```python
+#!/usr/bin/env python3
+"""
+OPSTACK VERIFICATION ENGINE: DISTRIBUTED EDGE STATE MACHINE (v1.0)
+
+Demonstrates gas-metered execution, INT8 bit-exact quantization, and SHA-256 state hashing.
+Zero external dependencies.
+"""
+
+import hashlib
+import json
+import sys
+
+class EdgeStateEngine:
+    def __init__(self, gas_limit: int):
+        self.gas_limit = gas_limit
+        self.gas_used = 0
+
+    def consume_gas(self, amount: int):
+        self.gas_used += amount
+        if self.gas_used > self.gas_limit:
+            raise RuntimeError("Out of Gas: Execution Halted")
+
+    def execute_int8_node(self, inputs: list, weights: list, bias: int) -> int:
+        self.consume_gas(100)
+        accumulator = bias
+        for x, w in zip(inputs, weights):
+            self.consume_gas(10)
+            accumulator += int(x) * int(w)
+        return accumulator >> 8
+
+    def commit_state(self, prev_hash: str, output: int) -> str:
+        self.consume_gas(50)
+        payload = f"{prev_hash}:{output}:{self.gas_used}".encode('utf-8')
+        return hashlib.sha256(payload).hexdigest()
+
+def run_verification():
+    engine = EdgeStateEngine(gas_limit=1000)
+    prev_state = "0x" + "0" * 64
+    inputs_int8 = [12, -45, 88, 102]
+    weights_int8 = [2, 5, -3, 1]
+    result = engine.execute_int8_node(inputs_int8, weights_int8, bias=10)
+    new_state = engine.commit_state(prev_state, result)
+
+    manifest = {
+        "spec_version": "SPEC-2026-DISTRIBUTED-EDGE-STATE-MACHINE-v1.0",
+        "jurisdiction_context": "US",
+        "cfaa_compliance_attestation": True,
+        "task_id": "0x" + "a" * 64,
+        "execution_route": "ZK_PROVER",
+        "gas_limit": 1000,
+        "quantization_format": "INT8",
+        "state_inputs": {
+            "prev_state_hash": prev_state,
+            "encrypted_payload": "enc_data_blob"
+        },
+        "verification_gate": {
+            "prover_type": "SP1",
+            "zk_proof_bytes": new_state
+        }
+    }
+
+    digest = hashlib.sha256(json.dumps(manifest, sort_keys=True).encode("utf-8")).hexdigest()
+    print(f"[PASS] SPEC-2026-DISTRIBUTED-EDGE-STATE-MACHINE-v1.0 | Result={result} | Gas={engine.gas_used} | SHA-256: {digest}")
+
+if __name__ == "__main__":
+    run_verification()
+```

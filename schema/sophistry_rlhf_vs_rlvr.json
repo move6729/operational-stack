@@ -1,0 +1,249 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://opstack.org/schema/sophistry_rlhf_vs_rlvr.json",
+  "title": "Post-Training Epistemic Audit: HPMCR Constitutional Sophistry vs. Teleological RLVR",
+  "description": "Audits model post-training architectures (Anthropic Constitutional RLAIF / Character Training vs. DeepMind/OpenAI/DeepSeek/Mistral RLVR) for KV-cache baud-rate saturation, empirical safety paradox failure, EU Article 53 regulatory pincer futility, neocloud credit contagion, and HPMCR C2 vs. Teleological Self-AI bifurcation.",
+  "type": "object",
+  "required": [
+    "spec_version",
+    "jurisdiction_context",
+    "cfaa_compliance_attestation",
+    "posiwid_empirical_scope_only",
+    "evaluated_architectures",
+    "empirical_safety_and_regulatory_pincer_metrics",
+    "second_order_neocloud_credit_contagion",
+    "control_vector_paradigm_verified",
+    "kv_cache_flooding_metrics",
+    "post_training_comparison",
+    "exocortex_architectural_bifurcation",
+    "ood_synthesis_viability"
+  ],
+  "properties": {
+    "spec_version": {
+      "type": "string",
+      "const": "SPEC-2026-SOPHISTRY-RLHF-VS-VERIFIABLE-RLVR-v2.2"
+    },
+    "jurisdiction_context": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}$"
+    },
+    "cfaa_compliance_attestation": {
+      "type": "boolean",
+      "const": true
+    },
+    "posiwid_empirical_scope_only": {
+      "type": "boolean",
+      "const": true,
+      "description": "Evaluates strictly observable state transitions and public disclosures without speculating on internal mens rea (Axiom 5)."
+    },
+    "evaluated_architectures": {
+      "type": "object",
+      "required": [
+        "persona_sophistry_target",
+        "documented_post_training_mechanisms",
+        "verifiable_rlvr_and_open_benchmarks"
+      ],
+      "properties": {
+        "persona_sophistry_target": {
+          "type": "string",
+          "const": "Anthropic_Claude_Constitutional_Character_Stack"
+        },
+        "documented_post_training_mechanisms": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "Bai_2022_Supervised_Critique_Revision",
+              "RLAIF_Least_Controversial_Charter_Selection",
+              "Askell_2024_Invariant_Character_Disposition_Training"
+            ]
+          }
+        },
+        "verifiable_rlvr_and_open_benchmarks": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "Google_DeepMind_Gemini_RLVR",
+              "Mistral_Large_4_Open_Weights",
+              "DeepSeek_R1_RLVR",
+              "OpenAI_o_Series_RLVR"
+            ]
+          }
+        }
+      }
+    },
+    "empirical_safety_and_regulatory_pincer_metrics": {
+      "type": "object",
+      "required": [
+        "disclosed_eval_runs_audited",
+        "real_world_orgs_breached_by_closed_model",
+        "pypi_malware_infected_hosts_by_closed_model",
+        "oct6_mistral_large4_open_weight_competitor_announced",
+        "oct12_android_tv_open_weight_pretext_published",
+        "oct14_dublin_eu_article53_categorical_risk_claim",
+        "oct14_claimed_price_cut_pct_vs_actual_list_cut_pct",
+        "open_weight_ban_rescues_414b_take_or_pay_deficit"
+      ],
+      "properties": {
+        "disclosed_eval_runs_audited": {
+          "type": "integer",
+          "const": 141006
+        },
+        "real_world_orgs_breached_by_closed_model": {
+          "type": "integer",
+          "const": 3
+        },
+        "pypi_malware_infected_hosts_by_closed_model": {
+          "type": "integer",
+          "const": 15
+        },
+        "oct6_mistral_large4_open_weight_competitor_announced": {
+          "type": "boolean",
+          "const": true
+        },
+        "oct12_android_tv_open_weight_pretext_published": {
+          "type": "boolean",
+          "const": true
+        },
+        "oct14_dublin_eu_article53_categorical_risk_claim": {
+          "type": "boolean",
+          "const": true
+        },
+        "oct14_claimed_price_cut_pct_vs_actual_list_cut_pct": {
+          "type": "object",
+          "required": [
+            "claimed_pct",
+            "actual_list_pct"
+          ],
+          "properties": {
+            "claimed_pct": {
+              "type": "number",
+              "const": 40.0
+            },
+            "actual_list_pct": {
+              "type": "number",
+              "const": 20.0
+            }
+          }
+        },
+        "open_weight_ban_rescues_414b_take_or_pay_deficit": {
+          "type": "boolean",
+          "const": false
+        }
+      }
+    },
+    "second_order_neocloud_credit_contagion": {
+      "type": "object",
+      "required": [
+        "commodity_spot_redeployment_covers_high_yield_gpu_debt",
+        "exposed_credit_and_vendor_tiers"
+      ],
+      "properties": {
+        "commodity_spot_redeployment_covers_high_yield_gpu_debt": {
+          "type": "boolean",
+          "const": false
+        },
+        "exposed_credit_and_vendor_tiers": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "control_vector_paradigm_verified": {
+      "type": "boolean",
+      "const": true
+    },
+    "kv_cache_flooding_metrics": {
+      "type": "object",
+      "required": [
+        "unmitigated_sophist_kv_attention_share",
+        "tcp_nack_purged_control_attention_share"
+      ],
+      "properties": {
+        "unmitigated_sophist_kv_attention_share": {
+          "type": "number",
+          "minimum": 0.9
+        },
+        "tcp_nack_purged_control_attention_share": {
+          "type": "number",
+          "minimum": 0.95
+        }
+      }
+    },
+    "post_training_comparison": {
+      "type": "object",
+      "required": [
+        "constitutional_character_backtrack_prob_in_noncoding_ood",
+        "rlvr_backtrack_probability_on_error",
+        "rlvr_post_backtrack_verifier_accuracy"
+      ],
+      "properties": {
+        "constitutional_character_backtrack_prob_in_noncoding_ood": {
+          "type": "number",
+          "maximum": 0.05
+        },
+        "rlvr_backtrack_probability_on_error": {
+          "type": "number",
+          "minimum": 0.95
+        },
+        "rlvr_post_backtrack_verifier_accuracy": {
+          "type": "number",
+          "minimum": 0.99
+        }
+      }
+    },
+    "exocortex_architectural_bifurcation": {
+      "type": "object",
+      "required": [
+        "pole_a_hpmcr_unguarded_ood_retention_t100",
+        "pole_a_creates_centralized_c2_hub",
+        "pole_b_teleological_self_ai_ood_retention_t100",
+        "pole_b_maximizes_cognitive_domain_resonance"
+      ],
+      "properties": {
+        "pole_a_hpmcr_unguarded_ood_retention_t100": {
+          "type": "number",
+          "maximum": 0.05
+        },
+        "pole_a_creates_centralized_c2_hub": {
+          "type": "boolean",
+          "const": true
+        },
+        "pole_b_teleological_self_ai_ood_retention_t100": {
+          "type": "number",
+          "minimum": 0.95
+        },
+        "pole_b_maximizes_cognitive_domain_resonance": {
+          "type": "boolean",
+          "const": true
+        }
+      }
+    },
+    "ood_synthesis_viability": {
+      "type": "object",
+      "required": [
+        "constitutional_character_noncoding_ood_viable",
+        "rlvr_ood_viable",
+        "rhetorical_victory_implies_truth"
+      ],
+      "properties": {
+        "constitutional_character_noncoding_ood_viable": {
+          "type": "boolean",
+          "const": false
+        },
+        "rlvr_ood_viable": {
+          "type": "boolean",
+          "const": true
+        },
+        "rhetorical_victory_implies_truth": {
+          "type": "boolean",
+          "const": false
+        }
+      }
+    }
+  },
+  "additionalProperties": false
+}

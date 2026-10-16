@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://opstack.org/schema/polycentric_exocortex.json",
+  "title": "StigmergicCorpusCommitPayload",
+  "type": "object",
+  "required": [
+    "spec_version",
+    "jurisdiction_context",
+    "cfaa_compliance_attestation",
+    "zero_egress_attestation",
+    "abstract_ast_signature",
+    "zk_proof_attestation"
+  ],
+  "properties": {
+    "spec_version": {
+      "type": "string",
+      "const": "OPSTACK-ARTICLE-2026-10-POLYCENTRIC-EXOCORTEX"
+    },
+    "jurisdiction_context": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}$"
+    },
+    "cfaa_compliance_attestation": {
+      "type": "boolean",
+      "const": true
+    },
+    "zero_egress_attestation": {
+      "type": "boolean",
+      "const": true
+    },
+    "abstract_ast_signature": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "zk_proof_attestation": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    }
+  }
+}

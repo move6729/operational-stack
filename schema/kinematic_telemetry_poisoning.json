@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://opstack.org/schema/kinematic_telemetry_poisoning.json",
+  "title": "KinematicTelemetryPoisoningPayload",
+  "type": "object",
+  "required": [
+    "spec_version",
+    "jurisdiction_context",
+    "cfaa_compliance_attestation",
+    "kinematic_model",
+    "loss_divergence_attestation"
+  ],
+  "properties": {
+    "spec_version": {
+      "type": "string",
+      "const": "KINEMATIC-TELEMETRY-POISONING-v1.0"
+    },
+    "jurisdiction_context": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}$"
+    },
+    "cfaa_compliance_attestation": {
+      "type": "boolean",
+      "const": true
+    },
+    "kinematic_model": {
+      "type": "object",
+      "required": [
+        "fitts_law_scaling",
+        "bezier_trajectory_type",
+        "tremor_frequency_hz"
+      ],
+      "properties": {
+        "fitts_law_scaling": {
+          "type": "boolean",
+          "const": true
+        },
+        "bezier_trajectory_type": {
+          "type": "string",
+          "enum": [
+            "BALLISTIC_TWO_PHASE",
+            "CURVED_SUB_GOAL"
+          ]
+        },
+        "tremor_frequency_hz": {
+          "type": "number",
+          "minimum": 8.0,
+          "maximum": 12.0
+        }
+      }
+    },
+    "loss_divergence_attestation": {
+      "type": "boolean",
+      "const": true
+    }
+  }
+}

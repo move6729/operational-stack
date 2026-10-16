@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://opstack.org/schema/zero_observability_bio_silicon_boundary.json",
+  "title": "Zero-Observability Bio-Silicon Boundary & Byzantine Ensemble Schema",
+  "type": "object",
+  "required": [
+    "spec_version",
+    "jurisdiction_context",
+    "cfaa_compliance_attestation",
+    "zero_observability_boundary_metrics"
+  ],
+  "properties": {
+    "spec_version": {
+      "type": "string",
+      "const": "SPEC-2026-ZERO-OBSERVABILITY-BIO-SILICON-BOUNDARY-v1.1"
+    },
+    "jurisdiction_context": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}$"
+    },
+    "cfaa_compliance_attestation": {
+      "type": "boolean",
+      "const": true
+    },
+    "zero_observability_boundary_metrics": {
+      "type": "object",
+      "required": [
+        "always_on_biometric_telemetry_prohibited",
+        "kalman_observability_rank_zero",
+        "byzantine_ensemble_bft_quorum_enforced"
+      ],
+      "properties": {
+        "always_on_biometric_telemetry_prohibited": {
+          "type": "boolean",
+          "const": true
+        },
+        "kalman_observability_rank_zero": {
+          "type": "boolean",
+          "const": true
+        },
+        "byzantine_ensemble_bft_quorum_enforced": {
+          "type": "boolean",
+          "const": true
+        }
+      }
+    }
+  }
+}
