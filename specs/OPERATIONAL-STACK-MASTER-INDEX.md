@@ -107,6 +107,7 @@
 - `specs/SPEC-2026-SOPHISTRY-RLHF-VS-VERIFIABLE-RLVR-v2.2`
 - `specs/SPEC-2026-STATUS-MERIT-INVERSION-v1.2`
 - `specs/SPEC-2026-STIGMERGIC-CLASS-ASSEMBLY-v2.1`
+- `specs/SPEC-2026-STIGMERGIC-COMMIT-TEMPORAL-SHIELD-v1.0.md`
 - `specs/SPEC-2026-UNCENSORABLE-WEIGHT-DISTRIBUTION-ROADMAP-v1.0`
 - `specs/SPEC-2026-UNDERWRITER-LIABILITY-RESILIENCE-FALLACY-v6.0`
 - `specs/SPEC-2026-ZERO-OBSERVABILITY-BIO-SILICON-BOUNDARY-v1.1`
@@ -182,6 +183,7 @@
 - `schema/substrate_resilience.json`
 - `schema/task_graph.json`
 - `schema/telco_dispatch.json`
+- `schema/temporal_commit_shield.json`
 - `schema/tenant_defense.json`
 - `schema/ticket_junk_fee.json`
 - `schema/uncensorable_seed_manifest.json`
@@ -264,6 +266,7 @@
 - `proofs/task_engine.py`
 - `proofs/telco_engine.py`
 - `proofs/telemetry_fuzzer.py`
+- `proofs/temporal_commit_shield_engine.py`
 - `proofs/tenant_engine.py`
 - `proofs/ticket_engine.py`
 - `proofs/transport_shield.py`

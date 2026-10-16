@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "StigmergicCommitTemporalShieldConfig",
+  "description": "Schema for bounded monotonic past-jitter and UTC normalization on version-control state commits (OPSTACK-KERNEL-v2.2 Invariants 4, 6, 21, 22, 24, 25).",
+  "type": "object",
+  "properties": {
+    "jurisdiction_context": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}$",
+      "default": "US"
+    },
+    "cfaa_compliance_attestation": {
+      "type": "boolean",
+      "const": true
+    },
+    "fuzz_mode": {
+      "type": "string",
+      "enum": ["MONOTONIC_CADENCE_JITTER", "CIRCADIAN_UTC_MIDNIGHT_CLAMP"],
+      "default": "MONOTONIC_CADENCE_JITTER"
+    },
+    "max_lookback_window_seconds": {
+      "type": "integer",
+      "minimum": 60,
+      "maximum": 86400,
+      "default": 1800,
+      "description": "Maximum backward jitter window in seconds, bounded below by parent commit timestamp."
+    },
+    "force_utc_zero_offset": {
+      "type": "boolean",
+      "const": true,
+      "description": "Mandates +0000 / Z UTC formatting to strip local longitudinal timezone headers."
+    }
+  },
+  "required": [
+    "jurisdiction_context",
+    "cfaa_compliance_attestation",
+    "fuzz_mode",
+    "max_lookback_window_seconds",
+    "force_utc_zero_offset"
+  ],
+  "additionalProperties": false
+}
