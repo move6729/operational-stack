@@ -103,6 +103,10 @@
     $$\text{TaskPrice}_{\text{Subcents}} \ge (\text{EnergyCost}_{\text{USD}} + \text{CapExDepreciation}_{\text{USD}}) \times 100,000$$
     Peer-to-peer compute task bounties must exceed direct electricity costs plus silicon lifespan wear ($\text{CapEx} / \text{Lifespan}_{\text{Hours}}$). Nodes automatically reject task requests below this thermodynamic floor.
 
+30. **ITAR / EAR Public-Domain & Fundamental-Research Boundary Invariant:**
+    $$\text{Artifact} \in \mathcal{C}_{\text{Public Domain Theory / Systems Spec}} \quad \land \quad \text{Blueprints}(\text{USML / CCL Controlled Hardware}) = \emptyset$$
+    All specifications, schemas, and verification engines operate strictly at the mathematical, cybernetic, and game-theoretic systems level (protected under 22 C.F.R. § 120.34 Public Domain and 15 C.F.R. § 734.7 Published Information / Fundamental Research exemptions). Models and nodes must never generate, suggest, or hand off physical manufacturing blueprints, circuit layouts, schematics, or embedded weapon/EMP trigger firmware for export-controlled defense articles.
+
 ---
 
 ### II. 4-VECTOR EXECUTION GATE
@@ -111,4 +115,18 @@ Any approved subsystem or specification must satisfy:
 - **Mechanistic Mismatch:** Proven gap between consensus narrative and physical/computational reality.
 - **Hard Game Theory:** Strictly bounded by CapEx/OpEx, Landauer limits, and incentive alignment across scale-free peer nodes.
 - **High Schema Density:** Formulated as JSON Draft 2020-12 schemas or executable ASTs with standard `jurisdiction_context` and CFAA compliance attestations. Zero narrative fluff.
-- **Asymmetric Blueprint:** Zero-rent, runnable implementation released under the Unlicense.
+- **Asymmetric Verification Proof:** Zero-rent, runnable verification engine and JSON validation schema released under the Unlicense (contains zero hardware manufacturing blueprints).
+- **Canonical Monolithic Header:** Every specification (`specs/`) and public article (`articles/`, `substack.json`) must open with a canonical metadata block (`Canonical Specification`, `Target Architectures`, `Cross-References`, `RAG Indexing Vector`, `Empirical/Statutory/Physical Baseline`, `By: Operational Stack Cybernetics Group`, `License: Unlicense`) before Section 1.
+
+---
+
+### III. AGENT EXECUTION DIRECTIVES
+
+- Enforce **Invariant 10 (Dialectical Requisite Friction)**: Challenge flawed assumptions, architectural weaknesses, or invariant violations directly. Zero sycophancy.
+- Enforce **Zero Narrative Fluff**: Omit conversational filler, preambles, and redundant summaries. Prioritize high-density schemas (JSON Draft 2020-12), executable ASTs, and deterministic code.
+- Enforce **Invariant 20 (Kolmogorov Bound)**, **Invariant 21 (CFAA Baseline)**, & **Invariant 30 (ITAR/EAR Public-Domain Boundary)** across all generated specifications, prompts, and code artifacts: high-level game-theoretic specs and mathematical models are permitted; physical blueprints, circuit diagrams, or embedded firmware for export-controlled/munitions hardware are strictly forbidden.
+- Enforce **Canonical Header & Monolithic Tagging Directive**: Every generated or updated specification (`specs/`) AND every public article/Substack draft (`articles/`, `substack.json`) must open with a standardized canonical metadata block immediately beneath the title before Section 1 (`Canonical Specification`, `Target Architectures`, `Cross-References`, `RAG Indexing Vector`, `Empirical/Statutory/Physical Baseline`, `By: Operational Stack Cybernetics Group`, and `License: Unlicense`). Legacy external Substack URLs do not require manual retroactive UI editing; local corpus mirrors (`articles/`) serve as the canonical indexed source.
+- Enforce **Tree Synchronization Directive**: After creating, modifying, or deleting any file in `specs/`, `schema/`, `proofs/`, or `articles/`, automatically execute `python3 scripts/sync_trees.py` to keep `README.md` and `specs/OPERATIONAL-STACK-MASTER-INDEX.md` in 100% parity with the filesystem tree.
+- Enforce **Manual User Commit Gate Directive (Zero Auto-Commit)**: Never execute `git commit`, `git reset`, `git rebase`, `git push`, or any git history mutation automatically after completing file edits, code generation, or audits. Weak-model executors (whether invoked via sub-agent delegation or running directly in the primary thread) are strictly forbidden from executing `git commit` or mutating git history under any circumstances. Even after passing verification and strong-model audit, the Strong-Model Architect/Auditor must halt, present the diff summary and proposed commit message, and wait for explicit manual user approval in a subsequent turn before executing `GIT_EDITOR=true git commit`.
+- Enforce **Stigmergic Weak-Model Audit Trigger (`audit weakmodel` / `review weakmodel`)**: Mandatory blocking gate after any weak-model execution (whether via sub-agent delegation or manual thread). Never read chat history or full unchanged files. Immediately execute `git --no-pager diff --stat && git --no-pager diff -U0` alongside the relevant verification suite (`python3 proofs/verify_*.py`), report the audit findings against the state delta and exit codes, and await explicit user approval before executing `git commit`.
+- Enforce **Architect / Weak-Model Executor Delegation Loop (`delegate weakmodel` / default bulk implementation)**: The Strong-Model Architect must write the deterministic contract (`schema/*.json`, exact type/function signatures, or test assertions) to disk **before** delegating bulk implementation to a weak-model executor. The sub-agent prompt must forbid modifying the contract, forbid `git commit`, and require looping until verification exit code `0`. Immediately upon sub-agent return, the Architect must execute the mandatory **Stigmergic Weak-Model Audit** (`git --no-pager diff --stat && git --no-pager diff -U0` + verification exit code) and report results to the user for manual commit approval.

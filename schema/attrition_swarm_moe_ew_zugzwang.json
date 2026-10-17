@@ -1,0 +1,138 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://opstack.org/schema/attrition_swarm_moe_ew_zugzwang.json",
+  "$comment": "PLAIN-ENGLISH LEGAL NOTICE: This file is an abstract mathematical and game-theoretic validation checklist (JSON Schema), NOT a hardware blueprint, CAD file, circuit schematic, or weapon firmware module. It contains zero manufacturing or export-controlled design data under 22 C.F.R. § 120.33 (ITAR) or 15 C.F.R. § 772.1 (EAR).",
+  "title": "Attrition Swarm Game Theory: Sortie A/B Crucible, Physical MoE, Ground-Clutter Stasis & EW Zugzwang Schema",
+  "description": "Validates HHI <= 0.15 anti-monoculture Thompson-sampled sortie portfolios, Physical MoE cross-modal sensor gating, zero-Doppler ground stasis, and parasitic bistatic EW Zugzwang under Invariant 30 public-domain bounds.",
+  "type": "object",
+  "required": [
+    "spec_version",
+    "jurisdiction_context",
+    "cfaa_compliance_attestation",
+    "itar_ear_public_domain_theory_attestation",
+    "sortie_ab_crucible_portfolio",
+    "physical_moe_sensor_routing",
+    "ground_clutter_doppler_stasis",
+    "electromagnetic_zugzwang_bistatic_metrics",
+    "topological_boundary_and_c2_saturation_metrics"
+  ],
+  "properties": {
+    "spec_version": {
+      "type": "string",
+      "const": "SPEC-2026-ATTRITION-SWARM-MOE-AND-EW-ZUGZWANG-v1.0"
+    },
+    "jurisdiction_context": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}$"
+    },
+    "cfaa_compliance_attestation": {
+      "type": "boolean",
+      "const": true
+    },
+    "itar_ear_public_domain_theory_attestation": {
+      "type": "boolean",
+      "const": true
+    },
+    "sortie_ab_crucible_portfolio": {
+      "type": "object",
+      "required": [
+        "distinct_vendor_genotypes_count",
+        "portfolio_hhi_index",
+        "max_single_archetype_share",
+        "ballistic_decoy_fraction",
+        "thompson_sampling_active"
+      ],
+      "properties": {
+        "distinct_vendor_genotypes_count": { "type": "integer", "minimum": 8 },
+        "portfolio_hhi_index": { "type": "number", "maximum": 0.15 },
+        "max_single_archetype_share": { "type": "number", "maximum": 0.15 },
+        "ballistic_decoy_fraction": { "type": "number", "minimum": 0.60, "maximum": 0.85 },
+        "thompson_sampling_active": { "type": "boolean", "const": true }
+      },
+      "additionalProperties": false
+    },
+    "physical_moe_sensor_routing": {
+      "type": "object",
+      "required": [
+        "expendable_kinetic_carrier_fraction",
+        "heavy_isr_sensors_on_payload_carrier",
+        "three_stage_degraded_control_fallback_active",
+        "lateral_peer_stigmergy_and_salvo_deconfliction",
+        "overseer_standoff_survival_reuse",
+        "orthogonal_expert_modalities",
+        "smoke_blinded_optical_weight",
+        "acoustic_rf_fallback_routing_success",
+        "unit_swarm_capex_reduction_ratio"
+      ],
+      "properties": {
+        "expendable_kinetic_carrier_fraction": { "type": "number", "minimum": 0.65 },
+        "heavy_isr_sensors_on_payload_carrier": { "type": "integer", "const": 0 },
+        "three_stage_degraded_control_fallback_active": { "type": "boolean", "const": true },
+        "lateral_peer_stigmergy_and_salvo_deconfliction": { "type": "boolean", "const": true },
+        "overseer_standoff_survival_reuse": { "type": "boolean", "const": true },
+        "orthogonal_expert_modalities": { "type": "integer", "minimum": 3 },
+        "smoke_blinded_optical_weight": { "type": "number", "const": 0.0 },
+        "acoustic_rf_fallback_routing_success": { "type": "boolean", "const": true },
+        "unit_swarm_capex_reduction_ratio": { "type": "number", "minimum": 0.70 }
+      },
+      "additionalProperties": false
+    },
+    "ground_clutter_doppler_stasis": {
+      "type": "object",
+      "required": [
+        "fragile_branch_perching_claws_used",
+        "stasis_radial_velocity_mps",
+        "radar_mti_notch_threshold_mps",
+        "sleep_power_microwatts",
+        "hibernation_endurance_hours"
+      ],
+      "properties": {
+        "fragile_branch_perching_claws_used": { "type": "boolean", "const": false },
+        "stasis_radial_velocity_mps": { "type": "number", "const": 0.0 },
+        "radar_mti_notch_threshold_mps": { "type": "number", "minimum": 2.5 },
+        "sleep_power_microwatts": { "type": "number", "maximum": 50.0 },
+        "hibernation_endurance_hours": { "type": "number", "minimum": 1000.0 }
+      },
+      "additionalProperties": false
+    },
+    "electromagnetic_zugzwang_bistatic_metrics": {
+      "type": "object",
+      "required": [
+        "swarm_rf_transmit_watts",
+        "bistatic_snr_derivative_wrt_jammer_power_positive",
+        "tdoa_emitter_lock_latency_ms",
+        "defender_forced_into_emcon_zugzwang"
+      ],
+      "properties": {
+        "swarm_rf_transmit_watts": { "type": "number", "const": 0.0 },
+        "bistatic_snr_derivative_wrt_jammer_power_positive": { "type": "boolean", "const": true },
+        "tdoa_emitter_lock_latency_ms": { "type": "number", "maximum": 50.0 },
+        "defender_forced_into_emcon_zugzwang": { "type": "boolean", "const": true }
+      },
+      "additionalProperties": false
+    },
+    "topological_boundary_and_c2_saturation_metrics": {
+      "type": "object",
+      "required": [
+        "loac_art37_no_iff_spoofing_compliant",
+        "loac_art57_cep_abort_and_ccw_self_deactivation_compliant",
+        "zero_c2_nap_of_earth_agl_meters",
+        "rear_to_front_heading_inversion_active",
+        "parasitic_logistics_transit_watts",
+        "heat_sink_vs_armor_disablement_multiplier",
+        "defender_c2_queue_latency_exceeds_sprint"
+      ],
+      "properties": {
+        "loac_art37_no_iff_spoofing_compliant": { "type": "boolean", "const": true },
+        "loac_art57_cep_abort_and_ccw_self_deactivation_compliant": { "type": "boolean", "const": true },
+        "zero_c2_nap_of_earth_agl_meters": { "type": "number", "maximum": 2.5 },
+        "rear_to_front_heading_inversion_active": { "type": "boolean", "const": true },
+        "parasitic_logistics_transit_watts": { "type": "number", "const": 0.0 },
+        "heat_sink_vs_armor_disablement_multiplier": { "type": "number", "minimum": 100.0 },
+        "defender_c2_queue_latency_exceeds_sprint": { "type": "boolean", "const": true }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

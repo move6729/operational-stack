@@ -1,5 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$comment": "PLAIN-ENGLISH LEGAL NOTICE: This file is an abstract data-validation checklist (JSON Schema) that validates 64-character SHA-256 string hashes, NOT a hardware blueprint, CAD file, G-code toolpath, circuit schematic, or firmware module. It contains zero manufacturing or design data under 22 C.F.R. § 120.33 (ITAR) or 15 C.F.R. § 772.1 (EAR).",
   "title": "OpenDefenseSpecManifest",
   "description": "Schema for Bare-Metal Sovereign Defense & Dual-Use Open Hardware Procurement (OPEN-DEFENSE-v1.0)",
   "type": "object",

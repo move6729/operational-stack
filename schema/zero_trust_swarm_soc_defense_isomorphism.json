@@ -1,0 +1,92 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://opstack.org/schema/zero_trust_swarm_soc_defense_isomorphism.json",
+  "$comment": "PLAIN-ENGLISH LEGAL NOTICE: This file is a defensive cybersecurity validation schema (JSON Schema) enforcing 18 U.S.C. § 1030 (CFAA) compliance and zero-trust architecture metrics.",
+  "title": "Zero-Trust Swarm-to-SOC Defensive Isomorphism Schema",
+  "description": "Validates polyglot max share s_max <= 0.15 (HHI <= 0.15) kernel diversity, air-gapped Standoff Overseer vs stateless Blind Worker separation, zero-polling interrupt stasis, passive scanner attribution, and O(1) edge AST deconfliction.",
+  "type": "object",
+  "required": [
+    "spec_version",
+    "jurisdiction_context",
+    "cfaa_compliance_attestation",
+    "polyglot_compute_hhi_portfolio",
+    "standoff_overseer_custody_isolation",
+    "passive_scanner_zugzwang_defense",
+    "edge_ast_vs_siem_queue_metrics"
+  ],
+  "properties": {
+    "spec_version": {
+      "type": "string",
+      "const": "SPEC-2026-ZERO-TRUST-SWARM-SOC-DEFENSE-ISOMORPHISM-v1.0"
+    },
+    "jurisdiction_context": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}$"
+    },
+    "cfaa_compliance_attestation": {
+      "type": "boolean",
+      "const": true
+    },
+    "polyglot_compute_hhi_portfolio": {
+      "type": "object",
+      "required": [
+        "distinct_kernel_isa_genotypes",
+        "compute_hhi_index",
+        "max_single_cve_blast_radius_share"
+      ],
+      "properties": {
+        "distinct_kernel_isa_genotypes": { "type": "integer", "minimum": 7 },
+        "compute_hhi_index": { "type": "number", "maximum": 0.15 },
+        "max_single_cve_blast_radius_share": { "type": "number", "maximum": 0.15 }
+      },
+      "additionalProperties": false
+    },
+    "standoff_overseer_custody_isolation": {
+      "type": "object",
+      "required": [
+        "secrets_stored_in_network_workers",
+        "overseer_inbound_network_ports_open",
+        "worker_ram_wipe_latency_microseconds"
+      ],
+      "properties": {
+        "secrets_stored_in_network_workers": { "type": "integer", "const": 0 },
+        "overseer_inbound_network_ports_open": { "type": "integer", "const": 0 },
+        "worker_ram_wipe_latency_microseconds": { "type": "number", "maximum": 100.0 }
+      },
+      "additionalProperties": false
+    },
+    "passive_scanner_zugzwang_defense": {
+      "type": "object",
+      "required": [
+        "idle_heartbeat_egress_bps",
+        "darkport_reply_packets_emitted",
+        "attribution_snr_scales_with_scan_rate",
+        "cfaa_harm_beacon_sha256_digest"
+      ],
+      "properties": {
+        "idle_heartbeat_egress_bps": { "type": "number", "const": 0.0 },
+        "darkport_reply_packets_emitted": { "type": "integer", "const": 0 },
+        "attribution_snr_scales_with_scan_rate": { "type": "boolean", "const": true },
+        "cfaa_harm_beacon_sha256_digest": { "type": "string", "pattern": "^[a-f0-9]{64}$" }
+      },
+      "additionalProperties": false
+    },
+    "edge_ast_vs_siem_queue_metrics": {
+      "type": "object",
+      "required": [
+        "east_west_and_supply_chain_sha256_verified",
+        "denial_of_wallet_thermodynamic_cap_active",
+        "central_siem_human_queue_packets",
+        "edge_ast_drop_latency_ms"
+      ],
+      "properties": {
+        "east_west_and_supply_chain_sha256_verified": { "type": "boolean", "const": true },
+        "denial_of_wallet_thermodynamic_cap_active": { "type": "boolean", "const": true },
+        "central_siem_human_queue_packets": { "type": "integer", "const": 0 },
+        "edge_ast_drop_latency_ms": { "type": "number", "maximum": 1.0 }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

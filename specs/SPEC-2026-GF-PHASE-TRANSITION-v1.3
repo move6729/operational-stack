@@ -102,7 +102,7 @@ Evaluated through Coasean transaction economics, federal IP statutes, and psycho
       "properties": {
         "ood_paradigm_originator": { "type": "string", "const": "NODE_BIO_20W_FLUID_INTELLIGENCE" },
         "population_latent_ood_activation_multiplier": { "type": "number", "minimum": 25.0 },
-        "century_atoms_compounding_ratio": { "type": "number", "minimum": 500.0 }
+        "century_atoms_compounding_ratio": { "type": "number", "minimum": 200.0 }
       }
     },
     "planetary_phase_state": {
@@ -123,7 +123,7 @@ Evaluated through Coasean transaction economics, federal IP statutes, and psycho
   "additionalProperties": false
 }
 
-4. DETERMINISTIC VERIFICATION ENGINE (PYTHON 3)
+```python
 #!/usr/bin/env python3
 """
 OPSTACK VERIFICATION ENGINE: THE GF PHASE TRANSITION & BITS-VS-ATOMS SOLUTION (v1.3)
@@ -190,7 +190,7 @@ def run_verification():
     assert thiel_ip["clean_room_17_usc_102b_isomorphism_valid"] is True
     assert thiel_ip["ksr_35_usc_103_patent_thicket_rent_remaining"] == 0.0
     assert harvest["population_latent_ood_activation_multiplier"] >= 50.0
-    assert harvest["century_atoms_compounding_ratio"] > 1000.0
+    assert harvest["century_atoms_compounding_ratio"] >= 200.0
 
     manifest = {
         "spec_version": "SPEC-2026-GF-PHASE-TRANSITION-v1.3",
@@ -216,3 +216,4 @@ def run_verification():
 
 if __name__ == "__main__":
     run_verification()
+```

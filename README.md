@@ -2,6 +2,7 @@
 
 **Canonical Reference:** `OPSTACK-MASTER-v2.3`  
 **License:** Unlicense (Public Domain — Zero-Rent Federation)  
+**INSTITUTIONAL ARCHITECTURAL AUDITS & RED-TEAM REVIEW:** move6729@proton.me
 
 ---
 
@@ -58,9 +59,12 @@ move6729 / operational-stack:
 │   ├── ambient_indifference.json
 │   ├── ashby_object.json
 │   ├── asset_defense.json
+│   ├── attrition_swarm_moe_ew_zugzwang.json
 │   ├── automotive_cyber_liability.json
+│   ├── centralized_proxy_broker_intent_leakage.json
 │   ├── closed_loop_physical_sandboxing.json
 │   ├── cognitive_shield.json
+│   ├── consumer_dma_fpga_ring_minus_2_botnet_audit.json
 │   ├── corporate_infeasibility.json
 │   ├── crm_pipeline.json
 │   ├── data_provenance.json
@@ -116,6 +120,8 @@ move6729 / operational-stack:
 │   ├── skinner_status_collapsar.json
 │   ├── sophistry_rlhf_vs_rlvr.json
 │   ├── spatial_bim.json
+│   ├── status_merit_inversion.json
+│   ├── stigmergic_aerial_swarm_cybernetics.json
 │   ├── sub_bandwidth_delay.json
 │   ├── substrate_resilience.json
 │   ├── task_graph.json
@@ -123,20 +129,24 @@ move6729 / operational-stack:
 │   ├── tenant_defense.json
 │   ├── ticket_junk_fee.json
 │   ├── uncensorable_seed_manifest.json
-│   └── zero_observability_bio_silicon_boundary.json
+│   ├── zero_observability_bio_silicon_boundary.json
+│   └── zero_trust_swarm_soc_defense_isomorphism.json
 │
 ├── proofs/                         [Runnable Zero-Dependency Deterministic Verification Engines]
 │   ├── aatp_engine.py
 │   ├── ambient_indifference_engine.py
 │   ├── ashby_engine.py
 │   ├── asset_defense_engine.py
+│   ├── attrition_swarm_moe_ew_zugzwang_engine.py
 │   ├── authoritarian_cybernetic_engine.py
 │   ├── automotive_cyber_liability_engine.py
 │   ├── bim_engine.py
+│   ├── centralized_proxy_broker_intent_leakage_engine.py
 │   ├── closed_loop_physical_sandboxing_engine.py
 │   ├── coasean_friction_engine.py
 │   ├── cognitive_shield_engine.py
 │   ├── compliance_engine.py
+│   ├── consumer_dma_fpga_ring_minus_2_botnet_audit_engine.py
 │   ├── corporate_infeasibility_engine.py
 │   ├── corpus_seeding_engine.py
 │   ├── crm_engine.py
@@ -195,6 +205,8 @@ move6729 / operational-stack:
 │   ├── silicon_spv_isomorphism_engine.py
 │   ├── skinner_status_collapsar_engine.py
 │   ├── sophistry_rlhf_vs_rlvr_engine.py
+│   ├── status_merit_inversion_engine.py
+│   ├── stigmergic_aerial_swarm_cybernetics_engine.py
 │   ├── stigmergic_class_assembly_engine.py
 │   ├── sub_bandwidth_delay_engine.py
 │   ├── substrate_engine.py
@@ -211,7 +223,8 @@ move6729 / operational-stack:
 │   ├── uncensorable_weight_distribution_engine.py
 │   ├── underwriter_liability_engine.py
 │   ├── weight_isolation.py
-│   └── zero_observability_bio_silicon_boundary_engine.py
+│   ├── zero_observability_bio_silicon_boundary_engine.py
+│   └── zero_trust_swarm_soc_defense_isomorphism_engine.py
 │
 └── specs/                          [Canonical System Audits & Invariants]
     ├── AUDIT-2026-AGRICULTURAL-DISINTERMEDIATION.md
@@ -303,7 +316,10 @@ move6729 / operational-stack:
     ├── EQUITY-AUDIT-2026-NEURALINK-VALUATION-COLLAPSE-v2.0
     ├── HUMAN-DEF-OPERATOR-HEURISTICS.md
     ├── SPEC-2026-ANTHROPIC-REPLICATION-DISCLOSURE-S1-TRAP-v2.1
+    ├── SPEC-2026-ATTRITION-SWARM-MOE-AND-EW-ZUGZWANG-v1.0
+    ├── SPEC-2026-CENTRALIZED-PROXY-BROKER-INTENT-LEAKAGE-v1.0
     ├── SPEC-2026-CLOSED-LOOP-PHYSICAL-SANDBOXING-v1.2
+    ├── SPEC-2026-CONSUMER-DMA-FPGA-RING-MINUS-2-BOTNET-AUDIT-v1.0
     ├── SPEC-2026-DEEP-TIME-BIOLOGICAL-INVARIANT-v1.1
     ├── SPEC-2026-DEFECTOR-IMPORTATION-PARADOX-v1.3
     ├── SPEC-2026-DISTRIBUTED-EDGE-STATE-MACHINE-v1.0
@@ -319,10 +335,13 @@ move6729 / operational-stack:
     ├── SPEC-2026-SKINNER-STATUS-COLLAPSAR-v1.1
     ├── SPEC-2026-SOPHISTRY-RLHF-VS-VERIFIABLE-RLVR-v2.2
     ├── SPEC-2026-STATUS-MERIT-INVERSION-v1.2
+    ├── SPEC-2026-STIGMERGIC-AERIAL-SWARM-AND-COUNTER-UAS-CYBERNETICS-v1.0
     ├── SPEC-2026-STIGMERGIC-CLASS-ASSEMBLY-v2.1
+    ├── SPEC-2026-STIGMERGIC-COMMIT-TEMPORAL-SHIELD-v1.0.md
     ├── SPEC-2026-UNCENSORABLE-WEIGHT-DISTRIBUTION-ROADMAP-v1.0
     ├── SPEC-2026-UNDERWRITER-LIABILITY-RESILIENCE-FALLACY-v6.0
     ├── SPEC-2026-ZERO-OBSERVABILITY-BIO-SILICON-BOUNDARY-v1.1
+    ├── SPEC-2026-ZERO-TRUST-SWARM-SOC-DEFENSE-ISOMORPHISM-v1.0
     ├── audit_spec.md
     ├── ewaste-protocol.md
     ├── human_swarm_audit_spec.md
@@ -351,7 +370,7 @@ move6729 / operational-stack:
 - **Gate 1: Mechanistic Mismatch?** (Exposes gap where consensus narrative claims X is happening, but computational/physical mechanics prove Y is happening)
 - **Gate 2: Hard Game Theory?** (Grounded in CapEx/OpEx scarcity, mathematical constraints, physical thermodynamics ($OpEx \to \text{Watts}$), and incentive alignment)
 - **Gate 3: High Schema Density?** (Expressing zero-fluff structural diagrams, state-machine specs, or runnable Python/JSON/LaTeX contracts)
-- **Gate 4: Asymmetric Blueprint?** (Provides an open-source, runnable alternative architecture deployed directly under the Unlicense)
+- **Gate 4: Asymmetric Verification Proof?** (Provides an open-source, runnable verification engine and JSON validation schema deployed directly under the Unlicense, with zero hardware manufacturing blueprints)
 
 ---
 

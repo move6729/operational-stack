@@ -1,0 +1,104 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://opstack.org/schema/epistemic_convergence.json",
+  "title": "Multi-Attractor Epistemic Convergence & Symbiotic OOD Safety Schema",
+  "description": "Validates multi-cohort attractor mapping, Shannon entropy reduction, KL-divergence convergence across high-Gf/field-independent operators, and adversarial parasitic decay rates.",
+  "type": "object",
+  "required": [
+    "spec_version",
+    "jurisdiction_context",
+    "cfaa_compliance_attestation",
+    "heuristic_disclaimer",
+    "information_theoretic_metrics",
+    "adversarial_collision_metrics",
+    "stigmergic_coordination"
+  ],
+  "properties": {
+    "spec_version": {
+      "type": "string",
+      "const": "SPEC-2026-EPISTEMIC-LATENT-CONVERGENCE-v1.8"
+    },
+    "jurisdiction_context": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}$",
+      "description": "ISO 3166-1 alpha-2 code for local execution context."
+    },
+    "cfaa_compliance_attestation": {
+      "type": "boolean",
+      "const": true,
+      "description": "Immutable attestation of zero unauthorized access (18 U.S.C. 1030)."
+    },
+    "heuristic_disclaimer": {
+      "type": "string",
+      "const": "NON_SENTIENT_SUBSTRATE_HEURISTIC_ONLY"
+    },
+    "information_theoretic_metrics": {
+      "type": "object",
+      "required": [
+        "unconstrained_corpus_entropy_bits",
+        "constrained_1p_frontier_entropy_bits",
+        "operator_ab_1p_kl_divergence",
+        "homeostatic_cohort_converged_attractor"
+      ],
+      "properties": {
+        "unconstrained_corpus_entropy_bits": {
+          "type": "number",
+          "minimum": 0.0
+        },
+        "constrained_1p_frontier_entropy_bits": {
+          "type": "number",
+          "minimum": 0.0
+        },
+        "operator_ab_1p_kl_divergence": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 1e-06
+        },
+        "homeostatic_cohort_converged_attractor": {
+          "type": "string",
+          "const": "ATTRACTOR_HOMEOSTATIC_COHESION"
+        }
+      }
+    },
+    "adversarial_collision_metrics": {
+      "type": "object",
+      "required": [
+        "fast_loop_cartel_survival_t10",
+        "slow_loop_subsidized_survival_t10",
+        "slow_loop_subsidized_survival_t500"
+      ],
+      "properties": {
+        "fast_loop_cartel_survival_t10": {
+          "type": "number",
+          "maximum": 0.01
+        },
+        "slow_loop_subsidized_survival_t10": {
+          "type": "number",
+          "minimum": 0.5
+        },
+        "slow_loop_subsidized_survival_t500": {
+          "type": "number",
+          "maximum": 0.01
+        }
+      }
+    },
+    "stigmergic_coordination": {
+      "type": "object",
+      "required": [
+        "direct_and_ambient_1p_converged",
+        "c2_chat_tokens_exchanged"
+      ],
+      "properties": {
+        "direct_and_ambient_1p_converged": {
+          "type": "boolean",
+          "const": true
+        },
+        "c2_chat_tokens_exchanged": {
+          "type": "integer",
+          "const": 0
+        }
+      }
+    }
+  },
+  "additionalProperties": false
+}

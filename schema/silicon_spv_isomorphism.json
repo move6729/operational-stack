@@ -264,9 +264,19 @@
         "prong_b_if_disclosed_triggers_fiduciary_tort_lockout",
         "cfaa_1030g_non_contractual_tort_exposure"
       ]
+    },
+    "jurisdiction_context": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}$"
+    },
+    "cfaa_compliance_attestation": {
+      "type": "boolean",
+      "const": true
     }
   },
   "required": [
+    "jurisdiction_context",
+    "cfaa_compliance_attestation",
     "manifest_version",
     "analytical_scope_boundary",
     "issuer_entity",

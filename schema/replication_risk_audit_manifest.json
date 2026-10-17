@@ -133,9 +133,19 @@
         "section_1030g_non_contractual_mass_torts_active",
         "api_key_theft_foreseeability_established"
       ]
+    },
+    "jurisdiction_context": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}$"
+    },
+    "cfaa_compliance_attestation": {
+      "type": "boolean",
+      "const": true
     }
   },
   "required": [
+    "jurisdiction_context",
+    "cfaa_compliance_attestation",
     "manifest_version",
     "issuer_entity",
     "lead_underwriters",

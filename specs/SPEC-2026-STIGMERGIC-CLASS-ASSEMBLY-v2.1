@@ -8,6 +8,8 @@
 
 **RAG Indexing Vector:** `[STIGMERGIC-CLASS-ASSEMBLY, CRYPTOGRAPHIC-HARM-BEACONS, CCPA-INFERENCE-DSAR, CAL-CIV-CODE-1798-140-V-1-K, ARTICLE-III-CONCRETE-HARM, TRANSUNION-RAMIREZ-ALIGNMENT, ASYMMETRIC-OPEX-COST-SHIFTING, AUTONOMOUS-LITIGATION-CAPITAL, REALPAGE-TENANT-SCREENING, FINTECH-RISK-SCORING, MASS-ARBITRATION-BLITZ]`
 
+**Statutory & Game-Theoretic Baseline:** Cal. Civ. Code § 1798.140(v)(1)(K) (CCPA/CPRA Inference Disclosure Mandate), *TransUnion LLC v. Ramirez*, 594 U.S. 413 (2021) (Article III Concrete Harm), 29 C.F.R. Part 1607 (EEOC Disparate Impact), AAA/JAMS Mass Arbitration Fee Schedules, `OPSTACK-KERNEL-v2.2` Invariants 6, 8, 11, 21, & 22
+
 **By:** Operational Stack Cybernetics Group
 
 **License:** Unlicense (Public Domain — Zero-Rent Federation)
@@ -119,22 +121,93 @@ The Harm Beacon primitive operates under four structural rules:
     "spec_version",
     "jurisdiction_context",
     "cfaa_compliance_attestation",
-    "skinner_box_cybernetic_metrics",
-    "teleological_attractor_bifurcation",
-    "macro_rentier_and_employer_arbitrage",
-    "male_actuator_allocation_shift",
-    "sovereign_remediation_verdict"
+    "beacon_id",
+    "target_entity_identifier",
+    "statutory_violation_code",
+    "evidence_chain",
+    "litigation_ingestion_protocol"
   ],
   "properties": {
-    "spec_version": { "type": "string", "const": "SPEC-2026-STIGMERGIC-CLASS-ASSEMBLY-v2.1" },
-    "jurisdiction_context": { "type": "string", "pattern": "^[A-Z]{2}$" },
-    "cfaa_compliance_attestation": { "type": "boolean", "const": true },
-    "skinner_box_cybernetic_metrics": { "type": "object" },
-    "teleological_attractor_bifurcation": { "type": "object" },
-    "macro_rentier_and_employer_arbitrage": { "type": "object" },
-    "male_actuator_allocation_shift": { "type": "object" },
-    "sovereign_remediation_verdict": { "type": "string", "const": "SEVER_SKINNER_TELEMETRY_RESTORE_REQUISITE_FRICTION_AND_SOVEREIGN_DYADIC_RESONANCE" }
-  }
+    "spec_version": {
+      "type": "string",
+      "const": "SPEC-2026-STIGMERGIC-CLASS-ASSEMBLY-v2.1"
+    },
+    "jurisdiction_context": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}$"
+    },
+    "cfaa_compliance_attestation": {
+      "type": "boolean",
+      "const": true
+    },
+    "beacon_id": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{32}$"
+    },
+    "target_entity_identifier": {
+      "type": "string",
+      "minLength": 1
+    },
+    "statutory_violation_code": {
+      "type": "string",
+      "enum": [
+        "CCPA_1798.140_INFERENCE_DENIAL_v1",
+        "EEOC_DISPARATE_IMPACT_HIRING_ML_v1",
+        "FINTECH_PREDATORY_RISK_INFERENCE_v1",
+        "TCPA_UNAUTHORIZED_AUTOMATED_COMM_v1"
+      ]
+    },
+    "evidence_chain": {
+      "type": "object",
+      "required": [
+        "evidence_sha256_hash",
+        "concrete_economic_harm_documented",
+        "statutory_cure_period_expired"
+      ],
+      "properties": {
+        "evidence_sha256_hash": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "dsar_submission_timestamp": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "concrete_economic_harm_documented": {
+          "type": "boolean",
+          "const": true
+        },
+        "statutory_cure_period_expired": {
+          "type": "boolean",
+          "const": true
+        }
+      },
+      "additionalProperties": false
+    },
+    "litigation_ingestion_protocol": {
+      "type": "object",
+      "required": [
+        "claimant_public_key_ecies",
+        "preferred_remedy_type"
+      ],
+      "properties": {
+        "claimant_public_key_ecies": {
+          "type": "string",
+          "pattern": "^04[a-f0-9]{128}$"
+        },
+        "preferred_remedy_type": {
+          "type": "string",
+          "enum": [
+            "MASS_ARBITRATION_BLITZ",
+            "DUAL_TRACK_PUBLIC_INJUNCTION",
+            "CLASS_ACTION_JOIN"
+          ]
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
 }
 ```
 
