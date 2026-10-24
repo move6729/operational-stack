@@ -1,0 +1,161 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:stigmergic_litigation_swarm_bounty_compiler.json",
+  "title": "Stigmergic Litigation Swarm Bounty Compiler Schema (v1.0)",
+  "description": "Deterministic state contract for the stigmergic litigation swarm bounty compiler: a 1,000-node swarm ingests the 3,000,000-page EFTA corpus at $9.60 energy cost (7,500,000x compression versus the $72,000,000 legacy associate review baseline) and compiles threshold-gated IRS 7623(b), FinCEN BSA, and FCA qui tam bounty bands aggregating to a $50,250,000 floor / $115,500,000 ceiling, fused with USVI residency falsification, subordinate compliance dominance, gatekeeper licensing pressure, and estate interdiction layers.",
+  "type": "object",
+  "required": [
+    "specification_id",
+    "legacy_review_baseline",
+    "swarm_compute_layer",
+    "cost_compression",
+    "irs_7623b_bounty_band",
+    "fincen_bsa_bounty_band",
+    "fca_qui_tam_bounty_band",
+    "usvi_residency_falsification",
+    "subordinate_compliance_dominance",
+    "gatekeeper_pressure_thresholds",
+    "estate_interdiction_and_venues"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "specification_id": {
+      "type": "string",
+      "const": "SPEC-STIGMERGIC-LITIGATION-SWARM-BOUNTY-COMPILER-v1.0"
+    },
+    "legacy_review_baseline": {
+      "type": "object",
+      "description": "E1: legacy manual associate review baseline for the EFTA corpus.",
+      "required": ["efta_total_pages", "legacy_pages_per_hour", "legacy_associate_hourly_rate_usd", "legacy_manual_review_hours", "legacy_manual_review_cost_usd"],
+      "additionalProperties": false,
+      "properties": {
+        "efta_total_pages": { "type": "integer", "const": 3000000 },
+        "legacy_pages_per_hour": { "type": "number", "const": 50.0 },
+        "legacy_associate_hourly_rate_usd": { "type": "number", "const": 1200.0 },
+        "legacy_manual_review_hours": { "type": "number", "const": 60000.0, "description": "H_L = P_EFTA / phi_L = 3,000,000 / 50." },
+        "legacy_manual_review_cost_usd": { "type": "number", "const": 72000000.0, "description": "C_L = H_L x w_L = 60,000 x $1,200." }
+      }
+    },
+    "swarm_compute_layer": {
+      "type": "object",
+      "description": "E2: stigmergic swarm full-corpus coverage identity, ICIJ OSINT graph yield, and wall-clock energy cost.",
+      "required": ["swarm_node_count", "swarm_pages_per_node", "swarm_wall_clock_hours", "swarm_node_power_watts", "electricity_rate_usd_per_kwh", "swarm_compute_energy_cost_usd", "icij_total_nodes", "osint_graph_node_yield_per_page"],
+      "additionalProperties": false,
+      "properties": {
+        "swarm_node_count": { "type": "integer", "const": 1000 },
+        "swarm_pages_per_node": { "type": "integer", "const": 3000 },
+        "swarm_wall_clock_hours": { "type": "number", "const": 3.0 },
+        "swarm_node_power_watts": { "type": "number", "const": 20.0 },
+        "electricity_rate_usd_per_kwh": { "type": "number", "const": 0.16 },
+        "swarm_compute_energy_cost_usd": { "type": "number", "const": 9.6, "description": "C_S = (N x W / 1000) x T x r = 20 kW x 3 h x $0.16/kWh." },
+        "icij_total_nodes": { "type": "integer", "const": 810000 },
+        "osint_graph_node_yield_per_page": { "type": "number", "const": 0.27, "description": "Y = N_ICIJ / P_EFTA = 810,000 / 3,000,000." }
+      }
+    },
+    "cost_compression": {
+      "type": "object",
+      "description": "E3: legacy-to-swarm cost compression ratio.",
+      "required": ["cost_compression_ratio"],
+      "additionalProperties": false,
+      "properties": {
+        "cost_compression_ratio": { "type": "number", "const": 7500000.0, "description": "rho = C_L / C_S = $72,000,000 / $9.60." }
+      }
+    },
+    "irs_7623b_bounty_band": {
+      "type": "object",
+      "description": "E4: IRS 7623(b) whistleblower bounty band; disputed tax and penalties must clear the $2,000,000 statutory threshold for the mandatory 15-30% band.",
+      "required": ["irs_disputed_tax_and_penalties_usd", "irs_statutory_threshold_usd", "irs_bounty_min_rate", "irs_bounty_max_rate", "irs_bounty_min_usd", "irs_bounty_max_usd"],
+      "additionalProperties": false,
+      "properties": {
+        "irs_disputed_tax_and_penalties_usd": { "type": "number", "const": 160000000.0 },
+        "irs_statutory_threshold_usd": { "type": "number", "const": 2000000.0 },
+        "irs_bounty_min_rate": { "type": "number", "const": 0.15 },
+        "irs_bounty_max_rate": { "type": "number", "const": 0.30 },
+        "irs_bounty_min_usd": { "type": "number", "const": 24000000.0, "description": "0.15 x $160,000,000." },
+        "irs_bounty_max_usd": { "type": "number", "const": 48000000.0, "description": "0.30 x $160,000,000." }
+      }
+    },
+    "fincen_bsa_bounty_band": {
+      "type": "object",
+      "description": "E5: FinCEN BSA penalty bounty band; penalty pool must clear the $1,000,000 statutory threshold.",
+      "required": ["fincen_bsa_penalty_pool_usd", "fincen_statutory_threshold_usd", "fincen_bounty_min_rate", "fincen_bounty_max_rate", "fincen_bounty_min_usd", "fincen_bounty_max_usd"],
+      "additionalProperties": false,
+      "properties": {
+        "fincen_bsa_penalty_pool_usd": { "type": "number", "const": 150000000.0 },
+        "fincen_statutory_threshold_usd": { "type": "number", "const": 1000000.0 },
+        "fincen_bounty_min_rate": { "type": "number", "const": 0.10 },
+        "fincen_bounty_max_rate": { "type": "number", "const": 0.30 },
+        "fincen_bounty_min_usd": { "type": "number", "const": 15000000.0, "description": "0.10 x $150,000,000." },
+        "fincen_bounty_max_usd": { "type": "number", "const": 45000000.0, "description": "0.30 x $150,000,000." }
+      }
+    },
+    "fca_qui_tam_bounty_band": {
+      "type": "object",
+      "description": "E6: FCA qui tam treble recovery, relator share band, and the three-statute aggregate bounty floor and ceiling.",
+      "required": ["fca_tainted_federal_grant_base_usd", "fca_treble_multiplier", "fca_treble_recovery_usd", "fca_relator_min_rate", "fca_relator_max_rate", "fca_bounty_min_usd", "fca_bounty_max_usd", "total_bounty_floor_usd", "total_bounty_ceiling_usd"],
+      "additionalProperties": false,
+      "properties": {
+        "fca_tainted_federal_grant_base_usd": { "type": "number", "const": 25000000.0 },
+        "fca_treble_multiplier": { "type": "integer", "const": 3 },
+        "fca_treble_recovery_usd": { "type": "number", "const": 75000000.0, "description": "3 x $25,000,000." },
+        "fca_relator_min_rate": { "type": "number", "const": 0.15 },
+        "fca_relator_max_rate": { "type": "number", "const": 0.30 },
+        "fca_bounty_min_usd": { "type": "number", "const": 11250000.0, "description": "0.15 x $75,000,000." },
+        "fca_bounty_max_usd": { "type": "number", "const": 22500000.0, "description": "0.30 x $75,000,000." },
+        "total_bounty_floor_usd": { "type": "number", "const": 50250000.0, "description": "$24,000,000 + $15,000,000 + $11,250,000." },
+        "total_bounty_ceiling_usd": { "type": "number", "const": 115500000.0, "description": "$48,000,000 + $45,000,000 + $22,500,000." }
+      }
+    },
+    "usvi_residency_falsification": {
+      "type": "object",
+      "description": "Vector 7: USVI 183-day statutory residency falsification by day-count arithmetic.",
+      "required": ["usvi_statutory_min_days", "us_mainland_max_safe_harbor_days", "us_mainland_documented_days_sample", "usvi_max_possible_days_sample", "usvi_residency_falsified"],
+      "additionalProperties": false,
+      "properties": {
+        "usvi_statutory_min_days": { "type": "integer", "const": 183 },
+        "us_mainland_max_safe_harbor_days": { "type": "integer", "const": 90 },
+        "us_mainland_documented_days_sample": { "type": "integer", "const": 242 },
+        "usvi_max_possible_days_sample": { "type": "integer", "const": 123, "description": "365 - 242 documented mainland days." },
+        "usvi_residency_falsified": { "type": "integer", "const": 1, "description": "123 < 183 and 242 > 90: the residency claim is falsified." }
+      }
+    },
+    "subordinate_compliance_dominance": {
+      "type": "object",
+      "description": "Vector 8: post-190/40 subordinate payoff dominance; zero criminal liability for compliant production versus 4.0-year contempt felony exposure for refusal.",
+      "required": ["subordinate_criminal_liability_post_190_40", "refusal_contempt_felony_years", "subordinate_compliance_prob"],
+      "additionalProperties": false,
+      "properties": {
+        "subordinate_criminal_liability_post_190_40": { "type": "number", "const": 0.0 },
+        "refusal_contempt_felony_years": { "type": "number", "const": 4.0 },
+        "subordinate_compliance_prob": { "type": "number", "const": 1.0, "description": "Compliance strictly dominates refusal." }
+      }
+    },
+    "gatekeeper_pressure_thresholds": {
+      "type": "object",
+      "description": "Vector 9: parallel licensing petition pressure, Kraakman/Nuremberg gatekeeper break-even thresholds, and the Bourjaily preponderance posterior.",
+      "required": ["n_parallel_licensing_petitions", "single_petition_docketing_prob", "prob_at_least_one_formal_inquiry", "physician_kraakman_threshold_regime1", "physician_nuremberg_5pct_threshold", "attorney_kraakman_threshold_regime1", "wetlab_helper_nuremberg_5pct_threshold", "bourjaily_posterior_prob"],
+      "additionalProperties": false,
+      "properties": {
+        "n_parallel_licensing_petitions": { "type": "integer", "const": 12 },
+        "single_petition_docketing_prob": { "type": "number", "const": 0.25 },
+        "prob_at_least_one_formal_inquiry": { "type": "number", "const": 0.968324, "description": "1 - (1 - 0.25)^12 = 1 - 0.75^12." },
+        "physician_kraakman_threshold_regime1": { "type": "number", "const": 0.015488 },
+        "physician_nuremberg_5pct_threshold": { "type": "number", "const": 0.009674 },
+        "attorney_kraakman_threshold_regime1": { "type": "number", "const": 0.019175 },
+        "wetlab_helper_nuremberg_5pct_threshold": { "type": "number", "const": 0.000826 },
+        "bourjaily_posterior_prob": { "type": "number", "const": 0.931034, "description": "Posterior odds 13.5 / 14.5; exceeds the 0.50 preponderance threshold." }
+      }
+    },
+    "estate_interdiction_and_venues": {
+      "type": "object",
+      "description": "Vector 10: estate mortmain reserve, cumulative executor fees, and primary venue count.",
+      "required": ["estate_mortmain_reserve_usd", "estate_executor_fees_w_total_usd", "n_primary_venues"],
+      "additionalProperties": false,
+      "properties": {
+        "estate_mortmain_reserve_usd": { "type": "number", "const": 72000000.0, "description": "Magnitude anchor: equals the E1 legacy review cost C_L." },
+        "estate_executor_fees_w_total_usd": { "type": "number", "const": 26000000.0 },
+        "n_primary_venues": { "type": "integer", "const": 4 }
+      }
+    }
+  }
+}

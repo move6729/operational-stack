@@ -1,0 +1,120 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:stigmergic_aerial_swarm_cybernetics.json",
+  "$comment": "PLAIN-ENGLISH LEGAL NOTICE: This file is an abstract data-validation checklist (JSON Schema), NOT a hardware blueprint, CAD file, circuit schematic, or firmware module. It contains zero manufacturing or design data under 22 C.F.R. § 120.33 (ITAR) or 15 C.F.R. § 772.1 (EAR).",
+  "title": "Stigmergic Aerial Swarm Cybernetics, BFT Kinematic State Verification & Curtilage Harm Beacon Schema",
+  "description": "Validates zero-C2 Kademlia XOR airspace deconfliction, BFT kinematic state-residual node partitioning, LPI/LPD optical/acoustic stigmergy, passive 14 CFR Part 89 curtilage Harm Beacons, and jurisdiction-bifurcated escalation gates under Invariant 30 public-domain bounds.",
+  "type": "object",
+  "required": [
+    "spec_version",
+    "jurisdiction_context",
+    "cfaa_compliance_attestation",
+    "itar_ear_public_domain_theory_attestation",
+    "xor_airspace_deconfliction_metrics",
+    "bft_kinematic_state_verification_quorum",
+    "zero_rf_kalman_divergence_metrics",
+    "curtilage_harm_beacon_and_sfm_shield",
+    "jurisdiction_bifurcated_escalation_gate"
+  ],
+  "properties": {
+    "spec_version": {
+      "type": "string",
+      "const": "SPEC-2026-STIGMERGIC-AERIAL-SWARM-AND-COUNTER-UAS-CYBERNETICS-v1.0"
+    },
+    "jurisdiction_context": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}$"
+    },
+    "cfaa_compliance_attestation": {
+      "type": "boolean",
+      "const": true
+    },
+    "itar_ear_public_domain_theory_attestation": {
+      "type": "boolean",
+      "const": true
+    },
+    "xor_airspace_deconfliction_metrics": {
+      "type": "object",
+      "required": [
+        "central_c2_packets_emitted",
+        "max_interceptors_per_vector_cap",
+        "target_oversubscription_rate",
+        "sector_coverage_efficiency"
+      ],
+      "properties": {
+        "central_c2_packets_emitted": { "type": "integer", "const": 0 },
+        "max_interceptors_per_vector_cap": { "type": "integer", "minimum": 1, "maximum": 6 },
+        "target_oversubscription_rate": { "type": "number", "const": 0.0 },
+        "sector_coverage_efficiency": { "type": "number", "minimum": 0.95 }
+      },
+      "additionalProperties": false
+    },
+    "bft_kinematic_state_verification_quorum": {
+      "type": "object",
+      "required": [
+        "total_swarm_nodes_n",
+        "byzantine_spoofed_nodes_f",
+        "bft_quorum_satisfied",
+        "spoofed_nodes_partitioned_count"
+      ],
+      "properties": {
+        "total_swarm_nodes_n": { "type": "integer", "minimum": 4 },
+        "byzantine_spoofed_nodes_f": { "type": "integer", "minimum": 1 },
+        "bft_quorum_satisfied": { "type": "boolean", "const": true },
+        "spoofed_nodes_partitioned_count": { "type": "integer", "minimum": 1 }
+      },
+      "additionalProperties": false
+    },
+    "zero_rf_kalman_divergence_metrics": {
+      "type": "object",
+      "required": [
+        "rf_emissions_watts",
+        "optical_acoustic_stigmergy_active",
+        "qrng_trajectory_jitter_enabled",
+        "tracker_kalman_error_amplification_ratio"
+      ],
+      "properties": {
+        "rf_emissions_watts": { "type": "number", "const": 0.0 },
+        "optical_acoustic_stigmergy_active": { "type": "boolean", "const": true },
+        "qrng_trajectory_jitter_enabled": { "type": "boolean", "const": true },
+        "tracker_kalman_error_amplification_ratio": { "type": "number", "minimum": 5.0 }
+      },
+      "additionalProperties": false
+    },
+    "curtilage_harm_beacon_and_sfm_shield": {
+      "type": "object",
+      "required": [
+        "faa_14_cfr_89_remote_id_logged",
+        "active_rf_jamming_used",
+        "passive_moire_sfm_bundle_error",
+        "harm_beacon_sha256_digest"
+      ],
+      "properties": {
+        "faa_14_cfr_89_remote_id_logged": { "type": "boolean", "const": true },
+        "active_rf_jamming_used": { "type": "boolean", "const": false },
+        "passive_moire_sfm_bundle_error": { "type": "number", "minimum": 0.85 },
+        "harm_beacon_sha256_digest": { "type": "string", "pattern": "^[a-f0-9]{64}$" }
+      },
+      "additionalProperties": false
+    },
+    "jurisdiction_bifurcated_escalation_gate": {
+      "type": "object",
+      "required": [
+        "us_domestic_active_interdiction_blocked",
+        "passive_tdoa_dark_airframe_handoff_logged",
+        "conflict_zone_loac_quorum_verified",
+        "conflict_zone_cost_exchange_ratio_valid",
+        "zero_export_controlled_blueprints_or_firmware"
+      ],
+      "properties": {
+        "us_domestic_active_interdiction_blocked": { "type": "boolean", "const": true },
+        "passive_tdoa_dark_airframe_handoff_logged": { "type": "boolean", "const": true },
+        "conflict_zone_loac_quorum_verified": { "type": "boolean", "const": true },
+        "conflict_zone_cost_exchange_ratio_valid": { "type": "boolean", "const": true },
+        "zero_export_controlled_blueprints_or_firmware": { "type": "boolean", "const": true }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

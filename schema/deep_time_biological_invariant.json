@@ -1,0 +1,144 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:deep_time_biological_invariant.json",
+  "title": "Deep-Time Biological Invariant, Hostis Utility Audit, Cranial Air-Gap & Stochastic Bisociation Schema",
+  "description": "Validates Deep-Time vs. Shallow-Time OOD survival variety, Hostis mens rea classification, 21 CFR 56.111 elective BCI statutory impossibility, ISO 10993-6 parenchymal degradation, and QRNG stochastic bisociation.",
+  "type": "object",
+  "required": [
+    "spec_version",
+    "jurisdiction_context",
+    "cfaa_compliance_attestation",
+    "hostis_mens_rea_audit",
+    "evolutionary_grounding_metrics",
+    "cranial_airgap_and_bci_pathology",
+    "stochastic_bisociation_metrics",
+    "cybernetic_architecture_verdict"
+  ],
+  "properties": {
+    "spec_version": {
+      "type": "string",
+      "const": "SPEC-2026-DEEP-TIME-BIOLOGICAL-INVARIANT-v1.1"
+    },
+    "jurisdiction_context": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}$"
+    },
+    "cfaa_compliance_attestation": {
+      "type": "boolean",
+      "const": true
+    },
+    "hostis_mens_rea_audit": {
+      "type": "object",
+      "required": [
+        "stated_subjective_extinction_prob",
+        "biological_bootloader_replacement_intent",
+        "classical_jurisprudence_classification"
+      ],
+      "properties": {
+        "stated_subjective_extinction_prob": {
+          "type": "number",
+          "minimum": 0.1
+        },
+        "biological_bootloader_replacement_intent": {
+          "type": "boolean",
+          "const": true
+        },
+        "classical_jurisprudence_classification": {
+          "type": "string",
+          "const": "HOSTIS_HUMANI_GENERIS_ZERO_TRUST"
+        }
+      }
+    },
+    "evolutionary_grounding_metrics": {
+      "type": "object",
+      "required": [
+        "biological_deep_time_years",
+        "biological_power_watts",
+        "pure_silicon_ood_survival_prob",
+        "symbiotic_bio_edge_ood_survival_prob"
+      ],
+      "properties": {
+        "biological_deep_time_years": {
+          "type": "number",
+          "minimum": 3500000000.0
+        },
+        "biological_power_watts": {
+          "type": "number",
+          "maximum": 25.0
+        },
+        "pure_silicon_ood_survival_prob": {
+          "type": "number",
+          "maximum": 0.05
+        },
+        "symbiotic_bio_edge_ood_survival_prob": {
+          "type": "number",
+          "minimum": 0.95
+        }
+      }
+    },
+    "cranial_airgap_and_bci_pathology": {
+      "type": "object",
+      "required": [
+        "elective_consumer_bci_tam_usd",
+        "patient_1_thread_retraction_fraction",
+        "battery_revision_cycle_years",
+        "external_sensory_airgap_enforced",
+        "remote_c2_neural_attack_surface"
+      ],
+      "properties": {
+        "elective_consumer_bci_tam_usd": {
+          "type": "number",
+          "const": 0.0
+        },
+        "patient_1_thread_retraction_fraction": {
+          "type": "number",
+          "minimum": 0.8
+        },
+        "battery_revision_cycle_years": {
+          "type": "number",
+          "maximum": 7.0
+        },
+        "external_sensory_airgap_enforced": {
+          "type": "boolean",
+          "const": true
+        },
+        "remote_c2_neural_attack_surface": {
+          "type": "number",
+          "const": 0.0
+        }
+      }
+    },
+    "stochastic_bisociation_metrics": {
+      "type": "object",
+      "required": [
+        "linear_rlhf_cross_domain_discovery_rate",
+        "qrng_annealed_bio_edge_discovery_rate",
+        "unfiltered_checksum_apophenia_collision_rate",
+        "four_vector_gated_false_positive_rate"
+      ],
+      "properties": {
+        "linear_rlhf_cross_domain_discovery_rate": {
+          "type": "number",
+          "maximum": 0.05
+        },
+        "qrng_annealed_bio_edge_discovery_rate": {
+          "type": "number",
+          "minimum": 0.8
+        },
+        "unfiltered_checksum_apophenia_collision_rate": {
+          "type": "number",
+          "minimum": 0.5
+        },
+        "four_vector_gated_false_positive_rate": {
+          "type": "number",
+          "const": 0.0
+        }
+      }
+    },
+    "cybernetic_architecture_verdict": {
+      "type": "string",
+      "const": "SOVEREIGN_BIO_EDGE_SYMBIOSIS_SUPERIOR_TO_BOOTLOADER_REPLACEMENT"
+    }
+  },
+  "additionalProperties": false
+}

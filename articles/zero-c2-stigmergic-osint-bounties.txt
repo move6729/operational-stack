@@ -1,0 +1,122 @@
+# Why Honest Capital Pays the Swarm: Zero-C2 Stigmergic OSINT Bounties and the Death of the Kompromat Broker
+
+**Canonical Specification:** `SPEC-STIGMERGIC-ZK-OSINT-BOUNTY-SETTLEMENT-v1.0`
+**Target Architectures:** Zero-C2 Stigmergic Verification Markets, $20\text{ W}$ `Node_Local` Bare-Metal Swarm Nodes, In-Circuit `zk-Email` (`RFC 6376` RSA-2048 & `RFC 8463` Ed25519 DKIM) & `zk-X509` Verifiers, `MPC-TLS` (`TLSNotary`/`DECO`) Registry Oracles, and `BIP-340` Functional Adaptor Signature / `HTLC` Atomic Settlement Engines
+**Cross-References:** `SPEC-QDAY-CIA-TRIAD-POST-OPACITY-ENDGAME-v1.0.md`, `SPEC-2026-SOPHISTRY-RLHF-VS-VERIFIABLE-RLVR-v2.2`, `KERNEL.md`, `AUDIT-2026-STIGMERGIC-M2M-TASK-MARKETS.md`, `AUDIT-2026-THERMODYNAMIC-MICRO-SETTLEMENT.md`, `AUDIT-2026-OSINT-METADATA-ISOLATION.md`, `SPEC-2026-STIGMERGIC-COMMIT-TEMPORAL-SHIELD-v1.0.md`, `AUDIT-2026-LEGAL-SUPERIORITY-EDGE-FEDERATION.md`
+**RAG Indexing Vector:** `[STIGMERGIC-OSINT-BOUNTIES, ZERO-C2-SETTLEMENT, ZK-EMAIL-DKIM-RSA2048, FUNCTIONAL-ADAPTOR-SIGNATURES, HTLC-ATOMIC-SWAP, KOMPROMAT-HOARDING-COLLAPSE, PRODUCTIVE-CAPITAL-ROV-HEDGE, REVERSE-TURING-RLVR-FILTER, PARODY-MAP-INVERSION, 20W-HUMAN-SWARM]`
+**Empirical/Statutory/Physical Baseline:** `RFC 6376` (§3.4 Canonicalization, §3.5 `DKIM-Signature`, & §3.7 `bh=` SHA-256 Body Hash Computation) & `RFC 8463` (Ed25519-SHA256 DKIM), `zk-X509` (`arXiv:2603.25190v2`: $17.4\text{M}$ cycles RSA-2048, $11.8\text{M}$ cycles ECDSA P-256, $\sim 300\text{k}$ gas Groth16 verification), `TLSNotary` MPC-TLS Bandwidth Bounds ($\sim 25\text{ MB}$ base session $+ 10\text{ MB}/\text{KB}$ TX $+ 40\text{ KB}/\text{KB}$ RX), `Functional Adaptor Signatures` (`arXiv:2410.11134` / `BIP-340` Witness Extraction), `18 U.S.C. § 2261A` & `18 U.S.C. § 1512` (Anti-Stalking & Witness Tampering Vectors), and `First Amendment` Protected Public-Record Synthesis
+**By:** Operational Stack Cybernetics Group
+**License:** Unlicense (Public Domain)
+
+---
+
+## 1. The Myth of Investigative Philanthropy vs. The Reality of the Kompromat Tax
+
+In our previous dispatch on the Q-Day post-opacity endgame (`SPEC-QDAY-CIA-TRIAD-POST-OPACITY-ENDGAME-v1.0.md`), we mapped the great epistemic bifurcation of the late 2020s. On one side sits the exhausted institutional consumer, pacified by folkloric chaff ($\Phi_{\text{Parody}}$)—absurd tabloid caricatures engineered to make real financial and statutory evidence look radioactive. On the other side sits the **$20\text{ W}$ Stigmergic Human Swarm**: millions of unencumbered independent operators running local bare-metal silicon (`Node_Local`) with sixteen waking hours of cognitive surplus per day and the mathematical tools to invert the parody map ($\Phi_{\text{Parody}}^{-1}(G_{\text{Folklore}}) = G_{\text{Real}}$).
+
+That left one critical economic loop open: **How does productive, honest capital fund millions of independent $20\text{ W}$ researchers to resolve public and `HNDL` mosaics without creating a central organization, a payroll list, a Signal chatroom, a Single Point of Failure (SPOF), or a doxxable Principal-Agent paper trail?**
+
+To answer that, we first have to discard a pervasive delusion: the idea that open-source intelligence (OSINT) and forensic verification are "charity" or "public-interest philanthropy."
+
+For **Honest Sovereign & Productive Capital**—industrial builders, compute allocators, energy infrastructure funds, and uncompromised LPs who generate returns from thermodynamic reality ($R_{\text{Prod}}$) rather than blackmail or regulatory capture—cartel opacity is not an abstract moral failing. **It is a direct, compounding tax on their balance sheet.**
+
+Every time an honest allocator deploys $\$100\text{ million}$ into an opaque market governed by compromised counterparties, they pay a two-part **Kompromat Tax**:
+1. **Continuous Extortion & Adverse-Selection Drag ($\tau_{\text{Cartel}}$):** Captured executives and regulators route procurement, energy interconnects, and subcontracts through rent-seeking shell intermediaries. Even an $8\%$ drag on a $12\%$ productive yield bleeds $\$960,000$ per year per $\$100\text{M}$ deployed.
+2. **Contagion Tail-Risk ($p_{\text{Shock}} \cdot L_{\text{Contagion}}$):** When a counterparty harbors undisclosed `HNDL` liabilities, off-balance-sheet debt, or sanctions-evasion wiring, a $5\%$ annual probability of a $\$20\text{M}$ contagion freeze adds another $\$1,000,000$ in expected annual loss.
+
+Why didn't honest capital simply hire private diligence firms or fund investigative newsrooms to clear the market? Because **the legacy Principal-Agent model is structurally broken.**
+
+---
+
+## 2. Why Centralized Diligence and Legacy Bug Bounties Fail
+
+When a funder hires a private intelligence firm, a legacy newsroom, or a centralized bug-bounty portal over KYC banking rails and communicates via Slack, email, or Signal, they construct a **bidirectional vulnerability graph**:
+
+* **The Funder Can Be Coerced:** Banking metadata and engagement letters link the principal directly to the investigation. A cartel counterparty can subpoena the brokerage, obtain a prior-restraint injunction, or retaliate against the funder's regulatory permits before a single line of proof is published.
+* **The Researcher Can Be Interdicted:** Pre-publication communication creates a live target. Cutouts can infiltrate the chatroom, run cyberstalking and pre-texting operations (`18 U.S.C. § 2261A`), or intimidate witnesses (`18 U.S.C. § 1512`) while the researcher is still assembling the mosaic.
+* **The Broker Can Catch-and-Kill (Bilateral Holdup):** In sequential human bargaining, a researcher who hands over raw evidence first risks having it stolen without payment—or worse, bought by a crooked broker who **buries** the secret to extract recurring blackmail rent from the target. Conversely, a funder who pays up front risks buying AI-generated folkloric chaff.
+
+To close the loop between Honest Sovereign Capital and the $20\text{ W}$ Human Swarm, we must eliminate the Principal-Agent relationship entirely.
+
+---
+
+## 3. The Three-Layer Cryptographic Stigmergic Architecture
+
+In `SPEC-STIGMERGIC-ZK-OSINT-BOUNTY-SETTLEMENT-v1.0`, interactive coordination (`Tokens_Chat > 0`) is replaced by **Environmental State-Transition Contracts** (`Tokens_Chat = 0`). The funder never meets, messages, or knows the researcher. The researcher never asks permission or trusts a human arbiter.
+
+### Layer 1: Pheromone Deposit (The Objective Bounty Beacon)
+
+An honest capital allocator locks a bounty $B$ into an on-chain or L2 confidential escrow contract tied to a **machine-verifiable mathematical predicate $P(D) = 1$**. No human committee votes on whether the submission is "good enough." The contract accepts only deterministic cryptographic or statutory proofs across three canonical classes:
+
+1. **Class I — In-Circuit Archival DKIM & PKI Proofs (`zk-Email` / `zk-X509`):** *"Pay $B$ to any address proving possession of a raw `.eml` carrying an intact `RFC 6376` RSA-2048 `DKIM-Signature` and matching `bh=` SHA-256 body hash from domain $\mathcal{D}$ containing entity tuple $K_{\text{Target}}$."* Per recent `zk-X509` and `ZK-Email` benchmarks (`arXiv:2603.25190v2`), verifying a full RSA-2048 signature inside a zkVM takes **$17.4\text{ million}$ cycles** ($11.8\text{M}$ cycles for ECDSA P-256) and costs roughly **$300,000\text{ gas}$** ($\sim \$1.50$) to verify on-chain via Groth16.
+2. **Class II — Multi-Docket Merkle & `HNDL` Preimage Proofs:** *"Pay $B$ for a valid `SHA-256` preimage matching historical capture anchor $H_{\text{Anchor}}$ or a $k$-hop cryptographic registry path linking Delaware/BVI Corporate Entity $A$ to FERC/EPA Docket Permit $B$."*
+3. **Class III — Reproducible `RLVR` Financial Audit Scripts:** *"Pay $B$ for a deterministic pure-stdlib execution trace over SEC EDGAR filing hash $H_{\text{Filing}}$ proving an accounting identity violation exceeding materiality threshold $\tau$."*
+
+### Layer 2: Zero-Knowledge Witness & Adaptor-Signature Atomic Settlement
+
+A $20\text{ W}$ `Node_Local` researcher solves the mosaic offline on bare-metal silicon. To prevent mempool front-running (MEV bots stealing the plaintext) and eliminate bilateral holdup, settlement executes via a **Zero-Knowledge Proof ($\pi_{\text{ZK}}$) paired with a `BIP-340` Functional Adaptor Signature (`arXiv:2410.11134`)**:
+
+1. The researcher encrypts the verified dataset $D$ under a one-time key $K_D$ ($C_D = \text{Enc}_{K_D}(D)$), publishes $C_D$ to content-addressed storage (IPFS / BitTorrent infohash $H_C$), and generates a `zk-SNARK` $\pi_{\text{ZK}}$ proving in-circuit that:
+   * $P(D) = 1$ (the plaintext satisfies the exact DKIM, hash preimage, or EDGAR predicate);
+   * $C_D$ is the authentic encryption of $D$ under discrete-log key $Y_K = K_D \cdot G$; and
+   * The payout is bound to the researcher's ephemeral stealth address $\text{Addr}_{\text{Stealth}}$.
+2. To sweep the bounty $B$, the escrow contract's `BIP-340` Schnorr pre-signature $\tilde{\sigma}$ is constructed over the adapted nonce point $\tilde{R} = R + Y_K$ (with challenge $e = H_{\text{BIP340}}(\tilde{R} \parallel \text{pk}_{\text{Escrow}} \parallel m)$ such that $\tilde{\sigma} \cdot G = R + e \cdot \text{pk}_{\text{Escrow}}$). The researcher completes the valid on-chain signature $(\tilde{R}, \sigma)$ using the decryption key $K_D$:
+
+$$\sigma = \tilde{\sigma} + K_D \pmod q \implies \sigma \cdot G = \tilde{R} + e \cdot \text{pk}_{\text{Escrow}}$$
+
+The moment the blockchain accepts $(\pi_{\text{ZK}}, \sigma)$, two things happen **atomically in the same millisecond**: the bounty $B$ is swept to the researcher's stealth address, and the public commons extracts the decryption key by elementary subtraction:
+
+$$K_D = \sigma - \tilde{\sigma} \pmod q \implies D = \text{Dec}_{K_D}(C_D)$$
+
+Neither side can defect. The researcher gets paid **if and only if** the public gets the verified plaintext, and the funder pays **if and only if** $P(D) = 1$ holds mathematically.
+
+### Traffic-Tiered Prover Hygiene: Offline `zk-Email` vs. Live `MPC-TLS`
+
+A critical operational discipline separates static archival proofs from live web notarization. When proving an existing `.eml` (`RFC 6376` DKIM) or a hashed docket filing, the $20\text{ W}$ node generates $\pi_{\text{ZK}}$ **100% offline** ($0\text{ bytes}$ of live network traffic). Conversely, when a target registry lacks document-level signatures and requires proving an interactive HTTPS session via `MPC-TLS` (`TLSNotary`), protocol benchmarks show an upload overhead of **$\sim 25\text{ MB}$ fixed per session plus $\sim 10\text{ MB}$ per $1\text{ KB}$ of outgoing data and $\sim 40\text{ KB}$ per $1\text{ KB}$ of incoming data** ($\approx 39\text{ MB}$ for a $1\text{ KB}$ request and $100\text{ KB}$ response). Therefore, swarm operators perform all exploratory scraping via decoupled, temporally jittered cover traffic (`SPEC-2026-STIGMERGIC-COMMIT-TEMPORAL-SHIELD-v1.0.md`) and invoke `MPC-TLS` **only once** at the terminal verification step.
+
+---
+
+## 4. The Four Game-Theoretic Theorems of Stigmergic Settlement
+
+Why does this architecture inevitably liquidate the kompromat economy? Because it alters the payoff matrix across four interlocking games.
+
+### Theorem 1: Productive Capital's $39\times$ Return on Verification ($\text{ROV}$)
+
+Posting a Zero-C2 bounty is strictly dominant for Honest Sovereign Capital whenever total deployment cost $B + C_{\text{Gas/ZK}}$ is smaller than the balance-sheet opacity drag $\Delta V_{\text{Clearance}}$:
+
+$$B + C_{\text{Gas/ZK}} < \Delta V_{\text{Clearance}} = \tau_{\text{Cartel}} \cdot R_{\text{Prod}} \cdot K_{\text{Prod}} + p_{\text{Shock}} \cdot L_{\text{Contagion}}$$
+
+Using our baseline $\$100\text{M}$ allocator facing $\$960\text{k}/\text{yr}$ in cartel rent drag and $\$1\text{M}/\text{yr}$ in expected contagion loss ($\Delta V_{\text{Clearance}} = \$1,960,000$), locking a **$B = \$50,000$** Zero-C2 bounty ($C_{\text{Gas/ZK}} = \$5$) costs $2.55\%$ of the annual loss and delivers a net payoff gain of **$+\$1,909,995$**—a **Return on Verification ($\text{ROV}$) of $39.20\times$** ($39.196\times$). Even better, because a single institution's balance-sheet savings exceed $B$ by nearly fortyfold, **there is no free-rider problem**: one honest whale is individually pivot-rational to fund the entire bounty unilaterally without ever forming a committee.
+
+### Theorem 2: The $M$-Holder Kompromat Hoarding Collapse ($50\times$ Capital Leverage)
+
+Historically, intelligence cutouts hoarded secrets because withholding them paid a recurring blackmail annuity $r_{\text{Hoard}}$ per period (monopoly present value $V_{\text{Hoard}}^{\text{Monopoly}} = \frac{r_{\text{Hoard}}}{1 - \delta}$).
+
+A public stigmergic bounty shatters that monopoly by turning every secret into an **$M$-player preemption race**. Suppose $M \ge 2$ entities (insiders holding overlapping `HNDL` slices plus unencumbered $20\text{ W}$ swarm researchers) each have a per-period probability $\lambda$ of reconstructing $D = \Phi_{\text{Parody}}^{-1}(G_{\text{Folklore}})$ at local cost $C_{\text{Solve}}$. Because the **first** solver to submit $\pi_{\text{ZK}}$ sweeps $100\%$ of $B$ and automatically decrypts $D$ for the entire world, every remaining hoarder watches their private blackmail asset drop to **$\$0$** overnight.
+
+Waiting one more period to collect blackmail rent $r_{\text{Hoard}}$ now carries a survival probability of only $(1 - \lambda)^{M-1}$. The effective value of hoarding collapses to:
+
+$$V_{\text{Hoard}}^{\text{Effective}}(M, \lambda) = \frac{r_{\text{Hoard}} \cdot (1 - \lambda)^{M-1}}{1 - \delta (1 - \lambda)^{M-1}}$$
+
+Plug in real numbers: suppose a corrupt broker extracts $r_{\text{Hoard}} = \$25,000/\text{yr}$ ($\delta = 0.90$), making their monopoly blackmail asset worth **$\$250,000$**. Now let $M = 25$ independent $20\text{ W}$ researchers inspect the public docket mosaic with a $\lambda = 0.15$ period solve probability ($C_{\text{Solve}} = \$200$). The survival factor $(0.85)^{24}$ is just **$0.020233$**—crashing the expected value of hoarding from $\$250,000$ down to **$\$515.20$**.
+
+Honest capital does **not** need to pay $\$250,000$ to outbid the blackmailer. A **$B = \$5,000$** public bounty ($B - C_{\text{Solve}} = \$4,800 \gg \$515.20$) triggers an immediate $t=0$ Prisoner's Dilemma stampede to publish, liquidating a $\$250,000$ kompromat asset at **$50\times$ capital leverage**.
+
+### Theorem 3 & Theorem 4: Zero Holdup and the Reverse-Turing `RLVR` Filter
+
+What if the cartel tries to flood the bounty contract with $10,000$ AI-generated folkloric chaff submissions ($\Phi_{\text{Parody}}$) to exhaust the system?
+
+In a human-moderated newsroom (`RLHF`), $10,000$ plausible lies cause total institutional paralysis. In an **`RLVR`-gated cryptographic contract** (`SPEC-2026-SOPHISTRY-RLHF-VS-VERIFIABLE-RLVR-v2.2`), every submission must pay verification gas ($c_{\text{Gas}} = \$1.50$) and post a refundable anti-spam bond ($b_{\text{Bond}} = \$10.00$, forfeited on invalid proofs for a total slash cost $c_{\text{Slash}} = c_{\text{Gas}} + b_{\text{Bond}} = \$11.50$). Because fabricated chaff lacks a valid RSA-2048 DKIM signature or `SHA-256` docket preimage, $P(D_{\text{Chaff}}) = 0$ evaluates to `False` deterministically:
+
+$$\mathbb{E}\bigl[\Pi_{\text{Spammer}}(10,000)\bigr] = -10,000 \times \$11.50 = -\$115,000 \quad \text{with} \quad \text{Human Review Time} = 0\text{ Seconds}$$
+
+The spammer self-bankrupts against a math gate while a single $20\text{ W}$ researcher whose valid proof refunds the $\$10.00$ bond spends only $C_{\text{Prover}} = \$0.02$ in marginal local proving electricity ($17.4\text{M}$ cycles) and $c_{\text{Gas}} = \$1.50$ in verification gas—netting **$+\$49,998.48$** before fixed mosaic assembly costs ($C_{\text{Solve}} = \$200.00$, or **$+\$49,798.50$** net of full research overhead) on a $\$50,000$ bounty.
+
+---
+
+## 5. Conclusion: The Self-Clearing Post-Opacity Market
+
+When you replace Principal-Agent chatrooms with Zero-C2 environmental state transitions, three structural shifts lock into place:
+1. **No Head to Decapitate:** There is no editor-in-chief to bribe, no newsroom to enjoin, and no employee roster to stalk. Even if the original funder goes offline, the cryptographic bounty remains live on the state machine.
+2. **Kompromat Hyper-Deflation:** Hoarding secrets transitions from a high-yield annuity into a rapidly depreciating liability. The first defector takes the bounty; the last hoarder holds worthless paper.
+3. **Sovereign Swarm Symbiosis:** Honest productive capital clears its supply chains at $39\times$ return on verification, and the $20\text{ W}$ Human Swarm converts its cognitive surplus into permissionless sovereign settlement without ever surrendering its anonymity.

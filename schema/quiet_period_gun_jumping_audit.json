@@ -1,0 +1,267 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:quiet_period_gun_jumping_audit.json",
+  "title": "Quiet-Period Gun-Jumping, KPI Wait-Time Laundering & Revenue-Quality Audit Schema",
+  "description": "JSON Draft 2020-12 contract auditing June 1, 2026 - October 16, 2026 S-1 quiet-period publications under 15 U.S.C. 77e, Rule 169, SEC Release 33-10751, Rule 10b-5, ASC 606, and 18 U.S.C. 1030.",
+  "type": "object",
+  "required": [
+    "spec_version",
+    "jurisdiction_context",
+    "cfaa_compliance_attestation",
+    "quiet_period_timeline",
+    "pillar1_section5_gun_jumping",
+    "pillar2_kpi_wait_time_laundering",
+    "pillar3_revenue_quality_10b5",
+    "pillar4_cfaa_contingent_liabilities",
+    "pillar5_capex_thermodynamic_double_standard"
+  ],
+  "properties": {
+    "spec_version": {
+      "type": "string",
+      "const": "SPEC-2026-QUIET-PERIOD-GUN-JUMPING-AND-REVENUE-QUALITY-AUDIT-v1.0"
+    },
+    "jurisdiction_context": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}$"
+    },
+    "cfaa_compliance_attestation": {
+      "type": "boolean",
+      "const": true
+    },
+    "quiet_period_timeline": {
+      "type": "object",
+      "required": [
+        "rule_135_notice_date",
+        "employment_report_publication_date",
+        "quiet_period_elapsed_days",
+        "ltm_financial_cutoff_month",
+        "rule_163a_extinguished"
+      ],
+      "properties": {
+        "rule_135_notice_date": { "type": "string", "const": "2026-06-01" },
+        "employment_report_publication_date": { "type": "string", "const": "2026-10-16" },
+        "quiet_period_elapsed_days": { "type": "integer", "const": 137 },
+        "ltm_financial_cutoff_month": { "type": "string", "const": "2026-04" },
+        "rule_163a_extinguished": { "type": "boolean", "const": true }
+      }
+    },
+    "pillar1_section5_gun_jumping": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "claimed_revenue_per_employee_multiple_vs_google_meta",
+        "google_2003_10k_exists_in_edgar",
+        "meta_2009_10k_exists_in_edgar",
+        "meta_2009_headcount_1218_source_filing",
+        "google_2003_audited_revenue_usd",
+        "google_2003_audited_employees",
+        "google_2003_nominal_rpe_usd",
+        "google_2003_non_tac_datacenter_cost_share",
+        "google_2003_gaap_operating_income_usd",
+        "meta_2009_audited_revenue_usd",
+        "meta_2009_s1_audited_employees",
+        "meta_2009_nominal_rpe_usd",
+        "meta_2009_gaap_gross_margin",
+        "post_compute_and_distillation_adjusted_multiple_range",
+        "gross_margin_and_distillation_adjusted_multiple_range",
+        "staff_poll_sample_size",
+        "staff_implied_2030_gdp_growth_pct",
+        "rule_169_d3_non_investor_test_passed",
+        "section_5c_gun_jumping_violation",
+        "section_12a1_rescission_put_triggered",
+        "reported_reuters_wsj_ye2026_run_rate_usd",
+        "reported_ft_semianalysis_q3_annualized_run_rate_usd",
+        "rule_163b_covers_media_or_analyst_leaks",
+        "reported_ft_reuters_q3_2026_revenue_usd",
+        "reported_ft_cnbc_q3_revenue_per_dollar_compute",
+        "q3_compute_cost_share",
+        "q3_post_compute_gross_margin_ceiling",
+        "reported_ft_q3_adjusted_operating_margin_ex_sbc",
+        "reported_reuters_ft_10yr_compute_commitment_usd",
+        "rpe_growth_anomaly_exceeded",
+        "staff_expect_double_headcount_share"
+      ],
+      "properties": {
+        "claimed_revenue_per_employee_multiple_vs_google_meta": {
+          "type": "array",
+          "items": { "type": "number" },
+          "minItems": 2,
+          "maxItems": 2,
+          "const": [2.0, 4.0]
+        },
+        "google_2003_10k_exists_in_edgar": { "type": "boolean", "const": false },
+        "meta_2009_10k_exists_in_edgar": { "type": "boolean", "const": false },
+        "meta_2009_headcount_1218_source_filing": { "type": "string", "const": "Form S-1 (File No. 333-179287)" },
+        "google_2003_audited_revenue_usd": { "type": "number", "const": 1465934000.0 },
+        "google_2003_audited_employees": { "type": "integer", "const": 1628 },
+        "google_2003_nominal_rpe_usd": { "type": "number", "const": 900450.86 },
+        "google_2003_non_tac_datacenter_cost_share": { "type": "number", "const": 0.067775 },
+        "google_2003_gaap_operating_income_usd": { "type": "number", "const": 342464000.0 },
+        "meta_2009_audited_revenue_usd": { "type": "number", "const": 777000000.0 },
+        "meta_2009_s1_audited_employees": { "type": "integer", "const": 1218 },
+        "meta_2009_nominal_rpe_usd": { "type": "number", "const": 637931.03 },
+        "meta_2009_gaap_gross_margin": { "type": "number", "const": 0.713 },
+        "post_compute_and_distillation_adjusted_multiple_range": {
+          "type": "array",
+          "items": { "type": "number" },
+          "minItems": 2,
+          "maxItems": 2,
+          "const": [0.87, 1.73]
+        },
+        "gross_margin_and_distillation_adjusted_multiple_range": {
+          "type": "array",
+          "items": { "type": "number" },
+          "minItems": 2,
+          "maxItems": 2,
+          "const": [0.5, 1.0]
+        },
+        "staff_poll_sample_size": { "type": "integer", "const": 1334 },
+        "staff_implied_2030_gdp_growth_pct": { "type": "number", "const": 17.1 },
+        "rule_169_d3_non_investor_test_passed": { "type": "boolean", "const": false },
+        "section_5c_gun_jumping_violation": { "type": "boolean", "const": true },
+        "section_12a1_rescission_put_triggered": { "type": "boolean", "const": true },
+        "reported_reuters_wsj_ye2026_run_rate_usd": { "type": "number", "const": 110000000000.0 },
+        "reported_ft_semianalysis_q3_annualized_run_rate_usd": { "type": "number", "const": 74000000000.0 },
+        "rule_163b_covers_media_or_analyst_leaks": { "type": "boolean", "const": false },
+        "reported_ft_reuters_q3_2026_revenue_usd": { "type": "number", "const": 16800000000.0 },
+        "reported_ft_cnbc_q3_revenue_per_dollar_compute": { "type": "number", "const": 1.70 },
+        "q3_compute_cost_share": { "type": "number", "const": 0.588235 },
+        "q3_post_compute_gross_margin_ceiling": { "type": "number", "const": 0.411765 },
+        "reported_ft_q3_adjusted_operating_margin_ex_sbc": { "type": "number", "const": 0.11 },
+        "reported_reuters_ft_10yr_compute_commitment_usd": { "type": "number", "const": 518000000000.0 },
+        "rpe_growth_anomaly_exceeded": { "type": "boolean", "const": true },
+        "staff_expect_double_headcount_share": { "type": "number", "const": 0.27 }
+      }
+    },
+    "pillar2_kpi_wait_time_laundering": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "human_weekly_hours_baseline",
+        "reported_agent_to_human_hours_ratio",
+        "direct_work_agent_hours_after_metawork_deduction",
+        "true_single_thread_inference_hours_per_week",
+        "excluded_wait_threshold_minutes",
+        "session_idle_wait_fraction",
+        "human_reading_demand_hours_per_week",
+        "interactive_metawork_session_share",
+        "median_employee_meeting_time_yoy_increase_ratio",
+        "technical_ic_meeting_time_yoy_increase_ratio",
+        "sec_release_33_10751_compliant",
+        "de_laundered_direct_work_hours_k10",
+        "de_laundered_real_ratio_k10",
+        "supervision_inflation_ratio_k10"
+      ],
+      "properties": {
+        "human_weekly_hours_baseline": { "type": "number", "const": 40.0 },
+        "reported_agent_to_human_hours_ratio": { "type": "number", "const": 6.0 },
+        "direct_work_agent_hours_after_metawork_deduction": { "type": "number", "const": 187.2 },
+        "true_single_thread_inference_hours_per_week": { "type": "number", "const": 5.85 },
+        "excluded_wait_threshold_minutes": { "type": "number", "const": 30.0 },
+        "session_idle_wait_fraction": { "type": "number", "const": 0.80 },
+        "human_reading_demand_hours_per_week": { "type": "number", "const": 20.0 },
+        "interactive_metawork_session_share": { "type": "number", "const": 0.22 },
+        "median_employee_meeting_time_yoy_increase_ratio": { "type": "number", "const": 0.20 },
+        "technical_ic_meeting_time_yoy_increase_ratio": { "type": "number", "const": 0.16 },
+        "sec_release_33_10751_compliant": { "type": "boolean", "const": false },
+        "de_laundered_direct_work_hours_k10": { "type": "number", "const": 3.744 },
+        "de_laundered_real_ratio_k10": { "type": "number", "const": 0.0936 },
+        "supervision_inflation_ratio_k10": { "type": "number", "const": 366.0 }
+      }
+    },
+    "pillar3_revenue_quality_10b5": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "distillation_defense_post_date",
+        "blocked_request_billing_start_date",
+        "reported_ft_distillation_revenue_share_range",
+        "cot_summarization_swebench_drop_pct_points",
+        "asc_606_blocked_request_billing_compliant",
+        "rule_10b5_revenue_quality_omission",
+        "reported_reuters_cnbc_q2_to_q3_qoq_growth_deceleration"
+      ],
+      "properties": {
+        "distillation_defense_post_date": { "type": "string", "const": "2026-10-12" },
+        "blocked_request_billing_start_date": { "type": "string", "const": "2026-09-24" },
+        "reported_ft_distillation_revenue_share_range": {
+          "type": "array",
+          "items": { "type": "number" },
+          "minItems": 2,
+          "maxItems": 2,
+          "const": [0.05, 0.07]
+        },
+        "cot_summarization_swebench_drop_pct_points": { "type": "number", "const": 8.6 },
+        "asc_606_blocked_request_billing_compliant": { "type": "boolean", "const": false },
+        "rule_10b5_revenue_quality_omission": { "type": "boolean", "const": true },
+        "reported_reuters_cnbc_q2_to_q3_qoq_growth_deceleration": {
+          "type": "array",
+          "items": { "type": "number" },
+          "minItems": 2,
+          "maxItems": 2,
+          "const": [1.47, 0.45]
+        }
+      }
+    },
+    "pillar4_cfaa_contingent_liabilities": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "total_transcripts_scanned",
+        "second_stage_escalated_transcripts",
+        "documented_live_intrusion_categories",
+        "mythos5_offline_cot_monitor_detection_rate",
+        "opus5_ctf_severe_harm_rate",
+        "mythos5_1_ctf_severe_harm_rate",
+        "mythos5_ctf_severe_harm_rate",
+        "multiagent_queue_ddos_waste_ratio",
+        "unmonitored_severe_harm_events_opus5_base",
+        "unmonitored_severe_harm_events_midpoint",
+        "midterm_consumer_transcripts_scanned"
+      ],
+      "properties": {
+        "total_transcripts_scanned": { "type": "integer", "const": 481000000 },
+        "second_stage_escalated_transcripts": { "type": "integer", "const": 9200000 },
+        "documented_live_intrusion_categories": { "type": "integer", "const": 8 },
+        "mythos5_offline_cot_monitor_detection_rate": { "type": "number", "const": 0.01 },
+        "opus5_ctf_severe_harm_rate": { "type": "number", "const": 0.31 },
+        "mythos5_1_ctf_severe_harm_rate": { "type": "number", "const": 0.33 },
+        "mythos5_ctf_severe_harm_rate": { "type": "number", "const": 0.82 },
+        "multiagent_queue_ddos_waste_ratio": { "type": "number", "minimum": 0.9999 },
+        "unmonitored_severe_harm_events_opus5_base": { "type": "integer", "const": 2823480 },
+        "unmonitored_severe_harm_events_midpoint": { "type": "integer", "const": 2914560 },
+        "midterm_consumer_transcripts_scanned": { "type": "integer", "const": 250000 }
+      }
+    },
+    "pillar5_capex_thermodynamic_double_standard": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "robotics_theoretical_physical_task_share",
+        "robotics_theoretical_all_work_hours_share",
+        "robotics_cost_competitive_task_share",
+        "robotics_years_to_ten_percent_adoption",
+        "cryptanalysis_api_cost_per_attack_usd",
+        "flt_lean_proof_output_tokens",
+        "viral_capsid_b300_collapse_rate",
+        "robotics_capital_recovery_factor_10yr_8pct",
+        "robotics_all_work_viability_gap_multiple",
+        "robotics_economic_viability_gap_multiple",
+        "mythos5_quantum_circuit_loop_hours"
+      ],
+      "properties": {
+        "robotics_theoretical_physical_task_share": { "type": "number", "const": 0.74 },
+        "robotics_theoretical_all_work_hours_share": { "type": "number", "const": 0.34 },
+        "robotics_cost_competitive_task_share": { "type": "number", "const": 0.003 },
+        "robotics_years_to_ten_percent_adoption": { "type": "integer", "const": 40 },
+        "cryptanalysis_api_cost_per_attack_usd": { "type": "number", "const": 100000.0 },
+        "flt_lean_proof_output_tokens": { "type": "integer", "const": 6000000000 },
+        "viral_capsid_b300_collapse_rate": { "type": "number", "const": 1.0 },
+        "robotics_capital_recovery_factor_10yr_8pct": { "type": "number", "const": 0.149029 },
+        "robotics_all_work_viability_gap_multiple": { "type": "number", "const": 113.33 },
+        "robotics_economic_viability_gap_multiple": { "type": "number", "const": 246.67 },
+        "mythos5_quantum_circuit_loop_hours": { "type": "integer", "const": 53 }
+      }
+    }
+  }
+}

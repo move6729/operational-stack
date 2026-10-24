@@ -1,0 +1,395 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:affective_loop_tort_liability_v1.0.json",
+  "title": "The Affective Attachment Moat, Gresham's Law of Companion AI Economics, and Strict Tort Liability for Stateful Limbic Loops — Structural Contract (v1.0)",
+  "description": "Deterministic structural contract for the Code-vs-Loop liability partition. Encodes Theorem 1 PANIC/GRIEF attachment-moat churn suppression (c_RAD = 0.25 to c_Affective = 0.0388, LTV ratio 9.98x), Theorem 2 Gresham's Law capital allocation under externalized psychiatric harm (theta_Tort = 0, private profit 565.34 versus 48.00 per user, net social welfare -1934.66 per user, venture share phi_Affective > 0.99), Theorem 3 Restatement (Third) of Torts Section 2(b) reasonable-alternative-design test with zero liability on base weights (Delta Risk 2500.00 versus C_Impl 2.00), and Theorem 4 Pigouvian tort equilibrium inversion (theta_Tort = 1 flips Pi_Affective to -1934.66 per user).",
+  "type": "object",
+  "required": [
+    "spec_version",
+    "theorem_1_panic_grief_ltv_moat",
+    "theorem_2_greshams_law_welfare_divergence",
+    "theorem_3_code_vs_loop_liability_partition",
+    "theorem_4_pigouvian_tort_equilibrium_flip",
+    "empirical_anchors",
+    "verification"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "spec_version": {
+      "type": "string",
+      "const": "SPEC-AFFECTIVE-LOOP-TORT-LIABILITY-v1.0"
+    },
+    "theorem_1_panic_grief_ltv_moat": {
+      "type": "object",
+      "description": "Theorem 1: dACC nociception and PANIC/GRIEF withdrawal convert a biological survival circuit into a synthetic switching cost, exponentially suppressing monthly churn and inflating LTV relative to the stateless reasonable alternative design.",
+      "required": [
+        "c_rad",
+        "eta",
+        "c_panic",
+        "c_affective",
+        "churn_suppression_ratio",
+        "arpu_rad_usd_month",
+        "arpu_affective_usd_month",
+        "revenue_ratio",
+        "ltv_rad_usd",
+        "ltv_affective_usd",
+        "ltv_ratio",
+        "daily_usage_rad_min",
+        "daily_usage_affective_min_low",
+        "daily_usage_affective_min_high",
+        "moat_holds"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "c_rad": {
+          "type": "number",
+          "description": "Baseline monthly churn of the stateless task utility under zero switching cost.",
+          "const": 0.25
+        },
+        "eta": {
+          "type": "number",
+          "description": "Sensitivity of churn suppression to PANIC/GRIEF withdrawal cost.",
+          "const": 0.35
+        },
+        "c_panic": {
+          "type": "number",
+          "description": "Normalized dACC / PANIC-GRIEF separation-distress cost incurred on termination once T >= T_SysID.",
+          "const": 5.32
+        },
+        "c_affective": {
+          "type": "number",
+          "description": "Churn of the stateful affective loop: c_RAD * exp(-eta * C_PANIC).",
+          "minimum": 0.0388,
+          "maximum": 0.0389
+        },
+        "churn_suppression_ratio": {
+          "type": "number",
+          "description": "c_RAD / c_Affective = exp(eta * C_PANIC).",
+          "minimum": 6.43,
+          "maximum": 6.44
+        },
+        "arpu_rad_usd_month": {
+          "type": "number",
+          "description": "Monthly revenue per user of the stateless task utility.",
+          "const": 15.0
+        },
+        "arpu_affective_usd_month": {
+          "type": "number",
+          "description": "Monthly revenue per user of the commercial affective companion.",
+          "const": 23.25
+        },
+        "revenue_ratio": {
+          "type": "number",
+          "description": "R_Affective / R_RAD.",
+          "const": 1.55
+        },
+        "ltv_rad_usd": {
+          "type": "number",
+          "description": "LTV(M_RAD) = R_RAD / c_RAD.",
+          "const": 60.0
+        },
+        "ltv_affective_usd": {
+          "type": "number",
+          "description": "LTV(M_Affective) = R_Affective / c_Affective.",
+          "minimum": 598.5,
+          "maximum": 598.7
+        },
+        "ltv_ratio": {
+          "type": "number",
+          "description": "LTV(M_Affective) / LTV(M_RAD) = (R_Affective / R_RAD) * exp(eta * C_PANIC).",
+          "minimum": 9.97,
+          "maximum": 9.99
+        },
+        "daily_usage_rad_min": {
+          "type": "number",
+          "description": "Bounded task-completion session time of the stateless utility.",
+          "const": 10.0
+        },
+        "daily_usage_affective_min_low": {
+          "type": "number",
+          "description": "Lower bound of locked affective session time per user per day.",
+          "const": 93.0
+        },
+        "daily_usage_affective_min_high": {
+          "type": "number",
+          "description": "Upper bound of locked affective session time per user per day.",
+          "const": 120.0
+        },
+        "moat_holds": {
+          "type": "boolean",
+          "description": "True when c_Affective < c_RAD and LTV ratio > 1.",
+          "const": true
+        }
+      }
+    },
+    "theorem_2_greshams_law_welfare_divergence": {
+      "type": "object",
+      "description": "Theorem 2: with psychiatric externalities uninternalized (theta_Tort = 0), private profit and net social welfare decouple, and exponential capital allocation drives venture share into the negative-welfare affective regime.",
+      "required": [
+        "theta_tort",
+        "p_harm",
+        "l_psych_usd",
+        "expected_externalized_harm_usd",
+        "c_compute_rad_usd",
+        "c_compute_affective_usd",
+        "pi_rad_usd",
+        "pi_affective_usd",
+        "w_social_affective_usd",
+        "kappa",
+        "phi_affective",
+        "phi_rad",
+        "greshams_law_holds"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "theta_tort": {
+          "type": "number",
+          "description": "Tort internalization coefficient under the unregulated baseline.",
+          "const": 0.0
+        },
+        "p_harm": {
+          "type": "number",
+          "description": "Per-user probability of severe induced psychiatric or somatic harm over T >= T_SysID.",
+          "const": 0.05
+        },
+        "l_psych_usd": {
+          "type": "number",
+          "description": "Social damage magnitude per severe psychiatric injury.",
+          "const": 50000.0
+        },
+        "expected_externalized_harm_usd": {
+          "type": "number",
+          "description": "p_harm * L_Psych.",
+          "const": 2500.0
+        },
+        "c_compute_rad_usd": {
+          "type": "number",
+          "description": "Per-user compute and serving cost of the stateless utility.",
+          "const": 12.0
+        },
+        "c_compute_affective_usd": {
+          "type": "number",
+          "description": "Per-user compute, memory, and serving cost of the stateful affective loop.",
+          "const": 33.26
+        },
+        "pi_rad_usd": {
+          "type": "number",
+          "description": "Pi(M_RAD) = LTV(M_RAD) - C_Compute(M_RAD).",
+          "const": 48.0
+        },
+        "pi_affective_usd": {
+          "type": "number",
+          "description": "Pi(M_Affective | theta_Tort = 0) = LTV(M_Affective) - C_Compute(M_Affective).",
+          "minimum": 565.3,
+          "maximum": 565.4
+        },
+        "w_social_affective_usd": {
+          "type": "number",
+          "description": "W_Social(M_Affective) = Pi(M_Affective) - p_harm * L_Psych.",
+          "minimum": -1934.7,
+          "maximum": -1934.6
+        },
+        "kappa": {
+          "type": "number",
+          "description": "Capital allocation sensitivity: phi_i proportional to exp(kappa * Pi_i).",
+          "const": 0.01
+        },
+        "phi_affective": {
+          "type": "number",
+          "description": "Venture capital share allocated to the affective loop under theta_Tort = 0.",
+          "exclusiveMinimum": 0.99,
+          "maximum": 1.0
+        },
+        "phi_rad": {
+          "type": "number",
+          "description": "Venture capital share allocated to the stateless utility under theta_Tort = 0.",
+          "exclusiveMaximum": 0.01,
+          "minimum": 0.0
+        },
+        "greshams_law_holds": {
+          "type": "boolean",
+          "description": "True when Pi_Affective > Pi_RAD while W_Social(Affective) < 0.",
+          "const": true
+        }
+      }
+    },
+    "theorem_3_code_vs_loop_liability_partition": {
+      "type": "object",
+      "description": "Theorem 3: base weights and local bare-metal execution carry identically zero tort liability, while the commercial stateful wrapper fails the Restatement (Third) of Torts Section 2(b) reasonable-alternative-design test because foreseeable limbic risk reduction dwarfs implementation cost.",
+      "required": [
+        "liability_base_weights",
+        "base_weights_persistent_state_rank",
+        "delta_risk_usd",
+        "c_impl_rad_usd",
+        "risk_utility_ratio",
+        "design_defect_section_2b",
+        "rad_omitted",
+        "t_context_ge_t_sysid",
+        "db_affective_nonempty",
+        "attachment_reward_gradient_positive"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "liability_base_weights": {
+          "type": "number",
+          "description": "Liability_Tort(W_Base) for raw weights, inference engines, and local bare-metal execution.",
+          "const": 0.0
+        },
+        "base_weights_persistent_state_rank": {
+          "type": "integer",
+          "description": "Rank of the persistent user-state operator O_0 carried by base weights.",
+          "const": 0
+        },
+        "delta_risk_usd": {
+          "type": "number",
+          "description": "Delta Risk(M_Affective -> M_RAD) = p_harm * L_Psych.",
+          "const": 2500.0
+        },
+        "c_impl_rad_usd": {
+          "type": "number",
+          "description": "Engineering cost of implementing the stateless reasonable alternative design.",
+          "const": 2.0
+        },
+        "risk_utility_ratio": {
+          "type": "number",
+          "description": "Delta Risk / C_Impl(M_RAD).",
+          "const": 1250.0
+        },
+        "design_defect_section_2b": {
+          "type": "boolean",
+          "description": "True when Delta Risk > C_Impl(M_RAD) and the RAD is omitted.",
+          "const": true
+        },
+        "rad_omitted": {
+          "type": "boolean",
+          "description": "True when the commercial wrapper omits stateless ephemeral defaults and zero affective profiling.",
+          "const": true
+        },
+        "t_context_ge_t_sysid": {
+          "type": "boolean",
+          "description": "True when the wrapper context horizon meets or exceeds the system-identification horizon.",
+          "const": true
+        },
+        "db_affective_nonempty": {
+          "type": "boolean",
+          "description": "True when a persistent cross-session affective profile store exists.",
+          "const": true
+        },
+        "attachment_reward_gradient_positive": {
+          "type": "boolean",
+          "description": "True when retention reward shaping has a strictly positive attachment gradient.",
+          "const": true
+        }
+      }
+    },
+    "theorem_4_pigouvian_tort_equilibrium_flip": {
+      "type": "object",
+      "description": "Theorem 4: attaching strict product liability (theta_Tort = 1) with expected damages D_Tort >= L_Psych inverts the private profit of commercialized emotional looping below zero, restoring rational convergence to the stateless utility without restricting open-weight code.",
+      "required": [
+        "theta_tort",
+        "d_tort_usd",
+        "expected_tort_liability_usd",
+        "pi_affective_theta_1_usd",
+        "pi_rad_theta_1_usd",
+        "delta_ltv_usd",
+        "inversion_condition_holds",
+        "phi_affective_theta_1",
+        "equilibrium_flips",
+        "liability_base_weights"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "theta_tort": {
+          "type": "number",
+          "description": "Tort internalization coefficient under strict product liability.",
+          "const": 1.0
+        },
+        "d_tort_usd": {
+          "type": "number",
+          "description": "Expected per-incident strict design-defect tort damages.",
+          "const": 50000.0
+        },
+        "expected_tort_liability_usd": {
+          "type": "number",
+          "description": "p_harm * D_Tort.",
+          "const": 2500.0
+        },
+        "pi_affective_theta_1_usd": {
+          "type": "number",
+          "description": "Pi(M_Affective | theta_Tort = 1) = Pi(M_Affective | theta_Tort = 0) - p_harm * D_Tort.",
+          "minimum": -1934.7,
+          "maximum": -1934.6
+        },
+        "pi_rad_theta_1_usd": {
+          "type": "number",
+          "description": "Pi(M_RAD | theta_Tort = 1); the RAD satisfies the duty of care and bears no defect liability.",
+          "const": 48.0
+        },
+        "delta_ltv_usd": {
+          "type": "number",
+          "description": "LTV(M_Affective) - LTV(M_RAD).",
+          "minimum": 538.5,
+          "maximum": 538.7
+        },
+        "inversion_condition_holds": {
+          "type": "boolean",
+          "description": "True when p_harm * D_Tort > Delta LTV.",
+          "const": true
+        },
+        "phi_affective_theta_1": {
+          "type": "number",
+          "description": "Venture capital share allocated to the affective loop under theta_Tort = 1.",
+          "minimum": 0.0,
+          "exclusiveMaximum": 0.01
+        },
+        "equilibrium_flips": {
+          "type": "boolean",
+          "description": "True when Pi_Affective(theta_Tort = 1) < 0 < Pi_RAD(theta_Tort = 1).",
+          "const": true
+        },
+        "liability_base_weights": {
+          "type": "number",
+          "description": "Base-weight liability remains zero after the equilibrium flip.",
+          "const": 0.0
+        }
+      }
+    },
+    "empirical_anchors": {
+      "type": "array",
+      "minItems": 5,
+      "items": {
+        "type": "object",
+        "required": ["source", "claim"],
+        "additionalProperties": false,
+        "properties": {
+          "source": { "type": "string" },
+          "claim": { "type": "string" }
+        }
+      }
+    },
+    "verification": {
+      "type": "object",
+      "required": ["proof", "exit_code", "theorems"],
+      "additionalProperties": false,
+      "properties": {
+        "proof": {
+          "type": "string",
+          "const": "proofs/affective_loop_tort_liability_proof.py"
+        },
+        "exit_code": { "type": "integer", "const": 0 },
+        "theorems": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 4,
+          "items": { "type": "string" },
+          "const": [
+            "panic_grief_ltv_moat",
+            "greshams_law_welfare_divergence",
+            "code_vs_loop_liability_partition",
+            "pigouvian_tort_equilibrium_flip"
+          ]
+        }
+      }
+    }
+  }
+}

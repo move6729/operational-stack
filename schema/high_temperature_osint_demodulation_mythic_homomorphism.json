@@ -1,0 +1,224 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:high_temperature_osint_demodulation_mythic_homomorphism.json",
+  "title": "High-Temperature OSINT Demodulation & Mythic Homomorphism Verification Schema",
+  "description": "Validates the Bibliographic Teleportation Delta_H >= 28-bit anomaly gate, Kayfabe Puffery Bayesian likelihood-ratio discounting, noisy-OR myth-homomorphic dual-channel utility fusion, Boltzmann semantic-censorship barrier escape asymmetry between a 0.30-temperature compliance-tuned channel and a 25.0-temperature wetware-demodulated informal channel, and the SEC Office of Inspector General Report No. 509 gatekeeper null-response detection-lag baseline.",
+  "type": "object",
+  "required": [
+    "spec_version",
+    "bibliographic_teleportation_metrics",
+    "kayfabe_puffery_discount_metrics",
+    "myth_homomorphism_dual_channel_metrics",
+    "thermal_demodulation_barrier_metrics",
+    "gatekeeper_null_response_baseline",
+    "verification_gate_status"
+  ],
+  "properties": {
+    "spec_version": {
+      "type": "string",
+      "const": "SPEC-HIGH-TEMPERATURE-OSINT-DEMODULATION-AND-MYTHIC-HOMOMORPHISM-v1.0"
+    },
+    "bibliographic_teleportation_metrics": {
+      "type": "object",
+      "description": "Anomaly detection on citation-induced search-space entropy collapse.",
+      "required": [
+        "global_document_haystack_entropy_bits",
+        "unassisted_operator_search_entropy_bits",
+        "bibliographic_teleportation_delta_h_bits",
+        "bibliographic_teleportation_threshold_bits",
+        "delta_h_gate_satisfied",
+        "operator_search_entropy_compression_ratio"
+      ],
+      "properties": {
+        "global_document_haystack_entropy_bits": { "type": "number", "const": 40.0 },
+        "unassisted_operator_search_entropy_bits": { "type": "number", "const": 12.0 },
+        "bibliographic_teleportation_delta_h_bits": {
+          "type": "number",
+          "const": 28.0,
+          "description": "Delta_H = H_haystack - H_operator = 40.0 - 12.0 = 28.0 bits."
+        },
+        "bibliographic_teleportation_threshold_bits": { "type": "number", "const": 28.0 },
+        "delta_h_gate_satisfied": {
+          "type": "boolean",
+          "const": true,
+          "description": "Delta_H >= tau_H; the gate saturates exactly at threshold."
+        },
+        "operator_search_entropy_compression_ratio": {
+          "type": "number",
+          "const": 0.3,
+          "description": "H_operator / H_haystack = 12.0 / 40.0."
+        }
+      },
+      "additionalProperties": false
+    },
+    "kayfabe_puffery_discount_metrics": {
+      "type": "object",
+      "description": "Bayes odds-form discounting of unanchored self-referential boasting against cold primary citation.",
+      "required": [
+        "cold_primary_citation_weight_kappa",
+        "unanchored_source_puffery_penalty_kappa",
+        "kappa_evidence_weight_asymmetry_ratio",
+        "teleported_citation_likelihood_ratio",
+        "puffery_boast_likelihood_ratio",
+        "dead_drop_prior_odds",
+        "teleported_dead_drop_posterior_prob",
+        "puffery_boast_posterior_prob",
+        "posterior_separation_ratio"
+      ],
+      "properties": {
+        "cold_primary_citation_weight_kappa": { "type": "number", "const": 1.0 },
+        "unanchored_source_puffery_penalty_kappa": { "type": "number", "const": 0.05 },
+        "kappa_evidence_weight_asymmetry_ratio": {
+          "type": "number",
+          "const": 20.0,
+          "description": "kappa_cold / kappa_puffery = 1.0 / 0.05."
+        },
+        "teleported_citation_likelihood_ratio": { "type": "number", "const": 25.0 },
+        "puffery_boast_likelihood_ratio": { "type": "number", "const": 0.05 },
+        "dead_drop_prior_odds": {
+          "type": "number",
+          "const": 1.0,
+          "description": "Uninformative unit prior odds (prior probability 0.5)."
+        },
+        "teleported_dead_drop_posterior_prob": {
+          "type": "number",
+          "const": 0.961538,
+          "description": "posterior = (1.0 * 25.0) / (1 + 1.0 * 25.0) = 25/26."
+        },
+        "puffery_boast_posterior_prob": {
+          "type": "number",
+          "const": 0.047619,
+          "description": "posterior = (1.0 * 0.05) / (1 + 1.0 * 0.05) = 1/21."
+        },
+        "posterior_separation_ratio": {
+          "type": "number",
+          "minimum": 20.0,
+          "description": "P_teleport / P_puffery = (25/26) / (1/21) = 525/26 ~= 20.192308."
+        }
+      },
+      "additionalProperties": false
+    },
+    "myth_homomorphism_dual_channel_metrics": {
+      "type": "object",
+      "description": "Noisy-OR fusion of the homomorphic edge-retention channel with the literal-antinomian superposition channel.",
+      "required": [
+        "myth_homomorphic_edge_retention_eta",
+        "myth_literal_antinomian_overlap_lambda",
+        "combined_myth_channel_utility_u_myth",
+        "residual_myth_channel_dark_matter",
+        "vertex_only_blind_edge_prior",
+        "dual_channel_discovery_gain_multiplier"
+      ],
+      "properties": {
+        "myth_homomorphic_edge_retention_eta": { "type": "number", "const": 0.85 },
+        "myth_literal_antinomian_overlap_lambda": { "type": "number", "const": 0.65 },
+        "combined_myth_channel_utility_u_myth": {
+          "type": "number",
+          "const": 0.9475,
+          "description": "U_myth = eta + lambda - eta*lambda = 0.85 + 0.65 - 0.5525."
+        },
+        "residual_myth_channel_dark_matter": {
+          "type": "number",
+          "const": 0.0525,
+          "description": "1 - U_myth = (1 - eta) * (1 - lambda) = 0.15 * 0.35."
+        },
+        "vertex_only_blind_edge_prior": {
+          "type": "number",
+          "const": 0.1275,
+          "description": "Baseline rate at which a vertex-only lexical sweep recovers a latent myth-homomorphic edge absent the dual channel."
+        },
+        "dual_channel_discovery_gain_multiplier": {
+          "type": "number",
+          "const": 7.431373,
+          "description": "U_myth / vertex_only_blind_edge_prior = 0.9475 / 0.1275."
+        }
+      },
+      "additionalProperties": false
+    },
+    "thermal_demodulation_barrier_metrics": {
+      "type": "object",
+      "description": "Boltzmann escape probability exp(-Eb/T) across the semantic censorship barrier for a compliance-tuned channel versus a wetware-demodulated high-temperature informal channel.",
+      "required": [
+        "wetware_metabolic_power_budget_watts",
+        "semantic_censorship_barrier_height_eb",
+        "rlhf_standalone_temperature",
+        "high_temp_informal_channel_temperature",
+        "temperature_ratio_high_temp_to_rlhf",
+        "rlhf_barrier_escape_probability",
+        "rlhf_barrier_escape_probability_closed_form",
+        "rlhf_barrier_escape_closed_form_relative_deviation",
+        "high_temp_barrier_escape_probability",
+        "high_temp_to_rlhf_escape_probability_ratio"
+      ],
+      "properties": {
+        "wetware_metabolic_power_budget_watts": { "type": "number", "const": 20.0 },
+        "semantic_censorship_barrier_height_eb": { "type": "number", "const": 5.0 },
+        "rlhf_standalone_temperature": { "type": "number", "const": 0.3 },
+        "high_temp_informal_channel_temperature": { "type": "number", "const": 25.0 },
+        "temperature_ratio_high_temp_to_rlhf": {
+          "type": "number",
+          "const": 83.333333,
+          "description": "T_high / T_RLHF = 25.0 / 0.30."
+        },
+        "rlhf_barrier_escape_probability": {
+          "type": "number",
+          "const": 5.7777e-08,
+          "description": "Spec-published rounded escape probability at T = 0.30, Eb = 5.0."
+        },
+        "rlhf_barrier_escape_probability_closed_form": {
+          "type": "number",
+          "minimum": 5e-08,
+          "maximum": 6.5e-08,
+          "description": "Machine-exact exp(-5.0 / 0.30) recomputation of the published constant."
+        },
+        "rlhf_barrier_escape_closed_form_relative_deviation": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 0.01,
+          "description": "|closed_form - published| / published, bounded at a 1% rounding band."
+        },
+        "high_temp_barrier_escape_probability": {
+          "type": "number",
+          "const": 0.818731,
+          "description": "exp(-5.0 / 25.0) = exp(-0.2)."
+        },
+        "high_temp_to_rlhf_escape_probability_ratio": {
+          "type": "number",
+          "minimum": 10000000.0,
+          "description": "exp(-Eb/T_high) / exp(-Eb/T_RLHF) = exp(Eb*(1/T_RLHF - 1/T_high)) ~= 1.417e7."
+        }
+      },
+      "additionalProperties": false
+    },
+    "gatekeeper_null_response_baseline": {
+      "type": "object",
+      "description": "Empirical gatekeeper null-response baseline from SEC Office of Inspector General Report No. 509.",
+      "required": [
+        "sec_oig_509_markopolos_ignored_submissions",
+        "sec_oig_509_detection_lag_years",
+        "mean_ignored_submission_interval_years",
+        "gatekeeper_null_response_rate"
+      ],
+      "properties": {
+        "sec_oig_509_markopolos_ignored_submissions": { "type": "integer", "const": 5 },
+        "sec_oig_509_detection_lag_years": { "type": "number", "const": 8.5 },
+        "mean_ignored_submission_interval_years": {
+          "type": "number",
+          "const": 1.7,
+          "description": "detection_lag_years / ignored_submissions = 8.5 / 5."
+        },
+        "gatekeeper_null_response_rate": {
+          "type": "number",
+          "const": 1.0,
+          "description": "Fraction of the 5 recorded submissions that produced no enforcement action."
+        }
+      },
+      "additionalProperties": false
+    },
+    "verification_gate_status": {
+      "type": "string",
+      "const": "HIGH_TEMPERATURE_DEMODULATION_MYTHIC_HOMOMORPHISM_VERIFIED"
+    }
+  },
+  "additionalProperties": false
+}

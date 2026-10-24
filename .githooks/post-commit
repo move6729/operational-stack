@@ -1,0 +1,29 @@
+#!/bin/sh
+# OPSTACK-SPEC-TEMPORAL-COMMIT-SHIELD-v1.0
+# Bounded Monotonic Past-Jitter + UTC (+0000) Normalization
+# Guarantees: T_{n-1} <= T_n <= T_now <= T_push
+
+[ "$GIT_FUZZ_APPLIED" = "1" ] && exit 0
+
+NOW=$(date -u +%s)
+LAST=$(git log -1 --skip=1 --format=%ct 2>/dev/null || echo 0)
+[ -z "$LAST" ] && LAST=0
+
+# Max 30-min lookback, bounded below by LAST parent commit epoch
+MIN_TS=$((NOW - 1800))
+[ "$LAST" -gt "$MIN_TS" ] && MIN_TS="$LAST"
+
+SPAN=$((NOW - MIN_TS))
+if [ "$SPAN" -gt 1 ]; then
+    RAND=$(od -An -N2 -tu2 /dev/urandom | tr -d ' \t\n\r')
+    FUZZED_TS=$((MIN_TS + 1 + (RAND % (SPAN - 1))))
+else
+    FUZZED_TS="$NOW"
+fi
+
+FUZZED_DATE=$(date -u -d "@$FUZZED_TS" +"%Y-%m-%dT%H:%M:%SZ")
+
+GIT_FUZZ_APPLIED=1 \
+GIT_AUTHOR_DATE="$FUZZED_DATE" \
+GIT_COMMITTER_DATE="$FUZZED_DATE" \
+git commit --amend --no-edit --date="$FUZZED_DATE" >/dev/null 2>&1

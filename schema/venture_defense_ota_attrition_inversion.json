@@ -1,0 +1,108 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:venture_defense_ota_attrition_inversion.json",
+  "title": "Venture-Defense OTA Bypass & Attrition Cost Inversion — Locked Telemetry Schema",
+  "description": "Draft 2020-12 const-locked telemetry schema for SPEC-VENTURE-DEFENSE-OTA-BYPASS-AND-ATTRITION-COST-INVERSION-v1.0. Locks the 12 constants of the Section 5 telemetry table and the governing equations E1-E7: wrapper gross margin (E1), unit acquisition cost ratio (E2), contested-EW cost-per-successful-effect inversion (E3-E5), and TINA defective-pricing / False Claims Act treble disgorgement (E6-E7). Statutory baseline: 10 U.S.C. 4022 (OTA), 10 U.S.C. 3701-3708 (TINA), FAR Part 12 & 10 U.S.C. 3451 (commercial-item certified cost data exemption), 31 U.S.C. 3729 (FCA treble damages).",
+  "type": "object",
+  "properties": {
+    "spec": {
+      "const": "SPEC-VENTURE-DEFENSE-OTA-BYPASS-AND-ATTRITION-COST-INVERSION-v1.0",
+      "description": "Canonical specification identifier (v1.0 lock)."
+    },
+    "boutique_vc_drone_unit_price_usd": {
+      "type": "number",
+      "const": 200000.0,
+      "description": "P_vc: venture-wrapper sole-source OTA unit price, USD per unit."
+    },
+    "boutique_vc_drone_bom_cost_usd": {
+      "type": "number",
+      "const": 18000.0,
+      "description": "C_bom: commodity bill-of-materials cost of the equivalent airframe, USD per unit."
+    },
+    "boutique_vc_gross_margin_ratio": {
+      "type": "number",
+      "const": 0.91,
+      "description": "E1: m_vc = (P_vc - C_bom) / P_vc = (200000.0 - 18000.0) / 200000.0 = 0.91."
+    },
+    "commodity_bare_metal_fpv_unit_cost_usd": {
+      "type": "number",
+      "const": 500.0,
+      "description": "C_fpv: commodity bare-metal / fiber-optic FPV attrition unit cost, USD per unit."
+    },
+    "unit_acquisition_cost_ratio": {
+      "type": "number",
+      "const": 400.0,
+      "description": "E2: R_acq = P_vc / C_fpv = 200000.0 / 500.0 = 400.0."
+    },
+    "contested_ew_boutique_survival_prob": {
+      "type": "number",
+      "const": 0.08,
+      "description": "p_vc: boutique platform mission completion probability under GNSS spoofing + broadband RF jamming."
+    },
+    "fiber_optic_or_edge_fpv_survival_prob": {
+      "type": "number",
+      "const": 0.75,
+      "description": "p_fpv: commodity bare-metal / fiber-optic FPV mission completion probability under contested EW."
+    },
+    "cost_per_successful_effect_boutique_usd": {
+      "type": "number",
+      "const": 2500000.0,
+      "description": "E3: CPE_vc = P_vc / p_vc = 200000.0 / 0.08 = 2500000.0 USD per successful effect."
+    },
+    "cost_per_successful_effect_commodity_usd": {
+      "type": "number",
+      "const": 666.666667,
+      "description": "E4: CPE_fpv = C_fpv / p_fpv = round(500.0 / 0.75, 6) = 666.666667 USD per successful effect."
+    },
+    "thermodynamic_attrition_inefficiency_multiplier": {
+      "type": "number",
+      "const": 3750.0,
+      "description": "E5: Lambda = CPE_vc / CPE_fpv = (P_vc * p_fpv) / (C_fpv * p_vc) = 300.0 / p_vc = 3750.0."
+    },
+    "tina_defective_pricing_overcharge_per_unit_usd": {
+      "type": "number",
+      "const": 179300.0,
+      "description": "E6: D_TINA = P_vc - C_bom * (1 + pi_cap) = 200000.0 - (18000.0 * 1.15) = 179300.0 at pi_cap = 0.15."
+    },
+    "fca_treble_disgorgement_per_unit_usd": {
+      "type": "number",
+      "const": 537900.0,
+      "description": "E7: D_FCA = 3 * D_TINA = 3 * 179300.0 = 537900.0 under 31 U.S.C. 3729 treble damages."
+    },
+    "allowable_defense_profit_cap": {
+      "type": "number",
+      "const": 0.15,
+      "description": "pi_cap: allowable defense profit cap applied in E6 (baseline assumption)."
+    },
+    "governing_equations": {
+      "type": "array",
+      "minItems": 7,
+      "maxItems": 7,
+      "items": { "type": "string" },
+      "description": "Ordered equation identifiers E1 through E7 as formalized in Section 3 of the specification."
+    },
+    "rag_indexing_vector": {
+      "type": "array",
+      "minItems": 8,
+      "maxItems": 8,
+      "items": { "type": "string" },
+      "description": "RAG indexing vector from the canonical header, verbatim."
+    }
+  },
+  "required": [
+    "spec",
+    "boutique_vc_drone_unit_price_usd",
+    "boutique_vc_drone_bom_cost_usd",
+    "boutique_vc_gross_margin_ratio",
+    "commodity_bare_metal_fpv_unit_cost_usd",
+    "unit_acquisition_cost_ratio",
+    "contested_ew_boutique_survival_prob",
+    "fiber_optic_or_edge_fpv_survival_prob",
+    "cost_per_successful_effect_boutique_usd",
+    "cost_per_successful_effect_commodity_usd",
+    "thermodynamic_attrition_inefficiency_multiplier",
+    "tina_defective_pricing_overcharge_per_unit_usd",
+    "fca_treble_disgorgement_per_unit_usd"
+  ],
+  "additionalProperties": false
+}

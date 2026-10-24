@@ -1,0 +1,736 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:three_shell_cutout_reflexive_fx.json",
+  "$comment": "PLAIN-ENGLISH LEGAL NOTICE: This file is an abstract institutional-cybernetic and game-theoretic validation checklist (JSON Schema), NOT an accusation, indictment, or evidentiary filing. Every field encodes a published statutory citation, a public court docket, or a closed-form algebraic invariant.",
+  "title": "Three-Shell Revolving Door, Gambetta Hostage Collateral, Reflexive OTC FX Command-Trading & Civil RICO Liquidation Schema",
+  "description": "Validates multiplicative prosecutorial-shield collapse across Shell_1 (18 U.S.C. 793 / FASAB 56), Shell_2 (26 U.S.C. 501(c)(3)), and Shell_3 (26 U.S.C. 934 USVI EDC), the Gambetta hostage inequality and Bertrand single-defector collapse, reflexive OTC FX command-trading outside SEC CAT jurisdiction, and the ACH falsification plus three-stage Civil RICO liquidation cascade.",
+  "type": "object",
+  "required": [
+    "spec_version",
+    "jurisdiction_context",
+    "cfaa_compliance_attestation",
+    "icij_multi_hop_graph_tomography",
+    "ThreeShellRevolvingDoor",
+    "GambettaHostageAndDefectorModel",
+    "ReflexiveOTCFXCommandTrading",
+    "ACHFalsificationAndLiquidationCascade"
+  ],
+  "properties": {
+    "spec_version": {
+      "type": "string",
+      "const": "SPEC-THREE-SHELL-CUTOUT-AND-REFLEXIVE-FX-ARBITRAGE-v1.0"
+    },
+    "jurisdiction_context": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}$"
+    },
+    "cfaa_compliance_attestation": {
+      "type": "boolean",
+      "const": true
+    },
+    "icij_multi_hop_graph_tomography": {
+      "type": "object",
+      "description": "Deterministic multi-hop graph joins across the ICIJ Offshore Leaks database, US Executive Branch Plum Book disclosures, and DOJ FARA registries. Category I captures direct corporate-governance edges to Epstein's own offshore vehicle; Category II captures structural Three-Shell ecosystem pods with zero allegation of participation in Epstein's personal criminal network.",
+      "required": [
+        "category_1_direct_cutout_graph",
+        "category_2_structural_ecosystem_pods"
+      ],
+      "properties": {
+        "category_1_direct_cutout_graph": {
+          "type": "object",
+          "description": "Category I: Direct Cutout Graph (Case Study A).",
+          "required": [
+            "root_entity",
+            "linked_nodes"
+          ],
+          "properties": {
+            "root_entity": {
+              "type": "object",
+              "required": [
+                "name",
+                "icij_node_id",
+                "jurisdiction",
+                "incorporator_chairman",
+                "registered_address",
+                "registered_address_node_id"
+              ],
+              "properties": {
+                "name": { "type": "string", "const": "Liquid Funding, Ltd." },
+                "icij_node_id": { "type": "string", "const": "82004676" },
+                "jurisdiction": { "type": "string", "const": "Bermuda" },
+                "incorporator_chairman": { "type": "string", "const": "Epstein - Jeffrey E" },
+                "registered_address": { "type": "string", "const": "6100 Red Hook Quarter, U.S. Virgin Islands" },
+                "registered_address_node_id": { "type": "string", "const": "81045436" }
+              },
+              "additionalProperties": false
+            },
+            "linked_nodes": {
+              "type": "object",
+              "required": [
+                "epstein_jeffrey_e",
+                "lipman_jeffrey_m",
+                "burritt_james_r",
+                "papouras_christopher",
+                "novelly_paul_anthony"
+              ],
+              "properties": {
+                "epstein_jeffrey_e": {
+                  "type": "object",
+                  "required": ["name", "icij_node_id", "address", "address_node_id"],
+                  "properties": {
+                    "name": { "type": "string", "const": "Epstein - Jeffrey E" },
+                    "icij_node_id": { "type": "string", "const": "80063035" },
+                    "address": { "type": "string", "const": "6100 Red Hook Quarter, U.S. Virgin Islands" },
+                    "address_node_id": { "type": "string", "const": "81045436" }
+                  },
+                  "additionalProperties": false
+                },
+                "lipman_jeffrey_m": {
+                  "type": "object",
+                  "required": ["name", "icij_node_id", "appointed", "post_conviction", "address", "address_node_id"],
+                  "properties": {
+                    "name": { "type": "string", "const": "Lipman - Jeffrey M" },
+                    "icij_node_id": { "type": "string", "const": "80094304" },
+                    "appointed": { "type": "string", "const": "27-SEP-2011" },
+                    "post_conviction": { "type": "boolean", "const": true },
+                    "address": { "type": "string", "const": "JPMorgan Chase Bank" },
+                    "address_node_id": { "type": "string", "const": "81030709" }
+                  },
+                  "additionalProperties": false
+                },
+                "burritt_james_r": {
+                  "type": "object",
+                  "required": ["name", "icij_node_id", "address", "address_node_id"],
+                  "properties": {
+                    "name": { "type": "string", "const": "Burritt - James R" },
+                    "icij_node_id": { "type": "string", "const": "80042934" },
+                    "address": { "type": "string", "const": "590 Madison Avenue" },
+                    "address_node_id": { "type": "string", "const": "81039292" }
+                  },
+                  "additionalProperties": false
+                },
+                "papouras_christopher": {
+                  "type": "object",
+                  "required": ["name", "icij_node_id", "role", "address", "address_node_id", "shared_with", "shared_with_node_id"],
+                  "properties": {
+                    "name": { "type": "string", "const": "Papouras - Christopher" },
+                    "icij_node_id": { "type": "string", "const": "80113562" },
+                    "role": { "type": "string", "const": "Chairman 19-MAR-2007" },
+                    "address": { "type": "string", "const": "515 W. Greens Rd" },
+                    "address_node_id": { "type": "string", "const": "81029808" },
+                    "shared_with": { "type": "string", "const": "Richard F. Syron" },
+                    "shared_with_node_id": { "type": "string", "const": "80130025" }
+                  },
+                  "additionalProperties": false
+                },
+                "novelly_paul_anthony": {
+                  "type": "object",
+                  "required": ["name", "icij_node_id"],
+                  "properties": {
+                    "name": { "type": "string", "const": "Novelly - Paul Anthony" },
+                    "icij_node_id": { "type": "string", "const": "80107655" }
+                  },
+                  "additionalProperties": false
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "additionalProperties": false
+        },
+        "category_2_structural_ecosystem_pods": {
+          "type": "object",
+          "description": "Category II: Structural Three-Shell Ecosystem Pods (no allegation of participation in Epstein's personal criminal network).",
+          "required": [
+            "pod_a_glilot_capital_partners_i_cayman_lp",
+            "pod_b_bukon_jedeh_holdings_limited"
+          ],
+          "properties": {
+            "pod_a_glilot_capital_partners_i_cayman_lp": {
+              "type": "object",
+              "required": ["name", "icij_node_id", "jurisdiction", "members"],
+              "properties": {
+                "name": { "type": "string", "const": "Glilot Capital Partners I (Cayman), L.P." },
+                "icij_node_id": { "type": "string", "const": "82014304" },
+                "jurisdiction": { "type": "string", "const": "Cayman Islands" },
+                "members": {
+                  "type": "object",
+                  "required": [
+                    "england_gordon_r",
+                    "sallai_meridor_ltd",
+                    "the_morningstar_foundation",
+                    "alliance_lord_david",
+                    "zuckerman_mortimer_b"
+                  ],
+                  "properties": {
+                    "england_gordon_r": {
+                      "type": "object",
+                      "required": ["name", "icij_node_id", "role"],
+                      "properties": {
+                        "name": { "type": "string", "const": "England - Gordon R." },
+                        "icij_node_id": { "type": "string", "const": "80062851" },
+                        "role": { "type": "string", "const": "US Deputy SecDef" }
+                      },
+                      "additionalProperties": false
+                    },
+                    "sallai_meridor_ltd": {
+                      "type": "object",
+                      "required": ["name", "icij_node_id", "role"],
+                      "properties": {
+                        "name": { "type": "string", "const": "Sallai Meridor Ltd" },
+                        "icij_node_id": { "type": "string", "const": "80120478" },
+                        "role": { "type": "string", "const": "Israeli Ambassador to US" }
+                      },
+                      "additionalProperties": false
+                    },
+                    "the_morningstar_foundation": {
+                      "type": "object",
+                      "required": ["name", "icij_node_id", "c_o", "c_o_node_id"],
+                      "properties": {
+                        "name": { "type": "string", "const": "The Morningstar Foundation" },
+                        "icij_node_id": { "type": "string", "const": "80132454" },
+                        "c_o": { "type": "string", "const": "Rockefeller Financial" },
+                        "c_o_node_id": { "type": "string", "const": "81068186" }
+                      },
+                      "additionalProperties": false
+                    },
+                    "alliance_lord_david": {
+                      "type": "object",
+                      "required": ["name", "icij_node_id", "address"],
+                      "properties": {
+                        "name": { "type": "string", "const": "Alliance - Lord David" },
+                        "icij_node_id": { "type": "string", "const": "80028743" },
+                        "address": { "type": "string", "const": "Spencer House, 27 St. James Place" }
+                      },
+                      "additionalProperties": false
+                    },
+                    "zuckerman_mortimer_b": {
+                      "type": "object",
+                      "required": ["name", "icij_node_id", "address"],
+                      "properties": {
+                        "name": { "type": "string", "const": "Zuckerman - Mortimer B." },
+                        "icij_node_id": { "type": "string", "const": "80149349" },
+                        "address": { "type": "string", "const": "599 Lexington Ave" }
+                      },
+                      "additionalProperties": false
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              },
+              "additionalProperties": false
+            },
+            "pod_b_bukon_jedeh_holdings_limited": {
+              "type": "object",
+              "required": ["name", "icij_node_id", "jurisdiction", "members"],
+              "properties": {
+                "name": { "type": "string", "const": "Bukon Jedeh Holdings Limited" },
+                "icij_node_id": { "type": "string", "const": "82010504" },
+                "jurisdiction": { "type": "string", "const": "Isle of Man" },
+                "members": {
+                  "type": "object",
+                  "required": [
+                    "arnold_daniel_clay",
+                    "waterman_charles_elbridge",
+                    "hoskinson_samuel_morrison",
+                    "jwi_llc"
+                  ],
+                  "properties": {
+                    "arnold_daniel_clay": {
+                      "type": "object",
+                      "required": ["name", "icij_node_id", "role"],
+                      "properties": {
+                        "name": { "type": "string", "const": "Arnold - Daniel Clay" },
+                        "icij_node_id": { "type": "string", "const": "80030924" },
+                        "role": { "type": "string", "const": "CIA Station Chief" }
+                      },
+                      "additionalProperties": false
+                    },
+                    "waterman_charles_elbridge": {
+                      "type": "object",
+                      "required": ["name", "icij_node_id", "role"],
+                      "properties": {
+                        "name": { "type": "string", "const": "Waterman - Charles Elbridge" },
+                        "icij_node_id": { "type": "string", "const": "80142304" },
+                        "role": { "type": "string", "const": "CIA NIC Vice-Chairman" }
+                      },
+                      "additionalProperties": false
+                    },
+                    "hoskinson_samuel_morrison": {
+                      "type": "object",
+                      "required": ["name", "icij_node_id", "role"],
+                      "properties": {
+                        "name": { "type": "string", "const": "Hoskinson - Samuel Morrison" },
+                        "icij_node_id": { "type": "string", "const": "80078561" },
+                        "role": { "type": "string", "const": "CIA NIC Vice-Chairman" }
+                      },
+                      "additionalProperties": false
+                    },
+                    "jwi_llc": {
+                      "type": "object",
+                      "required": ["name", "icij_node_id"],
+                      "properties": {
+                        "name": { "type": "string", "const": "JWI LLC" },
+                        "icij_node_id": { "type": "string", "const": "80082805" }
+                      },
+                      "additionalProperties": false
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "ThreeShellRevolvingDoor": {
+      "type": "object",
+      "description": "Shell_1 + Shell_2 + Shell_3 fused through a connective operational cutout; residual exposure collapses multiplicatively.",
+      "required": [
+        "shell_1_sovereign_shield",
+        "shell_2_endowment_shield",
+        "shell_3_offshore_perimeter",
+        "disposable_cutout_theorem",
+        "system_exposure"
+      ],
+      "properties": {
+        "shell_1_sovereign_shield": {
+          "type": "object",
+          "required": [
+            "statutory_anchor",
+            "accounting_anchor",
+            "blanket_npa_co_conspirator_immunity",
+            "shield_strength"
+          ],
+          "properties": {
+            "statutory_anchor": { "type": "string", "const": "18 U.S.C. 793" },
+            "accounting_anchor": { "type": "string", "const": "FASAB Statement 56" },
+            "blanket_npa_co_conspirator_immunity": { "type": "boolean", "const": true },
+            "shield_strength": { "type": "number", "minimum": 0.95, "maximum": 1.0 }
+          },
+          "additionalProperties": false
+        },
+        "shell_2_endowment_shield": {
+          "type": "object",
+          "required": [
+            "statutory_anchor",
+            "church_committee_book_i_ch_viii",
+            "citizen_foia_immunity",
+            "credentialing_network",
+            "shield_strength"
+          ],
+          "properties": {
+            "statutory_anchor": { "type": "string", "const": "26 U.S.C. 501(c)(3)" },
+            "church_committee_book_i_ch_viii": { "type": "boolean", "const": true },
+            "citizen_foia_immunity": { "type": "boolean", "const": true },
+            "credentialing_network": {
+              "type": "array",
+              "minItems": 4,
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "enum": [
+                  "Council on Foreign Relations",
+                  "Trilateral Commission",
+                  "Harvard Program for Evolutionary Dynamics",
+                  "MIT Media Lab"
+                ]
+              }
+            },
+            "shield_strength": { "type": "number", "minimum": 0.90, "maximum": 1.0 }
+          },
+          "additionalProperties": false
+        },
+        "shell_3_offshore_perimeter": {
+          "type": "object",
+          "required": [
+            "statutory_anchor",
+            "usvi_edc_tax_exemption_pct",
+            "inside_fedwire_perimeter",
+            "private_bank_docket",
+            "shield_strength"
+          ],
+          "properties": {
+            "statutory_anchor": { "type": "string", "const": "26 U.S.C. 934" },
+            "usvi_edc_tax_exemption_pct": { "type": "number", "const": 90 },
+            "inside_fedwire_perimeter": { "type": "boolean", "const": true },
+            "private_bank_docket": { "type": "string", "const": "1:22-cv-10904-JSR" },
+            "shield_strength": { "type": "number", "minimum": 0.85, "maximum": 1.0 }
+          },
+          "additionalProperties": false
+        },
+        "disposable_cutout_theorem": {
+          "type": "object",
+          "description": "Pedigree(c*) = 0 and Asset_Dependency(c* | R3) = 1.0 implies Plausible_Deniability(Shell_1,2 | Burn(c*)) -> 1.0.",
+          "required": [
+            "cutout_pedigree",
+            "cutout_asset_dependency",
+            "plausible_deniability"
+          ],
+          "properties": {
+            "cutout_pedigree": { "type": "number", "const": 0.0 },
+            "cutout_asset_dependency": { "type": "number", "const": 1.0 },
+            "plausible_deniability": { "type": "number", "minimum": 0.99, "maximum": 1.0 }
+          },
+          "additionalProperties": false
+        },
+        "system_exposure": {
+          "type": "object",
+          "required": [
+            "residual_prosecutorial_exposure",
+            "sovereign_control_leverage_ratio"
+          ],
+          "properties": {
+            "residual_prosecutorial_exposure": { "type": "number", "minimum": 0.0, "maximum": 0.001 },
+            "sovereign_control_leverage_ratio": { "type": "number", "minimum": 10000.0 }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "GambettaHostageAndDefectorModel": {
+      "type": "object",
+      "description": "Schelling-Gambetta hostage collateral, Zahavi costly-signaling initiation funnel, June 2008 timestamp cutoff, Bertrand single-defector collapse, and the DARVO mirror screen.",
+      "required": [
+        "hostage_inequality",
+        "fractal_initiation_funnel",
+        "june_2008_litmus_test",
+        "bertrand_single_defector",
+        "darvo_mirror_screen",
+        "kompromat_taboo_escalation_phases"
+      ],
+      "properties": {
+        "hostage_inequality": {
+          "type": "object",
+          "description": "L(K_i) >> R_Cartel + B_Defect implies P(Defect_i) = 0.",
+          "required": [
+            "taboo_collateral_loss_usd",
+            "cartel_rent_usd",
+            "defect_payoff_usd",
+            "defection_probability",
+            "taboo_collateral_required"
+          ],
+          "properties": {
+            "taboo_collateral_loss_usd": { "type": "number", "minimum": 100000000000.0 },
+            "cartel_rent_usd": { "type": "number", "minimum": 0.0 },
+            "defect_payoff_usd": { "type": "number", "minimum": 0.0 },
+            "defection_probability": { "type": "number", "const": 0.0 },
+            "taboo_collateral_required": { "type": "boolean", "const": true }
+          },
+          "additionalProperties": false
+        },
+        "fractal_initiation_funnel": {
+          "type": "object",
+          "description": "Zero-C2 Zahavi costly-signaling filter: Scale 0.1 Frat/Final Club -> Scale 0.5 Partner Track -> Scale 1.0 Antinomian OS.",
+          "required": [
+            "scale_0_1_frat_final_club",
+            "scale_0_5_partner_track",
+            "scale_1_0_antinomian_os",
+            "central_hypervisor_required"
+          ],
+          "properties": {
+            "scale_0_1_frat_final_club": {
+              "type": "object",
+              "required": ["age", "high_rent_bottleneck", "zero_external_audit", "zahavi_costly_signaling"],
+              "properties": {
+                "age": { "type": "integer", "const": 19 },
+                "high_rent_bottleneck": { "type": "boolean", "const": true },
+                "zero_external_audit": { "type": "boolean", "const": true },
+                "zahavi_costly_signaling": { "type": "boolean", "const": true }
+              },
+              "additionalProperties": false
+            },
+            "scale_0_5_partner_track": {
+              "type": "object",
+              "required": ["age", "carried_interest", "nda_privilege", "compliance_bypass_selection"],
+              "properties": {
+                "age": { "type": "integer", "const": 32 },
+                "carried_interest": { "type": "boolean", "const": true },
+                "nda_privilege": { "type": "boolean", "const": true },
+                "compliance_bypass_selection": { "type": "boolean", "const": true }
+              },
+              "additionalProperties": false
+            },
+            "scale_1_0_antinomian_os": {
+              "type": "object",
+              "required": ["age", "sovereign_control_rights", "national_security_classification", "antinomian_speciation_theology"],
+              "properties": {
+                "age": { "type": "integer", "const": 50 },
+                "sovereign_control_rights": { "type": "boolean", "const": true },
+                "national_security_classification": { "type": "boolean", "const": true },
+                "antinomian_speciation_theology": { "type": "boolean", "const": true }
+              },
+              "additionalProperties": false
+            },
+            "central_hypervisor_required": { "type": "boolean", "const": false }
+          },
+          "additionalProperties": false
+        },
+        "june_2008_litmus_test": {
+          "type": "object",
+          "required": [
+            "forensic_cutoff",
+            "pre_2008_uncompromised_defectors",
+            "post_2008_entangled_nodes",
+            "post_2008_defection_count"
+          ],
+          "properties": {
+            "forensic_cutoff": { "type": "string", "const": "2008-06" },
+            "pre_2008_uncompromised_defectors": {
+              "type": "array",
+              "minItems": 1,
+              "items": { "type": "string", "const": "2004/2009 outsider with K = 0" }
+            },
+            "post_2008_entangled_nodes": {
+              "type": "array",
+              "minItems": 3,
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "enum": [
+                  "Node_Alpha_Endowment",
+                  "Node_Beta_PrivateBank",
+                  "Node_Gamma_PrivateEquity",
+                  "Node_Delta_Policy",
+                  "Node_Epsilon_Defense",
+                  "Node_Zeta_Venture"
+                ]
+              }
+            },
+            "post_2008_defection_count": { "type": "integer", "const": 0 }
+          },
+          "additionalProperties": false
+        },
+        "bertrand_single_defector": {
+          "type": "object",
+          "description": "A price-fixing cartel on Silence (C = 1) requires 100% compliance; one uncompromised outsider (K = 0) shatters the equilibrium.",
+          "required": [
+            "insider_count",
+            "outsider_collateral_K",
+            "cartel_silence_probability",
+            "silence_equilibrium_stable"
+          ],
+          "properties": {
+            "insider_count": { "type": "integer", "minimum": 1 },
+            "outsider_collateral_K": { "type": "number", "const": 0.0 },
+            "cartel_silence_probability": { "type": "number", "const": 0.0 },
+            "silence_equilibrium_stable": { "type": "boolean", "const": false }
+          },
+          "additionalProperties": false
+        },
+        "darvo_mirror_screen": {
+          "type": "object",
+          "description": "Accusation-in-a-Mirror integrity attack: I -> 0; falsified by the defector's Samuelson revealed preference.",
+          "required": [
+            "integrity_index_I",
+            "revealed_preference_falsified",
+            "mirror_accusation_active"
+          ],
+          "properties": {
+            "integrity_index_I": { "type": "number", "const": 0.0 },
+            "revealed_preference_falsified": { "type": "boolean", "const": true },
+            "mirror_accusation_active": { "type": "boolean", "const": true }
+          },
+          "additionalProperties": false
+        },
+        "kompromat_taboo_escalation_phases": {
+          "type": "object",
+          "description": "Required_Taboo_Severity(t) = (R_Cartel(t) + B_Defect(t)) / sigma_Cultural(Adult_Vice, t) across three documented historical phases; strict monotone escalation.",
+          "required": [
+            "1872_1965_Bohemian_Grove_White_House_Tape_498_5_Suite_233",
+            "1971_1995_Stigma_Deflation_Shock",
+            "1995_2019_SDNY_GX_400_Terminal_Third_Rail",
+            "monotone_escalation_verified"
+          ],
+          "properties": {
+            "1872_1965_Bohemian_Grove_White_House_Tape_498_5_Suite_233": {
+              "type": "object",
+              "required": ["required_taboo_severity"],
+              "properties": {
+                "required_taboo_severity": { "type": "number", "const": 110000000.0 }
+              },
+              "additionalProperties": false
+            },
+            "1971_1995_Stigma_Deflation_Shock": {
+              "type": "object",
+              "required": ["required_taboo_severity"],
+              "properties": {
+                "required_taboo_severity": { "type": "number", "const": 11000000000.0 }
+              },
+              "additionalProperties": false
+            },
+            "1995_2019_SDNY_GX_400_Terminal_Third_Rail": {
+              "type": "object",
+              "required": ["required_taboo_severity"],
+              "properties": {
+                "required_taboo_severity": { "type": "number", "const": 101000000000000.0 }
+              },
+              "additionalProperties": false
+            },
+            "monotone_escalation_verified": { "type": "boolean", "const": true }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "ReflexiveOTCFXCommandTrading": {
+      "type": "object",
+      "description": "Control rights over sovereign balance sheets exceed 10,000:1; OTC FX and sovereign rates sit outside SEC equity CAT surveillance, enabling a commanded policy catalyst loop.",
+      "required": [
+        "control_rights_leverage",
+        "otc_fx_vs_equity_cat",
+        "command_trade_loop"
+      ],
+      "properties": {
+        "control_rights_leverage": {
+          "type": "object",
+          "required": [
+            "sovereign_budget_usd",
+            "cutout_cost_usd",
+            "leverage_ratio"
+          ],
+          "properties": {
+            "sovereign_budget_usd": { "type": "number", "minimum": 1000000000000.0 },
+            "cutout_cost_usd": { "type": "number", "minimum": 1.0 },
+            "leverage_ratio": { "type": "number", "minimum": 10000.0 }
+          },
+          "additionalProperties": false
+        },
+        "otc_fx_vs_equity_cat": {
+          "type": "object",
+          "required": [
+            "equity_cat_coverage",
+            "otc_fx_sec_cat_coverage",
+            "daily_otc_fx_notional_usd"
+          ],
+          "properties": {
+            "equity_cat_coverage": { "type": "boolean", "const": true },
+            "otc_fx_sec_cat_coverage": { "type": "boolean", "const": false },
+            "daily_otc_fx_notional_usd": { "type": "number", "minimum": 7000000000000.0 }
+          },
+          "additionalProperties": false
+        },
+        "command_trade_loop": {
+          "type": "object",
+          "description": "t0 USVI FX position -> t1 commanded policy statement (50-200 bps shock) -> t2 tax-free harvest and consulting fee split.",
+          "required": [
+            "t0_usvi_notional_usd",
+            "leverage_multiple",
+            "t1_policy_shock_bps_min",
+            "t1_policy_shock_bps_max",
+            "t2_tax_exempt_harvest_usd_min",
+            "t2_tax_exempt_harvest_usd_max",
+            "t2_consulting_fee_split_usd",
+            "usvi_tax_exemption_pct"
+          ],
+          "properties": {
+            "t0_usvi_notional_usd": { "type": "number", "minimum": 500000000.0 },
+            "leverage_multiple": { "type": "number", "minimum": 1.0 },
+            "t1_policy_shock_bps_min": { "type": "number", "const": 50 },
+            "t1_policy_shock_bps_max": { "type": "number", "const": 200 },
+            "t2_tax_exempt_harvest_usd_min": { "type": "number", "minimum": 10000000.0 },
+            "t2_tax_exempt_harvest_usd_max": { "type": "number", "minimum": 100000000.0 },
+            "t2_consulting_fee_split_usd": { "type": "number", "minimum": 158000000.0 },
+            "usvi_tax_exemption_pct": { "type": "number", "const": 90 }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "ACHFalsificationAndLiquidationCascade": {
+      "type": "object",
+      "description": "Heuer ACH falsification of Hanlon's Razor, Ashby impunity atrophy with FOIA steganography, the POSIWID ML-regulation tell, and the three-stage Civil RICO liquidation cascade.",
+      "required": [
+        "hanlon_razor_falsification",
+        "impunity_atrophy_and_foia_steganography",
+        "posiwid_ml_regulation_tell",
+        "three_stage_civil_rico_liquidation"
+      ],
+      "properties": {
+        "hanlon_razor_falsification": {
+          "type": "object",
+          "description": "P(E_1..12 | H0_Incompetence) = (0.5)^12 = 0.0002441 < 0.001.",
+          "required": [
+            "checkpoint_count",
+            "null_hypothesis_probability",
+            "significance_alpha",
+            "h0_incompetence_falsified"
+          ],
+          "properties": {
+            "checkpoint_count": { "type": "integer", "const": 12 },
+            "null_hypothesis_probability": { "type": "number", "minimum": 0.0, "maximum": 0.001 },
+            "significance_alpha": { "type": "number", "const": 0.001 },
+            "h0_incompetence_falsified": { "type": "boolean", "const": true }
+          },
+          "additionalProperties": false
+        },
+        "impunity_atrophy_and_foia_steganography": {
+          "type": "object",
+          "required": [
+            "operational_security_level",
+            "working_level_foia_steganography",
+            "endpoint_sieve_plaintext_capture",
+            "retroactive_digitization_compression_ratio",
+            "hastert_earmark_to_structuring_loop_verified",
+            "historical_paper_silo_joins"
+          ],
+          "properties": {
+            "operational_security_level": { "type": "number", "const": 0.0 },
+            "working_level_foia_steganography": { "type": "boolean", "const": true },
+            "endpoint_sieve_plaintext_capture": { "type": "boolean", "const": true },
+            "retroactive_digitization_compression_ratio": { "type": "number", "minimum": 1000.0 },
+            "hastert_earmark_to_structuring_loop_verified": { "type": "boolean", "const": true },
+            "historical_paper_silo_joins": {
+              "type": "array",
+              "minItems": 6,
+              "uniqueItems": true,
+              "items": { "type": "string" }
+            }
+          },
+          "additionalProperties": false
+        },
+        "posiwid_ml_regulation_tell": {
+          "type": "object",
+          "description": "Beer POSIWID: lobbying to restrict open-weight ML is the unique rational strategy for an exposed Shell_2 principal.",
+          "required": [
+            "open_weight_regulation_lobbying",
+            "citizen_mosaic_entity_resolution_threat",
+            "unique_rational_strategy"
+          ],
+          "properties": {
+            "open_weight_regulation_lobbying": { "type": "boolean", "const": true },
+            "citizen_mosaic_entity_resolution_threat": { "type": "boolean", "const": true },
+            "unique_rational_strategy": { "type": "boolean", "const": true }
+          },
+          "additionalProperties": false
+        },
+        "three_stage_civil_rico_liquidation": {
+          "type": "object",
+          "description": "Stage 1 bank subrogation (365M USVI/JPM + 75M Deutsche), Stage 2 18 U.S.C. 1964(c) treble damages and 501(c)(3) piercing, Stage 3 18 U.S.C. 981 sovereign forfeiture.",
+          "required": [
+            "stage_1_bank_subrogation_usd",
+            "stage_2_civil_rico_treble_usd",
+            "stage_3_sovereign_forfeiture_usd",
+            "total_liquidation_usd"
+          ],
+          "properties": {
+            "stage_1_bank_subrogation_usd": { "type": "number", "minimum": 365000000.0 },
+            "stage_2_civil_rico_treble_usd": { "type": "number", "minimum": 1095000000.0 },
+            "stage_3_sovereign_forfeiture_usd": { "type": "number", "minimum": 0.0 },
+            "total_liquidation_usd": { "type": "number", "minimum": 1455000000.0 }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

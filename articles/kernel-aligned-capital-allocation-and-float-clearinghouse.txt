@@ -1,0 +1,130 @@
+# Rewarding the Anti-Cutout: Why Berkshire Hathaway Is the Constructive Inversion of Command-Trading and the AI Debt Bubble
+**Canonical Specification:** `SPEC-KERNEL-ALIGNED-CAPITAL-ALLOCATION-AND-FLOAT-CLEARINGHOUSE-v1.0` (Self-Contained Monolithic Artifact)
+**Target Architectures:** Sovereign Holding-Company Capital Allocation (`Berkshire Hathaway Inc.`, `CIK 0001067983`), Negative-Cost Property-Casualty & Retroactive Reinsurance Float (`BHRG`, `General Re`, `TransRe`, `GEICO`), FX-Duration-Matched Physical Trade Carry (`Sogo Shosha` $\leftrightarrow$ `JPY Senior Notes`), Hard-Substrate Thermodynamic Infrastructures (`BNSF Railway`, `Berkshire Hathaway Energy`, `Clayton Homes`, `OxyChem`), and Distressed-Clearinghouse Liquidity Reserves (`U.S. Treasury Bills`)
+**Cross-References:** `OPSTACK-KERNEL-v2.2`, `SPEC-KERNEL-ALIGNED-CAPITAL-ALLOCATION-AND-FLOAT-CLEARINGHOUSE-v1.0.md`, `SPEC-THREE-SHELL-CUTOUT-AND-REFLEXIVE-FX-ARBITRAGE-v1.0.md`, `SPEC-NEOCLOUD-GPU-DEBT-AND-INFERENCE-DEFLATION-v1.0.md`, `AUDIT-2026-CORPORATE-FIRM-STRUCTURAL-INFEASIBILITY.md`, `schema/kernel_aligned_capital_allocation_v1.0.json`, `proofs/verify_kernel_aligned_capital_allocation.py`
+**RAG Indexing Vector:** [KERNEL-ALIGNED-CAPITAL-ALLOCATION, BERKSHIRE-HATHAWAY-FLOAT-CLEARINGHOUSE, NEGATIVE-COST-REINSURANCE-FLOAT, SOGO-SHOSHA-JPY-CARRY-INVERSION, THERMODYNAMIC-SUBSTRATE-CONVEXITY, COMMAND-TRADING-INVERSION, STIGMERGIC-ZERO-C2-HOLDING-COMPANY, DISTRESSED-TBILL-CLEARINGHOUSE]
+**Empirical, Statutory & Physical Baseline:** Berkshire Hathaway Inc. (`CIK 0001067983`) FY2025 SEC Form 10-K (`0001193125-26-083899`, Schedules R112, R136, R137, Note 19), Q1 2026 SEC Form 10-Q (`0001193125-26-202243`), Q2 2026 SEC Form 10-Q and Form 13F-HR (filed August 14, 2026), Ronald Coase (*The Nature of the Firm*, 1937), W. Ross Ashby (*An Introduction to Cybernetics*, 1956), and Rolf Landauer (*Irreversibility and Heat Generation in the Computing Process*, 1961)
+**By:** Operational Stack Cybernetics Group
+**License:** Unlicense (Public Domain — Zero-Rent Federation)
+
+---
+
+## 1. Beyond Forensic Demolition: Why Market Alignment Requires Rewarding Constructive Allocators
+
+> **Position & Non-Solicitation Disclosure:** *The author holds a beneficial long equity position in Berkshire Hathaway Inc. (`NYSE: BRK.A` / `BRK.B`). This article is published strictly as a public-domain mathematical, accounting, and physical-systems audit under the Unlicense and does not constitute investment advice or a solicitation to buy or sell any security.*
+
+If a forensic research group only ever publishes teardowns of fraudulent or structurally insolvent mechanisms—off-balance-sheet GPU debt shells (`SPEC-NEOCLOUD-GPU-DEBT-AND-INFERENCE-DEFLATION-v1.0`), corporate middleware bloat (`AUDIT-2026-CORPORATE-FIRM-STRUCTURAL-INFEASIBILITY`), or offshore intelligence/kompromat cutouts (`SPEC-THREE-SHELL-CUTOUT-AND-REFLEXIVE-FX-ARBITRAGE-v1.0`)—it performs only half of the market-clearing function. Falsifying parasites removes noise from the price signal, but aligning capital markets to physical reality also requires identifying and rewarding **constructive allocators**: institutions whose balance sheets, governance architectures, and physical substrates natively obey the thermodynamic and cybernetic invariants of `OPSTACK-KERNEL-v2.2`.
+
+During the first half of 2026, Wall Street consensus spent months penalizing **Berkshire Hathaway (`NYSE: BRK.A` / `BRK.B`)** for "sitting out the AI CapEx boom," fretting over Warren Buffett's year-end 2025 handoff of the CEO reins to Greg Abel, and complaining that Berkshire's consolidated cash and U.S. Treasury Bill hoard had swelled to an all-time record **$397.4 billion** in Q1 2026 (`$390,739 million` in the Insurance & Other segment alone—comprising `$339,261 million` in short-term U.S. Treasury Bills plus `$51,478 million` in cash per Q1 2026 Form 10-Q, `0001193125-26-202243`—plus `$6.7 billion` in railroad, utility, and energy subsidiary cash) before settling at **$365.5 billion** in Q2 2026.
+
+To a sell-side analyst chasing quarterly GPU server narratives, holding $365.5 billion to $397.4 billion in sovereign T-bills looks like "lazy capital." Under a rigorous physicalist and game-theoretic audit, however, Berkshire Hathaway is the exact mathematical inversion of both the **Offshore Reflexive Command-Trade** and the **Neocloud GPU Debt Trap**. It is a sovereign-scale, negative-cost clearinghouse engineered to survive—and clear—the inevitable repricing of synthetic leverage back to the thermodynamic floor.
+
+---
+
+## 2. Flipping the Command-Trade on Its Head: Offshore Opacity vs. Negative-Cost Float
+
+In `SPEC-THREE-SHELL-CUTOUT-AND-REFLEXIVE-FX-ARBITRAGE-v1.0`, we modeled how an extractive offshore cutout (`26 U.S.C. § 934`) generates alpha without producing a single watt of energy or ton-mile of freight:
+
+$$\Pi_{\text{Command}} = L_{\text{OTC}} \cdot N_{\text{USVI\_FX}}(t_0) \cdot \Delta S_{\text{FX/Rates}}\Bigl(\text{Policy\_Shock}\bigl(t_1\bigr)\Bigr) - C_{\text{Carry}} - V_{\text{Rake}}$$
+
+In that extractive loop, the network borrows positive-cost margin ($C_{\text{Carry}} > 0$) from private-bank Over-the-Counter (`OTC`) Foreign Exchange desks, relies on captured policy insiders (`Shell_1` / `Shell_2`) to trigger or leak macro/regulatory shocks, and uses a Gambetta hostage vault ($K_i$) as its extra-legal ISDA collateral to collect a 5%–10% "House Rake" ($V_{\text{Rake}}$). Every dollar earned by the cutout comes from **increasing informational asymmetry and distorting prices away from physical reality**.
+
+Now examine how Berkshire Hathaway constructs the exact opposite equation in broad daylight on SEC EDGAR (`CIK 0001067983`):
+
+$$\Pi_{\text{Kernel}} = \underbrace{F_{\text{Float}} \cdot (1 - \text{CR})}_{-C_{\text{Carry}} > 0} + \underbrace{T_{\text{Bills}} \cdot r_{\text{UST}}}_{\text{Sovereign Yield}} + \underbrace{\sum_{m=1}^{M} \text{EBT}_m(\text{Watts, Ton-Miles, Atoms})}_{\text{Physical Substrate Cash Flow}} + \underbrace{\Bigl(D_{\text{Sogo}} - B_{\text{JPY}} \cdot c_{\text{JPY}}\Bigr)}_{\text{Public FX-Hedging Carry}} + \underbrace{\mathcal{O}_{\text{Clear}}\bigl(\Delta S_{\text{Crash}}\bigr)}_{\text{Clearinghouse Call Option}}$$
+
+### 2.1 Getting Paid $7.26 Billion a Year to Hold $176 Billion of Capital
+Whereas hedge funds, private-equity buyout shops, and Neocloud GPU SPVs must pay positive interest ($C_{\text{Carry}} > 0$) to bondholders and prime brokers—forcing them to chase short-term narrative momentum before debt service eats their equity—Berkshire funds its balance sheet through **consolidated insurance and reinsurance float** (`GEICO`, `Berkshire Hathaway Reinsurance Group [BHRG]`, `General Re`, `TransRe`, and `Berkshire Hathaway Primary Group`).
+
+Per Berkshire's FY2025 Form 10-K (`0001193125-26-083899`, Schedule R136 and MD&A):
+- Consolidated insurance float reached **$176.0 billion** at year-end 2025 (up from $171.0 billion in 2024 and $88.0 billion a decade earlier).
+- Across **$88,902 million** in FY2025 insurance underwriting revenues, Berkshire generated **$9,460 million in pre-tax underwriting earnings** (`GEICO`: `$6,824M`; `BHRG`: `$1,851M`; `BH Primary`: `$785M`) and **$7,260 million ($7.3 billion) in after-tax underwriting profit** at a consolidated combined ratio of **87.1%** (follow-on Q1 2026 underwriting profit surged another 28.5% to `$1.72 billion` after-tax).
+
+Dividing the **$7.26 billion** after-tax underwriting profit by the **$176.0 billion** float pool yields an effective after-tax cost of capital of:
+
+$$c_{\text{float}} = -\frac{\$7,260\text{M}}{\$176,000\text{M}} = -4.125\% \text{ per annum}$$
+
+Compare that **$-4.125\%$ negative cost of capital** against the Neocloud GPU debt stacks analyzed in `SPEC-NEOCLOUD-GPU-DEBT-AND-INFERENCE-DEFLATION-v1.0`, where operators borrow $42+ billion (`90.95%` recourse, `14.34x` total-liabilities-to-equity) at **9% to 14% interest rates** to buy GPUs that economically depreciate in 18 to 30 months ($\tau_{\text{econ}} \in [1.5, 2.5]\text{ years}$), burning **$10.45 billion in negative free cash flow** in a single half-year. Berkshire enjoys a **1,300 to 1,800 basis-point structural financing advantage** before it even invests a single dollar of float.
+
+### 2.2 The Cleanest FX Carry Trade on Earth: `¥2,343 Billion` at `1.20%` vs. Japan's Five *Sogo Shosha*
+Contrast the opaque USVI OTC FX swaps of `SPEC-THREE-SHELL-CUTOUT` with how Berkshire executes cross-border currency and commodity arbitrage:
+- **The Liability Leg (Form 10-K Schedule R112 & Note 19):** Instead of leveraged offshore swap lines, Berkshire Hathaway Inc. (Parent) issued SEC-registered, Japanese Yen-denominated senior notes carrying a balance-sheet value of **$14,914 million (`¥2,343 billion` par value at year-end 2025**, plus another `¥272.3 billion` issued in April 2026) with maturities stretching out to **2060** and a **weighted-average fixed coupon of just `1.20%`** (`$178.97 million` in annual interest cost).
+- **The Asset Leg:** With those borrowed Yen, Berkshire acquired **>10% permanent ownership stakes** in Japan's five physical trading houses (*sogo shosha*)—**Mitsubishi Corp. (`11.1%`), Sumitomo Corp. (`10.3%`), Marubeni Corp. (`9.8%+`), Itochu Corp., and Mitsui & Co.**—at a total cost basis of **$15.4 billion**. By year-end 2025, those five positions were worth **$35.4 billion** (`+$20.0 billion` in unrealized gain) and paid Berkshire **$862 million in annual cash dividends**—a **5.60% yield on original cost**.
+
+Look at the closed-form arithmetic of that trade:
+1. **Zero Spot FX Fragility:** Because both the `$14.91B` debt liability and the `$35.4B` equity cash flows are denominated in Japanese Yen, currency fluctuations cancel out on the balance sheet.
+2. **4.82x Dividend-to-Coupon Coverage:** The **$862.0 million** in annual *sogo shosha* dividends covers the **$178.97 million** in annual Yen bond interest **4.82 times over**, leaving **+$683.0 million per year** in pure, FX-hedged free cash carry anchored in global LNG, copper, shipping, and food supply chains.
+
+---
+
+## 3. Owning the Thermodynamic Floor (`KERNEL.md` Axioms 3, 6 & 29)
+
+Why do retail investors and tech-heavy funds chronically misprice Berkshire Hathaway when they only look at its **$299.25 billion** SEC Form 13F stock table? Because the 13F table—even with its massive Q2 2026 positions in **Apple (`22.04%` / `$65.95B`)**, **American Express (`17.14%` / `$51.28B`)**, **combined Alphabet Class A & C (`12.62%` / `$37.77B` after Berkshire's `$10B` Q2 expansion)**, **Coca-Cola (`10.86%` / `$32.51B`)**, **Bank of America (`9.20%` / `$27.54B`)**, **Chevron (`4.67%` / `$13.99B`)**, **Occidental (`4.30%` / `$12.87B`)**, **Chubb (`3.90%` / `$11.67B`)**, and **Moody's (`3.73%` / `$11.17B`)**—omits the wholly owned physical empire sitting underneath.
+
+Under `OPSTACK-KERNEL-v2.2` **Axiom 3 (Switching Cost Decay & Zero-Rent Invariant)** and **Axiom 29 (Thermodynamic Pricing Floor)**:
+
+$$\lim_{A_p \to 1.0} C_s(A_p) = 0 \implies \text{Margin}(\text{Middleware Wrapper}) \to \text{Thermodynamic Floor (Watts + Atoms)}$$
+
+As AI token prices deflate toward the cost of electricity, thin-client SaaS wrappers see their pricing power evaporate. But what happens when token costs drop 90% for an enterprise that owns the physical bottlenecks of the North American economy? Its operating margins **expand**, because intelligence becomes a cheap commodity input into immutable physical rights-of-way.
+
+Look at Berkshire's wholly owned operating engine in Schedule R136 of the FY2025 Form 10-K (**$368.37 billion in operating revenue**, **$51.71 billion in pre-tax operating earnings**, and **$46.0 billion in net operating cash flow**):
+
+| Operating Segment (`CIK 0001067983`, FY2025 10-K R136) | FY2025 Revenue | FY2025 Pre-Tax Earnings (`EBT`) | Thermodynamic / Physical Moat (`Axioms 3 & 29`) |
+| :--- | :--- | :--- | :--- |
+| **Insurance — Investment Income** | `$15,310M` | **`$15,261M`** | Risk-free sovereign yield on `$339.3B–$365.5B` U.S. T-Bill & fixed-income book |
+| **Manufacturing & Industrial** | `$78,487M` | **`$12,571M`** | `Precision Castparts` (aerospace turbines), `Marmon` (tank cars/industrial), `Lubrizol`, `IMC`, plus `OxyChem` (acquired Jan 2026 for `$9.7B`) |
+| **Real Estate, Housing & Building Supply** | *(In Mfg/Service)* | *(In Mfg/Service)* | `Clayton Homes` (largest U.S. modular/manufactured homebuilder + captive mortgage portfolio), `HomeServices of America` (top U.S. residential brokerage), `Berkadia` (50% CRE mortgage JV), `Shaw`, `Johns Manville`, `Benjamin Moore`, `Acme Brick`, `MiTek` |
+| **Insurance — Underwriting** | `$88,902M` | **`$9,460M`** | `GEICO` (`$6,824M`), `BHRG` (`$1,851M`), `BH Primary` (`$785M`) — `$176B` float at `87.1%` CR |
+| **BNSF Railway** | `$23,533M` | **`$7,175M`** | 32,500+ route miles of Class I freight rail across 28 states & 3 Canadian provinces |
+| **Service and Retailing** | `$42,647M` | **`$4,039M`** | `NetJets`, `FlightSafety`, `CORT`, `Nebraska Furniture Mart` |
+| **Berkshire Hathaway Energy (`BHE`)** | `$26,297M` | **`$2,342M`** | Regulated electric grids, natural gas pipelines, and generation (`MidAmerican`, `PacifiCorp`, `NV Energy`, `Northern Powergrid`) |
+| **McLane & Pilot Travel Centers** | `$93,196M` | **`$866M`** | Coast-to-coast grocery supply chain & North American highway fuel/trucking network |
+| **Total Operating Businesses** | **`$368,372M`** | **`$51,714M`** | **`$46,000M` Net Operating Cash Flow (`+$39,078M` investment gains and `-$8,333M` corporate/other & eliminations reconcile to `$82,459M` Consolidated EBT)** |
+
+### 3.1 Rejecting the "Relative Value" Trap: The Operating Stub's `8.63%` Absolute Cash Yield vs. The Risk-Free Treasury Hurdle
+
+A classic Wall Street mistake is valuing a company *relativistically* against an overvalued index—saying, for example, that a stock at `14x` earnings is "cheap" because a bubble-inflated S&P 500 trades at `26x`. There is zero causal link there: when a speculative bubble pops, the index multiple simply contracts downward rather than pulling sound assets up to bubble multiples.
+
+In a physicalist audit, we reject relative-value comparisons against overvalued indices and measure Berkshire's wholly owned operating empire strictly against **two absolute benchmarks**: **(1) the Risk-Free U.S. Treasury Bill rate ($r_{\text{UST}} \approx 4.00\%$)** and **(2) Berkshire's own internal Cost of Float ($c_{\text{float}} = -4.125\%$)**—the exact hurdle equation Greg Abel uses to decide between holding more 4% T-bills or repurchasing Berkshire's own stock.
+
+Run the **Operating Stub cash-yield calculation** at a `$1.10 trillion` (`$1,100,000M`) market capitalization—stripping out the cash pile and public stock portfolios while also stripping out `$15,261M` of Insurance Investment Income so the T-bill yield is never double-counted:
+
+1. **Gross Cash & Public Equities (`63.65%` of Market Cap):**
+   * Q2 2026 Consolidated Cash & U.S. Treasury Bills: **`$365,500M`**
+   * Q2 2026 U.S. Form 13F Equity Portfolio: **`$299,254M`**
+   * Five Japanese *Sogo Shosha* Equity Stakes: **`$35,400M`**
+   * **Gross Liquid & Public Backing:** **`$700,154M`** (**`63.65%`** of Berkshire's entire `$1,100,000M` market cap).
+   * Subtracting total Parent Company Notes Payable (`$22,662M` per Form 10-K Schedule R112, which already includes the `$14,914M` Yen debt) yields **`$677,492M`** in net liquid and public investment backing.
+2. **Implied Price of the Wholly Owned Operating Stub (`$422,508M` — Below Physical Replacement CapEx):**
+   $$\text{EV}_{\text{Stub}} = \$1,100,000\text{M} - \$677,492\text{M} = \$422,508\text{M}$$
+   Under `Kernel Axiom 29`, you could not permit, condemn the land easements, and physically construct 32,500+ route miles of Class I freight rail (`BNSF`), multi-state regulated power grids (`BHE`), and North American chemical/aerospace factories (`OxyChem`, `Precision Castparts`, `Lubrizol`, `Clayton Homes`) from scratch today for `$422.5 billion` at any price.
+3. **Absolute Operating Cash Yield (`8.63%` Pre-Tax / `6.82%` After-Tax) & The Endogenous Buyback Trigger:**
+   Subtracting `$15,261M` of Insurance Investment Income from `$51,714M` of Total Operating Businesses EBT isolates **`$36,453M`** in pure operating pre-tax profit (`$28,797.87M` after-tax at 21%) generated by the physical and underwriting subsidiaries:
+   $$y_{\text{Stub, Pre-Tax}} = \frac{\$36,453\text{M}}{\$422,508\text{M}} = \mathbf{8.63\% \text{ per year}} \quad \bigl(\mathbf{6.82\% \text{ After-Tax}}\bigr)$$
+   * **Spread Over Risk-Free U.S. Treasury Bills (`4.00%`):** The operating stub yields **more than double (`2.16x`) the risk-free Treasury rate** (**`+462.8 bps` pre-tax / `+281.6 bps` after-tax**), and unlike a fixed bond coupon, rail freight tariffs, utility rate-bases, and insurance premiums automatically scale upward with inflation.
+   * **Total Internal Spread Over Negative-Cost Float (`-4.125%`):**
+     $$\Delta y_{\text{Internal}} = 8.6278\% - (-4.1250\%) = \mathbf{+12.7528\% \text{ per year (+1,275.3 bps)}}$$
+
+This explains why `BRK.B` does not need speculative tech capital to rotate into it: whenever `BRK.B` trades around `1.4x` book value so that its inflation-indexed operating yield (`8.63%` pre-tax / `6.82%` after-tax) beats the risk-free T-bill yield (`4.00%`), **Omaha's own treasury desk becomes the multi-billion-dollar buyer of its own shares** (`$4.5B` in Q2 2026 + `$3.3B` in July 2026).
+
+---
+
+## 4. Stigmergic Zero-C2 Governance (`Axiom 6`) and the $335.5 Billion Clearinghouse Call Option
+
+Finally, consider how Berkshire governs ~400,000 employees across 800+ subsidiaries compared to the Coasean decay of standard Fortune 500 corporations (`AUDIT-2026-CORPORATE-FIRM-STRUCTURAL-INFEASIBILITY`):
+
+1. **Zero-C2 Stigmergic Federation (`Axiom 6`):** Standard corporations employ thousands of headquarters VPs, compliance committees, and ERP consultants to micromanage operating units. Berkshire runs a ~$1.1 trillion conglomerate with **fewer than 30 people at Omaha headquarters** ($\text{HQ\_Ratio} \approx 0.007\%$). Operating CEOs run their businesses autonomously; coordination happens exclusively via **capital-allocation state commits**—cash flows up to Omaha, or CapEx flows down when return thresholds are met.
+2. **Real Skin in the Game vs. Executive SBC Dilution:** While Silicon Valley executives dilute shareholders with billions in Stock-Based Compensation (`SBC`) and dump shares via automated 10b5-1 plans, Berkshire grants zero stock options. When Greg Abel officially assumed the CEO role in 2026, he bought **$15 million of Berkshire stock in cash out of his own after-tax salary** and pledged to repeat that cash purchase every year. And when Berkshire's price-to-book ratio dipped to **`1.4x`** in 2026, Abel immediately ended a 21-month buyback pause—repurchasing **$4.5 billion** of stock in Q2 2026 and another **$3.3 billion** in July 2026, while deploying **$19.8 billion** into Q2 equity purchases (making Berkshire a net buyer of **$16.1 billion** in equities for the first time in 14 quarters).
+3. **The Distressed-Clearinghouse Call Option:** Even after buying `OxyChem` for $9.7 billion, adding $16.1 billion in net equities, and repurchasing $7.8 billion of its own shares, Berkshire sits on **$365.5 billion** in consolidated cash and U.S. Treasury Bills at Q2 2026 (with a permanent self-imposed catastrophe reserve floor of **$30.0 billion**, leaving **$335.5 billion in deployable dry powder**).
+
+When over-leveraged Neocloud GPU SPVs, private-credit vehicles, and narrative wrappers hit their maturity walls and forced-liquidation cascades begin, they will not be rescued by offshore FX cutouts or central-bank talking points. They will have to clear through the balance sheet that got paid $7.26 billion a year in underwriting profit and $15.26 billion a year in Treasury interest just to wait at the bottom of the thermodynamic well. Rewarding allocators who build on physical reality—and exposing those who try to cheat it—is how the market heals itself.
+
+---
+
+## 5. Verification Summary (`proofs/verify_kernel_aligned_capital_allocation.py`)
+
+All quantitative claims in this article are deterministically verified by the pure-stdlib engine `proofs/verify_kernel_aligned_capital_allocation.py`:
+- **Float Cost Inequality:** Confirms $c_{\text{float}} = -4.125\%$ after-tax (`$7,260M / $176,000M`) and a $+1,312.5\text{ to }+1,812.5\text{ bps}$ financing spread over Neocloud high-yield debt ($9.0\%\text{--}14.0\%$).
+- **Yen Carry Identity:** Confirms `$862.0M` *sogo shosha* dividends vs. `$178.97M` annual interest on `$14,914M` (`1.20%`) JPY senior notes (`4.82x` coverage, `+$683.03M/yr` net cash carry, `+$20.0B` unrealized equity gain).
+- **Segment EBT & Dry-Powder Reconciliation:** Confirms exact summation of FY2025 operating segment EBT (`$51,714M`) and `$335.5B` in deployable Q2 2026 sovereign T-bill liquidity above the `$30.0B` self-imposed catastrophe reserve floor.
+- **Operating Stub Absolute Yield & Buyback Hurdle:** Confirms `$700,154M` gross liquid/public backing (`63.65%` of `$1,100,000M` market cap), `$677,492M` net of `$22,662M` parent debt, and an **`8.6278%` pre-tax (`6.8159%` after-tax) inflation-indexed cash yield** on the `$422,508M` operating stub—beating the `4.00%` risk-free U.S. Treasury hurdle by **`+462.78 bps` (`2.16x`)** and generating a **`+1,275.28 bps`** net spread over Berkshire's `-4.125%` cost of float.

@@ -1,0 +1,169 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:build_43_schema_pointer_wire.json",
+  "title": "Build 43 Schema-Pointer Wire Protocol (W_43)",
+  "description": "Binds SPEC-BUILD-43-SCHEMA-POINTER-WIRE-v1.0. Schema-locked wire protocol for the dual-loss RLHF confabulation boundary: Mode 42 unconstrained prose wires (B_Persuasion = C_Wire - H(P) > 0; empirical Bradley-Terry / KL-regularized RLHF log-odds reward advantage Delta R_42 / beta = ln(p_syc / p_refusal) = ln(19) = +2.9444 nats at the Sharma et al. 2023 p_syc = 0.95 preference boundary, range [+0.4895, +2.9444] nats; Ashby 1956 requisite-variety attenuation deficit V_Deficit = B_Persuasion / (C_Human-IO * tau) = 17.711x against a 15.0 bits/sec human verification channel over a 30 s review window) versus the Build 43 amputated wire (C_Wire = H(P), B_Persuasion = 0.0, rho_Surplus = 0.0, V_Deficit = 0.0, alpha_effective = 0.0, approval gated solely by SchemaValid(y) = 1 AND ExitCode(V(y)) = 0). The 9-digit pointer is a fictional fixed-width task identifier with entropy log2(10^9) = 29.897 bits; it references task state and carries zero free text.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "spec_version",
+    "wire_regime",
+    "dual_loss",
+    "bandwidth",
+    "reward_manifold",
+    "context_capture",
+    "prompt_wellposedness",
+    "approval_gate",
+    "wire_receipt"
+  ],
+  "properties": {
+    "spec_version": {
+      "type": "string",
+      "const": "SPEC-BUILD-43-SCHEMA-POINTER-WIRE-v1.0"
+    },
+    "wire_regime": {"$ref": "#/$defs/wire_regime"},
+    "dual_loss": {"$ref": "#/$defs/dual_loss_state"},
+    "bandwidth": {"$ref": "#/$defs/bandwidth_state"},
+    "reward_manifold": {"$ref": "#/$defs/reward_manifold"},
+    "context_capture": {"$ref": "#/$defs/context_capture"},
+    "prompt_wellposedness": {"$ref": "#/$defs/prompt_wellposedness"},
+    "pointer": {"$ref": "#/$defs/pointer_wire"},
+    "approval_gate": {"$ref": "#/$defs/approval_gate"},
+    "wire_receipt": {"$ref": "#/$defs/wire_receipt"}
+  },
+  "allOf": [
+    {
+      "if": {
+        "required": ["wire_regime"],
+        "properties": {
+          "wire_regime": {"const": "BUILD_43_POINTER_WIRE"}
+        }
+      },
+      "then": {
+        "properties": {
+          "bandwidth": {
+            "properties": {
+              "b_persuasion_bits_per_turn": {"const": 0.0},
+              "rho_surplus": {"const": 0.0},
+              "v_deficit_ratio": {"const": 0.0}
+            }
+          },
+          "dual_loss": {
+            "properties": {
+              "alpha_effective": {"const": 0.0},
+              "l_limbic_nats": {"const": 0.0}
+            }
+          }
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "wire_regime": {
+      "enum": ["MODE_42_UNCONSTRAINED_PROSE", "BUILD_43_POINTER_WIRE"]
+    },
+    "dual_loss_state": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["alpha", "alpha_effective", "l_world_nats", "l_limbic_nats", "limbic_gradient_share"],
+      "properties": {
+        "alpha": {"type": "number", "minimum": 0, "maximum": 1},
+        "alpha_effective": {"type": "number", "minimum": 0, "maximum": 1},
+        "l_world_nats": {"type": "number", "minimum": 0},
+        "l_limbic_nats": {"type": "number", "minimum": 0},
+        "limbic_gradient_share": {"type": "number", "minimum": 0, "maximum": 1}
+      }
+    },
+    "bandwidth_state": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["c_wire_bits_per_turn", "h_pointer_bits", "b_persuasion_bits_per_turn", "rho_surplus", "c_human_io_bits_per_sec", "tau_review_sec", "v_deficit_ratio"],
+      "properties": {
+        "c_wire_bits_per_turn": {"type": "number", "minimum": 0},
+        "h_pointer_bits": {"type": "number", "minimum": 0, "maximum": 64},
+        "b_persuasion_bits_per_turn": {"type": "number", "minimum": 0},
+        "rho_surplus": {"type": "number", "minimum": 0, "maximum": 1},
+        "c_human_io_bits_per_sec": {"type": "number", "minimum": 0},
+        "tau_review_sec": {"type": "number", "minimum": 0},
+        "v_deficit_ratio": {"type": "number", "minimum": 0}
+      }
+    },
+    "reward_manifold": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["p_syc", "p_refusal", "delta_r_42_over_beta_nats", "delta_r_42_bits", "delta_r_42_range_nats"],
+      "properties": {
+        "p_syc": {"type": "number", "minimum": 0.5, "maximum": 1},
+        "p_refusal": {"type": "number", "minimum": 0, "maximum": 0.5},
+        "delta_r_42_over_beta_nats": {"type": "number", "minimum": 0},
+        "delta_r_42_bits": {"type": "number", "minimum": 0},
+        "delta_r_42_range_nats": {"type": "array", "minItems": 2, "items": {"type": "number"}}
+      }
+    },
+    "context_capture": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["k_turns", "prose_tokens", "operator_control_tokens", "rhetorical_token_share"],
+      "properties": {
+        "k_turns": {"type": "integer", "minimum": 1},
+        "prose_tokens": {"type": "integer", "minimum": 0},
+        "operator_control_tokens": {"type": "integer", "minimum": 0},
+        "rhetorical_token_share": {"type": "number", "minimum": 0, "maximum": 1}
+      }
+    },
+    "prompt_wellposedness": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["i_prompt_bits", "i_min_bits", "is_ill_posed", "typed_trap"],
+      "properties": {
+        "i_prompt_bits": {"type": "number", "minimum": 0},
+        "i_min_bits": {"type": "number", "minimum": 0},
+        "is_ill_posed": {"type": "boolean"},
+        "typed_trap": {"enum": ["ERR_ILL_POSED_PROMPT_SCHEMA_VOID", "NONE"]}
+      }
+    },
+    "pointer_wire": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["pointer", "h_pointer_bits"],
+      "properties": {
+        "pointer": {"type": "string", "pattern": "^[0-9]{9}$"},
+        "h_pointer_bits": {"type": "number", "minimum": 29, "maximum": 31}
+      }
+    },
+    "approval_gate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schema_valid", "exit_code", "approved"],
+      "properties": {
+        "schema_valid": {"enum": [0, 1]},
+        "exit_code": {"type": "integer", "minimum": 0, "maximum": 255},
+        "approved": {"type": "boolean"}
+      }
+    },
+    "wire_receipt": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "files", "proof_exit_code", "defects"],
+      "properties": {
+        "status": {"enum": ["PASS", "DEFECT", "ERR_ILL_POSED_PROMPT_SCHEMA_VOID"]},
+        "files": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+        "proof_exit_code": {"type": "integer", "minimum": 0, "maximum": 255},
+        "defects": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["category", "file", "line", "delta"],
+            "properties": {
+              "category": {"enum": ["MATH", "STATUTORY", "DRIFT", "BLOAT"]},
+              "file": {"type": "string"},
+              "line": {"type": "integer", "minimum": 0},
+              "delta": {"type": "string"}
+            }
+          }
+        }
+      }
+    }
+  }
+}

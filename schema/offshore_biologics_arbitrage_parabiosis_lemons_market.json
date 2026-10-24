@@ -1,0 +1,341 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:offshore_biologics_arbitrage_parabiosis_lemons_market.json",
+  "$comment": "PLAIN-ENGLISH LEGAL NOTICE: This file is an abstract institutional-cybernetic, biogerontological, and statutory-boundary validation checklist (JSON Schema), NOT an accusation, indictment, or evidentiary filing. Every field encodes a published statutory citation, a public court docket or probate record, a federal OHRP/FDA administrative finding, a peer-reviewed clinical paper, a pinned press disclosure, or a closed-form algebraic invariant. No living un-indicted principal named in the parent specification has been criminally charged with violating 42 U.S.C. 274e or 42 U.S.C. 289g-2.",
+  "title": "Inelastic Mortality Honeypot, Offshore IRB Arbitrage, Heterochronic Parabiosis Lemons Market & Longitudinal Bio-Telemetry Trap Schema",
+  "description": "Validates the eight executable verification vectors of SPEC-OFFSHORE-BIOLOGICS-ARBITRAGE-AND-PARABIOSIS-LEMONS-MARKET-v1.0: (1) the Inelastic Mortality Honeypot MRS divergence as tau_Rem -> 0, (2) the four Milkovich-compliant disclosed primary-record vectors, (3) the Conboy 2005 -> 2020 saline-albumin unconditional utility dominance inequality, (4) the 2-stage multiplicative iatrogenic waxy phenotype model, (5) the five federal/international statutory human-extraction bars, (6) the longitudinal bio-telemetry long-tail exposure probability P_LongTail(15) = 1 - 0.65^15, (7) the three-tier recurring maintenance trail, dual-use alibi falsification, and offramp boundary matrix, and (8) the Maintenance Physician Trilemma closure S_Maintenance = prod_{path in {A,B,C}} (1 - P_Exposure(path)) = 0 across honest domestic EPIC/UNOS maintenance, concierge alias concealment, and blind unmonitored self-dosing.",
+  "type": "object",
+  "required": [
+    "spec_version",
+    "jurisdiction_context",
+    "cfaa_compliance_attestation",
+    "Vector1InelasticMortalityHoneypotMRS",
+    "Vector2FourDisclosedPrimaryRecordVectors",
+    "Vector3ConboySalineAlbuminUtilityDominance",
+    "Vector4TwoStageIatrogenicWaxyPhenotype",
+    "Vector5FiveStatutoryExtractionBars",
+    "Vector6LongitudinalBioTelemetryLongTail",
+    "Vector7RecurringMaintenanceAndAlibiFalsificationMatrix",
+    "Vector8MaintenancePhysicianTrilemma"
+  ],
+  "properties": {
+    "spec_version": {"type": "string", "const": "SPEC-OFFSHORE-BIOLOGICS-ARBITRAGE-AND-PARABIOSIS-LEMONS-MARKET-v1.0"},
+    "jurisdiction_context": {"type": "string", "pattern": "^[A-Z]{2}$"},
+    "cfaa_compliance_attestation": {"type": "boolean", "const": true},
+    "Vector1InelasticMortalityHoneypotMRS": {
+      "type": "object",
+      "description": "U_i(W_i, tau_Rem(t)) = ln(W_i) * (1 - exp(-kappa * tau_Rem(t))) with tau_Rem(t) = T_Max - t. MRS_{W->tau}(t) = (dU/dtau) / (dU/dW) = kappa * W_i * ln(W_i) / (exp(kappa * tau_Rem(t)) - 1) -> +infinity as tau_Rem -> 0, while dU/dW = (1 - exp(-kappa*tau)) / W_i -> 0. A principal with W_i >= $2B therefore exhibits infinite willingness to pay for incremental biological time and near-zero response to a $10M fiat bribe.",
+      "required": ["utility_form", "mrs_closed_form", "species_max_lifespan_t_max_years", "chronological_age_domain_min", "chronological_age_domain_max", "liquid_net_worth_floor_usd", "kappa_utility_decay_per_year", "tau_rem_at_t60_years", "tau_rem_at_t85_years", "mrs_at_tau_55_usd_per_year", "mrs_at_tau_30_usd_per_year", "mrs_at_tau_1_usd_per_year", "mrs_at_tau_0p1_usd_per_year", "mrs_monotone_divergence_verified", "fiat_bribe_reference_usd", "utility_ratio_1yr_vs_10m_bribe_at_tau_30", "utility_ratio_1yr_vs_10m_bribe_at_tau_1", "marginal_utility_fiat_limit_zero", "honeypot_inelasticity_verified"],
+      "properties": {
+        "utility_form": {"type": "string", "const": "U_i(W_i, tau_Rem) = ln(W_i) * (1 - exp(-kappa * tau_Rem))"},
+        "mrs_closed_form": {"type": "string", "const": "MRS_{W->tau}(t) = kappa * W_i * ln(W_i) / (exp(kappa * tau_Rem(t)) - 1)"},
+        "species_max_lifespan_t_max_years": {"type": "number", "const": 115},
+        "chronological_age_domain_min": {"type": "number", "const": 60},
+        "chronological_age_domain_max": {"type": "number", "const": 85},
+        "liquid_net_worth_floor_usd": {"type": "number", "const": 2000000000},
+        "kappa_utility_decay_per_year": {"type": "number", "exclusiveMinimum": 0},
+        "tau_rem_at_t60_years": {"type": "number", "const": 55},
+        "tau_rem_at_t85_years": {"type": "number", "const": 30},
+        "mrs_at_tau_55_usd_per_year": {"type": "number", "exclusiveMinimum": 0},
+        "mrs_at_tau_30_usd_per_year": {"type": "number", "exclusiveMinimum": 0},
+        "mrs_at_tau_1_usd_per_year": {"type": "number", "exclusiveMinimum": 0},
+        "mrs_at_tau_0p1_usd_per_year": {"type": "number", "exclusiveMinimum": 0},
+        "mrs_monotone_divergence_verified": {"type": "boolean", "const": true},
+        "fiat_bribe_reference_usd": {"type": "number", "const": 10000000},
+        "utility_ratio_1yr_vs_10m_bribe_at_tau_30": {"type": "number", "exclusiveMinimum": 1},
+        "utility_ratio_1yr_vs_10m_bribe_at_tau_1": {"type": "number", "exclusiveMinimum": 1},
+        "marginal_utility_fiat_limit_zero": {"type": "boolean", "const": true},
+        "honeypot_inelasticity_verified": {"type": "boolean", "const": true}
+      },
+      "additionalProperties": false
+    },
+    "Vector2FourDisclosedPrimaryRecordVectors": {
+      "type": "object",
+      "description": "The four Milkovich / Hepps / Partington disclosed-facts primary-record vectors. Each pairs an exact pin-cited judicial, probate, federal-administrative, or Tier-1 print record with the subject's verbatim on-the-record H0 null-hypothesis denial and the protected H1 structural synthesis. No uncharged statutory felony label is asserted against any living un-indicted principal.",
+      "required": ["vector_count", "vectors", "milkovich_disclosed_facts_synthesis_verified", "uncharged_felony_labels_asserted"],
+      "properties": {
+        "vector_count": {"type": "integer", "const": 4},
+        "uncharged_felony_labels_asserted": {"type": "integer", "const": 0},
+        "milkovich_disclosed_facts_synthesis_verified": {"type": "boolean", "const": true},
+        "vectors": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 4,
+          "items": {
+            "type": "object",
+            "required": ["vector_id", "entity", "pin_cite", "proven_institutional_fact", "h0_null_hypothesis_baseline", "h1_protected_structural_synthesis"],
+            "properties": {
+              "vector_id": {"type": "integer", "minimum": 1, "maximum": 4},
+              "entity": {"type": "string", "minLength": 3},
+              "pin_cite": {"type": "string", "minLength": 10},
+              "proven_institutional_fact": {"type": "string", "minLength": 20},
+              "h0_null_hypothesis_baseline": {"type": "string", "minLength": 20},
+              "h1_protected_structural_synthesis": {"type": "string", "minLength": 20}
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "Vector3ConboySalineAlbuminUtilityDominance": {
+      "type": "object",
+      "description": "Utility_Parabiosis = E_Net(Young Plasma) - R_Allo(Foreign HLA) - L(K_i) << Utility_TPE(Saline + 5% Albumin) = E_Net(Dilution) - 0 - 0. Because E_Net(Young Plasma) <= E_Net(Saline+Albumin) while R_Allo > 0 and L(K_i) >> 0, the indifference boundary R_Allo + L(K_i) = E_Net(YP) - E_Net(S+A) < 0 is inadmissible, so heterochronic parabiosis is an UNCONDITIONALLY strictly dominated strategy across the entire admissible hazard domain.",
+      "required": ["conboy_2005_nature_citation", "mehdipour_2020_aging_citation", "fda_safety_communication_date", "plasma_exchange_fraction_discarded", "saline_concentration_pct_nacl", "albumin_concentration_pct", "young_donor_plasma_price_per_liter_usd", "ambrosia_donor_age_min", "ambrosia_donor_age_max", "e_net_young_plasma", "e_net_saline_albumin", "r_allo_foreign_hla", "l_k_hostage_exposure", "utility_parabiosis", "utility_tpe_saline_albumin", "dominance_gap", "indifference_boundary_r_plus_l", "unconditional_strict_dominance_verified"],
+      "properties": {
+        "conboy_2005_nature_citation": {"type": "string", "const": "Conboy et al., Nature 433, 760-764 (2005)"},
+        "mehdipour_2020_aging_citation": {"type": "string", "const": "Mehdipour et al., Aging 12(10), 8790-8819 (May 2020)"},
+        "fda_safety_communication_date": {"type": "string", "const": "2019-02-19"},
+        "plasma_exchange_fraction_discarded": {"type": "number", "const": 0.5},
+        "saline_concentration_pct_nacl": {"type": "number", "const": 0.9},
+        "albumin_concentration_pct": {"type": "number", "const": 5.0},
+        "young_donor_plasma_price_per_liter_usd": {"type": "number", "const": 8000},
+        "ambrosia_donor_age_min": {"type": "integer", "const": 16},
+        "ambrosia_donor_age_max": {"type": "integer", "const": 25},
+        "e_net_young_plasma": {"type": "number", "exclusiveMinimum": 0},
+        "e_net_saline_albumin": {"type": "number", "exclusiveMinimum": 0},
+        "r_allo_foreign_hla": {"type": "number", "exclusiveMinimum": 0},
+        "l_k_hostage_exposure": {"type": "number", "exclusiveMinimum": 0},
+        "utility_parabiosis": {"type": "number", "exclusiveMaximum": 0},
+        "utility_tpe_saline_albumin": {"type": "number", "exclusiveMinimum": 0},
+        "dominance_gap": {"type": "number", "exclusiveMinimum": 0},
+        "indifference_boundary_r_plus_l": {"type": "number", "exclusiveMaximum": 0},
+        "unconditional_strict_dominance_verified": {"type": "boolean", "const": true}
+      },
+      "additionalProperties": false
+    },
+    "Vector4TwoStageIatrogenicWaxyPhenotype": {
+      "type": "object",
+      "description": "Phenotype_Waxy = (Lipoatrophy_mTOR/CR + CollagenCatabolism_Cortisol) * (HydrophilicFiller_HA/PLLA + Lymphedema_VEG-C/Alloimmune). The multiplicative AND-gate means the specular paraffin-wax optical signature requires the CONJUNCTION of Stage 1 deflated avascular dermis and Stage 2 waterlogged hydrophilic patch; nulling either stage zeroes the phenotype. The subject remains bound to T_Expected in [88, 104] years under a T_Max <= 115-122 year species ceiling, while leukocyte-only methylation clocks print an artificially low Goodhart age.",
+      "required": ["phenotype_equation", "stage1_lipoatrophy_mtor_cr", "stage1_collagen_catabolism_cortisol", "stage1_deflated_avascular_dermis", "stage2_hydrophilic_filler_ha_plla", "stage2_lymphedema_vegf_c_alloimmune", "stage2_waterlogged_specular_patch", "phenotype_waxy_product", "phenotype_if_stage1_zero", "phenotype_if_stage2_zero", "multiplicative_and_gate_verified", "ha_filler_water_binding_multiple", "t_expected_min_years", "t_expected_max_years", "t_max_species_ceiling_years", "rapamycin_mouse_lifespan_extension_pct_min", "rapamycin_mouse_lifespan_extension_pct_max", "leukocyte_clock_reported_age_years", "structural_tissue_age_years", "goodhart_clock_divergence_years", "species_ceiling_unbeaten_verified"],
+      "properties": {
+        "phenotype_equation": {"type": "string", "const": "Phenotype_Waxy = (Lipoatrophy_mTOR/CR + CollagenCatabolism_Cortisol) * (HydrophilicFiller_HA/PLLA + Lymphedema_VEGF-C/Alloimmune)"},
+        "stage1_lipoatrophy_mtor_cr": {"type": "number", "exclusiveMinimum": 0},
+        "stage1_collagen_catabolism_cortisol": {"type": "number", "exclusiveMinimum": 0},
+        "stage1_deflated_avascular_dermis": {"type": "number", "exclusiveMinimum": 0},
+        "stage2_hydrophilic_filler_ha_plla": {"type": "number", "exclusiveMinimum": 0},
+        "stage2_lymphedema_vegf_c_alloimmune": {"type": "number", "exclusiveMinimum": 0},
+        "stage2_waterlogged_specular_patch": {"type": "number", "exclusiveMinimum": 0},
+        "phenotype_waxy_product": {"type": "number", "exclusiveMinimum": 0},
+        "phenotype_if_stage1_zero": {"type": "number", "const": 0},
+        "phenotype_if_stage2_zero": {"type": "number", "const": 0},
+        "multiplicative_and_gate_verified": {"type": "boolean", "const": true},
+        "ha_filler_water_binding_multiple": {"type": "number", "const": 1000},
+        "t_expected_min_years": {"type": "number", "const": 88},
+        "t_expected_max_years": {"type": "number", "const": 104},
+        "t_max_species_ceiling_years": {"type": "number", "const": 122},
+        "rapamycin_mouse_lifespan_extension_pct_min": {"type": "number", "const": 10},
+        "rapamycin_mouse_lifespan_extension_pct_max": {"type": "number", "const": 15},
+        "leukocyte_clock_reported_age_years": {"type": "number", "exclusiveMinimum": 0},
+        "structural_tissue_age_years": {"type": "number", "exclusiveMinimum": 0},
+        "goodhart_clock_divergence_years": {"type": "number", "exclusiveMinimum": 0},
+        "species_ceiling_unbeaten_verified": {"type": "boolean", "const": true}
+      },
+      "additionalProperties": false
+    },
+    "Vector5FiveStatutoryExtractionBars": {
+      "type": "object",
+      "description": "No laboratory on Earth can abiotically synthesize a living human cell, mitochondrion, oocyte, whole plasma, bone marrow, or vascularized solid organ; bioreactor Master Cell Banks hit the Hayflick replicative senescence limit at 40-50 population doublings. Every non-synthetic rejuvenation pathway therefore requires physical extraction from a human body and intersects five binding federal/international bars: 42 U.S.C. 274e (NOTA), 42 U.S.C. 289g-2, 42 U.S.C. 262 / 21 CFR 1271.10(a), Oviedo Convention Arts. 18 & 21, and 45 CFR Part 46.",
+      "required": ["bar_count", "hayflick_doublings_min", "hayflick_doublings_max", "abiotic_synthesis_of_human_cell_possible", "bars", "extraction_boundary_verified"],
+      "properties": {
+        "bar_count": {"type": "integer", "const": 5},
+        "hayflick_doublings_min": {"type": "integer", "const": 40},
+        "hayflick_doublings_max": {"type": "integer", "const": 50},
+        "abiotic_synthesis_of_human_cell_possible": {"type": "boolean", "const": false},
+        "extraction_boundary_verified": {"type": "boolean", "const": true},
+        "bars": {
+          "type": "array",
+          "minItems": 5,
+          "maxItems": 5,
+          "items": {
+            "type": "object",
+            "required": ["bar_id", "regenerative_pathway", "mandatory_physical_human_extraction", "statutory_citation", "enforcement_class", "max_federal_penalty_years", "international_instrument"],
+            "properties": {
+              "bar_id": {"type": "integer", "minimum": 1, "maximum": 5},
+              "regenerative_pathway": {"type": "string", "minLength": 5},
+              "mandatory_physical_human_extraction": {"type": "string", "minLength": 10},
+              "statutory_citation": {"type": "string", "minLength": 8},
+              "enforcement_class": {"type": "string", "enum": ["FELONY", "REGULATORY", "TREATY", "ADMINISTRATIVE"]},
+              "max_federal_penalty_years": {"type": "integer", "minimum": 0},
+              "international_instrument": {"type": "string", "minLength": 5}
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "Vector6LongitudinalBioTelemetryLongTail": {
+      "type": "object",
+      "description": "P_LongTail_Exposure(N_Years) = 1 - prod_{t=1..N} (1 - p_Hospital(t)). At the conservative geriatric encounter rate p_Hospital = 0.35/yr over N = 15 years: P = 1 - 0.65^15 = 1 - 0.001562069489 = 0.998437930511 (0.998438 / 99.84%). The probability is strictly monotone increasing in N and approaches certainty, because the recipient's own body writes an immutable forensic proof into the domestic EHR across five non-erasable telemetry channels preserved under Fed. R. Civ. P. 26(b)(1), 34, 35, and 45.",
+      "required": ["long_tail_equation", "p_hospital_annual_rate", "n_years_horizon", "survival_factor_0p65_pow_15", "p_long_tail_15_exact", "p_long_tail_15_pct_2dp", "p_long_tail_15_rounded_6dp", "p_long_tail_10", "p_long_tail_30", "p_long_tail_15_at_p_0p10", "p_long_tail_monotone_in_n_verified", "telemetry_vector_count", "telemetry_vectors", "rule_26_discovery_preservation_verified"],
+      "properties": {
+        "long_tail_equation": {"type": "string", "const": "P_LongTail_Exposure(N) = 1 - prod_{t=1..N} (1 - p_Hospital(t))"},
+        "p_hospital_annual_rate": {"type": "number", "const": 0.35},
+        "n_years_horizon": {"type": "integer", "const": 15},
+        "survival_factor_0p65_pow_15": {"type": "number", "exclusiveMinimum": 0, "exclusiveMaximum": 0.002},
+        "p_long_tail_15_exact": {"type": "number", "exclusiveMinimum": 0.998, "exclusiveMaximum": 1},
+        "p_long_tail_15_pct_2dp": {"type": "number", "const": 99.84},
+        "p_long_tail_15_rounded_6dp": {"type": "number", "const": 0.998438},
+        "p_long_tail_10": {"type": "number", "exclusiveMinimum": 0.98, "exclusiveMaximum": 1},
+        "p_long_tail_30": {"type": "number", "exclusiveMinimum": 0.999, "exclusiveMaximum": 1},
+        "p_long_tail_15_at_p_0p10": {"type": "number", "exclusiveMinimum": 0.79, "exclusiveMaximum": 0.8},
+        "p_long_tail_monotone_in_n_verified": {"type": "boolean", "const": true},
+        "telemetry_vector_count": {"type": "integer", "const": 5},
+        "rule_26_discovery_preservation_verified": {"type": "boolean", "const": true},
+        "telemetry_vectors": {
+          "type": "array",
+          "minItems": 5,
+          "maxItems": 5,
+          "items": {"type": "string", "minLength": 10}
+        }
+      },
+      "additionalProperties": false
+    },
+    "Vector7RecurringMaintenanceAndAlibiFalsificationMatrix": {
+      "type": "object",
+      "description": "Validates Sections 3.3 and 3.4: (a) pharmacokinetic clearance vs. persistence across Tier 1 (synthetic sirolimus t_1/2 = 62 hr, 5-half-life washout = 12.92 days), Tier 2 (non-engrafting allogeneic MSC clearance in 7-21 days and albumin t_1/2 = 20 days forcing 90-180 day re-dosing, while memory B-cell anti-HLA IgG persists 10-30+ years), and Tier 3 (engrafted solid organ / hematopoietic chimerism requiring lifelong 30-90 day lawful domestic LC-MS/MS Tacrolimus CPT 80197 trough 4-10 ng/mL, Mycophenolate CPT 80199, dd-cfDNA, and BKV/CMV PCR surveillance); (b) the closed-form Dual-Use Alibi Falsification Indicator Phi_Falsified = I((F_dd_cfDNA >= 0.005 OR N_HLA_Polyclonal >= 1) AND (I_UNOS == 0 AND I_ISBT128_Barcode == 0)); and (c) the four-class iatrogenic complication blowback matrix (cGMP-bypass sepsis/teratomas/prions, TRALI/serum-sickness/cPRA>=80% immunological cul-de-sac, 10-40% Tacrolimus CIIN neurotoxicity/Sirolimus pneumonitis/BKV-CMV-PTLD, and allo-primed facial granulomas).",
+      "required": [
+        "falsification_equation",
+        "tier1_sirolimus_half_life_hours",
+        "tier1_five_half_life_washout_days",
+        "tier1_complete_offramp_verified",
+        "tier2_msc_pulmonary_clearance_days_max",
+        "tier2_albumin_half_life_days",
+        "tier2_redosing_interval_days_min",
+        "tier2_redosing_interval_days_max",
+        "tier2_partial_offramp_hla_scar_locked",
+        "tier3_tdm_interval_days_min",
+        "tier3_tdm_interval_days_max",
+        "tier3_tacrolimus_target_trough_ng_ml_min",
+        "tier3_tacrolimus_target_trough_ng_ml_max",
+        "tier3_dd_cfdna_rejection_threshold_fraction",
+        "tier3_zero_offramp_verified",
+        "ciin_neurotoxicity_incidence_pct_min",
+        "ciin_neurotoxicity_incidence_pct_max",
+        "cpra_hyper_sensitized_cul_de_sac_threshold_pct",
+        "complication_class_count",
+        "decision_tree_gate_count",
+        "adjacent_supply_chain_zero_day_count",
+        "pseudonym_tube_host_snp_match_probability_cap",
+        "hipaa_law_enforcement_judicial_carveout_cfr",
+        "alibi_falsification_regimes_verified",
+        "tiers"
+      ],
+      "properties": {
+        "falsification_equation": {"type": "string", "const": "Phi_Falsified = I((F_dd_cfDNA >= 0.005 or N_HLA_Polyclonal >= 1) and (I_UNOS == 0 and I_ISBT128_Barcode == 0))"},
+        "tier1_sirolimus_half_life_hours": {"type": "number", "const": 62.0},
+        "tier1_five_half_life_washout_days": {"type": "number", "const": 12.92},
+        "tier1_complete_offramp_verified": {"type": "boolean", "const": true},
+        "tier2_msc_pulmonary_clearance_days_max": {"type": "integer", "const": 21},
+        "tier2_albumin_half_life_days": {"type": "number", "const": 20.0},
+        "tier2_redosing_interval_days_min": {"type": "integer", "const": 90},
+        "tier2_redosing_interval_days_max": {"type": "integer", "const": 180},
+        "tier2_partial_offramp_hla_scar_locked": {"type": "boolean", "const": true},
+        "tier3_tdm_interval_days_min": {"type": "integer", "const": 30},
+        "tier3_tdm_interval_days_max": {"type": "integer", "const": 90},
+        "tier3_tacrolimus_target_trough_ng_ml_min": {"type": "number", "const": 4.0},
+        "tier3_tacrolimus_target_trough_ng_ml_max": {"type": "number", "const": 10.0},
+        "tier3_dd_cfdna_rejection_threshold_fraction": {"type": "number", "const": 0.005},
+        "tier3_zero_offramp_verified": {"type": "boolean", "const": true},
+        "ciin_neurotoxicity_incidence_pct_min": {"type": "number", "const": 10.0},
+        "ciin_neurotoxicity_incidence_pct_max": {"type": "number", "const": 40.0},
+        "cpra_hyper_sensitized_cul_de_sac_threshold_pct": {"type": "number", "const": 80.0},
+        "complication_class_count": {"type": "integer", "const": 4},
+        "decision_tree_gate_count": {"type": "integer", "const": 3},
+        "adjacent_supply_chain_zero_day_count": {"type": "integer", "const": 5},
+        "pseudonym_tube_host_snp_match_probability_cap": {"type": "number", "const": 1e-15},
+        "hipaa_law_enforcement_judicial_carveout_cfr": {"type": "string", "const": "45 CFR § 164.512(e)-(f)"},
+        "alibi_falsification_regimes_verified": {"type": "boolean", "const": true},
+        "tiers": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": {
+            "type": "object",
+            "required": ["tier_id", "regime_name", "ongoing_unlawful_dosing_required_for_effect", "recurring_lawful_domestic_maintenance_required", "h0_dual_use_alibi", "phi_falsified_indicator", "offramp_status", "governing_statutory_or_clinical_check"],
+            "properties": {
+              "tier_id": {"type": "integer", "minimum": 1, "maximum": 3},
+              "regime_name": {"type": "string", "minLength": 10},
+              "ongoing_unlawful_dosing_required_for_effect": {"type": "boolean"},
+              "recurring_lawful_domestic_maintenance_required": {"type": "boolean"},
+              "h0_dual_use_alibi": {"type": "string", "minLength": 15},
+              "phi_falsified_indicator": {"type": "integer", "enum": [0, 1]},
+              "offramp_status": {"type": "string", "enum": ["COMPLETE_OFFRAMP", "PARTIAL_OFFRAMP_HLA_SCAR_LOCKED", "ZERO_OFFRAMP_FORENSIC_LOCK"]},
+              "governing_statutory_or_clinical_check": {"type": "string", "minLength": 15}
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "Vector8MaintenancePhysicianTrilemma": {
+      "type": "object",
+      "description": "Validates Section 3.6: the Tier-3 lifelong 30-90 day calcineurin-inhibitor TDM cadence (>= 4 draws/yr, >= 60 draws over 15 yr) forces the principal to source maintenance from exactly one of three exhaustive channels, and all three close simultaneously so that joint maintenance secrecy survival is exactly zero. Path A (honest domestic maintenance) writes an immutable EPIC/CareEverywhere ledger subpoenaable under 45 CFR 164.512(e)-(f) and returns UNOS/OPTN NO RECORD FOUND under 42 U.S.C. 274 / 42 CFR Part 121 => P_Exposure = 1.00. Path B (concierge alias concealment) collapses on the licensed-gatekeeper rational-defection threshold p* = PV(R) / (L + PV(R)) = 0.009674 for the concierge physician ($257,709.70 retainer PV vs. $26,381,795.81 expected downside) and 0.000826 for the private nurse/phlebotomist ($12,885.48 vs. $15,589,088.84), both exceeded by the 0.998438 15-year CLIA NPI requisition-subpoena detection probability at 103.21x and 1,208.93x, while the pseudonym blood tube is re-identified by its own host germline SNPs (< 1e-15) => P_Exposure = 1.00. Path C (blind self-dosing with zero TDM) drives the Section 3.4 four-class complication matrix into a Tier-1 domestic ICU admission at P_LongTail(15) = 1 - 0.65^15 = 0.998438. The autoimmune H0 alibi is 100% autologous (F_dd_cfDNA = 0.000 < 0.005), so any concierge chart entry of lupus nephritis is falsified by the CLIA laboratory's own dd-cfDNA assay.",
+      "required": [
+        "trilemma_equation",
+        "trilemma_path_count",
+        "autoimmune_lupus_dd_cfdna_fraction",
+        "allograft_dd_cfdna_threshold",
+        "autoimmune_alibi_falsified_at_threshold",
+        "tdm_encounters_per_year_min",
+        "tdm_encounters_15yr_min",
+        "trilemma_path_A_honest_epic_unos_exposure_prob",
+        "trilemma_path_A_unos_no_record_found_verified",
+        "trilemma_path_B_concierge_alias_concealment_p_star",
+        "trilemma_path_B_nurse_p_star",
+        "trilemma_path_B_concierge_defection_prob",
+        "trilemma_path_B_physician_defection_margin_multiple",
+        "trilemma_path_B_nurse_defection_margin_multiple",
+        "trilemma_path_B_pseudonym_tube_snp_match_probability_cap",
+        "trilemma_path_B_exposure_prob",
+        "trilemma_path_C_blind_dosing_15yr_icu_exposure_prob",
+        "maintenance_secrecy_survival_all_paths",
+        "maintenance_physician_trilemma_closed_verified",
+        "paths"
+      ],
+      "properties": {
+        "trilemma_equation": {"type": "string", "const": "S_Maintenance = prod_{path in {A,B,C}} (1 - P_Exposure(path)) = 0"},
+        "trilemma_path_count": {"type": "integer", "const": 3},
+        "autoimmune_lupus_dd_cfdna_fraction": {"type": "number", "const": 0.0},
+        "allograft_dd_cfdna_threshold": {"type": "number", "const": 0.005},
+        "autoimmune_alibi_falsified_at_threshold": {"type": "boolean", "const": true},
+        "tdm_encounters_per_year_min": {"type": "integer", "const": 4},
+        "tdm_encounters_15yr_min": {"type": "integer", "const": 60},
+        "trilemma_path_A_honest_epic_unos_exposure_prob": {"type": "number", "const": 1.0},
+        "trilemma_path_A_unos_no_record_found_verified": {"type": "boolean", "const": true},
+        "trilemma_path_B_concierge_alias_concealment_p_star": {"type": "number", "const": 0.009674},
+        "trilemma_path_B_nurse_p_star": {"type": "number", "const": 0.000826},
+        "trilemma_path_B_concierge_defection_prob": {"type": "number", "const": 0.998438},
+        "trilemma_path_B_physician_defection_margin_multiple": {"type": "number", "const": 103.21},
+        "trilemma_path_B_nurse_defection_margin_multiple": {"type": "number", "const": 1208.93},
+        "trilemma_path_B_pseudonym_tube_snp_match_probability_cap": {"type": "number", "const": 1e-15},
+        "trilemma_path_B_exposure_prob": {"type": "number", "const": 1.0},
+        "trilemma_path_C_blind_dosing_15yr_icu_exposure_prob": {"type": "number", "const": 0.998438},
+        "maintenance_secrecy_survival_all_paths": {"type": "number", "const": 0.0},
+        "maintenance_physician_trilemma_closed_verified": {"type": "boolean", "const": true},
+        "paths": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": {
+            "type": "object",
+            "required": ["path_id", "path_name", "maintenance_source", "exposure_prob", "secrecy_survival", "governing_statutory_or_clinical_check"],
+            "properties": {
+              "path_id": {"type": "integer", "minimum": 1, "maximum": 3},
+              "path_name": {"type": "string", "minLength": 10},
+              "maintenance_source": {"type": "string", "minLength": 15},
+              "exposure_prob": {"type": "number", "minimum": 0.0, "maximum": 1.0},
+              "secrecy_survival": {"type": "number", "minimum": 0.0, "maximum": 1.0},
+              "governing_statutory_or_clinical_check": {"type": "string", "minLength": 15}
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

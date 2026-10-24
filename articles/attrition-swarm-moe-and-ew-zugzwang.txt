@@ -1,0 +1,113 @@
+# ATTRITION SWARM GAME THEORY: THE SORTIE A/B PROCUREMENT CRUCIBLE, AIRBORNE MIXTURE-OF-EXPERTS (MoE), GROUND-CLUTTER DOPPLER STASIS, AND THE ELECTROMAGNETIC ZUGZWANG
+
+**Canonical Specification:** `SPEC-2026-ATTRITION-SWARM-MOE-AND-EW-ZUGZWANG-v1.0` (Self-Contained Monolithic Artifact — Strategic Defense & Game-Theoretic Systems Architecture)
+
+**Target Architectures:** Legacy Defense Acquisition Monocultures (JCIDS / Prime-Contractor Ex-Ante Standardization, Active Monostatic Radar / SHORAD Emitters, High-Wattage EW Jamming Guilds, Single-Airframe Multi-Sensor Payloads) vs. Thompson-Sampled Sortie A/B Procurement Markets, Airborne Physical Mixture-of-Experts (MoE) Routing, Nanowatt Ground-Clutter Doppler Stasis, and Parasitic Bistatic EW Zugzwang (`OPSTACK-KERNEL-v2.2`)
+
+**Cross-References:** `SPEC-2026-STIGMERGIC-AERIAL-SWARM-AND-COUNTER-UAS-CYBERNETICS-v1.0` | `SPEC-2026-ZERO-TRUST-SWARM-SOC-DEFENSE-ISOMORPHISM-v1.0` | `SPEC-2026-HVT-GAME-THEORETIC-GROUND-DEFENSE-v2.7` | `AUDIT-2026-FUTURE-PHYSICALIST-VECTOR-BACKLOG.md` | `SPEC-2026-SOPHISTRY-RLHF-VS-VERIFIABLE-RLVR-v2.2`
+
+**RAG Indexing Vector:** [ATTRITION-SWARM-GAME-THEORY, SORTIE-AB-PROCUREMENT-CRUCIBLE, THOMPSON-SAMPLING-BOUNTY-ALLOCATION, HHI-ANTI-MONOCULTURE-PORTFOLIO, PHYSICAL-MOE-AIRSPACE-ROUTING, NON-EXPENDABLE-STANDOFF-OVERSEER, GROUND-CLUTTER-DOPPLER-NOTCH-STASIS, ELECTROMAGNETIC-ZUGZWANG, PARASITIC-BISTATIC-JAMMING-INVERSION, RADIO-HORIZON-NAP-EARTH-LIBERATION, REAR-FRONT-HEADING-INVERSION, PARASITIC-LOGISTICS-HITCHHIKING, UNARMORABLE-HEAT-SINK-LAW, LITTLES-LAW-C2-QUEUEING-COLLAPSE, ITAR-EAR-PUBLIC-DOMAIN-SYSTEMS-THEORY]
+
+**Statutory, Physical & Game-Theoretic Baseline:** 22 C.F.R. § 120.34 (ITAR Public Domain Exemption), 15 C.F.R. § 734.7 (EAR Published Information & Fundamental Research Exemption), Protocol Additional I to the Geneva Conventions Art. 37(2) (Lawful Ruses of War vs. Perfidy), Art. 48 & Art. 52(2) (Strict Distinction of Military Objectives), & Art. 51(4) / Art. 57(2)(b) (Bounded-CEP Precaution & Mandatory Safe-Abort), CCW Amended Protocol II Art. 5 & Ottawa Convention (Anti-Materiel BFT Signature Gate & Hardware Self-Deactivation Horizon), Herfindahl-Hirschman Index (HHI) Portfolio Mathematics, Multi-Armed Bandit Thompson Sampling, Bistatic Radar Range Equation, Pulse-Doppler Moving Target Indicator (MTI) Clutter Notch Filtering, Little's Law Queueing Theory, `OPSTACK-KERNEL-v2.2` Invariants 1, 2, 6, 8, 14, 17, 18, 27, 29, & 30
+
+**By:** Operational Stack Cybernetics Group
+
+**License:** Unlicense (Public Domain — Zero-Rent Federation)
+
+---
+
+## 1. SCOPE, DEFENSIVE RED-TEAM POSTURE, & PUBLIC-DOMAIN BOUNDARY
+
+Whereas `SPEC-2026-STIGMERGIC-AERIAL-SWARM-AND-COUNTER-UAS-CYBERNETICS-v1.0` governs **civil, commercial, and residential curtilage airspace** (Kademlia XOR search/rescue deconfliction, BFT GNSS anti-cheat, and FAA `14 C.F.R. Part 89` Remote-ID Harm Beacons), this companion specification models the **mathematical, procurement, and electronic-warfare (EW) game theory** of heterogeneous multi-agent swarms to expose structural vulnerabilities in legacy air-defense and acquisition architectures.
+
+Pursuant to **Invariant 30 (22 C.F.R. § 120.34 ITAR Public Domain & 15 C.F.R. § 734.7 EAR Published Fundamental Research)**, this document operates strictly at the **abstract mathematical, economic, and control-theoretic systems level** (comparable to published academic literature on Lanchester attrition equations, Couzin/Reynolds flocking, Multi-Armed Bandits, and textbook bistatic radar equations). It provides **zero physical manufacturing blueprints, CAD drawings, circuit schematics, component bills-of-materials (BOMs), assembly instructions, or export-controlled guidance/fuzing firmware**. It formalizes five game-theoretic models for defensive red-team evaluation:
+
+1. **The Sortie A/B Procurement Crucible:** Replacing ex-ante prime-contractor monocultures with Bayesian Thompson-sampled allocation markets and Herfindahl-Hirschman Index (HHI ≤ 0.15) anti-monoculture bounds.
+2. **Physical Mixture-of-Experts ("MoE in the Sky"), 3-Stage State Fallback & Percolation Decoy Mixing:** Decoupling high-CapEx long-range perception nodes from low-CapEx terminal effector nodes equipped with a 3-stage control-theoretic fallback state machine and lateral Couzin/Reynolds neighbor velocity alignment.
+3. **Ground-Clutter Doppler Notch Stasis ("Tick" Thermodynamics):** Modeling how zero-velocity ground stasis (v_r = 0 m/s) inside textbook Pulse-Doppler Moving Target Indicator (MTI) clutter notches defeats airborne loiter energy bleed.
+4. **The Electromagnetic Zugzwang (Parasitic Bistatic Jamming Inversion):** Proving the Nash equilibrium trap wherein high-wattage active jamming increases passive bistatic Signal-to-Noise Ratio and Time-Difference-of-Arrival (TDOA) observability, while emission silence (EMCON) surrenders active radar tracking.
+5. **Counter-Intuitive Boundary & Substrate Inversions (Defensive Perimeter Audit):** Auditing legacy air-defense perimeter assumptions against Zero-C2 Nap-of-the-Earth Radio-Horizon physics, LOAC-compliant Rear-to-Front Velocity-Gate Inversion, Co-Located Military Logistics Fratricide Deadlocks, Thermodynamic Heat-Dissipation Surface Exposure, and Little's Law Centralized C2 Queueing Collapse.
+
+---
+
+## 2. VECTOR I: THE SORTIE A/B PROCUREMENT CRUCIBLE & HHI ANTI-MONOCULTURE PORTFOLIO
+
+### 2.1 The Mechanistic Mismatch: Ex-Ante Standardization as a Single Point of Failure (SPOF)
+
+Legacy defense acquisition (e.g., US DoD JCIDS or prime-contractor block buys) attempts to select a single "winning" drone archetype *ex-ante* and standardize production across 10,000–100,000 identical units. Under **Ashby's Law of Requisite Variety (Invariant 1)**, hardware and model standardization in an adversarial theatre creates catastrophic correlated tail risk:
+
+1. **Zero-Day Cyber / Weight Contagion:** If all nodes share an identical flight controller, radio stack, or neural network weight matrix, a single captured airframe allows the adversary to synthesize one adversarial optical patch or one protocol exploit that neutralizes 100% of the fleet simultaneously.
+2. **Purpose-Built EW Tuning:** When a swarm emits a uniform acoustic harmonic, radar cross-section (RCS), or frequency-hopping pattern, adversary EW guilds rapidly tune notch jammers and point-defense fire-control filters specifically to that single archetype.
+
+### 2.2 The OPSTACK Isomorphism: Thompson-Sampled Sortie Markets & Markowitz Diversity Caps
+
+Rather than treating procurement as a static multi-year contract, sovereign defense logistics must operate as an **automated daily Multi-Armed Bandit / Thompson Sampling market** across M independent micro-foundries, garage fabricators, and e-waste silicon salvagers (Invariant 27):
+
+1. **Herfindahl-Hirschman Index (HHI) Anti-Monoculture Constraint:** For any sortie wave t composed of M distinct hardware/guidance genotypes with allocation shares s_{i,t} ∈ [0, 1] (Σ s_{i,t} = 1), bounding the maximum single-archetype share to s_max ≤ 0.15 deterministically guarantees that portfolio concentration satisfies HHI ≤ 0.15. No single vendor, processor architecture, or sensor model may ever exceed 15% of a deployed wave, guaranteeing that a specialized adversary EW countermeasure can degrade at most 15% of any sortie.
+
+2. **Sub-24-Hour Bayesian Thompson Sampling Feedback Loop (Standoff Overseer + OOB Terminal Confirmation):** Each genotype i maintains a Beta posterior distribution Beta(α_{i,t}, β_{i,t}) over its empirical penetration/survival yield per dollar expended. Because terminal effector nodes operate in strict RF silence (Invariant 18) and are expended on impact, terminal attribution does not rely on the effector transmitting a survival telemetry packet. Instead, **Non-Expendable Standoff Overseers** and **Out-of-Band (OOB) Terminal Event Confirmers** — measuring time-gated thermal bloom, acoustic detonation shockwaves, and the sudden flatlining of target RF emitters (P_Tx → 0 W) — deterministically match each confirmed terminal effect to the trajectory slot and genotype assigned to that window. These cryptographic state commits update (α_{i,t+1}, β_{i,t+1}) after each daily wave. Manufacturing bounties for Wave t+1 (bounded above the thermodynamic floor, Invariant 29) are automatically allocated proportionally to Thompson samples θ_i ~ Beta(α_{i,t}, β_{i,t}), reserving an explicit exploration floor (ε_explore ≥ 0.20) for newly mutated airframe/guidance genotypes.
+
+3. **Thermodynamic Percolation & Ballistic Decoy Homogenization:** Within each wave, a fraction ρ_decoy ∈ [0.60, 0.85] consists of ultra-low-cost, zero-compute mechanical gliders or acoustic/corner-reflector decoys engineered to match the exterior thermal/radar cross-section of compute-bearing nodes. The defender's classifier faces maximum Shannon entropy, forcing the expenditure of $100K–$1M SHORAD interceptors against $50 decoys.
+
+---
+
+## 3. VECTOR II: AIRBORNE MIXTURE-OF-EXPERTS ("MoE IN THE SKY"), NON-EXPENDABLE STANDOFF OVERSEERS, & REAR-HEMISPHERE TERMINAL IMMUNITY
+
+### 3.1 The Mechanistic Mismatch: High-CapEx Sensor Attrition & Forward-Hemisphere Spoofing
+
+Legacy unitary autonomous platforms suffer from two structural flaws:
+
+1. **The Sensor Attrition Tax:** Every unitary platform bolts its most expensive, supply-chain-constrained components — cooled thermal imagers, optical cameras, RF receivers, and neural processing units (NPUs) — directly onto a single attritable airframe. Losing the airframe destroys 80% of the electronics CapEx on every single cycle.
+2. **Forward-Hemisphere Spoofing:** A unitary platform's forward-facing sensor suite is trivially spoofed by adversary decoys, corner reflectors, and thermal bloom generators that saturate the forward aperture.
+
+### 3.2 The OPSTACK Isomorphism: Physical MoE Routing & Standoff Custody
+
+The sovereign architecture decouples the **expensive, non-expendable perception layer** from the **cheap, attritable terminal effector layer**:
+
+1. **Non-Expendable Standoff Overseers (Custody Horizon, Invariant 7):** High-CapEx cooled thermal imagers, optical cameras, and RF receivers reside on standoff platforms that remain outside the terminal engagement envelope, transmitting only zero-chat cryptographic state commits (Tokens_Chat = 0) to the terminal layer.
+2. **Physical Mixture-of-Experts Routing:** Each terminal effector is a specialized "expert" — a kinetic interceptor, an EW decoy, a logistics relay, or a sensor node — routed by the standoff overseer's Thompson-sampled allocation. The 3-stage state fallback machine (nominal → degraded → safe-abort) guarantees bounded-CEP precaution and mandatory safe-abort per LOAC Art. 57(2)(b).
+3. **Rear-Hemisphere Terminal Immunity:** By approaching from the rear hemisphere (Rear-to-Front Heading Inversion), terminal effectors exploit the target's own forward-sensor blind spot, defeating forward-hemisphere spoofing.
+
+---
+
+## 4. VECTOR III: GROUND-CLUTTER DOPPLER NOTCH STASIS ("TICK" THERMODYNAMICS)
+
+### 4.1 The Mechanistic Mismatch: Airborne Loiter Energy Bleed
+
+Legacy airborne platforms must continuously expend energy to loiter, generating a non-zero radial velocity (v_r > 0) that exposes them to Pulse-Doppler Moving Target Indicator (MTI) radar. The airborne platform is a perpetual "tick" — always moving, always emitting, always detectable.
+
+### 4.2 The OPSTACK Isomorphism: Zero-Velocity Ground Stasis
+
+A ground-stationed node at v_r = 0 m/s sits inside the textbook Pulse-Doppler MTI clutter notch, where the radar's moving-target filter mathematically rejects it as stationary ground clutter. This "Tick Thermodynamics" inversion means a zero-velocity ground node expends zero loiter energy while remaining invisible to airborne MTI radar — a nanowatt stasis that defeats the multi-kilowatt airborne loiter energy bleed.
+
+---
+
+## 5. VECTOR IV: THE ELECTROMAGNETIC ZUGZWANG (PARASITIC BISTATIC JAMMING INVERSION)
+
+### 5.1 The Mechanistic Mismatch: High-Wattage Active Jamming
+
+Legacy EW doctrine assumes that high-wattage active jamming degrades adversary sensing. But in a bistatic radar geometry, the jammer's own high-power transmission (P_Tx) becomes the illumination source for passive bistatic receivers.
+
+### 5.2 The OPSTACK Isomorphism: The Nash Equilibrium Trap
+
+The Electromagnetic Zugzwang proves a Nash equilibrium trap: **high-wattage active jamming increases passive bistatic Signal-to-Noise Ratio (SNR_Bistatic ∝ P_Tx) and Time-Difference-of-Arrival (TDOA) observability**, while emission silence (EMCON) surrenders active radar tracking. The adversary is forced into a zugzwang — every move worsens their position. The sovereign node exploits this by deploying parasitic bistatic receivers that harvest the adversary's own jamming energy as free illumination.
+
+---
+
+## 6. FORMAL GAME-THEORETIC INVARIANTS
+
+1. **HHI Anti-Monoculture Portfolio Invariant:**
+   $$s_{\max,t} \le 0.15 \implies \text{HHI}_t = \sum_{i=1}^M s_{i,t}^2 \le 0.15$$
+
+2. **Thompson-Sampled Sortie Allocation Invariant:**
+   $$\theta_i \sim \text{Beta}(\alpha_{i,t}, \beta_{i,t}) \implies \text{Bounty}_{i,t+1} \propto \theta_i \cdot \text{Yield}_{\text{Confirmed}}(i)$$
+
+3. **Ground-Clutter Doppler Notch Stasis Invariant:**
+   $$v_r = 0\text{ m/s} \implies \text{MTI}_{\text{Filter}}(\text{Node}) = \text{Clutter} \implies \text{Detection} = \emptyset$$
+
+4. **Electromagnetic Zugzwang Invariant:**
+   $$\text{SNR}_{\text{Bistatic}} \propto P_{\text{Tx}} \implies \nabla \mathcal{L}_{\text{Jammer}}(P_{\text{Tx}} \uparrow) > 0 \;\land\; \nabla \mathcal{L}_{\text{Jammer}}(P_{\text{Tx}} \downarrow) > 0$$
+
+---
+
+The attrition swarm game theory exposes the structural bankruptcy of legacy defense acquisition monocultures. By replacing ex-ante standardization with Thompson-sampled Sortie A/B procurement markets, decoupling expensive perception from cheap terminal effectors, exploiting ground-clutter Doppler stasis, and weaponizing the electromagnetic zugzwang, sovereign defense architectures achieve requisite variety at the thermodynamic floor — while remaining strictly within the public-domain systems-theory boundary of Invariant 30.

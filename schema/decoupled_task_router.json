@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:decoupled_task_router.json",
+  "title": "Enterprise Decoupled Task Router Payload",
+  "type": "object",
+  "required": [
+    "spec_version",
+    "jurisdiction_context",
+    "cfaa_compliance_attestation",
+    "intent_complexity_score",
+    "grounding_required",
+    "execution_routing",
+    "zero_egress_attestation"
+  ],
+  "properties": {
+    "spec_version": {
+      "type": "string",
+      "const": "DECOUPLED-TASK-ROUTER-v1.0"
+    },
+    "jurisdiction_context": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}$"
+    },
+    "cfaa_compliance_attestation": {
+      "type": "boolean",
+      "const": true
+    },
+    "intent_complexity_score": {
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0
+    },
+    "grounding_required": {
+      "type": "boolean"
+    },
+    "execution_routing": {
+      "type": "object",
+      "required": [
+        "target_engine",
+        "retrieval_method",
+        "max_egress_bytes"
+      ],
+      "properties": {
+        "target_engine": {
+          "type": "string",
+          "enum": [
+            "LOCAL_NPU_QUALCOMM_HEXAGON",
+            "LOCAL_APPLE_NEURAL_ENGINE",
+            "LOCAL_ONNX_RUNTIME",
+            "CLOUD_HEAVY_FALLBACK"
+          ]
+        },
+        "retrieval_method": {
+          "type": "string",
+          "enum": [
+            "NONE_IN_BUFFER",
+            "DECOUPLED_MICRO_SEARCH_API",
+            "LOCAL_VECTOR_DB"
+          ]
+        },
+        "max_egress_bytes": {
+          "type": "integer",
+          "maximum": 2048
+        }
+      }
+    },
+    "zero_egress_attestation": {
+      "type": "boolean"
+    }
+  }
+}

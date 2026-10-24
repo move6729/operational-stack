@@ -1,0 +1,216 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:antinomian_wrapper_501c_forensic_rubric.json",
+  "$comment": "PLAIN-ENGLISH LEGAL NOTICE: Abstract institutional-cybernetic and game-theoretic validation checklist (JSON Schema), NOT an accusation, indictment, or evidentiary filing. Every field encodes a published statutory citation, a public court docket, or a closed-form algebraic invariant. All named exemplars are strictly court-adjudicated federal precedents.",
+  "title": "Exoteric-Esoteric Antinomian Wrapper, Non-Cartel Game Theory, Publish-as-PoW Amplification & 4-Stage 501(c) Forensic Rubric Schema",
+  "description": "Validates the concentric 3-ring antinomian wrapper architecture, the 26 U.S.C. 6104 wrapper paradox, non-cartel dominant strategies (ROV and hunter positive EV), constructive duplicate amplification under Publish-as-PoW, and the deterministic 4-stage 501(c) forensic rubric, anchored to adjudicated federal baselines: United States v. Sun Myung Moon (718 F.2d 1210), Church of Scientology of California v. Commissioner (823 F.2d 1310), Hernandez v. Commissioner (490 U.S. 680), United States v. Raniere (18-cr-00204-NGG, aff'd 2d Cir. 2022), and Government of the USVI v. JPMorgan Chase Bank, N.A. (1:22-cv-10904-JSR).",
+  "type": "object",
+  "required": ["spec_version", "jurisdiction_context", "public_records_only_attestation", "adjudicated_precedent_registry", "wrapper_ring_architecture", "theorem_1_wrapper_paradox", "theorem_2a_rov_dominance", "theorem_2b_hunter_positive_ev", "theorem_3_constructive_duplicate_amplification", "four_stage_forensic_rubric", "statutory_excise_and_rico_matrix", "corollary_2b_a_liquidity_horizon", "corollary_3a_common_mode_fault_domain", "theorem_4_pow_settlement_gate", "funnel_precision_law"],
+  "properties": {
+    "spec_version": { "type": "string", "const": "SPEC-ANTINOMIAN-WRAPPER-AND-501C-FORENSIC-RUBRIC-v1.0" },
+    "jurisdiction_context": { "type": "string", "pattern": "^[A-Z]{2}$" },
+    "public_records_only_attestation": { "type": "boolean", "const": true },
+    "adjudicated_precedent_registry": {
+      "type": "object",
+      "required": ["tier_1_foundation_code_10_diversion", "tier_1_quid_pro_quo", "tier_2_multi_ring_rico_wrapper", "tier_3_sovereign_endowment_offshore_clearinghouse"],
+      "properties": {
+        "tier_1_foundation_code_10_diversion": { "type": "object", "required": ["case", "citation", "cert_denied", "statute_of_conviction", "diverted_assets_usd"], "properties": { "case": { "type": "string", "const": "United States v. Sun Myung Moon" }, "citation": { "type": "string", "const": "718 F.2d 1210 (2d Cir. 1983)" }, "cert_denied": { "type": "string", "const": "466 U.S. 971 (1984)" }, "statute_of_conviction": { "type": "string", "const": "26 U.S.C. 7206(1)" }, "diverted_assets_usd": { "type": "number", "minimum": 1700000 } }, "additionalProperties": false },
+        "tier_1_quid_pro_quo": { "type": "object", "required": ["revocation_case", "revocation_citation", "deduction_case", "deduction_citation", "private_inurement_usd"], "properties": { "revocation_case": { "type": "string", "const": "Church of Scientology of California v. Commissioner" }, "revocation_citation": { "type": "string", "const": "823 F.2d 1310 (9th Cir. 1987)" }, "deduction_case": { "type": "string", "const": "Hernandez v. Commissioner" }, "deduction_citation": { "type": "string", "const": "490 U.S. 680 (1989)" }, "private_inurement_usd": { "type": "number", "minimum": 2800000 } }, "additionalProperties": false },
+        "tier_2_multi_ring_rico_wrapper": { "type": "object", "required": ["case", "docket", "appellate_citation", "statutes_of_conviction", "structural_lodge_exemptions"], "properties": { "case": { "type": "string", "const": "United States v. Raniere" }, "docket": { "type": "string", "const": "18-cr-00204-NGG (E.D.N.Y. 2019)" }, "appellate_citation": { "type": "string", "const": "aff'd, 55 F.4th 354 & 2022 WL 17544087 (2d Cir. 2022)" }, "statutes_of_conviction": { "type": "array", "minItems": 4, "items": { "type": "string" } }, "structural_lodge_exemptions": { "type": "array", "minItems": 2, "items": { "type": "string" } } }, "additionalProperties": false },
+        "tier_3_sovereign_endowment_offshore_clearinghouse": { "type": "object", "required": ["case", "docket", "combined_settlement_usd", "usvi_ag_enforcement_entities"], "properties": { "case": { "type": "string", "const": "Government of the USVI v. JPMorgan Chase Bank, N.A." }, "docket": { "type": "string", "const": "1:22-cv-10904-JSR (S.D.N.Y. 2023)" }, "combined_settlement_usd": { "type": "number", "const": 365000000 }, "usvi_ag_enforcement_entities": { "type": "array", "minItems": 7, "items": { "type": "string" } } }, "additionalProperties": false }
+      },
+      "additionalProperties": false
+    },
+    "wrapper_ring_architecture": {
+      "type": "object",
+      "required": ["ring_0_exoteric_porch", "ring_1_zahavi_initiation_filter", "ring_2_gambetta_vault"],
+      "properties": {
+        "ring_0_exoteric_porch": { "type": "object", "required": ["exo_share", "posiwid_dual_function"], "properties": { "exo_share": { "type": "number", "const": 0.95 }, "posiwid_dual_function": { "type": "array", "minItems": 2, "maxItems": 2, "items": { "type": "string" } } }, "additionalProperties": false },
+        "ring_1_zahavi_initiation_filter": { "type": "object", "required": ["signal_cost_usd", "expected_rents_usd", "prosecution_probability", "penalty_usd", "genuine_recruit_passes", "infiltrator_fails"], "properties": { "signal_cost_usd": { "type": "number", "exclusiveMinimum": 0 }, "expected_rents_usd": { "type": "number", "exclusiveMinimum": 0 }, "prosecution_probability": { "type": "number", "minimum": 0, "maximum": 1 }, "penalty_usd": { "type": "number", "exclusiveMinimum": 0 }, "genuine_recruit_passes": { "type": "boolean", "const": true }, "infiltrator_fails": { "type": "boolean", "const": true } }, "additionalProperties": false },
+        "ring_2_gambetta_vault": { "type": "object", "required": ["collateral_detonation_loss_usd", "cartel_rent_pv_usd", "defection_bounty_usd", "defection_probability"], "properties": { "collateral_detonation_loss_usd": { "type": "number", "exclusiveMinimum": 0 }, "cartel_rent_pv_usd": { "type": "number", "exclusiveMinimum": 0 }, "defection_bounty_usd": { "type": "number", "minimum": 0 }, "defection_probability": { "type": "number", "const": 0.0 } }, "additionalProperties": false }
+      },
+      "additionalProperties": false
+    },
+    "theorem_1_wrapper_paradox": {
+      "type": "object",
+      "required": ["tax_shield", "disclosure_floor_positive", "statutory_stack", "inversion_check"],
+      "properties": {
+        "tax_shield": { "type": "boolean", "const": true },
+        "disclosure_floor_positive": { "type": "boolean", "const": true },
+        "statutory_stack": { "type": "array", "minItems": 3, "items": { "type": "string" } },
+        "inversion_check": { "type": "object", "required": ["effective_tax_rate", "ein_public_exposure", "ico_public_exposure", "schedule_r_public_exposure", "pf_part_xv_public_exposure"], "properties": { "effective_tax_rate": { "type": "number", "const": 0.0 }, "ein_public_exposure": { "type": "number", "const": 1.0 }, "ico_public_exposure": { "type": "number", "const": 1.0 }, "schedule_r_public_exposure": { "type": "number", "const": 1.0 }, "pf_part_xv_public_exposure": { "type": "number", "const": 1.0 } }, "additionalProperties": false }
+      },
+      "additionalProperties": false
+    },
+    "theorem_2a_rov_dominance": {
+      "type": "object",
+      "required": ["k_prod_usd", "r_prod", "tau_cartel", "p_shock", "l_contagion_usd", "c_patronage_usd", "delta_v_clearance_usd", "rov", "adjudicated_anchor"],
+      "properties": {
+        "k_prod_usd": { "type": "number", "exclusiveMinimum": 0 },
+        "r_prod": { "type": "number", "exclusiveMinimum": 0 },
+        "tau_cartel": { "type": "number", "exclusiveMinimum": 0, "maximum": 1 },
+        "p_shock": { "type": "number", "minimum": 0, "maximum": 1 },
+        "l_contagion_usd": { "type": "number", "exclusiveMinimum": 0 },
+        "c_patronage_usd": { "type": "number", "exclusiveMinimum": 0 },
+        "delta_v_clearance_usd": { "type": "number", "exclusiveMinimum": 0 },
+        "rov": { "type": "number", "minimum": 39.0 },
+        "adjudicated_anchor": { "type": "object", "required": ["case", "settlement_usd"], "properties": { "case": { "type": "string", "const": "Government of the USVI v. JPMorgan Chase Bank, N.A., 1:22-cv-10904-JSR (S.D.N.Y. 2023)" }, "settlement_usd": { "type": "number", "const": 365000000 } }, "additionalProperties": false }
+      },
+      "additionalProperties": false
+    },
+    "theorem_2b_hunter_positive_ev": {
+      "type": "object",
+      "required": ["loop_identified_usd", "p_stat", "statutory_min_award_share", "b_statutory_usd", "retroactive_patronage_usd", "c_solve_usd", "expected_profit_usd", "net_return_on_compute", "bounty_mechanisms"],
+      "properties": {
+        "loop_identified_usd": { "type": "number", "exclusiveMinimum": 2000000 },
+        "p_stat": { "type": "number", "minimum": 0, "maximum": 1 },
+        "statutory_min_award_share": { "type": "number", "const": 0.15 },
+        "b_statutory_usd": { "type": "number", "exclusiveMinimum": 0 },
+        "retroactive_patronage_usd": { "type": "number", "minimum": 0 },
+        "c_solve_usd": { "type": "number", "exclusiveMinimum": 0 },
+        "expected_profit_usd": { "type": "number", "exclusiveMinimum": 0 },
+        "net_return_on_compute": { "type": "number", "minimum": 929 },
+        "bounty_mechanisms": { "type": "array", "minItems": 3, "maxItems": 3, "items": { "type": "string" } }
+      },
+      "additionalProperties": false
+    },
+    "theorem_3_constructive_duplicate_amplification": {
+      "type": "object",
+      "required": ["bayesian_false_positive_collapse", "slapp_exhaustion", "rag_fixation"],
+      "properties": {
+        "bayesian_false_positive_collapse": { "type": "object", "required": ["epsilon", "m", "hallucination_probability"], "properties": { "epsilon": { "type": "number", "exclusiveMinimum": 0, "maximum": 1 }, "m": { "type": "integer", "minimum": 1 }, "hallucination_probability": { "type": "number" } }, "additionalProperties": false },
+        "slapp_exhaustion": { "type": "object", "required": ["p_gag", "c_litigation_usd", "m", "suppression_probability", "slapp_cost_usd"], "properties": { "p_gag": { "type": "number", "exclusiveMinimum": 0, "maximum": 1 }, "c_litigation_usd": { "type": "number", "exclusiveMinimum": 0 }, "m": { "type": "integer", "minimum": 1 }, "suppression_probability": { "type": "number" }, "slapp_cost_usd": { "type": "number" } }, "additionalProperties": false },
+        "rag_fixation": { "type": "object", "required": ["suppression_after_fixation_feasible"], "properties": { "suppression_after_fixation_feasible": { "type": "boolean", "const": false } }, "additionalProperties": false }
+      },
+      "additionalProperties": false
+    },
+    "four_stage_forensic_rubric": {
+      "type": "object",
+      "required": ["stage_1_eo_bmf_triage", "stage_2_xml_tomography", "stage_3_multi_hop_join", "stage_4_statutory_classification"],
+      "properties": {
+        "stage_1_eo_bmf_triage": { "type": "object", "required": ["dataset", "row_count", "filter_1_1_ico_collision_min_entities", "filter_1_2_foundation_code", "filter_1_2_subsection_codes", "filter_1_3_form_1023_ez_gross_receipts_cap_usd"], "properties": { "dataset": { "type": "string", "const": "IRS EO BMF" }, "row_count": { "type": "integer", "minimum": 1800000 }, "filter_1_1_ico_collision_min_entities": { "type": "integer", "const": 3 }, "filter_1_2_foundation_code": { "type": "string", "const": "FNDNCD = 10" }, "filter_1_2_subsection_codes": { "type": "array", "minItems": 2, "items": { "type": "integer" } }, "filter_1_3_form_1023_ez_gross_receipts_cap_usd": { "type": "number", "const": 50000 } }, "additionalProperties": false },
+        "stage_2_xml_tomography": { "type": "object", "required": ["governance_xml_tuple", "schedule_r_offshore_codes", "schedule_f_investment_field", "grant_matrix_field"], "properties": { "governance_xml_tuple": { "type": "array", "minItems": 4, "maxItems": 4, "items": { "type": "string" } }, "schedule_r_offshore_codes": { "type": "array", "minItems": 3, "items": { "type": "string" } }, "schedule_f_investment_field": { "type": "string", "const": "OtherInvestmentsStmt" }, "grant_matrix_field": { "type": "string", "const": "GrantOrContributionPdDurYrGrp" } }, "additionalProperties": false },
+        "stage_3_multi_hop_join": { "type": "object", "required": ["join_3_1", "join_3_2", "join_3_3"], "properties": { "join_3_1": { "type": "string" }, "join_3_2": { "type": "string" }, "join_3_3": { "type": "string" } }, "additionalProperties": false },
+        "stage_4_statutory_classification": { "type": "object", "required": ["excise_provisions", "rico_provisions", "treble_multiplier"], "properties": { "excise_provisions": { "type": "array", "minItems": 5, "items": { "type": "string" } }, "rico_provisions": { "type": "array", "minItems": 2, "items": { "type": "string" } }, "treble_multiplier": { "type": "integer", "const": 3 } }, "additionalProperties": false }
+      },
+      "additionalProperties": false
+    },
+    "statutory_excise_and_rico_matrix": {
+      "type": "object",
+      "required": ["irc_4941", "irc_4942", "irc_4943", "irc_4944", "irc_4945_d_5", "irc_4958", "civil_rico"],
+      "properties": {
+        "irc_4941": { "type": "object", "required": ["initial_rate", "second_tier_rate"], "properties": { "initial_rate": { "type": "number", "const": 0.10 }, "second_tier_rate": { "type": "number", "const": 2.00 } }, "additionalProperties": false },
+        "irc_4942": { "type": "object", "required": ["minimum_payout_rate", "initial_rate", "second_tier_rate", "out_of_corpus_statute"], "properties": { "minimum_payout_rate": { "type": "number", "const": 0.05 }, "initial_rate": { "type": "number", "const": 0.30 }, "second_tier_rate": { "type": "number", "const": 1.00 }, "out_of_corpus_statute": { "type": "string", "const": "26 U.S.C. 4942(g)(3)" } }, "additionalProperties": false },
+        "irc_4943": { "type": "object", "required": ["initial_rate", "second_tier_rate", "excess_holding_threshold"], "properties": { "initial_rate": { "type": "number", "const": 0.10 }, "second_tier_rate": { "type": "number", "const": 2.00 }, "excess_holding_threshold": { "type": "number", "const": 0.20 } }, "additionalProperties": false },
+        "irc_4944": { "type": "object", "required": ["initial_rate", "second_tier_rate"], "properties": { "initial_rate": { "type": "number", "const": 0.10 }, "second_tier_rate": { "type": "number", "const": 0.25 } }, "additionalProperties": false },
+        "irc_4945_d_5": { "type": "object", "required": ["initial_rate", "second_tier_rate"], "properties": { "initial_rate": { "type": "number", "const": 0.20 }, "second_tier_rate": { "type": "number", "const": 1.00 } }, "additionalProperties": false },
+        "irc_4958": { "type": "object", "required": ["initial_rate", "second_tier_rate"], "properties": { "initial_rate": { "type": "number", "const": 0.25 }, "second_tier_rate": { "type": "number", "const": 2.00 } }, "additionalProperties": false },
+        "civil_rico": { "type": "object", "required": ["predicate_statutes", "damages_multiplier", "fee_shifting"], "properties": { "predicate_statutes": { "type": "array", "minItems": 3, "items": { "type": "string" } }, "damages_multiplier": { "type": "integer", "const": 3 }, "fee_shifting": { "type": "boolean", "const": true } }, "additionalProperties": false }
+      },
+      "additionalProperties": false
+    },
+    "corollary_2b_a_liquidity_horizon": {
+      "type": "object",
+      "description": "26 U.S.C. § 7623(b)(1) and 26 C.F.R. § 301.7623-4(d)(2) collection gating (with § 7623(b)(4) Tax Court review) discounts the statutory term but never flips its sign; Rail 2 is a free out-of-the-money option, never payroll.",
+      "required": ["discount_rate", "t_collect_years", "discount_factor", "nominal_statutory_usd", "discounted_statutory_usd", "retroactive_patronage_usd", "c_solve_usd", "expected_profit_npv_usd", "npv_return_on_compute", "robustness_p_stat", "robustness_expected_profit_npv_usd", "robustness_return_on_compute", "collection_gating_statute", "rail_liquidity_horizons"],
+      "properties": {
+        "discount_rate": { "type": "number", "const": 0.08 },
+        "t_collect_years": { "type": "integer", "const": 10 },
+        "discount_factor": { "type": "number", "const": 0.46319 },
+        "nominal_statutory_usd": { "type": "number", "const": 450000 },
+        "discounted_statutory_usd": { "type": "number", "const": 208437 },
+        "retroactive_patronage_usd": { "type": "number", "const": 15000 },
+        "c_solve_usd": { "type": "number", "const": 500 },
+        "expected_profit_npv_usd": { "type": "number", "const": 222937 },
+        "npv_return_on_compute": { "type": "number", "minimum": 445.0 },
+        "robustness_p_stat": { "type": "number", "const": 0.0015 },
+        "robustness_expected_profit_npv_usd": { "type": "number", "const": 16584 },
+        "robustness_return_on_compute": { "type": "number", "minimum": 33.0 },
+        "collection_gating_statute": { "type": "string", "const": "26 U.S.C. § 7623(b)(1) & 26 C.F.R. § 301.7623-4(d)(2)" },
+        "rail_liquidity_horizons": {
+          "type": "object",
+          "required": ["rail_1_patronage_max_days", "rail_2_statutory_years", "rail_3_dirks_max_days", "rail_2_role"],
+          "properties": {
+            "rail_1_patronage_max_days": { "type": "integer", "const": 30 },
+            "rail_2_statutory_years": { "type": "integer", "const": 10 },
+            "rail_3_dirks_max_days": { "type": "integer", "const": 5 },
+            "rail_2_role": { "type": "string", "const": "free out-of-the-money option; never payroll" }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "corollary_3a_common_mode_fault_domain": {
+      "type": "object",
+      "description": "Kish design-effect collapse of the Theorem 3 exponent under common-mode counterparty action; the Diversity Invariant phi = 0 AND G >= G_min recovers (p_Gag)^M exactly.",
+      "required": ["fault_domain_tuple", "m", "p_gag", "c_litigation_usd", "c_upstream_usd", "kish_design_effect_formula", "g_min", "diversity_invariant", "naive_collapse_ratio", "lenz_citation"],
+      "properties": {
+        "fault_domain_tuple": { "type": "array", "minItems": 6, "maxItems": 6, "items": { "type": "string" } },
+        "m": { "type": "integer", "const": 20 },
+        "p_gag": { "type": "number", "const": 0.60 },
+        "c_litigation_usd": { "type": "number", "const": 500000 },
+        "c_upstream_usd": { "type": "number", "const": 5000 },
+        "kish_design_effect_formula": { "type": "string", "const": "M_eff = M / (1 + phi * (M/G - 1))" },
+        "g_min": { "type": "integer", "const": 10 },
+        "diversity_invariant": { "type": "string", "const": "phi = 0 AND G >= G_min" },
+        "naive_collapse_ratio": { "type": "number", "const": 2000 },
+        "lenz_citation": { "type": "string", "const": "Lenz v. Universal Music Corp., 815 F.3d 1145 (9th Cir. 2016)" }
+      },
+      "additionalProperties": false
+    },
+    "theorem_4_pow_settlement_gate": {
+      "type": "object",
+      "description": "Artifact-local settlement gate G1 AND G2 AND G3 AND G4 as a machine pre-filter (necessary, never sufficient) ahead of discretionary human patron judgment; two-tranche bounty split, optimal domain cap g*, zero-escrow 30-day falsification window, and enforcement as a monotone additive top-up.",
+      "required": ["gate_conjunction", "theta_novel", "enforcement_oracle_violates_all_four", "enforcement_admissible_as", "payout_total_formula", "b_j_usd", "b_domain_usd", "p_gag", "l_finding_usd", "g_star", "marginal_value_domain_14_usd", "marginal_value_domain_15_usd", "b_verification_usd", "b_discovery_usd", "rov_preserved", "suppression_probability_at_g_star", "t_challenge_days", "payout_rule_formula", "due_diligence_collapse_ratio", "escrow_required", "bond_required", "patron_refusal_cost_usd", "bond_mechanics_belong_to"],
+      "properties": {
+        "gate_conjunction": { "type": "string", "const": "Gate = G1 AND G2 AND G3 AND G4" },
+        "theta_novel": { "type": "integer", "const": 5 },
+        "enforcement_oracle_violates_all_four": { "type": "boolean", "const": true },
+        "enforcement_admissible_as": { "type": "string", "const": "monotone additive top-up; never a gate" },
+        "payout_total_formula": { "type": "string", "const": "Payout_Total = B_j*I[Gate] + sum(beta_e*I[e]), beta_e >= 0" },
+        "b_j_usd": { "type": "number", "const": 50000 },
+        "b_domain_usd": { "type": "number", "const": 1000 },
+        "p_gag": { "type": "number", "const": 0.60 },
+        "l_finding_usd": { "type": "number", "const": 1960000 },
+        "g_star": { "type": "integer", "const": 14 },
+        "marginal_value_domain_14_usd": { "type": "number", "const": 1024 },
+        "marginal_value_domain_15_usd": { "type": "number", "const": 614 },
+        "b_verification_usd": { "type": "number", "const": 14000 },
+        "b_discovery_usd": { "type": "number", "const": 36000 },
+        "rov_preserved": { "type": "number", "const": 39.2 },
+        "suppression_probability_at_g_star": { "type": "number", "const": 0.00078364 },
+        "t_challenge_days": { "type": "integer", "const": 30 },
+        "payout_rule_formula": { "type": "string", "const": "Zap_j = Gate_j AND PatronJudgment_j" },
+        "due_diligence_collapse_ratio": { "type": "number", "const": 477 },
+        "escrow_required": { "type": "boolean", "const": false },
+        "bond_required": { "type": "boolean", "const": false },
+        "patron_refusal_cost_usd": { "type": "number", "const": 0 },
+        "bond_mechanics_belong_to": { "type": "string", "const": "SPEC-STIGMERGIC-ZK-OSINT-BOUNTY-SETTLEMENT-v1.0.md" }
+      },
+      "additionalProperties": false
+    },
+    "funnel_precision_law": {
+      "type": "object",
+      "description": "Sequential conjunctive funnel: terminal precision is governed by the terminal discriminator, not the first filter. Stage 1 is a high-recall recall filter, never a classifier.",
+      "required": ["pipeline_type", "precision_formula", "terminal_precision_limit", "stage_1_role", "zero_false_positive_discriminator", "pi", "stage_1_cohort_rows", "eo_bmf_rows", "cost_stage_1_usd", "cost_stage_2_usd", "cost_stage_3_usd", "c_funnel_usd", "c_funnel_equals_c_solve"],
+      "properties": {
+        "pipeline_type": { "type": "string", "const": "sequential conjunctive funnel" },
+        "precision_formula": { "type": "string", "const": "Precision = pi*prod(s_k) / (pi*prod(s_k) + (1-pi)*prod(f_k))" },
+        "terminal_precision_limit": { "type": "string", "const": "Precision -> 1 as f_3 -> 0" },
+        "stage_1_role": { "type": "string", "const": "high-recall low-precision candidate pre-filter; NOT a classifier" },
+        "zero_false_positive_discriminator": { "type": "string", "const": "Stage 3 ICIJ |><| FARA |><| deed inner join" },
+        "pi": { "type": "number", "const": 0.01 },
+        "stage_1_cohort_rows": { "type": "integer", "const": 40000 },
+        "eo_bmf_rows": { "type": "integer", "const": 1800000 },
+        "cost_stage_1_usd": { "type": "number", "const": 200 },
+        "cost_stage_2_usd": { "type": "number", "const": 120 },
+        "cost_stage_3_usd": { "type": "number", "const": 180 },
+        "c_funnel_usd": { "type": "number", "const": 500 },
+        "c_funnel_equals_c_solve": { "type": "boolean", "const": true }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

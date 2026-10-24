@@ -1,0 +1,98 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:harm_beacon_manifest.json",
+  "title": "Stigmergic Class Assembly & Cryptographic Harm Beacon Manifest",
+  "description": "Schema for emitting cryptographic Harm Beacons, establishing proof of standing, specifying target entity IDs, and enabling out-of-band litigation ingestion.",
+  "type": "object",
+  "required": [
+    "spec_version",
+    "jurisdiction_context",
+    "cfaa_compliance_attestation",
+    "beacon_id",
+    "target_entity_identifier",
+    "statutory_violation_code",
+    "evidence_chain",
+    "litigation_ingestion_protocol"
+  ],
+  "properties": {
+    "spec_version": {
+      "type": "string",
+      "const": "SPEC-2026-STIGMERGIC-CLASS-ASSEMBLY-v2.1"
+    },
+    "jurisdiction_context": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}$"
+    },
+    "cfaa_compliance_attestation": {
+      "type": "boolean",
+      "const": true
+    },
+    "beacon_id": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{32}$"
+    },
+    "target_entity_identifier": {
+      "type": "string",
+      "minLength": 1
+    },
+    "statutory_violation_code": {
+      "type": "string",
+      "enum": [
+        "CCPA_1798.140_INFERENCE_DENIAL_v1",
+        "EEOC_DISPARATE_IMPACT_HIRING_ML_v1",
+        "FINTECH_PREDATORY_RISK_INFERENCE_v1",
+        "TCPA_UNAUTHORIZED_AUTOMATED_COMM_v1"
+      ]
+    },
+    "evidence_chain": {
+      "type": "object",
+      "required": [
+        "evidence_sha256_hash",
+        "concrete_economic_harm_documented",
+        "statutory_cure_period_expired"
+      ],
+      "properties": {
+        "evidence_sha256_hash": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "dsar_submission_timestamp": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "concrete_economic_harm_documented": {
+          "type": "boolean",
+          "const": true
+        },
+        "statutory_cure_period_expired": {
+          "type": "boolean",
+          "const": true
+        }
+      },
+      "additionalProperties": false
+    },
+    "litigation_ingestion_protocol": {
+      "type": "object",
+      "required": [
+        "claimant_public_key_ecies",
+        "preferred_remedy_type"
+      ],
+      "properties": {
+        "claimant_public_key_ecies": {
+          "type": "string",
+          "pattern": "^04[a-f0-9]{128}$"
+        },
+        "preferred_remedy_type": {
+          "type": "string",
+          "enum": [
+            "MASS_ARBITRATION_BLITZ",
+            "DUAL_TRACK_PUBLIC_INJUNCTION",
+            "CLASS_ACTION_JOIN"
+          ]
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

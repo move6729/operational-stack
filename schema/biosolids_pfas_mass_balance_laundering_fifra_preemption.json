@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:biosolids_pfas_mass_balance_laundering_fifra_preemption.json",
+  "$comment": "PLAIN-ENGLISH LEGAL NOTICE: This file is an abstract institutional-cybernetic, environmental-forensic, and statutory-boundary validation checklist (JSON Schema), NOT an accusation, indictment, or evidentiary filing. Every field encodes a published statutory citation, a public court docket, a federal EPA/OIG administrative finding, a peer-reviewed toxicological paper, or a closed-form algebraic invariant. Structural-accounting descriptors only; no uncharged statutory felony label is asserted against any living natural person.",
+  "title": "Biosolids PFAS Mass-Balance Laundering, CERCLA Strict-Liability Transfer & FIFRA Section 136v(b) Preemption Schema",
+  "description": "Validates the three executable verification vectors of SPEC-BIOSOLIDS-PFAS-MASS-BALANCE-LAUNDERING-AND-FIFRA-PREEMPTION-v1.0: (1) the Carbon-Fluorine mass-conservation identity M_in = M_eff + M_sludge across WWTP secondary treatment with f_eff + f_sludge = 1.0 and eta_destroy = 0.0%, (2) the 40 C.F.R. Part 503 disposal arbitrage and CERCLA 42 U.S.C. 9607(a)(1) strict-liability transfer closing at a +$17,914,000/yr utility net defection surplus with alpha = 0.92 landowner retention, and (3) the 30.0x atrazine MCL-to-biological-threshold regulatory gap under the FIFRA 7 U.S.C. 136v(b) failure-to-warn preemption shield.",
+  "type": "object",
+  "required": [
+    "spec_version",
+    "jurisdiction_context",
+    "cfaa_compliance_attestation",
+    "Vector1CarbonFluorineMassConservation",
+    "Vector2Part503DisposalArbitrageAndCERCLATransfer",
+    "Vector3RegulatoryThresholdGapAndFIFRAPreemption"
+  ],
+  "properties": {
+    "spec_version": {"type": "string", "const": "SPEC-BIOSOLIDS-PFAS-MASS-BALANCE-LAUNDERING-AND-FIFRA-PREEMPTION-v1.0"},
+    "jurisdiction_context": {"type": "string", "pattern": "^[A-Z]{2}$"},
+    "cfaa_compliance_attestation": {"type": "boolean", "const": true},
+    "Vector1CarbonFluorineMassConservation": {
+      "type": "object",
+      "description": "EQ_01: Because the C-F covalent bond dissociation energy E_CF = 485.0 kJ/mol exceeds the metabolic/thermal energy budget of conventional secondary wastewater treatment (eta_destroy = 0.0%), incoming PFAS mass M_in is strictly conserved between liquid effluent (f_eff = 0.38) and dewatered sewage sludge (f_sludge = 0.62): M_in = M_eff + M_sludge with f_eff + f_sludge = 1.0. A reference 100.0 kg influent load closes exactly: 38.0 kg effluent + 62.0 kg sludge + 0.0 kg destroyed.",
+      "required": ["eq_id", "mass_conservation_identity", "cf_bond_dissociation_energy_kj_mol", "wwtp_secondary_treatment_pfas_destruction_pct", "wwtp_effluent_partition_fraction", "wwtp_sludge_partition_fraction", "partition_closure_within_machine_precision", "reference_influent_pfas_mass_kg", "effluent_pfas_mass_kg", "sludge_pfas_mass_kg", "destroyed_pfas_mass_kg", "sludge_to_effluent_concentration_ratio", "carbon_fluorine_mass_conservation_verified"],
+      "properties": {
+        "eq_id": {"type": "string", "const": "EQ_01"},
+        "mass_conservation_identity": {"type": "string", "const": "M_in = M_eff + M_sludge"},
+        "cf_bond_dissociation_energy_kj_mol": {"type": "number", "const": 485.0},
+        "wwtp_secondary_treatment_pfas_destruction_pct": {"type": "number", "const": 0.0},
+        "wwtp_effluent_partition_fraction": {"type": "number", "const": 0.38},
+        "wwtp_sludge_partition_fraction": {"type": "number", "const": 0.62},
+        "partition_closure_within_machine_precision": {"type": "boolean", "const": true},
+        "reference_influent_pfas_mass_kg": {"type": "number", "const": 100.0},
+        "effluent_pfas_mass_kg": {"type": "number", "const": 38.0},
+        "sludge_pfas_mass_kg": {"type": "number", "const": 62.0},
+        "destroyed_pfas_mass_kg": {"type": "number", "const": 0.0},
+        "sludge_to_effluent_concentration_ratio": {"type": "number", "const": 1.631579},
+        "carbon_fluorine_mass_conservation_verified": {"type": "boolean", "const": true}
+      },
+      "additionalProperties": false
+    },
+    "Vector2Part503DisposalArbitrageAndCERCLATransfer": {
+      "type": "object",
+      "description": "EQ_02: A municipal WWTP generating Q = 25,000 dry tons/yr saves (C_haz - C_503) * Q = ($850.0 - $120.0) * 25,000 = $18,250,000/yr by rebranding sludge as 'Class A/B Biosolids' for agricultural land application. Under CERCLA 42 U.S.C. 9607(a)(1) current-owner strict joint-and-several liability, activated for PFOA/PFOS by 40 C.F.R. Part 302 (89 Fed. Reg. 39124, May 8, 2024), alpha = 0.92 of the $4,200,000 per-farm soil remediation liability rests on the receiving landowner ($3,864,000), leaving the utility a retained expected liability of $336,000 and a net defection surplus of +$17,914,000/yr, which strictly dominates the compliant hazardous-disposal baseline ($0.0).",
+      "required": ["eq_id", "disposal_arbitrage_identity", "hazardous_incineration_or_lined_landfill_usd_per_dry_ton", "part_503_biosolids_land_application_usd_per_dry_ton", "annual_utility_sludge_production_dry_tons", "annual_utility_disposal_savings_usd", "cercla_statutory_cite", "cercla_hazardous_designation_cite", "cercla_soil_remediation_liability_per_farm_usd", "landowner_strict_liability_retention_alpha", "farmer_retained_expected_liability_usd", "utility_retained_expected_liability_usd", "utility_net_defection_surplus_usd", "compliant_baseline_net_surplus_usd", "defection_strictly_dominates_verified"],
+      "properties": {
+        "eq_id": {"type": "string", "const": "EQ_02"},
+        "disposal_arbitrage_identity": {"type": "string", "const": "Savings = (C_haz - C_503) * Q"},
+        "hazardous_incineration_or_lined_landfill_usd_per_dry_ton": {"type": "number", "const": 850.0},
+        "part_503_biosolids_land_application_usd_per_dry_ton": {"type": "number", "const": 120.0},
+        "annual_utility_sludge_production_dry_tons": {"type": "number", "const": 25000.0},
+        "annual_utility_disposal_savings_usd": {"type": "number", "const": 18250000.0},
+        "cercla_statutory_cite": {"type": "string", "const": "42 U.S.C. § 9607(a)(1)"},
+        "cercla_hazardous_designation_cite": {"type": "string", "const": "40 C.F.R. Part 302, 89 Fed. Reg. 39124 (May 8, 2024)"},
+        "cercla_soil_remediation_liability_per_farm_usd": {"type": "number", "const": 4200000.0},
+        "landowner_strict_liability_retention_alpha": {"type": "number", "const": 0.92},
+        "farmer_retained_expected_liability_usd": {"type": "number", "const": 3864000.0},
+        "utility_retained_expected_liability_usd": {"type": "number", "const": 336000.0},
+        "utility_net_defection_surplus_usd": {"type": "number", "const": 17914000.0},
+        "compliant_baseline_net_surplus_usd": {"type": "number", "const": 0.0},
+        "defection_strictly_dominates_verified": {"type": "boolean", "const": true}
+      },
+      "additionalProperties": false
+    },
+    "Vector3RegulatoryThresholdGapAndFIFRAPreemption": {
+      "type": "object",
+      "description": "EQ_03: Under 40 C.F.R. 141.61(c), the EPA drinking-water MCL for atrazine (3.0 ppb) sits R_MCL = 3.0 / 0.1 = 30.0x above the 0.1 ppb vertebrate gonadal demasculinization threshold established in Hayes et al., PNAS 99(8):5476-5480 (2002) and PNAS 107(10):4612-4617 (2010) (10.0% complete genetic-male-to-fertile-female conversion), while FIFRA 7 U.S.C. 136v(b) preempts state failure-to-warn tort claims whenever the EPA-registered label is maintained.",
+      "required": ["eq_id", "atrazine_epa_mcl_ppb", "mcl_statutory_cite", "atrazine_hayes_pnas_threshold_ppb", "hayes_2002_pin_cite", "hayes_2010_pin_cite", "mcl_to_biological_threshold_ratio", "hayes_2010_complete_sex_reversal_pct", "fifra_preemption_statute", "fifra_preemption_scope", "regulatory_threshold_gap_verified"],
+      "properties": {
+        "eq_id": {"type": "string", "const": "EQ_03"},
+        "atrazine_epa_mcl_ppb": {"type": "number", "const": 3.0},
+        "mcl_statutory_cite": {"type": "string", "const": "40 C.F.R. § 141.61(c)"},
+        "atrazine_hayes_pnas_threshold_ppb": {"type": "number", "const": 0.1},
+        "hayes_2002_pin_cite": {"type": "string", "const": "Hayes et al., PNAS 99(8):5476-5480 (2002)"},
+        "hayes_2010_pin_cite": {"type": "string", "const": "Hayes et al., PNAS 107(10):4612-4617 (2010)"},
+        "mcl_to_biological_threshold_ratio": {"type": "number", "const": 30.0},
+        "hayes_2010_complete_sex_reversal_pct": {"type": "number", "const": 10.0},
+        "fifra_preemption_statute": {"type": "string", "const": "7 U.S.C. § 136v(b)"},
+        "fifra_preemption_scope": {"type": "string", "const": "State failure-to-warn tort claims are preempted to the extent they impose labeling or packaging requirements in addition to or different from the EPA-registered label (Bates v. Dow Agrosciences LLC, 544 U.S. 431 (2005))."},
+        "regulatory_threshold_gap_verified": {"type": "boolean", "const": true}
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}
