@@ -1,0 +1,313 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:cart_server_black_hole_subpoena_omission.json",
+  "title": "FBI CART Server Black Hole and Bank Subpoena Omission",
+  "description": "Typed measurement schema for four documentary mechanisms in the public EFTA production corpus (1,380,932 rows): H1 the 11 of 62 seized Subject Devices with forensic extraction documents (2,227 docs across 80 inventory rows and 75 unique NYC barcodes in 76 barcode rows); H2 the 51 zero-extraction devices including 100% of enterprise servers, RAID arrays, UniFi surveillance video servers, and the IP-PBX switch; H3 the 6 confirmed-receipt major banks spanning 61 subpoena rider clauses with 0 matched EFTA return documents; H4 the 10,064-page SDNY_GM wire-report desert between EFTA01299827 and EFTA01299830. All monetary values are USD.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "jurisdiction_context",
+    "cfaa_compliance_attestation",
+    "itar_ear_public_domain_attestation",
+    "corpus_baseline",
+    "h1_extracted_consumer_devices",
+    "h2_zero_extraction_enterprise_black_hole",
+    "h3_subpoena_zero_return_banks",
+    "h4_sdny_gm_wire_report_desert"
+  ],
+  "properties": {
+    "schema_version": { "type": "string", "const": "1.0" },
+    "jurisdiction_context": { "$ref": "#/$defs/jurisdiction_context" },
+    "cfaa_compliance_attestation": {
+      "type": "boolean",
+      "const": true,
+      "description": "Zero unauthorized access under 18 U.S.C. 1030: all measured artifacts are public criminal-discovery production documents (EFTA / SDNY_GM) analyzed read-only."
+    },
+    "itar_ear_public_domain_attestation": {
+      "type": "boolean",
+      "const": true,
+      "description": "Public-domain documentary-forensic systems specification; zero export-controlled technical data (22 C.F.R. 120.34; 15 C.F.R. 734.7)."
+    },
+    "corpus_baseline": { "$ref": "#/$defs/corpus_baseline" },
+    "h1_extracted_consumer_devices": { "$ref": "#/$defs/h1_extracted_consumer_devices" },
+    "h2_zero_extraction_enterprise_black_hole": { "$ref": "#/$defs/h2_zero_extraction_enterprise_black_hole" },
+    "h3_subpoena_zero_return_banks": { "$ref": "#/$defs/h3_subpoena_zero_return_banks" },
+    "h4_sdny_gm_wire_report_desert": { "$ref": "#/$defs/h4_sdny_gm_wire_report_desert" }
+  },
+  "$defs": {
+    "jurisdiction_context": {
+      "type": "object",
+      "description": "ISO 3166-1 jurisdiction scoping and primary statutory venue.",
+      "additionalProperties": false,
+      "required": ["iso_3166_1_alpha_2", "statutory_venue"],
+      "properties": {
+        "iso_3166_1_alpha_2": {
+          "type": "string",
+          "pattern": "^[A-Z]{2}$",
+          "description": "ISO 3166-1 alpha-2 jurisdiction code (e.g., US)."
+        },
+        "statutory_venue": {
+          "type": "string",
+          "description": "Primary venue: SDNY criminal discovery (SDNY_GM stamp series), FBI Case 31E-NY-3027571, Federal Rules of Criminal Procedure discovery obligations."
+        }
+      }
+    },
+    "corpus_baseline": {
+      "type": "object",
+      "description": "Production-corpus and source-inventory identifiers.",
+      "additionalProperties": false,
+      "required": [
+        "corpus_total_rows",
+        "cart_inventory_efta_id",
+        "subpoena_tracker_efta_id",
+        "fbi_case_id"
+      ],
+      "properties": {
+        "corpus_total_rows": { "type": "integer", "const": 1380932 },
+        "cart_inventory_efta_id": { "type": "string", "const": "EFTA00018595.xlsx" },
+        "subpoena_tracker_efta_id": { "type": "string", "const": "EFTA00023539.xlsx" },
+        "fbi_case_id": { "type": "string", "const": "31E-NY-3027571" }
+      }
+    },
+    "h1_extracted_consumer_devices": {
+      "type": "object",
+      "description": "H1: the 11 of 62 seized Subject Devices (80 inventory rows, 75 unique NYC barcodes across 76 barcode rows) with forensic extraction documents in EFTA, totaling 2,227 documents.",
+      "additionalProperties": false,
+      "required": [
+        "cart_total_seized_subject_devices",
+        "cart_total_inventory_rows",
+        "cart_total_barcode_rows",
+        "cart_total_nyc_evidence_items",
+        "cart_devices_with_efta_extractions",
+        "cart_devices_with_efta_extractions_ratio",
+        "extracted_docs_nyc024328_1b57_space_grey_imac",
+        "extracted_docs_nyc024329_1b53_1b57_imac_desktop",
+        "extracted_docs_nyc024353_1b54_apple_desktop",
+        "extracted_docs_nyc024354_024355_1b73_1b74_iomega",
+        "extracted_docs_nyc024362_1b80_kitchen_mac_4tb",
+        "extracted_docs_nyc024363_1b81_je_big_laptop",
+        "extracted_docs_nyc024364_1b82_mbp_ssd",
+        "extracted_docs_nyc024365_1b85_silver_imac",
+        "extracted_docs_nyc024371_1b102_silver_imac",
+        "extracted_docs_nyc024383_1b118_silver_imac",
+        "cart_total_extracted_docs_across_11_devices"
+      ],
+      "properties": {
+        "cart_total_seized_subject_devices": { "type": "integer", "const": 62 },
+        "cart_total_inventory_rows": { "type": "integer", "const": 80 },
+        "cart_total_barcode_rows": { "type": "integer", "const": 76 },
+        "cart_total_nyc_evidence_items": { "type": "integer", "const": 75 },
+        "cart_devices_with_efta_extractions": { "type": "integer", "const": 11 },
+        "cart_devices_with_efta_extractions_ratio": {
+          "type": "number",
+          "const": 0.177419,
+          "description": "11 / 62 = 0.177419 (17.7419%)."
+        },
+        "extracted_docs_nyc024328_1b57_space_grey_imac": { "type": "integer", "const": 206 },
+        "extracted_docs_nyc024329_1b53_1b57_imac_desktop": { "type": "integer", "const": 438 },
+        "extracted_docs_nyc024353_1b54_apple_desktop": { "type": "integer", "const": 296 },
+        "extracted_docs_nyc024354_024355_1b73_1b74_iomega": {
+          "type": "integer",
+          "const": 26,
+          "description": "NYC024354.E01 (23) + NYC024355.E01 (3) = 26 unique extracted docs."
+        },
+        "extracted_docs_nyc024362_1b80_kitchen_mac_4tb": { "type": "integer", "const": 389 },
+        "extracted_docs_nyc024363_1b81_je_big_laptop": { "type": "integer", "const": 76 },
+        "extracted_docs_nyc024364_1b82_mbp_ssd": { "type": "integer", "const": 212 },
+        "extracted_docs_nyc024365_1b85_silver_imac": { "type": "integer", "const": 418 },
+        "extracted_docs_nyc024371_1b102_silver_imac": { "type": "integer", "const": 123 },
+        "extracted_docs_nyc024383_1b118_silver_imac": { "type": "integer", "const": 43 },
+        "cart_total_extracted_docs_across_11_devices": {
+          "type": "integer",
+          "const": 2227,
+          "description": "206 + 438 + 296 + 26 + 389 + 76 + 212 + 418 + 123 + 43 = 2,227."
+        }
+      }
+    },
+    "h2_zero_extraction_enterprise_black_hole": {
+      "type": "object",
+      "description": "H2: the 51 of 62 seized Subject Devices with 0 extraction documents, including 100% of enterprise servers, RAID arrays, UniFi surveillance video servers, and the Panasonic KX-TDE100 IP-PBX.",
+      "additionalProperties": false,
+      "required": [
+        "cart_devices_with_zero_efta_extractions",
+        "cart_zero_extraction_device_ratio",
+        "cart_enterprise_servers_and_surveillance_extracted_docs",
+        "zero_extraction_device_groups"
+      ],
+      "properties": {
+        "cart_devices_with_zero_efta_extractions": { "type": "integer", "const": 51 },
+        "cart_zero_extraction_device_ratio": {
+          "type": "number",
+          "const": 0.822581,
+          "description": "51 / 62 = 0.822581 (82.2581%)."
+        },
+        "cart_enterprise_servers_and_surveillance_extracted_docs": {
+          "type": "integer",
+          "const": 0,
+          "description": "Zero extraction documents for any enterprise server, RAID array, surveillance video server, or PBX switch."
+        },
+        "zero_extraction_device_groups": {
+          "type": "array",
+          "minItems": 8,
+          "description": "Representative zero-extraction groups: Dell PowerEdge T310 drives (Subject Device-26), Cube 9000 Siteserver (27), UniFi video/server/CloudKey (49, 50, 61), HP Server + 4 RAID drives (51), Panasonic KX-TDE100 IP-PBX (52), HP ProLiant DL360 G5 s/n MXQ824A1RJ (53), 3 Seagate IDE drives (Corrected 32-34), iPad Pro + iPhone IMEI 357201093322785 (01-02).",
+          "items": { "$ref": "#/$defs/zero_extraction_device_group" }
+        }
+      }
+    },
+    "zero_extraction_device_group": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["subject_device", "item_1b", "nyc_evidence", "description", "extraction_docs"],
+      "properties": {
+        "subject_device": { "type": "string" },
+        "item_1b": { "type": "string", "pattern": "^1B[0-9/]+$" },
+        "nyc_evidence": { "type": "string", "pattern": "^NYC[0-9]" },
+        "description": { "type": "string" },
+        "extraction_docs": { "type": "integer", "const": 0 }
+      }
+    },
+    "h3_subpoena_zero_return_banks": {
+      "type": "object",
+      "description": "H3: 6 major financial institutions spanning 61 subpoena rider clauses with 0 matched EFTA return documents despite confirmed receipt and AUSA delivery logs in the FBI Subpoena Tracker.",
+      "additionalProperties": false,
+      "required": [
+        "query_graph_total_subpoenas",
+        "query_graph_total_returns",
+        "query_graph_total_investigative_gaps",
+        "zero_return_major_banks_count",
+        "zero_return_major_banks_total_clauses",
+        "zero_return_major_banks_matched_efta_docs",
+        "zero_return_banks",
+        "td_ameritrade_acat_inflow_from_southern_financial_usd",
+        "firstbank_pr_operating_wire_min_usd",
+        "firstbank_pr_operating_wire_max_usd",
+        "bofa_subpoena_cataloged_return_pages_sdny_gm_00003638_00003701",
+        "bofa_subpoena_surviving_stamped_pages_efta01265180",
+        "bofa_ml_hertz_wire_efta01510800_usd",
+        "bofa_usd_per_cataloged_page",
+        "bofa_usd_per_surviving_page"
+      ],
+      "properties": {
+        "query_graph_total_subpoenas": { "type": "integer", "const": 257 },
+        "query_graph_total_returns": { "type": "integer", "const": 304 },
+        "query_graph_total_investigative_gaps": { "type": "integer", "const": 779 },
+        "zero_return_major_banks_count": { "type": "integer", "const": 6 },
+        "zero_return_major_banks_total_clauses": {
+          "type": "integer",
+          "const": 61,
+          "description": "7 + 10 + 14 + 20 + 6 + 4 = 61 rider clauses."
+        },
+        "zero_return_major_banks_matched_efta_docs": { "type": "integer", "const": 0 },
+        "zero_return_banks": {
+          "type": "array",
+          "minItems": 6,
+          "maxItems": 6,
+          "description": "FirstBank Puerto Rico (EFTA00010454, 7), TD Ameritrade (EFTA00068090, 10), TD Bank (EFTA00027194, 14), Wells Fargo Bank (EFTA00019966 & EFTA00027184, 20), Fifth Third Bank (EFTA00079159, 6), Capital One (EFTA00079229, 4).",
+          "items": { "$ref": "#/$defs/zero_return_bank" }
+        },
+        "td_ameritrade_acat_inflow_from_southern_financial_usd": {
+          "type": "number",
+          "const": 43952355.75,
+          "description": "Southern Financial LLC securities ACAT transfer to TD Ameritrade A/C 86773020 on 2019-02-28 (EFTA01384309) with zero subpoenaed return docs."
+        },
+        "firstbank_pr_operating_wire_min_usd": {
+          "type": "number",
+          "const": 30000.0,
+          "description": "Minimum operating wire ($30,000) across 80+ TRANSFERRED BY WIRE TO FIRSTBANK PUERTO RICO FAO FINANCIAL TRUST COMPANY INC entries."
+        },
+        "firstbank_pr_operating_wire_max_usd": {
+          "type": "number",
+          "const": 130000.0,
+          "description": "Maximum operating wire ($130,000) across 80+ TRANSFERRED BY WIRE TO FIRSTBANK PUERTO RICO FAO FINANCIAL TRUST COMPANY INC entries (including $75,000 and $100,000 on EFTA01510800)."
+        },
+        "bofa_subpoena_cataloged_return_pages_sdny_gm_00003638_00003701": {
+          "type": "integer",
+          "const": 64,
+          "description": "64 cataloged Bank of America return pages in prosecutorial_query_graph.db (production_id=109, SDNY_GM_00003638..00003701, logged twice across duplicate rows id=3 and id=20 behind the 5-page Rule 16 cover letter EFTA00099135..00099139)."
+        },
+        "bofa_subpoena_surviving_stamped_pages_efta01265180": {
+          "type": "integer",
+          "const": 42,
+          "description": "42 actual surviving stamped Bank of America return pages at EFTA01265180 (SDNY_GM_00003640..00003681)."
+        },
+        "bofa_ml_hertz_wire_efta01510800_usd": {
+          "type": "number",
+          "const": 1308976.0,
+          "description": "$1,308,976.00 (2012-12-24 FED WIRE CREDIT VIA: BANK OF AMERICA, N.A./026009593 B/O: ML HERTZ CO-INVESTOR, LP ... BNF=FINANCIAL TRUST COMPANY INC at EFTA01510800, JPM-SDNY-00036560 / SDNY_GM_00305758)."
+        },
+        "bofa_usd_per_cataloged_page": {
+          "type": "number",
+          "const": 20452.75,
+          "description": "$1,308,976.00 / 64 = $20,452.75 per cataloged page."
+        },
+        "bofa_usd_per_surviving_page": {
+          "type": "number",
+          "const": 31166.1,
+          "description": "$1,308,976.00 / 42 = $31,166.10 per surviving page."
+        }
+      }
+    },
+    "zero_return_bank": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "institution",
+        "subpoena_efta_ids",
+        "rider_clauses",
+        "receipt_confirmed",
+        "ausa_copy_delivered",
+        "matched_efta_return_docs"
+      ],
+      "properties": {
+        "institution": { "type": "string" },
+        "subpoena_efta_ids": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "pattern": "^EFTA[0-9]{8}$" }
+        },
+        "rider_clauses": { "type": "integer", "minimum": 1 },
+        "receipt_confirmed": { "type": "boolean", "const": true },
+        "ausa_copy_delivered": { "type": "boolean", "const": true },
+        "matched_efta_return_docs": { "type": "integer", "const": 0 }
+      }
+    },
+    "h4_sdny_gm_wire_report_desert": {
+      "type": "object",
+      "description": "H4: the contiguous 10,064-page SDNY_GM wire/check/ACH report desert between Deutsche Bank RPTID MBS010D0 (EFTA01299827) and JPMorgan TERRA MAR PROJECT, INC. statements (EFTA01299830).",
+      "additionalProperties": false,
+      "required": [
+        "wire_desert_start_efta",
+        "wire_desert_end_efta",
+        "wire_desert_start_sdny_gm",
+        "wire_desert_end_sdny_gm",
+        "wire_desert_missing_sdny_gm_pages",
+        "wire_desert_missing_efta_underscore_pages"
+      ],
+      "properties": {
+        "wire_desert_start_efta": { "type": "string", "const": "EFTA01299827" },
+        "wire_desert_end_efta": { "type": "string", "const": "EFTA01299830" },
+        "wire_desert_start_sdny_gm": {
+          "type": "integer",
+          "const": 65957,
+          "description": "SDNY_GM_00065957 stamp at the desert start boundary."
+        },
+        "wire_desert_end_sdny_gm": {
+          "type": "integer",
+          "const": 76022,
+          "description": "SDNY_GM_00076022 stamp at the desert end boundary."
+        },
+        "wire_desert_missing_sdny_gm_pages": {
+          "type": "integer",
+          "const": 10064,
+          "description": "76,022 - 65,957 - 1 = 10,064 consecutive missing SDNY_GM pages."
+        },
+        "wire_desert_missing_efta_underscore_pages": {
+          "type": "integer",
+          "const": 10058,
+          "description": "10,058 missing EFTA_ ancestor pages paired with the SDNY_GM discontinuity."
+        }
+      }
+    }
+  }
+}

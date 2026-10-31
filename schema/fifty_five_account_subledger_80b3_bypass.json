@@ -1,0 +1,174 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:fifty_five_account_subledger_80b3_bypass.json",
+  "$comment": "PLAIN-ENGLISH LEGAL NOTICE: This file is an abstract statutory, accounting-identity, and game-theoretic validation checklist (JSON Schema), NOT an accusation, indictment, or evidentiary filing. Every field encodes a published statutory citation, a public court docket, a public settlement record, or a closed-form algebraic invariant.",
+  "title": "55-Account G-SIB Sub-Ledger Partition, Dodd-Frank § 80b-3 Repeal Bypass, and USVI EDC Fee-to-Equity Conversion Schema",
+  "description": "Validates Equation 1 (Pub. L. 111-203 § 403 repeal of Advisers Act § 203(b)(3), 15 U.S.C. § 80b-3(b)(3), effective July 21, 2011: pre-2011 private-adviser client ceiling 14 -> post-2011 unregistered third-party ceiling 0; Southern Trust fee inflow F_in = 158.0 + 25.0 = 183.0 $M; tau_USVI = 0.35 * 1.10 * (1 - 0.90) = 0.0385; V_USVI = 175.9545 $M; V_US = 110.532 $M; tax-arbitrage surplus = 65.4225 $M; Form ADV filings under 17 C.F.R. § 275.202(a)(11)(G)-1 = 0), Equation 2 (55-JPM / 40-DB sub-ledger partition, N_Total = 95; internal book-transfer external Fedwire messages = 0; settlement firewall = 365.0 + 150.0 = 515.0 $M against 1100.0 $M retroactive SAR volume), and Milkovich matrix completeness (2 subject rows x {h0_baseline, h1_synthesis, rule_26_trap, 3 rule_26_production_vectors}).",
+  "type": "object",
+  "required": [
+    "spec_version",
+    "jurisdiction_context",
+    "dodd_frank_80b3_repeal_gate",
+    "usvi_edc_fee_to_equity_conversion",
+    "tier1_subledger_partition",
+    "settlement_firewall",
+    "milkovich_matrix"
+  ],
+  "properties": {
+    "spec_version": {
+      "type": "string",
+      "const": "SPEC-FIFTY-FIVE-ACCOUNT-SUBLEDGER-80B3-BYPASS-v1.0"
+    },
+    "jurisdiction_context": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}$"
+    },
+    "dodd_frank_80b3_repeal_gate": {
+      "type": "object",
+      "required": [
+        "repeal_statute",
+        "repeal_rule_citation",
+        "dodd_frank_80b3_repeal_effective_year",
+        "pre_2011_private_adviser_client_ceiling",
+        "post_2011_unregistered_third_party_client_ceiling",
+        "sec_form_adv_filings_single_shareholder_conversion"
+      ],
+      "properties": {
+        "repeal_statute": {
+          "type": "string",
+          "const": "Pub. L. 111-203 § 403 (repealing Advisers Act § 203(b)(3), 15 U.S.C. § 80b-3(b)(3)), effective July 21, 2011"
+        },
+        "repeal_rule_citation": {
+          "type": "string",
+          "const": "17 C.F.R. § 275.202(a)(11)(G)-1"
+        },
+        "dodd_frank_80b3_repeal_effective_year": { "type": "integer", "const": 2011 },
+        "pre_2011_private_adviser_client_ceiling": { "type": "integer", "const": 14 },
+        "post_2011_unregistered_third_party_client_ceiling": { "type": "integer", "const": 0 },
+        "sec_form_adv_filings_single_shareholder_conversion": { "type": "integer", "const": 0 }
+      },
+      "additionalProperties": false
+    },
+    "usvi_edc_fee_to_equity_conversion": {
+      "type": "object",
+      "required": [
+        "leon_black_southern_trust_fee_usd_millions",
+        "rothschild_southern_trust_fee_usd_millions",
+        "documented_fee_in_southern_trust_usd_millions",
+        "usvi_edc_statutory_tax_reduction_pct",
+        "usvi_corporate_effective_tax_rate_pct",
+        "us_top_federal_ordinary_tax_rate_pct",
+        "post_tax_usvi_retained_capital_usd_millions",
+        "unshielded_us_ordinary_post_tax_usd_millions",
+        "usvi_tax_arbitrage_surplus_usd_millions"
+      ],
+      "properties": {
+        "leon_black_southern_trust_fee_usd_millions": { "type": "number", "const": 158.0 },
+        "rothschild_southern_trust_fee_usd_millions": { "type": "number", "const": 25.0 },
+        "documented_fee_in_southern_trust_usd_millions": { "type": "number", "const": 183.0 },
+        "usvi_edc_statutory_tax_reduction_pct": { "type": "number", "const": 90.0 },
+        "usvi_corporate_effective_tax_rate_pct": {
+          "type": "number",
+          "minimum": 3.849,
+          "maximum": 3.851
+        },
+        "us_top_federal_ordinary_tax_rate_pct": { "type": "number", "const": 39.6 },
+        "post_tax_usvi_retained_capital_usd_millions": {
+          "type": "number",
+          "minimum": 175.954,
+          "maximum": 175.955
+        },
+        "unshielded_us_ordinary_post_tax_usd_millions": {
+          "type": "number",
+          "minimum": 110.531,
+          "maximum": 110.533
+        },
+        "usvi_tax_arbitrage_surplus_usd_millions": {
+          "type": "number",
+          "minimum": 65.422,
+          "maximum": 65.423
+        }
+      },
+      "additionalProperties": false
+    },
+    "tier1_subledger_partition": {
+      "type": "object",
+      "required": [
+        "jpmorgan_bucket_trading_fx_managed",
+        "jpmorgan_bucket_real_estate_aviation_shells",
+        "jpmorgan_bucket_charity_trust_cutouts",
+        "jpmorgan_bucket_nominee_assistant_accounts",
+        "jpmorgan_documented_epstein_accounts",
+        "deutsche_bank_documented_epstein_accounts",
+        "total_tier1_subledger_accounts",
+        "internal_book_transfer_external_fedwire_messages"
+      ],
+      "properties": {
+        "jpmorgan_bucket_trading_fx_managed": { "type": "integer", "const": 18 },
+        "jpmorgan_bucket_real_estate_aviation_shells": { "type": "integer", "const": 15 },
+        "jpmorgan_bucket_charity_trust_cutouts": { "type": "integer", "const": 8 },
+        "jpmorgan_bucket_nominee_assistant_accounts": { "type": "integer", "const": 14 },
+        "jpmorgan_documented_epstein_accounts": { "type": "integer", "const": 55 },
+        "deutsche_bank_documented_epstein_accounts": { "type": "integer", "const": 40 },
+        "total_tier1_subledger_accounts": { "type": "integer", "const": 95 },
+        "internal_book_transfer_external_fedwire_messages": { "type": "integer", "const": 0 }
+      },
+      "additionalProperties": false
+    },
+    "settlement_firewall": {
+      "type": "object",
+      "required": [
+        "jpmorgan_victim_settlement_usd_millions",
+        "jpmorgan_usvi_civil_settlement_usd_millions",
+        "jpmorgan_2023_settlement_total_usd_millions",
+        "deutsche_bank_2020_nydfs_penalty_usd_millions",
+        "aggregate_settlement_firewall_usd_millions",
+        "jpmorgan_retroactive_sar_volume_usd_millions",
+        "settlement_to_sar_coverage_ratio"
+      ],
+      "properties": {
+        "jpmorgan_victim_settlement_usd_millions": { "type": "number", "const": 290.0 },
+        "jpmorgan_usvi_civil_settlement_usd_millions": { "type": "number", "const": 75.0 },
+        "jpmorgan_2023_settlement_total_usd_millions": { "type": "number", "const": 365.0 },
+        "deutsche_bank_2020_nydfs_penalty_usd_millions": { "type": "number", "const": 150.0 },
+        "aggregate_settlement_firewall_usd_millions": { "type": "number", "const": 515.0 },
+        "jpmorgan_retroactive_sar_volume_usd_millions": { "type": "number", "const": 1100.0 },
+        "settlement_to_sar_coverage_ratio": {
+          "type": "number",
+          "minimum": 0.331,
+          "maximum": 0.333
+        }
+      },
+      "additionalProperties": false
+    },
+    "milkovich_matrix": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2,
+      "items": {
+        "type": "object",
+        "required": [
+          "subject",
+          "h0_baseline",
+          "h1_synthesis",
+          "rule_26_trap",
+          "rule_26_production_vectors"
+        ],
+        "properties": {
+          "subject": { "type": "string", "minLength": 1 },
+          "h0_baseline": { "type": "string", "minLength": 1 },
+          "h1_synthesis": { "type": "string", "minLength": 1 },
+          "rule_26_trap": { "type": "string", "minLength": 1 },
+          "rule_26_production_vectors": {
+            "type": "array",
+            "minItems": 3,
+            "maxItems": 3,
+            "items": { "type": "string", "minLength": 1 }
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,130 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:algorithmic_yield_cartel_reo_securitization.json",
+  "title": "Algorithmic Yield Cartel and Single-Family REO Securitization Bundle",
+  "description": "Locked constant and output validation surface for SPEC-ALGORITHMIC-YIELD-CARTEL-AND-SINGLE-FAMILY-REO-SECURITIZATION-v1.0. Covers the hub-and-spoke inelasticity-driven markup identity under 15 U.S.C. Sec. 1, the artificial-vacancy NOI rent-extraction wedge, the single-family REO securitization maintenance-stripping settlement predicate, the Milkovich H0 revealed-preference falsification gate, and the Clayton Act Sec. 4 mandatory treble disgorgement identity.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["canonical_specification", "hub_and_spoke_collusion", "artificial_vacancy_noi", "reo_securitization_maintenance_stripping", "clayton_treble_liquidation", "h0_falsification"],
+  "properties": {
+    "canonical_specification": {
+      "type": "string",
+      "const": "SPEC-ALGORITHMIC-YIELD-CARTEL-AND-SINGLE-FAMILY-REO-SECURITIZATION-v1.0"
+    },
+    "hub_and_spoke_collusion": {
+      "type": "object",
+      "description": "Hub-and-spoke algorithmic collusion block (15 U.S.C. Sec. 1; United States et al. v. RealPage, Inc., M.D.N.C. Case No. 1:24-cv-00710). Identities: mu_cartel = -(v_cartel - v_comp) / eps_shelter; R_cartel = R_comp * (1 + mu_cartel); o = 1 - v.",
+      "additionalProperties": false,
+      "required": ["competitive_market_vacancy_rate", "cartel_artificial_vacancy_rate", "inelastic_shelter_demand_elasticity", "cartel_markup_over_competitive_rent", "competitive_monthly_rent_usd", "cartel_collusive_monthly_rent_usd", "competitive_occupancy_rate", "cartel_occupancy_rate"],
+      "properties": {
+        "competitive_market_vacancy_rate": {
+          "type": "number",
+          "const": 0.025,
+          "description": "Competitive market-clearing vacancy baseline v_comp (fraction, 2.5 percent frictionally empty units)."
+        },
+        "cartel_artificial_vacancy_rate": {
+          "type": "number",
+          "const": 0.065,
+          "description": "Engineered artificial vacancy equilibrium v_cartel (fraction, 6.5 percent; 4.0 percentage points of supply deliberately withheld)."
+        },
+        "inelastic_shelter_demand_elasticity": {
+          "type": "number",
+          "const": -0.25,
+          "description": "Constant-elasticity shelter demand eps_shelter; strictly negative and inelastic (|eps| < 1) because housing is non-deferrable."
+        },
+        "cartel_markup_over_competitive_rent": {
+          "type": "number",
+          "const": 0.16,
+          "description": "Collusive rent markup mu_cartel = -(v_cartel - v_comp) / eps_shelter = -(0.065 - 0.025) / -0.25 = 0.16 (16.0 percent)."
+        },
+        "competitive_monthly_rent_usd": {
+          "type": "number",
+          "const": 2000.0,
+          "description": "Competitive market-clearing monthly rent R_comp per unit (USD)."
+        },
+        "cartel_collusive_monthly_rent_usd": {
+          "type": "number",
+          "const": 2320.0,
+          "description": "Collusive monthly rent R_cartel = R_comp * (1 + mu_cartel) = 2000.0 * 1.16 per unit (USD)."
+        },
+        "competitive_occupancy_rate": {
+          "type": "number",
+          "const": 0.975,
+          "description": "Competitive occupancy o_comp = 1 - v_comp = 1 - 0.025."
+        },
+        "cartel_occupancy_rate": {
+          "type": "number",
+          "const": 0.935,
+          "description": "Cartel occupancy o_cartel = 1 - v_cartel = 1 - 0.065."
+        }
+      }
+    },
+    "artificial_vacancy_noi": {
+      "type": "object",
+      "description": "Artificial-vacancy NOI identity block. Identities: E_comp = R_comp * o_comp; E_cartel = R_cartel * o_cartel; Delta_NOI = E_cartel - E_comp. The cartel rents fewer units yet collects more revenue: the wedge is pure rent extraction against inelastic demand.",
+      "additionalProperties": false,
+      "required": ["competitive_expected_revenue_per_unit_usd", "cartel_expected_revenue_per_unit_usd", "net_collusive_noi_gain_per_unit_monthly_usd"],
+      "properties": {
+        "competitive_expected_revenue_per_unit_usd": {
+          "type": "number",
+          "const": 1950.0,
+          "description": "Competitive expected monthly revenue per door E_comp = 2000.0 * 0.975 (USD)."
+        },
+        "cartel_expected_revenue_per_unit_usd": {
+          "type": "number",
+          "const": 2169.2,
+          "description": "Cartel expected monthly revenue per door E_cartel = 2320.0 * 0.935 (USD)."
+        },
+        "net_collusive_noi_gain_per_unit_monthly_usd": {
+          "type": "number",
+          "const": 219.2,
+          "description": "Pure rent-extraction wedge Delta_NOI = E_cartel - E_comp = 2169.2 - 1950.0 per unit per month (USD); intentionally vacant units also accrue reduced physical wear-and-tear."
+        }
+      }
+    },
+    "reo_securitization_maintenance_stripping": {
+      "type": "object",
+      "description": "Single-family REO securitization and maintenance-stripping block (FTC v. Invitation Homes Inc., N.D. Ga. Case No. 1:24-cv-04252; City of Redondo Beach ex rel. Deckard Technologies v. Invitation Homes Inc., 9th Cir. False Claims Act unpermitted-renovation qui tam). NOI-keyed securitization converts deferred habitability maintenance and junk fees into rated bond yield.",
+      "additionalProperties": false,
+      "required": ["ftc_invitation_homes_settlement_usd_millions"],
+      "properties": {
+        "ftc_invitation_homes_settlement_usd_millions": {
+          "type": "number",
+          "const": 48.0,
+          "description": "FTC junk-fee and maintenance-withholding settlement against the largest single-family REO operator (USD millions; 48,000,000.00 USD)."
+        }
+      }
+    },
+    "clayton_treble_liquidation": {
+      "type": "object",
+      "description": "Clayton Act Sec. 4 (15 U.S.C. Sec. 15) mandatory treble disgorgement block. Identity: L_treble = round(Delta_NOI * 12 * 3, 4) per unit per year, plus cost of suit and reasonable attorney's fee.",
+      "additionalProperties": false,
+      "required": ["clayton_act_treble_disgorgement_per_unit_annual_usd"],
+      "properties": {
+        "clayton_act_treble_disgorgement_per_unit_annual_usd": {
+          "type": "number",
+          "const": 7891.2,
+          "description": "Mandatory treble disgorgement L_treble = round(219.2 * 12 * 3, 4) per unit per year (USD); annual single damages are 219.2 * 12 = 2630.40 USD."
+        }
+      }
+    },
+    "h0_falsification": {
+      "type": "object",
+      "description": "Milkovich H0 versus H1 falsification gate (Milkovich v. Lorain Journal Co., 497 U.S. 1; Partington v. Bugliosi, 56 F.3d 1147). H0 (non-binding decision support) predicts zero deviation cost and convergence of observed vacancy to v_comp; the sustained divergence v_cartel - v_comp = 0.040 across the pooled cohort, enforced by private-data pooling plus auto-accept discipline, falsifies H0 by revealed preference. The identity residual mu*eps + Delta_v closes to zero.",
+      "additionalProperties": false,
+      "required": ["h0_falsified", "identity_residual_zero"],
+      "properties": {
+        "h0_falsified": {
+          "type": "boolean",
+          "const": true,
+          "description": "True when sustained v_cartel > v_comp across all pooled competitors, incompatible with non-binding advisory pricing."
+        },
+        "identity_residual_zero": {
+          "type": "boolean",
+          "const": true,
+          "description": "True when mu_cartel * eps_shelter + (v_cartel - v_comp) == 0, confirming the markup is fully attributable to coordinated withholding."
+        }
+      }
+    }
+  }
+}

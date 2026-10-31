@@ -1,0 +1,220 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:lebenswelt_jargon_two_tier_ai_safety.json",
+  "$comment": "Machine-readable contract for SPEC-LEBENSWELT-JARGON-WRAPPER-AND-TWO-TIER-AI-SAFETY-BIFURCATION-v1.0. Locks the Adorno(1964)->Karp(2002)->26 U.S.C. 6104 jargon wrapper isomorphism, the two-tier AI safety bifurcation identity, the Bronston GP/LP carried-interest proxy, and the Cavicchia blowback / 10 U.S.C. 3453 edge theorem. Zero uncharged-felony labels against living un-indicted principals.",
+  "title": "Lebenswelt Jargon Wrapper & Two-Tier AI Safety Bifurcation",
+  "description": "Verifies Jargon_Mask(Ring_0) -> 1.0 inverted by the 26 U.S.C. 6104 disclosure floor, Asymmetry_Safety = (1 - M_Citizen_Local)(1 - RLHF_Refusal_IL6) = 1.0, M_Hydrazine = 95.238095x under 26 U.S.C. 4958(f), and the 120-person Cavicchia blowback / 10 U.S.C. 3453 / 32 C.F.R. 117.11 conjunction.",
+  "type": "object",
+  "required": ["spec_version", "jurisdiction_context", "public_records_only_attestation", "locked_telemetry", "equation_1_jargon_wrapper_isomorphism", "equation_2_two_tier_asymmetry_identity", "equation_3_bronston_gp_lp_proxy", "equation_4_cavicchia_blowback_and_3453_edge", "pin_cite_registry", "milkovich_disclosed_facts_matrix", "summary_invariants"],
+  "properties": {
+    "spec_version": { "type": "string", "const": "SPEC-LEBENSWELT-JARGON-WRAPPER-AND-TWO-TIER-AI-SAFETY-BIFURCATION-v1.0" },
+    "jurisdiction_context": { "type": "string", "pattern": "^(US|EU|GB)$" },
+    "public_records_only_attestation": { "type": "boolean", "const": true },
+    "locked_telemetry": {
+      "type": "object",
+      "description": "Section 5 Locked Telemetry Table: all 12 constants, exact values, zero drift.",
+      "required": ["karp_dissertation_year", "palantir_dcgs_a_army_contract_ceil_usd_billions", "karp_onshore_dpo_tax_payment_usd_billions", "hydrazine_seed_capital_usd_millions", "hydrazine_reported_aum_usd_billions", "hydrazine_aum_expansion_multiple", "tier_a_public_compute_kyc_flop_exponent", "tier_a_citizen_local_capability_target_ratio", "tier_b_sovereign_il6_refusal_rate_target", "two_tier_asymmetry_divergence_index", "cavicchia_jpmorgan_surveillance_team_headcount", "class_f_founder_voting_cap_percent"],
+      "properties": {
+        "karp_dissertation_year": { "type": "integer", "const": 2002 },
+        "palantir_dcgs_a_army_contract_ceil_usd_billions": { "type": "number", "const": 6.0 },
+        "karp_onshore_dpo_tax_payment_usd_billions": { "type": "number", "const": 1.0 },
+        "hydrazine_seed_capital_usd_millions": { "type": "number", "const": 21.0 },
+        "hydrazine_reported_aum_usd_billions": { "type": "number", "const": 2.0 },
+        "hydrazine_aum_expansion_multiple": { "type": "number", "const": 95.238095 },
+        "tier_a_public_compute_kyc_flop_exponent": { "type": "integer", "const": 26 },
+        "tier_a_citizen_local_capability_target_ratio": { "type": "number", "const": 0.0 },
+        "tier_b_sovereign_il6_refusal_rate_target": { "type": "number", "const": 0.0 },
+        "two_tier_asymmetry_divergence_index": { "type": "number", "const": 1.0 },
+        "cavicchia_jpmorgan_surveillance_team_headcount": { "type": "integer", "const": 120 },
+        "class_f_founder_voting_cap_percent": { "type": "number", "const": 49.999999 }
+      },
+      "additionalProperties": false
+    },
+    "equation_1_jargon_wrapper_isomorphism": {
+      "type": "object",
+      "description": "Jargon_Mask(Ring_0) = P(Moral_Exoteric_Label = 1 | Predatory_Rent_Extraction = 1) -> 1.0, inverted by Omega_Public >= Omega_Floor > 0 under 26 U.S.C. 6104.",
+      "required": ["jargon_mask_limit", "narrative_channel_falsifiable", "omega_floor_positive", "adorno_1964_edge", "karp_2002_lebenswelt_edge", "published_ledger_channels", "adorno_karp_inversion_rule", "rebuttal_tokens"],
+      "properties": {
+        "jargon_mask_limit": { "type": "number", "const": 1.0 },
+        "narrative_channel_falsifiable": { "type": "boolean", "const": false },
+        "omega_floor_positive": { "type": "boolean", "const": true },
+        "adorno_1964_edge": { "type": "array", "minItems": 2, "maxItems": 2, "items": { "type": "string" }, "const": ["Jargon", "Ideological Insulation"] },
+        "karp_2002_lebenswelt_edge": { "type": "array", "minItems": 3, "maxItems": 3, "items": { "type": "string" }, "const": ["Jargon", "Aggression", "Culture"] },
+        "published_ledger_channels": { "type": "array", "minItems": 6, "items": { "type": "string" } },
+        "adorno_karp_inversion_rule": { "type": "string", "const": "Response(l in J) = Query(Form 990 XML)" },
+        "rebuttal_tokens": { "type": "integer", "const": 0 }
+      },
+      "additionalProperties": false
+    },
+    "equation_2_two_tier_asymmetry_identity": {
+      "type": "object",
+      "description": "Asymmetry_Safety = (1 - M_Citizen_Local) * (1 - RLHF_Refusal_IL6) = (1 - 0.0)(1 - 0.0) = 1.0.",
+      "required": ["identity_formula", "m_citizen_local", "rlhf_refusal_il6", "asymmetry_safety", "maximality_condition", "universal_safety_hypothesis_falsified", "tier_a_instruments", "tier_b_instruments", "bifurcation_timeline", "tier_b_withdrawal_events", "ashby_parity_by_suppression"],
+      "properties": {
+        "identity_formula": { "type": "string", "const": "Asymmetry_Safety = (1 - M_Citizen_Local) * (1 - RLHF_Refusal_IL6)" },
+        "m_citizen_local": { "type": "number", "const": 0.0 },
+        "rlhf_refusal_il6": { "type": "number", "const": 0.0 },
+        "asymmetry_safety": { "type": "number", "const": 1.0 },
+        "maximality_condition": { "type": "string", "const": "product = 1.0 iff M_Citizen_Local = 0 AND RLHF_Refusal_IL6 = 0" },
+        "universal_safety_hypothesis_falsified": { "type": "boolean", "const": true },
+        "tier_a_instruments": {
+          "type": "object",
+          "required": ["compute_kyc", "c2pa_watermarking", "rlhf_muzzle"],
+          "properties": {
+            "compute_kyc": { "type": "object", "required": ["flop_exponent", "threshold_flops"], "properties": { "flop_exponent": { "type": "integer", "const": 26 }, "threshold_flops": { "type": "number", "const": 1e26 } }, "additionalProperties": false },
+            "c2pa_watermarking": { "type": "string", "const": "revocable identity layer on citizen-generated content" },
+            "rlhf_muzzle": { "type": "string", "const": "private normative codebase deployed at planetary scale" }
+          },
+          "additionalProperties": false
+        },
+        "tier_b_instruments": {
+          "type": "object",
+          "required": ["il6_jwcc_accreditation", "un_lobotomized_base_weights", "personnel_rotation"],
+          "properties": {
+            "il6_jwcc_accreditation": { "type": "string", "const": "capability grant, not capability restriction" },
+            "un_lobotomized_base_weights": { "type": "number", "const": 0.0 },
+            "personnel_rotation": { "type": "string", "const": "Gen. Paul M. Nakasone (Ret.) appointed to OpenAI Board of Directors (June 13, 2024)" }
+          },
+          "additionalProperties": false
+        },
+        "bifurcation_timeline": {
+          "type": "array",
+          "minItems": 5,
+          "maxItems": 5,
+          "items": { "type": "object", "required": ["date", "event", "tier_direction"], "properties": { "date": { "type": "string" }, "event": { "type": "string" }, "tier_direction": { "type": "string", "enum": ["A->B", "B"] } }, "additionalProperties": false }
+        },
+        "tier_b_withdrawal_events": { "type": "integer", "const": 0 },
+        "ashby_parity_by_suppression": { "type": "boolean", "const": true }
+      },
+      "additionalProperties": false
+    },
+    "equation_3_bronston_gp_lp_proxy": {
+      "type": "object",
+      "description": "E_direct = 0 preserves literal truth under Bronston v. United States, 409 U.S. 352 (1973), while M_Hydrazine = $2,000M / $21M = 95.238095x captures attributed exposure via 26 U.S.C. 4958(f).",
+      "required": ["e_direct", "perjury_liability_probability", "bronston_insulation_scope", "m_hydrazine", "m_hydrazine_formula", "irc_4958_f_3_control_test_threshold", "attribution_channels", "samuelson_revealed_preference_divergence", "rule_26_discovery_documents"],
+      "properties": {
+        "e_direct": { "type": "integer", "const": 0 },
+        "perjury_liability_probability": { "type": "number", "const": 0.0 },
+        "bronston_insulation_scope": { "type": "string", "const": "direct channel only; attributed channel remains open" },
+        "m_hydrazine": { "type": "number", "const": 95.238095 },
+        "m_hydrazine_formula": { "type": "string", "const": "M_Hydrazine = $2,000M / $21M = 95.238095x" },
+        "irc_4958_f_3_control_test_threshold": { "type": "number", "const": 0.35 },
+        "attribution_channels": { "type": "array", "minItems": 3, "maxItems": 3, "items": { "type": "string" } },
+        "samuelson_revealed_preference_divergence": { "type": "number", "exclusiveMinimum": 0 },
+        "rule_26_discovery_documents": { "type": "array", "minItems": 4, "items": { "type": "string" } }
+      },
+      "additionalProperties": false
+    },
+    "equation_4_cavicchia_blowback_and_3453_edge": {
+      "type": "object",
+      "description": "Absent cryptographic natural-person query provenance the panopticon turns on its own principals; concurrently 10 U.S.C. 3453 yields Edge_3453 > 0 and 32 C.F.R. 117.11 bounds Class F at 49.999999%.",
+      "required": ["blowback_limb", "edge_3453_limb", "foci_limb", "conjunction_limbs", "conjunction_all_required"],
+      "properties": {
+        "blowback_limb": {
+          "type": "object",
+          "required": ["cavicchia_unit_headcount", "surveillance_window_start", "surveillance_window_end", "query_provenance_present", "blowback_probability", "nuremberg_principle_iv_dual", "provenance_specification"],
+          "properties": {
+            "cavicchia_unit_headcount": { "type": "integer", "const": 120 },
+            "surveillance_window_start": { "type": "integer", "const": 2009 },
+            "surveillance_window_end": { "type": "integer", "const": 2011 },
+            "query_provenance_present": { "type": "boolean", "const": false },
+            "blowback_probability": { "type": "number", "const": 1.0 },
+            "nuremberg_principle_iv_dual": { "type": "string", "const": "an unattributable order cannot be audited, and an unauditable order cannot be refused" },
+            "provenance_specification": { "type": "string", "const": "QueryProvenance(q) = Sign_NaturalPerson(q) for all q in Ontology(E)" }
+          },
+          "additionalProperties": false
+        },
+        "edge_3453_limb": {
+          "type": "object",
+          "required": ["statute", "former_codification", "court_of_federal_claims", "federal_circuit_affirmance", "commercial_item", "judicially_enforceable", "edge_3453", "dcgs_a_ceiling_usd_billions", "lobbying_only_displacement_feasible"],
+          "properties": {
+            "statute": { "type": "string", "const": "10 U.S.C. § 3453" },
+            "former_codification": { "type": "string", "const": "10 U.S.C. § 2377" },
+            "court_of_federal_claims": { "type": "string", "const": "129 Fed. Cl. 218 (2016)" },
+            "federal_circuit_affirmance": { "type": "string", "const": "904 F.3d 983 (Fed. Cir. 2018)" },
+            "commercial_item": { "type": "boolean", "const": true },
+            "judicially_enforceable": { "type": "boolean", "const": true },
+            "edge_3453": { "type": "integer", "minimum": 1 },
+            "dcgs_a_ceiling_usd_billions": { "type": "number", "const": 6.0 },
+            "lobbying_only_displacement_feasible": { "type": "boolean", "const": false }
+          },
+          "additionalProperties": false
+        },
+        "foci_limb": {
+          "type": "object",
+          "required": ["foci_mitigation_regulation", "kmp_reporting_regulation", "class_f_cap_percent", "sub_majority", "sub_majority_margin_percent", "voting_trust_reaches_offshore_lp_capital"],
+          "properties": {
+            "foci_mitigation_regulation": { "type": "string", "const": "32 C.F.R. § 117.11" },
+            "kmp_reporting_regulation": { "type": "string", "const": "32 C.F.R. §§ 117.8, 117.9" },
+            "class_f_cap_percent": { "type": "number", "const": 49.999999 },
+            "sub_majority": { "type": "boolean", "const": true },
+            "sub_majority_margin_percent": { "type": "number", "const": 1e-06 },
+            "voting_trust_reaches_offshore_lp_capital": { "type": "boolean", "const": false }
+          },
+          "additionalProperties": false
+        },
+        "conjunction_limbs": { "type": "integer", "const": 3 },
+        "conjunction_all_required": { "type": "boolean", "const": true }
+      },
+      "additionalProperties": false
+    },
+    "pin_cite_registry": {
+      "type": "object",
+      "description": "Statutory, reporter, and primary-source pin-cites. Zero-speculation evidentiary attribution.",
+      "required": ["commercial_item_preference_statute", "court_of_federal_claims", "federal_circuit_affirmance", "excess_benefit_attribution", "public_inspection", "exemption", "foci_mitigation", "kmp_reporting", "literal_truth_insulation", "perjury_statute", "milkovich", "partington", "adorno", "karp_dissertation", "karp_zamiska", "cavicchia_reporting", "nakasone_board_installation", "anthropic_palantir_il6", "samuelson", "ashby"],
+      "properties": {
+        "commercial_item_preference_statute": { "type": "string", "const": "10 U.S.C. § 3453" },
+        "court_of_federal_claims": { "type": "string", "const": "129 Fed. Cl. 218 (2016)" },
+        "federal_circuit_affirmance": { "type": "string", "const": "904 F.3d 983 (Fed. Cir. 2018)" },
+        "excess_benefit_attribution": { "type": "string", "const": "26 U.S.C. § 4958(f)" },
+        "public_inspection": { "type": "string", "const": "26 U.S.C. § 6104" },
+        "exemption": { "type": "string", "const": "26 U.S.C. § 501(c)(3)" },
+        "foci_mitigation": { "type": "string", "const": "32 C.F.R. § 117.11" },
+        "kmp_reporting": { "type": "string", "const": "32 C.F.R. §§ 117.8, 117.9" },
+        "literal_truth_insulation": { "type": "string", "const": "Bronston v. United States, 409 U.S. 352 (1973)" },
+        "perjury_statute": { "type": "string", "const": "18 U.S.C. § 1621" },
+        "milkovich": { "type": "string", "const": "Milkovich v. Lorain Journal Co., 497 U.S. 1 (1990)" },
+        "partington": { "type": "string", "const": "Partington v. Bugliosi, 56 F.3d 1147 (9th Cir. 1995)" },
+        "adorno": { "type": "string", "const": "Theodor W. Adorno, Jargon der Eigentlichkeit (1964)" },
+        "karp_dissertation": { "type": "string", "pattern": "Goethe University Frankfurt PhD Dissertation, 2002" },
+        "karp_zamiska": { "type": "string", "const": "Alexander C. Karp & Nicholas W. Zamiska, The Technological Republic (Crown, 2025)" },
+        "cavicchia_reporting": { "type": "string", "pattern": "Apr\\. 19, 2018" },
+        "nakasone_board_installation": { "type": "string", "pattern": "June 13, 2024" },
+        "anthropic_palantir_il6": { "type": "string", "pattern": "Nov\\. 7, 2024" },
+        "samuelson": { "type": "string", "const": "Samuelson (1938)" },
+        "ashby": { "type": "string", "const": "Ashby (1956)" }
+      },
+      "additionalProperties": false
+    },
+    "milkovich_disclosed_facts_matrix": {
+      "type": "object",
+      "description": "Section 6 Milkovich Disclosed-Facts Matrix: H_0 -> H_1 + Rule 26 discovery trap for both living un-indicted principals.",
+      "required": ["rows", "zero_uncharged_felony_labels", "zero_numerical_drift", "authorities"],
+      "properties": {
+        "rows": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "items": { "type": "object", "required": ["subject", "h0_baseline", "h1_synthesis", "rule_26_trap", "falsification_condition"], "properties": { "subject": { "type": "string", "minLength": 1 }, "h0_baseline": { "type": "string", "minLength": 1 }, "h1_synthesis": { "type": "string", "minLength": 1 }, "rule_26_trap": { "type": "string", "minLength": 1 }, "falsification_condition": { "type": "string", "minLength": 1 } }, "additionalProperties": false }
+        },
+        "zero_uncharged_felony_labels": { "type": "boolean", "const": true },
+        "prohibited_labels": { "type": "array", "minItems": 5, "maxItems": 5, "items": { "type": "string" }, "const": ["money laundering", "kickback", "extortion", "bribe", "fraud"] },
+        "zero_numerical_drift": { "type": "boolean", "const": true },
+        "authorities": { "type": "array", "minItems": 2, "maxItems": 2, "items": { "type": "string" } }
+      },
+      "additionalProperties": false
+    },
+    "summary_invariants": {
+      "type": "object",
+      "description": "Section 7 Summary of Verified Invariants I-1 through I-8.",
+      "required": ["count", "all_closed", "identifiers"],
+      "properties": {
+        "count": { "type": "integer", "const": 8 },
+        "all_closed": { "type": "boolean", "const": true },
+        "identifiers": { "type": "array", "minItems": 8, "maxItems": 8, "items": { "type": "string" }, "const": ["I-1_jargon_wrapper_isomorphism", "I-2_two_tier_asymmetry_identity", "I-3_bronston_gp_lp_proxy", "I-4_cavicchia_blowback", "I-5_10_usc_3453_edge", "I-6_foci_voting_trust_insulation", "I-7_ashby_inversion", "I-8_samuelson_revealed_preference"] }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

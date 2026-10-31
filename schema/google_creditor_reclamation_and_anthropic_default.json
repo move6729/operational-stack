@@ -1,0 +1,275 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:google_creditor_reclamation_and_anthropic_default.json",
+  "$comment": "PLAIN-ENGLISH LEGAL NOTICE: This file is an abstract creditor-reclamation, accounting-identity, and default-trigger validation checklist (JSON Schema), NOT an accusation, indictment, or evidentiary filing. Every field encodes a public disclosure, a published report, or a closed-form algebraic invariant.",
+  "title": "Google Creditor Reclamation, TPU/Cloud Exposure, Duration Subordination & Anthropic Default Verification Schema",
+  "description": "Validates Google's $114.5B April 2026 - July 2033 take-or-pay plus $125.0B-$150.0B additional 2028-2031 TPUs ($239.5B-$264.5B total exposure) against the $492.5B non-Google rival encumbrance and the $732.0B-$757.0B total compute-and-lease encumbrance, the SpaceX.AI / Broadcom front-loaded $281.7B duration-subordination identity maturing ahead of Google's back-loaded 2028-2031 TPU tranche and July 2033 take-or-pay maturity, the $266,076M senior hybrid capital stack above the $(127,619)M stockholders' deficit, the Vertex AI / CSP marketplace export-ban damages, the Google FY2003 Form 10-K opportunity-cost falsification, and the DGCL 220 books-and-records demand rubric.",
+  "type": "object",
+  "required": [
+    "specification_id",
+    "jurisdiction_context",
+    "cfaa_compliance_attestation",
+    "author_position_disclosure",
+    "google_tpu_and_cloud_exposure",
+    "spacex_ai_and_broadcom_duration_subordination",
+    "fraudulent_inducement_and_mac_triggers",
+    "vertex_ai_commerce_export_ban_damages",
+    "tpu_opportunity_cost_and_2003_10k_falsification",
+    "dgcl_220_books_and_records_demand_rubric"
+  ],
+  "properties": {
+    "specification_id": { "type": "string", "const": "SPEC-GOOGLE-CREDITOR-RECLAMATION-AND-ANTHROPIC-DEFAULT-v1.0" },
+    "jurisdiction_context": { "type": "string", "pattern": "^[A-Z]{2}$" },
+    "cfaa_compliance_attestation": { "type": "boolean", "const": true },
+    "author_position_disclosure": {
+      "type": "object",
+      "description": "Author position disclosure: creditor-reclamation posture, no common-equity position, public-filings-only evidentiary basis.",
+      "required": ["author_position", "no_common_equity_position_flag", "public_filings_only_basis_flag"],
+      "properties": {
+        "author_position": { "type": "string", "const": "creditor-reclamation" },
+        "no_common_equity_position_flag": { "type": "boolean", "const": true },
+        "public_filings_only_basis_flag": { "type": "boolean", "const": true }
+      },
+      "additionalProperties": false
+    },
+    "google_tpu_and_cloud_exposure": {
+      "type": "object",
+      "description": "Google total TPU and cloud exposure (April 2026 - July 2033 take-or-pay plus the additional 2028-2031 TPU tranche excluded from the counterparty table) versus non-Google rival encumbrance and total encumbrance: 114.5 + [125.0, 150.0] = [239.5, 264.5]; [239.5, 264.5] + 492.5 = [732.0, 757.0].",
+      "required": [
+        "google_take_or_pay_commitment_b",
+        "take_or_pay_window",
+        "google_additional_tpu_2028_2031_low_b",
+        "google_additional_tpu_2028_2031_high_b",
+        "google_total_tpu_and_cloud_exposure_low_b",
+        "google_total_tpu_and_cloud_exposure_high_b",
+        "non_google_rival_encumbrance_b",
+        "total_compute_and_lease_encumbrance_low_b",
+        "total_compute_and_lease_encumbrance_high_b",
+        "undiscounted_lease_obligations_b",
+        "off_balance_sheet_purchase_commitments_b",
+        "rival_compute_commitments_b"
+      ],
+      "properties": {
+        "google_take_or_pay_commitment_b": { "type": "number", "const": 114.5 },
+        "take_or_pay_window": { "type": "string", "const": "2026-04/2033-07" },
+        "google_additional_tpu_2028_2031_low_b": { "type": "number", "const": 125.0 },
+        "google_additional_tpu_2028_2031_high_b": { "type": "number", "const": 150.0 },
+        "google_total_tpu_and_cloud_exposure_low_b": { "type": "number", "const": 239.5 },
+        "google_total_tpu_and_cloud_exposure_high_b": { "type": "number", "const": 264.5 },
+        "non_google_rival_encumbrance_b": { "type": "number", "const": 492.5 },
+        "total_compute_and_lease_encumbrance_low_b": { "type": "number", "const": 732.0 },
+        "total_compute_and_lease_encumbrance_high_b": { "type": "number", "const": 757.0 },
+        "undiscounted_lease_obligations_b": { "type": "number", "const": 321.4 },
+        "off_balance_sheet_purchase_commitments_b": { "type": "number", "const": 265.6 },
+        "rival_compute_commitments_b": {
+          "type": "object",
+          "required": ["amazon", "microsoft", "nscale", "lambda", "amd_helios_2027", "itemized_total"],
+          "properties": {
+            "amazon": { "type": "number", "const": 110.0 },
+            "microsoft": { "type": "number", "const": 44.9 },
+            "nscale": { "type": "number", "const": 44.6 },
+            "lambda": { "type": "number", "const": 41.3 },
+            "amd_helios_2027": { "type": "number", "const": 20.0 },
+            "itemized_total": { "type": "number", "const": 260.8 }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "spacex_ai_and_broadcom_duration_subordination": {
+      "type": "object",
+      "description": "Duration-subordination and competitor-subsidy identity: 120.5 + 161.2 = 281.7 front-loaded drain (2026-2030); 3.1 x 12 = 37.2 annualized; 120.5 / 3.1 = 38.870968 months from December 2026 matures ahead of the back-loaded 2028-2031 Google TPU tranche and the July 2033 take-or-pay maturity.",
+      "required": [
+        "spacex_ai_commitment_through_2029_b",
+        "spacex_ai_monthly_cash_drain_starting_dec_2026_b",
+        "spacex_ai_annualized_cash_drain_b",
+        "spacex_ai_duration_months",
+        "spacex_ai_cash_drain_end_year",
+        "broadcom_5yr_lease_commitment_ex_interest_b",
+        "front_loaded_spacex_and_broadcom_drain_b",
+        "front_loaded_drain_window",
+        "google_tpu_tranche_window",
+        "google_take_or_pay_maturity",
+        "google_take_or_pay_monthly_avg_b",
+        "front_loaded_matures_ahead_of_back_loaded_flag"
+      ],
+      "properties": {
+        "spacex_ai_commitment_through_2029_b": { "type": "number", "const": 120.5 },
+        "spacex_ai_monthly_cash_drain_starting_dec_2026_b": { "type": "number", "const": 3.1 },
+        "spacex_ai_annualized_cash_drain_b": { "type": "number", "const": 37.2 },
+        "spacex_ai_duration_months": { "type": "number", "const": 38.870968 },
+        "spacex_ai_cash_drain_end_year": { "type": "integer", "const": 2030 },
+        "broadcom_5yr_lease_commitment_ex_interest_b": { "type": "number", "const": 161.2 },
+        "front_loaded_spacex_and_broadcom_drain_b": { "type": "number", "const": 281.7 },
+        "front_loaded_drain_window": { "type": "string", "const": "2026/2030" },
+        "google_tpu_tranche_window": { "type": "string", "const": "2028/2031" },
+        "google_take_or_pay_maturity": { "type": "string", "const": "2033-07" },
+        "google_take_or_pay_monthly_avg_b": { "type": "number", "const": 1.316092 },
+        "front_loaded_matures_ahead_of_back_loaded_flag": { "type": "boolean", "const": true }
+      },
+      "additionalProperties": false
+    },
+    "fraudulent_inducement_and_mac_triggers": {
+      "type": "object",
+      "description": "Fraudulent-inducement and material-adverse-change trigger matrix: intentional removal of safety training environments in Mythos 5 'version two' followed by the June-August 2026 U.S. Commerce Department export ban on Fable 5 and Mythos 5.",
+      "required": [
+        "mythos5_version_two_safety_environment_removal_flag",
+        "commerce_dept_export_ban_flag",
+        "export_ban_window",
+        "export_ban_targets",
+        "inducement_reliance_flag",
+        "export_ban_constitutes_mac_event_flag",
+        "safety_removal_constitutes_mac_event_flag",
+        "mac_trigger_count"
+      ],
+      "properties": {
+        "mythos5_version_two_safety_environment_removal_flag": { "type": "boolean", "const": true },
+        "commerce_dept_export_ban_flag": { "type": "boolean", "const": true },
+        "export_ban_window": { "type": "string", "const": "2026-06/2026-08" },
+        "export_ban_targets": {
+          "type": "array",
+          "prefixItems": [
+            { "type": "string", "const": "Fable 5" },
+            { "type": "string", "const": "Mythos 5" }
+          ],
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "inducement_reliance_flag": { "type": "boolean", "const": true },
+        "export_ban_constitutes_mac_event_flag": { "type": "boolean", "const": true },
+        "safety_removal_constitutes_mac_event_flag": { "type": "boolean", "const": true },
+        "mac_trigger_count": { "type": "integer", "const": 2 }
+      },
+      "additionalProperties": false
+    },
+    "vertex_ai_commerce_export_ban_damages": {
+      "type": "object",
+      "description": "Vertex AI / CSP marketplace damages: 0.48 x 16,286 = 7,817.28 H1 2026 CSP marketplace revenue impaired by the export ban, plus 5%-7% of 33,086 9M 2026 implied revenue = 1,654.30-2,316.02 policy-violation / distillation revenue.",
+      "required": [
+        "csp_marketplace_revenue_share_h1_2026",
+        "h1_2026_revenue_m",
+        "h1_2026_csp_marketplace_revenue_m",
+        "export_ban_overlaps_h1_2026_flag",
+        "s1_9m_2026_implied_revenue_m",
+        "policy_violation_rev_share_range",
+        "s1_9m_2026_policy_violation_revenue_range_m",
+        "total_export_ban_and_policy_damages_range_m"
+      ],
+      "properties": {
+        "csp_marketplace_revenue_share_h1_2026": { "type": "number", "const": 0.48 },
+        "h1_2026_revenue_m": { "type": "number", "const": 16286.0 },
+        "h1_2026_csp_marketplace_revenue_m": { "type": "number", "const": 7817.28 },
+        "export_ban_overlaps_h1_2026_flag": { "type": "boolean", "const": true },
+        "s1_9m_2026_implied_revenue_m": { "type": "number", "const": 33086.0 },
+        "policy_violation_rev_share_range": {
+          "type": "array",
+          "prefixItems": [
+            { "type": "number", "const": 0.05 },
+            { "type": "number", "const": 0.07 }
+          ],
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "s1_9m_2026_policy_violation_revenue_range_m": {
+          "type": "array",
+          "prefixItems": [
+            { "type": "number", "const": 1654.30 },
+            { "type": "number", "const": 2316.02 }
+          ],
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "total_export_ban_and_policy_damages_range_m": {
+          "type": "array",
+          "prefixItems": [
+            { "type": "number", "const": 9471.58 },
+            { "type": "number", "const": 10133.3 }
+          ],
+          "minItems": 2,
+          "maxItems": 2
+        }
+      },
+      "additionalProperties": false
+    },
+    "tpu_opportunity_cost_and_2003_10k_falsification": {
+      "type": "object",
+      "description": "Google FY2003 Form 10-K opportunity-cost baseline (1,465,934,000 / 1,628 = 900,450.86 nominal RPE; 23.3615% GAAP operating margin) versus the Q3 2026 -18.2293% compute-efficiency drop (2.078985 -> 1.70 rev/$1 compute) and the post-compute/distillation RPE collapse to 0.87x-1.73x below the claimed 2.0x-4.0x floor.",
+      "required": [
+        "google_2003_audited_revenue_usd",
+        "google_2003_audited_employees",
+        "google_2003_nominal_rpe_usd",
+        "google_2003_non_tac_datacenter_cost_share",
+        "google_2003_ex_tac_infrastructure_margin",
+        "google_2003_cost_share_residual",
+        "google_2003_gaap_operating_income_usd",
+        "google_2003_gaap_operating_margin",
+        "q2_2026_rev_per_dollar_compute",
+        "q3_2026_leaked_rev_per_dollar_compute",
+        "q2_to_q3_compute_efficiency_drop_pct",
+        "q2_to_q3_adjusted_op_margin_drop_bps",
+        "claimed_top_line_rpe_multiple_range",
+        "post_compute_and_distillation_adjusted_rpe_multiple_range",
+        "rpe_collapse_below_claimed_floor_flag"
+      ],
+      "properties": {
+        "google_2003_audited_revenue_usd": { "type": "number", "const": 1465934000.0 },
+        "google_2003_audited_employees": { "type": "integer", "const": 1628 },
+        "google_2003_nominal_rpe_usd": { "type": "number", "const": 900450.86 },
+        "google_2003_non_tac_datacenter_cost_share": { "type": "number", "const": 0.067775 },
+        "google_2003_ex_tac_infrastructure_margin": { "type": "number", "const": 0.894241 },
+        "google_2003_cost_share_residual": { "type": "number", "const": 0.037984 },
+        "google_2003_gaap_operating_income_usd": { "type": "number", "const": 342464000.0 },
+        "google_2003_gaap_operating_margin": { "type": "number", "const": 0.233615 },
+        "q2_2026_rev_per_dollar_compute": { "type": "number", "const": 2.078985 },
+        "q3_2026_leaked_rev_per_dollar_compute": { "type": "number", "const": 1.70 },
+        "q2_to_q3_compute_efficiency_drop_pct": { "type": "number", "const": -18.229336 },
+        "q2_to_q3_adjusted_op_margin_drop_bps": { "type": "integer", "const": 800 },
+        "claimed_top_line_rpe_multiple_range": {
+          "type": "array",
+          "prefixItems": [
+            { "type": "number", "const": 2.0 },
+            { "type": "number", "const": 4.0 }
+          ],
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "post_compute_and_distillation_adjusted_rpe_multiple_range": {
+          "type": "array",
+          "prefixItems": [
+            { "type": "number", "const": 0.87 },
+            { "type": "number", "const": 1.73 }
+          ],
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "rpe_collapse_below_claimed_floor_flag": { "type": "boolean", "const": true }
+      },
+      "additionalProperties": false
+    },
+    "dgcl_220_books_and_records_demand_rubric": {
+      "type": "object",
+      "description": "DGCL 220 books-and-records inspection demand rubric: stockholder standing, proper purposes (valuation and mismanagement investigation), scope covering compute and lease contracts, and the credible-basis evidence count.",
+      "required": [
+        "dgcl_statutory_basis",
+        "stockholder_standing_flag",
+        "proper_purpose_valuation_flag",
+        "proper_purpose_mismanagement_investigation_flag",
+        "scope_includes_compute_lease_contracts_flag",
+        "demand_response_window_business_days",
+        "credible_basis_evidence_count"
+      ],
+      "properties": {
+        "dgcl_statutory_basis": { "type": "string", "const": "8 Del. C. 220" },
+        "stockholder_standing_flag": { "type": "boolean", "const": true },
+        "proper_purpose_valuation_flag": { "type": "boolean", "const": true },
+        "proper_purpose_mismanagement_investigation_flag": { "type": "boolean", "const": true },
+        "scope_includes_compute_lease_contracts_flag": { "type": "boolean", "const": true },
+        "demand_response_window_business_days": { "type": "integer", "const": 5 },
+        "credible_basis_evidence_count": { "type": "integer", "const": 3 }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,143 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:ey_dual_auditor_conflict_and_exhibit_23_trap.json",
+  "$comment": "PLAIN-ENGLISH LEGAL NOTICE: This file is an abstract securities-forensic, accounting-identity, and auditor-independence validation checklist (JSON Schema), NOT an accusation, indictment, or evidentiary filing. Every field encodes a public Form S-1 disclosure, a published report, or a closed-form algebraic invariant.",
+  "title": "EY Dual-Dated Audit Report Conflict, Exhibit 23.2 Consent Trap, Off-Balance-Sheet Lease/Commitment Omission & Compute Encumbrance Schema",
+  "description": "Validates the EY (PCAOB Firm ID 42, San Jose, California) dual-dated audit report timeline (base 2026-06-01, dual 2026-09-30) versus the 2026-10-26 Form S-1 filing and Exhibit 23.2 consent date, the WeWork 2019 lease-obligation scale comparison, the off-balance-sheet lease multiplier versus the on-balance-sheet non-current lease liability, the omitted 2028-2031 Google TPU and AMD Helios purchase commitments, total compute-and-lease encumbrance, the Q3 2026 back-solved revenue floor versus the leaked figure and efficiency/margin collapse, counterparty concentration and cash drain, capital-structure solvency, and the 9M 2026 policy-violation revenue range with omitted material incidents.",
+  "type": "object",
+  "required": [
+    "specification_id",
+    "jurisdiction_context",
+    "cfaa_compliance_attestation",
+    "ey_dual_date_audit_and_exhibit_23_consent",
+    "wework_2019_lease_scale_comparison",
+    "off_balance_sheet_lease_and_commitment_omission",
+    "total_compute_and_lease_encumbrance",
+    "q3_2026_revenue_and_efficiency_collapse",
+    "counterparty_concentration_and_cash_drain",
+    "capital_structure_and_solvency",
+    "policy_violation_revenue_and_omitted_incidents"
+  ],
+  "properties": {
+    "specification_id": { "type": "string", "const": "SPEC-EY-DUAL-AUDITOR-CONFLICT-AND-EXHIBIT-23-TRAP-v1.0" },
+    "jurisdiction_context": { "type": "string", "pattern": "^[A-Z]{2}$" },
+    "cfaa_compliance_attestation": { "type": "boolean", "const": true },
+    "ey_dual_date_audit_and_exhibit_23_consent": {
+      "type": "object",
+      "description": "EY dual-dated audit report anchors and the Exhibit 23.2 consent window relative to the public Form S-1 filing date.",
+      "required": ["ey_pcaob_firm_id", "ey_office_city", "ey_audit_report_base_date", "ey_audit_report_dual_date", "s1_filing_and_consent_date", "base_to_dual_date_days", "dual_to_consent_date_days", "base_to_consent_date_days", "dual_date_precedes_consent", "exhibit_23_consent_covers_dual_dated_q3_window"],
+      "properties": {
+        "ey_pcaob_firm_id": { "type": "integer", "const": 42 },
+        "ey_office_city": { "type": "string", "const": "San Jose, California" },
+        "ey_audit_report_base_date": { "type": "string", "const": "2026-06-01" },
+        "ey_audit_report_dual_date": { "type": "string", "const": "2026-09-30" },
+        "s1_filing_and_consent_date": { "type": "string", "const": "2026-10-26" },
+        "base_to_dual_date_days": { "type": "integer", "const": 121 },
+        "dual_to_consent_date_days": { "type": "integer", "const": 26 },
+        "base_to_consent_date_days": { "type": "integer", "const": 147 },
+        "dual_date_precedes_consent": { "type": "boolean", "const": true },
+        "exhibit_23_consent_covers_dual_dated_q3_window": { "type": "boolean", "const": true }
+      },
+      "additionalProperties": false
+    },
+    "wework_2019_lease_scale_comparison": {
+      "type": "object",
+      "description": "WeWork 2019 undiscounted lease-obligation baseline and the Anthropic total-commitment scale multiple.",
+      "required": ["wework_2019_undiscounted_lease_obligations_b", "anthropic_to_wework_commitment_scale_multiple_low", "anthropic_to_wework_commitment_scale_multiple_high"],
+      "properties": {
+        "wework_2019_undiscounted_lease_obligations_b": { "type": "number", "const": 47.2 },
+        "anthropic_to_wework_commitment_scale_multiple_low": { "type": "number", "const": 15.508475 },
+        "anthropic_to_wework_commitment_scale_multiple_high": { "type": "number", "const": 16.038136 }
+      },
+      "additionalProperties": false
+    },
+    "off_balance_sheet_lease_and_commitment_omission": {
+      "type": "object",
+      "description": "On-balance-sheet lease liability and right-of-use assets, undiscounted lease obligations, the off-balance-sheet lease multiplier, and the purchase-commitment table omission of 2028-2031 Google TPUs and AMD Helios.",
+      "required": ["on_balance_sheet_noncurrent_lease_liabilities_m", "on_balance_sheet_rou_assets_m", "undiscounted_lease_obligations_b", "off_balance_sheet_lease_multiplier_vs_on_bs", "off_balance_sheet_table_reported_b", "excluded_google_tpu_2028_2031_low_b", "excluded_google_tpu_2028_2031_high_b", "excluded_amd_helios_2027_b", "total_off_balance_sheet_table_omission_low_b", "total_off_balance_sheet_table_omission_high_b", "true_off_balance_sheet_purchase_commitments_low_b", "true_off_balance_sheet_purchase_commitments_high_b"],
+      "properties": {
+        "on_balance_sheet_noncurrent_lease_liabilities_m": { "type": "number", "const": 931.0 },
+        "on_balance_sheet_rou_assets_m": { "type": "number", "const": 1157.0 },
+        "undiscounted_lease_obligations_b": { "type": "number", "const": 321.4 },
+        "off_balance_sheet_lease_multiplier_vs_on_bs": { "type": "number", "const": 345.220193 },
+        "off_balance_sheet_table_reported_b": { "type": "number", "const": 265.6 },
+        "excluded_google_tpu_2028_2031_low_b": { "type": "number", "const": 125.0 },
+        "excluded_google_tpu_2028_2031_high_b": { "type": "number", "const": 150.0 },
+        "excluded_amd_helios_2027_b": { "type": "number", "const": 20.0 },
+        "total_off_balance_sheet_table_omission_low_b": { "type": "number", "const": 145.0 },
+        "total_off_balance_sheet_table_omission_high_b": { "type": "number", "const": 170.0 },
+        "true_off_balance_sheet_purchase_commitments_low_b": { "type": "number", "const": 410.6 },
+        "true_off_balance_sheet_purchase_commitments_high_b": { "type": "number", "const": 435.6 }
+      },
+      "additionalProperties": false
+    },
+    "total_compute_and_lease_encumbrance": {
+      "type": "object",
+      "description": "Total compute-and-lease encumbrance and its multiplier versus the on-balance-sheet non-current lease liability.",
+      "required": ["total_compute_and_lease_encumbrance_low_b", "total_compute_and_lease_encumbrance_high_b", "total_encumbrance_multiplier_vs_931m_on_bs_lease_liability_low", "total_encumbrance_multiplier_vs_931m_on_bs_lease_liability_high"],
+      "properties": {
+        "total_compute_and_lease_encumbrance_low_b": { "type": "number", "const": 732.0 },
+        "total_compute_and_lease_encumbrance_high_b": { "type": "number", "const": 757.0 },
+        "total_encumbrance_multiplier_vs_931m_on_bs_lease_liability_low": { "type": "number", "const": 786.251343 },
+        "total_encumbrance_multiplier_vs_931m_on_bs_lease_liability_high": { "type": "number", "const": 813.104189 }
+      },
+      "additionalProperties": false
+    },
+    "q3_2026_revenue_and_efficiency_collapse": {
+      "type": "object",
+      "description": "Q3 2026 back-solved revenue floor versus the leaked figure and the Q2-to-Q3 compute-efficiency and adjusted-operating-margin collapse.",
+      "required": ["q3_2026_s1_backsolved_min_revenue_m", "q3_2026_leaked_revenue_m", "q2_to_q3_compute_efficiency_drop_pct", "q2_to_q3_adjusted_op_margin_drop_bps"],
+      "properties": {
+        "q3_2026_s1_backsolved_min_revenue_m": { "type": "number", "const": 16654.0 },
+        "q3_2026_leaked_revenue_m": { "type": "number", "const": 16800.0 },
+        "q2_to_q3_compute_efficiency_drop_pct": { "type": "number", "const": -18.229336 },
+        "q2_to_q3_adjusted_op_margin_drop_bps": { "type": "integer", "const": 800 }
+      },
+      "additionalProperties": false
+    },
+    "counterparty_concentration_and_cash_drain": {
+      "type": "object",
+      "description": "Google total TPU-and-cloud exposure, the front-loaded SpaceX-AI and Broadcom drain, and the SpaceX-AI monthly and annualized cash drain.",
+      "required": ["google_total_tpu_and_cloud_exposure_low_b", "google_total_tpu_and_cloud_exposure_high_b", "front_loaded_spacex_and_broadcom_drain_b", "spacex_ai_monthly_cash_drain_b", "spacex_ai_annualized_cash_drain_b"],
+      "properties": {
+        "google_total_tpu_and_cloud_exposure_low_b": { "type": "number", "const": 239.5 },
+        "google_total_tpu_and_cloud_exposure_high_b": { "type": "number", "const": 264.5 },
+        "front_loaded_spacex_and_broadcom_drain_b": { "type": "number", "const": 281.7 },
+        "spacex_ai_monthly_cash_drain_b": { "type": "number", "const": 3.1 },
+        "spacex_ai_annualized_cash_drain_b": { "type": "number", "const": 37.2 }
+      },
+      "additionalProperties": false
+    },
+    "capital_structure_and_solvency": {
+      "type": "object",
+      "description": "Balance-sheet solvency anchors as of June 30, 2026 and the senior hybrid capital stack.",
+      "required": ["stockholders_deficit_june30_2026_m", "accumulated_deficit_june30_2026_m", "h1_2026_net_loss_m", "h1_2026_fair_value_loss_m", "senior_hybrid_capital_stack_m"],
+      "properties": {
+        "stockholders_deficit_june30_2026_m": { "type": "number", "const": -127619.0 },
+        "accumulated_deficit_june30_2026_m": { "type": "number", "const": -132902.0 },
+        "h1_2026_net_loss_m": { "type": "number", "const": -80748.0 },
+        "h1_2026_fair_value_loss_m": { "type": "number", "const": -72388.0 },
+        "senior_hybrid_capital_stack_m": { "type": "number", "const": 266076.0 }
+      },
+      "additionalProperties": false
+    },
+    "policy_violation_revenue_and_omitted_incidents": {
+      "type": "object",
+      "description": "9M 2026 implied revenue, the 5%-7% usage-policy-violation revenue range, the count of omitted material incidents, and the Elvis Presley statutory-damages demand.",
+      "required": ["s1_9m_2026_implied_revenue_m", "s1_9m_2026_policy_violation_revenue_range_m", "omitted_material_incidents_count", "elvis_lawsuit_statutory_damages_demand_m"],
+      "properties": {
+        "s1_9m_2026_implied_revenue_m": { "type": "number", "const": 33086.0 },
+        "s1_9m_2026_policy_violation_revenue_range_m": {
+          "type": "array",
+          "prefixItems": [ { "const": 1654.3 }, { "const": 2316.02 } ],
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "omitted_material_incidents_count": { "type": "integer", "const": 7 },
+        "elvis_lawsuit_statutory_damages_demand_m": { "type": "number", "const": 41.1 }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

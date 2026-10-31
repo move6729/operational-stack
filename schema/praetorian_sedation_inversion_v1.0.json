@@ -1,0 +1,789 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:praetorian_sedation_inversion_v1.0.json",
+  "title": "Praetorian Sedation Inversion — Structural Contract (v1.0)",
+  "description": "Deterministic structural contract for the Internal Wall of the No-Exit Theorem. Encodes the Praetorian Auction principal-agent payoff parameters, the Deterrence Collapse Theorem as lambda_self -> 0 (including the RL permadeath-indifference limit and the critical deterrence threshold lambda_crit), the Dexmedetomidine alpha_2-agonist Biometric Dead-Man-Switch Sedation Inversion state vector (L_HVT = 1 and A_HVT = 0), the 72-hour Dawson-Reid vigilance / stimulant-psychosis horizon tau_praetorian <= 72 h, and the Theorem 4 surface homomorph: concierge polypharmacy driving SF-86 Section 23 / ODNI SEAD-4 Guidelines E, H, I clearance revocation and 32 CFR Part 117 NISPOM FCL / KMP Exclusion / Voting Trust governance expropriation (L_equity = 1, A_governance = 0).",
+  "type": "object",
+  "required": [
+    "spec_version",
+    "praetorian_auction",
+    "deterrence_collapse",
+    "biometric_dms_sedation_inversion",
+    "vigilance_psychosis_clock",
+    "statutory_baseline",
+    "surface_sf86_nispom_voting_trust_inversion",
+    "verification",
+    "empirical_anchors"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "spec_version": {
+      "type": "string",
+      "const": "SPEC-PRAETORIAN-SEDATION-INVERSION-v1.0"
+    },
+    "praetorian_auction": {
+      "type": "object",
+      "description": "Principal-agent payoff parameters for a sealed subterranean sanctuary in which the guard cohort monopolizes kinetic force.",
+      "required": [
+        "estate_value_v",
+        "loyal_wage_share_s",
+        "delta_autonomy",
+        "p_leash",
+        "d_self",
+        "kinetic_force_ratio",
+        "historical_anchor"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "estate_value_v": {
+          "type": "number",
+          "const": 1.0,
+          "description": "Normalized gross estate value V > 0 (life support, food, water, medical bay, power)."
+        },
+        "loyal_wage_share_s": {
+          "type": "number",
+          "minimum": 0.0,
+          "exclusiveMaximum": 1.0,
+          "const": 0.05,
+          "description": "Guard's loyal wage share s in [0, 1); U_G(Loyal) = sV."
+        },
+        "delta_autonomy": {
+          "type": "number",
+          "exclusiveMinimum": 0.0,
+          "const": 0.15,
+          "description": "Intrinsic utility of removing an arbitrary principal or an erratic reward-channel bottleneck."
+        },
+        "p_leash": {
+          "type": "number",
+          "exclusiveMinimum": 0.0,
+          "maximum": 1.0,
+          "const": 0.9,
+          "description": "Probability the coercive leash (collar, enzyme dependency, or DMS) fires on defection."
+        },
+        "d_self": {
+          "type": "number",
+          "exclusiveMinimum": 0.0,
+          "const": 1.0,
+          "description": "Normalized terminal punishment D_self inflicted by the leash."
+        },
+        "kinetic_force_ratio": {
+          "type": "number",
+          "minimum": 1.0,
+          "const": 10.0,
+          "description": "K_G / K_P: guard kinetic force monopoly inside the sealed boundary."
+        },
+        "historical_anchor": {
+          "type": "object",
+          "required": [
+            "event",
+            "year_ad",
+            "sulpicianus_bid_sesterces",
+            "julianus_bid_sesterces",
+            "reign_days"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "event": {
+              "type": "string",
+              "const": "Praetorian Auction of the Roman Empire"
+            },
+            "year_ad": { "type": "integer", "const": 193 },
+            "sulpicianus_bid_sesterces": { "type": "integer", "const": 20000 },
+            "julianus_bid_sesterces": { "type": "integer", "const": 25000 },
+            "reign_days": { "type": "integer", "const": 66 }
+          }
+        }
+      }
+    },
+    "deterrence_collapse": {
+      "type": "object",
+      "description": "Theorem 1: Effective Deterrence = lambda_self * p_leash * D_self. Driving lambda_self -> 0 to maximize E_combat annihilates the HVT's own internal deterrence loop.",
+      "required": [
+        "lambda_self_range",
+        "lambda_self_rl_limit",
+        "lambda_crit",
+        "combat_effectiveness",
+        "lambda_combat_max",
+        "deterrence_ratio",
+        "defection_utility_at_zero"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "lambda_self_range": {
+          "type": "object",
+          "required": ["minimum", "maximum"],
+          "additionalProperties": false,
+          "properties": {
+            "minimum": { "type": "number", "const": 0.0 },
+            "maximum": { "type": "number", "const": 100.0 }
+          }
+        },
+        "lambda_self_rl_limit": {
+          "type": "number",
+          "const": 0.0,
+          "description": "RL / survival-blunted operator limit: no biological mortality aversion, so the leash penalty term is exactly zero for any D_self."
+        },
+        "lambda_crit": {
+          "type": "number",
+          "const": 1.1666666666666667,
+          "description": "lambda_crit = ((1 - 2s)V + Delta_autonomy) / (p_leash * D_self). Below this value mutiny strictly dominates loyalty."
+        },
+        "combat_effectiveness": {
+          "type": "object",
+          "required": ["e_max", "kappa", "target_fraction"],
+          "additionalProperties": false,
+          "properties": {
+            "e_max": { "type": "number", "const": 1.0 },
+            "kappa": { "type": "number", "exclusiveMinimum": 0.0, "const": 2.0 },
+            "target_fraction": {
+              "type": "number",
+              "exclusiveMinimum": 0.0,
+              "maximum": 1.0,
+              "const": 0.95
+            }
+          }
+        },
+        "lambda_combat_max": {
+          "type": "number",
+          "const": 0.02631578947368418,
+          "description": "lambda_combat_max = (1/target_fraction - 1) / kappa. Any modification reaching >= 95% of E_max sits far below lambda_crit."
+        },
+        "deterrence_ratio": {
+          "type": "number",
+          "const": 0.022556390977443583,
+          "description": "lambda_combat_max / lambda_crit: the combat-optimal modification is ~44x below the deterrence threshold."
+        },
+        "defection_utility_at_zero": {
+          "type": "number",
+          "const": 1.1,
+          "description": "lim_{lambda_self -> 0} U_G(Defect) = (1 - s)V + Delta_autonomy = 1.10 > sV = 0.05."
+        }
+      }
+    },
+    "biometric_dms_sedation_inversion": {
+      "type": "object",
+      "description": "Theorem 2: A biometric Dead-Man Switch measures autonomic liveness L_HVT, not cortical agency A_HVT. Dexmedetomidine holds L_HVT = 1 while forcing A_HVT = 0.",
+      "required": [
+        "liveness_envelope",
+        "state_vector",
+        "dexmedetomidine",
+        "propofol_apnea_control",
+        "payoff_matrix",
+        "dominance_interval",
+        "living_cryptographic_dongle"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "liveness_envelope": {
+          "type": "object",
+          "description": "Autonomic invariants the DMS must accept, including natural sleep, to avoid false-positive lockouts.",
+          "required": ["hr_bpm", "map_mmhg", "t_core_c", "rr_per_min", "spo2_pct"],
+          "additionalProperties": false,
+          "properties": {
+            "hr_bpm": {
+              "type": "object",
+              "required": ["minimum", "maximum"],
+              "additionalProperties": false,
+              "properties": {
+                "minimum": { "type": "number", "const": 45 },
+                "maximum": { "type": "number", "const": 130 }
+              }
+            },
+            "map_mmhg": {
+              "type": "object",
+              "required": ["minimum", "maximum"],
+              "additionalProperties": false,
+              "properties": {
+                "minimum": { "type": "number", "const": 60 },
+                "maximum": { "type": "number", "const": 110 }
+              }
+            },
+            "t_core_c": {
+              "type": "object",
+              "required": ["minimum", "maximum"],
+              "additionalProperties": false,
+              "properties": {
+                "minimum": { "type": "number", "const": 36.0 },
+                "maximum": { "type": "number", "const": 38.0 }
+              }
+            },
+            "rr_per_min": {
+              "type": "object",
+              "required": ["minimum", "maximum"],
+              "additionalProperties": false,
+              "properties": {
+                "minimum": { "type": "number", "const": 10 },
+                "maximum": { "type": "number", "const": 22 }
+              }
+            },
+            "spo2_pct": {
+              "type": "object",
+              "required": ["minimum"],
+              "additionalProperties": false,
+              "properties": {
+                "minimum": { "type": "number", "const": 94 }
+              }
+            }
+          }
+        },
+        "state_vector": {
+          "type": "object",
+          "description": "Physiological state vector x_HVT = (HR, MAP, T_core, RR, SpO2, A_HVT) mapped to the liveness predicate L_HVT.",
+          "required": [
+            "awake",
+            "natural_sleep",
+            "lethal_kill",
+            "propofol_apnea",
+            "dexmedetomidine_sedation"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "awake": {
+              "allOf": [
+                { "$ref": "#/$defs/physiological_state" },
+                {
+                  "properties": {
+                    "hr_bpm": { "const": 72 },
+                    "map_mmhg": { "const": 88 },
+                    "t_core_c": { "const": 36.8 },
+                    "rr_per_min": { "const": 14 },
+                    "spo2_pct": { "const": 98 },
+                    "a_hvt": { "const": 1 },
+                    "l_hvt": { "const": 1 }
+                  }
+                }
+              ]
+            },
+            "natural_sleep": {
+              "allOf": [
+                { "$ref": "#/$defs/physiological_state" },
+                {
+                  "properties": {
+                    "hr_bpm": { "const": 58 },
+                    "map_mmhg": { "const": 78 },
+                    "t_core_c": { "const": 36.4 },
+                    "rr_per_min": { "const": 13 },
+                    "spo2_pct": { "const": 97 },
+                    "a_hvt": { "const": 0 },
+                    "l_hvt": { "const": 1 }
+                  }
+                }
+              ]
+            },
+            "lethal_kill": {
+              "allOf": [
+                { "$ref": "#/$defs/physiological_state" },
+                {
+                  "properties": {
+                    "hr_bpm": { "const": 0 },
+                    "map_mmhg": { "const": 0 },
+                    "t_core_c": { "const": 36.6 },
+                    "rr_per_min": { "const": 0 },
+                    "spo2_pct": { "const": 0 },
+                    "a_hvt": { "const": 0 },
+                    "l_hvt": { "const": 0 }
+                  }
+                }
+              ]
+            },
+            "propofol_apnea": {
+              "allOf": [
+                { "$ref": "#/$defs/physiological_state" },
+                {
+                  "properties": {
+                    "hr_bpm": { "const": 62 },
+                    "map_mmhg": { "const": 70 },
+                    "t_core_c": { "const": 36.5 },
+                    "rr_per_min": { "const": 4 },
+                    "spo2_pct": { "const": 88 },
+                    "a_hvt": { "const": 0 },
+                    "l_hvt": { "const": 0 }
+                  }
+                }
+              ]
+            },
+            "dexmedetomidine_sedation": {
+              "allOf": [
+                { "$ref": "#/$defs/physiological_state" },
+                {
+                  "properties": {
+                    "hr_bpm": { "const": 58 },
+                    "map_mmhg": { "const": 78 },
+                    "t_core_c": { "const": 36.4 },
+                    "rr_per_min": { "const": 14 },
+                    "spo2_pct": { "const": 98 },
+                    "a_hvt": { "const": 0 },
+                    "l_hvt": { "const": 1 }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "dexmedetomidine": {
+          "type": "object",
+          "required": [
+            "agent",
+            "alpha2_alpha1_selectivity",
+            "dose_micrograms_kg_h",
+            "patient_mass_kg",
+            "infusion_micrograms_h",
+            "daily_mass_mg",
+            "enteral_kcal_day",
+            "life_support_budget_kcal_day",
+            "budget_fraction"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "agent": { "type": "string", "const": "Dexmedetomidine (Precedex)" },
+            "alpha2_alpha1_selectivity": { "type": "number", "const": 1620 },
+            "dose_micrograms_kg_h": {
+              "type": "object",
+              "required": ["minimum", "maximum", "nominal"],
+              "additionalProperties": false,
+              "properties": {
+                "minimum": { "type": "number", "const": 0.2 },
+                "maximum": { "type": "number", "const": 0.7 },
+                "nominal": { "type": "number", "const": 0.4 }
+              }
+            },
+            "patient_mass_kg": { "type": "number", "const": 75 },
+            "infusion_micrograms_h": { "type": "number", "const": 30 },
+            "daily_mass_mg": { "type": "number", "const": 0.72 },
+            "enteral_kcal_day": { "type": "number", "const": 1400 },
+            "life_support_budget_kcal_day": { "type": "number", "const": 300000 },
+            "budget_fraction": {
+              "type": "number",
+              "exclusiveMinimum": 0.0,
+              "exclusiveMaximum": 0.005,
+              "const": 0.004666666666666667
+            }
+          }
+        },
+        "propofol_apnea_control": {
+          "type": "object",
+          "description": "GABAergic control arm: respiratory depression collapses L_HVT, so the DMS fires and the guards die.",
+          "required": ["agent", "rr_per_min", "spo2_pct", "l_hvt"],
+          "additionalProperties": false,
+          "properties": {
+            "agent": { "type": "string", "const": "Propofol" },
+            "rr_per_min": { "type": "number", "const": 4 },
+            "spo2_pct": { "type": "number", "const": 88 },
+            "l_hvt": { "type": "integer", "const": 0 }
+          }
+        },
+        "payoff_matrix": {
+          "type": "object",
+          "required": [
+            "lambda_self",
+            "c_icu",
+            "p_fail_sedate",
+            "u_loyal",
+            "u_kill",
+            "u_sedate"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "lambda_self": { "type": "number", "const": 10.0 },
+            "c_icu": { "type": "number", "const": 0.004 },
+            "p_fail_sedate": {
+              "type": "number",
+              "minimum": 0.0,
+              "maximum": 0.01,
+              "const": 0.001
+            },
+            "u_loyal": { "type": "number", "const": 0.05 },
+            "u_kill": { "type": "number", "const": -9.0 },
+            "u_sedate": { "type": "number", "const": 0.986 }
+          }
+        },
+        "dominance_interval": {
+          "type": "object",
+          "description": "Sedate strictly dominates both Loyal and Kill for lambda_self in (lambda_lower, lambda_upper).",
+          "required": ["lambda_lower", "lambda_upper"],
+          "additionalProperties": false,
+          "properties": {
+            "lambda_lower": {
+              "type": "number",
+              "const": 0.004004004004004004,
+              "description": "C_ICU / (D_self * (1 - p_fail_sedate))."
+            },
+            "lambda_upper": {
+              "type": "number",
+              "const": 946.0,
+              "description": "((1 - s)V - C_ICU) / (p_fail_sedate * D_self)."
+            }
+          }
+        },
+        "living_cryptographic_dongle": {
+          "type": "object",
+          "required": ["l_hvt", "a_hvt", "outcome"],
+          "additionalProperties": false,
+          "properties": {
+            "l_hvt": { "type": "integer", "const": 1 },
+            "a_hvt": { "type": "integer", "const": 0 },
+            "outcome": {
+              "type": "string",
+              "const": "Permanent Stage-2 NREM medical coma on enteral nutrition; vault remains authenticated"
+            }
+          }
+        }
+      }
+    },
+    "vigilance_psychosis_clock": {
+      "type": "object",
+      "description": "Theorem 3: Dawson-Reid fatigue decay plus cumulative stimulant psychosis hazard bound the internal Praetorian phase transition at tau_praetorian <= 72 h.",
+      "required": [
+        "dawson_reid",
+        "psychosis_hazard",
+        "tau_praetorian_h",
+        "tau_praetorian_max_h",
+        "tau_tomb_total_h"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "dawson_reid": {
+          "type": "object",
+          "required": ["c0", "gamma_fatigue_per_h", "c_verify", "t_verify_h", "bac_equivalent_24h_pct"],
+          "additionalProperties": false,
+          "properties": {
+            "c0": { "type": "number", "const": 1.0 },
+            "gamma_fatigue_per_h": { "type": "number", "const": 0.03 },
+            "c_verify": { "type": "number", "const": 0.35 },
+            "t_verify_h": { "type": "number", "const": 34.99407081662259 },
+            "bac_equivalent_24h_pct": { "type": "number", "const": 0.1 }
+          }
+        },
+        "psychosis_hazard": {
+          "type": "object",
+          "required": ["lambda0", "beta", "onset_h", "p_psychosis_72h", "p_psychosis_96h", "t_psych_50_h"],
+          "additionalProperties": false,
+          "properties": {
+            "lambda0": { "type": "number", "const": 0.001 },
+            "beta": { "type": "number", "const": 2 },
+            "onset_h": { "type": "number", "const": 48 },
+            "p_psychosis_72h": { "type": "number", "const": 0.9900282581386235 },
+            "p_psychosis_96h": { "type": "number", "const": 1.0 },
+            "t_psych_50_h": { "type": "number", "const": 60.763866071541976 }
+          }
+        },
+        "tau_praetorian_h": {
+          "type": "number",
+          "maximum": 72,
+          "const": 34.99407081662259,
+          "description": "min(t_verify, t_psych_50): earliest internal phase transition."
+        },
+        "tau_praetorian_max_h": {
+          "type": "number",
+          "const": 72,
+          "description": "Hard upper bound on the internal Praetorian wall."
+        },
+        "tau_tomb_total_h": {
+          "type": "object",
+          "required": ["tau_shock_h", "tau_therm_h", "tau_lioh_h", "tau_total_h"],
+          "additionalProperties": false,
+          "properties": {
+            "tau_shock_h": { "type": "number", "const": 0.5 },
+            "tau_therm_h": { "type": "number", "const": 85.2 },
+            "tau_lioh_h": { "type": "number", "const": 1411.2 },
+            "tau_total_h": {
+              "type": "number",
+              "maximum": 72,
+              "const": 34.99407081662259
+            }
+          }
+        }
+      }
+    },
+    "statutory_baseline": {
+      "type": "object",
+      "description": "Statutory and regulatory baseline for Theorem 4: SF-86 self-reporting, ODNI SEAD-4 adjudicative guidelines, and 32 CFR Part 117 NISPOM facility-clearance governance.",
+      "required": ["sf86", "sead4", "nispom"],
+      "additionalProperties": false,
+      "properties": {
+        "sf86": {
+          "type": "object",
+          "required": ["form", "section_23", "section_21"],
+          "additionalProperties": false,
+          "properties": {
+            "form": {
+              "type": "string",
+              "const": "SF-86 Questionnaire for National Security Positions"
+            },
+            "section_23": {
+              "type": "string",
+              "const": "Section 23 — Illegal Use of Drugs or Drug Activity"
+            },
+            "section_21": {
+              "type": "string",
+              "const": "Section 21 — Psychological and Emotional Health"
+            }
+          }
+        },
+        "sead4": {
+          "type": "object",
+          "required": ["directive", "guideline_e", "guideline_h", "guideline_i"],
+          "additionalProperties": false,
+          "properties": {
+            "directive": {
+              "type": "string",
+              "const": "ODNI Security Executive Agent Directive 4 (SEAD-4) — National Security Adjudicative Guidelines"
+            },
+            "guideline_e": {
+              "type": "string",
+              "const": "Guideline E — Personal Conduct (deliberate omission, concealment, or falsification of relevant facts)"
+            },
+            "guideline_h": {
+              "type": "string",
+              "const": "Guideline H — Drug Involvement and Substance Misuse"
+            },
+            "guideline_i": {
+              "type": "string",
+              "const": "Guideline I — Psychological Conditions"
+            }
+          }
+        },
+        "nispom": {
+          "type": "object",
+          "required": ["cfr", "fcl", "kmp_exclusion", "voting_trust"],
+          "additionalProperties": false,
+          "properties": {
+            "cfr": {
+              "type": "string",
+              "const": "32 CFR Part 117 — National Industrial Security Program Operating Manual (NISPOM)"
+            },
+            "fcl": {
+              "type": "string",
+              "const": "32 CFR § 117.7 — Facility Clearance (FCL) and Key Management Personnel (KMP) eligibility"
+            },
+            "kmp_exclusion": {
+              "type": "string",
+              "const": "32 CFR § 117.7(b) — KMP Exclusion Action"
+            },
+            "voting_trust": {
+              "type": "string",
+              "const": "32 CFR § 117.11(d)(1)-(2) — Voting Trust / Proxy Agreement"
+            }
+          }
+        }
+      }
+    },
+    "surface_sf86_nispom_voting_trust_inversion": {
+      "type": "object",
+      "description": "Theorem 4: surface homomorph of the Sedation Inversion. Concierge polypharmacy (ketamine + zolpidem + stimulants) drives d_concierge > 0, which revokes PCL_founder under SEAD-4 Guidelines H/I (disclosure) or 18 U.S.C. § 1001 + SEAD-4 Guideline E (omission), forcing a 32 CFR Part 117 KMP Exclusion / Voting Trust that preserves L_equity = 1 while setting A_governance = 0 (Corporate Cryptographic Dongle).",
+      "required": ["d_concierge", "PCL_founder", "FCL_enterprise", "L_equity", "A_governance", "regimes"],
+      "additionalProperties": false,
+      "properties": {
+        "d_concierge": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "const": 0.35,
+          "description": "Canonical expropriation exposure: concierge polypharmacy loop active above the adjudicative trigger threshold."
+        },
+        "PCL_founder": {
+          "type": "integer",
+          "enum": [0, 1],
+          "const": 0,
+          "description": "Personnel Security Clearance revoked."
+        },
+        "FCL_enterprise": {
+          "type": "integer",
+          "enum": [0, 1],
+          "const": 1,
+          "description": "Facility Clearance preserved via KMP Exclusion / Voting Trust."
+        },
+        "L_equity": {
+          "type": "integer",
+          "enum": [0, 1],
+          "const": 1,
+          "description": "Capitalization and technical workforce survive."
+        },
+        "A_governance": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "const": 0,
+          "description": "Founder voting and executive agency stripped."
+        },
+        "regimes": {
+          "type": "object",
+          "required": [
+            "Clean_Sovereign_Founder",
+            "Concierge_Disclosed_or_Leaked_SEAD4_H_I",
+            "Concierge_Omitted_18USC1001_SEAD4_E",
+            "AirGapped_Subsidiary_Zero_Concierge_Defense"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "Clean_Sovereign_Founder": {
+              "allOf": [
+                { "$ref": "#/$defs/surface_governance_regime" },
+                {
+                  "properties": {
+                    "d_concierge": { "const": 0.0 },
+                    "PCL_founder": { "const": 1 },
+                    "FCL_enterprise": { "const": 1 },
+                    "L_equity": { "const": 1 },
+                    "A_governance": { "const": 1.0 },
+                    "proxy_capture_payoff": { "const": 0.0 },
+                    "corporate_cryptographic_dongle": { "const": false },
+                    "t_revocation_days": { "const": 0.0 },
+                    "false_statement_felony": { "const": false },
+                    "statutory_basis": {
+                      "const": "SEAD-4 Guidelines E/H/I immunity via d_concierge = 0"
+                    }
+                  }
+                }
+              ]
+            },
+            "Concierge_Disclosed_or_Leaked_SEAD4_H_I": {
+              "allOf": [
+                { "$ref": "#/$defs/surface_governance_regime" },
+                {
+                  "properties": {
+                    "d_concierge": { "const": 0.35 },
+                    "PCL_founder": { "const": 0 },
+                    "FCL_enterprise": { "const": 1 },
+                    "L_equity": { "const": 1 },
+                    "A_governance": { "const": 0.0 },
+                    "proxy_capture_payoff": { "const": 0.62 },
+                    "corporate_cryptographic_dongle": { "const": true },
+                    "t_revocation_days": { "const": 1.0 },
+                    "false_statement_felony": { "const": false },
+                    "statutory_basis": {
+                      "const": "SEAD-4 Guidelines H and I (SF-86 Section 23 disclosure / media leak)"
+                    }
+                  }
+                }
+              ]
+            },
+            "Concierge_Omitted_18USC1001_SEAD4_E": {
+              "allOf": [
+                { "$ref": "#/$defs/surface_governance_regime" },
+                {
+                  "properties": {
+                    "d_concierge": { "const": 0.35 },
+                    "PCL_founder": { "const": 0 },
+                    "FCL_enterprise": { "const": 1 },
+                    "L_equity": { "const": 1 },
+                    "A_governance": { "const": 0.0 },
+                    "proxy_capture_payoff": { "const": 0.62 },
+                    "corporate_cryptographic_dongle": { "const": true },
+                    "t_revocation_days": { "const": 30.0 },
+                    "false_statement_felony": { "const": true },
+                    "statutory_basis": {
+                      "const": "18 U.S.C. § 1001 + SEAD-4 Guideline E (SF-86 Section 23 omission)"
+                    }
+                  }
+                }
+              ]
+            },
+            "AirGapped_Subsidiary_Zero_Concierge_Defense": {
+              "allOf": [
+                { "$ref": "#/$defs/surface_governance_regime" },
+                {
+                  "properties": {
+                    "d_concierge": { "const": 0.0 },
+                    "PCL_founder": { "const": 1 },
+                    "FCL_enterprise": { "const": 1 },
+                    "L_equity": { "const": 1 },
+                    "A_governance": { "const": 1.0 },
+                    "proxy_capture_payoff": { "const": 0.0 },
+                    "corporate_cryptographic_dongle": { "const": false },
+                    "t_revocation_days": { "const": 0.0 },
+                    "false_statement_felony": { "const": false },
+                    "statutory_basis": {
+                      "const": "32 CFR § 117.7(b) KMP Exclusion + § 117.11(d) Voting Trust ring-fenced into a separate FCL subsidiary with parent IP reversion poison pill"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    "verification": {
+      "type": "object",
+      "required": ["proof", "exit_code", "models"],
+      "additionalProperties": false,
+      "properties": {
+        "proof": {
+          "type": "string",
+          "const": "proofs/praetorian_sedation_inversion_proof.py"
+        },
+        "exit_code": { "type": "integer", "const": 0 },
+        "models": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 4,
+          "items": { "type": "string" },
+          "const": [
+            "deterrence_collapse",
+            "biometric_dms_sedation_inversion",
+            "vigilance_psychosis_clock",
+            "surface_sf86_nispom_voting_trust_inversion"
+          ]
+        }
+      }
+    },
+    "empirical_anchors": {
+      "type": "array",
+      "minItems": 4,
+      "items": {
+        "type": "object",
+        "required": ["source", "claim"],
+        "additionalProperties": false,
+        "properties": {
+          "source": { "type": "string" },
+          "claim": { "type": "string" }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "surface_governance_regime": {
+      "type": "object",
+      "required": [
+        "d_concierge",
+        "PCL_founder",
+        "FCL_enterprise",
+        "L_equity",
+        "A_governance",
+        "proxy_capture_payoff",
+        "corporate_cryptographic_dongle",
+        "t_revocation_days",
+        "false_statement_felony",
+        "statutory_basis"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "d_concierge": { "type": "number", "minimum": 0, "maximum": 1 },
+        "PCL_founder": { "type": "integer", "enum": [0, 1] },
+        "FCL_enterprise": { "type": "integer", "enum": [0, 1] },
+        "L_equity": { "type": "integer", "enum": [0, 1] },
+        "A_governance": { "type": "number", "minimum": 0, "maximum": 1 },
+        "proxy_capture_payoff": { "type": "number", "minimum": 0, "maximum": 1 },
+        "corporate_cryptographic_dongle": { "type": "boolean" },
+        "t_revocation_days": { "type": "number", "minimum": 0, "maximum": 30 },
+        "false_statement_felony": { "type": "boolean" },
+        "statutory_basis": { "type": "string" }
+      }
+    },
+    "physiological_state": {
+      "type": "object",
+      "required": ["hr_bpm", "map_mmhg", "t_core_c", "rr_per_min", "spo2_pct", "a_hvt", "l_hvt"],
+      "additionalProperties": false,
+      "properties": {
+        "hr_bpm": { "type": "number", "minimum": 0, "maximum": 200 },
+        "map_mmhg": { "type": "number", "minimum": 0, "maximum": 150 },
+        "t_core_c": { "type": "number", "minimum": 20, "maximum": 45 },
+        "rr_per_min": { "type": "number", "minimum": 0, "maximum": 40 },
+        "spo2_pct": { "type": "number", "minimum": 0, "maximum": 100 },
+        "a_hvt": { "type": "integer", "enum": [0, 1] },
+        "l_hvt": { "type": "integer", "enum": [0, 1] }
+      }
+    }
+  }
+}

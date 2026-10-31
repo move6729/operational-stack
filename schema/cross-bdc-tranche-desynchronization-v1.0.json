@@ -1,0 +1,292 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:cross-bdc-tranche-desynchronization-v1.0.json",
+  "title": "Cross-BDC Tranche Desynchronization and PIK Cannibalization Schema",
+  "description": "Machine-readable instance schema for the Cross-BDC Tranche Desynchronization bundle. Encodes the standardized security master (7-BDC panel, 6 borrowers, XBRL tranche roles), the parameterized First-Out / Second-Out-Equity recovery waterfall, governing equations EQ-1..EQ-4 with AST-locked constants, the catalyst calendar, jurisdiction context, and CFAA compliance attestation. Canonical Specification: SPEC-CROSS-BDC-TRANCHE-DESYNCHRONIZATION-AND-SYNTHETIC-FIRST-OUT-PIK-EXTRACTION-v1.0. License: Unlicense.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "jurisdiction_context",
+    "cfaa_compliance_attestation",
+    "entity_and_instrument_ids",
+    "tranche_recovery_model",
+    "equations",
+    "catalyst_calendar"
+  ],
+  "properties": {
+    "schema_version": { "const": "v1.0" },
+    "jurisdiction_context": { "$ref": "#/$defs/jurisdiction_context" },
+    "cfaa_compliance_attestation": { "$ref": "#/$defs/cfaa_attestation" },
+    "entity_and_instrument_ids": { "$ref": "#/$defs/security_master" },
+    "tranche_recovery_model": { "$ref": "#/$defs/tranche_recovery_model" },
+    "equations": { "$ref": "#/$defs/equations" },
+    "catalyst_calendar": { "$ref": "#/$defs/catalyst_calendar" }
+  },
+  "$defs": {
+    "musd": { "type": "number", "description": "USD millions" },
+    "cod": { "type": "number", "minimum": 0, "description": "Cents on the dollar; 1.0 = par; premium marks > 1.0 permitted" },
+    "iso_date": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" },
+    "cik": { "type": "string", "pattern": "^[0-9]{10}$" },
+    "jurisdiction_context": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["iso_3166_1", "statutory_modules"],
+      "properties": {
+        "iso_3166_1": { "const": "US" },
+        "statutory_modules": {
+          "type": "array",
+          "minItems": 4,
+          "items": { "type": "string" },
+          "contains": { "const": "18 U.S.C. 1030 (CFAA)" }
+        }
+      }
+    },
+    "cfaa_attestation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["statute", "zero_unauthorized_access", "attestation", "data_provenance"],
+      "properties": {
+        "statute": { "const": "18 U.S.C. 1030" },
+        "zero_unauthorized_access": { "const": true },
+        "no_circumvention_of_technological_controls": { "const": true },
+        "attestation": { "type": "string", "minLength": 1 },
+        "data_provenance": { "type": "array", "minItems": 1, "items": { "type": "string" } }
+      }
+    },
+    "security_master": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["bdc_panel", "locked_ticker_cik_map", "borrowers"],
+      "properties": {
+        "bdc_panel": {
+          "type": "array",
+          "minItems": 7,
+          "maxItems": 7,
+          "items": {
+            "type": "object",
+            "required": ["ticker", "cik", "name"],
+            "properties": {
+              "ticker": { "enum": ["ARCC", "FSK", "OBDC", "OTF", "BXSL", "OCSL", "GBDC"] },
+              "cik": { "$ref": "#/$defs/cik" },
+              "name": { "type": "string" }
+            }
+          }
+        },
+        "locked_ticker_cik_map": {
+          "const": {
+            "ARCC": "0001287750",
+            "FSK": "0001422183",
+            "OBDC": "0001655888",
+            "OTF": "0001747777",
+            "BXSL": "0001736035",
+            "OCSL": "0001414932",
+            "GBDC": "0001476765"
+          }
+        },
+        "borrowers": {
+          "const": [
+            { "borrower": "KBS", "xbrl_tranches": [
+              { "tranche_id": "KBS:FirstOutSeniorSecuredTermLoan", "role": "FIRST_OUT", "par_musd": 278.3, "fv_musd": 274.7 },
+              { "tranche_id": "KBS:SecondOutJuniorSecuredTermLoan", "role": "SECOND_OUT", "par_musd": 125.0, "fv_musd": 11.4 } ] },
+            { "borrower": "PRG", "xbrl_tranches": [
+              { "tranche_id": "PRG:FirstOutSeniorSecuredTermLoan", "role": "FIRST_OUT", "par_musd": 402.7, "fv_musd": 412.2 },
+              { "tranche_id": "PRG:EquityJuniorPosition", "role": "EQUITY", "cost_musd": 108.9, "fv_musd": 13.0 } ] },
+            { "borrower": "PetVet", "total_exposure_musd": 418.0, "xbrl_tranches": [
+              { "tranche_id": "PetVet:FirstLienTermLoan", "role": "FIRST_LIEN_TERM_LOAN", "holder_cik": "0001655888", "mark_cod": 0.8703 },
+              { "tranche_id": "PetVet:FirstLienRevolver", "role": "FIRST_LIEN_REVOLVER", "holders": [
+                { "holder_cik": "0001655888", "mark_cod": 0.5667 },
+                { "holder_cik": "0001287750", "mark_cod": 0.8333 } ] } ] },
+            { "borrower": "PDI TA", "total_exposure_musd": 168.7, "xbrl_tranches": [
+              { "tranche_id": "PDITA:FirstLienTranche", "role": "FIRST_LIEN", "locked_spread_cod": 0.703 } ] },
+            { "borrower": "Pluralsight", "total_exposure_musd": 133.9, "xbrl_tranches": [
+              { "tranche_id": "Pluralsight:FirstLienTermLoan", "role": "FIRST_LIEN_TERM_LOAN", "marks": [
+                { "holder_cik": "0001476765", "mark_cod": 0.950 },
+                { "label": "SECONDARY", "mark_cod": 0.895 },
+                { "label": "DISTRESSED", "mark_cod": 0.080 } ] } ] },
+            { "borrower": "Sorenson", "total_exposure_musd": 107.8, "xbrl_tranches": [
+              { "tranche_id": "Sorenson:SeniorDebt", "role": "SENIOR_DEBT", "total_spread_cod": 0.479, "marks": [
+                { "holder_cik": "0001414932", "mark_cod": 0.986 },
+                { "holder_cik": "0001422183", "mark_cod": 0.771 } ] } ] }
+          ]
+        }
+      }
+    },
+    "tranche_recovery_model": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["waterfall_rule", "ev_musd", "tranches", "recovery_vector"],
+      "properties": {
+        "waterfall_rule": { "const": "SEQUENTIAL_SENIORITY: recovery_i = min(par_i, max(EV - sum_{j<i} recovery_j, 0)); cod_i = recovery_i / par_i" },
+        "ev_musd": { "$ref": "#/$defs/musd" },
+        "tranches": {
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "type": "object",
+            "required": ["name", "par"],
+            "properties": {
+              "name": { "enum": ["FIRST_OUT", "SECOND_OUT", "EQUITY"] },
+              "par": { "$ref": "#/$defs/musd" }
+            }
+          }
+        },
+        "recovery_vector": {
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "type": "object",
+            "required": ["name", "recovery_musd", "cod"],
+            "properties": {
+              "name": { "enum": ["FIRST_OUT", "SECOND_OUT", "EQUITY"] },
+              "recovery_musd": { "$ref": "#/$defs/musd" },
+              "cod": { "$ref": "#/$defs/cod" }
+            }
+          }
+        }
+      }
+    },
+    "equations": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["EQ-1", "EQ-2", "EQ-3", "EQ-4"],
+      "properties": {
+        "EQ-1": { "$ref": "#/$defs/eq1" },
+        "EQ-2": { "$ref": "#/$defs/eq2" },
+        "EQ-3": { "$ref": "#/$defs/eq3" },
+        "EQ-4": { "$ref": "#/$defs/eq4" }
+      }
+    },
+    "eq1": {
+      "description": "Synthetic First-Out / Second-Out LME Fulcrum Conservation: EV = FV_fo + FV_junior; blended = EV / basis; avoided_senior_markdown = par_fo x (mark_fo - blended).",
+      "type": "object",
+      "required": ["deals"],
+      "properties": {
+        "deals": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "items": {
+            "type": "object",
+            "required": ["borrower", "total_musd", "fo_par_musd", "fo_fv_musd", "junior_par_or_cost_musd", "junior_fv_musd", "implied_ev_musd", "blended_mark_cod"],
+            "properties": {
+              "borrower": { "enum": ["KBS", "PRG"] },
+              "total_musd": { "$ref": "#/$defs/musd" },
+              "fo_par_musd": { "$ref": "#/$defs/musd" },
+              "fo_fv_musd": { "$ref": "#/$defs/musd" },
+              "junior_par_or_cost_musd": { "$ref": "#/$defs/musd" },
+              "junior_fv_musd": { "$ref": "#/$defs/musd" },
+              "implied_ev_musd": { "$ref": "#/$defs/musd" },
+              "blended_mark_cod": { "$ref": "#/$defs/cod" },
+              "blended_cost_basis_musd": { "$ref": "#/$defs/musd" },
+              "avoided_senior_markdown_musd": { "$ref": "#/$defs/musd" }
+            }
+          }
+        }
+      }
+    },
+    "eq2": {
+      "description": "PIK Cushion Cannibalization Horizon: tau_cross = cushion / PIK_annual; months = 12 x tau_cross; RIC cash drain attributed to phantom PIK distributions.",
+      "type": "object",
+      "required": ["deals"],
+      "properties": {
+        "deals": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "items": {
+            "type": "object",
+            "required": ["borrower", "pik_annual_musd", "fo_par_musd", "cushion_musd", "tau_cross_yrs", "tau_cross_months"],
+            "properties": {
+              "borrower": { "enum": ["KBS", "PRG"] },
+              "pik_annual_musd": { "$ref": "#/$defs/musd" },
+              "fo_par_musd": { "$ref": "#/$defs/musd" },
+              "cushion_musd": { "$ref": "#/$defs/musd" },
+              "tau_cross_yrs": { "type": "number", "exclusiveMinimum": 0 },
+              "tau_cross_months": { "type": "number", "exclusiveMinimum": 0 },
+              "ric_cash_drain_annual_musd": { "$ref": "#/$defs/musd" }
+            }
+          }
+        }
+      }
+    },
+    "eq3": {
+      "description": "Fund-Level PIK Cash Drain and Effective Cash Fee Rate: share = PIK / NII; breach = share / 0.0424; cash_drain = PIK x drain_ratio; effective_cash_fee_rate = incentive_rate x NII / (NII - PIK).",
+      "type": "object",
+      "required": ["pik_nii_threshold", "funds"],
+      "properties": {
+        "pik_nii_threshold": { "const": 0.0424 },
+        "funds": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "items": {
+            "type": "object",
+            "required": ["fund", "period", "pik_musd", "nii_musd", "pik_nii_share", "threshold_breach_x", "drain_ratio", "period_pik_musd", "period_cash_drain_musd", "incentive_fee_rate", "effective_cash_fee_rate"],
+            "properties": {
+              "fund": { "enum": ["FSK", "ARCC"] },
+              "period": { "enum": ["2026-Q2", "2026-Q3"] },
+              "pik_musd": { "$ref": "#/$defs/musd" },
+              "nii_musd": { "$ref": "#/$defs/musd" },
+              "pik_nii_share": { "type": "number", "exclusiveMinimum": 0 },
+              "threshold_breach_x": { "type": "number", "exclusiveMinimum": 1 },
+              "drain_ratio": { "type": "number", "exclusiveMinimum": 0, "maximum": 1 },
+              "period_pik_musd": { "$ref": "#/$defs/musd" },
+              "period_cash_drain_musd": { "$ref": "#/$defs/musd" },
+              "incentive_fee_rate": { "type": "number", "exclusiveMinimum": 0, "maximum": 1 },
+              "effective_cash_fee_rate": { "type": "number", "exclusiveMinimum": 0, "maximum": 1 }
+            }
+          }
+        }
+      }
+    },
+    "eq4": {
+      "description": "Intra-1L Revolver vs Term Loan Disconnect: spread = mark_high - mark_low across tranches or holders of the same borrower stack.",
+      "type": "object",
+      "required": ["deals"],
+      "properties": {
+        "deals": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 4,
+          "items": {
+            "type": "object",
+            "required": ["borrower", "exposure_musd", "spread_cod", "spread_type"],
+            "properties": {
+              "borrower": { "enum": ["PetVet", "PDI TA", "Pluralsight", "Sorenson"] },
+              "exposure_musd": { "$ref": "#/$defs/musd" },
+              "spread_cod": { "$ref": "#/$defs/cod" },
+              "spread_type": { "enum": ["INTERNAL_1L", "CROSS_HOLDER_1L", "LOCKED_1L", "CROSS_HOLDER_DEBT", "LOCKED_TOTAL"] },
+              "marks": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": ["label", "mark_cod"],
+                  "properties": {
+                    "label": { "type": "string" },
+                    "holder_cik": { "$ref": "#/$defs/cik" },
+                    "mark_cod": { "$ref": "#/$defs/cod" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "catalyst_calendar": {
+      "type": "array",
+      "minItems": 6,
+      "maxItems": 6,
+      "items": {
+        "type": "object",
+        "required": ["date", "event"],
+        "properties": {
+          "date": { "$ref": "#/$defs/iso_date" },
+          "event": { "type": "string", "minLength": 1 }
+        }
+      },
+      "description": "Locked catalyst dates: 2026-08-06 FSK Q2 2026 10-Q filing; 2026-10-27 ARCC Q3 2026 10-Q filing; 2027-01-10 PRG tau_cross horizon (3.40 mos); 2027-03-11 KBS tau_cross horizon (5.38 mos); 2028-11-30 KBS maturity cliff; 2029-11-30 PetVet/PRG maturity cliff."
+    }
+  }
+}

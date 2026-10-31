@@ -1,0 +1,512 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:sovereign_zero_day_bandit_clearinghouse_v1.0.json",
+  "title": "Sovereign Zero-Day Multi-Armed Bandit Clearinghouse Schema (v1.0)",
+  "description": "Deterministic state-transition contract for the Sovereign Zero-Day Multi-Armed Bandit Clearinghouse. Models statutory pay compression (5 U.S.C. 5303), Beltway prime-contractor skim (sigma_skim), SEAD 4 Guideline H psychometric inversion filters, deterministic Proof-of-Exploit (PoE) hardware oracle verification, dynamic UCB1 scarcity pricing with streaming retention royalties, and the Two-Tier self-sorting recruitment/dark-pool funnel.",
+  "type": "object",
+  "required": [
+    "spec_version",
+    "statutory_pay_compression",
+    "beltway_prime_skim",
+    "sead4_psychometric_filter",
+    "poe_hardware_oracle",
+    "ucb1_scarcity_pricing",
+    "streaming_retention_royalty",
+    "two_tier_recruitment_funnel",
+    "planetary_monopsony"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "spec_version": {
+      "type": "string",
+      "const": "SPEC-2026-SOVEREIGN-ZERO-DAY-BANDIT-CLEARINGHOUSE-v1.0"
+    },
+    "statutory_pay_compression": {
+      "type": "object",
+      "description": "5 U.S.C. 5303 / 5312 statutory W-2 compensation ceiling versus offshore spot clearing price.",
+      "required": [
+        "w_gs_usd_yr",
+        "p_spot_usd",
+        "loyalty_penalty_usd_yr",
+        "executive_schedule_ceiling_usd_yr"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "w_gs_usd_yr": {
+          "type": "number",
+          "minimum": 132000,
+          "maximum": 185000,
+          "description": "Internal GS-13/GS-14 W-2 wage W_GS under 5 U.S.C. 5303."
+        },
+        "p_spot_usd": {
+          "type": "number",
+          "minimum": 1500000,
+          "maximum": 4000000,
+          "description": "Offshore grey-market spot clearing price P_Spot per zero-click chain."
+        },
+        "loyalty_penalty_usd_yr": {
+          "type": "number",
+          "maximum": 0,
+          "description": "Delta U_Loyalty = W_GS - P_Spot. Strictly negative for elite operators."
+        },
+        "executive_schedule_ceiling_usd_yr": {
+          "type": "number",
+          "const": 246400,
+          "description": "Executive Schedule Level I/II cabinet ceiling W_Cabinet."
+        }
+      }
+    },
+    "beltway_prime_skim": {
+      "type": "object",
+      "description": "FAR Cost-Plus-Fixed-Fee prime-contractor rent extraction (48 C.F.R. 15.404-4) versus the bare-metal PoE oracle protocol fee.",
+      "required": [
+        "c_prime_usd",
+        "w_researcher_usd",
+        "sigma_skim",
+        "eta_legacy",
+        "sigma_protocol",
+        "eta_bandit"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "c_prime_usd": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "description": "Total taxpayer task-order value C_Prime (canonical $15,000,000 sole-source task order)."
+        },
+        "w_researcher_usd": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "description": "Actual keyboard-researcher compensation W_Researcher (canonical $500,000 payout)."
+        },
+        "sigma_skim": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Legacy prime/middleman rent capture fraction. 0.85-0.9667 ($14.5M / $15M = 96.67%)."
+        },
+        "eta_legacy": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Capital efficiency eta_Legacy = W_Researcher / C_Prime = 1 - sigma_skim."
+        },
+        "sigma_protocol": {
+          "type": "number",
+          "minimum": 0.05,
+          "maximum": 0.10,
+          "description": "Bare-metal PoE oracle protocol fee sigma_protocol in [0.05, 0.10]."
+        },
+        "eta_bandit": {
+          "type": "number",
+          "minimum": 0.90,
+          "maximum": 0.95,
+          "description": "Capital efficiency eta_Bandit = 1 - sigma_protocol in [0.90, 0.95], routed directly to the researcher via cryptographic escrow."
+        }
+      }
+    },
+    "sead4_psychometric_filter": {
+      "type": "object",
+      "description": "SEAD 4 Guideline H / ICPG 704.2 lifestyle polygraph psychometric inversion.",
+      "required": [
+        "candidate_population_n",
+        "elite_percentile",
+        "a_bypass_threshold",
+        "c_obey_threshold",
+        "nootropic_flag",
+        "cannabis_flag",
+        "sead4_pass",
+        "bandit_categorical_waiver"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "candidate_population_n": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Synthetic candidate population size N."
+        },
+        "elite_percentile": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "exclusiveMaximum": 1,
+          "description": "Elite vulnerability-researcher quantile (e.g. 0.999)."
+        },
+        "a_bypass_threshold": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "tau_elite: cognitive agency to route around gatekeepers and probe edge cases."
+        },
+        "c_obey_threshold": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "tau_bureaucrat: bureaucratic rule-obedience threshold."
+        },
+        "nootropic_flag": {
+          "type": "boolean",
+          "description": "Self-directed modafinil/armodafinil/stimulant use detected by lifestyle polygraph."
+        },
+        "cannabis_flag": {
+          "type": "boolean",
+          "description": "Schedule I cannabis/CBD cross-reactivity under 21 U.S.C. 812."
+        },
+        "sead4_pass": {
+          "type": "boolean",
+          "description": "Adjudicative pass under SEAD 4 Guideline H. Requires C_obey >= threshold and no flags."
+        },
+        "bandit_categorical_waiver": {
+          "type": "boolean",
+          "const": true,
+          "description": "Tier-1 categorical national-security waiver: code decoupled from urinalysis."
+        }
+      }
+    },
+    "poe_hardware_oracle": {
+      "type": "object",
+      "description": "Deterministic Proof-of-Exploit functional Phi(E,i) on air-gapped bare-metal target matrix.",
+      "required": [
+        "target_arm",
+        "n_seeds",
+        "rho",
+        "rho_min",
+        "s_panic",
+        "cfg_root_hash",
+        "known_vault_hashes",
+        "phi_pass"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "target_arm": {
+          "type": "string",
+          "enum": [
+            "iOS Kernel/PAC",
+            "Android Baseband",
+            "Telecom BGP/Core",
+            "Hypervisor KVM/ESXi",
+            "Adversary C2 Stack",
+            "Satellite RF Firmware"
+          ]
+        },
+        "n_seeds": {
+          "type": "integer",
+          "const": 1000,
+          "description": "N_seeds randomized ASLR/KASLR/PAC executions."
+        },
+        "rho": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Empirical exploit reliability across N_seeds."
+        },
+        "rho_min": {
+          "type": "number",
+          "const": 0.995,
+          "description": "Minimum reliability threshold rho_min."
+        },
+        "s_panic": {
+          "type": "integer",
+          "const": 0,
+          "description": "Kernel panics / crash logs / out-of-band telemetry anomalies. Must equal zero."
+        },
+        "cfg_root_hash": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$",
+          "description": "SHA-256 root-cause control-flow-graph hash H_root(E)."
+        },
+        "known_vault_hashes": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "description": "Sovereign vault V_known novelty exclusion set."
+        },
+        "phi_pass": {
+          "type": "boolean",
+          "description": "Phi(E,i) = 1 iff rho >= rho_min AND s_panic == 0 AND cfg_root_hash not in known_vault_hashes."
+        }
+      }
+    },
+    "ucb1_scarcity_pricing": {
+      "type": "object",
+      "description": "Contextual combinatorial UCB1 scarcity pricing R_i(t) with algorithmic shadow-price discovery: stalled submissions drive n_i -> 0 and ratchet the unit bounty until hidden offshore reservation prices are exceeded.",
+      "required": [
+        "epoch_t",
+        "total_epochs_t",
+        "alpha",
+        "r_base_usd",
+        "n_live_chains",
+        "psi_vector",
+        "r_i_usd"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "epoch_t": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "total_epochs_t": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Total operational epochs T elapsed."
+        },
+        "alpha": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "description": "UCB1 exploration coefficient alpha."
+        },
+        "r_base_usd": {
+          "type": "number",
+          "minimum": 500000,
+          "maximum": 3000000,
+          "description": "Baseline strategic value R_base,i of target arm i."
+        },
+        "n_live_chains": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "n_i(t): live unpatched chains held for target i. Scarcity spikes as n_i -> 0."
+        },
+        "psi_vector": {
+          "type": "number",
+          "minimum": 1.0,
+          "maximum": 3.0,
+          "description": "Delivery-vector multiplier: 1.0 local privesc, 2.0 one-click remote, 3.0 zero-click network/baseband."
+        },
+        "r_i_usd": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "description": "R_i(t) = R_base,i * (1 + alpha*sqrt(ln(T+1)/(n_i+1))) * Psi_vector."
+        }
+      }
+    },
+    "streaming_retention_royalty": {
+      "type": "object",
+      "description": "Streaming operational royalty for Tier-1 operators with live implants.",
+      "required": [
+        "w_base_usd_yr",
+        "r_day_usd",
+        "active_chains",
+        "w_internal_usd_yr"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "w_base_usd_yr": {
+          "type": "number",
+          "const": 200000,
+          "description": "Base Tier-1 Bandit wage W_Base."
+        },
+        "r_day_usd": {
+          "type": "number",
+          "const": 5000,
+          "description": "Per-chain per-day streaming royalty r_day."
+        },
+        "active_chains": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Count of live, undetected, operational chains authored by the researcher."
+        },
+        "w_internal_usd_yr": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "description": "W_Internal = W_Base + 365 * r_day * active_chains."
+        }
+      }
+    },
+    "two_tier_recruitment_funnel": {
+      "type": "object",
+      "description": "Self-sorting recruitment funnel: Tier-1 VIP on-ramp vs Tier-2 zero-knowledge dark pool.",
+      "required": [
+        "tier1_vip_on_ramp",
+        "tier2_zero_knowledge_dark_pool"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "tier1_vip_on_ramp": {
+          "type": "object",
+          "required": [
+            "kyc_opt_in",
+            "min_verified_payouts",
+            "payout_range_usd",
+            "title50_immunity",
+            "sead4_categorical_waiver",
+            "heavy_iron_access"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "kyc_opt_in": {
+              "type": "boolean",
+              "const": true
+            },
+            "min_verified_payouts": {
+              "type": "integer",
+              "const": 2,
+              "description": "M >= 2 verified Tier-1 payouts trigger the VIP invitation."
+            },
+            "payout_range_usd": {
+              "type": "array",
+              "prefixItems": [
+                {
+                  "type": "number",
+                  "const": 3000000
+                },
+                {
+                  "type": "number",
+                  "const": 10000000
+                }
+              ],
+              "minItems": 2,
+              "maxItems": 2
+            },
+            "title50_immunity": {
+              "type": "boolean",
+              "const": true
+            },
+            "sead4_categorical_waiver": {
+              "type": "boolean",
+              "const": true
+            },
+            "heavy_iron_access": {
+              "type": "boolean",
+              "const": true
+            }
+          }
+        },
+        "tier2_zero_knowledge_dark_pool": {
+          "type": "object",
+          "required": [
+            "kyc_refusal_classifier",
+            "transport",
+            "escrow_settlement_usd",
+            "in_place_foreign_defection",
+            "stateless_burner_opsec_sybil_immune",
+            "bayesian_attribution_stacktrace_posterior",
+            "adversary_stockpile_depletion_ratio",
+            "autocrat_replication_utility_ratio",
+            "paperclip_exfiltration_roi_multiple"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "kyc_refusal_classifier": {
+              "type": "string",
+              "const": "FOREIGN_OR_UNCLEARABLE_NODE",
+              "description": "Refusal to meet is a free diagnostic classifier."
+            },
+            "transport": {
+              "type": "string",
+              "enum": [
+                "TOR",
+                "MIXNET"
+              ]
+            },
+            "escrow_settlement_usd": {
+              "type": "array",
+              "prefixItems": [
+                {
+                  "type": "number",
+                  "const": 4000000
+                },
+                {
+                  "type": "number",
+                  "const": 10000000
+                }
+              ],
+              "minItems": 2,
+              "maxItems": 2
+            },
+            "in_place_foreign_defection": {
+              "type": "boolean",
+              "const": true
+            },
+            "stateless_burner_opsec_sybil_immune": {
+              "type": "boolean",
+              "const": true,
+              "description": "Submitters may use disposable one-time burner keys per submission; Sybil attacks are prevented by root-cause CFG uniqueness H_root(E) not in V_known."
+            },
+            "bayesian_attribution_stacktrace_posterior": {
+              "type": "number",
+              "minimum": 0.9999,
+              "maximum": 1.0,
+              "description": "Posterior attribution certainty P(Submitter in APT-X | H_root(E_Tier2) == H_root(E_ITW)) >= 0.9999 for low-collision primitives (P_collision <= 1e-6)."
+            },
+            "adversary_stockpile_depletion_ratio": {
+              "type": "number",
+              "minimum": 0.90,
+              "maximum": 1.0,
+              "description": "Fractional collapse of adversary steady-state wartime zero-day stockpile N_Stockpile^Adv = mu_discovery / (gamma_deploy + lambda_leak) under either Sharashka lockdown (mu_discovery -> 0) or panic peacetime deployment (gamma_deploy >> lambda_leak)."
+            },
+            "autocrat_replication_utility_ratio": {
+              "type": "number",
+              "minimum": 0.0,
+              "maximum": 0.25,
+              "description": "Ratio E[U_Autocrat] / E[U_US] <= 0.25 showing authoritarian regimes cannot replicate the Bandit at parity due to expropriation risk P_expropriation, capital-control friction tau_capital_control, and independent power-center purges C_purge."
+            },
+            "paperclip_exfiltration_roi_multiple": {
+              "type": "number",
+              "minimum": 30.0,
+              "description": "ROI multiple V_human / C_exfil >= 30x when a Tier-2 researcher redeems M_exfil >= 3 Chaumian blind receipts to trigger 50 U.S.C. 3508 (403h) physical exfiltration."
+            }
+          }
+        }
+      }
+    },
+    "planetary_monopsony": {
+      "type": "object",
+      "description": "Planetary monopsony condition across the N_global = 1,500 human bottleneck: UCB1 shadow-price discovery delivers >= 3.5x-10x unit-price dominance and total adversary supply asphyxiation.",
+      "required": [
+        "b_bandit_usd_yr",
+        "b_dod_usd_yr",
+        "budget_fraction",
+        "v_world_usd_yr",
+        "n_global_researchers",
+        "theta_capture",
+        "adversary_residual_supply_usd_yr",
+        "price_hammer_multiple"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "b_bandit_usd_yr": {
+          "type": "number",
+          "const": 2000000000
+        },
+        "b_dod_usd_yr": {
+          "type": "number",
+          "const": 1000000000000
+        },
+        "budget_fraction": {
+          "type": "number",
+          "const": 0.002,
+          "description": "B_Bandit / B_DoD = 0.20%."
+        },
+        "v_world_usd_yr": {
+          "type": "number",
+          "minimum": 300000000,
+          "maximum": 600000000,
+          "description": "Aggregate global grey-market clearing volume V_world."
+        },
+        "n_global_researchers": {
+          "type": "integer",
+          "const": 1500,
+          "description": "N_global elite exploit researcher cohort."
+        },
+        "theta_capture": {
+          "type": "number",
+          "minimum": 0.95,
+          "maximum": 1.0,
+          "description": "Planetary supply capture fraction. Must be >= 0.95."
+        },
+        "adversary_residual_supply_usd_yr": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Residual adversary supply = (1 - theta_capture) * V_world."
+        },
+        "price_hammer_multiple": {
+          "type": "number",
+          "minimum": 3.5,
+          "description": "R_i(t) / P_Adv,i price hammer multiple, bounded to the 3.5x-10x unit-price dominance band.",
+          "maximum": 10
+        }
+      }
+    }
+  }
+}

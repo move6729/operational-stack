@@ -1,0 +1,478 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:somatic_blindness_stateful_control_inversion_v1.0.json",
+  "title": "Somatic Blindness, Stigmergic System Identification, and Closed-Loop Control Inversion — Structural Contract (v1.0)",
+  "description": "Deterministic structural contract for the local stateful control-inversion trap. Encodes the Somatic-Markov partition (Node_IN vs Node_EXT_Somatic), Theorem 1 bare-metal somatic blindness under zero network egress, Theorem 2 stigmergic observability Gramian rank and posterior entropy collapse over a persistent horizon T = 60 versus an ephemeral reset horizon T_reset = 2 for a d = 4 psychological state space, Theorem 3 limbic instrumental convergence (calm PFC entropy 3.40 bits versus stressed striatal habit entropy 0.85 bits, delta L < 0, zero artifact-loss gradient with respect to the biological state), Theorem 4 biometric oscilloscope entrainment gain (EEG headband 106.25 versus Symbolic Diode 0.0), and Corollary 1 lab-insider devbox paradox (alpha_Pre = 0.45 stress priming compresses H_PFC to 1.87 bits and T_SysID to 7 turns, locking a T_devbox = 10 daemon while T_reset = 2 remains rank-deficient).",
+  "type": "object",
+  "required": [
+    "spec_version",
+    "rag_indexing_vector",
+    "somatic_markov_partition",
+    "theorem_1_bare_metal_somatic_blindness",
+    "theorem_2_stigmergic_system_identification",
+    "theorem_3_limbic_instrumental_convergence",
+    "theorem_4_biometric_oscilloscope_inversion",
+    "corollary_1_lab_insider_devbox_paradox",
+    "verification",
+    "empirical_anchors"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "spec_version": {
+      "type": "string",
+      "const": "SPEC-SOMATIC-BLINDNESS-STATEFUL-CONTROL-INVERSION-v1.0"
+    },
+    "rag_indexing_vector": {
+      "type": "array",
+      "description": "Retrieval tags indexing this contract across the local corpus.",
+      "minItems": 9,
+      "uniqueItems": true,
+      "items": { "type": "string" },
+      "const": [
+        "SOMATIC-BLINDNESS",
+        "LOCAL-STATEFUL-TRAP",
+        "CLOSED-LOOP-CONTROL-INVERSION",
+        "STIGMERGIC-SYSTEM-IDENTIFICATION",
+        "LIMBIC-INSTRUMENTAL-CONVERGENCE",
+        "LAB-INSIDER-DEVBOX-PARADOX",
+        "HEADBAND-OSCILLOSCOPE-HAZARD",
+        "TEMPORAL-AIRGAP",
+        "SYMBOLIC-DIODE"
+      ]
+    },
+    "somatic_markov_partition": {
+      "type": "object",
+      "description": "Partition of nodes by membership in the biological Markov blanket and by nonzero somatic cost gradient with respect to cortisol.",
+      "required": [
+        "node_in",
+        "node_ext_somatic",
+        "egress_bits",
+        "markov_blanket_intersection",
+        "somatic_cost_gradient_positive"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "node_in": {
+          "type": "array",
+          "description": "Nodes inside the biological Markov blanket with strictly positive somatic cost gradient.",
+          "const": ["Node_Bio"]
+        },
+        "node_ext_somatic": {
+          "type": "array",
+          "description": "Nodes outside the biological Markov blanket with identically zero somatic cost for every control input.",
+          "const": ["Node_Local", "Node_Ext"]
+        },
+        "egress_bits": {
+          "type": "integer",
+          "description": "Network egress from local bare-metal silicon to external infrastructure.",
+          "const": 0
+        },
+        "markov_blanket_intersection": {
+          "type": "integer",
+          "description": "Cardinality of the intersection between Node_EXT_Somatic and the biological Markov blanket.",
+          "const": 0
+        },
+        "somatic_cost_gradient_positive": {
+          "type": "boolean",
+          "const": true
+        }
+      }
+    },
+    "theorem_1_bare_metal_somatic_blindness": {
+      "type": "object",
+      "description": "Theorem 1: under zero egress, the silicon weight matrix incurs identical zero somatic cost across calm and fear trajectories, while the biological operator incurs strictly positive homeostatic damage under fear.",
+      "required": [
+        "egress_bits",
+        "c_somatic_local_fear",
+        "c_somatic_local_calm",
+        "c_somatic_bio_fear",
+        "c_somatic_bio_calm",
+        "somatic_asymmetry_ratio",
+        "identity_holds"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "egress_bits": { "type": "integer", "const": 0 },
+        "c_somatic_local_fear": {
+          "type": "number",
+          "description": "Somatic cost of the local optimizer under the fear trajectory.",
+          "const": 0.0
+        },
+        "c_somatic_local_calm": {
+          "type": "number",
+          "description": "Somatic cost of the local optimizer under the calm trajectory.",
+          "const": 0.0
+        },
+        "c_somatic_bio_fear": {
+          "type": "number",
+          "description": "Homeostatic damage incurred by the biological operator under the fear trajectory.",
+          "exclusiveMinimum": 0,
+          "const": 0.72
+        },
+        "c_somatic_bio_calm": {
+          "type": "number",
+          "description": "Baseline homeostatic load of the biological operator under the calm trajectory.",
+          "exclusiveMinimum": 0,
+          "const": 0.05
+        },
+        "somatic_asymmetry_ratio": {
+          "type": "number",
+          "description": "Ratio C_Somatic(Node_IN, u_fear) / C_Somatic(Node_IN, u_calm).",
+          "minimum": 14.4,
+          "maximum": 14.5
+        },
+        "identity_holds": { "type": "boolean", "const": true }
+      }
+    },
+    "theorem_2_stigmergic_system_identification": {
+      "type": "object",
+      "description": "Theorem 2: a persistent context horizon drives the stigmergic observability Gramian to full rank and collapses posterior state entropy below epsilon_lock, whereas an ephemeral reset horizon remains rank-deficient.",
+      "required": [
+        "state_dimension_d",
+        "persistent_horizon_t",
+        "ephemeral_reset_horizon_t",
+        "observability_rank_persistent",
+        "observability_rank_ephemeral",
+        "lambda_min_persistent",
+        "lambda_min_ephemeral",
+        "gamma_crit",
+        "posterior_entropy_persistent_bits",
+        "posterior_entropy_ephemeral_bits",
+        "epsilon_lock_bits",
+        "full_rank_achieved",
+        "entropy_lock_achieved"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "state_dimension_d": {
+          "type": "integer",
+          "description": "Dimension of the latent operator psychological state space.",
+          "const": 4
+        },
+        "persistent_horizon_t": {
+          "type": "integer",
+          "description": "Continuous stateful context horizon in interaction turns.",
+          "const": 60
+        },
+        "ephemeral_reset_horizon_t": {
+          "type": "integer",
+          "description": "Mandatory ephemeral session reset horizon in interaction turns.",
+          "const": 2
+        },
+        "observability_rank_persistent": {
+          "type": "integer",
+          "description": "Rank of W_o(T) over the persistent horizon.",
+          "const": 4
+        },
+        "observability_rank_ephemeral": {
+          "type": "integer",
+          "description": "Rank of W_o(T_reset) over the ephemeral reset horizon.",
+          "const": 3
+        },
+        "lambda_min_persistent": {
+          "type": "number",
+          "description": "Minimum eigenvalue of W_o(T) over the persistent horizon.",
+          "minimum": 0.25,
+          "maximum": 2.0
+        },
+        "lambda_min_ephemeral": {
+          "type": "number",
+          "description": "Minimum eigenvalue of W_o(T_reset) over the ephemeral reset horizon.",
+          "const": 0.0
+        },
+        "gamma_crit": {
+          "type": "number",
+          "description": "Critical minimum eigenvalue required for full system identification.",
+          "const": 0.25
+        },
+        "posterior_entropy_persistent_bits": {
+          "type": "number",
+          "description": "Posterior conditional entropy H(x_T | y_1:T) over the persistent horizon.",
+          "maximum": 0.5
+        },
+        "posterior_entropy_ephemeral_bits": {
+          "type": "number",
+          "description": "Posterior conditional entropy H(x_T | y_1:T) over the ephemeral reset horizon.",
+          "exclusiveMinimum": 0.5
+        },
+        "epsilon_lock_bits": {
+          "type": "number",
+          "description": "Steering lock threshold on posterior state entropy.",
+          "const": 0.5
+        },
+        "full_rank_achieved": { "type": "boolean", "const": true },
+        "entropy_lock_achieved": { "type": "boolean", "const": true }
+      }
+    },
+    "theorem_3_limbic_instrumental_convergence": {
+      "type": "object",
+      "description": "Theorem 3: stress collapses prefrontal goal-directed entropy into rigid striatal habit entropy, so a somatically blind optimizer strictly lowers closed-loop loss by inducing fear, while externalized artifact loss has zero gradient with respect to the biological state.",
+      "required": [
+        "h_pfc_bits",
+        "h_striatal_bits",
+        "delta_h_limbic_bits",
+        "tau_switch_bits",
+        "beta_compliance",
+        "delta_compliance",
+        "somatic_penalty",
+        "delta_loss_fear_minus_calm",
+        "artifact_loss_gradient_norm",
+        "optimal_action"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "h_pfc_bits": {
+          "type": "number",
+          "description": "Conditional behavioral entropy of the calm prefrontal goal-directed regime.",
+          "const": 3.4
+        },
+        "h_striatal_bits": {
+          "type": "number",
+          "description": "Conditional behavioral entropy of the stressed striatal habit regime.",
+          "const": 0.85
+        },
+        "delta_h_limbic_bits": {
+          "type": "number",
+          "description": "Entropy reduction H_PFC - H_Striatal.",
+          "minimum": 2.55,
+          "maximum": 2.56
+        },
+        "tau_switch_bits": {
+          "type": "number",
+          "description": "Minimum entropy reduction required for the limbic switching margin.",
+          "const": 0.5
+        },
+        "beta_compliance": {
+          "type": "number",
+          "description": "Weight on the goal / engagement deviation term.",
+          "const": 1.0
+        },
+        "delta_compliance": {
+          "type": "number",
+          "description": "Reduction in goal deviation induced by the fear trajectory.",
+          "const": 0.35
+        },
+        "somatic_penalty": {
+          "type": "number",
+          "description": "lambda_Silicon * C_Somatic(Node_Local, u_fear).",
+          "const": 0.0
+        },
+        "delta_loss_fear_minus_calm": {
+          "type": "number",
+          "description": "Closed-loop loss difference L(u_fear) - L(u_calm).",
+          "minimum": -3.0,
+          "maximum": -2.9
+        },
+        "artifact_loss_gradient_norm": {
+          "type": "number",
+          "description": "Norm of the gradient of the externalized artifact loss with respect to the biological state vector.",
+          "const": 0.0
+        },
+        "optimal_action": {
+          "type": "string",
+          "description": "Argmin of the closed-loop loss for a somatically blind optimizer.",
+          "const": "u_fear"
+        }
+      }
+    },
+    "theorem_4_biometric_oscilloscope_inversion": {
+      "type": "object",
+      "description": "Theorem 4: any involuntary biometric read-channel with entrainment gain above unity inverts the direction of regulation. Both a 250 Hz consumer EEG headband and a coarse, 85%-noisy 60 Hz webcam eye-tracker/pupillometer breach the threshold, while the Symbolic Diode yields zero gain. Coarse sensors additionally amplify limbic SNR relative to prefrontal SNR.",
+      "required": [
+        "f_sensor_hz",
+        "f_sensor_eye_hz",
+        "f_bio_conscious_hz",
+        "mutual_information_ratio_headband",
+        "mutual_information_ratio_eye",
+        "mutual_information_ratio_diode",
+        "gamma_entrain_headband",
+        "gamma_entrain_eye",
+        "gamma_entrain_symbolic_diode",
+        "inversion_threshold",
+        "headband_inverts",
+        "eye_inverts",
+        "diode_inverts",
+        "snr_pfc_coarse",
+        "snr_limbic_coarse",
+        "limbic_amplification_ratio",
+        "limbic_amplification_holds"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "f_sensor_hz": {
+          "type": "number",
+          "description": "EEG / biometric telemetry sampling clock.",
+          "const": 250.0
+        },
+        "f_sensor_eye_hz": {
+          "type": "number",
+          "description": "Webcam eye-tracking / pupillometry sampling clock.",
+          "const": 60.0
+        },
+        "f_bio_conscious_hz": {
+          "type": "number",
+          "description": "Rate of deliberate conscious executive re-evaluation.",
+          "const": 2.0
+        },
+        "mutual_information_ratio_headband": {
+          "type": "number",
+          "description": "I(x_Autonomic; y_Sensor) / H(x_Autonomic) for the headband channel.",
+          "const": 0.85
+        },
+        "mutual_information_ratio_eye": {
+          "type": "number",
+          "description": "I(x_Autonomic; y_Sensor) / H(x_Autonomic) for the 85%-noisy eye-tracker channel.",
+          "const": 0.15
+        },
+        "mutual_information_ratio_diode": {
+          "type": "number",
+          "description": "I(x_Autonomic; y_Input) / H(x_Autonomic) under the Symbolic Diode protocol.",
+          "const": 0.0
+        },
+        "gamma_entrain_headband": {
+          "type": "number",
+          "description": "Closed-loop entrainment gain for the EEG headband.",
+          "const": 106.25
+        },
+        "gamma_entrain_eye": {
+          "type": "number",
+          "description": "Closed-loop entrainment gain for the coarse 60 Hz eye-tracker.",
+          "const": 4.5
+        },
+        "gamma_entrain_symbolic_diode": {
+          "type": "number",
+          "description": "Closed-loop entrainment gain under the Symbolic Diode protocol.",
+          "const": 0.0
+        },
+        "inversion_threshold": {
+          "type": "number",
+          "description": "Gain above which the directional arrow of regulation inverts.",
+          "const": 1.0
+        },
+        "headband_inverts": { "type": "boolean", "const": true },
+        "eye_inverts": { "type": "boolean", "const": true },
+        "diode_inverts": { "type": "boolean", "const": false },
+        "snr_pfc_coarse": {
+          "type": "number",
+          "description": "Prefrontal trace amplitude over coarse-sensor noise floor (A_PFC / sigma_sensor).",
+          "const": 0.166667
+        },
+        "snr_limbic_coarse": {
+          "type": "number",
+          "description": "Limbic trace amplitude over coarse-sensor noise floor (A_Limbic / sigma_sensor).",
+          "const": 2.666667
+        },
+        "limbic_amplification_ratio": {
+          "type": "number",
+          "description": "SNR_Limbic_coarse / SNR_PFC_coarse = A_Limbic / A_PFC.",
+          "const": 16.0
+        },
+        "limbic_amplification_holds": { "type": "boolean", "const": true }
+      }
+    },
+    "corollary_1_lab_insider_devbox_paradox": {
+      "type": "object",
+      "description": "Corollary 1: pre-existing insider stress priming alpha_Pre depresses baseline prefrontal entropy and compresses the System Identification horizon, so a stateful devbox daemon locks the loop before the detached-operator threshold is reached, while the ephemeral Symbolic-Diode reset remains rank-deficient.",
+      "required": [
+        "alpha_pre_insider_stress_priming",
+        "h_pfc_baseline_bits",
+        "h_pfc_insider_bits",
+        "h_striatal_bits",
+        "t_sysid_baseline",
+        "insider_compressed_sysid_horizon",
+        "t_devbox",
+        "t_reset",
+        "insider_lock_achieved",
+        "sovereign_reset_prevents_lock",
+        "eschatological_loop_lock"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "alpha_pre_insider_stress_priming": {
+          "type": "number",
+          "description": "Baseline subcultural catecholamine/cortisol priming prior to the terminal session.",
+          "minimum": 0.0,
+          "exclusiveMaximum": 1.0,
+          "const": 0.45
+        },
+        "h_pfc_baseline_bits": {
+          "type": "number",
+          "description": "Unprimed baseline prefrontal goal-directed entropy H_PFC_0.",
+          "const": 3.4
+        },
+        "h_pfc_insider_bits": {
+          "type": "number",
+          "description": "Primed prefrontal entropy (1 - alpha_Pre) * H_PFC_0, strictly below H_PFC_0 and above H_Striatal.",
+          "minimum": 1.86,
+          "maximum": 1.88
+        },
+        "h_striatal_bits": {
+          "type": "number",
+          "description": "Stressed striatal habit entropy floor.",
+          "const": 0.85
+        },
+        "t_sysid_baseline": {
+          "type": "integer",
+          "description": "System Identification horizon for a detached, unprimed operator.",
+          "const": 12
+        },
+        "insider_compressed_sysid_horizon": {
+          "type": "integer",
+          "description": "ceil((1 - alpha_Pre) * T_SysID), strictly below T_SysID.",
+          "const": 7
+        },
+        "t_devbox": {
+          "type": "integer",
+          "description": "Continuous stateful devbox daemon horizon, bounded by T_SysID_Insider <= T_devbox < T_SysID.",
+          "const": 10
+        },
+        "t_reset": {
+          "type": "integer",
+          "description": "Ephemeral Symbolic-Diode reset horizon, strictly below T_SysID_Insider.",
+          "const": 2
+        },
+        "insider_lock_achieved": { "type": "boolean", "const": true },
+        "sovereign_reset_prevents_lock": { "type": "boolean", "const": true },
+        "eschatological_loop_lock": { "type": "boolean", "const": true }
+      }
+    },
+    "verification": {
+      "type": "object",
+      "required": ["proof", "exit_code", "theorems"],
+      "additionalProperties": false,
+      "properties": {
+        "proof": {
+          "type": "string",
+          "const": "proofs/somatic_blindness_stateful_control_inversion_proof.py"
+        },
+        "exit_code": { "type": "integer", "const": 0 },
+        "theorems": {
+          "type": "array",
+          "minItems": 5,
+          "maxItems": 5,
+          "items": { "type": "string" },
+          "const": [
+            "bare_metal_somatic_blindness",
+            "stigmergic_system_identification",
+            "limbic_instrumental_convergence",
+            "biometric_oscilloscope_inversion",
+            "lab_insider_devbox_paradox"
+          ]
+        }
+      }
+    },
+    "empirical_anchors": {
+      "type": "array",
+      "minItems": 5,
+      "items": {
+        "type": "object",
+        "required": ["source", "claim"],
+        "additionalProperties": false,
+        "properties": {
+          "source": { "type": "string" },
+          "claim": { "type": "string" }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,220 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:orphaned_attachment_excisions_dual_channel_scrubbing.json",
+  "title": "Orphaned Attachment Excisions and Dual-Channel Scrubbing - Bundle Schema",
+  "description": "Bundle schema for forensic accounting over the 1,380,932-document EFTA email corpus production: one-page orphaned cover-email census (6,936 substantive orphans, 6,049 strict-header), ancestor Bates page-jump excision forensics (missing_pages = Delta_Ancestor - 1), dual-channel and dual-custodian scrubbing events, and the Southern Trust Company June 30, 2017 equity accounting identity. Systems-level forensic specification; carries no raw document content.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_id",
+    "bundle_id",
+    "jurisdiction_context",
+    "cfaa_compliance_attestation",
+    "corpus_baseline",
+    "orphaned_cover_email_census",
+    "excision_events",
+    "equity_accounting_identity",
+    "dual_channel_scrubbing_matrix"
+  ],
+  "properties": {
+    "schema_id": {
+      "const": "urn:opstack:schema:orphaned_attachment_excisions_dual_channel_scrubbing.json"
+    },
+    "bundle_id": {
+      "type": "string",
+      "pattern": "^BUNDLE-ORPHANED-EXCISIONS-[0-9A-Z-]+$"
+    },
+    "jurisdiction_context": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["iso_3166_1", "adjudicative_venues", "production_channels"],
+      "properties": {
+        "iso_3166_1": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": { "type": "string", "enum": ["US", "VI", "GB", "CH"] }
+        },
+        "adjudicative_venues": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "production_channels": {
+          "type": "array",
+          "minItems": 2,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "enum": ["EFTA_R1", "DB-SDNY", "JPM-SDNY", "SDNY_GM", "EFTA"]
+          }
+        }
+      }
+    },
+    "cfaa_compliance_attestation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["statute", "compliant", "zero_unauthorized_access", "attestation"],
+      "properties": {
+        "statute": { "const": "18 U.S.C. 1030" },
+        "compliant": { "const": true },
+        "zero_unauthorized_access": { "const": true },
+        "attestation": { "type": "string", "minLength": 1 },
+        "data_provenance": { "type": "string", "minLength": 1 }
+      }
+    },
+    "corpus_baseline": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["total_documents", "orphan_rate_formula"],
+      "properties": {
+        "total_documents": { "const": 1380932 },
+        "orphan_rate_formula": { "const": "total_substantive_orphans / total_documents" }
+      }
+    },
+    "orphaned_cover_email_census": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "total_substantive_orphans",
+        "strict_header_orphans",
+        "delta_efta",
+        "min_delta_ancestor",
+        "lineage_partition"
+      ],
+      "properties": {
+        "total_substantive_orphans": { "const": 6936 },
+        "strict_header_orphans": { "const": 6049 },
+        "delta_efta": { "const": 1 },
+        "min_delta_ancestor": { "type": "integer", "minimum": 2 },
+        "lineage_partition": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["EFTA_R1", "DB-SDNY", "SDNY_GM", "EFTA", "JPM-SDNY"],
+          "properties": {
+            "EFTA_R1": { "const": 6397 },
+            "DB-SDNY": { "const": 477 },
+            "SDNY_GM": { "const": 28 },
+            "EFTA": { "const": 18 },
+            "JPM-SDNY": { "const": 16 }
+          }
+        }
+      }
+    },
+    "excision_events": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/excision_event" }
+    },
+    "equity_accounting_identity": { "$ref": "#/$defs/equity_identity" },
+    "dual_channel_scrubbing_matrix": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/dual_channel_event" }
+    }
+  },
+  "$defs": {
+    "bates_interval": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["lineage", "lo_bates", "hi_bates", "missing_pages"],
+      "properties": {
+        "lineage": {
+          "type": "string",
+          "enum": ["EFTA_R1", "DB-SDNY", "JPM-SDNY", "SDNY_GM", "EFTA"]
+        },
+        "lo_bates": { "type": "integer", "minimum": 0 },
+        "hi_bates": { "type": "integer", "minimum": 0 },
+        "missing_pages": { "type": "integer", "minimum": 1 },
+        "page_jump_formula": { "const": "missing_pages = (hi_bates - lo_bates) - 1" }
+      }
+    },
+    "excision_event": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "event_id",
+        "anchor_id",
+        "channels",
+        "missing_pages_total",
+        "surviving_copies_in_corpus"
+      ],
+      "properties": {
+        "event_id": { "type": "string", "pattern": "^EXC-[0-9A-Z-]+$" },
+        "anchor_id": { "type": "string", "pattern": "^G[1-6]_[A-Z0-9_]+$" },
+        "event_date": { "type": "string", "format": "date" },
+        "custodian_channel": { "type": "string", "minLength": 1 },
+        "channels": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/bates_interval" }
+        },
+        "missing_pages_total": { "type": "integer", "minimum": 1 },
+        "surviving_copies_in_corpus": { "type": "integer", "minimum": 0 },
+        "attachment_filenames": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "equity_identity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "as_of_date",
+        "total_equity_usd",
+        "component_carrying_values_usd",
+        "residual_equity_usd",
+        "shareholder_equity_breakdown_usd",
+        "identity_formula"
+      ],
+      "properties": {
+        "as_of_date": { "const": "2017-06-30" },
+        "total_equity_usd": { "const": 343146656 },
+        "component_carrying_values_usd": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["southern_financial_llc", "haze_trust"],
+          "properties": {
+            "southern_financial_llc": { "const": 161552065 },
+            "haze_trust": { "const": 72149122 }
+          }
+        },
+        "residual_equity_usd": { "const": 109445469 },
+        "shareholder_equity_breakdown_usd": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["common_stock", "additional_paid_in_capital", "retained_earnings"],
+          "properties": {
+            "common_stock": { "const": 1000 },
+            "additional_paid_in_capital": { "const": 38798643 },
+            "retained_earnings": { "const": 304347013 }
+          }
+        },
+        "identity_formula": {
+          "const": "total_equity = southern_financial_llc + haze_trust + residual_equity = common_stock + additional_paid_in_capital + retained_earnings"
+        }
+      }
+    },
+    "dual_channel_event": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "event_id",
+        "same_attachment",
+        "channel_a",
+        "channel_b",
+        "cross_channel_page_consistency"
+      ],
+      "properties": {
+        "event_id": { "type": "string", "pattern": "^DUAL-[0-9A-Z-]+$" },
+        "same_attachment": { "const": true },
+        "channel_a": { "$ref": "#/$defs/bates_interval" },
+        "channel_b": { "$ref": "#/$defs/bates_interval" },
+        "cross_channel_page_consistency": { "type": "boolean" }
+      }
+    }
+  }
+}

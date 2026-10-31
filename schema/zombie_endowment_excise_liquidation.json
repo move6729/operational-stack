@@ -1,0 +1,200 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:zombie_endowment_excise_liquidation.json",
+  "title": "Zombie Endowment Command Economy and Excise Liquidation",
+  "description": "Typed measurement schema for the zombie-endowment command-economy model: macro corpus baseline, gatekeeper on/off-990 compensation and kickback channels, autophagic host-economy destruction signaling, endowment-caution paradox PE fee drag, and the IRC Chapter 42 / Section 507(c) excise liquidation cascade. All monetary values are USD.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "jurisdiction_context",
+    "cfaa_18_usc_1030_compliance_attestation",
+    "itar_ear_public_domain_attestation",
+    "macro_empirical_baseline",
+    "gatekeeper_compensation_and_kickbacks",
+    "autophagic_signaling_metrics",
+    "endowment_caution_paradox_metrics",
+    "chapter_42_and_507c_liquidation_cascade"
+  ],
+  "properties": {
+    "schema_version": { "type": "string", "const": "1.0" },
+    "jurisdiction_context": { "$ref": "#/$defs/jurisdiction_context" },
+    "cfaa_18_usc_1030_compliance_attestation": {
+      "type": "boolean",
+      "const": true,
+      "description": "Zero unauthorized access under 18 U.S.C. 1030 for all measured conduct and data flows."
+    },
+    "itar_ear_public_domain_attestation": {
+      "type": "boolean",
+      "const": true,
+      "description": "Public-domain game-theoretic and statutory systems specification; zero export-controlled technical data (22 C.F.R. 120.34; 15 C.F.R. 734.7)."
+    },
+    "macro_empirical_baseline": { "$ref": "#/$defs/macro_empirical_baseline" },
+    "gatekeeper_compensation_and_kickbacks": { "$ref": "#/$defs/gatekeeper_compensation_and_kickbacks" },
+    "autophagic_signaling_metrics": { "$ref": "#/$defs/autophagic_signaling_metrics" },
+    "endowment_caution_paradox_metrics": { "$ref": "#/$defs/endowment_caution_paradox_metrics" },
+    "chapter_42_and_507c_liquidation_cascade": { "$ref": "#/$defs/chapter_42_and_507c_liquidation_cascade" }
+  },
+  "$defs": {
+    "jurisdiction_context": {
+      "type": "object",
+      "description": "ISO 3166-1 jurisdiction scoping and primary statutory venue.",
+      "additionalProperties": false,
+      "required": ["iso_3166_1_alpha_2", "statutory_venue"],
+      "properties": {
+        "iso_3166_1_alpha_2": {
+          "type": "string",
+          "pattern": "^[A-Z]{2}$",
+          "description": "ISO 3166-1 alpha-2 jurisdiction code (e.g., US)."
+        },
+        "statutory_venue": {
+          "type": "string",
+          "description": "Primary statutory venue (e.g., Internal Revenue Code Chapter 42, Section 507(c))."
+        }
+      }
+    },
+    "macro_empirical_baseline": {
+      "type": "object",
+      "description": "Corpus-scale empirical baseline and Section 4942 payout-floor decomposition for the reference endowment.",
+      "additionalProperties": false,
+      "required": [
+        "corpus_total_usd",
+        "corpus_private_foundations_usd",
+        "corpus_university_endowments_usd",
+        "sample_endowment_corpus_usd",
+        "statutory_payout_floor_4942",
+        "admin_overhead_share",
+        "net_grant_payout_share",
+        "sample_annual_admin_overhead_usd",
+        "sample_annual_net_grants_usd"
+      ],
+      "properties": {
+        "corpus_total_usd": { "type": "number", "const": 2140000000000.0 },
+        "corpus_private_foundations_usd": { "type": "number", "const": 1300000000000.0 },
+        "corpus_university_endowments_usd": { "type": "number", "const": 840000000000.0 },
+        "sample_endowment_corpus_usd": { "type": "number", "const": 20000000000.0 },
+        "statutory_payout_floor_4942": { "type": "number", "const": 0.05 },
+        "admin_overhead_share": { "type": "number", "const": 0.012 },
+        "net_grant_payout_share": { "type": "number", "const": 0.038 },
+        "sample_annual_admin_overhead_usd": { "type": "number", "const": 240000000.0 },
+        "sample_annual_net_grants_usd": { "type": "number", "const": 760000000.0 }
+      }
+    },
+    "gatekeeper_compensation_and_kickbacks": {
+      "type": "object",
+      "description": "Trustee W-2 compensation plus the four off-990 shadow-compensation kickback channels.",
+      "additionalProperties": false,
+      "required": [
+        "compensation_regime",
+        "trustee_w2_salary_usd",
+        "trustee_comp_to_corpus_ratio",
+        "trustee_comp_bps",
+        "control_to_salary_ratio",
+        "off_990_board_stack_annual_usd",
+        "off_990_deferred_pe_annual_equiv_usd",
+        "off_990_subgrant_nepotism_annual_usd",
+        "off_990_coinvest_carry_waiver_annual_usd",
+        "off_990_shadow_comp_total_usd",
+        "total_gatekeeper_shadow_comp_usd"
+      ],
+      "properties": {
+        "compensation_regime": { "type": "string", "enum": ["compliant_w2_only", "defection_off_990_active"] },
+        "trustee_w2_salary_usd": { "type": "number", "const": 800000.0 },
+        "trustee_comp_to_corpus_ratio": { "type": "number", "const": 0.00004 },
+        "trustee_comp_bps": { "type": "number", "const": 4.0 },
+        "control_to_salary_ratio": { "type": "number", "const": 25000.0 },
+        "off_990_board_stack_annual_usd": { "type": "number", "const": 1500000.0 },
+        "off_990_deferred_pe_annual_equiv_usd": { "type": "number", "const": 1200000.0 },
+        "off_990_subgrant_nepotism_annual_usd": { "type": "number", "const": 400000.0 },
+        "off_990_coinvest_carry_waiver_annual_usd": { "type": "number", "const": 300000.0 },
+        "off_990_shadow_comp_total_usd": { "type": "number", "const": 3400000.0 },
+        "total_gatekeeper_shadow_comp_usd": { "type": "number", "const": 4200000.0 }
+      }
+    },
+    "autophagic_signaling_metrics": {
+      "type": "object",
+      "description": "Autophagic signaling: host-economy destruction per grant cycle relative to total gatekeeper capture.",
+      "additionalProperties": false,
+      "required": [
+        "host_economy_damage_per_grant_cycle_usd",
+        "autophagic_destruction_multiplier",
+        "gatekeeper_host_damage_internalization_coefficient",
+        "off_990_private_capture_usd",
+        "defection_privately_dominant"
+      ],
+      "properties": {
+        "host_economy_damage_per_grant_cycle_usd": { "type": "number", "const": 2000000000.0 },
+        "autophagic_destruction_multiplier": {
+          "type": "number",
+          "const": 476.190476,
+          "description": "$2.0B host damage / $4.20M total gatekeeper comp."
+        },
+        "gatekeeper_host_damage_internalization_coefficient": { "type": "number", "const": 0.0 },
+        "off_990_private_capture_usd": { "type": "number", "const": 3400000.0 },
+        "defection_privately_dominant": {
+          "type": "boolean",
+          "const": true,
+          "description": "Gatekeeper delta-U of irrational action strictly exceeds rational action under zero host-damage internalization."
+        }
+      }
+    },
+    "endowment_caution_paradox_metrics": {
+      "type": "object",
+      "description": "Endowment-caution paradox: illiquid PE/VC allocation marketed as prudence that compounds annual fee drag.",
+      "additionalProperties": false,
+      "required": [
+        "pe_vc_illiquid_share",
+        "sample_pe_vc_allocation_usd",
+        "pe_annual_mgmt_fee_rate",
+        "sample_pe_annual_mgmt_fee_drag_usd",
+        "fee_drag_share_of_corpus"
+      ],
+      "properties": {
+        "pe_vc_illiquid_share": { "type": "number", "const": 0.35 },
+        "sample_pe_vc_allocation_usd": { "type": "number", "const": 7000000000.0 },
+        "pe_annual_mgmt_fee_rate": { "type": "number", "const": 0.02 },
+        "sample_pe_annual_mgmt_fee_drag_usd": { "type": "number", "const": 140000000.0 },
+        "fee_drag_share_of_corpus": { "type": "number", "const": 0.007 }
+      }
+    },
+    "chapter_42_and_507c_liquidation_cascade": {
+      "type": "object",
+      "description": "IRC Chapter 42 entity and personal manager excise cascade plus the Section 507(c) termination recovery.",
+      "additionalProperties": false,
+      "required": [
+        "excise_4941_combined_rate",
+        "excise_4944_combined_entity_rate",
+        "excise_4944_combined_manager_rate",
+        "excise_4945_combined_entity_rate",
+        "excise_4945_combined_manager_rate",
+        "sample_4941_shadow_comp_tax_usd",
+        "sample_4944_entity_tax_on_pe_usd",
+        "sample_4945_entity_tax_on_grants_usd",
+        "sample_chapter_42_combined_entity_clawback_usd",
+        "sample_4944_manager_tax_usd",
+        "sample_4945_manager_tax_usd",
+        "sample_manager_personal_liability_usd",
+        "manager_liability_to_w2_multiple",
+        "section_507c_termination_recovery_usd",
+        "section_507c_recovery_share_of_net_assets"
+      ],
+      "properties": {
+        "excise_4941_combined_rate": { "type": "number", "const": 2.10 },
+        "excise_4944_combined_entity_rate": { "type": "number", "const": 0.35 },
+        "excise_4944_combined_manager_rate": { "type": "number", "const": 0.15 },
+        "excise_4945_combined_entity_rate": { "type": "number", "const": 1.20 },
+        "excise_4945_combined_manager_rate": { "type": "number", "const": 0.55 },
+        "sample_4941_shadow_comp_tax_usd": { "type": "number", "const": 7140000.0 },
+        "sample_4944_entity_tax_on_pe_usd": { "type": "number", "const": 2450000000.0 },
+        "sample_4945_entity_tax_on_grants_usd": { "type": "number", "const": 912000000.0 },
+        "sample_chapter_42_combined_entity_clawback_usd": { "type": "number", "const": 3369140000.0 },
+        "sample_4944_manager_tax_usd": { "type": "number", "const": 1050000000.0 },
+        "sample_4945_manager_tax_usd": { "type": "number", "const": 418000000.0 },
+        "sample_manager_personal_liability_usd": { "type": "number", "const": 1468000000.0 },
+        "manager_liability_to_w2_multiple": { "type": "number", "const": 1835.0 },
+        "section_507c_termination_recovery_usd": { "type": "number", "const": 20000000000.0 },
+        "section_507c_recovery_share_of_net_assets": { "type": "number", "const": 1.0 }
+      }
+    }
+  }
+}

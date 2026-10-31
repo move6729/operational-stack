@@ -1,0 +1,224 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:bates_cohomology_conservation_of_dollars.json",
+  "title": "Bates Cohomology and Conservation of Dollars Verification Record",
+  "description": "Verification record for the dual-bank (JPM/DB) EFTA discovery corpus bundle: Cech cover additivity of Bates-stamp overlap masses, regime partition of statement-page jumps, cents-exact conservation-of-dollars chain closure on reconstructed statements, non-trivial excision obstruction cohomology classes, collateral term-loan bound nesting, and cross-register page-count matches.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "jurisdiction_context",
+    "cfaa_compliance_attestation",
+    "corpus_cover",
+    "regime_partition",
+    "conservation_of_dollars",
+    "excision_obstructions",
+    "collateral_bounds",
+    "register_match",
+    "verification_summary"
+  ],
+  "properties": {
+    "jurisdiction_context": {
+      "description": "ISO 3166-1 alpha-2 code selecting the statutory module applied to this record.",
+      "type": "string",
+      "pattern": "^[A-Z]{2}$"
+    },
+    "cfaa_compliance_attestation": {
+      "description": "Zero-unauthorized-access attestation under 18 U.S.C. § 1030.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["statute", "attestation", "attested_by", "zero_unauthorized_access"],
+      "properties": {
+        "statute": { "const": "18 U.S.C. § 1030" },
+        "attestation": { "type": "string", "minLength": 1 },
+        "attested_by": { "type": "string", "minLength": 1 },
+        "zero_unauthorized_access": { "const": true }
+      }
+    },
+    "corpus_cover": {
+      "description": "Cech H^0 cover masses: dual-stamped overlap, excision, and missing-page counts per bank and combined.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["corpus_total_rows", "banks", "combined"],
+      "properties": {
+        "corpus_total_rows": { "$ref": "#/$defs/count" },
+        "banks": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["JPM", "DB"],
+          "properties": {
+            "JPM": { "$ref": "#/$defs/bank_cover_stats" },
+            "DB": { "$ref": "#/$defs/bank_cover_stats" }
+          }
+        },
+        "combined": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "dual_stamped_pages",
+            "total_excisions",
+            "post_gm_efta_gate_excisions",
+            "post_gm_efta_gate_ratio",
+            "missing_bank_pages"
+          ],
+          "properties": {
+            "dual_stamped_pages": { "$ref": "#/$defs/count" },
+            "total_excisions": { "$ref": "#/$defs/count" },
+            "post_gm_efta_gate_excisions": { "$ref": "#/$defs/count" },
+            "post_gm_efta_gate_ratio": { "$ref": "#/$defs/ratio" },
+            "missing_bank_pages": { "$ref": "#/$defs/count" }
+          }
+        }
+      }
+    },
+    "regime_partition": {
+      "description": "Disjoint regime partition of statement-page jumps.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "statement_page_jumps_total",
+        "distinct_gapped_statements",
+        "regime_1_pre_bates_bank_excisions",
+        "regime_2_post_discovery_efta_jumps",
+        "regime_2_missing_statement_pages",
+        "ocr_or_consolidated_excluded_jumps"
+      ],
+      "properties": {
+        "statement_page_jumps_total": { "$ref": "#/$defs/count" },
+        "distinct_gapped_statements": { "$ref": "#/$defs/count" },
+        "regime_1_pre_bates_bank_excisions": { "$ref": "#/$defs/count" },
+        "regime_2_post_discovery_efta_jumps": { "$ref": "#/$defs/count" },
+        "regime_2_missing_statement_pages": { "$ref": "#/$defs/count" },
+        "ocr_or_consolidated_excluded_jumps": { "$ref": "#/$defs/count" }
+      }
+    },
+    "conservation_of_dollars": {
+      "description": "Cents-exact chain-closure records for reconstructed statements (boundary residual must be 0.00).",
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/closure_record" }
+    },
+    "excision_obstructions": {
+      "description": "Non-trivial cohomology obstruction classes induced by excised pages (residual != 0).",
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/obstruction_record" }
+    },
+    "collateral_bounds": {
+      "description": "Term-loan collateral advance rates, maturity, and spread bounds from EFTA01463284.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "principal_usd",
+        "maturity_years",
+        "aog_ltv_min",
+        "aog_ltv_max",
+        "art_ltv_min",
+        "art_ltv_max",
+        "spread_min_bps",
+        "spread_max_bps"
+      ],
+      "properties": {
+        "principal_usd": { "$ref": "#/$defs/usd" },
+        "maturity_years": { "type": "integer", "const": 1 },
+        "aog_ltv_min": { "$ref": "#/$defs/ratio" },
+        "aog_ltv_max": { "$ref": "#/$defs/ratio" },
+        "art_ltv_min": { "$ref": "#/$defs/ratio" },
+        "art_ltv_max": { "$ref": "#/$defs/ratio" },
+        "spread_min_bps": { "type": "integer", "minimum": 0 },
+        "spread_max_bps": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "register_match": {
+      "description": "Cross-register page-count matches and unshattered document integrity.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "rrp73_elysium_pages",
+        "rrp72_southern_financial_pages",
+        "page_count_match",
+        "vol10_unshattered_multi_page_docs",
+        "vol10_unshattered_total_pages",
+        "cross_corpus_recovered_attachment_sets"
+      ],
+      "properties": {
+        "rrp73_elysium_pages": { "$ref": "#/$defs/count" },
+        "rrp72_southern_financial_pages": { "$ref": "#/$defs/count" },
+        "page_count_match": { "const": true },
+        "vol10_unshattered_multi_page_docs": { "$ref": "#/$defs/count" },
+        "vol10_unshattered_total_pages": { "$ref": "#/$defs/count" },
+        "cross_corpus_recovered_attachment_sets": { "$ref": "#/$defs/count" }
+      }
+    },
+    "verification_summary": {
+      "description": "Proof engine summary.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "checks_total", "checks_passed", "checks_failed"],
+      "properties": {
+        "status": { "enum": ["PASS", "FAIL"] },
+        "checks_total": { "$ref": "#/$defs/count" },
+        "checks_passed": { "$ref": "#/$defs/count" },
+        "checks_failed": { "$ref": "#/$defs/count" },
+        "key_outputs": { "type": "object" }
+      }
+    }
+  },
+  "$defs": {
+    "count": { "type": "integer", "minimum": 0 },
+    "usd": { "type": "number" },
+    "ratio": { "type": "number", "minimum": 0, "maximum": 1 },
+    "bank_cover_stats": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "dual_stamped_pages",
+        "total_excisions",
+        "post_gm_efta_gate_excisions",
+        "post_gm_efta_gate_ratio",
+        "missing_pages",
+        "shattered_1page_excisions",
+        "shattered_total_excisions",
+        "shattered_ratio"
+      ],
+      "properties": {
+        "dual_stamped_pages": { "$ref": "#/$defs/count" },
+        "total_excisions": { "$ref": "#/$defs/count" },
+        "post_gm_efta_gate_excisions": { "$ref": "#/$defs/count" },
+        "post_gm_efta_gate_ratio": { "$ref": "#/$defs/ratio" },
+        "missing_pages": { "$ref": "#/$defs/count" },
+        "shattered_1page_excisions": { "$ref": "#/$defs/count" },
+        "shattered_total_excisions": { "$ref": "#/$defs/count" },
+        "shattered_ratio": { "$ref": "#/$defs/ratio" }
+      }
+    },
+    "closure_record": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["statement_id", "boundary_residual_usd", "exact_closure"],
+      "properties": {
+        "statement_id": { "type": "string", "minLength": 1 },
+        "boundary_residual_usd": { "$ref": "#/$defs/usd" },
+        "exact_closure": { "const": true },
+        "flow_components": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/usd" }
+        }
+      }
+    },
+    "obstruction_record": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["statement_id", "obstruction_class_usd", "non_trivial_cohomology"],
+      "properties": {
+        "statement_id": { "type": "string", "minLength": 1 },
+        "obstruction_class_usd": { "$ref": "#/$defs/usd" },
+        "non_trivial_cohomology": { "const": true },
+        "excised_pages": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/count" }
+        },
+        "excised_volume_capacity_usd": { "$ref": "#/$defs/usd" }
+      }
+    }
+  }
+}

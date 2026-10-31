@@ -1,0 +1,332 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:thirty_three_bit_fugitive_entropy_exit_fallacy.json",
+  "$comment": "PLAIN-ENGLISH LEGAL NOTICE: This file is an abstract information-theoretic, statutory, and game-theoretic validation checklist (JSON Schema), NOT an accusation, indictment, or evidentiary filing. Every field encodes a published statutory citation, a public court docket, or a closed-form algebraic invariant.",
+  "title": "32.897-Bit Shannon Planetary Identification Bound, ICAO Doc 9303 CSCA/ArcFace Sieves, and Seven-Branch Institutional Off-Ramp Collapse Schema",
+  "description": "Validates the Shannon planetary identification entropy bound (H_Planet = log2(8.0e9) = 32.89735 bits), multi-modal entropy accumulation across low-profile fugitive control experiments (Pratt, Cazes, Kwon, McAfee), the four technical interdiction sieves (ICAO Doc 9303 CSCA PKI + 512-D ArcFace, 18 U.S.C. 2703(d) Clean-Contact Graph Inversion, Expat Behavioral Isotopes, and 18 U.S.C. 3059B Fixer Bounty Defection), and the seven-branch institutional off-ramp collapse (including 28 U.S.C. 2466, CIPA 5(a)/6(f), and the Burdick / Sovereign Abandonment Article II Pardon Trap), and the Branch 4 Intergenerational Heir / Dynasty-Trust Transfer Catch-22 (UVTA 8(a) zero-consideration donee BFP bar, 11 U.S.C. 548(e) 10-year self-settled reach-back, 1% retained FLP GP control-share nominee piercing, and sovereign nullum tempus occurrit regi INF limitations).",
+  "type": "object",
+  "required": [
+    "spec_version",
+    "jurisdiction_context",
+    "shannon_planetary_entropy_bound",
+    "empirical_fugitive_control_cohort",
+    "four_technical_interdiction_sieves",
+    "seven_branch_offramp_collapse",
+    "sdny_gx400_teterboro_revealed_preference"
+  ],
+  "properties": {
+    "spec_version": {
+      "type": "string",
+      "const": "SPEC-THIRTY-THREE-BIT-FUGITIVE-ENTROPY-AND-EXIT-FALLACY-v1.0"
+    },
+    "jurisdiction_context": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}$"
+    },
+    "shannon_planetary_entropy_bound": {
+      "type": "object",
+      "required": [
+        "planetary_population_N",
+        "h_planet_bits",
+        "regime_1971_paper_analog_bits",
+        "regime_1971_residual_set_size",
+        "regime_2026_digital_biometric_bits",
+        "regime_2026_residual_set_size",
+        "overdetermination_surplus_bits"
+      ],
+      "properties": {
+        "planetary_population_N": { "type": "number", "const": 8000000000 },
+        "h_planet_bits": { "type": "number", "minimum": 32.897, "maximum": 32.898 },
+        "regime_1971_paper_analog_bits": { "type": "number", "const": 7.5 },
+        "regime_1971_residual_set_size": { "type": "integer", "minimum": 44000000 },
+        "regime_2026_digital_biometric_bits": { "type": "number", "const": 88.8 },
+        "regime_2026_residual_set_size": { "type": "integer", "const": 1 },
+        "overdetermination_surplus_bits": { "type": "number", "minimum": 55.9 }
+      },
+      "additionalProperties": false
+    },
+    "empirical_fugitive_control_cohort": {
+      "type": "object",
+      "required": [
+        "michael_james_pratt",
+        "alexandre_cazes",
+        "kwon_do_hyung",
+        "john_david_mcafee"
+      ],
+      "properties": {
+        "michael_james_pratt": {
+          "type": "object",
+          "required": ["docket", "statute", "capture_jurisdiction", "entropy_leaked_bits", "exceeds_planetary_bound"],
+          "properties": {
+            "docket": { "type": "string", "const": "3:19-cr-04488-JM (S.D. Cal.)" },
+            "statute": { "type": "string", "const": "18 U.S.C. § 1591(a)" },
+            "capture_jurisdiction": { "type": "string", "const": "Madrid, Spain" },
+            "entropy_leaked_bits": { "type": "number", "const": 46.5 },
+            "exceeds_planetary_bound": { "type": "boolean", "const": true }
+          },
+          "additionalProperties": false
+        },
+        "alexandre_cazes": {
+          "type": "object",
+          "required": ["docket", "verbatim_header_leak", "capture_jurisdiction", "entropy_leaked_bits", "exceeds_planetary_bound"],
+          "properties": {
+            "docket": { "type": "string", "const": "1:17-cr-00144-DAD (E.D. Cal.)" },
+            "verbatim_header_leak": { "type": "string", "const": "Pimp_Alex_91@hotmail.com" },
+            "capture_jurisdiction": { "type": "string", "const": "Bangkok, Thailand" },
+            "entropy_leaked_bits": { "type": "number", "const": 52.0 },
+            "exceeds_planetary_bound": { "type": "boolean", "const": true }
+          },
+          "additionalProperties": false
+        },
+        "kwon_do_hyung": {
+          "type": "object",
+          "required": ["docket", "capture_jurisdiction", "entropy_leaked_bits", "exceeds_planetary_bound"],
+          "properties": {
+            "docket": { "type": "string", "const": "1:23-cr-00151-JPO (S.D.N.Y.)" },
+            "capture_jurisdiction": { "type": "string", "const": "Podgorica Airport, Montenegro" },
+            "entropy_leaked_bits": { "type": "number", "const": 64.0 },
+            "exceeds_planetary_bound": { "type": "boolean", "const": true }
+          },
+          "additionalProperties": false
+        },
+        "john_david_mcafee": {
+          "type": "object",
+          "required": ["docket", "capture_jurisdiction", "entropy_leaked_bits", "exceeds_planetary_bound"],
+          "properties": {
+            "docket": { "type": "string", "const": "2:20-cr-20075 (W.D. Tenn.)" },
+            "capture_jurisdiction": { "type": "string", "const": "Barcelona-El Prat Airport, Spain" },
+            "entropy_leaked_bits": { "type": "number", "const": 48.0 },
+            "exceeds_planetary_bound": { "type": "boolean", "const": true }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "four_technical_interdiction_sieves": {
+      "type": "object",
+      "required": [
+        "sieve_1_icao_9303_arcface",
+        "sieve_2_clean_contact_graph_inversion",
+        "sieve_3_expat_behavioral_isotopes",
+        "sieve_4_local_fixer_bounty_defection"
+      ],
+      "properties": {
+        "sieve_1_icao_9303_arcface": {
+          "type": "object",
+          "required": ["standard", "embedding_dimension", "fmr_threshold", "fnmr_bound", "forged_or_alias_passport_valid"],
+          "properties": {
+            "standard": { "type": "string", "const": "ICAO Doc 9303 Part 11/12 CSCA PKI" },
+            "embedding_dimension": { "type": "integer", "const": 512 },
+            "fmr_threshold": { "type": "number", "const": 1e-6 },
+            "fnmr_bound": { "type": "number", "maximum": 0.0028 },
+            "forged_or_alias_passport_valid": { "type": "integer", "const": 0 }
+          },
+          "additionalProperties": false
+        },
+        "sieve_2_clean_contact_graph_inversion": {
+          "type": "object",
+          "required": ["statutory_authority", "clean_contacts_monitored", "fugitive_burner_opsec", "locate_probability_24mo"],
+          "properties": {
+            "statutory_authority": { "type": "string", "const": "18 U.S.C. § 2703(d)" },
+            "clean_contacts_monitored": { "type": "integer", "minimum": 10, "maximum": 20 },
+            "fugitive_burner_opsec": { "type": "number", "const": 1.0 },
+            "locate_probability_24mo": { "type": "number", "minimum": 0.998 }
+          },
+          "additionalProperties": false
+        },
+        "sieve_3_expat_behavioral_isotopes": {
+          "type": "object",
+          "required": ["demographic_bits", "offramp_bits", "pharma_habit_bits", "anthropometry_bits", "total_isotope_bits", "exceeds_h_planet"],
+          "properties": {
+            "demographic_bits": { "type": "number", "const": 12.29 },
+            "offramp_bits": { "type": "number", "const": 9.97 },
+            "pharma_habit_bits": { "type": "number", "const": 8.97 },
+            "anthropometry_bits": { "type": "number", "const": 4.32 },
+            "total_isotope_bits": { "type": "number", "const": 35.55 },
+            "exceeds_h_planet": { "type": "boolean", "const": true }
+          },
+          "additionalProperties": false
+        },
+        "sieve_4_local_fixer_bounty_defection": {
+          "type": "object",
+          "required": ["statutory_authority", "bounty_usd", "helper_monthly_wage_usd", "wage_equivalence_years", "rational_defection_dominant"],
+          "properties": {
+            "statutory_authority": { "type": "string", "const": "18 U.S.C. § 3059B" },
+            "bounty_usd": { "type": "number", "const": 100000.0 },
+            "helper_monthly_wage_usd": { "type": "number", "const": 2000.0 },
+            "wage_equivalence_years": { "type": "number", "minimum": 4.16, "maximum": 4.17 },
+            "rational_defection_dominant": { "type": "boolean", "const": true }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "seven_branch_offramp_collapse": {
+      "type": "object",
+      "required": [
+        "branch_2_marsalek_hostage_trap",
+        "branch_3_2466_fugitive_disentitlement",
+        "branch_4_dapt_contempt_and_clawback",
+        "branch_4_intergenerational_dynasty_transfer_catch22",
+        "branch_5_cipa_section5_discovery_explosion",
+        "branch_6_article_ii_pardon_and_sovereign_abandonment",
+        "branch_7_proffer_1001_perjury_trap"
+      ],
+      "properties": {
+        "branch_2_marsalek_hostage_trap": {
+          "type": "object",
+          "required": [
+            "baseline_case",
+            "eighth_amendment_torture_shield",
+            "rubber_hose_key_extraction_complexity",
+            "retained_autonomous_capital_usd",
+            "hostage_utility_negative"
+          ],
+          "properties": {
+            "baseline_case": { "type": "string", "const": "Jan Marsalek / Wirecard AG (Moscow FSB/GRU Conscription)" },
+            "eighth_amendment_torture_shield": { "type": "boolean", "const": false },
+            "rubber_hose_key_extraction_complexity": { "type": "string", "const": "O(1)" },
+            "retained_autonomous_capital_usd": { "type": "number", "const": 0.0 },
+            "hostage_utility_negative": { "type": "boolean", "const": true }
+          },
+          "additionalProperties": false
+        },
+        "branch_3_2466_fugitive_disentitlement": {
+          "type": "object",
+          "required": [
+            "statute",
+            "precedent",
+            "western_balance_sheet_retained_pct",
+            "dominated_by_domestic_defense",
+            "metropolis_crowd_entropy_bits",
+            "us_treasury_esf_imf_lifeline_dependency",
+            "shell1_counterintelligence_interdiction_prob",
+            "western_hemisphere_metropolis_human_shield_immunity"
+          ],
+          "properties": {
+            "statute": { "type": "string", "const": "28 U.S.C. § 2466" },
+            "precedent": { "type": "string", "const": "Collazos v. United States, 368 F.3d 190 (2d Cir. 2004)" },
+            "western_balance_sheet_retained_pct": { "type": "number", "const": 0.0 },
+            "dominated_by_domestic_defense": { "type": "boolean", "const": true },
+            "metropolis_crowd_entropy_bits": { "type": "number", "const": 23.84 },
+            "us_treasury_esf_imf_lifeline_dependency": { "type": "integer", "const": 1 },
+            "shell1_counterintelligence_interdiction_prob": { "type": "number", "const": 1.0 },
+            "western_hemisphere_metropolis_human_shield_immunity": { "type": "number", "const": 0.0 }
+          },
+          "additionalProperties": false
+        },
+        "branch_4_dapt_contempt_and_clawback": {
+          "type": "object",
+          "required": ["clawback_statute", "contempt_precedent", "self_created_impossibility_defense_valid"],
+          "properties": {
+            "clawback_statute": { "type": "string", "const": "28 U.S.C. § 3304(b) / UVTA § 4 / 18 U.S.C. § 981(a)(1)(C)" },
+            "contempt_precedent": { "type": "string", "const": "FTC v. Affordable Media, LLC (Anderson), 179 F.3d 1228 (9th Cir. 1999)" },
+            "self_created_impossibility_defense_valid": { "type": "boolean", "const": false }
+          },
+          "additionalProperties": false
+        },
+        "branch_4_intergenerational_dynasty_transfer_catch22": {
+          "type": "object",
+          "required": [
+            "clawback_statute",
+            "bfp_defense_statute",
+            "self_settled_trust_lookback_statute",
+            "donee_consideration_paid_usd",
+            "donee_bfp_standing",
+            "flp_gp_control_share_retained",
+            "nominee_alter_ego_pierced",
+            "clawback_fraction_horn1",
+            "bankruptcy_self_settled_trust_lookback_years",
+            "sovereign_nullum_tempus_limitations",
+            "horn2_unencumbered_donee_clawback_fraction",
+            "kids_retained_wealth_both_horns_usd"
+          ],
+          "properties": {
+            "clawback_statute": { "type": "string", "const": "28 U.S.C. § 3304(b) / UVTA §§ 4(a)(2), 5(a), 8(a), 9 / 18 U.S.C. § 981(a)(1)(C)" },
+            "bfp_defense_statute": { "type": "string", "const": "UVTA § 8(a) / 11 U.S.C. § 548(c) (good faith + reasonably equivalent value)" },
+            "self_settled_trust_lookback_statute": { "type": "string", "const": "11 U.S.C. § 548(e)(1) (10-year self-settled trust reach-back)" },
+            "donee_consideration_paid_usd": { "type": "number", "const": 0.0 },
+            "donee_bfp_standing": { "type": "integer", "const": 0 },
+            "flp_gp_control_share_retained": { "type": "number", "const": 0.01 },
+            "nominee_alter_ego_pierced": { "type": "integer", "const": 1 },
+            "clawback_fraction_horn1": { "type": "number", "const": 1.0 },
+            "bankruptcy_self_settled_trust_lookback_years": { "type": "integer", "const": 10 },
+            "sovereign_nullum_tempus_limitations": { "type": "string", "const": "INF" },
+            "horn2_unencumbered_donee_clawback_fraction": { "type": "number", "const": 1.0 },
+            "kids_retained_wealth_both_horns_usd": { "type": "number", "const": 0.0 }
+          },
+          "additionalProperties": false
+        },
+        "branch_5_cipa_section5_discovery_explosion": {
+          "type": "object",
+          "required": ["statute", "precedent", "net_entropy_leaked_by_defendant_bits", "blocks_private_1595_civil_suits"],
+          "properties": {
+            "statute": { "type": "string", "const": "18 U.S.C. App. 3 §§ 5(a), 6(c), 6(f)" },
+            "precedent": { "type": "string", "const": "United States v. Yunis, 867 F.2d 617 (D.C. Cir. 1989)" },
+            "net_entropy_leaked_by_defendant_bits": { "type": "number", "exclusiveMinimum": 0.0 },
+            "blocks_private_1595_civil_suits": { "type": "boolean", "const": false }
+          },
+          "additionalProperties": false
+        },
+        "branch_6_article_ii_pardon_and_sovereign_abandonment": {
+          "type": "object",
+          "required": [
+            "constitutional_clause",
+            "compelled_testimony_precedent",
+            "dual_sovereignty_precedent",
+            "state_anti_pardon_statute",
+            "state_anti_pardon_material_information_trigger",
+            "regulatory_debarment_precedent",
+            "fifth_amendment_survives_pardon",
+            "future_donor_utility_burned_cutout",
+            "sovereign_abandonment_strictly_dominant"
+          ],
+          "properties": {
+            "constitutional_clause": { "type": "string", "const": "U.S. Const. art. II, § 2, cl. 1" },
+            "compelled_testimony_precedent": { "type": "string", "const": "Burdick v. United States, 236 U.S. 79 (1915)" },
+            "dual_sovereignty_precedent": { "type": "string", "const": "Gamble v. United States, 587 U.S. 678 (2019)" },
+            "state_anti_pardon_statute": { "type": "string", "const": "N.Y. Crim. Proc. Law § 40.51 (enacted Oct. 18, 2019)" },
+            "state_anti_pardon_material_information_trigger": { "type": "string", "const": "N.Y. Crim. Proc. Law § 40.51(6)" },
+            "regulatory_debarment_precedent": { "type": "string", "const": "Staley v. FCA, [2025] UKUT 00203 (TCC)" },
+            "fifth_amendment_survives_pardon": { "type": "boolean", "const": false },
+            "future_donor_utility_burned_cutout": { "type": "number", "const": 0.0 },
+            "sovereign_abandonment_strictly_dominant": { "type": "boolean", "const": true }
+          },
+          "additionalProperties": false
+        },
+        "branch_7_proffer_1001_perjury_trap": {
+          "type": "object",
+          "required": ["statute", "parens_patriae_bypass", "bilateral_nda_binds_state_ag"],
+          "properties": {
+            "statute": { "type": "string", "const": "18 U.S.C. § 1001" },
+            "parens_patriae_bypass": { "type": "string", "const": "18 U.S.C. § 1595(d)" },
+            "bilateral_nda_binds_state_ag": { "type": "boolean", "const": false }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "sdny_gx400_teterboro_revealed_preference": {
+      "type": "object",
+      "required": [
+        "trial_exhibit",
+        "alias_name",
+        "listed_residence",
+        "july_6_2019_teterboro_return_rational_ex_ante",
+        "post_landing_sovereign_abandonment_triggered"
+      ],
+      "properties": {
+        "trial_exhibit": { "type": "string", "const": "United States v. Maxwell, No. 1:20-cr-00330-AJN, SDNY GX-400" },
+        "alias_name": { "type": "string", "const": "Marius Fortelni" },
+        "listed_residence": { "type": "string", "const": "Saudi Arabia" },
+        "july_6_2019_teterboro_return_rational_ex_ante": { "type": "boolean", "const": true },
+        "post_landing_sovereign_abandonment_triggered": { "type": "boolean", "const": true }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

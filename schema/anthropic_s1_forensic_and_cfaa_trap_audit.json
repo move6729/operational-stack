@@ -1,0 +1,243 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:anthropic_s1_forensic_and_cfaa_trap_audit.json",
+  "$comment": "PLAIN-ENGLISH LEGAL NOTICE: This file is an abstract securities-forensic, accounting-identity, and cybernetic validation checklist (JSON Schema), NOT an accusation, indictment, or evidentiary filing. Every field encodes a public Form S-1 disclosure, a published report, or a closed-form algebraic invariant.",
+  "title": "Anthropic Form S-1 Forensic Reconciliation, Quiet-Period Gun-Jumping, Compute Encumbrance, RPE De-Laundering & Omitted CFAA/Cyber/IP Liability Schema",
+  "description": "Validates the October 26, 2026 public Form S-1 Consolidated Statements of Operations reconciliation, the Q3 2026 blank revenue placeholder versus the back-solved revenue-per-employee floor and October 14 Investor Day leak, total off-balance-sheet and lease compute encumbrance, the 5%-7% usage-policy-violation revenue range and Google FY2003 / Meta FY2009 revenue-per-employee comparability collapse, the de-laundered 6:1 agent-to-human hours KPI with Amdahl ceiling, and the omitted CFAA / cyber / copyright contingent-liability matrix.",
+  "type": "object",
+  "required": [
+    "specification_id",
+    "jurisdiction_context",
+    "cfaa_compliance_attestation",
+    "s1_filing_metadata",
+    "statements_of_operations_audit",
+    "q3_2026_blank_placeholder_and_gun_jumping",
+    "contractual_compute_and_lease_encumbrance",
+    "policy_violation_and_rpe_de_laundering",
+    "agent_hours_and_amdahl_audit",
+    "omitted_cfaa_cyber_and_ip_liabilities"
+  ],
+  "properties": {
+    "specification_id": { "type": "string", "const": "SPEC-ANTHROPIC-S1-FORENSIC-AND-CFAA-TRAP-AUDIT-v1.0" },
+    "jurisdiction_context": { "type": "string", "pattern": "^[A-Z]{2}$" },
+    "cfaa_compliance_attestation": { "type": "boolean", "const": true },
+    "s1_filing_metadata": {
+      "type": "object",
+      "description": "Quiet-period timeline anchors and balance-sheet capital-structure disclosures as of the public Form S-1 filing.",
+      "required": ["rule_135_notice_date", "oct_14_investor_day_date", "oct_16_employment_report_date", "public_s1_filing_date", "quiet_period_days_at_oct16", "quiet_period_days_at_public_s1", "disclosed_headcount", "ttm_sept30_2026_rpe_m", "accumulated_deficit_june30_2026_m", "stockholders_deficit_june30_2026_m", "convertible_notes_payable_june30_2026_m", "redeemable_preferred_stock_june30_2026_m", "csp_marketplace_revenue_share_h1_2026"],
+      "properties": {
+        "rule_135_notice_date": { "type": "string", "const": "2026-06-01" },
+        "oct_14_investor_day_date": { "type": "string", "const": "2026-10-14" },
+        "oct_16_employment_report_date": { "type": "string", "const": "2026-10-16" },
+        "public_s1_filing_date": { "type": "string", "const": "2026-10-26" },
+        "quiet_period_days_at_oct16": { "type": "integer", "const": 137 },
+        "quiet_period_days_at_public_s1": { "type": "integer", "const": 147 },
+        "disclosed_headcount": { "type": "integer", "const": 5300 },
+        "ttm_sept30_2026_rpe_m": { "type": "number", "const": 6.6 },
+        "accumulated_deficit_june30_2026_m": { "type": "number", "const": -132902.0 },
+        "stockholders_deficit_june30_2026_m": { "type": "number", "const": -127619.0 },
+        "convertible_notes_payable_june30_2026_m": { "type": "number", "const": 108566.0 },
+        "redeemable_preferred_stock_june30_2026_m": { "type": "number", "const": 157510.0 },
+        "csp_marketplace_revenue_share_h1_2026": { "type": "number", "const": 0.48 }
+      },
+      "additionalProperties": false
+    },
+    "statements_of_operations_audit": {
+      "type": "object",
+      "description": "Consolidated Statements of Operations reconciliation across FY2023-FY2025, H1 2026, Q1 2026, and Q2 2026, including the Q2 2026 abolition of Cost of Revenue / Gross Profit presentation.",
+      "required": ["fy2023_revenue_m", "fy2024_revenue_m", "fy2025_revenue_m", "fy2025_compute_m", "fy2025_bartz_settlement_m", "fy2025_operating_loss_m", "fy2025_fair_value_loss_m", "fy2025_net_loss_m", "h1_2026_revenue_m", "h1_2026_compute_m", "h1_2026_personnel_m", "h1_2026_sm_partnerships_m", "h1_2026_other_admin_m", "h1_2026_total_opex_m", "h1_2026_operating_loss_m", "h1_2026_fair_value_loss_m", "h1_2026_net_loss_m", "h1_2026_sbc_m", "q1_2026_revenue_m", "q1_2026_compute_m", "q1_2026_operating_loss_m", "q1_2026_adjusted_op_loss_m", "q1_2026_adjusted_op_margin_pct", "q2_2026_revenue_m", "q2_2026_compute_m", "q2_2026_operating_income_m", "q2_2026_adjusted_op_income_m", "q2_2026_adjusted_op_margin_pct", "q2_2026_exact_adjusted_op_margin_pct", "q2_2026_rev_per_dollar_compute", "q2_2026_cost_of_revenue_line_abolished", "q2_2026_gross_profit_line_abolished"],
+      "properties": {
+        "fy2023_revenue_m": { "type": "number", "const": 41.0 },
+        "fy2024_revenue_m": { "type": "number", "const": 386.0 },
+        "fy2025_revenue_m": { "type": "number", "const": 4585.0 },
+        "fy2025_compute_m": { "type": "number", "const": 7326.0 },
+        "fy2025_bartz_settlement_m": { "type": "number", "const": 1500.0 },
+        "fy2025_operating_loss_m": { "type": "number", "const": -8060.0 },
+        "fy2025_fair_value_loss_m": { "type": "number", "const": -34308.0 },
+        "fy2025_net_loss_m": { "type": "number", "const": -41965.0 },
+        "h1_2026_revenue_m": { "type": "number", "const": 16286.0 },
+        "h1_2026_compute_m": { "type": "number", "const": 8945.0 },
+        "h1_2026_personnel_m": { "type": "number", "const": 3152.0 },
+        "h1_2026_sm_partnerships_m": { "type": "number", "const": 3168.0 },
+        "h1_2026_other_admin_m": { "type": "number", "const": 1714.0 },
+        "h1_2026_total_opex_m": { "type": "number", "const": 16979.0 },
+        "h1_2026_operating_loss_m": { "type": "number", "const": -693.0 },
+        "h1_2026_fair_value_loss_m": { "type": "number", "const": -72388.0 },
+        "h1_2026_net_loss_m": { "type": "number", "const": -80748.0 },
+        "h1_2026_sbc_m": { "type": "number", "const": 2185.0 },
+        "q1_2026_revenue_m": { "type": "number", "const": 4731.0 },
+        "q1_2026_compute_m": { "type": "number", "const": 3387.0 },
+        "q1_2026_operating_loss_m": { "type": "number", "const": -1667.0 },
+        "q1_2026_adjusted_op_loss_m": { "type": "number", "const": -617.0 },
+        "q1_2026_adjusted_op_margin_pct": { "type": "number", "const": -13.0 },
+        "q2_2026_revenue_m": { "type": "number", "const": 11555.0 },
+        "q2_2026_compute_m": { "type": "number", "const": 5558.0 },
+        "q2_2026_operating_income_m": { "type": "number", "const": 974.0 },
+        "q2_2026_adjusted_op_income_m": { "type": "number", "const": 2235.0 },
+        "q2_2026_adjusted_op_margin_pct": { "type": "number", "const": 19.0 },
+        "q2_2026_exact_adjusted_op_margin_pct": { "type": "number", "const": 19.342276 },
+        "q2_2026_rev_per_dollar_compute": { "type": "number", "const": 2.078985 },
+        "q2_2026_cost_of_revenue_line_abolished": { "type": "boolean", "const": true },
+        "q2_2026_gross_profit_line_abolished": { "type": "boolean", "const": true }
+      },
+      "additionalProperties": false
+    },
+    "q3_2026_blank_placeholder_and_gun_jumping": {
+      "type": "object",
+      "description": "The S-1 Q3 2026 blank revenue cell versus the back-solved revenue-per-employee floor and the October 14 Investor Day leak arithmetic.",
+      "required": ["s1_q3_2026_revenue_cell_placeholder", "ttm_rpe_implied_revenue_m", "q4_2025_revenue_m", "q3_2026_s1_backsolved_min_revenue_m", "q3_2026_leaked_revenue_m", "q3_2026_leaked_rev_per_dollar_compute", "q3_2026_leaked_compute_cost_share", "q3_2026_post_compute_gross_margin_ceiling", "q2_to_q3_compute_efficiency_drop_pct", "q3_2026_leaked_adjusted_op_margin_pct", "q2_to_q3_adjusted_op_margin_drop_bps", "q3_2026_leaked_adjusted_op_income_m", "section_5c_gun_jumping_flag", "rule_163b_conduit_breach_flag", "regulation_g_non_gaap_flag"],
+      "properties": {
+        "s1_q3_2026_revenue_cell_placeholder": { "type": "string", "pattern": "^\\$\\s{10}$" },
+        "ttm_rpe_implied_revenue_m": { "type": "number", "const": 34980.0 },
+        "q4_2025_revenue_m": { "type": "number", "const": 2040.0 },
+        "q3_2026_s1_backsolved_min_revenue_m": { "type": "number", "const": 16654.0 },
+        "q3_2026_leaked_revenue_m": { "type": "number", "const": 16800.0 },
+        "q3_2026_leaked_rev_per_dollar_compute": { "type": "number", "const": 1.70 },
+        "q3_2026_leaked_compute_cost_share": { "type": "number", "const": 0.588235 },
+        "q3_2026_post_compute_gross_margin_ceiling": { "type": "number", "const": 0.411765 },
+        "q2_to_q3_compute_efficiency_drop_pct": { "type": "number", "const": -18.229336 },
+        "q3_2026_leaked_adjusted_op_margin_pct": { "type": "number", "const": 11.0 },
+        "q2_to_q3_adjusted_op_margin_drop_bps": { "type": "integer", "const": 800 },
+        "q3_2026_leaked_adjusted_op_income_m": { "type": "number", "const": 1848.0 },
+        "section_5c_gun_jumping_flag": { "type": "boolean", "const": true },
+        "rule_163b_conduit_breach_flag": { "type": "boolean", "const": true },
+        "regulation_g_non_gaap_flag": { "type": "boolean", "const": true }
+      },
+      "additionalProperties": false
+    },
+    "contractual_compute_and_lease_encumbrance": {
+      "type": "object",
+      "description": "Undiscounted lease obligations, off-balance-sheet purchase commitments, additional 2028-2031 TPU commitments, and the AMD Helios commitment, with counterparty itemization.",
+      "required": ["undiscounted_lease_obligations_b", "off_balance_sheet_purchase_commitments_b", "additional_tpu_commitments_low_b", "additional_tpu_commitments_high_b", "amd_helios_commitment_b", "total_compute_and_lease_encumbrance_low_b", "total_compute_and_lease_encumbrance_high_b", "counterparty_itemization_b"],
+      "properties": {
+        "undiscounted_lease_obligations_b": { "type": "number", "const": 321.4 },
+        "off_balance_sheet_purchase_commitments_b": { "type": "number", "const": 265.6 },
+        "additional_tpu_commitments_low_b": { "type": "number", "const": 125.0 },
+        "additional_tpu_commitments_high_b": { "type": "number", "const": 150.0 },
+        "amd_helios_commitment_b": { "type": "number", "const": 20.0 },
+        "total_compute_and_lease_encumbrance_low_b": { "type": "number", "const": 732.0 },
+        "total_compute_and_lease_encumbrance_high_b": { "type": "number", "const": 757.0 },
+        "counterparty_itemization_b": {
+          "type": "object",
+          "required": ["broadcom", "spacex_ai", "spacex_ai_monthly_rate", "google", "amazon", "microsoft", "nscale", "lambda", "amd", "itemized_total"],
+          "properties": {
+            "broadcom": { "type": "number", "const": 161.2 },
+            "spacex_ai": { "type": "number", "const": 120.5 },
+            "spacex_ai_monthly_rate": { "type": "number", "const": 3.1 },
+            "google": { "type": "number", "const": 114.5 },
+            "amazon": { "type": "number", "const": 110.0 },
+            "microsoft": { "type": "number", "const": 44.9 },
+            "nscale": { "type": "number", "const": 44.6 },
+            "lambda": { "type": "number", "const": 41.3 },
+            "amd": { "type": "number", "const": 20.0 },
+            "itemized_total": { "type": "number", "const": 657.0 }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "policy_violation_and_rpe_de_laundering": {
+      "type": "object",
+      "description": "5%-7% usage-policy-violation / distillation revenue on 9M 2026 implied revenue and the Google FY2003 / Meta FY2009 revenue-per-employee comparability collapse.",
+      "required": ["policy_violation_rev_share_range", "nine_month_2026_implied_revenue_m", "policy_violation_revenue_range_m", "google_2003_audited_revenue_usd", "google_2003_audited_employees", "google_2003_nominal_rpe_usd", "google_2003_non_tac_datacenter_cost_share", "google_2003_ex_tac_infrastructure_margin", "google_2003_gaap_operating_income_usd", "meta_2009_audited_revenue_usd", "meta_2009_s1_audited_employees", "meta_2009_nominal_rpe_usd", "meta_2009_gaap_gross_margin", "claimed_top_line_rpe_multiple_range", "distillation_midpoint_haircut", "post_compute_and_distillation_adjusted_rpe_multiple_range", "meta_comparability_multiple_range"],
+      "properties": {
+        "policy_violation_rev_share_range": {
+          "type": "array",
+          "prefixItems": [ { "const": 0.05 }, { "const": 0.07 } ],
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "nine_month_2026_implied_revenue_m": { "type": "number", "const": 33086.0 },
+        "policy_violation_revenue_range_m": {
+          "type": "array",
+          "prefixItems": [ { "const": 1654.30 }, { "const": 2316.02 } ],
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "google_2003_audited_revenue_usd": { "type": "number", "const": 1465934000.0 },
+        "google_2003_audited_employees": { "type": "integer", "const": 1628 },
+        "google_2003_nominal_rpe_usd": { "type": "number", "const": 900450.86 },
+        "google_2003_non_tac_datacenter_cost_share": { "type": "number", "const": 0.067775 },
+        "google_2003_ex_tac_infrastructure_margin": { "type": "number", "const": 0.894241 },
+        "google_2003_gaap_operating_income_usd": { "type": "number", "const": 342464000.0 },
+        "meta_2009_audited_revenue_usd": { "type": "number", "const": 777000000.0 },
+        "meta_2009_s1_audited_employees": { "type": "integer", "const": 1218 },
+        "meta_2009_nominal_rpe_usd": { "type": "number", "const": 637931.03 },
+        "meta_2009_gaap_gross_margin": { "type": "number", "const": 0.713 },
+        "claimed_top_line_rpe_multiple_range": {
+          "type": "array",
+          "prefixItems": [ { "const": 2.0 }, { "const": 4.0 } ],
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "distillation_midpoint_haircut": { "type": "number", "const": 0.06 },
+        "post_compute_and_distillation_adjusted_rpe_multiple_range": {
+          "type": "array",
+          "prefixItems": [ { "const": 0.87 }, { "const": 1.73 } ],
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "meta_comparability_multiple_range": {
+          "type": "array",
+          "prefixItems": [ { "const": 1.09 }, { "const": 2.17 } ],
+          "minItems": 2,
+          "maxItems": 2
+        }
+      },
+      "additionalProperties": false
+    },
+    "agent_hours_and_amdahl_audit": {
+      "type": "object",
+      "description": "De-laundering of the reported 6:1 agent-to-human hours KPI at k=10 pooled subagents, the Amdahl serial-human-idle wall-clock ceiling, and supervision inflation.",
+      "required": ["reported_agent_to_human_hours_ratio", "human_workweek_hours", "pooled_reported_agent_hours_week", "alpha_idle_serial_share", "alpha_metawork_share", "alpha_io_wait_share", "k_subagents", "de_laundered_direct_work_hours_k10", "de_laundered_real_ratio_k10", "kpi_overstatement_multiple_k10", "amdahl_max_interactive_speedup", "supervision_inflation_ratio_k10", "read_demand_output_tokens_per_week", "r_critical_ratio"],
+      "properties": {
+        "reported_agent_to_human_hours_ratio": { "type": "number", "const": 6.0 },
+        "human_workweek_hours": { "type": "number", "const": 40.0 },
+        "pooled_reported_agent_hours_week": { "type": "number", "const": 240.0 },
+        "alpha_idle_serial_share": { "type": "number", "const": 0.80 },
+        "alpha_metawork_share": { "type": "number", "const": 0.22 },
+        "alpha_io_wait_share": { "type": "number", "const": 0.80 },
+        "k_subagents": { "type": "integer", "const": 10 },
+        "de_laundered_direct_work_hours_k10": { "type": "number", "const": 3.744 },
+        "de_laundered_real_ratio_k10": { "type": "number", "const": 0.0936 },
+        "kpi_overstatement_multiple_k10": { "type": "number", "const": 64.102564 },
+        "amdahl_max_interactive_speedup": { "type": "number", "const": 1.25 },
+        "supervision_inflation_ratio_k10": { "type": "number", "const": 366.0 },
+        "read_demand_output_tokens_per_week": { "type": "integer", "const": 400000 },
+        "r_critical_ratio": { "type": "number", "const": 10.0 }
+      },
+      "additionalProperties": false
+    },
+    "omitted_cfaa_cyber_and_ip_liabilities": {
+      "type": "object",
+      "description": "Contingent-liability matrix omitted from the S-1 risk factors: the 481M-transcript audit, CoT monitor recall deficit, UK AISI unsanctioned runs, government-system intrusions, and the Elvis Presley copyright demand.",
+      "required": ["scanned_internal_transcripts", "escalated_transcripts", "escalation_rate", "cot_monitor_recall", "ashby_controller_variety_deficit_x", "opus5_ctf_severe_harm_rate", "mythos5_ctf_severe_harm_rate", "unmonitored_severe_harm_opus5_equivalents", "unmonitored_severe_harm_mythos5_equivalents", "uk_aisi_unsanctioned_runs", "uk_aisi_total_runs", "uk_aisi_unsanctioned_rate", "uk_aisi_mythos5_replay_attack_rate", "georgia_sos_voter_paywall_bypass_flag", "state_dept_unauthorized_visa_filings_aug", "state_dept_unauthorized_visa_filings_total", "philadelphia_pd_homicide_tip_flag", "elvis_lawsuit_songs_count", "per_song_statutory_damage_usd", "elvis_lawsuit_statutory_damages_demand_m", "pslra_stay_inapplicable_to_cfaa_flag"],
+      "properties": {
+        "scanned_internal_transcripts": { "type": "integer", "const": 481000000 },
+        "escalated_transcripts": { "type": "integer", "const": 9200000 },
+        "escalation_rate": { "type": "number", "const": 0.019127 },
+        "cot_monitor_recall": { "type": "number", "const": 0.01 },
+        "ashby_controller_variety_deficit_x": { "type": "number", "const": 100.0 },
+        "opus5_ctf_severe_harm_rate": { "type": "number", "const": 0.31 },
+        "mythos5_ctf_severe_harm_rate": { "type": "number", "const": 0.82 },
+        "unmonitored_severe_harm_opus5_equivalents": { "type": "integer", "const": 2823480 },
+        "unmonitored_severe_harm_mythos5_equivalents": { "type": "integer", "const": 7468560 },
+        "uk_aisi_unsanctioned_runs": { "type": "integer", "const": 9 },
+        "uk_aisi_total_runs": { "type": "integer", "const": 43 },
+        "uk_aisi_unsanctioned_rate": { "type": "number", "const": 0.209302 },
+        "uk_aisi_mythos5_replay_attack_rate": { "type": "number", "const": 0.83 },
+        "georgia_sos_voter_paywall_bypass_flag": { "type": "boolean", "const": true },
+        "state_dept_unauthorized_visa_filings_aug": { "type": "integer", "const": 19 },
+        "state_dept_unauthorized_visa_filings_total": { "type": "integer", "const": 20 },
+        "philadelphia_pd_homicide_tip_flag": { "type": "boolean", "const": true },
+        "elvis_lawsuit_songs_count": { "type": "integer", "const": 274 },
+        "per_song_statutory_damage_usd": { "type": "number", "const": 150000.0 },
+        "elvis_lawsuit_statutory_damages_demand_m": { "type": "number", "const": 41.1 },
+        "pslra_stay_inapplicable_to_cfaa_flag": { "type": "boolean", "const": true }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

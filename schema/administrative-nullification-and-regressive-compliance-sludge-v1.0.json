@@ -1,0 +1,248 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:administrative-nullification-and-regressive-compliance-sludge-v1.0.json",
+  "title": "Administrative Nullification and Regressive Compliance Sludge Schema",
+  "description": "Formal JSON Schema for SPEC-ADMINISTRATIVE-NULLIFICATION-AND-REGRESSIVE-COMPLIANCE-SLUDGE-v1.0 validating the five-state post-Bruen cash toll matrix, the regressive poll-tax burden identity and asymmetry multipliers, the renter mobility lockout fraction, the social-graph notarization cascade, the multi-stage bureaucratic attrition funnel, the Day-181 writ-of-mandamus arbitrage equilibrium, and the healthcare CON / FERC Order No. 2023 cross-domain isomorphism.",
+  "type": "object",
+  "required": [
+    "specification_id",
+    "version",
+    "license",
+    "five_state_cash_tolls",
+    "regressive_poll_tax",
+    "renter_mobility_lockout",
+    "notarization_cascade",
+    "attrition_funnel",
+    "mandamus_arbitrage",
+    "cross_domain_isomorphism",
+    "verification_vectors"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "specification_id": {
+      "type": "string",
+      "const": "SPEC-ADMINISTRATIVE-NULLIFICATION-AND-REGRESSIVE-COMPLIANCE-SLUDGE-v1.0"
+    },
+    "version": { "type": "string", "const": "1.0" },
+    "license": { "type": "string", "const": "Unlicense" },
+    "five_state_cash_tolls": {
+      "type": "object",
+      "description": "Total direct non-refundable cash tolls C_Cash (USD) by post-Bruen jurisdiction.",
+      "required": ["california", "new_york", "massachusetts", "new_jersey", "illinois"],
+      "additionalProperties": false,
+      "properties": {
+        "california": { "type": "number", "const": 984.0 },
+        "new_york": { "type": "number", "const": 978.25 },
+        "massachusetts": { "type": "number", "const": 650.0 },
+        "new_jersey": { "type": "number", "const": 541.05 },
+        "illinois": { "type": "number", "const": 470.0 }
+      }
+    },
+    "regressive_poll_tax": {
+      "type": "object",
+      "description": "C_Effective(w) = C_Cash + w_lost * (H_training + H_admin); R_burden = C_Effective / Y_disp_wk; Lambda = R_Tier2 / R_Tier1.",
+      "required": ["tier2", "tier1", "tier1_hybrid", "asymmetry_full_service", "asymmetry_hybrid"],
+      "additionalProperties": false,
+      "properties": {
+        "tier2": {
+          "type": "object",
+          "required": ["wage_lost_per_hour", "unpaid_hours", "wage_shadow_cost", "cash_toll", "effective_cost", "discretionary_income_weekly", "burden_weeks"],
+          "additionalProperties": false,
+          "properties": {
+            "wage_lost_per_hour": { "type": "number", "const": 25.0 },
+            "unpaid_hours": { "type": "number", "const": 22.0 },
+            "wage_shadow_cost": { "type": "number", "const": 550.0 },
+            "cash_toll": { "type": "number", "const": 978.25 },
+            "effective_cost": { "type": "number", "const": 1528.25 },
+            "discretionary_income_weekly": { "type": "number", "const": 150.0 },
+            "burden_weeks": { "type": "number", "const": 10.188333 }
+          }
+        },
+        "tier1": {
+          "type": "object",
+          "required": ["discretionary_income_weekly", "expeditor_fee", "effective_cost", "burden_weeks"],
+          "additionalProperties": false,
+          "properties": {
+            "discretionary_income_weekly": { "type": "number", "const": 4500.0 },
+            "expeditor_fee": { "type": "number", "const": 1800.0 },
+            "effective_cost": { "type": "number", "const": 2778.25 },
+            "burden_weeks": { "type": "number", "const": 0.617389 }
+          }
+        },
+        "tier1_hybrid": {
+          "type": "object",
+          "required": ["mandamus_demand_fee", "effective_cost", "burden_weeks"],
+          "additionalProperties": false,
+          "properties": {
+            "mandamus_demand_fee": { "type": "number", "const": 500.0 },
+            "effective_cost": { "type": "number", "const": 1478.25 },
+            "burden_weeks": { "type": "number", "const": 0.3285 }
+          }
+        },
+        "asymmetry_full_service": { "type": "number", "const": 16.5023 },
+        "asymmetry_hybrid": { "type": "number", "const": 31.0147 }
+      }
+    },
+    "renter_mobility_lockout": {
+      "type": "object",
+      "description": "rho_lockout = min(1.0, Delta_t_queue / T_lease) over a T_lease = 12.0-month lease cycle.",
+      "required": ["lease_cycle_months", "california_queue_months", "california_lockout", "new_york_queue_months", "new_york_lockout", "statutory_queue_months", "statutory_lockout"],
+      "additionalProperties": false,
+      "properties": {
+        "lease_cycle_months": { "type": "number", "const": 12.0 },
+        "california_queue_months": { "type": "number", "const": 18.0 },
+        "california_lockout": { "type": "number", "const": 1.0 },
+        "new_york_queue_months": { "type": "number", "const": 10.0 },
+        "new_york_lockout": { "type": "number", "const": 0.8333 },
+        "statutory_queue_months": { "type": "number", "const": 6.0 },
+        "statutory_lockout": { "type": "number", "const": 0.5 }
+      }
+    },
+    "notarization_cascade": {
+      "type": "object",
+      "description": "q = p_consent * p_notary; P_cohort(K) = q^K; E[D] = N_ref / q (negative binomial) at N_ref = 4.",
+      "required": ["n_ref", "citizen", "employer", "cohort_completion_ratio"],
+      "additionalProperties": false,
+      "properties": {
+        "n_ref": { "type": "integer", "const": 4 },
+        "citizen": {
+          "type": "object",
+          "required": ["p_consent", "p_notary", "q", "p_cohort_4", "expected_disclosures"],
+          "additionalProperties": false,
+          "properties": {
+            "p_consent": { "type": "number", "const": 0.35 },
+            "p_notary": { "type": "number", "const": 0.6 },
+            "q": { "type": "number", "const": 0.21 },
+            "p_cohort_4": { "type": "number", "const": 0.00194481 },
+            "expected_disclosures": { "type": "number", "const": 19.0476 }
+          }
+        },
+        "employer": {
+          "type": "object",
+          "required": ["q_boss", "p_cohort_4", "expected_disclosures"],
+          "additionalProperties": false,
+          "properties": {
+            "q_boss": { "type": "number", "const": 0.95 },
+            "p_cohort_4": { "type": "number", "const": 0.81450625 },
+            "expected_disclosures": { "type": "number", "const": 4.2105 }
+          }
+        },
+        "cohort_completion_ratio": { "type": "number", "const": 418.8102 }
+      }
+    },
+    "attrition_funnel": {
+      "type": "object",
+      "description": "Y_funnel = exp(-lambda_drop * Delta_t) * prod_{m=1..4}(1 - alpha_m).",
+      "required": ["stage_survival_rates", "stage_product", "lambda_drop_per_month", "queue_months", "hazard_survival", "y_funnel", "attrition_rate"],
+      "additionalProperties": false,
+      "properties": {
+        "stage_survival_rates": { "type": "array", "const": [0.45, 0.4, 0.55, 0.8] },
+        "stage_product": { "type": "number", "const": 0.0792 },
+        "lambda_drop_per_month": { "type": "number", "const": 0.05 },
+        "queue_months": { "type": "number", "const": 10.0 },
+        "hazard_survival": { "type": "number", "const": 0.60653066 },
+        "y_funnel": { "type": "number", "const": 0.048037 },
+        "attrition_rate": { "type": "number", "const": 0.952 }
+      }
+    },
+    "mandamus_arbitrage": {
+      "type": "object",
+      "description": "Agency stalls iff p_sue * L_lit < B_delay; indifference threshold p* = B_delay / L_lit; state catalyst boomerang eliminates Buckhannon mootness escape.",
+      "required": ["b_delay", "l_lit", "p_star", "unrepresented", "represented", "catalyst_boomerang"],
+      "additionalProperties": false,
+      "properties": {
+        "b_delay": { "type": "number", "const": 1200.0 },
+        "l_lit": { "type": "number", "const": 25000.0 },
+        "p_star": { "type": "number", "const": 0.048 },
+        "unrepresented": {
+          "type": "object",
+          "required": ["p_sue", "expected_loss", "agency_stalls"],
+          "additionalProperties": false,
+          "properties": {
+            "p_sue": { "type": "number", "const": 0.01 },
+            "expected_loss": { "type": "number", "const": 250.0 },
+            "agency_stalls": { "type": "boolean", "const": true }
+          }
+        },
+        "represented": {
+          "type": "object",
+          "required": ["p_sue", "expected_loss", "demand_letter_fee", "leverage_ratio"],
+          "additionalProperties": false,
+          "properties": {
+            "p_sue": { "type": "number", "const": 0.85 },
+            "expected_loss": { "type": "number", "const": 21250.0 },
+            "demand_letter_fee": { "type": "number", "const": 500.0 },
+            "leverage_ratio": { "type": "number", "const": 42.5 }
+          }
+        },
+        "catalyst_boomerang": {
+          "type": "object",
+          "required": ["p_moot", "c_admin_settle", "c_moot_fed_reserve", "f_catalyst", "e_loss_catalyst", "catalyst_multiplier", "air_queue_passthrough", "four_fifths_threshold"],
+          "additionalProperties": false,
+          "properties": {
+            "p_moot": { "type": "number", "const": 0.9 },
+            "c_admin_settle": { "type": "number", "const": 1500.0 },
+            "c_moot_fed_reserve": { "type": "number", "const": 4000.0 },
+            "f_catalyst": { "type": "number", "const": 18500.0 },
+            "e_loss_catalyst": { "type": "number", "const": 20500.0 },
+            "catalyst_multiplier": { "type": "number", "const": 5.125 },
+            "air_queue_passthrough": { "type": "number", "const": 0.5333 },
+            "four_fifths_threshold": { "type": "number", "const": 0.8 }
+          }
+        }
+      }
+    },
+    "cross_domain_isomorphism": {
+      "type": "object",
+      "required": ["healthcare_con", "ferc_interconnection"],
+      "additionalProperties": false,
+      "properties": {
+        "healthcare_con": {
+          "type": "object",
+          "description": "F_CON(K) = $5,000 + 0.003 * max(0, K - $1,000,000), capped at $50,000 (N.C. Gen. Stat. 131E-182(c)); 270-day contested-case carry at 8.5%.",
+          "required": ["capital_expenditure", "con_fee", "carry_rate", "stall_days", "carry_cost", "legal_cost", "entrant_total", "incumbent_bond_cap", "friction_ratio"],
+          "additionalProperties": false,
+          "properties": {
+            "capital_expenditure": { "type": "number", "const": 10000000.0 },
+            "con_fee": { "type": "number", "const": 32000.0 },
+            "carry_rate": { "type": "number", "const": 0.085 },
+            "stall_days": { "type": "integer", "const": 270 },
+            "carry_cost": { "type": "number", "const": 628767.12 },
+            "legal_cost": { "type": "number", "const": 250000.0 },
+            "entrant_total": { "type": "number", "const": 910767.12 },
+            "incumbent_bond_cap": { "type": "number", "const": 50000.0 },
+            "friction_ratio": { "type": "number", "const": 18.2153 }
+          }
+        },
+        "ferc_interconnection": {
+          "type": "object",
+          "description": "FERC Order No. 2023 / 2023-A escalating withdrawal penalties at 2x/3x/5x/9x study deposit; LBNL 13.0% COD completion baseline.",
+          "required": ["project_mw", "study_deposit", "withdrawal_penalties", "cod_completion_rate", "non_cod_rate"],
+          "additionalProperties": false,
+          "properties": {
+            "project_mw": { "type": "integer", "const": 150 },
+            "study_deposit": { "type": "number", "const": 150000.0 },
+            "withdrawal_penalties": { "type": "array", "const": [300000.0, 450000.0, 750000.0, 1350000.0] },
+            "cod_completion_rate": { "type": "number", "const": 0.13 },
+            "non_cod_rate": { "type": "number", "const": 0.87 }
+          }
+        }
+      }
+    },
+    "verification_vectors": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 5,
+      "items": {
+        "type": "string",
+        "enum": [
+          "regressive_poll_tax_invariant",
+          "renter_lockout_invariant",
+          "notary_cascade_invariant",
+          "funnel_and_mandamus_invariant",
+          "con_ferc_isomorphism_invariant"
+        ]
+      }
+    }
+  }
+}

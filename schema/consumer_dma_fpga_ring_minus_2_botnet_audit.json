@@ -1,0 +1,108 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:consumer_dma_fpga_ring_minus_2_botnet_audit.json",
+  "$comment": "PLAIN-ENGLISH LEGAL NOTICE: This file is a defensive hardware-security and counter-intelligence validation schema (JSON Schema) enforcing IOMMU DMA memory protection, open-HDL bitstream provenance, asynchronous store-and-forward staging defense (on-card DRAM/Flash & host syringe persistence), out-of-band C2 loss-function shielding, and 18 U.S.C. § 1030 (CFAA) compliance.",
+  "title": "Consumer DMA FPGA Ring -2 Trojan, High-VRAM Botnet, Asynchronous Store-and-Forward & Defector Funnel Audit Schema",
+  "description": "Validates strict IOMMU/VT-d enforcement, PCIe ATS/ACS lockdown on untrusted slots, zero closed-source FPGA bitstreams, GPU BAR P2PDMA isolation, asynchronous store-and-forward mitigation (both Case A on-card autonomous buffering and Case B hardware syringe persistence), out-of-band C2 telemetry loss-function divergence, and zero recreational DMA bridge co-location on sovereign subnets.",
+  "type": "object",
+  "required": [
+    "spec_version",
+    "jurisdiction_context",
+    "cfaa_compliance_attestation",
+    "pcie_iommu_ring_minus_2_shield",
+    "asynchronous_store_and_forward_c2_shield",
+    "fpga_bitstream_and_gpu_bar_provenance",
+    "defector_kompromat_and_lan_isolation_audit"
+  ],
+  "properties": {
+    "spec_version": {
+      "type": "string",
+      "const": "SPEC-2026-CONSUMER-DMA-FPGA-RING-MINUS-2-BOTNET-AUDIT-v1.0"
+    },
+    "jurisdiction_context": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}$"
+    },
+    "cfaa_compliance_attestation": {
+      "type": "boolean",
+      "const": true
+    },
+    "pcie_iommu_ring_minus_2_shield": {
+      "type": "object",
+      "required": [
+        "hardware_iommu_vtd_amdvi_strict_enabled",
+        "pcie_ats_untrusted_bypass_disabled",
+        "pcie_acs_p2p_isolation_enforced",
+        "unauthenticated_bus_master_bit_cleared",
+        "donor_driver_bar_aperture_isolated",
+        "uefi_preboot_dmar_protection_enforced",
+        "sub_ring_0_vm_and_dualboot_dma_bleed_blocked",
+        "unprotected_physical_ram_dma_bytes_exposed"
+      ],
+      "properties": {
+        "hardware_iommu_vtd_amdvi_strict_enabled": { "type": "boolean", "const": true },
+        "pcie_ats_untrusted_bypass_disabled": { "type": "boolean", "const": true },
+        "pcie_acs_p2p_isolation_enforced": { "type": "boolean", "const": true },
+        "unauthenticated_bus_master_bit_cleared": { "type": "boolean", "const": true },
+        "donor_driver_bar_aperture_isolated": { "type": "boolean", "const": true },
+        "uefi_preboot_dmar_protection_enforced": { "type": "boolean", "const": true },
+        "sub_ring_0_vm_and_dualboot_dma_bleed_blocked": { "type": "boolean", "const": true },
+        "unprotected_physical_ram_dma_bytes_exposed": { "type": "integer", "const": 0 }
+      },
+      "additionalProperties": false
+    },
+    "asynchronous_store_and_forward_c2_shield": {
+      "type": "object",
+      "required": [
+        "case_a_on_card_dram_flash_autonomous_scraping_blocked",
+        "case_b_hardware_syringe_dead_drop_staging_mitigated",
+        "invariant_16_boot_dram_nvme_scrub_enforced",
+        "nvme_lba_dm_verity_tpm_pcr_sealing_enforced",
+        "compound_in_slot_and_t0_syringe_neutralized_under_sovereign_scrub",
+        "temporal_air_gap_fallacy_refuted",
+        "out_of_band_c2_loss_function_divergence_enforced",
+        "pre_noise_ground_truth_dram_leak_bytes"
+      ],
+      "properties": {
+        "case_a_on_card_dram_flash_autonomous_scraping_blocked": { "type": "boolean", "const": true },
+        "case_b_hardware_syringe_dead_drop_staging_mitigated": { "type": "boolean", "const": true },
+        "invariant_16_boot_dram_nvme_scrub_enforced": { "type": "boolean", "const": true },
+        "nvme_lba_dm_verity_tpm_pcr_sealing_enforced": { "type": "boolean", "const": true },
+        "compound_in_slot_and_t0_syringe_neutralized_under_sovereign_scrub": { "type": "boolean", "const": true },
+        "temporal_air_gap_fallacy_refuted": { "type": "boolean", "const": true },
+        "out_of_band_c2_loss_function_divergence_enforced": { "type": "boolean", "const": true },
+        "pre_noise_ground_truth_dram_leak_bytes": { "type": "integer", "const": 0 }
+      },
+      "additionalProperties": false
+    },
+    "fpga_bitstream_and_gpu_bar_provenance": {
+      "type": "object",
+      "required": [
+        "closed_source_donor_spoofed_bitstreams_count",
+        "gpu_bar_p2pdma_untrusted_access_blocked",
+        "reproducible_hdl_sha256_digest"
+      ],
+      "properties": {
+        "closed_source_donor_spoofed_bitstreams_count": { "type": "integer", "const": 0 },
+        "gpu_bar_p2pdma_untrusted_access_blocked": { "type": "boolean", "const": true },
+        "reproducible_hdl_sha256_digest": { "type": "string", "pattern": "^[a-f0-9]{64}$" }
+      },
+      "additionalProperties": false
+    },
+    "defector_kompromat_and_lan_isolation_audit": {
+      "type": "object",
+      "required": [
+        "secondary_dma_bridge_pcs_on_sovereign_lan",
+        "grey_market_dma_hardware_disqualification_enforced",
+        "kompromat_non_reporting_vector_eliminated"
+      ],
+      "properties": {
+        "secondary_dma_bridge_pcs_on_sovereign_lan": { "type": "integer", "const": 0 },
+        "grey_market_dma_hardware_disqualification_enforced": { "type": "boolean", "const": true },
+        "kompromat_non_reporting_vector_eliminated": { "type": "boolean", "const": true }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

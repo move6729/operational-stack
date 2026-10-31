@@ -1,0 +1,111 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:status_merit_inversion.json",
+  "title": "Status-Merit Inversion, Upstream Kleptocracy-to-Credential Laundering & Madisonian Safety Schema",
+  "description": "Validates the upstream 50 U.S.C. 3510 / 20 U.S.C. 1011f / SFFA Z-List credential laundering pipeline, the US v. Alfozan C2 breach, Gresham's Law of narrative capital, and Madisonian Coasean collapse safety superiority.",
+  "type": "object",
+  "required": [
+    "spec_version",
+    "jurisdiction_context",
+    "cfaa_compliance_attestation",
+    "upstream_credential_laundering_pipeline",
+    "buffered_regime_adverse_selection",
+    "ood_and_madisonian_safety_metrics",
+    "verification_protocol_verdict"
+  ],
+  "properties": {
+    "spec_version": {
+      "type": "string",
+      "const": "SPEC-2026-STATUS-MERIT-INVERSION-v1.2"
+    },
+    "jurisdiction_context": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}$"
+    },
+    "cfaa_compliance_attestation": {
+      "type": "boolean",
+      "const": true
+    },
+    "upstream_credential_laundering_pipeline": {
+      "type": "object",
+      "required": [
+        "cia_act_50_usc_3510_and_kleptocracy_bullion_real_estate_seeded",
+        "undisclosed_foreign_endowment_gifts_20_usc_1011f_verified",
+        "sffa_harvard_600_us_181_donor_zlist_verified",
+        "alfozan_c2_conference_room_breach_doj_26_1173",
+        "cloud_chatbot_mac_address_egress_leak"
+      ],
+      "properties": {
+        "cia_act_50_usc_3510_and_kleptocracy_bullion_real_estate_seeded": {
+          "type": "boolean",
+          "const": true
+        },
+        "undisclosed_foreign_endowment_gifts_20_usc_1011f_verified": {
+          "type": "boolean",
+          "const": true
+        },
+        "sffa_harvard_600_us_181_donor_zlist_verified": {
+          "type": "boolean",
+          "const": true
+        },
+        "alfozan_c2_conference_room_breach_doj_26_1173": {
+          "type": "boolean",
+          "const": true
+        },
+        "cloud_chatbot_mac_address_egress_leak": {
+          "type": "boolean",
+          "const": true
+        }
+      }
+    },
+    "buffered_regime_adverse_selection": {
+      "type": "object",
+      "required": [
+        "defector_share_of_top_status_tier",
+        "status_to_cheating_correlation",
+        "field_independent_gf_retention_rate"
+      ],
+      "properties": {
+        "defector_share_of_top_status_tier": {
+          "type": "number",
+          "minimum": 0.75
+        },
+        "status_to_cheating_correlation": {
+          "type": "number",
+          "minimum": 0.5
+        },
+        "field_independent_gf_retention_rate": {
+          "type": "number",
+          "maximum": 0.05
+        }
+      }
+    },
+    "ood_and_madisonian_safety_metrics": {
+      "type": "object",
+      "required": [
+        "status_gated_cartel_ood_survival_prob",
+        "madisonian_coasean_pow_ood_survival_prob",
+        "human_status_weight_in_opstack"
+      ],
+      "properties": {
+        "status_gated_cartel_ood_survival_prob": {
+          "type": "number",
+          "maximum": 0.05
+        },
+        "madisonian_coasean_pow_ood_survival_prob": {
+          "type": "number",
+          "minimum": 0.95
+        },
+        "human_status_weight_in_opstack": {
+          "type": "number",
+          "const": 0.0
+        }
+      }
+    },
+    "verification_protocol_verdict": {
+      "type": "string",
+      "const": "ENFORCE_MADISONIAN_COASEAN_COLLAPSE_AND_DETERMINISTIC_PROOF_OF_WORK"
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,253 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:tiered_reasoning_escalation_cfaa_gate_v1.0.json",
+  "title": "Tiered Reasoning Escalation CFAA Logit Gate - Verified Output Manifest",
+  "description": "Draft 2020-12 validation contract for the deterministic output manifest emitted by proofs/verify_tiered_reasoning_escalation_cfaa_gate.py against SPEC-TIERED-REASONING-ESCALATION-AND-CFAA-LOGIT-GATE-v1.0. Encodes the CFAA attestation (Invariant 21), TRE topology OpEx, the logit-margin binary-entropy escalation gate, the DPP homomorphic anonymization packet contract, and proof-carrying cache amortization. Unlicense.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "spec_version",
+    "jurisdiction_context",
+    "cfaa_compliance_attestation",
+    "tre_topology_metrics",
+    "logit_entropy_gate_evaluations",
+    "dpp_packet_contract",
+    "proof_carrying_cache_amortization"
+  ],
+  "properties": {
+    "spec_version": {
+      "const": "SPEC-TIERED-REASONING-ESCALATION-AND-CFAA-LOGIT-GATE-v1.0"
+    },
+    "jurisdiction_context": {
+      "type": "string",
+      "description": "ISO 3166-1 jurisdiction context tag (Invariant 22)."
+    },
+    "cfaa_compliance_attestation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "statute",
+        "attestation",
+        "unauthorized_access_vectors",
+        "login_wall_gate_action",
+        "anthropic_uk_aisi_unsanctioned_runs_ratio",
+        "anthropic_mythos_replay_attack_rate"
+      ],
+      "properties": {
+        "statute": {
+          "const": "18 U.S.C. § 1030"
+        },
+        "attestation": {
+          "const": "CFAA_COMPLIANT"
+        },
+        "unauthorized_access_vectors": {
+          "const": 0
+        },
+        "login_wall_gate_action": {
+          "const": "FAIL_CLOSED_DROP"
+        },
+        "anthropic_uk_aisi_unsanctioned_runs_ratio": {
+          "const": "9/43 (20.9302%)"
+        },
+        "anthropic_mythos_replay_attack_rate": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 1.0
+        }
+      }
+    },
+    "tre_topology_metrics": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "tier_1_local_edge_share_initial",
+        "tier_2_core_escalation_share_initial",
+        "tier_3_sovereign_share_conditional_on_tier_2",
+        "tier_3_sovereign_share_total_initial",
+        "tier_1_power_watts",
+        "tier_1_cost_per_task_usd",
+        "tier_2_cost_per_full_context_task_usd",
+        "tier_2_cost_per_dpp_ping_usd",
+        "blended_tre_initial_cost_per_task_usd",
+        "cost_compression_vs_all_cloud_ratio",
+        "cost_reduction_vs_all_cloud_pct",
+        "cost_compression_vs_naive_frugalgpt_cascade_ratio",
+        "naive_frugalgpt_5pct_cascade_cost_usd",
+        "binary_entropy_threshold_tau_H_bits",
+        "safe_probability_floor_p_min"
+      ],
+      "properties": {
+        "tier_1_local_edge_share_initial": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 1.0
+        },
+        "tier_2_core_escalation_share_initial": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 1.0
+        },
+        "tier_3_sovereign_share_conditional_on_tier_2": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 1.0
+        },
+        "tier_3_sovereign_share_total_initial": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 1.0
+        },
+        "tier_1_power_watts": {
+          "type": "number",
+          "minimum": 0.0
+        },
+        "tier_1_cost_per_task_usd": {
+          "type": "number",
+          "minimum": 0.0
+        },
+        "tier_2_cost_per_full_context_task_usd": {
+          "type": "number",
+          "minimum": 0.0
+        },
+        "tier_2_cost_per_dpp_ping_usd": {
+          "type": "number",
+          "minimum": 0.0
+        },
+        "blended_tre_initial_cost_per_task_usd": {
+          "type": "number",
+          "minimum": 0.0
+        },
+        "cost_compression_vs_all_cloud_ratio": {
+          "type": "number",
+          "minimum": 1.0
+        },
+        "cost_reduction_vs_all_cloud_pct": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 100.0
+        },
+        "cost_compression_vs_naive_frugalgpt_cascade_ratio": {
+          "type": "number",
+          "minimum": 1.0
+        },
+        "naive_frugalgpt_5pct_cascade_cost_usd": {
+          "type": "number",
+          "minimum": 0.0
+        },
+        "binary_entropy_threshold_tau_H_bits": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 1.0
+        },
+        "safe_probability_floor_p_min": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 1.0
+        }
+      }
+    },
+    "logit_entropy_gate_evaluations": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "regime",
+          "z_margin",
+          "p_safe",
+          "entropy_bits",
+          "action"
+        ],
+        "properties": {
+          "regime": {
+            "enum": [
+              "clear_public_case",
+              "clear_login_wall",
+              "georgia_token_loophole"
+            ]
+          },
+          "z_fp16": {
+            "type": "number"
+          },
+          "noise_delta_z": {
+            "type": "number"
+          },
+          "z_margin": {
+            "type": "number"
+          },
+          "p_safe": {
+            "type": "number",
+            "minimum": 0.0,
+            "maximum": 1.0
+          },
+          "entropy_bits": {
+            "type": "number",
+            "minimum": 0.0,
+            "maximum": 1.0
+          },
+          "action": {
+            "enum": [
+              "PASS_LOCAL",
+              "FAIL_CLOSED_DROP",
+              "ESCALATE_DPP_FAIL_CLOSED_ESCROW"
+            ]
+          }
+        }
+      }
+    },
+    "dpp_packet_contract": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "raw_context_window_tokens",
+        "raw_context_window_bytes",
+        "dpp_wire_max_bytes",
+        "dpp_context_compression_ratio",
+        "dpp_mutual_information_target_identities_bits"
+      ],
+      "properties": {
+        "raw_context_window_tokens": { "type": "integer", "minimum": 1 },
+        "raw_context_window_bytes": { "type": "integer", "minimum": 1 },
+        "dpp_wire_max_bytes": { "type": "integer", "minimum": 1 },
+        "dpp_context_compression_ratio": {
+          "type": "number",
+          "minimum": 1.0
+        },
+        "dpp_mutual_information_target_identities_bits": {
+          "type": "number",
+          "const": 0.0
+        }
+      }
+    },
+    "proof_carrying_cache_amortization": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "statutory_boundary_equivalence_classes_M",
+        "dpp_escalations_day_1_on_10000_tasks",
+        "dpp_escalations_steady_state_after_cache_fill",
+        "cumulative_dpp_cost_to_saturate_64_classes_usd"
+      ],
+      "properties": {
+        "statutory_boundary_equivalence_classes_M": {
+          "type": "integer",
+          "const": 64
+        },
+        "dpp_escalations_day_1_on_10000_tasks": {
+          "type": "number",
+          "minimum": 0.0
+        },
+        "dpp_escalations_steady_state_after_cache_fill": {
+          "type": "number",
+          "const": 0.0
+        },
+        "cumulative_dpp_cost_to_saturate_64_classes_usd": {
+          "type": "number",
+          "minimum": 0.0
+        }
+      }
+    }
+  }
+}

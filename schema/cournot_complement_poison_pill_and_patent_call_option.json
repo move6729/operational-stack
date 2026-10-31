@@ -1,0 +1,197 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:cournot_complement_poison_pill_and_patent_call_option.json",
+  "title": "Cournot Complement Poison Pill and Transformer Patent Call Option - Verified State Commit",
+  "description": "Draft 2020-12 state-commit schema for SPEC-COURNOT-COMPLEMENT-POISON-PILL-AND-TRANSFORMER-PATENT-CALL-OPTION-v1.0 under the Milkovich v. Lorain Journal Co., 497 U.S. 1 (1990) and Partington v. Bugliosi, 56 F.3d 1147 (9th Cir. 1995) disclosed-facts synthesis framework (H_0 spokesperson baseline vs. H_1 structural-accounting and mechanism-design falsification). Binds the 66-constant locked registry and the five verified pillars: (1) Nvidia/8-rival USD 235.0M Hugging Face Series D Cournot complement poison pill (Apache 2.0 Sec. 3 patent-termination call option and Meta Llama Community License Sec. 2 700M MAU cliff, Meta FY2024 Form 10-K); (2) Google LLC senior Transformer patent portfolio (US 10,452,978 B2, US 9,996,602 B2, US 10,089,566 B2, US 11,443,134 B2; 2008 Google Open Source blog / 2013 OPN Pledge; Alphabet Form 10-K) + 1,000,000-hour YouTube Whisper scrape (DMCA 1201) + Rule 23 Creator Class 17 U.S.C. 504(c)/1202(b) statutory damages; (3) FISA 702 / USD 9.0B DoD JWCC bare-metal sublease with 0.00% marginal IC utility; (4) Rule 34 Slack-Scienter and Lugosch (435 F.3d 110) unsealing multiplier; (5) Too-Replaceable-To-Bail-Out tenant liquidation equilibrium (FTC 6(b) Cloud/AI Report; DOJ v. Google 1:20-cv-03010). Deterministically verified by proofs/verify_cournot_complement_poison_pill_and_patent_call_option.py (exit code 0).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["jurisdiction_context", "cfaa_18_usc_1030_compliance_attestation", "locked_constants", "pillar_1_cournot_poison_pill", "pillar_2_patent_call_and_rule23_creator_class", "pillar_3_fisa702_jwcc_zero_marginal_utility", "pillar_4_rule34_slack_scienter_lugosch_double_bind", "pillar_5_too_replaceable_to_bail_out_equilibrium", "proof_exit_code"],
+  "properties": {
+    "jurisdiction_context": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}$",
+      "description": "ISO 3166-1 alpha-2 jurisdiction code selecting the statutory module set (e.g., US)."
+    },
+    "cfaa_18_usc_1030_compliance_attestation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["statute", "attested", "zero_unauthorized_access", "scope"],
+      "properties": {
+        "statute": { "const": "18 U.S.C. 1030" },
+        "attested": { "const": true },
+        "zero_unauthorized_access": { "const": true },
+        "scope": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Attestation scope: all corpus ingestion via public records, licensed datasets, and public APIs; zero unauthorized access under 18 U.S.C. 1030."
+        }
+      }
+    },
+    "locked_constants": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Locked constant registry; every derived value re-computes from primitives in the verification engine.",
+      "properties": {
+        "hf_series_d_investment_m_usd": { "const": 235.0 },
+        "hf_series_d_valuation_m_usd": { "const": 4500.0 },
+        "hf_series_d_dilution_share": { "const": 0.052222 },
+        "hf_strategic_syndicate_count": { "const": 8 },
+        "hf_total_syndicate_investors": { "const": 9 },
+        "hf_mean_check_m_usd": { "const": 26.111111 },
+        "nvidia_gross_margin": { "const": 0.75 },
+        "closed_api_blended_price_per_mtok_usd": { "const": 48.75 },
+        "open_weight_std_price_per_mtok_usd": { "const": 0.8361 },
+        "open_weight_offpeak_price_per_mtok_usd": { "const": 0.4875 },
+        "inference_cost_asymmetry_std_x": { "const": 58.306423 },
+        "inference_cost_asymmetry_offpeak_x": { "const": 100.0 },
+        "closed_api_cartel_rent_share_std": { "const": 0.982849 },
+        "closed_api_cartel_rent_share_offpeak": { "const": 0.99 },
+        "us_patent_number": { "const": "10,452,978 B2" },
+        "us_patent_filing_date": { "const": "2018-06-28" },
+        "us_patent_expiration_date": { "const": "2038-06-28" },
+        "us_patent_remaining_term_years_from_oct_2026": { "const": 11.67 },
+        "patent_royalty_rate_low": { "const": 0.05 },
+        "patent_royalty_rate_mid": { "const": 0.10 },
+        "patent_royalty_rate_high": { "const": 0.15 },
+        "cumulative_6yr_wrapper_revenue_base_b_usd": { "const": 100.0 },
+        "patent_royalty_claim_low_b_usd": { "const": 5.0 },
+        "patent_royalty_claim_mid_b_usd": { "const": 10.0 },
+        "patent_royalty_claim_high_b_usd": { "const": 15.0 },
+        "youtube_whisper_scraped_hours": { "const": 1000000 },
+        "youtube_words_per_minute": { "const": 150 },
+        "youtube_tokens_per_hour": { "const": 12000 },
+        "youtube_harvested_tokens_total": { "const": 12000000000 },
+        "youtube_estimated_videos_20min_avg": { "const": 3000000 },
+        "dmca_1201_min_per_violation_usd": { "const": 200 },
+        "dmca_1201_max_per_violation_usd": { "const": 2500 },
+        "dmca_1201_exposure_low_m_usd": { "const": 600.0 },
+        "dmca_1201_exposure_high_m_usd": { "const": 7500.0 },
+        "google_combined_ip_call_strike_mid_b_usd": { "const": 17.5 },
+        "google_combined_ip_call_strike_willful_3x_b_usd": { "const": 37.5 },
+        "registered_youtube_works_5pct_of_3m": { "const": 150000 },
+        "copyright_504c_min_per_work_usd": { "const": 750 },
+        "copyright_504c_std_max_per_work_usd": { "const": 30000 },
+        "copyright_504c_willful_max_per_work_usd": { "const": 150000 },
+        "creator_class_504c_exposure_low_m_usd": { "const": 112.5 },
+        "creator_class_504c_exposure_std_b_usd": { "const": 4.5 },
+        "creator_class_504c_exposure_willful_b_usd": { "const": 22.5 },
+        "dmca_1202b_cmi_min_per_work_usd": { "const": 2500 },
+        "dmca_1202b_cmi_max_per_work_usd": { "const": 25000 },
+        "creator_class_1202b_3m_videos_low_b_usd": { "const": 7.5 },
+        "creator_class_1202b_3m_videos_high_b_usd": { "const": 75.0 },
+        "jwcc_contract_ceiling_b_usd": { "const": 9.0 },
+        "jwcc_prime_count": { "const": 4 },
+        "prism_top3_collection_share": { "const": 0.98 },
+        "anthropic_csp_revenue_share_h1_2026": { "const": 0.48 },
+        "anthropic_csp_revenue_h1_2026_m_usd": { "const": 7817.28 },
+        "marginal_ic_surveillance_gain_from_wrapper": { "const": 0.0 },
+        "anthropic_stockholders_deficit_m_usd": { "const": -127619.0 },
+        "anthropic_h1_2026_net_loss_m_usd": { "const": -80748.0 },
+        "anthropic_senior_hybrid_stack_m_usd": { "const": 266076.0 },
+        "anthropic_total_compute_encumbrance_low_b_usd": { "const": 732.0 },
+        "anthropic_total_compute_encumbrance_high_b_usd": { "const": 757.0 },
+        "google_anthropic_exposure_low_b_usd": { "const": 239.5 },
+        "google_anthropic_exposure_high_b_usd": { "const": 264.5 },
+        "google_first_party_gemini_margin": { "const": 0.80 },
+        "google_historical_ex_tac_margin": { "const": 0.894241 },
+        "inflection_reverse_acquihire_m_usd": { "const": 650.0 },
+        "hsr_2024_threshold_m_usd": { "const": 119.5 },
+        "inflection_hsr_multiple_x": { "const": 5.439331 },
+        "sovereign_bailout_indicator": { "const": 0 }
+      },
+      "required": ["hf_series_d_investment_m_usd", "hf_series_d_valuation_m_usd", "hf_series_d_dilution_share", "hf_strategic_syndicate_count", "hf_total_syndicate_investors", "hf_mean_check_m_usd", "nvidia_gross_margin", "closed_api_blended_price_per_mtok_usd", "open_weight_std_price_per_mtok_usd", "open_weight_offpeak_price_per_mtok_usd", "inference_cost_asymmetry_std_x", "inference_cost_asymmetry_offpeak_x", "closed_api_cartel_rent_share_std", "closed_api_cartel_rent_share_offpeak", "us_patent_number", "us_patent_filing_date", "us_patent_expiration_date", "us_patent_remaining_term_years_from_oct_2026", "patent_royalty_rate_low", "patent_royalty_rate_mid", "patent_royalty_rate_high", "cumulative_6yr_wrapper_revenue_base_b_usd", "patent_royalty_claim_low_b_usd", "patent_royalty_claim_mid_b_usd", "patent_royalty_claim_high_b_usd", "youtube_whisper_scraped_hours", "youtube_words_per_minute", "youtube_tokens_per_hour", "youtube_harvested_tokens_total", "youtube_estimated_videos_20min_avg", "dmca_1201_min_per_violation_usd", "dmca_1201_max_per_violation_usd", "dmca_1201_exposure_low_m_usd", "dmca_1201_exposure_high_m_usd", "google_combined_ip_call_strike_mid_b_usd", "google_combined_ip_call_strike_willful_3x_b_usd", "registered_youtube_works_5pct_of_3m", "copyright_504c_min_per_work_usd", "copyright_504c_std_max_per_work_usd", "copyright_504c_willful_max_per_work_usd", "creator_class_504c_exposure_low_m_usd", "creator_class_504c_exposure_std_b_usd", "creator_class_504c_exposure_willful_b_usd", "dmca_1202b_cmi_min_per_work_usd", "dmca_1202b_cmi_max_per_work_usd", "creator_class_1202b_3m_videos_low_b_usd", "creator_class_1202b_3m_videos_high_b_usd", "jwcc_contract_ceiling_b_usd", "jwcc_prime_count", "prism_top3_collection_share", "anthropic_csp_revenue_share_h1_2026", "anthropic_csp_revenue_h1_2026_m_usd", "marginal_ic_surveillance_gain_from_wrapper", "anthropic_stockholders_deficit_m_usd", "anthropic_h1_2026_net_loss_m_usd", "anthropic_senior_hybrid_stack_m_usd", "anthropic_total_compute_encumbrance_low_b_usd", "anthropic_total_compute_encumbrance_high_b_usd", "google_anthropic_exposure_low_b_usd", "google_anthropic_exposure_high_b_usd", "google_first_party_gemini_margin", "google_historical_ex_tac_margin", "inflection_reverse_acquihire_m_usd", "hsr_2024_threshold_m_usd", "inflection_hsr_multiple_x", "sovereign_bailout_indicator"]
+    },
+    "pillar_1_cournot_poison_pill": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Pillar 1: Cournot complement commoditization via the USD 235.0M Hugging Face Series D syndicate (8 strategic tech giants + 1 lead = 9 investors at USD 4,500.0M valuation), Apache 2.0 Sec. 3 defensive patent-termination clause, and Meta Llama Community License Sec. 2 (700,000,000 MAU cliff).",
+      "required": ["complement_cross_demand_positive", "optimal_open_weight_price_usd", "apache_2_sec3_patent_termination_active", "llama_mau_commercial_cliff", "implied_total_revenue_h1_2026_m_usd", "counter_liability_floor_b_usd", "counter_liability_willful_b_usd", "pill_armed"],
+      "properties": {
+        "complement_cross_demand_positive": { "const": true },
+        "optimal_open_weight_price_usd": { "const": 0.0 },
+        "apache_2_sec3_patent_termination_active": { "const": true },
+        "llama_mau_commercial_cliff": { "const": 700000000 },
+        "implied_total_revenue_h1_2026_m_usd": { "const": 16286.0 },
+        "counter_liability_floor_b_usd": { "const": 7.6125 },
+        "counter_liability_willful_b_usd": { "const": 97.5 },
+        "pill_armed": { "const": true }
+      }
+    },
+    "pillar_2_patent_call_and_rule23_creator_class": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Pillar 2: Google LLC senior sequence-transduction and self-attention patent family (US 10,452,978 B2, US 9,996,602 B2, US 10,089,566 B2, US 11,443,134 B2; 2008 Open Source Blog / 2013 OPN Pledge scoped to FOSS), 1,000,000-hour YouTube Whisper scrape (17 U.S.C. 1201), and Rule 23 Creator Class statutory damages (17 U.S.C. 504(c) and 1202(b)).",
+      "required": ["google_patent_family", "patent_term_days", "patent_remaining_term_years", "harvested_tokens_total", "estimated_videos", "dmca_1201_band_m_usd", "creator_class_504c_band_b_usd", "creator_class_1202b_band_b_usd", "combined_strike_mid_b_usd", "combined_strike_willful_b_usd", "creator_to_google_willful_ratio_x"],
+      "properties": {
+        "google_patent_family": {
+          "type": "array",
+          "prefixItems": [
+            { "const": "US10452978B2" },
+            { "const": "US9996602B2" },
+            { "const": "US10089566B2" },
+            { "const": "US11443134B2" }
+          ],
+          "items": false
+        },
+        "patent_term_days": { "const": 7305 },
+        "patent_remaining_term_years": { "type": "number", "minimum": 11.66, "maximum": 11.68 },
+        "harvested_tokens_total": { "const": 12000000000 },
+        "estimated_videos": { "const": 3000000 },
+        "dmca_1201_band_m_usd": { "type": "array", "prefixItems": [{ "const": 600.0 }, { "const": 7500.0 }], "items": false },
+        "creator_class_504c_band_b_usd": { "type": "array", "prefixItems": [{ "const": 0.1125 }, { "const": 4.5 }, { "const": 22.5 }], "items": false },
+        "creator_class_1202b_band_b_usd": { "type": "array", "prefixItems": [{ "const": 7.5 }, { "const": 75.0 }], "items": false },
+        "combined_strike_mid_b_usd": { "const": 17.5 },
+        "combined_strike_willful_b_usd": { "const": 37.5 },
+        "creator_to_google_willful_ratio_x": { "const": 2.6 }
+      }
+    },
+    "pillar_3_fisa702_jwcc_zero_marginal_utility": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Pillar 3: USD 9.0B DoD JWCC contract across 4 bare-metal hyperscale primes and FISA 702 (50 U.S.C. 1881a) 0.98 top-3 PRISM collection share yielding 0.00% marginal IC utility from standalone wrapper sub-tenants.",
+      "required": ["jwcc_ceiling_b_usd", "jwcc_primes", "per_prime_ceiling_b_usd", "prism_top3_share", "uncollected_residual_share", "marginal_ic_gain", "marginal_utility_pct"],
+      "properties": {
+        "jwcc_ceiling_b_usd": { "const": 9.0 },
+        "jwcc_primes": { "const": 4 },
+        "per_prime_ceiling_b_usd": { "const": 2.25 },
+        "prism_top3_share": { "const": 0.98 },
+        "uncollected_residual_share": { "const": 0.02 },
+        "marginal_ic_gain": { "const": 0.0 },
+        "marginal_utility_pct": { "const": 0.0 }
+      }
+    },
+    "pillar_4_rule34_slack_scienter_lugosch_double_bind": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Pillar 4: Fed. R. Civ. P. 12(b)(6) survival unlocks Rule 26(b)(1)/Rule 34 ESI production and FRE 801(d)(2) party-opponent admissions, subject to immediate public unsealing at Rule 56 summary judgment under Lugosch v. Pyramid Co. of Onondaga, 435 F.3d 110 (2d Cir. 2006), multiplying statutory damages to USD 135.0B combined willful exposure.",
+      "required": ["scienter_504c_multiplier_x", "scienter_1202b_multiplier_x", "patent_284_willful_multiplier_x", "combined_willful_ip_and_class_exposure_b_usd", "margin_compression_delta", "first_party_vs_wrapper_csp_spread"],
+      "properties": {
+        "scienter_504c_multiplier_x": { "const": 5.0 },
+        "scienter_1202b_multiplier_x": { "const": 10.0 },
+        "patent_284_willful_multiplier_x": { "const": 3.0 },
+        "combined_willful_ip_and_class_exposure_b_usd": { "const": 135.0 },
+        "margin_compression_delta": { "const": 0.094241 },
+        "first_party_vs_wrapper_csp_spread": { "const": 0.32 }
+      }
+    },
+    "pillar_5_too_replaceable_to_bail_out_equilibrium": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Pillar 5: Too-Replaceable-To-Bail-Out liquidation equilibrium (Anthropic Form S-1 CIK 0002130357; FTC Sec. 6(b) Cloud/AI Report; DOJ v. Google Case 1:20-cv-03010) where senior bare-metal landlords prefer rack reclamation (0.80 1P margin) and USD 650.0M HSR-exempt reverse-acquihires (5.439331x 2024 HSR threshold) over bailouts (sovereign_bailout_indicator = 0).",
+      "required": ["sovereign_bailout_indicator", "asymmetry_std_x", "asymmetry_offpeak_x", "stockholders_deficit_m_usd", "annualized_net_loss_run_rate_m_usd", "senior_hybrid_stack_m_usd", "compute_encumbrance_band_b_usd", "hyperscaler_exposure_band_b_usd", "inflection_hsr_multiple_x", "liquidation_terminal"],
+      "properties": {
+        "sovereign_bailout_indicator": { "const": 0 },
+        "asymmetry_std_x": { "type": "number", "minimum": 58.0 },
+        "asymmetry_offpeak_x": { "const": 100.0 },
+        "stockholders_deficit_m_usd": { "const": -127619.0 },
+        "annualized_net_loss_run_rate_m_usd": { "const": -161496.0 },
+        "senior_hybrid_stack_m_usd": { "const": 266076.0 },
+        "compute_encumbrance_band_b_usd": { "type": "array", "prefixItems": [{ "const": 732.0 }, { "const": 757.0 }], "items": false },
+        "hyperscaler_exposure_band_b_usd": { "type": "array", "prefixItems": [{ "const": 239.5 }, { "const": 264.5 }], "items": false },
+        "inflection_hsr_multiple_x": { "const": 5.439331 },
+        "liquidation_terminal": { "const": true }
+      }
+    },
+    "proof_exit_code": { "const": 0 }
+  }
+}

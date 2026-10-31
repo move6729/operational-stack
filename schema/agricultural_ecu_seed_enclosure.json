@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:agricultural_ecu_seed_enclosure.json",
+  "$comment": "PLAIN-ENGLISH LEGAL NOTICE: This file is an abstract institutional-cybernetic, antitrust-forensic, and statutory-boundary validation checklist (JSON Schema), NOT an accusation, indictment, or evidentiary filing. Every field encodes a published statutory citation, a public court docket, a Supreme Court holding, a federal triennial rulemaking exemption, a USDA concentration baseline, or a closed-form algebraic invariant. Structural-accounting descriptors only; no uncharged statutory felony label is asserted against any living natural person.",
+  "title": "Agricultural ECU Cryptographic Tethering, Harvest-Window Hostage Economics & Germplasm Biopatent Enclosure Schema",
+  "description": "Validates the three executable verification vectors of SPEC-AGRICULTURAL-ECU-TETHERING-AND-SEED-BIOPATENT-ENCLOSURE-v1.0: (1) EQ_01 cryptographic CAN-bus tethering per FTC v. Deere (N.D. Ill. Case No. 3:25-cv-50017) and MDL No. 3030, where a $450.00 independent fault becomes a $2,250.00 dealer invoice (5.0x dispatch markup) plus 4.0 queue days at $3,500.00/day ($14,000.00 downtime), closing at a $16,250.00 combined extraction and a 36.111111x enclosure multiplier; (2) EQ_02 germplasm biopatent enclosure per Bowman v. Monsanto, 569 U.S. 278 (2013), where a CR4 = 0.85 oligopoly replaces the $28.00/acre saved-heirloom baseline with a $140.00/acre patented trait + tied-chemical package (5.0x), extracting $112,000.00/yr per 1,000-acre farm; and (3) EQ_03 Milkovich H0-vs-H1 falsification via 17 U.S.C. Sec. 1201 triennial repair exemptions and Impression Products, 581 U.S. 360 (2017) patent exhaustion, with open ISO 11783 / SAE J1939 buses and public-domain germplasm collapsing M_enclosure to 1.0x and R_annual to $0.00.",
+  "type": "object",
+  "required": [
+    "spec_version",
+    "jurisdiction_context",
+    "cfaa_compliance_attestation",
+    "Vector1EcuTetheringHarvestWindowExtraction",
+    "Vector2GermplasmBiopatentEnclosureRent",
+    "Vector3MilkovichFalsificationAndBareMetalDisintermediation"
+  ],
+  "properties": {
+    "spec_version": {"type": "string", "const": "SPEC-AGRICULTURAL-ECU-TETHERING-AND-SEED-BIOPATENT-ENCLOSURE-v1.0"},
+    "jurisdiction_context": {"type": "string", "pattern": "^[A-Z]{2}$"},
+    "cfaa_compliance_attestation": {"type": "boolean", "const": true},
+    "Vector1EcuTetheringHarvestWindowExtraction": {
+      "type": "object",
+      "description": "EQ_01: C_tethered = C_dealer + D_queue * l_daily. A $450.00 independent sensor/actuator fault becomes a $2,250.00 tethered dealer invoice (dealer_software_dispatch_markup_ratio = 2250.0 / 450.0 = 5.0x) plus 4.0 dealer-queue days at $3,500.00/day of critical-harvest-window crop loss ($14,000.00 downtime), for a combined per-fault extraction of $16,250.00 and an enclosure multiplier of round(16250.0 / 450.0, 6) = 36.111111x, of which 0.861538 is unitemized downtime. Hostage dominance: C_dealer + D_queue * l_daily > C_indep.",
+      "required": ["eq_id", "tethering_extraction_identity", "ftc_complaint_pin_cite", "mdl_pin_cite", "independent_field_repair_cost_usd", "tethered_dealer_service_invoice_usd", "dealer_software_dispatch_markup_ratio", "dealer_queue_downtime_days", "critical_harvest_window_daily_crop_loss_usd", "total_harvest_downtime_loss_per_fault_usd", "combined_tethered_fault_extraction_usd", "enclosure_to_independent_repair_cost_multiplier", "unitemized_downtime_share_of_extraction", "tethered_regime_strictly_dominates_verified"],
+      "properties": {
+        "eq_id": {"type": "string", "const": "EQ_01"},
+        "tethering_extraction_identity": {"type": "string", "const": "C_tethered = C_dealer + D_queue * l_daily"},
+        "ftc_complaint_pin_cite": {"type": "string", "const": "FTC and States of Illinois, Minnesota, et al. v. Deere & Company, N.D. Ill. Case No. 3:25-cv-50017 (2025)"},
+        "mdl_pin_cite": {"type": "string", "const": "In re Deere & Company Repair Services Antitrust Litigation, N.D. Ill. MDL No. 3030"},
+        "independent_field_repair_cost_usd": {"type": "number", "const": 450.0},
+        "tethered_dealer_service_invoice_usd": {"type": "number", "const": 2250.0},
+        "dealer_software_dispatch_markup_ratio": {"type": "number", "const": 5.0},
+        "dealer_queue_downtime_days": {"type": "number", "const": 4.0},
+        "critical_harvest_window_daily_crop_loss_usd": {"type": "number", "const": 3500.0},
+        "total_harvest_downtime_loss_per_fault_usd": {"type": "number", "const": 14000.0},
+        "combined_tethered_fault_extraction_usd": {"type": "number", "const": 16250.0},
+        "enclosure_to_independent_repair_cost_multiplier": {"type": "number", "const": 36.111111},
+        "unitemized_downtime_share_of_extraction": {"type": "number", "const": 0.861538},
+        "tethered_regime_strictly_dominates_verified": {"type": "boolean", "const": true}
+      },
+      "additionalProperties": false
+    },
+    "Vector2GermplasmBiopatentEnclosureRent": {
+      "type": "object",
+      "description": "EQ_02: Rent = (C_trait - C_heirloom) * Acres. A CR4 = 0.85 seed-chemical oligopoly uses utility patents and bag-tag technology licensing agreements (Bowman v. Monsanto Co., 569 U.S. 278 (2013): exhaustion does not extend to reproduction) to outlaw the $28.00/acre saved-heirloom baseline, forcing a $140.00/acre patented trait seed + tied herbicide repurchase every spring (seed_trait_enclosure_markup_ratio = 140.0 / 28.0 = 5.0x), extracting ($140.00 - $28.00) * 1,000 = $112,000.00/yr per 1,000-acre family farm and $3,360,000.00 over a 30-year horizon, with CR4 = 0.85 above the 0.50 high-concentration benchmark.",
+      "required": ["eq_id", "seed_enclosure_rent_identity", "bowman_pin_cite", "saved_heirloom_seed_acre_cost_usd", "patented_trait_seed_plus_chemical_acre_cost_usd", "seed_trait_enclosure_markup_ratio", "reference_family_farm_acreage", "annual_enclosure_rent_per_1000_acre_farm_usd", "thirty_year_enclosure_rent_transfer_usd", "top_four_seed_cartel_market_concentration_cr4", "cr4_high_concentration_benchmark", "cr4_oligopoly_threshold_exceeded_verified"],
+      "properties": {
+        "eq_id": {"type": "string", "const": "EQ_02"},
+        "seed_enclosure_rent_identity": {"type": "string", "const": "Rent = (C_trait - C_heirloom) * Acres"},
+        "bowman_pin_cite": {"type": "string", "const": "Bowman v. Monsanto Co., 569 U.S. 278 (2013)"},
+        "saved_heirloom_seed_acre_cost_usd": {"type": "number", "const": 28.0},
+        "patented_trait_seed_plus_chemical_acre_cost_usd": {"type": "number", "const": 140.0},
+        "seed_trait_enclosure_markup_ratio": {"type": "number", "const": 5.0},
+        "reference_family_farm_acreage": {"type": "number", "const": 1000.0},
+        "annual_enclosure_rent_per_1000_acre_farm_usd": {"type": "number", "const": 112000.0},
+        "thirty_year_enclosure_rent_transfer_usd": {"type": "number", "const": 3360000.0},
+        "top_four_seed_cartel_market_concentration_cr4": {"type": "number", "const": 0.85},
+        "cr4_high_concentration_benchmark": {"type": "number", "const": 0.5},
+        "cr4_oligopoly_threshold_exceeded_verified": {"type": "boolean", "const": true}
+      },
+      "additionalProperties": false
+    },
+    "Vector3MilkovichFalsificationAndBareMetalDisintermediation": {
+      "type": "object",
+      "description": "EQ_03: Milkovich disclosed-facts synthesis. The H0 emissions/safety and R&D defenses are falsified by the FTC complaint's non-emissions lock coverage (seat switches, grain-tank augers), the 17 U.S.C. Sec. 1201 triennial agricultural-equipment repair exemptions (granted 2018; renewed 2021 and 2024), and Impression Products, Inc. v. Lexmark International, Inc., 581 U.S. 360 (2017) (authorized sale exhausts patent rights; post-sale servitudes unenforceable). Open ISO 11783 (ISOBUS) / SAE J1939 buses with owner-flashed ECU firmware drive M_enclosure to 1.0x; public-domain land-grant germplasm with legal saved seed drives R_annual to $0.00.",
+      "required": ["eq_id", "dmca_statutory_cite", "dmca_agricultural_repair_exemption_scope", "impression_products_pin_cite", "patent_exhaustion_identity", "h0_null_hypothesis_oem_position", "h1_falsification_disclosed_facts", "open_bus_standards", "open_bus_enclosure_multiplier_limit", "open_germplasm_annual_rent_limit_usd", "bare_metal_disintermediation_verified"],
+      "properties": {
+        "eq_id": {"type": "string", "const": "EQ_03"},
+        "dmca_statutory_cite": {"type": "string", "const": "17 U.S.C. § 1201"},
+        "dmca_agricultural_repair_exemption_scope": {"type": "string", "const": "Triennial Librarian of Congress rulemaking exemption permitting circumvention of technological protection measures on agricultural equipment firmware for good-faith diagnosis, maintenance, and repair (granted 2018; renewed 2021 and 2024)."},
+        "impression_products_pin_cite": {"type": "string", "const": "Impression Products, Inc. v. Lexmark International, Inc., 581 U.S. 360 (2017)"},
+        "patent_exhaustion_identity": {"type": "string", "const": "Authorized Sale => Patent Rights Exhausted; Post-Sale Servitude Enforceability = 0"},
+        "h0_null_hypothesis_oem_position": {"type": "string", "const": "OEM position: cryptographic ECU locks prevent EPA emissions tampering and safety hazards, and the 2023 American Farm Bureau Federation MOU already grants repair access. Seed-conglomerate position: trait royalties fund drought-tolerance and yield R&D whose benefits flow back to farmers."},
+        "h1_falsification_disclosed_facts": {"type": "string", "const": "As pleaded in FTC v. Deere (No. 3:25-cv-50017), lock coverage extends to non-emissions components (seat switches, grain-tank augers, ordinary sensors); the Librarian of Congress granted 17 U.S.C. Sec. 1201 agricultural-equipment repair exemptions (2018, renewed 2021 and 2024) finding no copyright impairment; and Impression Products, 581 U.S. 360 (2017), holds that an authorized sale exhausts patent rights, rendering post-sale servitudes unenforceable. Bowman survives only at the reproduction boundary, which public-domain germplasm sidesteps entirely."},
+        "open_bus_standards": {
+          "type": "array",
+          "items": {"type": "string"},
+          "minItems": 2,
+          "maxItems": 2,
+          "const": ["ISO 11783 (ISOBUS)", "SAE J1939"]
+        },
+        "open_bus_enclosure_multiplier_limit": {"type": "number", "const": 1.0},
+        "open_germplasm_annual_rent_limit_usd": {"type": "number", "const": 0.0},
+        "bare_metal_disintermediation_verified": {"type": "boolean", "const": true}
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:gto_negotiation.json",
+  "title": "Sovereign GTO External Negotiation State Schema (OPEN-GTO-v1.0)",
+  "type": "object",
+  "required": [
+    "negotiation_id",
+    "counterparty_id",
+    "jurisdiction_code",
+    "cfaa_boundary_verified",
+    "reserve_floor_value",
+    "time_decay_gamma",
+    "statutory_notice_flag",
+    "regulatory_escalation_triggers",
+    "cross_border_dispute_framework",
+    "trembling_hand_epsilon",
+    "grim_trigger_active",
+    "separating_signal_proof",
+    "shared_peer_settlements",
+    "collective_claim_aggregation"
+  ],
+  "properties": {
+    "negotiation_id": {
+      "type": "string"
+    },
+    "counterparty_id": {
+      "type": "string"
+    },
+    "jurisdiction_code": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}$"
+    },
+    "cfaa_boundary_verified": {
+      "type": "boolean",
+      "const": true
+    },
+    "reserve_floor_value": {
+      "type": "number",
+      "minimum": 0
+    },
+    "time_decay_gamma": {
+      "type": "number",
+      "minimum": 0
+    },
+    "statutory_notice_flag": {
+      "type": "boolean"
+    },
+    "regulatory_escalation_triggers": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "cross_border_dispute_framework": {
+      "type": "string",
+      "enum": ["UNCITRAL", "ICC", "US_FEDERAL_ARBITRATION", "LOCAL_STATUTORY"]
+    },
+    "trembling_hand_epsilon": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 0.5
+    },
+    "grim_trigger_active": {
+      "type": "boolean"
+    },
+    "separating_signal_proof": {
+      "type": "string"
+    },
+    "shared_peer_settlements": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      }
+    },
+    "collective_claim_aggregation": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,231 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:distributed_data_collect.json",
+  "title": "SovereignDistributedDataCollectState",
+  "description": "Schema for sovereign distributed data collection, public record archiving, differentially private environmental telemetry, and pooled commercial feed extraction (DATA-COLLECT-v1.0). Enforces CFAA 18 U.S.C. § 1030 statutory compliance, Ephemeral Sandbox Isolation, Zero-PII Ingress Neutralization, CA SB 362 Data Broker Exemption, Anti-DDoS rate limits, Decentralized DMCA § 512(c) Routing, and Epoch-Salted Kademlia Target Assignment.",
+  "type": "object",
+  "properties": {
+    "payload_id": {
+      "type": "string",
+      "pattern": "^data-[a-f0-9]{16}$",
+      "description": "SHA-256 derived payload identifier."
+    },
+    "collection_type": {
+      "type": "string",
+      "enum": [
+        "WEB_SCRAPE",
+        "PUBLIC_ARCHIVE",
+        "ENVIRONMENTAL_TELEMETRY",
+        "POOLED_COMMERCIAL_FEED"
+      ],
+      "description": "Target collection operational vector."
+    },
+    "target_identifier": {
+      "type": "string",
+      "description": "URI, sensor ID, or commercial feed resource key."
+    },
+    "timestamp_utc": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Unix timestamp of data ingress."
+    },
+    "statutory_compliance": {
+      "type": "object",
+      "properties": {
+        "cfaa_18_usc_1030_mandatory_bound": {
+          "type": "boolean",
+          "const": true,
+          "description": "Mandatory attestation that execution strictly conforms to US CFAA authorization bounds."
+        },
+        "gdpr_ccpa_privacy_framework_active": {
+          "type": "boolean",
+          "description": "True if European GDPR or US CCPA privacy protection transforms are enabled."
+        },
+        "public_unauthenticated_boundary_verified": {
+          "type": "boolean",
+          "description": "True if endpoint operated without authentication gates per Van Buren v. US."
+        },
+        "ephemeral_sandbox_context_verified": {
+          "type": "boolean",
+          "description": "True if HITL browser DOM ingestion was executed in an isolated container with zero cookies, session tokens, or LocalStorage auth state."
+        },
+        "zero_auth_bypass_verified": {
+          "type": "boolean",
+          "description": "True if zero passwords, CAPTCHAs, paywalls, or TPMs were bypassed."
+        },
+        "zero_pii_sanitization_attested": {
+          "type": "boolean",
+          "description": "True if hard regex scrubbing, sensitive key stripping, and spatial/temporal coarsening were applied on local silicon prior to egress."
+        },
+        "adversarial_prompt_anomaly_checked": {
+          "type": "boolean",
+          "description": "True if DOM entropy and adversarial prompt injection signatures were checked and neutralized."
+        },
+        "anti_aggregation_invariant_active": {
+          "type": "boolean",
+          "description": "True if cross-site consumer profile joining is blocked, ensuring CA SB 362 Data Broker Act exemption."
+        },
+        "rate_limit_governor_active": {
+          "type": "boolean",
+          "description": "True if anti-DoS rate limiting throttling was enforced during extraction."
+        },
+        "node_rate_limits": {
+          "type": "object",
+          "properties": {
+            "max_outbound_requests_per_minute": {
+              "type": "integer",
+              "maximum": 60,
+              "description": "Hard upper bound rate limit (recommended <= 6 req/min/domain)."
+            },
+            "min_request_delay_ms": {
+              "type": "integer",
+              "minimum": 1000,
+              "description": "Minimum delay interval between sequential outbound requests."
+            }
+          },
+          "required": [
+            "max_outbound_requests_per_minute",
+            "min_request_delay_ms"
+          ],
+          "additionalProperties": false
+        },
+        "operator_protection": {
+          "type": "object",
+          "properties": {
+            "residential_ip_anonymization_active": {
+              "type": "boolean",
+              "description": "True if node operates via residential mesh egress."
+            },
+            "automated_cfaa_cnd_generator_active": {
+              "type": "boolean",
+              "description": "True if automated legal refutation counter-notice generator is armed."
+            }
+          },
+          "required": [
+            "residential_ip_anonymization_active",
+            "automated_cfaa_cnd_generator_active"
+          ],
+          "additionalProperties": false
+        },
+        "kademlia_target_assignment": {
+          "type": "object",
+          "properties": {
+            "node_pow_nonce": { "type": "integer", "minimum": 0 },
+            "target_domain_hash": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            },
+            "epoch_week_salt": { "type": "integer", "minimum": 0 },
+            "xor_distance_max": { "type": "integer", "minimum": 0 }
+          },
+          "required": ["node_pow_nonce", "target_domain_hash", "epoch_week_salt", "xor_distance_max"],
+          "additionalProperties": false
+        },
+        "proof_of_delay": {
+          "type": "object",
+          "properties": {
+            "last_request_timestamp": { "type": "integer", "minimum": 0 },
+            "min_interval_seconds": { "type": "integer", "minimum": 1 },
+            "nonce_hash": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            }
+          },
+          "required": ["last_request_timestamp", "min_interval_seconds", "nonce_hash"],
+          "additionalProperties": false
+        },
+        "dmca_safe_harbor_attestation": {
+          "type": "object",
+          "properties": {
+            "notice_agent_contact": { "type": "string" },
+            "decentralized_proxy_agent_verified": { "type": "boolean" },
+            "quarantine_supported": { "type": "boolean" },
+            "takedown_escrow_active": { "type": "boolean" }
+          },
+          "required": ["notice_agent_contact", "decentralized_proxy_agent_verified", "quarantine_supported", "takedown_escrow_active"],
+          "additionalProperties": false
+        },
+        "statutory_compliance_attested": {
+          "type": "boolean",
+          "description": "Master boolean attestation of zero statutory violation."
+        }
+      },
+      "required": [
+        "cfaa_18_usc_1030_mandatory_bound",
+        "gdpr_ccpa_privacy_framework_active",
+        "public_unauthenticated_boundary_verified",
+        "ephemeral_sandbox_context_verified",
+        "zero_auth_bypass_verified",
+        "zero_pii_sanitization_attested",
+        "adversarial_prompt_anomaly_checked",
+        "anti_aggregation_invariant_active",
+        "rate_limit_governor_active",
+        "node_rate_limits",
+        "operator_protection",
+        "kademlia_target_assignment",
+        "proof_of_delay",
+        "dmca_safe_harbor_attestation",
+        "statutory_compliance_attested"
+      ],
+      "additionalProperties": false
+    },
+    "data_payload": {
+      "type": "object",
+      "properties": {
+        "format": {
+          "type": "string",
+          "enum": ["AST_JSON", "DIFFERENTIAL_TELEMETRY", "NON_INFRINGING_DERIVATIVE"]
+        },
+        "content_ast": {
+          "type": "object",
+          "description": "Structured, non-infringing factual AST object extracted locally."
+        },
+        "telemetry_fuzzing": {
+          "type": "object",
+          "properties": {
+            "metric_name": { "type": "string" },
+            "raw_quantized_value": { "type": "number" },
+            "noise_delta": { "type": "number" },
+            "fuzzed_value": { "type": "number" }
+          },
+          "required": ["metric_name", "raw_quantized_value", "noise_delta", "fuzzed_value"]
+        },
+        "commercial_feed_escrow": {
+          "type": "object",
+          "properties": {
+            "escrow_id": { "type": "string" },
+            "contributing_nodes_count": { "type": "integer", "minimum": 1 },
+            "pooled_sats": { "type": "integer", "minimum": 0 },
+            "fee_required_sats": { "type": "integer", "minimum": 0 },
+            "unlocked": { "type": "boolean" }
+          },
+          "required": ["escrow_id", "contributing_nodes_count", "pooled_sats", "fee_required_sats", "unlocked"]
+        }
+      },
+      "required": ["format"],
+      "additionalProperties": false
+    },
+    "node_attestation": {
+      "type": "object",
+      "properties": {
+        "node_id": { "type": "string" },
+        "signature_hash": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        }
+      },
+      "required": ["node_id", "signature_hash"],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "payload_id",
+    "collection_type",
+    "target_identifier",
+    "timestamp_utc",
+    "statutory_compliance",
+    "data_payload",
+    "node_attestation"
+  ],
+  "additionalProperties": false
+}
