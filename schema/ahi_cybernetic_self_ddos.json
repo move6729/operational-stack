@@ -1,0 +1,227 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:ahi_cybernetic_self_ddos.json",
+  "title": "SPEC-AHI-CYBERNETIC-SELF-DDOS-v1.0 Verification & Capital-Structure Schema",
+  "description": "JSON Draft 2020-12 schema encoding the $550.0M Federal AHI Institutional Capital-at-Risk Waterfall, Acoustic/RF Link-Budget Falsification Boundaries, NIH 2024 Null-Convergence Metrics, Multi-Counterparty Security-Master Ring, and HAVANA Act Statutory Moral Hazard.",
+  "type": "object",
+  "required": [
+    "canonical_spec",
+    "jurisdiction_context",
+    "cfaa_18_usc_1030_compliance_attestation",
+    "locked_constants_and_outputs",
+    "capital_structure_waterfall",
+    "counterparty_ring",
+    "catalyst_calendar",
+    "governing_equations"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "canonical_spec": {
+      "type": "string",
+      "const": "SPEC-AHI-CYBERNETIC-SELF-DDOS-v1.0"
+    },
+    "jurisdiction_context": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}(-[A-Z0-9]{1,3})?$",
+      "default": "US",
+      "description": "ISO 3166-1 alpha-2 jurisdiction identifier (e.g., US, CA, CU)."
+    },
+    "cfaa_18_usc_1030_compliance_attestation": {
+      "type": "object",
+      "required": [
+        "zero_unauthorized_access",
+        "public_record_statutory_and_clinical_provenance",
+        "itar_ear_22_cfr_120_34_public_domain_compliant"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "zero_unauthorized_access": {
+          "type": "boolean",
+          "const": true
+        },
+        "public_record_statutory_and_clinical_provenance": {
+          "type": "boolean",
+          "const": true
+        },
+        "itar_ear_22_cfr_120_34_public_domain_compliant": {
+          "type": "boolean",
+          "const": true
+        }
+      }
+    },
+    "locked_constants_and_outputs": {
+      "type": "object",
+      "required": [
+        "total_institutional_capital_at_risk_usd",
+        "tranche_1_statutory_havana_act_exposure_usd",
+        "tranche_2_classified_elint_sensor_and_darpa_rd_usd",
+        "tranche_3_station_evacuation_and_ci_disruption_cost_usd",
+        "tranche_4_nih_walter_reed_upenn_clinical_workup_usd",
+        "adversary_dew_hardware_capex_usd",
+        "odni_reviewed_ahi_reports_count",
+        "odni_reviewed_countries_count",
+        "odni_participating_agencies_count",
+        "odni_very_unlikely_agencies_count",
+        "odni_unlikely_agencies_count",
+        "post_2018_confirmed_hostile_rf_emissions_count",
+        "nih_ahi_cohort_size",
+        "nih_control_cohort_size_pierpaoli_mri",
+        "nih_control_cohort_size_chan_clinical",
+        "nih_structural_mri_adjusted_p_value",
+        "nih_biomarker_gfap_nfl_adjusted_p_value",
+        "nih_mri_reproducibility_cv_pct",
+        "nih_fnd_pppd_diagnosed_count",
+        "nih_fnd_pppd_diagnosed_pct",
+        "havana_act_exec_schedule_level_iii_base_usd",
+        "havana_act_tier_1_75pct_payment_usd",
+        "havana_act_tier_2_100pct_payment_usd",
+        "feca_uncorroborated_subjective_symptom_payout_usd",
+        "cricket_carrier_freq_hz",
+        "cricket_speed_of_sound_mps",
+        "cricket_wavelength_cm",
+        "cricket_quarter_wave_null_step_cm",
+        "cricket_pulse_repetition_rate_hz",
+        "link_budget_standoff_m",
+        "link_budget_close_range_m",
+        "link_budget_wall_loss_db",
+        "near_field_power_scaling_factor",
+        "dalhousie_canadian_diplomat_cohort_size",
+        "upenn_2019_ahi_cohort_size",
+        "upenn_2019_civilian_control_concussion_exclusion_rate_pct",
+        "cleared_workforce_population",
+        "annual_baseline_vestibular_migraine_tinnitus_incidence_rate",
+        "annual_eligible_baseline_episodes"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "total_institutional_capital_at_risk_usd": { "type": "number", "const": 550000000.0 },
+        "tranche_1_statutory_havana_act_exposure_usd": { "type": "number", "const": 280950000.0 },
+        "tranche_2_classified_elint_sensor_and_darpa_rd_usd": { "type": "number", "const": 145000000.0 },
+        "tranche_3_station_evacuation_and_ci_disruption_cost_usd": { "type": "number", "const": 85000000.0 },
+        "tranche_4_nih_walter_reed_upenn_clinical_workup_usd": { "type": "number", "const": 39050000.0 },
+        "adversary_dew_hardware_capex_usd": { "type": "number", "const": 0.0 },
+        "odni_reviewed_ahi_reports_count": { "type": "integer", "const": 1500 },
+        "odni_reviewed_countries_count": { "type": "integer", "const": 96 },
+        "odni_participating_agencies_count": { "type": "integer", "const": 7 },
+        "odni_very_unlikely_agencies_count": { "type": "integer", "const": 5 },
+        "odni_unlikely_agencies_count": { "type": "integer", "const": 2 },
+        "post_2018_confirmed_hostile_rf_emissions_count": { "type": "integer", "const": 0 },
+        "nih_ahi_cohort_size": { "type": "integer", "const": 86 },
+        "nih_control_cohort_size_pierpaoli_mri": { "type": "integer", "const": 48 },
+        "nih_control_cohort_size_chan_clinical": { "type": "integer", "const": 30 },
+        "nih_structural_mri_adjusted_p_value": { "type": "number", "const": 1.0 },
+        "nih_biomarker_gfap_nfl_adjusted_p_value": { "type": "number", "const": 1.0 },
+        "nih_mri_reproducibility_cv_pct": { "type": "number", "const": 1.0 },
+        "nih_fnd_pppd_diagnosed_count": { "type": "integer", "const": 24 },
+        "nih_fnd_pppd_diagnosed_pct": { "type": "number", "const": 27.907 },
+        "havana_act_exec_schedule_level_iii_base_usd": { "type": "number", "const": 187300.0 },
+        "havana_act_tier_1_75pct_payment_usd": { "type": "number", "const": 140475.0 },
+        "havana_act_tier_2_100pct_payment_usd": { "type": "number", "const": 187300.0 },
+        "feca_uncorroborated_subjective_symptom_payout_usd": { "type": "number", "const": 0.0 },
+        "cricket_carrier_freq_hz": { "type": "number", "const": 7000.0 },
+        "cricket_speed_of_sound_mps": { "type": "number", "const": 343.0 },
+        "cricket_wavelength_cm": { "type": "number", "const": 4.9 },
+        "cricket_quarter_wave_null_step_cm": { "type": "number", "const": 1.225 },
+        "cricket_pulse_repetition_rate_hz": { "type": "number", "const": 180.0 },
+        "link_budget_standoff_m": { "type": "number", "const": 30.0 },
+        "link_budget_close_range_m": { "type": "number", "const": 5.0 },
+        "link_budget_wall_loss_db": { "type": "number", "const": 15.0 },
+        "near_field_power_scaling_factor": { "type": "number", "const": 1138.42 },
+        "dalhousie_canadian_diplomat_cohort_size": { "type": "integer", "const": 26 },
+        "upenn_2019_ahi_cohort_size": { "type": "integer", "const": 40 },
+        "upenn_2019_civilian_control_concussion_exclusion_rate_pct": { "type": "number", "const": 100.0 },
+        "cleared_workforce_population": { "type": "integer", "const": 100000 },
+        "annual_baseline_vestibular_migraine_tinnitus_incidence_rate": { "type": "number", "const": 0.15 },
+        "annual_eligible_baseline_episodes": { "type": "integer", "const": 15000 }
+      }
+    },
+    "capital_structure_waterfall": {
+      "type": "array",
+      "minItems": 4,
+      "maxItems": 4,
+      "items": {
+        "type": "object",
+        "required": [
+          "tranche_id",
+          "seniority",
+          "principal_usd",
+          "breakeven_ev_threshold_usd",
+          "collateral_or_appropriation_authority"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "tranche_id": {
+            "type": "string",
+            "enum": [
+              "TRANCHE_1_STATUTORY_HAVANA_ACT_CLAIMS",
+              "TRANCHE_2_CLASSIFIED_ELINT_DARPA_SENSOR_RD",
+              "TRANCHE_3_STATION_EVACUATION_CI_DISRUPTION",
+              "TRANCHE_4_NIH_WALTER_REED_UPENN_CLINICAL_WORKUPS"
+            ]
+          },
+          "seniority": { "type": "integer", "minimum": 1, "maximum": 4 },
+          "principal_usd": { "type": "number", "minimum": 0 },
+          "breakeven_ev_threshold_usd": { "type": "number", "minimum": 0, "maximum": 550000000.0 },
+          "collateral_or_appropriation_authority": { "type": "string" }
+        }
+      }
+    },
+    "counterparty_ring": {
+      "type": "array",
+      "minItems": 6,
+      "items": {
+        "type": "object",
+        "required": ["role", "entity_name", "statutory_or_docket_pin"],
+        "additionalProperties": false,
+        "properties": {
+          "role": {
+            "type": "string",
+            "enum": [
+              "primary_statutory_obligor",
+              "intelligence_assessment_authority",
+              "clinical_arbitration_authority",
+              "independent_scientific_auditor",
+              "defense_procurement_counterparty",
+              "congressional_oversight_and_counsel"
+            ]
+          },
+          "entity_name": { "type": "string" },
+          "ticker_or_cik": { "type": "string" },
+          "statutory_or_docket_pin": { "type": "string" }
+        }
+      }
+    },
+    "catalyst_calendar": {
+      "type": "array",
+      "minItems": 6,
+      "items": {
+        "type": "object",
+        "required": ["iso_date", "event", "primary_pin"],
+        "additionalProperties": false,
+        "properties": {
+          "iso_date": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+          "event": { "type": "string" },
+          "primary_pin": { "type": "string" }
+        }
+      }
+    },
+    "governing_equations": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 5,
+      "items": {
+        "type": "object",
+        "required": ["eq_id", "name", "closed_form_invariant"],
+        "additionalProperties": false,
+        "properties": {
+          "eq_id": {
+            "type": "string",
+            "enum": ["EQ_01", "EQ_02", "EQ_03", "EQ_04", "EQ_05"]
+          },
+          "name": { "type": "string" },
+          "closed_form_invariant": { "type": "string" }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,255 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:commercial-sigint-telemetry-rollup-v1.0.json",
+  "title": "Commercial SIGINT Telemetry Rollup: Capital Stack, Tranche Waterfall and Equilibrium Attestations",
+  "description": "Deterministic record schema for the commercial SIGINT telemetry rollup bundle: aggregate capital stack decomposition, Unity Software senior debt waterfall, EULA-versus-zeroday implant economics, residential proxy arbitrage, Pigouvian diaspora siege feedback loop and Spence CI separating equilibrium. Mathematical systems-level specification only; zero controlled hardware blueprints.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "jurisdiction_context",
+    "cfaa_18_usc_1030_compliance_attestation",
+    "itar_ear_public_domain_boundary_attestation",
+    "entity_and_instrument_ids",
+    "aggregate_capital_stack_usd",
+    "capital_stack_components",
+    "eula_vs_zeroday_economics",
+    "residential_proxy_arbitrage",
+    "tranche_recovery_waterfall",
+    "pigouvian_diaspora_siege_loop",
+    "spence_ci_signaling_equilibrium"
+  ],
+  "properties": {
+    "jurisdiction_context": {
+      "description": "ISO 3166-1 alpha-2 jurisdiction contexts for modular statutory processing.",
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^[A-Z]{2}$"
+      }
+    },
+    "cfaa_18_usc_1030_compliance_attestation": {
+      "description": "Zero-unauthorized-access attestation; non-compliant state transitions fail validation.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["attested", "zero_unauthorized_access", "statute"],
+      "properties": {
+        "attested": { "const": true },
+        "zero_unauthorized_access": { "const": true },
+        "statute": { "const": "18 U.S.C. 1030" }
+      }
+    },
+    "itar_ear_public_domain_boundary_attestation": {
+      "description": "Artifact remains at public-domain mathematical and systems level; zero controlled blueprints.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["attested", "public_domain_exemptions", "controlled_hardware_blueprints"],
+      "properties": {
+        "attested": { "const": true },
+        "public_domain_exemptions": {
+          "type": "array",
+          "minItems": 2,
+          "uniqueItems": true,
+          "items": { "type": "string" }
+        },
+        "controlled_hardware_blueprints": { "const": 0 }
+      }
+    },
+    "entity_and_instrument_ids": {
+      "description": "Multi-counterparty security-master ring across every regulated perimeter counterparty.",
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/entity_instrument_id" }
+    },
+    "aggregate_capital_stack_usd": {
+      "description": "Aggregate rollup capital stack in USD.",
+      "type": "number",
+      "const": 8263500000.0
+    },
+    "capital_stack_components": {
+      "description": "Itemized decomposition summing exactly to aggregate_capital_stack_usd.",
+      "type": "array",
+      "minItems": 7,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["component", "amount_usd"],
+        "properties": {
+          "component": { "type": "string", "minLength": 1 },
+          "amount_usd": { "type": "number", "minimum": 0 }
+        }
+      }
+    },
+    "telemetry_counters": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "hola_botnet_peer_nodes_count": { "type": "integer", "minimum": 0 },
+        "team_jorge_aims_avatar_count": { "type": "integer", "minimum": 0 },
+        "ironsource_post_merger_equity_share_pct": { "type": "number", "minimum": 0, "maximum": 100 }
+      }
+    },
+    "eula_vs_zeroday_economics": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "zeroday_implant_unit_cost_usd",
+        "zeroday_half_life_days",
+        "eula_implant_net_cost_per_user_usd",
+        "eula_implant_persistence_days",
+        "state_subsidized_rd_cost_offset_ratio",
+        "zeroday_horizon_cost_usd",
+        "cost_advantage_multiple_over_horizon",
+        "eula_strictly_dominant"
+      ],
+      "properties": {
+        "zeroday_implant_unit_cost_usd": { "const": 150000.0 },
+        "zeroday_half_life_days": { "const": 120.0 },
+        "eula_implant_net_cost_per_user_usd": { "const": -4.85 },
+        "eula_implant_persistence_days": { "const": 1825.0 },
+        "state_subsidized_rd_cost_offset_ratio": { "const": 0.78 },
+        "zeroday_horizon_cost_usd": { "const": 2281250.0 },
+        "cost_advantage_multiple_over_horizon": { "type": "number", "minimum": 100000 },
+        "eula_strictly_dominant": { "const": true }
+      }
+    },
+    "residential_proxy_arbitrage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "sdk_bandwidth_lease_cost_per_gb_usd",
+        "bright_data_retail_resale_per_gb_usd",
+        "residential_proxy_gross_markup_multiple"
+      ],
+      "properties": {
+        "sdk_bandwidth_lease_cost_per_gb_usd": { "const": 0.05 },
+        "bright_data_retail_resale_per_gb_usd": { "const": 15.0 },
+        "residential_proxy_gross_markup_multiple": { "const": 300.0 }
+      }
+    },
+    "tranche_recovery_waterfall": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["issuer", "tranches", "scenarios"],
+      "properties": {
+        "issuer": { "type": "string", "minLength": 1 },
+        "tranches": {
+          "type": "array",
+          "minItems": 3,
+          "items": { "$ref": "#/$defs/waterfall_tranche" }
+        },
+        "scenarios": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["ev_1500m_distressed", "ev_2500m_fulcrum", "ev_4400m_merger_par"],
+          "properties": {
+            "ev_1500m_distressed": { "$ref": "#/$defs/waterfall_scenario" },
+            "ev_2500m_fulcrum": { "$ref": "#/$defs/waterfall_scenario" },
+            "ev_4400m_merger_par": { "$ref": "#/$defs/waterfall_scenario" }
+          }
+        }
+      }
+    },
+    "pigouvian_diaspora_siege_loop": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "diaspora_population_exposed_count",
+        "cartel_insider_beneficiaries_count",
+        "siege_feedback_coupling_gamma",
+        "externality_internalization_phi",
+        "endogenous_restraint_strictly_dominated",
+        "nash_defection",
+        "exogenous_break_condition"
+      ],
+      "properties": {
+        "diaspora_population_exposed_count": { "const": 15000000 },
+        "cartel_insider_beneficiaries_count": { "const": 1500 },
+        "siege_feedback_coupling_gamma": { "const": 0.35 },
+        "externality_internalization_phi": { "type": "number", "exclusiveMaximum": 0.001 },
+        "endogenous_restraint_strictly_dominated": { "const": true },
+        "nash_defection": { "const": 1.0 },
+        "exogenous_break_condition": { "type": "string", "minLength": 1 }
+      }
+    },
+    "spence_ci_signaling_equilibrium": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "signal",
+        "cost_uncompromised_watts",
+        "cost_compromised",
+        "p_compromised_given_explicit_audit",
+        "separating_equilibrium_holds"
+      ],
+      "properties": {
+        "signal": { "const": "Explicit_Audit" },
+        "cost_uncompromised_watts": { "const": 20.0 },
+        "cost_compromised": { "const": "INFINITY" },
+        "p_compromised_given_explicit_audit": { "const": 0.0 },
+        "separating_equilibrium_holds": { "const": true }
+      }
+    }
+  },
+  "$defs": {
+    "entity_instrument_id": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["role", "legal_name"],
+      "properties": {
+        "role": {
+          "enum": [
+            "primary_target",
+            "acquirer",
+            "vc_sponsor",
+            "pe_sponsor",
+            "bdc_colender",
+            "insurer",
+            "auditor_val_agent",
+            "pension_lp_consultant",
+            "trustee_counsel"
+          ]
+        },
+        "legal_name": { "type": "string", "minLength": 1 },
+        "ticker": { "type": ["string", "null"] },
+        "cik_or_crd": { "type": ["string", "null"] },
+        "instrument": { "type": ["string", "null"] },
+        "docket_or_pin": { "type": ["string", "null"] }
+      }
+    },
+    "waterfall_tranche": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["tranche", "principal_usd", "seniority"],
+      "properties": {
+        "tranche": { "type": "string", "minLength": 1 },
+        "principal_usd": { "type": "number", "minimum": 0 },
+        "coupon_or_pik": { "type": ["string", "null"] },
+        "collateral_box": { "type": ["string", "null"] },
+        "seniority": { "type": "integer", "minimum": 1 },
+        "breakeven_ev_threshold_usd": { "type": "number", "minimum": 0 }
+      }
+    },
+    "waterfall_scenario": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "2026_conv_notes_1725m_dollar",
+        "2026_conv_notes_1725m_recovery_pct",
+        "2027_pipe_notes_1000m_dollar",
+        "2027_pipe_notes_1000m_recovery_pct",
+        "common_equity_dollar",
+        "common_equity_recovery_pct"
+      ],
+      "properties": {
+        "2026_conv_notes_1725m_dollar": { "type": "number", "minimum": 0 },
+        "2026_conv_notes_1725m_recovery_pct": { "type": "number", "minimum": 0, "maximum": 100 },
+        "2027_pipe_notes_1000m_dollar": { "type": "number", "minimum": 0 },
+        "2027_pipe_notes_1000m_recovery_pct": { "type": "number", "minimum": 0, "maximum": 100 },
+        "common_equity_dollar": { "type": "number", "minimum": 0 },
+        "common_equity_recovery_pct": { "type": "number", "minimum": 0, "maximum": 100 }
+      }
+    }
+  }
+}

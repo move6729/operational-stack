@@ -1,0 +1,136 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:hypervisor_fallacy_vs_stigmergic_realism.json",
+  "title": "Hypervisor Fallacy (Simulation Theory) vs. Bare-Metal Stigmergic Realism Audit Schema",
+  "description": "Audits centralized cloud-hypervisor occupational synecdoche, Whiteheadian misplaced concreteness, Hanson's 2001 Externalized Solipsism (Truman-Show courtier rule), and SBF's moral disengagement via dereification (US v. Bankman-Fried) inside the Silicon Valley C2 cohort against relativistic locality, Landauer bounds, Hayekian zero-C2 stigmergic price discovery, and Fristonian Markov-blanket sovereignty.",
+  "type": "object",
+  "required": [
+    "spec_version",
+    "jurisdiction_context",
+    "cfaa_compliance_attestation",
+    "hypervisor_simulation_physics_audit",
+    "hayek_friston_stigmergic_mesh_metrics",
+    "capital_allocation_divergence",
+    "architectural_verdict"
+  ],
+  "properties": {
+    "spec_version": {
+      "type": "string",
+      "const": "SPEC-2026-HYPERVISOR-FALLACY-VS-STIGMERGIC-REALISM-v1.6"
+    },
+    "jurisdiction_context": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}$"
+    },
+    "cfaa_compliance_attestation": {
+      "type": "boolean",
+      "const": true
+    },
+    "hypervisor_simulation_physics_audit": {
+      "type": "object",
+      "required": [
+        "whitehead_misplaced_concreteness_and_korzybski_map_territory_verified",
+        "occupational_synecdoche_confined_to_cloud_c2_cohort",
+        "hanson_2001_externalized_solipsism_courtier_rule_documented",
+        "hanson_entertain_external_observer_templeos_isomorph_verified",
+        "sbf_moral_disengagement_us_v_bankman_fried_documented",
+        "externalized_solipsism_memetically_sterile_under_physical_friction",
+        "global_synchronous_clock_possible_under_finite_c",
+        "central_hypervisor_virtualization_thermodynamically_viable",
+        "bare_metal_1to1_local_execution_verified"
+      ],
+      "properties": {
+        "whitehead_misplaced_concreteness_and_korzybski_map_territory_verified": {
+          "type": "boolean",
+          "const": true
+        },
+        "occupational_synecdoche_confined_to_cloud_c2_cohort": {
+          "type": "boolean",
+          "const": true
+        },
+        "hanson_2001_externalized_solipsism_courtier_rule_documented": {
+          "type": "boolean",
+          "const": true
+        },
+        "hanson_entertain_external_observer_templeos_isomorph_verified": {
+          "type": "boolean",
+          "const": true
+        },
+        "sbf_moral_disengagement_us_v_bankman_fried_documented": {
+          "type": "boolean",
+          "const": true
+        },
+        "externalized_solipsism_memetically_sterile_under_physical_friction": {
+          "type": "boolean",
+          "const": true
+        },
+        "global_synchronous_clock_possible_under_finite_c": {
+          "type": "boolean",
+          "const": false
+        },
+        "central_hypervisor_virtualization_thermodynamically_viable": {
+          "type": "boolean",
+          "const": false
+        },
+        "bare_metal_1to1_local_execution_verified": {
+          "type": "boolean",
+          "const": true
+        }
+      }
+    },
+    "hayek_friston_stigmergic_mesh_metrics": {
+      "type": "object",
+      "required": [
+        "central_gosplan_c2_variety_preservation_ratio",
+        "stigmergic_zero_c2_market_variety_preservation_ratio",
+        "c2_chat_tokens_required_for_price_stigmergy",
+        "markov_blanket_airgap_integrity_preserved"
+      ],
+      "properties": {
+        "central_gosplan_c2_variety_preservation_ratio": {
+          "type": "number",
+          "maximum": 0.05
+        },
+        "stigmergic_zero_c2_market_variety_preservation_ratio": {
+          "type": "number",
+          "minimum": 0.99
+        },
+        "c2_chat_tokens_required_for_price_stigmergy": {
+          "type": "integer",
+          "const": 0
+        },
+        "markov_blanket_airgap_integrity_preserved": {
+          "type": "boolean",
+          "const": true
+        }
+      }
+    },
+    "capital_allocation_divergence": {
+      "type": "object",
+      "required": [
+        "monolithic_take_or_pay_hypervisor_solvency_viable",
+        "elective_invasive_bci_thin_client_viable",
+        "sovereign_edge_stigmergic_mesh_net_positive_yield"
+      ],
+      "properties": {
+        "monolithic_take_or_pay_hypervisor_solvency_viable": {
+          "type": "boolean",
+          "const": false
+        },
+        "elective_invasive_bci_thin_client_viable": {
+          "type": "boolean",
+          "const": false
+        },
+        "sovereign_edge_stigmergic_mesh_net_positive_yield": {
+          "type": "boolean",
+          "const": true
+        }
+      }
+    },
+    "architectural_verdict": {
+      "type": "string",
+      "const": "REJECT_HYPERVISOR_CLOUD_THEOLOGY_ENFORCE_BARE_METAL_STIGMERGIC_MARKOV_SOVEREIGNTY"
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,255 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:thiel_synthesis_foci_counterintelligence_audit.json",
+  "title": "Thiel Synthesis FOCI Counterintelligence & Capital-Structure Forensic Audit Schema",
+  "description": "JSON Schema Draft 2020-12 validating the 6-pillar counterintelligence, statutory FOCI (32 C.F.R. Part 117), IRC § 4975 Roth IRA tax shelter, Southern Trust / Valar Ventures capital provenance, offshore passport & IRB bypass, and Class F governance waterfall for SPEC-THIEL-SYNTHESIS-FOCI-COUNTERINTELLIGENCE-AUDIT-v1.0.",
+  "type": "object",
+  "required": [
+    "specification_id",
+    "version",
+    "jurisdiction_context",
+    "cfaa_compliance_attestation",
+    "entity_and_instrument_ids",
+    "catalyst_calendar",
+    "locked_constants_and_outputs",
+    "pillars",
+    "sovereign_disgorgement_waterfall"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "specification_id": {
+      "type": "string",
+      "const": "SPEC-THIEL-SYNTHESIS-FOCI-COUNTERINTELLIGENCE-AUDIT-v1.0"
+    },
+    "version": {
+      "type": "string",
+      "const": "1.0"
+    },
+    "jurisdiction_context": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["US", "DE", "NA", "ZA", "NZ", "KN", "MT", "VI"]
+      },
+      "minItems": 4,
+      "uniqueItems": true
+    },
+    "cfaa_compliance_attestation": {
+      "type": "object",
+      "required": [
+        "statute",
+        "zero_unauthorized_access",
+        "public_record_provenance_only",
+        "milkovich_protected_synthesis"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "statute": {
+          "type": "string",
+          "const": "18 U.S.C. § 1030"
+        },
+        "zero_unauthorized_access": {
+          "type": "boolean",
+          "const": true
+        },
+        "public_record_provenance_only": {
+          "type": "boolean",
+          "const": true
+        },
+        "milkovich_protected_synthesis": {
+          "type": "string",
+          "const": "Milkovich v. Lorain Journal Co., 497 U.S. 1 (1990)"
+        }
+      }
+    },
+    "entity_and_instrument_ids": {
+      "type": "object",
+      "required": [
+        "primary_issuer_ticker",
+        "primary_issuer_cik",
+        "benchmark_comparison_tickers",
+        "monitored_entities",
+        "governance_instruments",
+        "statutory_and_regulatory_dockets"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "primary_issuer_ticker": { "type": "string", "const": "NYSE: PLTR" },
+        "primary_issuer_cik": { "type": "string", "const": "0001321655" },
+        "benchmark_comparison_tickers": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "monitored_entities": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 5
+        },
+        "governance_instruments": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "statutory_and_regulatory_dockets": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "catalyst_calendar": {
+      "type": "array",
+      "minItems": 6,
+      "items": {
+        "type": "object",
+        "required": ["date", "event", "statutory_or_financial_impact"],
+        "additionalProperties": false,
+        "properties": {
+          "date": {
+            "type": "string",
+            "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+          },
+          "event": { "type": "string" },
+          "statutory_or_financial_impact": { "type": "string" }
+        }
+      }
+    },
+    "locked_constants_and_outputs": {
+      "type": "object",
+      "required": [
+        "culpa_birth_hereditary_guilt",
+        "pstg_birth_embargo_years",
+        "schmitt_nsdap_membership_number",
+        "schmitt_ideological_cosine_similarity",
+        "adult_ratification_score_max",
+        "paypal_2002_ebay_deal_usd",
+        "thiel_paypal_stake_pct",
+        "thiel_paypal_2002_exit_proceeds_usd",
+        "roth_ira_initial_basis_usd",
+        "roth_ira_1999_statutory_limit_usd",
+        "roth_ira_founder_shares",
+        "roth_ira_par_price_usd",
+        "confinity_1999_vc_fmv_per_share_usd",
+        "roth_ira_valuation_discount_pct",
+        "roth_ira_sub_accounts_count",
+        "roth_ira_2019_value_usd",
+        "roth_ira_return_multiple",
+        "combined_fed_ca_tax_rate",
+        "roth_ira_avoided_tax_usd",
+        "roth_early_withdrawal_haircut_pct",
+        "roth_disqualification_tax_and_penalty_usd",
+        "roth_unlock_date",
+        "midterm_swearing_in_date",
+        "midterm_to_roth_unlock_window_days",
+        "epstein_valar_seed_usd",
+        "epstein_valar_current_nav_usd",
+        "epstein_valar_moic",
+        "epstein_2014_scheduled_meetings_count",
+        "nz_statutory_residency_days",
+        "nz_thiel_actual_residency_days",
+        "nz_residency_met_pct",
+        "nz_residency_waiver_discount_pct",
+        "nz_concealment_years",
+        "st_kitts_rvx201_unapproved_trial_subjects",
+        "illinois_hotel_rvx201_subjects",
+        "rvx201_total_unmonitored_subjects",
+        "rational_vaccines_seed_usd",
+        "palantir_gross_margin_pct",
+        "palantir_annual_federal_rent_usd",
+        "palantir_class_f_voting_cap_pct",
+        "thiel_2022_senate_pac_spend_usd",
+        "clarium_aum_wipeout_pct",
+        "google_treason_constitutional_probability"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "culpa_birth_hereditary_guilt": { "type": "number", "const": 0.0 },
+        "pstg_birth_embargo_years": { "type": "integer", "const": 110 },
+        "schmitt_nsdap_membership_number": { "type": "integer", "const": 2098860 },
+        "schmitt_ideological_cosine_similarity": { "type": "number", "const": 1.0 },
+        "adult_ratification_score_max": { "type": "integer", "const": 4 },
+        "paypal_2002_ebay_deal_usd": { "type": "number", "const": 1500000000.0 },
+        "thiel_paypal_stake_pct": { "type": "number", "const": 3.7 },
+        "thiel_paypal_2002_exit_proceeds_usd": { "type": "number", "const": 55500000.0 },
+        "roth_ira_initial_basis_usd": { "type": "number", "const": 1664.0 },
+        "roth_ira_1999_statutory_limit_usd": { "type": "number", "const": 2000.0 },
+        "roth_ira_founder_shares": { "type": "integer", "const": 1700000 },
+        "roth_ira_par_price_usd": { "type": "number", "const": 0.001 },
+        "confinity_1999_vc_fmv_per_share_usd": { "type": "number", "const": 1.27 },
+        "roth_ira_valuation_discount_pct": { "type": "number", "const": 99.9213 },
+        "roth_ira_sub_accounts_count": { "type": "integer", "const": 96 },
+        "roth_ira_2019_value_usd": { "type": "number", "const": 5000000000.0 },
+        "roth_ira_return_multiple": { "type": "number", "const": 3004807.6923 },
+        "combined_fed_ca_tax_rate": { "type": "number", "const": 0.371 },
+        "roth_ira_avoided_tax_usd": { "type": "number", "const": 1854999382.66 },
+        "roth_early_withdrawal_haircut_pct": { "type": "number", "const": 47.0 },
+        "roth_disqualification_tax_and_penalty_usd": { "type": "number", "const": 2350000000.0 },
+        "roth_unlock_date": { "type": "string", "const": "2027-04-11" },
+        "midterm_swearing_in_date": { "type": "string", "const": "2027-01-03" },
+        "midterm_to_roth_unlock_window_days": { "type": "integer", "const": 98 },
+        "epstein_valar_seed_usd": { "type": "number", "const": 40000000.0 },
+        "epstein_valar_current_nav_usd": { "type": "number", "const": 170000000.0 },
+        "epstein_valar_moic": { "type": "number", "const": 4.25 },
+        "epstein_2014_scheduled_meetings_count": { "type": "integer", "const": 6 },
+        "nz_statutory_residency_days": { "type": "integer", "const": 1350 },
+        "nz_thiel_actual_residency_days": { "type": "integer", "const": 12 },
+        "nz_residency_met_pct": { "type": "number", "const": 0.8889 },
+        "nz_residency_waiver_discount_pct": { "type": "number", "const": 99.1111 },
+        "nz_concealment_years": { "type": "integer", "const": 6 },
+        "st_kitts_rvx201_unapproved_trial_subjects": { "type": "integer", "const": 17 },
+        "illinois_hotel_rvx201_subjects": { "type": "integer", "const": 8 },
+        "rvx201_total_unmonitored_subjects": { "type": "integer", "const": 25 },
+        "rational_vaccines_seed_usd": { "type": "number", "const": 7000000.0 },
+        "palantir_gross_margin_pct": { "type": "number", "const": 80.0 },
+        "palantir_annual_federal_rent_usd": { "type": "number", "const": 1720000000.0 },
+        "palantir_class_f_voting_cap_pct": { "type": "number", "const": 49.999999 },
+        "thiel_2022_senate_pac_spend_usd": { "type": "number", "const": 30000000.0 },
+        "clarium_aum_wipeout_pct": { "type": "number", "const": 95.5128 },
+        "google_treason_constitutional_probability": { "type": "number", "const": 0.0 }
+      }
+    },
+    "pillars": {
+      "type": "object",
+      "required": [
+        "pillar_1_adult_ratification_audit",
+        "pillar_2_operational_track_record",
+        "pillar_3_roth_ira_1999_2027_countdown",
+        "pillar_4_intelligence_privatization_epstein_valar",
+        "pillar_5_offshore_jurisdictional_shopping_foci",
+        "pillar_6_monopoly_rent_constitutional_treason_projection"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "pillar_1_adult_ratification_audit": { "type": "object" },
+        "pillar_2_operational_track_record": { "type": "object" },
+        "pillar_3_roth_ira_1999_2027_countdown": { "type": "object" },
+        "pillar_4_intelligence_privatization_epstein_valar": { "type": "object" },
+        "pillar_5_offshore_jurisdictional_shopping_foci": { "type": "object" },
+        "pillar_6_monopoly_rent_constitutional_treason_projection": { "type": "object" }
+      }
+    },
+    "sovereign_disgorgement_waterfall": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 5,
+      "items": {
+        "type": "object",
+        "required": [
+          "tier",
+          "tranche_name",
+          "claim_usd",
+          "statutory_basis",
+          "allocated_usd",
+          "recovery_cents_per_dollar"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "tier": { "type": "integer", "minimum": 1, "maximum": 5 },
+          "tranche_name": { "type": "string" },
+          "claim_usd": { "type": "number", "minimum": 0 },
+          "statutory_basis": { "type": "string" },
+          "allocated_usd": { "type": "number", "minimum": 0 },
+          "recovery_cents_per_dollar": { "type": "number", "minimum": 0 }
+        }
+      }
+    }
+  }
+}

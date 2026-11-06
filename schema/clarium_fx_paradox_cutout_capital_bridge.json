@@ -1,0 +1,130 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:clarium_fx_paradox_cutout_capital_bridge.json",
+  "$comment": "PLAIN-ENGLISH LEGAL NOTICE: This file is an abstract institutional-cybernetic and market-microstructure validation checklist (JSON Schema), NOT an accusation, indictment, or evidentiary filing. Every field encodes a published statutory citation, a public court docket, a pinned press disclosure, or a closed-form algebraic invariant.",
+  "title": "Clarium Open-Market FX Paradox, In-Q-Tel Shell_1 Pivot & Southern Trust to Valar Ventures Cutout Capital Bridge Schema",
+  "description": "Validates the four executable verification vectors of SPEC-CLARIUM-FX-PARADOX-AND-CUTOUT-CAPITAL-BRIDGE-v1.0: (1) the Zero-to-One vs $7.5T/day G10 FX microstructure sign inversion, (2) the Clarium Capital 2008-2010 cumulative return and 95.51% AUM collapse audit, (3) the In-Q-Tel 40:1 credentialing multiplier and $2M -> $250B Palantir seed multiple, and (4) the Southern Trust -> Valar Ventures $40M -> $170M cutout capital bridge and fiduciary irrationality ratio falsifying H0.",
+  "type": "object",
+  "required": [
+    "spec_version",
+    "jurisdiction_context",
+    "cfaa_compliance_attestation",
+    "Vector1ZeroToOneFXMicrostructureSignInversion",
+    "Vector2ClariumCollapseAudit",
+    "Vector3InQTelCredentialingMultiplier",
+    "Vector4SouthernTrustValarCutoutBridge",
+    "Vector5FveyCitadelInversionAndRule26DiscoveryTrap"
+  ],
+  "properties": {
+    "spec_version": {"type": "string", "const": "SPEC-CLARIUM-FX-PARADOX-AND-CUTOUT-CAPITAL-BRIDGE-v1.0"},
+    "jurisdiction_context": {"type": "string", "pattern": "^[A-Z]{2}$"},
+    "cfaa_compliance_attestation": {"type": "boolean", "const": true},
+    "Vector1ZeroToOneFXMicrostructureSignInversion": {
+      "type": "object",
+      "description": "Pi_Market(B, I_Command) = R0 / (1 + lambda * B) + gamma * I_Command - Cost_Carry/Vol (Kyle 1985 / Grossman-Stiglitz 1980). As competitive breadth B -> infinity in the $7.5T/day G10 OTC FX market, E[Pi_Clarium] < 0 at I_Command = 0 while E[Pi_Cutout] >> 0 at I_Command = 1 with a 5%-10% House Rake inside a 26 U.S.C. 934 USVI wrapper.",
+      "required": ["g10_fx_daily_notional_usd", "base_monopoly_rent_r0", "kyle_lambda_price_impact", "cost_carry_vol", "gamma_command_premium", "i_command_clarium", "i_command_cutout", "house_rake_tau_min", "house_rake_tau_max", "pi_monopoly_regime", "expected_profit_clarium", "expected_profit_cutout_min", "expected_profit_cutout_max", "sign_inversion_verified"],
+      "properties": {
+        "g10_fx_daily_notional_usd": {"type": "number", "const": 7500000000000},
+        "base_monopoly_rent_r0": {"type": "number", "exclusiveMinimum": 0},
+        "kyle_lambda_price_impact": {"type": "number", "exclusiveMinimum": 0},
+        "cost_carry_vol": {"type": "number", "exclusiveMinimum": 0},
+        "gamma_command_premium": {"type": "number", "exclusiveMinimum": 0},
+        "i_command_clarium": {"type": "integer", "const": 0},
+        "i_command_cutout": {"type": "integer", "const": 1},
+        "house_rake_tau_min": {"type": "number", "const": 0.05},
+        "house_rake_tau_max": {"type": "number", "const": 0.10},
+        "pi_monopoly_regime": {"type": "number", "exclusiveMinimum": 0},
+        "expected_profit_clarium": {"type": "number", "exclusiveMaximum": 0},
+        "expected_profit_cutout_min": {"type": "number", "exclusiveMinimum": 0},
+        "expected_profit_cutout_max": {"type": "number", "exclusiveMinimum": 0},
+        "sign_inversion_verified": {"type": "boolean", "const": true}
+      },
+      "additionalProperties": false
+    },
+    "Vector2ClariumCollapseAudit": {
+      "type": "object",
+      "description": "R_Cum(Clarium 2008-2010) = (1 - 0.045)(1 - 0.250)(1 - 0.230) = 0.5515125 (-44.85%); W_Peak-to-Trough = 0.5515125 / 1.579 = 0.34928 (-65.07%) from the +57.9% June 2008 high-water mark; AUM collapse 1 - 350M/7800M = 95.51%.",
+      "required": ["fy2008_net_return", "fy2009_net_return", "fy2010_net_return", "june_2008_ytd_peak_return", "cumulative_return_factor_2008_2010", "cumulative_drawdown_pct", "peak_to_trough_factor", "peak_to_trough_drawdown_pct", "aum_peak_june_2008_usd", "aum_trough_2011_usd", "dec_2009_aum_pin_cite_usd", "aum_collapse_pct", "collapse_verified"],
+      "properties": {
+        "fy2008_net_return": {"type": "number", "const": -0.045},
+        "fy2009_net_return": {"type": "number", "const": -0.25},
+        "fy2010_net_return": {"type": "number", "const": -0.23},
+        "june_2008_ytd_peak_return": {"type": "number", "const": 0.579},
+        "cumulative_return_factor_2008_2010": {"type": "number", "const": 0.5515125},
+        "cumulative_drawdown_pct": {"type": "number", "const": -44.85},
+        "peak_to_trough_factor": {"type": "number", "const": 0.34928},
+        "peak_to_trough_drawdown_pct": {"type": "number", "const": -65.07},
+        "aum_peak_june_2008_usd": {"type": "number", "const": 7800000000},
+        "aum_trough_2011_usd": {"type": "number", "const": 350000000},
+        "dec_2009_aum_pin_cite_usd": {"type": "number", "const": 1330000000},
+        "aum_collapse_pct": {"type": "number", "const": 95.51},
+        "collapse_verified": {"type": "boolean", "const": true}
+      },
+      "additionalProperties": false
+    },
+    "Vector3InQTelCredentialingMultiplier": {
+      "type": "object",
+      "description": "In-Q-Tel (CIA-chartered 1999, 26 U.S.C. 501(c)(3) nonprofit, ~$100M/yr taxpayer inflow, ~$1B assets, 800+ portfolio companies) generates a documented 40:1 private VC credentialing multiplier and catalyzed Palantir's $2M seed into a ~$250B market capitalization (125,000x) while Clarium's open-market FX book collapsed.",
+      "required": ["inqtel_charter_year", "inqtel_statutory_anchor", "taxpayer_inflow_usd_per_year", "balance_sheet_assets_usd", "portfolio_companies_min", "private_vc_credentialing_multiplier", "palantir_iqtel_seed_usd", "palantir_market_cap_usd", "palantir_seed_multiple", "shell1_divergence_verified"],
+      "properties": {
+        "inqtel_charter_year": {"type": "integer", "const": 1999},
+        "inqtel_statutory_anchor": {"type": "string", "const": "26 U.S.C. § 501(c)(3)"},
+        "taxpayer_inflow_usd_per_year": {"type": "number", "const": 100000000},
+        "balance_sheet_assets_usd": {"type": "number", "const": 1000000000},
+        "portfolio_companies_min": {"type": "integer", "const": 800},
+        "private_vc_credentialing_multiplier": {"type": "number", "const": 40.0},
+        "palantir_iqtel_seed_usd": {"type": "number", "const": 2000000},
+        "palantir_market_cap_usd": {"type": "number", "const": 250000000000},
+        "palantir_seed_multiple": {"type": "number", "const": 125000},
+        "shell1_divergence_verified": {"type": "boolean", "const": true}
+      },
+      "additionalProperties": false
+    },
+    "Vector4SouthernTrustValarCutoutBridge": {
+      "type": "object",
+      "description": "Southern Trust Company, Inc. (26 U.S.C. 934 USVI) wired $40M into Valar Ventures (2015-2016), compounding to ~$170M by June 2025: MOIC = 4.25x, net gain = +$130M, CAGR = 4.25^(1/10) - 1 = 15.57%/yr. Standard 2% VC management fees ($800k/yr) equal 0.03636% < 0.037% of Thiel's $2.2B net worth, falsifying the routine-fundraising hypothesis H0 (Samuelson 1938 revealed preference).",
+      "required": ["southern_trust_investment_usd", "june_2025_value_usd", "moic", "net_gain_usd", "cagr_2015_2025_pct", "thiel_net_worth_2014_usd", "vc_management_fee_rate", "annual_management_fee_usd", "fee_to_net_worth_pct", "fee_ratio_threshold_pct", "h0_routine_fundraising_falsified"],
+      "properties": {
+        "southern_trust_investment_usd": {"type": "number", "const": 40000000},
+        "june_2025_value_usd": {"type": "number", "const": 170000000},
+        "moic": {"type": "number", "const": 4.25},
+        "net_gain_usd": {"type": "number", "const": 130000000},
+        "cagr_2015_2025_pct": {"type": "number", "const": 15.57},
+        "thiel_net_worth_2014_usd": {"type": "number", "const": 2200000000},
+        "vc_management_fee_rate": {"type": "number", "const": 0.02},
+        "annual_management_fee_usd": {"type": "number", "const": 800000},
+        "fee_to_net_worth_pct": {"type": "number", "const": 0.03636},
+        "fee_ratio_threshold_pct": {"type": "number", "const": 0.037},
+        "h0_routine_fundraising_falsified": {"type": "boolean", "const": true}
+      },
+      "additionalProperties": false
+    },
+    "Vector5FveyCitadelInversionAndRule26DiscoveryTrap": {
+      "type": "object",
+      "description": "Verifies the 12 / 1,350 day (0.8889%) NZ Citizenship Act 1977 s 8(7) residency ratio, the Opacity -> 0 FVEY citadel utility inversion ([2024] NZEnvC 114 & MACMA 1992), the standalone 26 U.S.C. 408A / 4975 / 6501(c)(3) / 6103(f)(1) 98-day Roth IRA liquidity race (Jan 3, 2027 midterm gavel -> April 11, 2027 Age 59.5 unlock), and the Fed. R. Civ. P. 26(b)(1) third-party champerty (P_Party = 0, Bollea v. Gawker) vs first-party defamation (P_Party = 1) compulsory truth-discovery asymmetry locking P(First-Party Suit) = 0.",
+      "required": ["nz_statutory_residency_days", "actual_days_in_nz_pre_citizenship", "residency_fraction_pct", "utility_citadel_opacity_1", "utility_citadel_opacity_0", "environment_court_rejection_citation", "roth_ira_corpus_usd", "roth_self_dealing_into_valar_prohibited_4975", "roth_collateral_pledge_prohibited_408e4", "roth_unlock_age_years", "roth_unlock_date", "midterm_to_roth_unlock_window_days", "pre_59_5_distribution_haircut_pct", "statute_of_limitations_4975_no_form5330", "third_party_champerty_discovery_exposure", "first_party_rule26_discovery_exposure", "rational_first_party_suit_probability", "defamation_hardening_verified"],
+      "properties": {
+        "nz_statutory_residency_days": {"type": "integer", "const": 1350},
+        "actual_days_in_nz_pre_citizenship": {"type": "integer", "const": 12},
+        "residency_fraction_pct": {"type": "number", "const": 0.8889},
+        "utility_citadel_opacity_1": {"type": "number", "exclusiveMinimum": 0},
+        "utility_citadel_opacity_0": {"type": "number", "exclusiveMaximum": 0},
+        "environment_court_rejection_citation": {"type": "string", "const": "[2024] NZEnvC 114"},
+        "roth_ira_corpus_usd": {"type": "integer", "const": 5000000000},
+        "roth_self_dealing_into_valar_prohibited_4975": {"type": "integer", "const": 1},
+        "roth_collateral_pledge_prohibited_408e4": {"type": "integer", "const": 1},
+        "roth_unlock_age_years": {"type": "number", "const": 59.5},
+        "roth_unlock_date": {"type": "string", "const": "2027-04-11"},
+        "midterm_to_roth_unlock_window_days": {"type": "integer", "const": 98},
+        "pre_59_5_distribution_haircut_pct": {"type": "number", "const": 47.0},
+        "statute_of_limitations_4975_no_form5330": {"type": "string", "const": "INF"},
+        "third_party_champerty_discovery_exposure": {"type": "number", "const": 0.0},
+        "first_party_rule26_discovery_exposure": {"type": "number", "exclusiveMinimum": 0},
+        "rational_first_party_suit_probability": {"type": "number", "const": 0.0},
+        "defamation_hardening_verified": {"type": "boolean", "const": true}
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

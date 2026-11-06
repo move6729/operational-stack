@@ -1,0 +1,206 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:parens_patriae_tvpa_subpoena_discovery_rubric.json",
+  "$comment": "PLAIN-ENGLISH LEGAL NOTICE: Abstract game-theoretic and statutory validation checklist (JSON Schema), NOT an accusation, indictment, or evidentiary filing. Every field encodes a published statutory citation, a public court docket, or a closed-form algebraic invariant over adjudicated public settlement records.",
+  "title": "50-State Parens Patriae TVPA Subpoena Discovery Rubric Schema",
+  "description": "Validates governing equations E1-E6 of the parens patriae TVPA subpoena discovery rubric: the 50-state AG bypass probability, the Rakoff 1595(a) direct venture-beneficiary pleading gate, the Bourjaily 801(d)(2)(E) preponderance gate, dual-capacity privilege collapse, Restatement Third Restitution 51 compounded disgorgement with RICO treble floor, and the Baxter-Burdick-CPL 40.51 deposition trilemma, anchored to the adjudicated Government of the USVI v. JPMorgan Chase (1:22-cv-10904-JSR) settlement baseline.",
+  "type": "object",
+  "required": [
+    "specification_id",
+    "parens_patriae_bypass",
+    "settlement_baseline",
+    "venture_beneficiary_pleading_gate",
+    "bourjaily_preponderance_gate",
+    "privilege_collapse",
+    "disgorgement_and_utility",
+    "deposition_trilemma",
+    "medical_discovery_vectors"
+  ],
+  "properties": {
+    "specification_id": { "type": "string", "const": "SPEC-PARENS-PATRIAE-TVPA-SUBPOENA-DISCOVERY-RUBRIC-v1.0" },
+    "parens_patriae_bypass": {
+      "type": "object",
+      "$comment": "E1: P(At_Least_One_AG_Files) = 1 - (p_Capture)^50 = 1 - 0.85^50 = 0.999704 (99.97%).",
+      "required": ["n_states", "p_ag_single_capture", "p_block_all_50_ags", "p_at_least_one_ag_files"],
+      "properties": {
+        "n_states": {
+          "description": "Number of state AG offices in the parens patriae fan-out.",
+          "type": "integer",
+          "const": 50
+        },
+        "p_ag_single_capture": {
+          "description": "Probability a single AG office is captured or blocked.",
+          "type": "number",
+          "const": 0.85
+        },
+        "p_block_all_50_ags": {
+          "description": "Probability all 50 AG offices are blocked: 0.85^50.",
+          "type": "number",
+          "const": 0.000296
+        },
+        "p_at_least_one_ag_files": {
+          "description": "Probability at least one AG files: 1 - 0.85^50.",
+          "type": "number",
+          "const": 0.999704
+        }
+      },
+      "additionalProperties": false
+    },
+    "settlement_baseline": {
+      "type": "object",
+      "$comment": "Adjudicated settlement decomposition (USD): 290M + 75M + 75M = 440M.",
+      "required": ["docket", "jpm_db_combined_settlement_usd", "jpm_victim_class_usd", "jpm_usvi_settlement_usd", "db_victim_class_usd"],
+      "properties": {
+        "docket": {
+          "description": "Adjudicated anchor docket for the JPMorgan settlement component.",
+          "type": "string",
+          "const": "1:22-cv-10904-JSR"
+        },
+        "jpm_db_combined_settlement_usd": { "type": "integer", "const": 440000000 },
+        "jpm_victim_class_usd": { "type": "integer", "const": 290000000 },
+        "jpm_usvi_settlement_usd": { "type": "integer", "const": 75000000 },
+        "db_victim_class_usd": { "type": "integer", "const": 75000000 }
+      },
+      "additionalProperties": false
+    },
+    "venture_beneficiary_pleading_gate": {
+      "type": "object",
+      "$comment": "E2: Survive_12b6 = I(direct beneficiary AND no aiding-abetting trap) * I(benefit > 0) * I(continuous business nexus) * I(constructive venture scienter).",
+      "required": ["ecf_pin_cite", "plead_direct_beneficiary_1595a", "avoid_aiding_abetting_trap", "knowingly_benefits_value_usd", "participation_continuous_business_nexus", "constructive_venture_scienter_or_apollo_imputation", "survive_12b6"],
+      "properties": {
+        "ecf_pin_cite": { "type": "string", "const": "ECF No. 75 at 28-39" },
+        "plead_direct_beneficiary_1595a": { "type": "integer", "enum": [0, 1] },
+        "avoid_aiding_abetting_trap": { "type": "integer", "enum": [0, 1] },
+        "knowingly_benefits_value_usd": {
+          "type": "object",
+          "required": ["rothschild_contract_usd", "mit_gates_directed_grant_usd", "total_usd"],
+          "properties": {
+            "rothschild_contract_usd": { "type": "integer", "const": 25000000 },
+            "mit_gates_directed_grant_usd": { "type": "integer", "const": 2000000 },
+            "total_usd": { "type": "integer", "const": 27000000, "minimum": 1 }
+          },
+          "additionalProperties": false
+        },
+        "participation_continuous_business_nexus": { "type": "integer", "enum": [0, 1] },
+        "constructive_venture_scienter_or_apollo_imputation": { "type": "integer", "enum": [0, 1] },
+        "survive_12b6": {
+          "description": "Product of the four gate indicators.",
+          "type": "integer",
+          "enum": [0, 1]
+        }
+      },
+      "additionalProperties": false
+    },
+    "bourjaily_preponderance_gate": {
+      "type": "object",
+      "$comment": "E3: Odds_post = (P_0 / (1 - P_0)) * LR_Calendar * LR_Ledger = 0.25 * 6.0 * 9.0 = 13.5; P_post = 13.5 / 14.5 = 0.931034 > 0.50.",
+      "required": ["rule", "bourjaily_prior_p0", "lr_calendar", "lr_ledger", "bourjaily_posterior_odds", "bourjaily_posterior_prob", "preponderance_threshold"],
+      "properties": {
+        "rule": { "type": "string", "const": "FRE 801(d)(2)(E); Bourjaily v. United States, 483 U.S. 171 (1987)" },
+        "bourjaily_prior_p0": { "type": "number", "const": 0.2 },
+        "lr_calendar": { "type": "number", "const": 6.0, "exclusiveMinimum": 1.0 },
+        "lr_ledger": { "type": "number", "const": 9.0, "exclusiveMinimum": 1.0 },
+        "bourjaily_posterior_odds": { "type": "number", "const": 13.5 },
+        "bourjaily_posterior_prob": { "type": "number", "const": 0.931034 },
+        "preponderance_threshold": { "type": "number", "const": 0.5 }
+      },
+      "additionalProperties": false
+    },
+    "privilege_collapse": {
+      "type": "object",
+      "$comment": "E4: Shield_Valid = I(attorney not officer signatory) * I(accountant WP not exempt) * I(no third party) * I(Zolin threshold not met) = 0 on the factual pattern.",
+      "required": ["anchors", "attorney_not_corporate_officer_signatory", "accountant_work_product_exempt", "third_party_present", "zolin_crime_fraud_threshold_met", "shield_valid"],
+      "properties": {
+        "anchors": {
+          "type": "array",
+          "items": { "type": "string" },
+          "const": [
+            "Zolin v. United States, 491 U.S. 554 (1989)",
+            "United States v. Arthur Young & Co., 465 U.S. 805 (1984)"
+          ]
+        },
+        "attorney_not_corporate_officer_signatory": { "type": "integer", "enum": [0, 1] },
+        "accountant_work_product_exempt": { "type": "integer", "enum": [0, 1] },
+        "third_party_present": { "type": "integer", "enum": [0, 1] },
+        "zolin_crime_fraud_threshold_met": { "type": "integer", "enum": [0, 1] },
+        "shield_valid": {
+          "description": "Product of the four negated piercing indicators.",
+          "type": "integer",
+          "enum": [0, 1]
+        }
+      },
+      "additionalProperties": false
+    },
+    "disgorgement_and_utility": {
+      "type": "object",
+      "$comment": "E5: V = C_0 * MOIC; Treble = 3 * W_Total; Pre = W_Total + Reserve; Swing = -(3 * W_Total + Reserve); Post = Pre + Swing.",
+      "required": ["restitution_anchor", "rico_treble_multiplier", "valar_bridge", "estate_fees_and_utility"],
+      "properties": {
+        "restitution_anchor": { "type": "string", "const": "Restatement (Third) of Restitution and Unjust Enrichment § 51" },
+        "rico_treble_multiplier": { "type": "integer", "const": 3 },
+        "valar_bridge": {
+          "type": "object",
+          "required": ["valar_initial_principal_usd", "valar_moic", "valar_compounded_value_usd", "valar_net_profit_disgorgement_usd"],
+          "properties": {
+            "valar_initial_principal_usd": { "type": "integer", "const": 40000000 },
+            "valar_moic": { "type": "number", "const": 4.25 },
+            "valar_compounded_value_usd": { "type": "integer", "const": 170000000 },
+            "valar_net_profit_disgorgement_usd": { "type": "integer", "const": 130000000 }
+          },
+          "additionalProperties": false
+        },
+        "estate_fees_and_utility": {
+          "type": "object",
+          "required": ["estate_executor_fees_w_total_usd", "estate_mortmain_reserve_usd", "rico_treble_floor_usd", "estate_pre_interdiction_utility_usd", "estate_post_interdiction_utility_usd", "estate_utility_swing_usd"],
+          "properties": {
+            "estate_executor_fees_w_total_usd": { "type": "integer", "const": 26000000 },
+            "estate_mortmain_reserve_usd": { "type": "integer", "const": 72000000 },
+            "rico_treble_floor_usd": { "type": "integer", "const": 78000000 },
+            "estate_pre_interdiction_utility_usd": { "type": "integer", "const": 98000000 },
+            "estate_post_interdiction_utility_usd": { "type": "integer", "const": -52000000 },
+            "estate_utility_swing_usd": { "type": "integer", "const": -150000000 }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "deposition_trilemma": {
+      "type": "object",
+      "$comment": "E6: Escape_Deposition = OR of three routes = 0; each route is foreclosed by its own trigger.",
+      "required": ["anchors", "plead_5th_without_baxter_adverse_inference", "testify_minimizing_h0_without_1001_1621_perjury_collision", "accept_article_ii_pardon_without_burdick_strip_and_ny_cpl_40_51_6_trigger", "escape_deposition"],
+      "properties": {
+        "anchors": {
+          "type": "array",
+          "items": { "type": "string" },
+          "const": [
+            "Baxter v. Palmigiano, 425 U.S. 308 (1976)",
+            "Burdick v. United States, 236 U.S. 79 (1915)",
+            "N.Y. CPL 40.51(6)"
+          ]
+        },
+        "plead_5th_without_baxter_adverse_inference": { "type": "integer", "enum": [0, 1] },
+        "testify_minimizing_h0_without_1001_1621_perjury_collision": { "type": "integer", "enum": [0, 1] },
+        "accept_article_ii_pardon_without_burdick_strip_and_ny_cpl_40_51_6_trigger": { "type": "integer", "enum": [0, 1] },
+        "escape_deposition": {
+          "description": "OR of the three escape-route indicators; checkmate value.",
+          "type": "integer",
+          "const": 0
+        }
+      },
+      "additionalProperties": false
+    },
+    "medical_discovery_vectors": {
+      "type": "object",
+      "$comment": "HIPAA 45 C.F.R. 164.512 subpoena fan-out and forensic biomarker thresholds.",
+      "required": ["hipaa_subpoena_vectors", "dd_cfdna_threshold", "hla_polyclonal_min_haplotypes"],
+      "properties": {
+        "hipaa_subpoena_vectors": { "type": "integer", "const": 5, "minimum": 1 },
+        "dd_cfdna_threshold": { "type": "number", "const": 0.005, "exclusiveMinimum": 0.0, "maximum": 0.01 },
+        "hla_polyclonal_min_haplotypes": { "type": "integer", "const": 2, "minimum": 2 }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

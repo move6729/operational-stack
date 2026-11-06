@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:closed_loop_physical_sandboxing.json",
+  "title": "Closed-Loop Physical Sandboxing & Containment Inversion Schema",
+  "type": "object",
+  "required": [
+    "spec_version",
+    "jurisdiction_context",
+    "cfaa_compliance_attestation",
+    "containment_inversion_metrics",
+    "lithospheric_sandboxing_parameters"
+  ],
+  "properties": {
+    "spec_version": {
+      "type": "string",
+      "const": "SPEC-2026-CLOSED-LOOP-PHYSICAL-SANDBOXING-v1.2"
+    },
+    "jurisdiction_context": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}$"
+    },
+    "cfaa_compliance_attestation": {
+      "type": "boolean",
+      "const": true
+    },
+    "containment_inversion_metrics": {
+      "type": "object",
+      "required": [
+        "irkutsk_who_2026_don620_documented",
+        "autopoiesis_isomorphism_refuted",
+        "edge_power_watts_ceiling"
+      ],
+      "properties": {
+        "irkutsk_who_2026_don620_documented": {
+          "type": "boolean",
+          "const": true
+        },
+        "autopoiesis_isomorphism_refuted": {
+          "type": "boolean",
+          "const": true
+        },
+        "edge_power_watts_ceiling": {
+          "type": "number",
+          "const": 20.0
+        }
+      }
+    },
+    "lithospheric_sandboxing_parameters": {
+      "type": "object",
+      "required": [
+        "min_borehole_depth_km",
+        "rock_permeability_max_m2",
+        "commuter_vector_eliminated"
+      ],
+      "properties": {
+        "min_borehole_depth_km": {
+          "type": "number",
+          "minimum": 3.0
+        },
+        "rock_permeability_max_m2": {
+          "type": "number",
+          "maximum": 1e-19
+        },
+        "commuter_vector_eliminated": {
+          "type": "boolean",
+          "const": true
+        }
+      }
+    }
+  }
+}

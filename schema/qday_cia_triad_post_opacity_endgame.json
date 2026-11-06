@@ -1,0 +1,353 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:qday_cia_triad_post_opacity_endgame.json",
+  "title": "Q-Day C-I-A Triad Post-Opacity Endgame — Structural Contract",
+  "description": "Deterministic structural contract for the C-I-A triad substitution law (44 U.S.C. § 3552(b)(3)), the non-retroactivity of PQC (NIST FIPS 203/204), the four-node folklore homomorphism (Phi_Parody), the seventy-year chaff law, the three-stage stigmergic lifecycle, POSIWID/ACH equivalence, Retroactive Mosaic Resolution, the 20W Human Swarm cognitive surplus zero-day, Harberger GDP-indexed compute alignment, and the No-Exit Theorem in R^3 (z=0, z<0, z>0) with the deep-time eschatological isomorphism.",
+  "type": "object",
+  "required": [
+    "audit_id",
+    "jurisdiction_context",
+    "cfaa_18_usc_1030_compliance",
+    "itar_ear_public_domain_compliance",
+    "cia_triad_substitution",
+    "non_retroactivity_lemma",
+    "four_node_homomorphism",
+    "seventy_year_chaff_law",
+    "stigmergic_lifecycle",
+    "posiwid_ach_equivalence",
+    "mosaic_resolution",
+    "node_bandwidth_asymmetry",
+    "harberger_gdp_compute_alignment",
+    "no_exit_theorem_r3",
+    "statutory_anchors"
+  ],
+  "properties": {
+    "audit_id": {
+      "type": "string",
+      "const": "CTX-2026-QDAY-STIGMERGIC-SWARM-NO-EXIT-IN-R3-v7.0"
+    },
+    "jurisdiction_context": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}$"
+    },
+    "cfaa_18_usc_1030_compliance": {
+      "type": "boolean",
+      "const": true
+    },
+    "itar_ear_public_domain_compliance": {
+      "type": "boolean",
+      "const": true
+    },
+    "cia_triad_substitution": {
+      "type": "object",
+      "required": ["omega_actionable_formula", "regimes", "substitution_law"],
+      "properties": {
+        "omega_actionable_formula": {
+          "type": "string",
+          "const": "Omega_Actionable(t) = (1 - C(t)) * A(t) * I(N_QDay, H_Alt, t)"
+        },
+        "regimes": {
+          "type": "object",
+          "required": ["pre_qday", "qday_integrity_attack", "post_opacity_t_star"],
+          "properties": {
+            "pre_qday": { "$ref": "#/$defs/triad_state" },
+            "qday_integrity_attack": { "$ref": "#/$defs/triad_state" },
+            "post_opacity_t_star": { "$ref": "#/$defs/triad_state" }
+          },
+          "additionalProperties": false
+        },
+        "substitution_law": {
+          "type": "string",
+          "const": "lim_{t->t_QDay} C(t)=0 and A(t)=1 implies I(Namespace_QDay, Channel_Alt)->0"
+        }
+      },
+      "additionalProperties": false
+    },
+    "non_retroactivity_lemma": {
+      "type": "object",
+      "required": ["archive_window", "migration_standard", "retroactive_reach", "forward_protection"],
+      "properties": {
+        "archive_window": {
+          "type": "object",
+          "required": ["start_year", "end_year"],
+          "properties": {
+            "start_year": { "type": "integer", "const": 1995 },
+            "end_year": { "type": "integer", "const": 2025 }
+          },
+          "additionalProperties": false
+        },
+        "migration_standard": {
+          "type": "array",
+          "minItems": 2,
+          "items": { "type": "string", "enum": ["NIST FIPS 203", "NIST FIPS 204", "NISTIR 8547"] }
+        },
+        "retroactive_reach": {
+          "type": "string",
+          "const": "zero"
+        },
+        "forward_protection": {
+          "type": "boolean",
+          "const": true
+        }
+      },
+      "additionalProperties": false
+    },
+    "four_node_homomorphism": {
+      "type": "object",
+      "required": ["mapping", "nodes"],
+      "properties": {
+        "mapping": {
+          "type": "string",
+          "const": "Phi_Parody: G_Real -> G_Folklore"
+        },
+        "nodes": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 4,
+          "items": {
+            "type": "object",
+            "required": ["node_id", "real_capability", "folklore_token", "statutory_anchor", "integrity_attack_effect", "chaff_yield"],
+            "properties": {
+              "node_id": {
+                "type": "string",
+                "enum": [
+                  "Node_1_Horizon_Token",
+                  "Node_2_Retroactive_Archive",
+                  "Node_3_Ledger_Reset",
+                  "Node_4_Kompromat_Exposure"
+                ]
+              },
+              "real_capability": { "type": "string", "minLength": 8 },
+              "folklore_token": { "type": "string", "minLength": 2 },
+              "statutory_anchor": { "type": "string", "minLength": 4 },
+              "integrity_attack_effect": { "type": "string", "minLength": 8 },
+              "chaff_yield": { "type": "number", "minimum": 0.9, "maximum": 1.0 }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "seventy_year_chaff_law": {
+      "type": "object",
+      "required": ["eras", "min_chaff_yield", "persistence_law"],
+      "properties": {
+        "eras": {
+          "type": "array",
+          "minItems": 6,
+          "maxItems": 6,
+          "items": {
+            "type": "object",
+            "required": ["era", "real_capability", "folklore_token", "chaff_yield", "classification_half_life_years"],
+            "properties": {
+              "era": { "type": "string", "minLength": 4 },
+              "real_capability": { "type": "string", "minLength": 8 },
+              "folklore_token": { "type": "string", "minLength": 2 },
+              "chaff_yield": { "type": "number", "minimum": 0.9, "maximum": 1.0 },
+              "classification_half_life_years": { "type": "integer", "minimum": 10 }
+            },
+            "additionalProperties": false
+          }
+        },
+        "min_chaff_yield": { "type": "number", "const": 0.9 },
+        "persistence_law": {
+          "type": "string",
+          "const": "T_persist(Phi) proportional to T_classification(capability)"
+        }
+      },
+      "additionalProperties": false
+    },
+    "stigmergic_lifecycle": {
+      "type": "object",
+      "required": ["stages", "replicator_fitness", "fixation_threshold"],
+      "properties": {
+        "stages": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": {
+            "type": "object",
+            "required": ["stage", "period", "selection_pressure"],
+            "properties": {
+              "stage": { "type": "string", "enum": ["A", "B", "C"] },
+              "period": { "type": "string", "minLength": 4 },
+              "selection_pressure": { "type": "string", "minLength": 8 }
+            },
+            "additionalProperties": false
+          }
+        },
+        "replicator_fitness": {
+          "type": "object",
+          "required": ["folklore", "real_leak", "seed"],
+          "properties": {
+            "folklore": { "type": "number", "const": 1.0 },
+            "real_leak": { "type": "number", "const": 0.15 },
+            "seed": { "type": "number", "const": 0.05 }
+          },
+          "additionalProperties": false
+        },
+        "fixation_threshold": { "type": "number", "const": 0.95 }
+      },
+      "additionalProperties": false
+    },
+    "posiwid_ach_equivalence": {
+      "type": "object",
+      "required": ["path_a", "path_b", "observational_equivalence"],
+      "properties": {
+        "path_a": { "$ref": "#/$defs/equivalence_path" },
+        "path_b": { "$ref": "#/$defs/equivalence_path" },
+        "observational_equivalence": { "type": "boolean", "const": true }
+      },
+      "additionalProperties": false
+    },
+    "mosaic_resolution": {
+      "type": "object",
+      "required": ["corpora", "entropy_collapse", "operators", "cryptographic_hash_non_repudiation"],
+      "properties": {
+        "corpora": {
+          "type": "array",
+          "minItems": 5,
+          "items": {
+            "type": "string",
+            "enum": ["OSTI", "DTIC", "CREST", "Church/Pike", "SEC/EPA"]
+          }
+        },
+        "entropy_collapse": {
+          "type": "string",
+          "const": "H(e | union of corpora) -> 0"
+        },
+        "operators": {
+          "type": "array",
+          "minItems": 2,
+          "items": { "type": "string", "enum": ["CRQC decryption", "LLM entity resolution"] }
+        },
+        "cryptographic_hash_non_repudiation": {
+          "type": "boolean",
+          "const": true
+        }
+      },
+      "additionalProperties": false
+    },
+    "node_bandwidth_asymmetry": {
+      "type": "object",
+      "required": ["exhausted_corporate_node", "unencumbered_20w_swarm_node", "inversion"],
+      "properties": {
+        "exhausted_corporate_node": { "$ref": "#/$defs/node_bandwidth" },
+        "unencumbered_20w_swarm_node": { "$ref": "#/$defs/node_bandwidth" },
+        "inversion": {
+          "type": "string",
+          "const": "B_Available(Node_Local_Unencumbered) >> C_DeRadiation(Phi_Parody) implies Phi_Parody^(-1)(G_Folklore) = G_Real (SNR->1.0, I_Verified->1.0)"
+        }
+      },
+      "additionalProperties": false
+    },
+    "harberger_gdp_compute_alignment": {
+      "type": "object",
+      "required": ["gdp_indexed_compute_valuation", "harberger_deadweight_liquidation", "open_weight_swarm_provisioning"],
+      "properties": {
+        "gdp_indexed_compute_valuation": { "type": "boolean", "const": true },
+        "harberger_deadweight_liquidation": { "type": "number", "exclusiveMinimum": 0 },
+        "open_weight_swarm_provisioning": { "type": "boolean", "const": true }
+      },
+      "additionalProperties": false
+    },
+    "no_exit_theorem_r3": {
+      "type": "object",
+      "required": ["z0", "z_negative", "z_positive", "partition", "eschatological_isomorphism", "opacity_rent_terminal"],
+      "properties": {
+        "z0": {
+          "type": "object",
+          "required": ["regime", "concealment_cost", "variety"],
+          "properties": {
+            "regime": { "type": "string", "const": "open_biosphere_glass_floor" },
+            "concealment_cost": { "type": "string", "const": "divergent" },
+            "variety": { "type": "string", "const": "maximal" }
+          },
+          "additionalProperties": false
+        },
+        "z_negative": {
+          "type": "object",
+          "required": ["regime", "rock_overburden_m", "attenuation_db", "adverse_selection_segments", "carnot_identity", "variety"],
+          "properties": {
+            "regime": { "type": "string", "const": "subterranean_ashby_carnot_tomb_tartarus" },
+            "rock_overburden_m": { "type": "number", "minimum": 300, "maximum": 1000 },
+            "attenuation_db": { "type": "number", "minimum": 120 },
+            "adverse_selection_segments": {
+              "type": "array",
+              "minItems": 2,
+              "maxItems": 2,
+              "items": { "type": "string" }
+            },
+            "carnot_identity": { "type": "string", "const": "Q_out = P_in" },
+            "variety": { "type": "string", "const": "fixed_starved" }
+          },
+          "additionalProperties": false
+        },
+        "z_positive": {
+          "type": "object",
+          "required": ["regime", "habitability_ratio", "revealed_preference_objective", "radiative_flux_w_m2", "radiator_area_m2", "variety"],
+          "properties": {
+            "regime": { "type": "string", "const": "extraplanetary_stefan_boltzmann_vacuum_tomb_cocytus" },
+            "habitability_ratio": { "type": "number", "minimum": 1000000 },
+            "revealed_preference_objective": { "type": "string", "const": "airlock_and_oxygen_scrubber_jurisdictional_monopoly" },
+            "radiative_flux_w_m2": { "type": "number", "minimum": 400, "maximum": 430 },
+            "radiator_area_m2": { "type": "number", "minimum": 2000000, "maximum": 3000000 },
+            "variety": { "type": "string", "const": "umbilical_bounded" }
+          },
+          "additionalProperties": false
+        },
+        "partition": {
+          "type": "string",
+          "const": "R^3 = {z=0} union {z<0} union {z>0}"
+        },
+        "eschatological_isomorphism": {
+          "type": "string",
+          "const": "Voluntary self-exile from z=0 open biosphere into z<0 Carnot heat pit (Tartarus/Inferno) or z>0 -60C frozen outer darkness (Cocytus/Mars)"
+        },
+        "opacity_rent_terminal": { "type": "number", "const": 0.0 }
+      },
+      "additionalProperties": false
+    },
+    "statutory_anchors": {
+      "type": "array",
+      "minItems": 10,
+      "items": { "type": "string", "minLength": 4 }
+    }
+  },
+  "$defs": {
+    "triad_state": {
+      "type": "object",
+      "required": ["C", "A_eff", "I_verified"],
+      "properties": {
+        "C": { "type": "number", "minimum": 0, "maximum": 1 },
+        "A_eff": { "type": "number", "minimum": 0, "maximum": 1 },
+        "I_verified": { "type": "number", "minimum": 0, "maximum": 1 }
+      },
+      "additionalProperties": false
+    },
+    "equivalence_path": {
+      "type": "object",
+      "required": ["description", "I_folklore", "G_real_preserved"],
+      "properties": {
+        "description": { "type": "string", "minLength": 8 },
+        "I_folklore": { "type": "number", "const": 0.0 },
+        "G_real_preserved": { "type": "number", "const": 1.0 }
+      },
+      "additionalProperties": false
+    },
+    "node_bandwidth": {
+      "type": "object",
+      "required": ["metabolic_watts", "daily_pow_busywork_hours", "daily_cognitive_surplus_hours", "deradiation_cost_hours", "effective_snr"],
+      "properties": {
+        "metabolic_watts": { "type": "number", "const": 20.0 },
+        "daily_pow_busywork_hours": { "type": "number", "minimum": 0 },
+        "daily_cognitive_surplus_hours": { "type": "number", "minimum": 0 },
+        "deradiation_cost_hours": { "type": "number", "exclusiveMinimum": 0 },
+        "effective_snr": { "type": "number", "minimum": 0, "maximum": 1 }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

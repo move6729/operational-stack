@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:pe_hospital_sale_leaseback_cpom.json",
+  "title": "PE Hospital Sale-Leaseback REIT Stripping and Friendly-PC CPOM Extraction — Locked Telemetry",
+  "description": "Machine-readable lock of the 13 telemetry constants for SPEC-PE-HOSPITAL-SALE-LEASEBACK-STRIPPING-AND-CPOM-EXTRACTION-v1.0. Record base: In re Steward Health Care System LLC (Bankr. S.D. Tex. Case No. 24-90213), U.S. Senate HELP Committee Investigation (2024), Kannan et al. JAMA 2023;330(24):2365-2375, 11 U.S.C. 548, 31 U.S.C. 3729, state CPOM doctrines. Executable verification: proofs/pe_hospital_sale_leaseback_cpom_proof.py (exit code 0).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "pe_sponsor_initial_equity_usd_millions",
+    "sale_leaseback_reit_proceeds_usd_millions",
+    "pe_total_extracted_distributions_usd_millions",
+    "pe_sponsor_cash_on_cash_multiple",
+    "pre_strip_hospital_ebitdar_usd_millions",
+    "pre_strip_debt_service_usd_millions",
+    "post_strip_annual_reit_rent_escalation_usd_millions",
+    "post_strip_fixed_charges_usd_millions",
+    "pre_strip_fixed_charge_coverage_ratio",
+    "post_strip_fixed_charge_coverage_ratio",
+    "jama_hospital_acquired_condition_increase_rate",
+    "jama_central_line_infection_increase_rate",
+    "section_548_fraudulent_transfer_clawback_usd_millions"
+  ],
+  "properties": {
+    "pe_sponsor_initial_equity_usd_millions": {
+      "type": "number",
+      "const": 246.0,
+      "description": "E_0: Sponsor initial equity deployed to acquire the hospital system (USD millions)."
+    },
+    "sale_leaseback_reit_proceeds_usd_millions": {
+      "type": "number",
+      "const": 1250.0,
+      "description": "P_SLB: Sale-leaseback proceeds from the healthcare REIT for land and acute-care buildings (USD millions)."
+    },
+    "pe_total_extracted_distributions_usd_millions": {
+      "type": "number",
+      "const": 800.0,
+      "description": "D_extracted: Total sponsor distributions via dividend recapitalizations and exit proceeds (USD millions)."
+    },
+    "pe_sponsor_cash_on_cash_multiple": {
+      "type": "number",
+      "const": 3.252033,
+      "description": "M_CoC = round(800.0 / 246.0, 6). Sponsor cash-on-cash multiple locked pre-collapse (E-1)."
+    },
+    "pre_strip_hospital_ebitdar_usd_millions": {
+      "type": "number",
+      "const": 180.0,
+      "description": "EBITDAR: Pre-strip hospital operating earnings before interest, taxes, depreciation, amortization and rent (USD millions)."
+    },
+    "pre_strip_debt_service_usd_millions": {
+      "type": "number",
+      "const": 60.0,
+      "description": "DS_0: Baseline pre-strip annual debt service (USD millions)."
+    },
+    "post_strip_annual_reit_rent_escalation_usd_millions": {
+      "type": "number",
+      "const": 145.0,
+      "description": "R_REIT: Annual master-lease rent to the REIT, escalating (USD millions per year)."
+    },
+    "post_strip_fixed_charges_usd_millions": {
+      "type": "number",
+      "const": 205.0,
+      "description": "FC_post = DS_0 + R_REIT = 60.0 + 145.0. Total post-strip annual fixed charges (USD millions per year, E-3)."
+    },
+    "pre_strip_fixed_charge_coverage_ratio": {
+      "type": "number",
+      "const": 3.0,
+      "description": "FCCR_pre = 180.0 / 60.0. Pre-strip fixed-charge coverage ratio (E-2)."
+    },
+    "post_strip_fixed_charge_coverage_ratio": {
+      "type": "number",
+      "const": 0.878049,
+      "description": "FCCR_post = round(180.0 / 205.0, 6) < 1.0. Post-strip coverage: the insolvency identity (E-4)."
+    },
+    "jama_hospital_acquired_condition_increase_rate": {
+      "type": "number",
+      "const": 0.254,
+      "description": "Delta_HAC: 25.4% increase in hospital-acquired conditions post-PE acquisition (Kannan et al., JAMA 2023;330(24):2365-2375)."
+    },
+    "jama_central_line_infection_increase_rate": {
+      "type": "number",
+      "const": 0.379,
+      "description": "Delta_CLABSI: 37.9% increase in central-line bloodstream infections post-PE acquisition (Kannan et al., JAMA 2023;330(24):2365-2375)."
+    },
+    "section_548_fraudulent_transfer_clawback_usd_millions": {
+      "type": "number",
+      "const": 800.0,
+      "description": "C_548 = D_extracted * 1[FCCR_post < 1.0]. Constructive fraudulent transfer clawback quantum under 11 U.S.C. 548 (USD millions, E-9)."
+    }
+  }
+}

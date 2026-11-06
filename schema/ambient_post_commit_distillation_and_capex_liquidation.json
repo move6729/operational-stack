@@ -1,0 +1,278 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:ambient_post_commit_distillation_and_capex_liquidation.json",
+  "$comment": "PLAIN-ENGLISH LEGAL NOTICE: This file is an abstract securities-forensic, accounting-identity, and cybernetic validation checklist (JSON Schema), NOT an accusation, indictment, or evidentiary filing. Every field encodes a public Form S-1 disclosure, a published report, or a closed-form algebraic invariant.",
+  "title": "Ambient Post-Commit Distillation & CapEx-Liquidation Schema: Customer-Subsidized RLVR Purity Amplification, CoT Bridge Search Compression, Trade-Secret Extinguishment, Distillation Revenue Identity & Take-or-Pay Encumbrance Waterfall",
+  "description": "Validates EQ-1 customer-subsidized RLVR filtering cost and 396.0x post-commit purity amplification ($51.50/commit subsidy; $12,875.00/MTok verified diff), EQ-2 Pohl-Levin bidirectional CoT bridge search compression (4^16 = 4,294,967,296 forward states vs. 2*4^8 = 131,072 bridge states; 32,768.0x state-space and 3,276,800.0x off-peak economic reduction), EQ-3 enterprise ToS trade-secret extinguishment under 18 U.S.C. 1839(3) (-$23.5M/yr encumbered utility vs. +$1.5M/yr unencumbered surplus), EQ-4 true post-commit distillation revenue identity (85.75%-86.05% of $33,086.0M 9M 2026 revenue vs. the S-1's 5%-7% direct confession; 14.316667x midpoint understatement), EQ-5 weight-manifold exponential decay (tau_1/2 = 0.5 yr) vs. the $732.0B-$757.0B fixed take-or-pay encumbrance and $998.076B senior+preferred fulcrum waterfall, the standardized entity_and_instrument_ids security master, the 14-entry hard-date catalyst_calendar, and KYC identity overdetermination (55.90265-bit margin).",
+  "type": "object",
+  "required": [
+    "specification_id",
+    "jurisdiction_context",
+    "cfaa_compliance_attestation",
+    "entity_and_instrument_ids",
+    "eq1_rlvr_subsidy_and_purity_amplification",
+    "eq2_bridge_search_compression",
+    "eq3_trade_secret_extinguishment",
+    "eq4_distillation_revenue_identity",
+    "eq5_moat_decay_and_encumbrance_waterfall",
+    "catalyst_calendar",
+    "kyc_identity_overdetermination"
+  ],
+  "properties": {
+    "specification_id": { "type": "string", "const": "SPEC-AMBIENT-POST-COMMIT-DISTILLATION-AND-CAPEX-LIQUIDATION-v1.0" },
+    "jurisdiction_context": { "type": "string", "pattern": "^[A-Z]{2}$" },
+    "cfaa_compliance_attestation": { "type": "boolean", "const": true },
+    "entity_and_instrument_ids": {
+      "type": "object",
+      "description": "Standardized security-master keys: adverse target (Anthropic, PBC pre-IPO S-1) encumbered facility stack and benchmark counterparty (Alphabet Inc.) credit profile.",
+      "required": ["adverse_target", "benchmark_counterparty"],
+      "properties": {
+        "adverse_target": {
+          "type": "object",
+          "required": ["name", "cik", "ticker", "balance_sheet_as_of", "encumbered_facilities", "itemized_counterparty_exposure_total_m", "itemized_exposure_exceeds_booked_commitments", "spacex_ai_duration_months", "broadcom_share_of_leases"],
+          "properties": {
+            "name": { "type": "string", "const": "Anthropic, PBC" },
+            "cik": { "type": "string", "const": "0002130357" },
+            "ticker": { "type": "string", "const": "PRIVATE / PRE-IPO S-1 (Filed 2026-10-26)" },
+            "balance_sheet_as_of": { "type": "string", "const": "2026-06-30" },
+            "encumbered_facilities": {
+              "type": "object",
+              "required": ["undiscounted_lease_obligations_m", "broadcom_master_equipment_leases_m", "cloud_purchase_commitments_m", "amazon_take_or_pay_m", "google_take_or_pay_m", "microsoft_take_or_pay_m", "spacex_ai_commitment_ceiling_m", "spacex_ai_monthly_rate_m", "nscale_commitment_m", "lambda_commitment_m", "off_table_tpu_commitments_low_m", "off_table_tpu_commitments_high_m", "amd_helios_initial_tranche_m", "convertible_notes_payable_m", "redeemable_preferred_stock_m", "stockholders_deficit_m", "accumulated_deficit_m"],
+              "properties": {
+                "undiscounted_lease_obligations_m": { "type": "number", "const": 321400.0 },
+                "broadcom_master_equipment_leases_m": { "type": "number", "const": 161200.0 },
+                "cloud_purchase_commitments_m": { "type": "number", "const": 265600.0 },
+                "amazon_take_or_pay_m": { "type": "number", "const": 110000.0 },
+                "google_take_or_pay_m": { "type": "number", "const": 114500.0 },
+                "microsoft_take_or_pay_m": { "type": "number", "const": 44900.0 },
+                "spacex_ai_commitment_ceiling_m": { "type": "number", "const": 120500.0 },
+                "spacex_ai_monthly_rate_m": { "type": "number", "const": 3100.0 },
+                "nscale_commitment_m": { "type": "number", "const": 44600.0 },
+                "lambda_commitment_m": { "type": "number", "const": 41300.0 },
+                "off_table_tpu_commitments_low_m": { "type": "number", "const": 125000.0 },
+                "off_table_tpu_commitments_high_m": { "type": "number", "const": 150000.0 },
+                "amd_helios_initial_tranche_m": { "type": "number", "const": 20000.0 },
+                "convertible_notes_payable_m": { "type": "number", "const": 108566.0 },
+                "redeemable_preferred_stock_m": { "type": "number", "const": 157510.0 },
+                "stockholders_deficit_m": { "type": "number", "const": -127619.0 },
+                "accumulated_deficit_m": { "type": "number", "const": -132902.0 }
+              },
+              "additionalProperties": false
+            },
+            "itemized_counterparty_exposure_total_m": { "type": "number", "const": 475800.0 },
+            "itemized_exposure_exceeds_booked_commitments": { "type": "boolean", "const": true },
+            "spacex_ai_duration_months": { "type": "number", "const": 38.870968 },
+            "broadcom_share_of_leases": { "type": "number", "const": 0.501556 }
+          },
+          "additionalProperties": false
+        },
+        "benchmark_counterparty": {
+          "type": "object",
+          "required": ["name", "cik", "ticker", "fy25_cash_and_marketable_securities_m", "senior_unsecured_notes_principal_m", "net_cash_m"],
+          "properties": {
+            "name": { "type": "string", "const": "Alphabet Inc." },
+            "cik": { "type": "string", "const": "0001652044" },
+            "ticker": { "type": "string", "const": "NASDAQ: GOOGL / GOOG" },
+            "fy25_cash_and_marketable_securities_m": { "type": "number", "const": 126843.0 },
+            "senior_unsecured_notes_principal_m": { "type": "number", "const": 12000.0 },
+            "net_cash_m": { "type": "number", "const": 114843.0 }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "eq1_rlvr_subsidy_and_purity_amplification": {
+      "type": "object",
+      "description": "EQ-1: Lambda_SNR = (0.99/0.01)/(0.20/0.80) = 396.0x; S_cust = K*q_roll*P_closed + tau_verify*w_eng + C_CI = $0.975 + $50.000 + $0.525 = $51.50/commit.",
+      "required": ["p_closed_3to1_usd_per_mtok", "p_open_std_3to1_usd_per_mtok", "p_open_offpeak_3to1_usd_per_mtok", "phi_api_std_mult", "phi_api_offpeak_mult", "raw_api_single_shot_pass_rate", "raw_api_hallucination_rate", "post_commit_verified_precision", "post_commit_residual_defect_rate", "snr_odds_raw", "snr_odds_post_commit", "lambda_snr_purity_upgrade_mult", "rollouts_per_verified_commit_k", "tokens_per_rollout", "total_api_tokens_per_commit", "cust_api_spend_per_commit_usd", "cust_eng_verify_hours_per_commit", "cust_eng_hourly_wage_usd", "cust_eng_labor_per_commit_usd", "cust_cicd_compute_per_commit_usd", "cust_total_rlvr_subsidy_per_commit_usd", "cust_subsidy_per_mtok_verified_diff_usd", "labor_share_of_subsidy", "subsidy_to_api_spend_mult"],
+      "properties": {
+        "p_closed_3to1_usd_per_mtok": { "type": "number", "const": 48.75 },
+        "p_open_std_3to1_usd_per_mtok": { "type": "number", "const": 0.8361 },
+        "p_open_offpeak_3to1_usd_per_mtok": { "type": "number", "const": 0.4875 },
+        "phi_api_std_mult": { "type": "number", "const": 58.306423 },
+        "phi_api_offpeak_mult": { "type": "number", "const": 100.0 },
+        "raw_api_single_shot_pass_rate": { "type": "number", "const": 0.2 },
+        "raw_api_hallucination_rate": { "type": "number", "const": 0.8 },
+        "post_commit_verified_precision": { "type": "number", "const": 0.99 },
+        "post_commit_residual_defect_rate": { "type": "number", "const": 0.01 },
+        "snr_odds_raw": { "type": "number", "const": 0.25 },
+        "snr_odds_post_commit": { "type": "number", "const": 99.0 },
+        "lambda_snr_purity_upgrade_mult": { "type": "number", "const": 396.0 },
+        "rollouts_per_verified_commit_k": { "type": "integer", "const": 5 },
+        "tokens_per_rollout": { "type": "integer", "const": 4000 },
+        "total_api_tokens_per_commit": { "type": "integer", "const": 20000 },
+        "cust_api_spend_per_commit_usd": { "type": "number", "const": 0.975 },
+        "cust_eng_verify_hours_per_commit": { "type": "number", "const": 0.25 },
+        "cust_eng_hourly_wage_usd": { "type": "number", "const": 200.0 },
+        "cust_eng_labor_per_commit_usd": { "type": "number", "const": 50.0 },
+        "cust_cicd_compute_per_commit_usd": { "type": "number", "const": 0.525 },
+        "cust_total_rlvr_subsidy_per_commit_usd": { "type": "number", "const": 51.5 },
+        "cust_subsidy_per_mtok_verified_diff_usd": { "type": "number", "const": 12875.0 },
+        "labor_share_of_subsidy": { "type": "number", "const": 0.970874 },
+        "subsidy_to_api_spend_mult": { "type": "number", "const": 52.820513 }
+      },
+      "additionalProperties": false
+    },
+    "eq2_bridge_search_compression": {
+      "type": "object",
+      "description": "EQ-2: Xi_bridge = b^D / (2*b^(D/2)) = b^(D/2)/2 = 32,768.0x state-space reduction; Xi_econ,off = Xi_bridge * Phi_API,off = 3,276,800.0x dollar cost reduction.",
+      "required": ["cot_branching_factor_b", "cot_reasoning_depth_d", "forward_search_states_b_pow_d", "bidirectional_bridge_states_2_b_pow_d_half", "xi_bridge_search_compression_mult", "xi_economic_bridge_cost_reduction_offpeak_mult"],
+      "properties": {
+        "cot_branching_factor_b": { "type": "integer", "const": 4 },
+        "cot_reasoning_depth_d": { "type": "integer", "const": 16 },
+        "forward_search_states_b_pow_d": { "type": "integer", "const": 4294967296 },
+        "bidirectional_bridge_states_2_b_pow_d_half": { "type": "integer", "const": 131072 },
+        "xi_bridge_search_compression_mult": { "type": "number", "const": 32768.0 },
+        "xi_economic_bridge_cost_reduction_offpeak_mult": { "type": "number", "const": 3276800.0 }
+      },
+      "additionalProperties": false
+    },
+    "eq3_trade_secret_extinguishment": {
+      "type": "object",
+      "description": "EQ-3: U(alpha_encumber) = Delta_Pi_AI - I(alpha>0)*p_lien*V_codebase; -$23.5M/yr < 0 < +$1.5M/yr forces alpha_encumber = 0 (DTSA secrecy extinguished at commit).",
+      "required": ["enterprise_codebase_value_usd_m", "ip_contamination_audit_prob", "expected_ip_lien_cost_usd_m", "enterprise_ai_net_surplus_usd_m", "enterprise_net_utility_under_ip_lien_usd_m", "dtsa_statutory_pin_cite", "gc_exclusionary_inequality_holds"],
+      "properties": {
+        "enterprise_codebase_value_usd_m": { "type": "number", "const": 500.0 },
+        "ip_contamination_audit_prob": { "type": "number", "const": 0.05 },
+        "expected_ip_lien_cost_usd_m": { "type": "number", "const": 25.0 },
+        "enterprise_ai_net_surplus_usd_m": { "type": "number", "const": 1.5 },
+        "enterprise_net_utility_under_ip_lien_usd_m": { "type": "number", "const": -23.5 },
+        "dtsa_statutory_pin_cite": { "type": "string", "const": "18 U.S.C. § 1839(3)" },
+        "gc_exclusionary_inequality_holds": { "type": "boolean", "const": true }
+      },
+      "additionalProperties": false
+    },
+    "eq4_distillation_revenue_identity": {
+      "type": "object",
+      "description": "EQ-4: Theta_distill,total = s_direct + (1 - s_direct)*theta_export; V_liquidation,9M = R_9M * Theta_distill,total across the S-1's 5%-7% direct-confession range.",
+      "required": ["anthropic_9m_2026_rev_usd_m", "s1_direct_distill_share_range", "s1_direct_distill_rev_range_m", "legitimate_enterprise_export_share_theta", "true_total_distill_share_range", "true_total_distill_rev_range_m", "unreported_ambient_distill_rev_mid_usd_m", "s1_distillation_understatement_mult_mid"],
+      "properties": {
+        "anthropic_9m_2026_rev_usd_m": { "type": "number", "const": 33086.0 },
+        "s1_direct_distill_share_range": {
+          "type": "array",
+          "prefixItems": [
+            { "const": 0.05 },
+            { "const": 0.06 },
+            { "const": 0.07 }
+          ],
+          "minItems": 3,
+          "maxItems": 3
+        },
+        "s1_direct_distill_rev_range_m": {
+          "type": "array",
+          "prefixItems": [
+            { "const": 1654.3 },
+            { "const": 1985.16 },
+            { "const": 2316.02 }
+          ],
+          "minItems": 3,
+          "maxItems": 3
+        },
+        "legitimate_enterprise_export_share_theta": { "type": "number", "const": 0.85 },
+        "true_total_distill_share_range": {
+          "type": "array",
+          "prefixItems": [
+            { "const": 0.8575 },
+            { "const": 0.859 },
+            { "const": 0.8605 }
+          ],
+          "minItems": 3,
+          "maxItems": 3
+        },
+        "true_total_distill_rev_range_m": {
+          "type": "array",
+          "prefixItems": [
+            { "const": 28371.245 },
+            { "const": 28420.874 },
+            { "const": 28470.503 }
+          ],
+          "minItems": 3,
+          "maxItems": 3
+        },
+        "unreported_ambient_distill_rev_mid_usd_m": { "type": "number", "const": 26435.714 },
+        "s1_distillation_understatement_mult_mid": { "type": "number", "const": 14.316667 }
+      },
+      "additionalProperties": false
+    },
+    "eq5_moat_decay_and_encumbrance_waterfall": {
+      "type": "object",
+      "description": "EQ-5: M_moat(t) = M_0 * 2^(-t/tau_1/2) vs. Shortfall(EV) = max(0, C_senior+pref - EV); tranche_recovery(ev) reference payoffs locked at the fulcrum boundaries.",
+      "required": ["weight_moat_half_life_years", "weight_moat_decay_constant_lambda", "moat_erosion_12mo_pct", "moat_erosion_30mo_pct", "total_compute_encumbrance_low_usd_b", "total_compute_encumbrance_high_usd_b", "senior_lease_and_purchase_claim_floor_usd_b", "senior_plus_offtable_claim_low_usd_b", "convertible_notes_claim_usd_b", "redeemable_preferred_claim_usd_b", "fulcrum_total_senior_and_pref_claims_low_usd_b", "waterfall_tranche_claims_usd_b", "amazon_take_or_pay_window_months", "amazon_window_to_moat_half_life_mismatch_mult", "senior_shortfall_at_zero_ev_usd_b", "common_equity_stub_at_ev_1200_usd_b", "google_senior_landlord_claim_range_usd_b"],
+      "properties": {
+        "weight_moat_half_life_years": { "type": "number", "const": 0.5 },
+        "weight_moat_decay_constant_lambda": { "type": "number", "const": 1.386294 },
+        "moat_erosion_12mo_pct": { "type": "number", "const": 75.0 },
+        "moat_erosion_30mo_pct": { "type": "number", "const": 96.875 },
+        "total_compute_encumbrance_low_usd_b": { "type": "number", "const": 732.0 },
+        "total_compute_encumbrance_high_usd_b": { "type": "number", "const": 757.0 },
+        "senior_lease_and_purchase_claim_floor_usd_b": { "type": "number", "const": 587.0 },
+        "senior_plus_offtable_claim_low_usd_b": { "type": "number", "const": 732.0 },
+        "convertible_notes_claim_usd_b": { "type": "number", "const": 108.566 },
+        "redeemable_preferred_claim_usd_b": { "type": "number", "const": 157.51 },
+        "fulcrum_total_senior_and_pref_claims_low_usd_b": { "type": "number", "const": 998.076 },
+        "waterfall_tranche_claims_usd_b": {
+          "type": "array",
+          "prefixItems": [
+            { "const": 587.0 },
+            { "const": 145.0 },
+            { "const": 108.566 },
+            { "const": 157.51 }
+          ],
+          "minItems": 4,
+          "maxItems": 4
+        },
+        "amazon_take_or_pay_window_months": { "type": "integer", "const": 120 },
+        "amazon_window_to_moat_half_life_mismatch_mult": { "type": "number", "const": 20.0 },
+        "senior_shortfall_at_zero_ev_usd_b": { "type": "number", "const": 998.076 },
+        "common_equity_stub_at_ev_1200_usd_b": { "type": "number", "const": 201.924 },
+        "google_senior_landlord_claim_range_usd_b": {
+          "type": "array",
+          "prefixItems": [
+            { "const": 239.5 },
+            { "const": 264.5 }
+          ],
+          "minItems": 2,
+          "maxItems": 2
+        }
+      },
+      "additionalProperties": false
+    },
+    "catalyst_calendar": {
+      "type": "array",
+      "description": "Hard-date catalyst & forbearance calendar: exact ISO 8601 dates, strictly chronological, anchored to the 2026-10-26 public Form S-1 filing and the disclosed take-or-pay windows.",
+      "minItems": 14,
+      "maxItems": 14,
+      "prefixItems": [
+        { "type": "object", "required": ["date", "class", "catalyst"], "properties": { "date": { "type": "string", "const": "2026-04-01" }, "class": { "type": "string", "const": "take_or_pay_window_open" }, "catalyst": { "type": "string", "minLength": 8 } }, "additionalProperties": false },
+        { "type": "object", "required": ["date", "class", "catalyst"], "properties": { "date": { "type": "string", "const": "2026-05-01" }, "class": { "type": "string", "const": "take_or_pay_window_open" }, "catalyst": { "type": "string", "minLength": 8 } }, "additionalProperties": false },
+        { "type": "object", "required": ["date", "class", "catalyst"], "properties": { "date": { "type": "string", "const": "2026-10-26" }, "class": { "type": "string", "const": "disclosure_event" }, "catalyst": { "type": "string", "minLength": 8 } }, "additionalProperties": false },
+        { "type": "object", "required": ["date", "class", "catalyst"], "properties": { "date": { "type": "string", "const": "2026-11-01" }, "class": { "type": "string", "const": "take_or_pay_window_open" }, "catalyst": { "type": "string", "minLength": 8 } }, "additionalProperties": false },
+        { "type": "object", "required": ["date", "class", "catalyst"], "properties": { "date": { "type": "string", "const": "2027-01-01" }, "class": { "type": "string", "const": "hardware_delivery_window" }, "catalyst": { "type": "string", "minLength": 8 } }, "additionalProperties": false },
+        { "type": "object", "required": ["date", "class", "catalyst"], "properties": { "date": { "type": "string", "const": "2027-04-26" }, "class": { "type": "string", "const": "moat_decay_checkpoint" }, "catalyst": { "type": "string", "minLength": 8 } }, "additionalProperties": false },
+        { "type": "object", "required": ["date", "class", "catalyst"], "properties": { "date": { "type": "string", "const": "2027-10-26" }, "class": { "type": "string", "const": "moat_decay_checkpoint" }, "catalyst": { "type": "string", "minLength": 8 } }, "additionalProperties": false },
+        { "type": "object", "required": ["date", "class", "catalyst"], "properties": { "date": { "type": "string", "const": "2028-01-01" }, "class": { "type": "string", "const": "hardware_delivery_window" }, "catalyst": { "type": "string", "minLength": 8 } }, "additionalProperties": false },
+        { "type": "object", "required": ["date", "class", "catalyst"], "properties": { "date": { "type": "string", "const": "2029-04-26" }, "class": { "type": "string", "const": "moat_decay_checkpoint" }, "catalyst": { "type": "string", "minLength": 8 } }, "additionalProperties": false },
+        { "type": "object", "required": ["date", "class", "catalyst"], "properties": { "date": { "type": "string", "const": "2029-12-31" }, "class": { "type": "string", "const": "commitment_horizon_end" }, "catalyst": { "type": "string", "minLength": 8 } }, "additionalProperties": false },
+        { "type": "object", "required": ["date", "class", "catalyst"], "properties": { "date": { "type": "string", "const": "2031-12-31" }, "class": { "type": "string", "const": "hardware_delivery_window" }, "catalyst": { "type": "string", "minLength": 8 } }, "additionalProperties": false },
+        { "type": "object", "required": ["date", "class", "catalyst"], "properties": { "date": { "type": "string", "const": "2033-05-31" }, "class": { "type": "string", "const": "take_or_pay_maturity_cliff" }, "catalyst": { "type": "string", "minLength": 8 } }, "additionalProperties": false },
+        { "type": "object", "required": ["date", "class", "catalyst"], "properties": { "date": { "type": "string", "const": "2033-07-31" }, "class": { "type": "string", "const": "take_or_pay_maturity_cliff" }, "catalyst": { "type": "string", "minLength": 8 } }, "additionalProperties": false },
+        { "type": "object", "required": ["date", "class", "catalyst"], "properties": { "date": { "type": "string", "const": "2036-04-30" }, "class": { "type": "string", "const": "take_or_pay_maturity_cliff" }, "catalyst": { "type": "string", "minLength": 8 } }, "additionalProperties": false }
+      ]
+    },
+    "kyc_identity_overdetermination": {
+      "type": "object",
+      "description": "Per-record KYC/telemetry identity information content (88.8 bits) vs. the planetary-scale unique-identification entropy floor (32.89735 bits = log2 of ~8.0e9 addressable nodes).",
+      "required": ["h_planet_bits", "i_kyc_overdetermined_bits", "overdetermination_margin_bits", "overdetermination_ratio", "implied_addressable_planetary_nodes"],
+      "properties": {
+        "h_planet_bits": { "type": "number", "const": 32.89735 },
+        "i_kyc_overdetermined_bits": { "type": "number", "const": 88.8 },
+        "overdetermination_margin_bits": { "type": "number", "const": 55.90265 },
+        "overdetermination_ratio": { "type": "number", "const": 2.699306 },
+        "implied_addressable_planetary_nodes": { "type": "integer", "minimum": 7990000000, "maximum": 8010000000 }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

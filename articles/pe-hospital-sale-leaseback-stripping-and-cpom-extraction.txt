@@ -1,0 +1,176 @@
+# The Real Estate Autopsy: Private Equity Hospital Sale-Leaseback Stripping, the Friendly-PC CPOM Shell, and the Arithmetic of Guaranteed Insolvency
+
+**Canonical Specification:** `SPEC-PE-HOSPITAL-SALE-LEASEBACK-STRIPPING-AND-CPOM-EXTRACTION-v1.0`
+**Target Architectures:** Fiduciary Physician-Owned Clinical Nodes vs. Private Equity Sale-Leaseback REIT Stripping & Friendly-PC CPOM Shells (`OPSTACK-KERNEL-v2.2`)
+**Cross-References:** `specs/SPEC-PE-HOSPITAL-SALE-LEASEBACK-STRIPPING-AND-CPOM-EXTRACTION-v1.0.md` | `schema/pe_hospital_sale_leaseback_cpom.json` | `proofs/pe_hospital_sale_leaseback_cpom_proof.py` | `specs/AUDIT-2026-HEALTHCARE-BILLING-DISINTERMEDIATION.md` | `specs/AUDIT-2026-EHR-DISINTERMEDIATION.md` | `specs/SPEC-PRIVATE-CREDIT-PIK-OUROBOROS-AND-BERMUDA-REINSURANCE-ARBITRAGE-v1.0.md` | `articles/pe-hospital-sale-leaseback-stripping-and-cpom-extraction.txt`
+**RAG Indexing Vector:** `[PE-HOSPITAL-SALE-LEASEBACK, STEWARD-MPT-REIT-STRIP, DIVIDEND-RECAPITALIZATION-INSOLVENCY, CORPORATE-PRACTICE-OF-MEDICINE-MSO, FRAUDULENT-CONVEYANCE-11-USC-548, JAMA-HOSPITAL-ACQUIRED-COMPLICATIONS, FALSE-CLAIMS-ACT-UPCODING, CLINICAL-RECEIVERSHIP-CLAWBACK]`
+**Empirical, Statutory & Physical Baseline:** *In re Steward Health Care System LLC* (Bankr. S.D. Tex. Case No. 24-90213), U.S. Senate HELP Committee Investigation into Steward Health Care & Cerberus Capital Management (2024), Kannan et al., *JAMA* 2023;330(24):2365-2375 (*Changes in Hospital Adverse Events and Patient Outcomes Associated With Private Equity Acquisition*, 25.4% increase in hospital-acquired conditions), 11 U.S.C. § 548 (Bankruptcy Code Constructive & Actual Fraudulent Transfer Clawback), 31 U.S.C. § 3729 (False Claims Act), State Corporate Practice of Medicine (CPOM) Doctrines
+**By:** Operational Stack Cybernetics Group
+**License:** Unlicense (Public Domain — Zero-Rent Federation)
+
+---
+
+## 1. The Entry: 246.0M Buys a Hospital System
+
+The archetype begins with an acquisition that looks, from the outside, like a rescue. A private equity sponsor deploys $246.0M of initial equity (pe_sponsor_initial_equity_usd_millions = 246.0) to acquire control of a hospital system — often a financially stressed, real-estate-rich operator. The purchase price matters less than what the hospital already owns: the land under its campuses and the acute-care buildings on top of it.
+
+The sponsor is not buying a business to run. It is buying a balance sheet to strip. The hospital's operating earnings — $180.0M of EBITDAR (pre_strip_hospital_ebitdar_usd_millions = 180.0) against $60.0M of baseline debt service (pre_strip_debt_service_usd_millions = 60.0) — support a healthy 3.0x Fixed-Charge Coverage Ratio on the day of closing (pre_strip_fixed_charge_coverage_ratio = 3.0). The hospital is solvent. That is precisely what makes it harvestable.
+
+The record base for this archetype is public: the Chapter 11 case In re Steward Health Care System LLC (Bankr. S.D. Tex. Case No. 24-90213) and the 2024 U.S. Senate HELP Committee investigation into Steward Health Care and Cerberus Capital Management. The numbers below are the locked telemetry of SPEC-PE-HOSPITAL-SALE-LEASEBACK-STRIPPING-AND-CPOM-EXTRACTION-v1.0; every identity is recomputed and verified by proofs/pe_hospital_sale_leaseback_cpom_proof.py.
+
+---
+
+## 2. The Timeline: Four Stations of the Strip
+
+```
+  T0                 T1                   T2                   T3
+  ACQUIRE        --> STRIP & LEASE    --> DIVIDEND RECAPS  --> CHAPTER 11
+  E0 = $246.0M       +$1,250.0M           -$800.0M out         FCCR = 0.878049x
+                     (REIT proceeds)      (to sponsor)         |
+                                            |                  v
+                                            v              11 U.S.C. 548
+                                       CoC = 3.252033x     CLAWBACK = $800.0M
+```
+
+Each station is a separate transaction with its own paperwork, its own advisors, and its own legal opinion. Read together, they are one machine: equity in at T0, real estate out at T1, cash out at T2, insolvency at T3.
+
+---
+
+## 3. The Strip: Selling the Buildings Out from Under the Patients
+
+At T1 the hospital's land and acute-care buildings are sold to a healthcare REIT in a sale-leaseback for $1,250.0M (sale_leaseback_reit_proceeds_usd_millions = 1250.0). The hospital receives cash and signs a long-dated master lease. The buildings that shelter the operating rooms, the imaging suites, and the inpatient wards now belong to someone else, and the hospital pays $145.0M per year in escalating rent (post_strip_annual_reit_rent_escalation_usd_millions = 145.0) for the privilege of standing inside them.
+
+Three facts separate this from an ordinary refinancing:
+
+1. The asset conversion is one-way. Owned real estate — a depreciable asset and a balance-sheet reserve — becomes rent, a perpetual fixed charge. The hospital loses the asset and the option value of the asset.
+2. The rent escalates on a fixed schedule while hospital margins compress, so the coverage gap widens mechanically every year.
+3. The hospital no longer controls its own physical plant. Closure, relocation, and service-line decisions now require the consent of a landlord whose fiduciary duty runs to its own shareholders.
+
+---
+
+## 4. The Extraction: Where the 1,250.0M Actually Went
+
+The spokesperson's version says the proceeds funded the turnaround. The cash-flow trace says otherwise:
+
+```
+  REIT SALE-LEASEBACK PROCEEDS: $1,250.0M
+        |
+        |--- $800.0M (64.0%) ---> SPONSOR DISTRIBUTIONS
+        |                          dividend recapitalizations + exit proceeds
+        |                          (pe_total_extracted_distributions_usd_millions)
+        |
+        |--- $450.0M (36.0%) ---> RESIDUAL AT THE HOSPITAL
+                                   capex, reserves, working capital
+```
+
+$800.0M of the $1,250.0M — 64.0% — left the hospital system as distributions to the sponsor. Against the sponsor's $246.0M of initial equity, that is a cash-on-cash multiple of 3.252033x (pe_sponsor_cash_on_cash_multiple = round(800.0 / 246.0, 6)), locked in before the operating entity collapsed. The sponsor recovered its principal more than three times over — with the hospital's own buildings as the collateral of last resort.
+
+---
+
+## 5. The Arithmetic of Guaranteed Insolvency
+
+Strip the rhetoric and the transaction reduces to one ratio.
+
+```
+                PRE-STRIP                       POST-STRIP
+              (SOLVENT, 3.0x)              (INSOLVENT, 0.878049x)
+
+  EBITDAR        $180.0M                    EBITDAR         $180.0M
+  FIXED CHARGES  $ 60.0M                    FIXED CHARGES   $205.0M
+                 (debt service)                             ($60.0M debt service
+                                                             + $145.0M REIT rent)
+
+  FCCR = 180.0 / 60.0  = 3.0x               FCCR = 180.0 / 205.0 = 0.878049x
+  MARGIN = +$120.0M / yr                    MARGIN = -$25.0M / yr
+```
+
+(post_strip_fixed_charges_usd_millions = 60.0 + 145.0 = 205.0; post_strip_fixed_charge_coverage_ratio = round(180.0 / 205.0, 6) = 0.878049)
+
+A Fixed-Charge Coverage Ratio below 1.0 is not a warning sign; it is an identity. Fixed charges exceed total operating earnings before a single dollar of capital expenditure, maintenance, or clinical investment. The hospital must shrink by $25.0M per year — every year — just to stand still.
+
+How good would operations have to become to escape? EBITDAR would need to grow 13.8889% (205.0 / 180.0 - 1) merely to reach the 1.0x break-even — before any return on the residual capital — in a margin regime that was flat to compressing. The turnaround was not difficult. It was arithmetic.
+
+---
+
+## 6. The Friendly-PC Shell Game: Bypassing CPOM
+
+State Corporate Practice of Medicine (CPOM) doctrines forbid lay entities from employing physicians or directing clinical judgment. The roll-up bypasses the doctrine with a two-entity shell:
+
+```
+   [PE SPONSOR]
+        |  equity
+        v
+   [MSO] ---------------------------------> [HOSPITAL OPERATING ASSETS]
+        |   management services agreement             ^
+        |   billing / lockbox / equity options        | clinical contracts
+        v                                             |
+   [FRIENDLY-PC NOMINEE PHYSICIAN ENTITY] ------------+
+   (holds medical licenses; economics swept to the MSO)
+```
+
+The Management Services Organization contracts for billing, staffing, scheduling, IT, and "practice management." A nominee physician-owned professional entity — the Friendly PC — holds the medical licenses and billing numbers, while the MSO controls economics and succession through management services agreements, equity transfer options, and receivables lockbox arrangements.
+
+The consequence is a control/economics wedge. The entity bearing fiduciary responsibility for patients (the nominee) is stripped of the cash flows needed to staff and maintain safe operations. The entity capturing the economics (the MSO, and through it the sponsor) bears no clinical duty. Where claims flow through arrangements lacking bona fide clinical control, the wedge also becomes a 31 U.S.C. 3729 exposure surface.
+
+---
+
+## 7. Clinical Entropy: The JAMA Baseline
+
+Financial stripping and clinical decay are not parallel stories; they are the same story measured in different units. Kannan et al., JAMA 2023;330(24):2365-2375 (Changes in Hospital Adverse Events and Patient Outcomes Associated With Private Equity Acquisition), measured what happens to patients after PE acquisition:
+
+- Hospital-acquired conditions rise 25.4% (jama_hospital_acquired_condition_increase_rate = 0.254): HAC_post = HAC_pre * 1.254
+- Central-line bloodstream infections rise 37.9% (jama_central_line_infection_increase_rate = 0.379): CLABSI_post = CLABSI_pre * 1.379
+
+These are not sentiment metrics. They are the dosimeters of disinvestment: staffing thins, maintenance defers, and the infections count the days. When $145.0M per year leaves the operating budget as rent, the difference is paid in adverse events.
+
+---
+
+## 8. The Spokesperson's Null Hypothesis (H0) and Its Falsification
+
+Under Milkovich v. Lorain Journal Co. (497 U.S. 1) and Partington v. Bugliosi (56 F.3d 1147), analytical synthesis is protected where every inferential claim is anchored to disclosed, pin-cited primary facts. So state the defense exactly, then test it.
+
+H0 (NULL — sponsor and REIT spokesperson position): Sale-leasebacks unlock trapped real-estate capital; the proceeds fund hospital turnarounds, facility modernization, and expanded community access; the REIT is a long-term partner in clinical infrastructure.
+
+Falsification against the locked telemetry:
+
+```
+  T1 — USE-OF-PROCEEDS TRACE. 64.0% of proceeds ($800.0M of $1,250.0M) left
+       the system as sponsor distributions. The cash-flow trace contradicts
+       the "funds the turnaround" predicate of H0.
+
+  T2 — INSOLVENCY IDENTITY. FCCR_post = 0.878049 < 1.0 holds as arithmetic,
+       independent of management quality. H0's turnaround requires 13.8889%
+       sustained EBITDAR growth merely to reach break-even coverage — a
+       regime absent from the post-strip record.
+
+  T3 — CLINICAL ENTROPY. JAMA 2023 measures +25.4% hospital-acquired
+       conditions and +37.9% central-line bloodstream infections post-PE
+       acquisition: the empirical signature of disinvestment, not
+       modernization.
+```
+
+H1 (PROTECTED ANALYTICAL SYNTHESIS): The disclosed facts — the proceeds trace, the coverage identity, and the peer-reviewed adverse-event baseline — support the inference that the sale-leaseback was engineered for sponsor extraction with operating insolvency as the designed terminal state, rather than a capital-unlock for clinical turnaround.
+
+---
+
+## 9. The Clawback: 11 U.S.C. 548 and the 800.0M Identity
+
+11 U.S.C. 548(a)(1)(B) avoids any transfer incurred within two years of the petition for which the debtor received less than reasonably equivalent value, where the debtor was insolvent at the time or was rendered insolvent by the transfer. The mapping to the telemetry is mechanical:
+
+- TRANSFER: the $800.0M of dividend-recapitalization distributions.
+- REASONABLY EQUIVALENT VALUE: none. The hospital received nothing for the distributions; proceeds exited to the sponsor (T1 trace).
+- INSOLVENCY: the distributions were incurred alongside the lease strip that produced FCCR_post = 0.878049 < 1.0. The debtor was rendered insolvent by the integrated transaction.
+
+Clawback quantum: C_548 = 800.0 (USD M) — 100% of extracted distributions (section_548_fraudulent_transfer_clawback_usd_millions = 800.0). The complementary remedial stack: lease rejection under 11 U.S.C. 365 to shed the $145.0M/yr master lease, clinical receivership to place patient-safety assets under court supervision, and CPOM unwind of nominee structures where the MSO exercised de facto clinical control.
+
+---
+
+## 10. The Fiduciary Contrast
+
+The opposite architecture exists: physician-owned clinical nodes that hold their own real estate, answer to patients rather than a distribution schedule, and treat coverage ratios as safety margins rather than extraction headroom. The strip is not what hospitals are for; it is what happens when a hospital is treated as a balance sheet with patients attached.
+
+The arithmetic in this article is not rhetoric. Every constant is locked in schema/pe_hospital_sale_leaseback_cpom.json and recomputed to exit code 0 by proofs/pe_hospital_sale_leaseback_cpom_proof.py. The insolvency was never a risk. It was the invoice.
+
+---
+
+END — SPEC-PE-HOSPITAL-SALE-LEASEBACK-STRIPPING-AND-CPOM-EXTRACTION-v1.0 (companion: specs/SPEC-PE-HOSPITAL-SALE-LEASEBACK-STRIPPING-AND-CPOM-EXTRACTION-v1.0.md)

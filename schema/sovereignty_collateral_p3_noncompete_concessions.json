@@ -1,0 +1,259 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:sovereignty_collateral_p3_noncompete_concessions.json",
+  "title": "Sovereignty Collateralization & P3 Non-Compete Concessions - Locked Verification Schema",
+  "description": "Deterministic verification contract for proofs/verify_sovereignty_collateral_p3_noncompete_concessions.py. Anchors all 22 locked v1.0 constants, the 48 derived diagnostics, and the 6-vector pass receipt: (1) EQ_01 intertemporal discount-rate arbitrage and upfront lump-sum capture across the Chicago Skyway 99-year, Indiana Toll Road 75-year, and TxDOT SH-130 50-year concessions, (2) EQ_02 compensation-event deterrence inequality and the Fiscal Alienation Index Phi = 1 discrete boundary, (3) EQ_03 asymmetric bankruptcy risk-boomerang on the SH-130 Chapter 11 federal TIFIA tranche, (4) EQ_04 hyperscale AI data-center curtailment-compensation isomorphism at Lambda_Curtail = 4.25x, (5) the unified Phi > 1 de facto alienation theorem against the Stone v. Mississippi inalienable police-power floor, and (6) the specification to schema numerical drift gate.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["spec_id", "proof_file", "locked_constants_and_outputs", "derived_diagnostics", "vectors", "doctrinal_anchors", "phi_boundary", "all_vectors_pass"],
+  "properties": {
+    "spec_id": { "const": "SPEC-SOVEREIGNTY-COLLATERAL-P3-NONCOMPETE-CONCESSIONS-v1.0" },
+    "proof_file": { "const": "proofs/verify_sovereignty_collateral_p3_noncompete_concessions.py" },
+    "locked_constants_and_outputs": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "skyway_concession_term_years", "skyway_upfront_payment_usd_billions",
+        "indiana_itr_concession_term_years", "indiana_itr_upfront_payment_usd_billions",
+        "sh130_concession_term_years", "sh130_senior_debt_default_usd_billions",
+        "sh130_federal_tifia_loan_usd_millions", "municipal_political_discount_rate",
+        "concessionaire_wacc_discount_rate", "annual_initial_toll_cashflow_usd_millions",
+        "annual_monopoly_toll_escalation_rate", "concessionaire_npv_75yr_usd_billions",
+        "politician_perceived_npv_75yr_usd_billions",
+        "intertemporal_discount_arbitrage_spread_usd_billions",
+        "parallel_public_road_capex_usd_millions",
+        "compensation_event_lost_revenue_penalty_usd_millions",
+        "public_welfare_gain_from_free_road_usd_millions",
+        "fiscal_deterrence_deficit_usd_millions", "hyperscale_dc_contracted_load_mw",
+        "curtailment_liquidated_damages_usd_per_mwh",
+        "residential_voll_statutory_cap_usd_per_mwh", "grid_curtailment_asymmetry_ratio"
+      ],
+      "properties": {
+        "skyway_concession_term_years": { "const": 99 },
+        "skyway_upfront_payment_usd_billions": { "const": 1.83 },
+        "indiana_itr_concession_term_years": { "const": 75 },
+        "indiana_itr_upfront_payment_usd_billions": { "const": 3.8 },
+        "sh130_concession_term_years": { "const": 50 },
+        "sh130_senior_debt_default_usd_billions": { "const": 1.6 },
+        "sh130_federal_tifia_loan_usd_millions": { "const": 430.0 },
+        "municipal_political_discount_rate": { "const": 0.18 },
+        "concessionaire_wacc_discount_rate": { "const": 0.065 },
+        "annual_initial_toll_cashflow_usd_millions": { "const": 180.0 },
+        "annual_monopoly_toll_escalation_rate": { "const": 0.045 },
+        "concessionaire_npv_75yr_usd_billions": { "const": 8.078556 },
+        "politician_perceived_npv_75yr_usd_billions": { "const": 1.333322 },
+        "intertemporal_discount_arbitrage_spread_usd_billions": { "const": 4.278556 },
+        "parallel_public_road_capex_usd_millions": { "const": 450.0 },
+        "compensation_event_lost_revenue_penalty_usd_millions": { "const": 620.0 },
+        "public_welfare_gain_from_free_road_usd_millions": { "const": 890.0 },
+        "fiscal_deterrence_deficit_usd_millions": { "const": -180.0 },
+        "hyperscale_dc_contracted_load_mw": { "const": 1200.0 },
+        "curtailment_liquidated_damages_usd_per_mwh": { "const": 8500.0 },
+        "residential_voll_statutory_cap_usd_per_mwh": { "const": 2000.0 },
+        "grid_curtailment_asymmetry_ratio": { "const": 4.25 }
+      }
+    },
+    "derived_diagnostics": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "annuity_factor_pol", "annuity_factor_conc", "macaulay_duration_pol_years",
+        "macaulay_duration_conc_years", "duration_ratio", "perpetuity_capture_pol_pct",
+        "perpetuity_capture_conc_pct", "strict_75yr_npv_pol_usd_billions",
+        "strict_75yr_npv_conc_usd_billions", "politician_npv_pct_error",
+        "implied_horizon_conc_years", "implied_horizon_pol_years",
+        "years_beyond_contractual_term", "terminal_capitalization_share_pct",
+        "locked_to_strict_conc_ratio", "upfront_to_perceived_value_ratio",
+        "spread_share_of_concessionaire_npv_pct", "upfront_share_of_concessionaire_npv_pct",
+        "skyway_upfront_per_leasehold_year_usd_millions",
+        "itr_upfront_per_leasehold_year_usd_millions", "skyway_to_itr_per_year_ratio",
+        "sh130_to_skyway_term_ratio", "critical_compensation_penalty_usd_millions",
+        "total_sovereign_outlay_usd_millions", "social_net_surplus_usd_millions",
+        "fiscal_alienation_index_toll", "penalty_to_capex_multiplier",
+        "fiscal_cost_per_welfare_dollar", "sigma_social_optimum", "sigma_fiscal_optimum",
+        "sovereignty_collateralization_gap", "federal_tifia_tail_share",
+        "federal_tifia_tail_share_pct", "private_residual_debt_usd_millions",
+        "tifia_per_concession_year_usd_millions",
+        "concessionaire_limited_liability_loss_usd_millions",
+        "joint_adverse_sovereign_exposure_usd_millions", "curtailment_wedge_usd_per_mwh",
+        "annual_contracted_energy_mwh", "notional_annual_liquidated_damages_usd_billions",
+        "residential_cap_annual_equivalent_usd_billions", "annual_covenant_wedge_usd_billions",
+        "dc_full_curtailment_one_hour_usd_millions",
+        "residential_blackout_one_hour_usd_millions",
+        "residential_blackout_hours_equivalent", "grid_to_toll_alienation_severity_ratio",
+        "legal_alienation_index", "fiscal_alienation_regime_count"
+      ],
+      "properties": {
+        "annuity_factor_pol": { "const": 7.40659 },
+        "annuity_factor_conc": { "const": 37.936559 },
+        "macaulay_duration_pol_years": { "const": 8.7325 },
+        "macaulay_duration_conc_years": { "const": 29.4008 },
+        "duration_ratio": { "const": 3.3668 },
+        "perpetuity_capture_pol_pct": { "const": 99.989 },
+        "perpetuity_capture_conc_pct": { "const": 75.873 },
+        "strict_75yr_npv_pol_usd_billions": { "const": 1.333186 },
+        "strict_75yr_npv_conc_usd_billions": { "const": 6.828581 },
+        "politician_npv_pct_error": { "const": 0.0102 },
+        "implied_horizon_conc_years": { "const": 120.2156 },
+        "implied_horizon_pol_years": { "const": 96.0961 },
+        "years_beyond_contractual_term": { "const": 45.2156 },
+        "terminal_capitalization_share_pct": { "const": 15.4728 },
+        "locked_to_strict_conc_ratio": { "const": 1.183051 },
+        "upfront_to_perceived_value_ratio": { "const": 2.850024 },
+        "spread_share_of_concessionaire_npv_pct": { "const": 52.9619 },
+        "upfront_share_of_concessionaire_npv_pct": { "const": 47.0381 },
+        "skyway_upfront_per_leasehold_year_usd_millions": { "const": 18.4848 },
+        "itr_upfront_per_leasehold_year_usd_millions": { "const": 50.6667 },
+        "skyway_to_itr_per_year_ratio": { "const": 0.364833 },
+        "sh130_to_skyway_term_ratio": { "const": 0.505051 },
+        "critical_compensation_penalty_usd_millions": { "const": 440.0 },
+        "total_sovereign_outlay_usd_millions": { "const": 1070.0 },
+        "social_net_surplus_usd_millions": { "const": 440.0 },
+        "fiscal_alienation_index_toll": { "const": 1.409091 },
+        "penalty_to_capex_multiplier": { "const": 1.377778 },
+        "fiscal_cost_per_welfare_dollar": { "const": 1.202247 },
+        "sigma_social_optimum": { "const": 1 },
+        "sigma_fiscal_optimum": { "const": 0 },
+        "sovereignty_collateralization_gap": { "const": 1 },
+        "federal_tifia_tail_share": { "const": 0.26875 },
+        "federal_tifia_tail_share_pct": { "const": 26.875 },
+        "private_residual_debt_usd_millions": { "const": 1170.0 },
+        "tifia_per_concession_year_usd_millions": { "const": 8.6 },
+        "concessionaire_limited_liability_loss_usd_millions": { "const": 0.0 },
+        "joint_adverse_sovereign_exposure_usd_millions": { "const": -1050.0 },
+        "curtailment_wedge_usd_per_mwh": { "const": 6500.0 },
+        "annual_contracted_energy_mwh": { "const": 10512000.0 },
+        "notional_annual_liquidated_damages_usd_billions": { "const": 89.352 },
+        "residential_cap_annual_equivalent_usd_billions": { "const": 21.024 },
+        "annual_covenant_wedge_usd_billions": { "const": 68.328 },
+        "dc_full_curtailment_one_hour_usd_millions": { "const": 10.2 },
+        "residential_blackout_one_hour_usd_millions": { "const": 2.4 },
+        "residential_blackout_hours_equivalent": { "const": 4.25 },
+        "grid_to_toll_alienation_severity_ratio": { "const": 3.0161 },
+        "legal_alienation_index": { "const": 0 },
+        "fiscal_alienation_regime_count": { "const": 2 }
+      }
+    },
+    "vectors": {
+      "type": "array",
+      "minItems": 6,
+      "maxItems": 6,
+      "prefixItems": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["vector", "name", "status", "checks"],
+          "properties": {
+            "vector": { "const": 1 },
+            "name": { "const": "intertemporal_discount_rate_arbitrage" },
+            "status": { "const": "PASS" },
+            "checks": { "$ref": "#/$defs/checks" }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["vector", "name", "status", "checks"],
+          "properties": {
+            "vector": { "const": 2 },
+            "name": { "const": "compensation_event_deterrence_phi_boundary" },
+            "status": { "const": "PASS" },
+            "checks": { "$ref": "#/$defs/checks" }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["vector", "name", "status", "checks"],
+          "properties": {
+            "vector": { "const": 3 },
+            "name": { "const": "asymmetric_bankruptcy_risk_boomerang" },
+            "status": { "const": "PASS" },
+            "checks": { "$ref": "#/$defs/checks" }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["vector", "name", "status", "checks"],
+          "properties": {
+            "vector": { "const": 4 },
+            "name": { "const": "data_center_curtailment_asymmetry" },
+            "status": { "const": "PASS" },
+            "checks": { "$ref": "#/$defs/checks" }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["vector", "name", "status", "checks"],
+          "properties": {
+            "vector": { "const": 5 },
+            "name": { "const": "unified_phi_gt_one_alienation_theorem" },
+            "status": { "const": "PASS" },
+            "checks": { "$ref": "#/$defs/checks" }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["vector", "name", "status", "checks"],
+          "properties": {
+            "vector": { "const": 6 },
+            "name": { "const": "spec_schema_drift_and_integrity_gate" },
+            "status": { "const": "PASS" },
+            "checks": { "$ref": "#/$defs/checks" }
+          }
+        }
+      ],
+      "items": false
+    },
+    "doctrinal_anchors": {
+      "type": "array",
+      "minItems": 6,
+      "maxItems": 6,
+      "prefixItems": [
+        { "const": "Stone v. Mississippi, 101 U.S. 814, 817 (1880)" },
+        { "const": "United States Trust Co. v. New Jersey, 431 U.S. 1 (1977)" },
+        { "const": "SAFETEA-LU, Pub. L. 109-59, Sec. 1604, 119 Stat. 1144 (Aug. 10, 2005)" },
+        { "const": "City of Chicago Skyway Concession and Lease Agreement (Jan. 2005)" },
+        { "const": "Indiana Toll Road Concession and Lease Agreement (Apr. 2006)" },
+        { "const": "In re SH-130 Concession Company, LLC, No. 16-10262 (Bankr. W.D. Tex. Mar. 2, 2016)" }
+      ],
+      "items": false
+    },
+    "phi_boundary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["phi_definition", "critical_value", "toll_regime_phi", "grid_regime_phi", "sigma_star_toll", "sigma_star_grid", "stone_legal_alienation"],
+      "properties": {
+        "phi_definition": { "const": "Phi = private_indemnity / public_net_surplus" },
+        "critical_value": { "const": 1.0 },
+        "toll_regime_phi": { "const": 1.409091 },
+        "grid_regime_phi": { "const": 4.25 },
+        "sigma_star_toll": { "const": 0 },
+        "sigma_star_grid": { "const": 0 },
+        "stone_legal_alienation": { "const": "none_police_power_action_set_never_legally_reduced" }
+      }
+    },
+    "all_vectors_pass": { "const": true }
+  },
+  "$defs": {
+    "checks": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name", "computed", "expected", "tolerance", "pass"],
+        "properties": {
+          "name": { "type": "string", "minLength": 1 },
+          "computed": { "type": ["number", "string"] },
+          "expected": { "type": ["number", "string"] },
+          "tolerance": { "type": "number", "minimum": 0 },
+          "pass": { "const": true }
+        }
+      }
+    }
+  }
+}

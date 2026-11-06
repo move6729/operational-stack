@@ -1,0 +1,246 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:open_weight_distillation_ban_impossibility_v1.0.json",
+  "$comment": "PLAIN-ENGLISH LEGAL NOTICE: This file is an abstract statutory-boundary and unit-economic validation checklist (JSON Schema), NOT legal advice, an accusation, or an investment recommendation. Every field encodes a published statutory or case citation, a public market quote, a public technical-report figure, or a closed-form algebraic invariant.",
+  "title": "Statutory, Constitutional, and Macroeconomic Impossibility of Domestic Open-Weight Model Prohibitions Schema",
+  "description": "Validates the three-axis impossibility proof: (1) the statutory/constitutional firewall (IEEPA Berman Amendment, EAR published-software exclusion, Bernstein prior-restraint doctrine); (2) non-attachability of API ToS 'distillation taint' (17 U.S.C. 102(b)/103(b), Van Buren CFAA gates-up-or-down rule, contract privity); (3) the asymmetric self-sanction and brain-drain trap (Gamma_distill capex compression, Phi_API blended price asymmetry, downstream unit-margin collapse, Omega_capture deadweight multiplier, Q_drain_crit startup/researcher offshoring threshold), plus the four-part perimeter policy equilibrium and falsification conditions.",
+  "type": "object",
+  "required": ["spec_version", "statutory_firewall", "distillation_taint_non_attachability", "capex_compression", "blended_price_asymmetry", "unit_margin_collapse", "deadweight_capture", "human_capital_brain_drain", "policy_equilibrium", "falsification_conditions"],
+  "properties": {
+    "spec_version": { "type": "string", "const": "SPEC-OPEN-WEIGHT-DISTILLATION-AND-DOMESTIC-BAN-IMPOSSIBILITY-v1.0" },
+    "statutory_firewall": {
+      "type": "object",
+      "description": "Axis 1 (Spec §2): bars on any domestic prohibition of published open-weight tensors.",
+      "required": ["ieepa_berman_amendment", "ear_published_exclusion", "first_amendment_prior_restraint"],
+      "properties": {
+        "ieepa_berman_amendment": {
+          "type": "object",
+          "required": ["citation", "format_medium_lock", "digital_media_expansion", "eaa_repeal_authority", "repealed_title50_sections", "export_carveout_reach", "domestic_import_ban_status"],
+          "properties": {
+            "citation": { "type": "string", "const": "50 U.S.C. § 1702(b)(3)" },
+            "protected_scope": { "type": "string", "const": "importation or exportation, commercial or otherwise, of any information or informational materials" },
+            "format_medium_lock": { "type": "string", "const": "regardless of format or medium of transmission" },
+            "digital_media_expansion": { "type": "string", "const": "Free Trade in Ideas Act of 1994" },
+            "eaa_repeal_authority": { "type": "string", "const": "Export Control Reform Act of 2018, Pub. L. 115-232, div. A, title XVII, § 1766(a), 132 Stat. 2233" },
+            "repealed_title50_sections": { "type": "array", "const": ["50 U.S.C. § 4604", "50 U.S.C. § 4605"] },
+            "export_carveout_reach": { "type": "string", "const": "exports only; never importation or domestic possession" },
+            "domestic_import_ban_status": { "type": "string", "const": "ultra_vires" }
+          },
+          "additionalProperties": false
+        },
+        "ear_published_exclusion": {
+          "type": "object",
+          "required": ["jurisdictional_exclusion", "published_definition", "published_trigger", "sole_carveout_eccn", "weight_tensors_under_carveout", "jurisdiction_after_public_posting"],
+          "properties": {
+            "jurisdictional_exclusion": { "type": "string", "const": "15 C.F.R. § 734.3(b)(3)" },
+            "published_definition": { "type": "string", "const": "15 C.F.R. § 734.7(a)(4)" },
+            "published_trigger": { "type": "string", "const": "public dissemination (unlimited distribution) in any form, including posting on the Internet on sites available to the public" },
+            "sole_carveout_eccn": { "type": "string", "const": "5D002 published encryption object code (15 C.F.R. § 734.7(b))" },
+            "weight_tensors_under_carveout": { "type": "boolean", "const": false },
+            "jurisdiction_after_public_posting": { "type": "string", "const": "not subject to the EAR" }
+          },
+          "additionalProperties": false
+        },
+        "first_amendment_prior_restraint": {
+          "type": "object",
+          "required": ["controlling_case", "reporter_cite", "holding", "corley_reaffirmation", "domestic_possession_ban_status"],
+          "properties": {
+            "controlling_case": { "type": "string", "const": "Bernstein v. U.S. Dep't of Justice" },
+            "reporter_cite": { "type": "string", "const": "176 F.3d 1132 (9th Cir. 1999) (reh'g en banc granted, opinion withdrawn after EAR amendment, 192 F.3d 1308)" },
+            "district_court_cite": { "type": "string", "const": "922 F. Supp. 1426 (N.D. Cal. 1996); 974 F. Supp. 1288 (N.D. Cal. 1997)" },
+            "holding": { "type": "string", "const": "prepublication licensing scheme burdening scientific expression is an unconstitutional prior restraint" },
+            "corley_reaffirmation": { "type": "string", "const": "Universal City Studios, Inc. v. Corley, 273 F.3d 429 (2d Cir. 2001)" },
+            "domestic_possession_ban_status": { "type": "string", "const": "content_and_speaker_based_restraint_barred" }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "distillation_taint_non_attachability": {
+      "type": "object",
+      "description": "Axis 2 (Spec §3): API ToS breaches do not attach in rem to published student weights.",
+      "required": ["copyright_inapplicability", "cfaa_non_liability", "privity_firewall"],
+      "properties": {
+        "copyright_inapplicability": {
+          "type": "object",
+          "required": ["idea_expression_exclusion", "compilation_bound", "distillation_objective", "weights_are_copyrightable_expression"],
+          "properties": {
+            "idea_expression_exclusion": { "type": "string", "const": "17 U.S.C. § 102(b)" },
+            "compilation_bound": { "type": "string", "const": "17 U.S.C. § 103(b)" },
+            "distillation_objective": { "type": "string", "const": "L_KD(W_S) = E_x[D_KL(P_WT(y|x;T) || P_WS(y|x;T))] over architecturally distinct matrices (N_S != N_T)" },
+            "weights_are_copyrightable_expression": { "type": "boolean", "const": false }
+          },
+          "additionalProperties": false
+        },
+        "cfaa_non_liability": {
+          "type": "object",
+          "required": ["statutory_definition", "controlling_case", "us_cite", "inquiry", "purpose_clause_breach_is_federal_crime"],
+          "properties": {
+            "statutory_definition": { "type": "string", "const": "18 U.S.C. § 1030(e)(6) 'exceeds authorized access'" },
+            "controlling_case": { "type": "string", "const": "Van Buren v. United States" },
+            "us_cite": { "type": "string", "const": "593 U.S. 374, 381, 390 (2021)" },
+            "inquiry": { "type": "string", "const": "gates-up-or-down" },
+            "purpose_clause_breach_is_federal_crime": { "type": "boolean", "const": false }
+          },
+          "additionalProperties": false
+        },
+        "privity_firewall": {
+          "type": "object",
+          "required": ["tos_breach_scope", "in_rem_taint_on_weights", "downstream_mit_licensee_liability"],
+          "properties": {
+            "tos_breach_scope": { "type": "string", "const": "in personam bilateral contract only" },
+            "in_rem_taint_on_weights": { "type": "boolean", "const": false },
+            "downstream_mit_licensee_liability": { "type": "number", "const": 0.0 }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "capex_compression": {
+      "type": "object",
+      "description": "Spec §4.1: DeepSeek-V3 (arXiv:2412.19437v2, Table 1) follower capex vs closed US frontier teacher run.",
+      "required": ["student_h800_gpu_hours_k", "h800_rental_usd_per_hour", "student_training_cost_usd_m", "teacher_cost_usd_m_min", "teacher_cost_usd_m_max", "gamma_distill_min", "gamma_distill_max", "post_release_marginal_acquisition_cost_usd"],
+      "properties": {
+        "student_h800_gpu_hours_k": { "type": "number", "const": 2788.0 },
+        "h800_rental_usd_per_hour": { "type": "number", "const": 2.0 },
+        "student_training_cost_usd_m": { "type": "number", "const": 5.576 },
+        "teacher_cost_usd_m_min": { "type": "number", "const": 500.0 },
+        "teacher_cost_usd_m_max": { "type": "number", "const": 1000.0 },
+        "gamma_distill_min": { "type": "number", "minimum": 89.66, "maximum": 89.68 },
+        "gamma_distill_max": { "type": "number", "minimum": 179.33, "maximum": 179.35 },
+        "post_release_marginal_acquisition_cost_usd": { "type": "number", "const": 0.0 }
+      },
+      "additionalProperties": false
+    },
+    "blended_price_asymmetry": {
+      "type": "object",
+      "description": "Spec §4.2: P_bar(rho) = (p_in + rho*p_out)/(1+rho) at rho = 3.0, and Phi_API = P_bar_closed / P_bar_open.",
+      "required": ["rho", "closed_o1", "open_v3", "open_off_peak", "phi_api_std", "phi_api_off"],
+      "properties": {
+        "rho": { "type": "number", "const": 3.0 },
+        "closed_o1": {
+          "type": "object",
+          "required": ["p_in_usd_per_m", "p_out_usd_per_m", "p_bar_usd_per_m"],
+          "properties": {
+            "p_in_usd_per_m": { "type": "number", "const": 15.0 },
+            "p_out_usd_per_m": { "type": "number", "const": 60.0 },
+            "p_bar_usd_per_m": { "type": "number", "const": 48.75 }
+          },
+          "additionalProperties": false
+        },
+        "open_v3": {
+          "type": "object",
+          "required": ["p_in_usd_per_m", "p_out_usd_per_m", "p_bar_usd_per_m"],
+          "properties": {
+            "p_in_usd_per_m": { "type": "number", "const": 0.2574 },
+            "p_out_usd_per_m": { "type": "number", "const": 1.029 },
+            "p_bar_usd_per_m": { "type": "number", "const": 0.8361 }
+          },
+          "additionalProperties": false
+        },
+        "open_off_peak": {
+          "type": "object",
+          "required": ["p_in_usd_per_m", "p_out_usd_per_m", "p_bar_usd_per_m"],
+          "properties": {
+            "p_in_usd_per_m": { "type": "number", "const": 0.15 },
+            "p_out_usd_per_m": { "type": "number", "const": 0.6 },
+            "p_bar_usd_per_m": { "type": "number", "const": 0.4875 }
+          },
+          "additionalProperties": false
+        },
+        "phi_api_std": { "type": "number", "minimum": 58.3, "maximum": 58.31 },
+        "phi_api_off": { "type": "number", "const": 100.0 }
+      },
+      "additionalProperties": false
+    },
+    "unit_margin_collapse": {
+      "type": "object",
+      "description": "Spec §4.3: representative token-intensive workflow under asymmetric domestic prohibition (R_unit = $12.00, C_ops = $4.00, Q_tokens = 0.50M, rho = 3.0).",
+      "required": ["r_unit_usd", "c_ops_usd", "v_net_usd", "q_tokens_m", "pi_foreign_usd", "pi_us_usd", "margin_foreign_pct", "margin_us_pct", "tau_reg_usd", "q_crit_us_m", "q_crit_foreign_m", "sign_structure_in_competitive_zone"],
+      "properties": {
+        "r_unit_usd": { "type": "number", "const": 12.0 },
+        "c_ops_usd": { "type": "number", "const": 4.0 },
+        "v_net_usd": { "type": "number", "const": 8.0 },
+        "q_tokens_m": { "type": "number", "const": 0.5 },
+        "pi_foreign_usd": { "type": "number", "const": 7.58195 },
+        "pi_us_usd": { "type": "number", "const": -16.375 },
+        "margin_foreign_pct": { "type": "number", "minimum": 63.17, "maximum": 63.19 },
+        "margin_us_pct": { "type": "number", "minimum": -136.47, "maximum": -136.45 },
+        "tau_reg_usd": { "type": "number", "const": 23.95695 },
+        "q_crit_us_m": { "type": "number", "minimum": 0.164, "maximum": 0.1642 },
+        "q_crit_foreign_m": { "type": "number", "minimum": 9.5681, "maximum": 9.5683 },
+        "sign_structure_in_competitive_zone": { "type": "string", "const": "Pi_US < 0 < Pi_foreign whenever Q*P_bar_open < V_net < Q*P_bar_closed" }
+      },
+      "additionalProperties": false
+    },
+    "deadweight_capture": {
+      "type": "object",
+      "description": "Spec §4.4: Omega_capture = (1/m_net) * [1 + eta/(2(1-eta)) + gamma_export*V_net*N_displaced/(Q_ban*(P_closed - P_open))].",
+      "required": ["eta_destroy", "m_net", "export_loss_ratio_vs_direct_api_spend", "omega_capture", "interpretation"],
+      "properties": {
+        "eta_destroy": { "type": "number", "const": 0.75 },
+        "m_net": { "type": "number", "const": 0.3 },
+        "export_loss_ratio_vs_direct_api_spend": { "type": "number", "const": 1.5 },
+        "omega_capture": { "type": "number", "minimum": 13.3332, "maximum": 13.3334 },
+        "interpretation": { "type": "string", "const": "every $1.00 of protected domestic API monopoly rent destroys $13.33 of downstream US economic surplus" }
+      },
+      "additionalProperties": false
+    },
+    "human_capital_brain_drain": {
+      "type": "object",
+      "description": "Spec §4.5: white-box gradient lockout, fixed-budget experimentation compression, startup re-domiciliation threshold Q_drain_crit, and physical/constitutional impossibility of exit lockdowns.",
+      "required": ["closed_api_whitebox_gradients_available", "annual_compute_budget_usd", "open_tokens_per_year_b", "closed_tokens_per_year_b", "delta_v_hub_usd", "annualized_reloc_cost_usd", "compliance_cost_usd", "q_drain_crit_m_tokens_per_yr", "net_reloc_savings_at_100b_tokens_usd", "fifth_amendment_exit_protection", "fourth_amendment_vram_inspection_bar", "microsd_int4_checkpoint_gb", "historical_precedent"],
+      "properties": {
+        "closed_api_whitebox_gradients_available": { "type": "boolean", "const": false },
+        "annual_compute_budget_usd": { "type": "number", "const": 250000.0 },
+        "open_tokens_per_year_b": { "type": "number", "minimum": 299.0, "maximum": 299.02 },
+        "closed_tokens_per_year_b": { "type": "number", "minimum": 5.12, "maximum": 5.13 },
+        "delta_v_hub_usd": { "type": "number", "const": 500000.0 },
+        "annualized_reloc_cost_usd": { "type": "number", "const": 100000.0 },
+        "compliance_cost_usd": { "type": "number", "const": 120000.0 },
+        "q_drain_crit_m_tokens_per_yr": { "type": "number", "minimum": 10017.96, "maximum": 10017.98 },
+        "net_reloc_savings_at_100b_tokens_usd": { "type": "number", "const": 4311390.0 },
+        "fifth_amendment_exit_protection": { "type": "string", "const": "Kent v. Dulles, 357 U.S. 116, 125 (1958); Aptheker v. Secretary of State, 378 U.S. 500, 505-06 (1964)" },
+        "fourth_amendment_vram_inspection_bar": { "type": "string", "const": "U.S. Const. amend. IV bars warrantless kernel-level VRAM scanning on private domestic silicon" },
+        "microsd_int4_checkpoint_gb": { "type": "number", "const": 335.5 },
+        "historical_precedent": { "type": "string", "const": "1990s ITAR Crypto Wars (22 U.S.C. § 2778; relaxed at 65 Fed. Reg. 2492, 15 C.F.R. § 742.15)" }
+      },
+      "additionalProperties": false
+    },
+    "policy_equilibrium": {
+      "type": "object",
+      "description": "Spec §5: the four legally enforceable perimeter controls where US regulation actually settles.",
+      "required": ["federal_procurement_exclusion", "foreign_hosted_endpoint_restriction", "upstream_silicon_chokepoints", "source_side_api_telemetry_hardening"],
+      "properties": {
+        "federal_procurement_exclusion": {
+          "type": "object",
+          "required": ["statute", "far_clause", "agency_procurement_effective_date", "private_domestic_deployment_reach"],
+          "properties": {
+            "statute": { "type": "string", "const": "NDAA FY2019 § 889, Pub. L. 115-232" },
+            "far_clause": { "type": "string", "const": "FAR 52.204-25" },
+            "agency_procurement_effective_date": { "type": "string", "const": "2019-08-13" },
+            "private_domestic_deployment_reach": { "type": "string", "const": "none; scoped strictly to executive agencies and covered contractors" }
+          },
+          "additionalProperties": false
+        },
+        "foreign_hosted_endpoint_restriction": { "type": "string", "const": "data-egress controls on foreign-domiciled hosted inference only; vanishes for air-gapped domestic execution of downloaded weights" },
+        "upstream_silicon_chokepoints": { "type": "string", "const": "15 C.F.R. Part 744 SME, EUV lithography, and HBM export controls" },
+        "source_side_api_telemetry_hardening": { "type": "string", "const": "private rate-limiting, KYC gating, and watermarking borne by frontier labs" }
+      },
+      "additionalProperties": false
+    },
+    "falsification_conditions": {
+      "type": "object",
+      "description": "Spec §6: invariants falsified iff statutory repeal plus constitutional reversal, or closed-to-open price convergence Phi_API -> 1.0.",
+      "required": ["statutory_repeal_and_reversal_required", "phi_api_convergence_threshold_usd_per_m"],
+      "properties": {
+        "statutory_repeal_and_reversal_required": { "type": "array", "const": ["repeal of 50 U.S.C. § 1702(b)(3) and 15 C.F.R. § 734.3(b)(3) for weight tensors", "overruling of Bernstein and Van Buren"] },
+        "phi_api_convergence_threshold_usd_per_m": { "type": "number", "const": 0.84 }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

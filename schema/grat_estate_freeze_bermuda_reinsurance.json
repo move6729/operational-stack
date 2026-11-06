@@ -1,0 +1,103 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:grat_estate_freeze_bermuda_reinsurance.json",
+  "$comment": "PLAIN-ENGLISH LEGAL NOTICE: This file is an abstract institutional-cybernetic and statutory-accounting validation checklist (JSON Schema), NOT an accusation, indictment, or evidentiary filing. Every field encodes a published statutory citation, a public committee report, a pinned press disclosure, or a closed-form algebraic invariant.",
+  "title": "GRAT Estate-Freeze Identity, Southern Trust Cutout Retainer Anomaly & Bermuda Reinsurance Sidecar Arbitrage Schema",
+  "description": "Validates the four executable verification vectors of SPEC-GRAT-ESTATE-FREEZE-AND-BERMUDA-REINSURANCE-CUTOUT-RETAINER-v1.0: (1) the white-shoe legal fee anomaly ratio M_Fee_Anomaly = $158.0M / $2.0M = 79.0x (Dechert LLP Report, Ex. 99.1 to Apollo Global Management, Inc. Form 8-K, Jan. 22, 2021, SEC EDGAR CIK 0001411494, Accession No. 000119312521016405; Senate Finance Committee ongoing investigation unveiled July 25, 2023) together with the documented payment decomposition $50.0M (2013, written agreements) + $70.0M (2014) + $30.0M (2015) + $8.0M residual = $158.0M, of which $100.0M (63.29%) was paid on an ad hoc basis without written service agreements, (2) the USVI 26 U.S.C. 934 tax-shielded cutout capture and post-rupture settlement identity Outflow_Total = $158.0M + $62.5M = $220.5M with 0.90 x $158.0M = $142.2M shielded and the January-2023-executed / July-21-2023-reported USVI-Black settlement normalized as a 43.95% enforcement-recovery ratio, (3) the 26 U.S.C. 2702 / 7520 zeroed-out GRAT estate-freeze identity Gift_Taxable = V - PV_Retained = 0 with its g = r and g < r boundary regimes, and (4) the private-equity captive Bermuda life-reinsurance sidecar tax differential with the NAIC Schedule S unauthorized/affiliated disclosure obligation triggered.",
+  "type": "object",
+  "required": [
+    "spec_version",
+    "jurisdiction_context",
+    "cfaa_compliance_attestation",
+    "Vector1WhiteShoeFeeAnomaly",
+    "Vector2UsviShieldAndOutflowIdentity",
+    "Vector3GratEstateFreezeIdentity",
+    "Vector4BermudaSidecarScheduleSArbitrage"
+  ],
+  "properties": {
+    "spec_version": {"type": "string", "const": "SPEC-GRAT-ESTATE-FREEZE-AND-BERMUDA-REINSURANCE-CUTOUT-RETAINER-v1.0"},
+    "jurisdiction_context": {"type": "string", "pattern": "^[A-Z]{2}$"},
+    "cfaa_compliance_attestation": {"type": "boolean", "const": true},
+    "Vector1WhiteShoeFeeAnomaly": {
+      "type": "object",
+      "description": "M_Fee_Anomaly = Fee_Southern_Trust / Fee_White_Shoe_Market = $158.0M / $2.0M = 79.0x: the 2012-2017 retainer paid under the February 13, 2013 written service agreement between Leon Black and Southern Trust Company, Inc. ('an Epstein affiliate', per the Dechert LLP Report, Ex. 99.1, Jan. 22, 2021) equals 79.0x the analytical maximum market price of a standard 26 U.S.C. 2702 GRAT / estate structure drafted by a top Manhattan law firm, and 15.80% vigorish on the $1,000.0M claimed value floor that the same report records verbatim ('conferred more than $1 billion and as much as $2 billion or more in value to Black'). The $2.0M white-shoe ceiling is an analytical market parameter; the $40.0M annual rate that the report records Epstein as representing to Black is documentary and is itself 20.0x that ceiling. The report further documents $50.0M paid in 2013 under written agreements and $70.0M (2014) plus $30.0M (2015) paid 'on an ad hoc basis, without negotiating written service agreements', leaving an $8.0M residual for 2012 and 2016-2017.",
+      "required": ["fee_southern_trust_usd_millions", "fee_white_shoe_cap_usd_millions", "claimed_savings_floor_usd_millions", "m_fee_anomaly_multiple", "vigorish_on_savings_floor_pct", "implied_savings_multiple", "epstein_represented_annual_rate_usd_millions", "represented_rate_over_white_shoe_cap_multiple", "documented_2013_written_agreement_usd_millions", "ad_hoc_no_written_agreement_2014_2015_usd_millions", "residual_other_years_usd_millions", "ad_hoc_share_of_retainer_pct", "retainer_window", "fee_anomaly_verified"],
+      "properties": {
+        "fee_southern_trust_usd_millions": {"type": "number", "const": 158.0},
+        "fee_white_shoe_cap_usd_millions": {"type": "number", "const": 2.0},
+        "claimed_savings_floor_usd_millions": {"type": "number", "const": 1000.0},
+        "m_fee_anomaly_multiple": {"type": "number", "const": 79.0},
+        "vigorish_on_savings_floor_pct": {"type": "number", "const": 15.8},
+        "implied_savings_multiple": {"type": "number", "const": 6.3291},
+        "epstein_represented_annual_rate_usd_millions": {"type": "number", "const": 40.0},
+        "represented_rate_over_white_shoe_cap_multiple": {"type": "number", "const": 20.0},
+        "documented_2013_written_agreement_usd_millions": {"type": "number", "const": 50.0},
+        "ad_hoc_no_written_agreement_2014_2015_usd_millions": {"type": "number", "const": 100.0},
+        "residual_other_years_usd_millions": {"type": "number", "const": 8.0},
+        "ad_hoc_share_of_retainer_pct": {"type": "number", "const": 63.29},
+        "retainer_window": {"type": "string", "const": "2012-2017"},
+        "fee_anomaly_verified": {"type": "boolean", "const": true}
+      },
+      "additionalProperties": false
+    },
+    "Vector2UsviShieldAndOutflowIdentity": {
+      "type": "object",
+      "description": "Outflow_Total = Fee_Southern_Trust + Settlement_USVI_2023 = $158.0M + $62.5M = $220.5M. Under the USVI Economic Development Commission program coordinated by the 26 U.S.C. 934 mirror code, Southern Trust Company's EDC beneficiary status (documented in the contemporaneous USVI press record, Bloomberg July 27, 2019 and The Source July 16, 2019, and a matter of USVI public record) exempted 0.90 x $158.0M = $142.2M from USVI income tax. The USVI-Black settlement agreement was executed in January 2023 ($62.5M in cash, releasing Black from potential claims arising from the Government of the US Virgin Islands' Epstein investigation) and publicly reported July 21, 2023 (Reuters / The New York Times); the executed agreement is posted by the Senate Committee on Finance. The 43.95% figure is an analytical enforcement-recovery ratio (settlement normalized against the shielded base) and is not a documentary characterization of the payment as a 26 U.S.C. 934 tax clawback.",
+      "required": ["fee_southern_trust_usd_millions", "settlement_usvi_2023_usd_millions", "settlement_executed_month", "settlement_publicly_reported", "usvi_edc_exemption_rate", "outflow_total_usd_millions", "tax_shielded_usd_millions", "enforcement_recovery_ratio_pct", "outflow_identity_verified"],
+      "properties": {
+        "fee_southern_trust_usd_millions": {"type": "number", "const": 158.0},
+        "settlement_usvi_2023_usd_millions": {"type": "number", "const": 62.5},
+        "settlement_executed_month": {"type": "string", "const": "2023-01"},
+        "settlement_publicly_reported": {"type": "string", "const": "2023-07-21"},
+        "usvi_edc_exemption_rate": {"type": "number", "const": 0.9},
+        "outflow_total_usd_millions": {"type": "number", "const": 220.5},
+        "tax_shielded_usd_millions": {"type": "number", "const": 142.2},
+        "enforcement_recovery_ratio_pct": {"type": "number", "const": 43.95},
+        "outflow_identity_verified": {"type": "boolean", "const": true}
+      },
+      "additionalProperties": false
+    },
+    "Vector3GratEstateFreezeIdentity": {
+      "type": "object",
+      "description": "26 U.S.C. 2702 / 7520 zeroed-out GRAT estate-freeze identity: at the closed-form annuity A = V * r / (1 - (1 + r)^-n), PV_Retained = V and Gift_Taxable = V - PV_Retained = 0, so all post-transfer appreciation above the 7520 hurdle (120% of the mid-term applicable federal rate) accrues to remainder beneficiaries outside the transferor's gross estate. Illustrative corpus $1,000.0M, hurdle 3.0%, 4-year term, 10% asset CAGR excludes $338.59M of appreciation. Boundary regimes are locked: at g = r_7520 the excluded appreciation is exactly 0.0 (the freeze transfers nothing) and at g = 2.0% < r_7520 it is -43.08 (the annuity over-distributes and the freeze destroys value). The Dechert LLP Report (Ex. 99.1, Jan. 22, 2021) documents the 2006 GRAT as the underlying instrument, recording that 'the estate tax would have been around $500 million' absent corrective structuring.",
+      "required": ["grat_corpus_usd_millions", "r_7520_hurdle", "term_years", "zero_out_annuity_usd_millions", "pv_retained_interest_usd_millions", "taxable_gift_usd_millions", "asset_cagr_illustrative", "excess_spread_over_hurdle", "appreciation_excluded_from_estate_usd_millions", "boundary_g_equals_r_excluded_usd_millions", "boundary_g_below_r_excluded_usd_millions", "estate_freeze_identity_verified"],
+      "properties": {
+        "grat_corpus_usd_millions": {"type": "number", "const": 1000.0},
+        "r_7520_hurdle": {"type": "number", "const": 0.03},
+        "term_years": {"type": "integer", "const": 4},
+        "zero_out_annuity_usd_millions": {"type": "number", "const": 269.027},
+        "pv_retained_interest_usd_millions": {"type": "number", "const": 1000.0},
+        "taxable_gift_usd_millions": {"type": "number", "const": 0.0},
+        "asset_cagr_illustrative": {"type": "number", "const": 0.1},
+        "excess_spread_over_hurdle": {"type": "number", "const": 0.07},
+        "appreciation_excluded_from_estate_usd_millions": {"type": "number", "const": 338.59},
+        "boundary_g_equals_r_excluded_usd_millions": {"type": "number", "const": 0.0},
+        "boundary_g_below_r_excluded_usd_millions": {"type": "number", "const": -43.08},
+        "estate_freeze_identity_verified": {"type": "boolean", "const": true}
+      },
+      "additionalProperties": false
+    },
+    "Vector4BermudaSidecarScheduleSArbitrage": {
+      "type": "object",
+      "description": "Private-equity captive Bermuda life-reinsurance sidecar arbitrage: Delta_Tax_Shield = Premium_Ceded x (tau_US - tau_BDA) = $142.2M x (0.21 - 0.00) = $29.862M under the pre-2025 zero-rate Bermuda regime (Corporate Income Tax Act 2023 imposes 15% from 2025, leaving a 0.06 differential and a compressed but strictly positive $8.532M shield). A PE-owned Bermuda captive reinsurer is an unauthorized affiliated counterparty, so the NAIC Annual Statement Schedule S (Unauthorized and/or Affiliated Insurers Reinsurance) disclosure obligation is triggered (= 1). Affiliation for the Apollo archetype is documentary: the New York State Department of Financial Services examination report (June 3, 2019) records that Athene Life Re 'created Athene Annuity Re Ltd. (AARe) as a Bermuda reinsurer to serve as a reinsurance counterparty for most internal affiliated' transactions.",
+      "required": ["tau_us_federal_corporate", "tau_bermuda_pre_2025", "tau_bermuda_post_2025_cit_act_2023", "premium_ceded_usd_millions", "delta_tau_pre_2025", "sidecar_tax_shield_usd_millions", "affiliated_reinsurer_indicator", "naic_authorized_indicator", "schedule_s_disclosure_required", "delta_tau_post_2025", "sidecar_tax_shield_post_2025_usd_millions", "arbitrage_persists_post_2025", "sidecar_arbitrage_verified"],
+      "properties": {
+        "tau_us_federal_corporate": {"type": "number", "const": 0.21},
+        "tau_bermuda_pre_2025": {"type": "number", "const": 0.0},
+        "tau_bermuda_post_2025_cit_act_2023": {"type": "number", "const": 0.15},
+        "premium_ceded_usd_millions": {"type": "number", "const": 142.2},
+        "delta_tau_pre_2025": {"type": "number", "const": 0.21},
+        "sidecar_tax_shield_usd_millions": {"type": "number", "const": 29.862},
+        "affiliated_reinsurer_indicator": {"type": "integer", "const": 1},
+        "naic_authorized_indicator": {"type": "integer", "const": 0},
+        "schedule_s_disclosure_required": {"type": "integer", "const": 1},
+        "delta_tau_post_2025": {"type": "number", "const": 0.06},
+        "sidecar_tax_shield_post_2025_usd_millions": {"type": "number", "const": 8.532},
+        "arbitrage_persists_post_2025": {"type": "boolean", "const": true},
+        "sidecar_arbitrage_verified": {"type": "boolean", "const": true}
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

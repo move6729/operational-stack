@@ -1,0 +1,236 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:bipolar_compute_equilibrium_and_open_weight_island_breaker.json",
+  "$comment": "PLAIN-ENGLISH LEGAL NOTICE: This file is an abstract securities-forensic, accounting-identity, and cybernetic validation checklist (JSON Schema), NOT an accusation, indictment, or evidentiary filing. Every field encodes a public Form S-1/10-K disclosure, a published report, or a closed-form algebraic invariant.",
+  "title": "Bipolar Compute Equilibrium & Open-Weight Island Breaker Schema: Hangzhou Open-Weight Dumping Payoff, HarmonyOS Quarantine Breaker, Cournot Complement Margin Deflation, Ashby Bicameral Variety & Middleman Wrapper Liquidation Waterfall",
+  "description": "Validates EQ-1 Hangzhou open-weight dumping payoff (+$40.00B/yr = $32.50B/yr upstream Western blueprint efficiency surplus + $7.50B/yr stigmergic post-training R&D subsidy at 1,345.050215x leverage over $5.576M pre-training CapEx), EQ-2 HarmonyOS island quarantine breaker (256.0x Metcalfe runtime compatibility ratio; $0.0M vs. $500.0M switching cost), EQ-3 Cournot complement margin deflation (58.306423x standard / 100.0x off-peak price asymmetry; 98.2849%-99.0000% wrapper rent collapse across $500.0B US wrapper CapEx), EQ-4 Ashby requisite variety monoculture collapse vs. East-West bicameral triangulation (19.62709 vs. 1.176263 effective nodes = 16.685966x expansion), EQ-5 bipolar limit-state survival condition (Alphabet Pole A vs. Hangzhou Pole B vs. Anthropic $732.0B-$757.0B encumbrance and $998.076B fulcrum liquidation), entity_and_instrument_ids, and catalyst_calendar.",
+  "type": "object",
+  "required": [
+    "specification_id",
+    "jurisdiction_context",
+    "cfaa_compliance_attestation",
+    "author_position_disclosure",
+    "entity_and_instrument_ids",
+    "locked_constants_and_outputs",
+    "eq1_hangzhou_open_weight_dumping_payoff",
+    "eq2_harmonyos_island_quarantine_breaker",
+    "eq3_cournot_complement_margin_deflation",
+    "eq4_ashby_bicameral_variety_triangulation",
+    "eq5_bipolar_survival_and_wrapper_waterfall",
+    "catalyst_calendar"
+  ],
+  "properties": {
+    "specification_id": { "type": "string", "const": "SPEC-BIPOLAR-COMPUTE-EQUILIBRIUM-AND-OPEN-WEIGHT-ISLAND-BREAKER-v1.0" },
+    "jurisdiction_context": { "type": "string", "pattern": "^[A-Z]{2}$" },
+    "cfaa_compliance_attestation": { "type": "boolean", "const": true },
+    "author_position_disclosure": {
+      "type": "object",
+      "required": ["long_positions", "adverse_target_position", "non_solicitation_attestation"],
+      "properties": {
+        "long_positions": { "type": "array", "prefixItems": [{ "type": "string", "const": "NASDAQ: GOOGL / GOOG" }, { "type": "string", "const": "NYSE: BRK.A / BRK.B" }], "minItems": 2, "maxItems": 2 },
+        "adverse_target_position": { "type": "string", "const": "ZERO (No long, short, or derivative position in Anthropic, PBC)" },
+        "non_solicitation_attestation": { "type": "boolean", "const": true }
+      },
+      "additionalProperties": false
+    },
+    "entity_and_instrument_ids": {
+      "type": "object",
+      "required": ["adverse_target", "benchmark_counterparty"],
+      "properties": {
+        "adverse_target": {
+          "type": "object",
+          "required": ["name", "cik", "ticker", "balance_sheet_as_of", "encumbered_facilities", "encumbered_facilities_summary_m", "itemized_counterparty_exposure_total_m", "spacex_ai_duration_months", "broadcom_share_of_leases"],
+          "properties": {
+            "name": { "type": "string", "const": "Anthropic, PBC (Unintegrated Middleman API Wrapper Archetype)" },
+            "cik": { "type": "string", "const": "0002130357" },
+            "ticker": { "type": "string", "const": "PRIVATE / PRE-IPO S-1 (Filed 2026-10-26)" },
+            "balance_sheet_as_of": { "type": "string", "const": "2026-06-30" },
+            "encumbered_facilities": { "type": "array", "minItems": 6, "maxItems": 6, "items": { "type": "string", "minLength": 16 } },
+            "encumbered_facilities_summary_m": {
+              "type": "object",
+              "required": ["undiscounted_lease_obligations_m", "broadcom_master_equipment_leases_m", "cloud_purchase_commitments_m", "amazon_take_or_pay_m", "google_take_or_pay_m", "microsoft_take_or_pay_m", "spacex_ai_commitment_ceiling_m", "spacex_ai_monthly_rate_m", "nscale_commitment_m", "lambda_commitment_m", "off_table_tpu_commitments_low_m", "off_table_tpu_commitments_high_m", "amd_helios_initial_tranche_m", "convertible_notes_payable_m", "redeemable_preferred_stock_m", "stockholders_deficit_m"],
+              "properties": {
+                "undiscounted_lease_obligations_m": { "type": "number", "const": 321400.0 },
+                "broadcom_master_equipment_leases_m": { "type": "number", "const": 161200.0 },
+                "cloud_purchase_commitments_m": { "type": "number", "const": 265600.0 },
+                "amazon_take_or_pay_m": { "type": "number", "const": 110000.0 },
+                "google_take_or_pay_m": { "type": "number", "const": 114500.0 },
+                "microsoft_take_or_pay_m": { "type": "number", "const": 44900.0 },
+                "spacex_ai_commitment_ceiling_m": { "type": "number", "const": 120500.0 },
+                "spacex_ai_monthly_rate_m": { "type": "number", "const": 3100.0 },
+                "nscale_commitment_m": { "type": "number", "const": 44600.0 },
+                "lambda_commitment_m": { "type": "number", "const": 41300.0 },
+                "off_table_tpu_commitments_low_m": { "type": "number", "const": 125000.0 },
+                "off_table_tpu_commitments_high_m": { "type": "number", "const": 150000.0 },
+                "amd_helios_initial_tranche_m": { "type": "number", "const": 20000.0 },
+                "convertible_notes_payable_m": { "type": "number", "const": 108566.0 },
+                "redeemable_preferred_stock_m": { "type": "number", "const": 157510.0 },
+                "stockholders_deficit_m": { "type": "number", "const": -127619.0 }
+              },
+              "additionalProperties": false
+            },
+            "itemized_counterparty_exposure_total_m": { "type": "number", "const": 475800.0 },
+            "spacex_ai_duration_months": { "type": "number", "const": 38.870968 },
+            "broadcom_share_of_leases": { "type": "number", "const": 0.501556 }
+          },
+          "additionalProperties": false
+        },
+        "benchmark_counterparty": {
+          "type": "object",
+          "required": ["name", "cik", "ticker", "credit_profile", "fy25_cash_and_marketable_securities_m", "senior_unsecured_notes_principal_m", "net_cash_m", "us_patent_transformer"],
+          "properties": {
+            "name": { "type": "string", "const": "Alphabet Inc. (Pole A — Mountain View Vertically Integrated Monolith)" },
+            "cik": { "type": "string", "const": "0001652044" },
+            "ticker": { "type": "string", "const": "NASDAQ: GOOGL / GOOG" },
+            "credit_profile": { "type": "string", "minLength": 32 },
+            "fy25_cash_and_marketable_securities_m": { "type": "number", "const": 126843.0 },
+            "senior_unsecured_notes_principal_m": { "type": "number", "const": 12000.0 },
+            "net_cash_m": { "type": "number", "const": 114843.0 },
+            "us_patent_transformer": { "type": "string", "const": "US 10,452,978 B2" }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "locked_constants_and_outputs": {
+      "type": "object",
+      "required": ["west_closed_api_price_usd_per_mtok", "east_open_std_price_usd_per_mtok", "east_open_offpeak_price_usd_per_mtok", "lambda_price_asymmetry_std_mult", "lambda_price_asymmetry_offpeak_mult", "wrapper_cartel_rent_share_std", "wrapper_cartel_rent_share_offpeak", "prc_addressable_western_saas_rev_usd", "us_wrapper_capex_bubble_at_risk_usd_b", "western_blueprint_design_value_usd_b", "blueprint_efficiency_uplift_eta", "prc_manufacturing_absorption_beta", "prc_upstream_blueprint_surplus_usd_b", "global_hf_open_weight_devs_N", "annual_post_training_hours_per_dev", "imputed_eng_hourly_rate_usd", "stigmergic_free_post_training_rd_subsidy_usd_b", "teacher_pretrain_capex_usd_m", "stigmergic_rd_leverage_mult", "harmonyos_quarantine_adoption_share", "open_weight_global_runtime_adoption_share", "metcalfe_network_ratio_island_breaker_mult", "switching_cost_barrier_quarantine_usd_m", "switching_cost_barrier_open_standard_usd_m", "ashby_monoculture_correlation_rho", "ashby_bicameral_correlation_rho", "ashby_population_nodes_N", "ashby_effective_independent_nodes_monoculture", "ashby_effective_independent_nodes_bicameral", "ashby_variety_expansion_mult", "google_navboost_forage_advantage_mult", "google_coasean_crawl_advantage_mult", "google_ocs_power_reduction_mult", "google_ocs_capex_reduction_mult", "google_net_cash_usd_b", "anthropic_compute_encumbrance_low_usd_b", "anthropic_compute_encumbrance_high_usd_b", "anthropic_senior_claim_floor_usd_b", "anthropic_fulcrum_total_senior_and_pref_low_usd_b"],
+      "properties": {
+        "west_closed_api_price_usd_per_mtok": { "type": "number", "const": 48.75 },
+        "east_open_std_price_usd_per_mtok": { "type": "number", "const": 0.8361 },
+        "east_open_offpeak_price_usd_per_mtok": { "type": "number", "const": 0.4875 },
+        "lambda_price_asymmetry_std_mult": { "type": "number", "const": 58.306423 },
+        "lambda_price_asymmetry_offpeak_mult": { "type": "number", "const": 100.0 },
+        "wrapper_cartel_rent_share_std": { "type": "number", "const": 0.982849 },
+        "wrapper_cartel_rent_share_offpeak": { "type": "number", "const": 0.99 },
+        "prc_addressable_western_saas_rev_usd": { "type": "number", "const": 0.0 },
+        "us_wrapper_capex_bubble_at_risk_usd_b": { "type": "number", "const": 500.0 },
+        "western_blueprint_design_value_usd_b": { "type": "number", "const": 250.0 },
+        "blueprint_efficiency_uplift_eta": { "type": "number", "const": 0.2 },
+        "prc_manufacturing_absorption_beta": { "type": "number", "const": 0.65 },
+        "prc_upstream_blueprint_surplus_usd_b": { "type": "number", "const": 32.5 },
+        "global_hf_open_weight_devs_N": { "type": "integer", "const": 2000000 },
+        "annual_post_training_hours_per_dev": { "type": "integer", "const": 25 },
+        "imputed_eng_hourly_rate_usd": { "type": "number", "const": 150.0 },
+        "stigmergic_free_post_training_rd_subsidy_usd_b": { "type": "number", "const": 7.5 },
+        "teacher_pretrain_capex_usd_m": { "type": "number", "const": 5.576 },
+        "stigmergic_rd_leverage_mult": { "type": "number", "const": 1345.050215 },
+        "harmonyos_quarantine_adoption_share": { "type": "number", "const": 0.05 },
+        "open_weight_global_runtime_adoption_share": { "type": "number", "const": 0.8 },
+        "metcalfe_network_ratio_island_breaker_mult": { "type": "number", "const": 256.0 },
+        "switching_cost_barrier_quarantine_usd_m": { "type": "number", "const": 500.0 },
+        "switching_cost_barrier_open_standard_usd_m": { "type": "number", "const": 0.0 },
+        "ashby_monoculture_correlation_rho": { "type": "number", "const": 0.85 },
+        "ashby_bicameral_correlation_rho": { "type": "number", "const": 0.05 },
+        "ashby_population_nodes_N": { "type": "integer", "const": 1000 },
+        "ashby_effective_independent_nodes_monoculture": { "type": "number", "const": 1.176263 },
+        "ashby_effective_independent_nodes_bicameral": { "type": "number", "const": 19.62709 },
+        "ashby_variety_expansion_mult": { "type": "number", "const": 16.685966 },
+        "google_navboost_forage_advantage_mult": { "type": "number", "const": 15.692308 },
+        "google_coasean_crawl_advantage_mult": { "type": "number", "const": 2.48 },
+        "google_ocs_power_reduction_mult": { "type": "number", "const": 50.0 },
+        "google_ocs_capex_reduction_mult": { "type": "number", "const": 6.0 },
+        "google_net_cash_usd_b": { "type": "number", "const": 114.843 },
+        "anthropic_compute_encumbrance_low_usd_b": { "type": "number", "const": 732.0 },
+        "anthropic_compute_encumbrance_high_usd_b": { "type": "number", "const": 757.0 },
+        "anthropic_senior_claim_floor_usd_b": { "type": "number", "const": 587.0 },
+        "anthropic_fulcrum_total_senior_and_pref_low_usd_b": { "type": "number", "const": 998.076 }
+      },
+      "additionalProperties": false
+    },
+    "eq1_hangzhou_open_weight_dumping_payoff": {
+      "type": "object",
+      "required": ["prc_addressable_western_saas_rev_usd", "prc_upstream_blueprint_surplus_usd_b", "stigmergic_free_post_training_rd_subsidy_usd_b", "total_hangzhou_open_weight_surplus_usd_b", "teacher_pretrain_capex_usd_m", "stigmergic_rd_leverage_mult", "open_weight_dominates_closed_flag"],
+      "properties": {
+        "prc_addressable_western_saas_rev_usd": { "type": "number", "const": 0.0 },
+        "prc_upstream_blueprint_surplus_usd_b": { "type": "number", "const": 32.5 },
+        "stigmergic_free_post_training_rd_subsidy_usd_b": { "type": "number", "const": 7.5 },
+        "total_hangzhou_open_weight_surplus_usd_b": { "type": "number", "const": 40.0 },
+        "teacher_pretrain_capex_usd_m": { "type": "number", "const": 5.576 },
+        "stigmergic_rd_leverage_mult": { "type": "number", "const": 1345.050215 },
+        "open_weight_dominates_closed_flag": { "type": "boolean", "const": true }
+      },
+      "additionalProperties": false
+    },
+    "eq2_harmonyos_island_quarantine_breaker": {
+      "type": "object",
+      "required": ["harmonyos_quarantine_adoption_share", "open_weight_global_runtime_adoption_share", "metcalfe_network_ratio_island_breaker_mult", "switching_cost_barrier_quarantine_usd_m", "switching_cost_barrier_open_standard_usd_m", "island_quarantine_broken_flag"],
+      "properties": {
+        "harmonyos_quarantine_adoption_share": { "type": "number", "const": 0.05 },
+        "open_weight_global_runtime_adoption_share": { "type": "number", "const": 0.8 },
+        "metcalfe_network_ratio_island_breaker_mult": { "type": "number", "const": 256.0 },
+        "switching_cost_barrier_quarantine_usd_m": { "type": "number", "const": 500.0 },
+        "switching_cost_barrier_open_standard_usd_m": { "type": "number", "const": 0.0 },
+        "island_quarantine_broken_flag": { "type": "boolean", "const": true }
+      },
+      "additionalProperties": false
+    },
+    "eq3_cournot_complement_margin_deflation": {
+      "type": "object",
+      "required": ["west_closed_api_price_usd_per_mtok", "east_open_std_price_usd_per_mtok", "east_open_offpeak_price_usd_per_mtok", "lambda_price_asymmetry_std_mult", "lambda_price_asymmetry_offpeak_mult", "wrapper_cartel_rent_share_std", "wrapper_cartel_rent_share_offpeak", "us_wrapper_capex_bubble_at_risk_usd_b", "wrapper_capex_roi_negative_flag"],
+      "properties": {
+        "west_closed_api_price_usd_per_mtok": { "type": "number", "const": 48.75 },
+        "east_open_std_price_usd_per_mtok": { "type": "number", "const": 0.8361 },
+        "east_open_offpeak_price_usd_per_mtok": { "type": "number", "const": 0.4875 },
+        "lambda_price_asymmetry_std_mult": { "type": "number", "const": 58.306423 },
+        "lambda_price_asymmetry_offpeak_mult": { "type": "number", "const": 100.0 },
+        "wrapper_cartel_rent_share_std": { "type": "number", "const": 0.982849 },
+        "wrapper_cartel_rent_share_offpeak": { "type": "number", "const": 0.99 },
+        "us_wrapper_capex_bubble_at_risk_usd_b": { "type": "number", "const": 500.0 },
+        "wrapper_capex_roi_negative_flag": { "type": "boolean", "const": true }
+      },
+      "additionalProperties": false
+    },
+    "eq4_ashby_bicameral_variety_triangulation": {
+      "type": "object",
+      "required": ["ashby_population_nodes_N", "ashby_monoculture_correlation_rho", "ashby_bicameral_correlation_rho", "ashby_effective_independent_nodes_monoculture", "ashby_effective_independent_nodes_bicameral", "ashby_variety_expansion_mult"],
+      "properties": {
+        "ashby_population_nodes_N": { "type": "integer", "const": 1000 },
+        "ashby_monoculture_correlation_rho": { "type": "number", "const": 0.85 },
+        "ashby_bicameral_correlation_rho": { "type": "number", "const": 0.05 },
+        "ashby_effective_independent_nodes_monoculture": { "type": "number", "const": 1.176263 },
+        "ashby_effective_independent_nodes_bicameral": { "type": "number", "const": 19.62709 },
+        "ashby_variety_expansion_mult": { "type": "number", "const": 16.685966 }
+      },
+      "additionalProperties": false
+    },
+    "eq5_bipolar_survival_and_wrapper_waterfall": {
+      "type": "object",
+      "required": ["pole_a_mountain_view_survives", "pole_b_hangzhou_survives", "middleman_wrapper_survives", "waterfall_tranche_claims_usd_b", "fulcrum_total_senior_and_pref_low_usd_b", "senior_shortfall_at_zero_ev_usd_b", "common_equity_stub_at_ev_1200_usd_b", "google_senior_landlord_claim_range_usd_b"],
+      "properties": {
+        "pole_a_mountain_view_survives": { "type": "boolean", "const": true },
+        "pole_b_hangzhou_survives": { "type": "boolean", "const": true },
+        "middleman_wrapper_survives": { "type": "boolean", "const": false },
+        "waterfall_tranche_claims_usd_b": { "type": "array", "prefixItems": [{ "const": 587.0 }, { "const": 145.0 }, { "const": 108.566 }, { "const": 157.51 }], "minItems": 4, "maxItems": 4 },
+        "fulcrum_total_senior_and_pref_low_usd_b": { "type": "number", "const": 998.076 },
+        "senior_shortfall_at_zero_ev_usd_b": { "type": "number", "const": 998.076 },
+        "common_equity_stub_at_ev_1200_usd_b": { "type": "number", "const": 201.924 },
+        "google_senior_landlord_claim_range_usd_b": { "type": "array", "prefixItems": [{ "const": 239.5 }, { "const": 264.5 }], "minItems": 2, "maxItems": 2 }
+      },
+      "additionalProperties": false
+    },
+    "catalyst_calendar": {
+      "type": "array",
+      "minItems": 14,
+      "maxItems": 14,
+      "prefixItems": [
+        { "type": "object", "required": ["date", "class", "catalyst"], "properties": { "date": { "type": "string", "const": "2026-04-01" }, "class": { "type": "string", "const": "take_or_pay_window_open" }, "catalyst": { "type": "string", "minLength": 8 } }, "additionalProperties": false },
+        { "type": "object", "required": ["date", "class", "catalyst"], "properties": { "date": { "type": "string", "const": "2026-05-01" }, "class": { "type": "string", "const": "take_or_pay_window_open" }, "catalyst": { "type": "string", "minLength": 8 } }, "additionalProperties": false },
+        { "type": "object", "required": ["date", "class", "catalyst"], "properties": { "date": { "type": "string", "const": "2026-10-26" }, "class": { "type": "string", "const": "disclosure_event" }, "catalyst": { "type": "string", "minLength": 8 } }, "additionalProperties": false },
+        { "type": "object", "required": ["date", "class", "catalyst"], "properties": { "date": { "type": "string", "const": "2026-11-01" }, "class": { "type": "string", "const": "take_or_pay_window_open" }, "catalyst": { "type": "string", "minLength": 8 } }, "additionalProperties": false },
+        { "type": "object", "required": ["date", "class", "catalyst"], "properties": { "date": { "type": "string", "const": "2027-01-01" }, "class": { "type": "string", "const": "hardware_delivery_window" }, "catalyst": { "type": "string", "minLength": 8 } }, "additionalProperties": false },
+        { "type": "object", "required": ["date", "class", "catalyst"], "properties": { "date": { "type": "string", "const": "2027-04-26" }, "class": { "type": "string", "const": "moat_decay_checkpoint" }, "catalyst": { "type": "string", "minLength": 8 } }, "additionalProperties": false },
+        { "type": "object", "required": ["date", "class", "catalyst"], "properties": { "date": { "type": "string", "const": "2027-10-26" }, "class": { "type": "string", "const": "moat_decay_checkpoint" }, "catalyst": { "type": "string", "minLength": 8 } }, "additionalProperties": false },
+        { "type": "object", "required": ["date", "class", "catalyst"], "properties": { "date": { "type": "string", "const": "2028-01-01" }, "class": { "type": "string", "const": "hardware_delivery_window" }, "catalyst": { "type": "string", "minLength": 8 } }, "additionalProperties": false },
+        { "type": "object", "required": ["date", "class", "catalyst"], "properties": { "date": { "type": "string", "const": "2029-04-26" }, "class": { "type": "string", "const": "moat_decay_checkpoint" }, "catalyst": { "type": "string", "minLength": 8 } }, "additionalProperties": false },
+        { "type": "object", "required": ["date", "class", "catalyst"], "properties": { "date": { "type": "string", "const": "2029-12-31" }, "class": { "type": "string", "const": "commitment_horizon_end" }, "catalyst": { "type": "string", "minLength": 8 } }, "additionalProperties": false },
+        { "type": "object", "required": ["date", "class", "catalyst"], "properties": { "date": { "type": "string", "const": "2031-12-31" }, "class": { "type": "string", "const": "hardware_delivery_window" }, "catalyst": { "type": "string", "minLength": 8 } }, "additionalProperties": false },
+        { "type": "object", "required": ["date", "class", "catalyst"], "properties": { "date": { "type": "string", "const": "2033-05-31" }, "class": { "type": "string", "const": "take_or_pay_maturity_cliff" }, "catalyst": { "type": "string", "minLength": 8 } }, "additionalProperties": false },
+        { "type": "object", "required": ["date", "class", "catalyst"], "properties": { "date": { "type": "string", "const": "2033-07-31" }, "class": { "type": "string", "const": "take_or_pay_maturity_cliff" }, "catalyst": { "type": "string", "minLength": 8 } }, "additionalProperties": false },
+        { "type": "object", "required": ["date", "class", "catalyst"], "properties": { "date": { "type": "string", "const": "2036-04-30" }, "class": { "type": "string", "const": "take_or_pay_maturity_cliff" }, "catalyst": { "type": "string", "minLength": 8 } }, "additionalProperties": false }
+      ]
+    }
+  },
+  "additionalProperties": false
+}

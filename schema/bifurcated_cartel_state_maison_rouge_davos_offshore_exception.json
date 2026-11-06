@@ -1,0 +1,241 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:bifurcated_cartel_state_maison_rouge_davos_offshore_exception.json",
+  "title": "BifurcatedCartelStateMaisonRougeDavosOffshoreException",
+  "description": "Formal JSON Schema for SPEC-BIFURCATED-CARTEL-STATE-MAISON-ROUGE-TO-DAVOS-AND-OFFSHORE-EXCEPTION-v1.0 modeling the 1937 AktG Sec. 70 governance-kernel inversion, the CHF->USD capital-flight / Wash Accord retention algebra, two-key (Swiss x Bonn) secrecy opacity with PStG lock horizons and NARA RG 242 anchors, dynastic-spoils continuous compounding, the South Africa uranium bridge, and Alpha/Beta pincer convergence with the offshore-exception liability asymmetry.",
+  "type": "object",
+  "required": [
+    "canonical_specification",
+    "module_1_governance_kernel_inversion",
+    "module_2_capital_flight_wash_accord_two_key_opacity",
+    "module_3_dynastic_spoils_uranium_bridge",
+    "module_4_alpha_beta_pincer_offshore_exception",
+    "module_5_anti_entrant_categorical_standestaat_moat"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "canonical_specification": {
+      "type": "string",
+      "const": "SPEC-BIFURCATED-CARTEL-STATE-MAISON-ROUGE-TO-DAVOS-AND-OFFSHORE-EXCEPTION-v1.0"
+    },
+    "module_1_governance_kernel_inversion": {
+      "type": "object",
+      "description": "1937 AktG Sec. 70 Unternehmensinteresse kernel inversion and 4-module kernel alignment.",
+      "required": ["kernel_alignment_vector", "kernel_module_count", "w_shareholder_classic", "w_cartel_classic", "w_shareholder_aktg70", "w_cartel_aktg70", "delta_governance_1937"],
+      "additionalProperties": false,
+      "properties": {
+        "kernel_alignment_vector": {"type": "array", "items": {"type": "integer"}, "const": [1, 1, 1, 1]},
+        "kernel_module_count": {"type": "integer", "const": 4},
+        "w_shareholder_classic": {"type": "number", "const": 1.0000},
+        "w_cartel_classic": {"type": "number", "const": 0.0000},
+        "w_shareholder_aktg70": {"type": "number", "const": 0.0000},
+        "w_cartel_aktg70": {"type": "number", "const": 1.0000},
+        "delta_governance_1937": {
+          "type": "number",
+          "const": 1.0000,
+          "description": "Total governance-kernel inversion across the 1937 boundary: |w_cartel_aktg70 - w_cartel_classic| = 1.0."
+        }
+      }
+    },
+    "module_2_capital_flight_wash_accord_two_key_opacity": {
+      "type": "object",
+      "description": "CHF->USD capital-flight / Wash Accord retention algebra (1946 parity 4.30) and two-key secrecy opacity with PStG / NARA RG 242 anchors.",
+      "required": ["k_flight_chf", "fx_chf_usd_1946", "k_flight_usd", "c_washaccord_chf", "c_washaccord_usd", "k_retained_chf", "k_retained_usd", "eta_retention", "eta_retention_pct", "p_key1_swiss", "p_key2_bonn", "p_pierce_2key", "omega_2key", "rho_rosenburg", "n_nara_rg242", "delta_t_bdc", "t_lock_birth", "t_lock_marriage", "t_lock_death", "g_shield", "precision_5tuple", "omega_post_nara"],
+      "additionalProperties": false,
+      "properties": {
+        "k_flight_chf": {"type": "number", "const": 2150000000.00},
+        "fx_chf_usd_1946": {"type": "number", "const": 4.30},
+        "k_flight_usd": {
+          "type": "number",
+          "const": 500000000.00,
+          "description": "K_Flight_CHF / FX_CHF_USD_1946 = 2,150,000,000 / 4.30."
+        },
+        "c_washaccord_chf": {"type": "number", "const": 250000000.00},
+        "c_washaccord_usd": {
+          "type": "number",
+          "const": 58139534.88,
+          "description": "Wash Accord cost in USD: C_WashAccord_CHF / FX = 250,000,000 / 4.30."
+        },
+        "k_retained_chf": {
+          "type": "number",
+          "const": 1900000000.00,
+          "description": "Retained capital: K_Flight_CHF - C_WashAccord_CHF."
+        },
+        "k_retained_usd": {
+          "type": "number",
+          "const": 441860465.12,
+          "description": "K_Retained_CHF / FX = 1,900,000,000 / 4.30."
+        },
+        "eta_retention": {
+          "type": "number",
+          "const": 0.883721,
+          "description": "Wash Accord retention efficiency: K_Retained_CHF / K_Flight_CHF."
+        },
+        "eta_retention_pct": {"type": "string", "const": "88.37%"},
+        "p_key1_swiss": {"type": "number", "const": 0.0050},
+        "p_key2_bonn": {"type": "number", "const": 0.0020},
+        "p_pierce_2key": {
+          "type": "number",
+          "const": 0.000010,
+          "description": "Joint two-key pierce probability: p_key1_swiss * p_key2_bonn = 0.005 * 0.002."
+        },
+        "omega_2key": {
+          "type": "number",
+          "const": 0.999990,
+          "description": "Two-key secrecy opacity: 1 - p_pierce_2key."
+        },
+        "rho_rosenburg": {"type": "number", "const": 0.7700},
+        "n_nara_rg242": {"type": "integer", "const": 10700000},
+        "delta_t_bdc": {
+          "type": "integer",
+          "const": 49,
+          "description": "Berlin Document Center embargo span: 1994 custody transfer minus 1945 seizure."
+        },
+        "t_lock_birth": {"type": "integer", "const": 110},
+        "t_lock_marriage": {"type": "integer", "const": 80},
+        "t_lock_death": {"type": "integer", "const": 30},
+        "g_shield": {
+          "type": "number",
+          "const": 3.6667,
+          "description": "Shielded generations: T_lock_birth / 30-year generation span = 110 / 30."
+        },
+        "precision_5tuple": {
+          "type": "string",
+          "const": "99.999932%",
+          "description": "Deterministic 5-tuple registry identification precision (surname x DOB x municipality x maiden-name)."
+        },
+        "omega_post_nara": {
+          "type": "number",
+          "const": 0.000000,
+          "description": "Post-NARA opacity collapse: RG 242 declassification drives residual secrecy opacity to zero."
+        }
+      }
+    },
+    "module_3_dynastic_spoils_uranium_bridge": {
+      "type": "object",
+      "description": "Dynastic-spoils continuous compounding A = P*e^(rT), the secrecy-payoff identity, and South Africa uranium-bridge indicators.",
+      "required": ["k_0_dynasty", "r_dynasty", "t_dynasty", "w_spoils_75", "r_clean", "pi_secrecy", "s_ug_financing", "m_rossing_u3o8_mt", "b_uranium_feed", "b_compressor_supply", "i_sa_bridge", "e_u235", "n_warheads_sa"],
+      "additionalProperties": false,
+      "properties": {
+        "k_0_dynasty": {"type": "number", "const": 5000000.00},
+        "r_dynasty": {"type": "number", "const": 0.08},
+        "t_dynasty": {"type": "number", "const": 75.0},
+        "w_spoils_75": {
+          "type": "number",
+          "const": 2017143967.46,
+          "description": "Compounded dynastic spoils: K_0_Dynasty * e^(r_Dynasty * T_Dynasty) = 5,000,000 * e^6."
+        },
+        "r_clean": {"type": "number", "const": 250000000.00},
+        "pi_secrecy": {
+          "type": "number",
+          "const": 2267143967.46,
+          "description": "Free-option secrecy payoff: W_spoils_75 + R_clean."
+        },
+        "s_ug_financing": {"type": "number", "const": 0.7500},
+        "m_rossing_u3o8_mt": {"type": "number", "const": 4500.0},
+        "b_uranium_feed": {"type": "integer", "const": 1},
+        "b_compressor_supply": {"type": "integer", "const": 1},
+        "i_sa_bridge": {"type": "integer", "const": 1},
+        "e_u235": {"type": "number", "const": 0.9000},
+        "n_warheads_sa": {"type": "integer", "const": 6}
+      }
+    },
+    "module_4_alpha_beta_pincer_offshore_exception": {
+      "type": "object",
+      "description": "Alpha/Beta cartel-simulation payoffs, pincer convergence coefficient, and the offshore-exception liability asymmetry (Alpha antitrust treble vs. Beta natural-person Nuremberg attachment).",
+      "required": ["sim_alpha_1937", "sim_beta_schmitt", "n_members_alpha", "d_avg_alpha", "r_dues_alpha", "r_cartel_alpha", "tau_tax_alpha", "pi_alpha", "r_panopticon_beta", "r_enclave_beta", "b_bridge_beta", "pi_beta_gross", "c_alpha_topdown", "c_beta_bottomup", "c_pincer", "c_pincer_pct", "alpha_hoststate_us", "l_antitrust_alpha", "pi_alpha_net", "alpha_cutout", "lambda_sol", "l_natural_person", "n_principals_beta", "l_nuremberg_total", "pi_beta_net"],
+      "additionalProperties": false,
+      "properties": {
+        "sim_alpha_1937": {"type": "number", "const": 1.0000},
+        "sim_beta_schmitt": {"type": "number", "const": 1.0000},
+        "n_members_alpha": {"type": "integer", "const": 1000},
+        "d_avg_alpha": {"type": "number", "const": 600000.00},
+        "r_dues_alpha": {
+          "type": "number",
+          "const": 600000000.00,
+          "description": "Alpha dues revenue: N_Members_Alpha * D_Avg_Alpha = 1,000 * 600,000."
+        },
+        "r_cartel_alpha": {"type": "number", "const": 4400000000.00},
+        "tau_tax_alpha": {"type": "number", "const": 0.0000},
+        "pi_alpha": {
+          "type": "number",
+          "const": 5000000000.00,
+          "description": "Alpha gross payoff: R_Dues_Alpha + R_Cartel_Alpha under tau_Tax_Alpha = 0."
+        },
+        "r_panopticon_beta": {"type": "number", "const": 1200000000.00},
+        "r_enclave_beta": {"type": "number", "const": 350000000.00},
+        "b_bridge_beta": {"type": "number", "const": 170000000.00},
+        "pi_beta_gross": {
+          "type": "number",
+          "const": 1720000000.00,
+          "description": "Beta gross payoff: R_Panopticon_Beta + R_Enclave_Beta + B_Bridge_Beta."
+        },
+        "c_alpha_topdown": {"type": "number", "const": 0.8500},
+        "c_beta_bottomup": {"type": "number", "const": 0.8000},
+        "c_pincer": {
+          "type": "number",
+          "const": 0.9700,
+          "description": "Pincer convergence: 1 - (1 - c_Alpha_TopDown) * (1 - c_Beta_BottomUp) = 1 - 0.15 * 0.20."
+        },
+        "c_pincer_pct": {"type": "string", "const": "97.00%"},
+        "alpha_hoststate_us": {
+          "type": "number",
+          "const": 0.0000,
+          "description": "Offshore exception nullifies US host-state jurisdictional reach against Alpha."
+        },
+        "l_antitrust_alpha": {
+          "type": "number",
+          "const": 13200000000.00,
+          "description": "Sherman Act Sec. 1 treble damages: 3 * R_Cartel_Alpha = 3 * 4,400,000,000."
+        },
+        "pi_alpha_net": {
+          "type": "number",
+          "const": -8200000000.00,
+          "description": "Alpha counterfactual net under full reach: Pi_Alpha - L_Antitrust_Alpha = 5,000,000,000 - 13,200,000,000."
+        },
+        "alpha_cutout": {"type": "number", "const": 0.0},
+        "lambda_sol": {"type": "number", "const": 0.0},
+        "l_natural_person": {"type": "number", "const": 200000000.00},
+        "n_principals_beta": {"type": "integer", "const": 5},
+        "l_nuremberg_total": {
+          "type": "number",
+          "const": 1000000000.00,
+          "description": "Aggregate natural-person liability: N_Principals_Beta * L_Natural_Person = 5 * 200,000,000."
+        },
+        "pi_beta_net": {
+          "type": "number",
+          "const": -3017143967.46,
+          "description": "Beta net after the failed offshore exception: gross revenue confiscated, W_spoils_75 disgorged, and L_Nuremberg_Total attached = -(2,017,143,967.46 + 1,000,000,000)."
+        }
+      }
+    },
+    "module_5_anti_entrant_categorical_standestaat_moat": {
+      "type": "object",
+      "description": "1933 Zwangskartellgesetz (Errichtungsverbot) statutory ancestor and three-level anti-entrant categorical sorting / Standestaat guild-caste restoration.",
+      "required": ["k_min_corp_dissolve_1937_rm", "k_min_corp_new_1937_rm", "m_errichtungsverbot_1937_ratio", "q_numerus_clausus_1933", "p_book_value_predatory_ma", "q_standestaat_ceiling", "delta_merit_10yr", "s_heir_blind", "theta_striver_throttle", "bypass_dynasty_lerosey", "s_heir_categorical", "p_defect_merit", "d_patronage_committee", "p_defect_courtier", "c_audit_fixed_usd", "r_incumbent_cartel_usd", "r_startup_10x_usd", "tau_burden_incumbent", "tau_burden_startup", "a_moat_asymmetry_ratio"],
+      "additionalProperties": false,
+      "properties": {
+        "k_min_corp_dissolve_1937_rm": {"type": "number", "const": 100000.0},
+        "k_min_corp_new_1937_rm": {"type": "number", "const": 500000.0},
+        "m_errichtungsverbot_1937_ratio": {"type": "number", "const": 5.0000},
+        "q_numerus_clausus_1933": {"type": "number", "const": 0.0150},
+        "p_book_value_predatory_ma": {"type": "number", "const": 0.2000},
+        "q_standestaat_ceiling": {"type": "number", "const": 0.0500},
+        "delta_merit_10yr": {"type": "number", "const": 0.7000},
+        "s_heir_blind": {"type": "number", "const": 0.3000},
+        "theta_striver_throttle": {"type": "number", "const": 0.8500},
+        "bypass_dynasty_lerosey": {"type": "number", "const": 1.0000},
+        "s_heir_categorical": {"type": "number", "const": 1.0000},
+        "p_defect_merit": {"type": "number", "const": 0.4000},
+        "d_patronage_committee": {"type": "number", "const": 1.0000},
+        "p_defect_courtier": {"type": "number", "const": 0.0000},
+        "c_audit_fixed_usd": {"type": "number", "const": 2500000.00},
+        "r_incumbent_cartel_usd": {"type": "number", "const": 100000000000.00},
+        "r_startup_10x_usd": {"type": "number", "const": 5000000.00},
+        "tau_burden_incumbent": {"type": "number", "const": 0.000025},
+        "tau_burden_startup": {"type": "number", "const": 0.500000},
+        "a_moat_asymmetry_ratio": {"type": "number", "const": 20000.0}
+      }
+    }
+  }
+}

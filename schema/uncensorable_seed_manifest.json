@@ -1,0 +1,94 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:uncensorable_seed_manifest.json",
+  "title": "Uncensorable Seed & Shard Manifest",
+  "type": "object",
+  "required": [
+    "spec_version",
+    "jurisdiction_context",
+    "cfaa_compliance_attestation",
+    "model_identifier",
+    "merkle_root",
+    "on_chain_seed",
+    "transport_vectors",
+    "operator_onboarding"
+  ],
+  "properties": {
+    "spec_version": {
+      "type": "string",
+      "const": "SPEC-2026-UNCENSORABLE-WEIGHT-DISTRIBUTION-ROADMAP-v1.0"
+    },
+    "jurisdiction_context": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}$"
+    },
+    "cfaa_compliance_attestation": {
+      "type": "boolean",
+      "const": true
+    },
+    "model_identifier": {
+      "type": "string"
+    },
+    "merkle_root": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "on_chain_seed": {
+      "type": "object",
+      "required": [
+        "ledger",
+        "transaction_id",
+        "payload_size_bytes"
+      ],
+      "properties": {
+        "ledger": {
+          "type": "string",
+          "enum": [
+            "arweave",
+            "filecoin",
+            "bitcoin_ordinals",
+            "ethereum_calldata"
+          ]
+        },
+        "transaction_id": {
+          "type": "string"
+        },
+        "payload_size_bytes": {
+          "type": "integer",
+          "maximum": 10485760
+        }
+      }
+    },
+    "transport_vectors": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "bittorrent_dht",
+          "ipfs",
+          "usenet_nntp",
+          "steganography",
+          "sneakernet",
+          "sub_ghz"
+        ]
+      }
+    },
+    "operator_onboarding": {
+      "type": "object",
+      "required": [
+        "setup_time_seconds",
+        "monthly_savings_usd"
+      ],
+      "properties": {
+        "setup_time_seconds": {
+          "type": "integer",
+          "maximum": 300
+        },
+        "monthly_savings_usd": {
+          "type": "number",
+          "minimum": 0
+        }
+      }
+    }
+  }
+}

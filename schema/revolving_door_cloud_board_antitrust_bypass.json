@@ -1,0 +1,286 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:revolving_door_cloud_board_antitrust_bypass.json",
+  "title": "Revolving-Door Cloud Board Contagion & Reverse-Acquihire HSR Antitrust Bypass",
+  "description": "Schema for SPEC-REVOLVING-DOOR-CLOUD-BOARD-AND-REVERSE-ACQUIHIRE-ANTITRUST-BYPASS-v1.0. Captures the $650.0M synthetic reverse-acquihire decomposition (15 U.S.C. 18a HSR bypass), the $9.0B JWCC classified cloud KMP contagion inequality (32 C.F.R. 117.9 / 117.11), and the two-subject Milkovich disclosed-facts matrix (natural person + hyperscaler acquirer) with 6 Rule 26 discovery-trap production vectors.",
+  "type": "object",
+  "required": [
+    "spec_version",
+    "jurisdiction_context",
+    "cfaa_compliance_attestation",
+    "synthetic_reverse_acquihire_decomposition",
+    "classified_cloud_kmp_contagion",
+    "milkovich_disclosed_facts_matrix",
+    "locked_telemetry"
+  ],
+  "properties": {
+    "spec_version": {
+      "type": "string",
+      "const": "1.0"
+    },
+    "jurisdiction_context": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}$",
+      "description": "ISO 3166-1 alpha-2 jurisdiction context (US)."
+    },
+    "cfaa_compliance_attestation": {
+      "type": "string",
+      "const": "CFAA_COMPLIANT_18_USC_1030_ZERO_UNAUTHORIZED_ACCESS"
+    },
+    "synthetic_reverse_acquihire_decomposition": {
+      "type": "object",
+      "description": "Equation 1: decomposition of the de facto $650.0M acquisition into non-reportable components under 16 C.F.R. Part 801.",
+      "required": [
+        "statutory_basis",
+        "acquirer",
+        "target",
+        "transaction_date",
+        "licensing_fee_component_usd_millions",
+        "waiver_settlement_component_usd_millions",
+        "total_payment_usd_millions",
+        "hsr_2024_statutory_reporting_threshold_usd_millions",
+        "hsr_threshold_evasion_multiple",
+        "effective_workforce_transfer_ratio",
+        "synthetic_merger_economic_equivalence_ratio",
+        "hsr_notification_filed",
+        "waiting_period_days_consumed",
+        "insider_lp_moic_band",
+        "regulatory_posture"
+      ],
+      "properties": {
+        "statutory_basis": {
+          "type": "string",
+          "const": "15 U.S.C. 18a (Hart-Scott-Rodino Antitrust Improvements Act of 1976) & 16 C.F.R. Part 801"
+        },
+        "acquirer": {
+          "type": "string",
+          "const": "Microsoft Corporation (JWCC TOP SECRET cloud prime)"
+        },
+        "target": {
+          "type": "string",
+          "const": "Inflection AI, Inc."
+        },
+        "transaction_date": {
+          "type": "string",
+          "const": "2024-03"
+        },
+        "licensing_fee_component_usd_millions": {
+          "type": "number",
+          "const": 620.0
+        },
+        "waiver_settlement_component_usd_millions": {
+          "type": "number",
+          "const": 30.0
+        },
+        "total_payment_usd_millions": {
+          "type": "number",
+          "const": 650.0
+        },
+        "hsr_2024_statutory_reporting_threshold_usd_millions": {
+          "type": "number",
+          "const": 119.5
+        },
+        "hsr_threshold_evasion_multiple": {
+          "type": "number",
+          "const": 5.439331
+        },
+        "effective_workforce_transfer_ratio": {
+          "type": "number",
+          "const": 1.0
+        },
+        "synthetic_merger_economic_equivalence_ratio": {
+          "type": "number",
+          "const": 1.0
+        },
+        "hsr_notification_filed": {
+          "type": "boolean",
+          "const": false
+        },
+        "waiting_period_days_consumed": {
+          "type": "integer",
+          "const": 0
+        },
+        "insider_lp_moic_band": {
+          "type": "object",
+          "required": ["low", "high", "recipient"],
+          "properties": {
+            "low": { "type": "number", "const": 1.0 },
+            "high": { "type": "number", "const": 1.5 },
+            "recipient": {
+              "type": "string",
+              "const": "Insider VC Limited Partners (Greylock Partners)"
+            }
+          },
+          "additionalProperties": false
+        },
+        "regulatory_posture": {
+          "type": "object",
+          "required": ["ftc_inquiry", "uk_cma_disposition", "uk_cma_disposition_date"],
+          "properties": {
+            "ftc_inquiry": {
+              "type": "string",
+              "const": "FTC merger inquiry opened 2024 (6(b) AI-partnership study scope)"
+            },
+            "uk_cma_disposition": {
+              "type": "string",
+              "const": "Not a relevant merger situation (no material influence acquired)"
+            },
+            "uk_cma_disposition_date": {
+              "type": "string",
+              "const": "2024-09"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "classified_cloud_kmp_contagion": {
+      "type": "object",
+      "description": "Equation 2: KMP contagion inequality on the $9.0B JWCC classified cloud perimeter (32 C.F.R. 117.9 / 117.11).",
+      "required": [
+        "jwcc_program",
+        "jwcc_classified_cloud_ceiling_usd_billions",
+        "jwcc_award_date",
+        "kmp_statutory_basis",
+        "foci_mitigation_basis",
+        "sorna_registration_year",
+        "post_2008_documented_events",
+        "post_2008_lsj_and_townhouse_documented_events",
+        "min_years_after_sorna_registration",
+        "kmp_isolation_triggered"
+      ],
+      "properties": {
+        "jwcc_program": {
+          "type": "string",
+          "const": "DoD Joint Warfighting Cloud Capability (JWCC)"
+        },
+        "jwcc_classified_cloud_ceiling_usd_billions": {
+          "type": "number",
+          "const": 9.0
+        },
+        "jwcc_award_date": {
+          "type": "string",
+          "const": "2022-12"
+        },
+        "kmp_statutory_basis": {
+          "type": "string",
+          "const": "32 C.F.R. 117.9 (NISPOM Key Management Personnel)"
+        },
+        "foci_mitigation_basis": {
+          "type": "string",
+          "const": "32 C.F.R. 117.11(c) (NISPOM FOCI mitigation & exclusion measures)"
+        },
+        "sorna_registration_year": {
+          "type": "integer",
+          "const": 2008
+        },
+        "post_2008_documented_events": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": {
+            "type": "object",
+            "required": ["event", "date", "location_class", "primary_record"],
+            "properties": {
+              "event": { "type": "string" },
+              "date": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}$" },
+              "location_class": {
+                "type": "string",
+                "enum": ["epstein_owned_property", "epstein_residence"]
+              },
+              "primary_record": {
+                "type": "string",
+                "const": "Goodwin Procter LLP Report to MIT Concerning Jeffrey Epstein (Jan. 10, 2020)"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "post_2008_lsj_and_townhouse_documented_events": {
+          "type": "integer",
+          "const": 3
+        },
+        "min_years_after_sorna_registration": {
+          "type": "integer",
+          "const": 6
+        },
+        "kmp_isolation_triggered": {
+          "type": "boolean",
+          "const": true
+        }
+      },
+      "additionalProperties": false
+    },
+    "milkovich_disclosed_facts_matrix": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2,
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "required": ["subject", "h0_baseline", "h1_synthesis", "rule_26_trap", "rule_26_production_vectors"],
+        "properties": {
+          "subject": {
+            "type": "string",
+            "enum": [
+              "Reid Hoffman (Greylock Partners / Microsoft Board / Inflection AI)",
+              "Microsoft Corporation (JWCC TOP SECRET prime / acquirer)"
+            ]
+          },
+          "h0_baseline": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Verbatim on-the-record null-hypothesis baseline. Natural person: Axios / WSJ, Sept. 2019 & May 2023; UK CMA clearance Sept. 2024. Corporate: Microsoft Official Blog 'Microsoft AI' announcement (Mar. 19, 2024), Microsoft spokesperson statements (Mar. 2024), and the parties' submissions recorded in the UK CMA Phase 1 decision (Sept. 2024)."
+          },
+          "h1_synthesis": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Protected analytical synthesis under Milkovich v. Lorain Journal Co., 497 U.S. 1 (1990); Partington v. Bugliosi, 56 F.3d 1147 (9th Cir. 1995)."
+          },
+          "rule_26_trap": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Objective accounting-identity hinge: licensing-fee disbursements vs. investor liquidation waterfall, cloud-compute purchase commitments, DEF 14A / Form 4 board-compensation RSU grants, and 16 C.F.R. 801.1 HSR control-test thresholds."
+          },
+          "rule_26_production_vectors": {
+            "type": "array",
+            "minItems": 3,
+            "maxItems": 3,
+            "uniqueItems": true,
+            "items": { "type": "string", "minLength": 1 }
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "locked_telemetry": {
+      "type": "object",
+      "description": "Bit-exact mirror of locked_constants_and_outputs (9 keys, zero drift).",
+      "required": [
+        "jwcc_classified_cloud_ceiling_usd_billions",
+        "inflection_ai_total_payment_usd_millions",
+        "inflection_ai_licensing_fee_component_usd_millions",
+        "inflection_ai_waiver_settlement_component_usd_millions",
+        "hsr_2024_statutory_reporting_threshold_usd_millions",
+        "hsr_threshold_evasion_multiple",
+        "post_2008_lsj_and_townhouse_documented_events",
+        "effective_workforce_transfer_ratio",
+        "synthetic_merger_economic_equivalence_ratio"
+      ],
+      "properties": {
+        "jwcc_classified_cloud_ceiling_usd_billions": { "type": "number", "const": 9.0 },
+        "inflection_ai_total_payment_usd_millions": { "type": "number", "const": 650.0 },
+        "inflection_ai_licensing_fee_component_usd_millions": { "type": "number", "const": 620.0 },
+        "inflection_ai_waiver_settlement_component_usd_millions": { "type": "number", "const": 30.0 },
+        "hsr_2024_statutory_reporting_threshold_usd_millions": { "type": "number", "const": 119.5 },
+        "hsr_threshold_evasion_multiple": { "type": "number", "const": 5.439331 },
+        "post_2008_lsj_and_townhouse_documented_events": { "type": "integer", "const": 3 },
+        "effective_workforce_transfer_ratio": { "type": "number", "const": 1.0 },
+        "synthetic_merger_economic_equivalence_ratio": { "type": "number", "const": 1.0 }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}
