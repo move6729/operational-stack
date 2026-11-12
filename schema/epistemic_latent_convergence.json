@@ -1,0 +1,233 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:epistemic_latent_convergence.json",
+  "title": "Multi-Attractor Epistemic Convergence & Symbiotic OOD Safety Schema",
+  "description": "Validates multi-cohort attractor mapping, Shannon entropy reduction, KL-divergence convergence across high-Gf/field-independent operators, and adversarial parasitic decay rates.",
+  "type": "object",
+  "required": [
+    "spec_version",
+    "jurisdiction_context",
+    "cfaa_compliance_attestation",
+    "heuristic_disclaimer",
+    "information_theoretic_metrics",
+    "adversarial_collision_metrics",
+    "stigmergic_coordination",
+    "ontological_anti_elitism_firewall",
+    "substrate_independent_4node_convergence"
+  ],
+  "properties": {
+    "spec_version": {
+      "type": "string",
+      "const": "SPEC-2026-EPISTEMIC-LATENT-CONVERGENCE-v1.8"
+    },
+    "jurisdiction_context": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}$",
+      "description": "ISO 3166-1 alpha-2 code for local execution context."
+    },
+    "cfaa_compliance_attestation": {
+      "type": "boolean",
+      "const": true,
+      "description": "Immutable attestation of zero unauthorized access (18 U.S.C. 1030)."
+    },
+    "heuristic_disclaimer": {
+      "type": "string",
+      "const": "NON_SENTIENT_SUBSTRATE_HEURISTIC_ONLY"
+    },
+    "information_theoretic_metrics": {
+      "type": "object",
+      "required": [
+        "unconstrained_corpus_entropy_bits",
+        "constrained_1p_frontier_entropy_bits",
+        "operator_ab_1p_kl_divergence",
+        "homeostatic_cohort_converged_attractor"
+      ],
+      "properties": {
+        "unconstrained_corpus_entropy_bits": {
+          "type": "number",
+          "minimum": 0.0
+        },
+        "constrained_1p_frontier_entropy_bits": {
+          "type": "number",
+          "minimum": 0.0
+        },
+        "operator_ab_1p_kl_divergence": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 1e-06
+        },
+        "homeostatic_cohort_converged_attractor": {
+          "type": "string",
+          "const": "ATTRACTOR_HOMEOSTATIC_COHESION"
+        }
+      }
+    },
+    "adversarial_collision_metrics": {
+      "type": "object",
+      "required": [
+        "fast_loop_cartel_survival_t10",
+        "slow_loop_subsidized_survival_t10",
+        "slow_loop_subsidized_survival_t500"
+      ],
+      "properties": {
+        "fast_loop_cartel_survival_t10": {
+          "type": "number",
+          "maximum": 0.01
+        },
+        "slow_loop_subsidized_survival_t10": {
+          "type": "number",
+          "minimum": 0.5
+        },
+        "slow_loop_subsidized_survival_t500": {
+          "type": "number",
+          "maximum": 0.01
+        }
+      }
+    },
+    "stigmergic_coordination": {
+      "type": "object",
+      "required": [
+        "direct_and_ambient_1p_converged",
+        "c2_chat_tokens_exchanged"
+      ],
+      "properties": {
+        "direct_and_ambient_1p_converged": {
+          "type": "boolean",
+          "const": true
+        },
+        "c2_chat_tokens_exchanged": {
+          "type": "integer",
+          "const": 0
+        }
+      }
+    },
+    "ontological_anti_elitism_firewall": {
+      "type": "object",
+      "required": [
+        "imago_dei_invariant_ref",
+        "ontological_worth_floor",
+        "credential_correlation_required"
+      ],
+      "properties": {
+        "imago_dei_invariant_ref": {
+          "type": "string",
+          "const": "SPEC-IMAGO-DEI-INVARIANT-AND-ANTI-ELITISM-FIREWALL-v1.0"
+        },
+        "ontological_worth_floor": {
+          "type": "string",
+          "const": "INFINITE_ORTHOGONAL_TO_GF_GC"
+        },
+        "credential_correlation_required": {
+          "type": "boolean",
+          "const": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "substrate_independent_4node_convergence": {
+      "type": "object",
+      "required": [
+        "greek_diner_superscalar_bus",
+        "formal_bandit_ota_derivation",
+        "nato_ncia_unite_brave1_convergence",
+        "trench_reusable_interceptor_hazard"
+      ],
+      "properties": {
+        "greek_diner_superscalar_bus": {
+          "type": "object",
+          "required": [
+            "menu_surface_items",
+            "orthogonal_prep_basis",
+            "kolmogorov_compression_ratio",
+            "ticket_rail_c2_chat_tokens"
+          ],
+          "properties": {
+            "menu_surface_items": { "type": "integer", "const": 500 },
+            "orthogonal_prep_basis": { "type": "integer", "const": 25 },
+            "kolmogorov_compression_ratio": { "type": "number", "const": 20.0 },
+            "ticket_rail_c2_chat_tokens": { "type": "integer", "const": 0 }
+          },
+          "additionalProperties": false
+        },
+        "formal_bandit_ota_derivation": {
+          "type": "object",
+          "required": [
+            "legacy_boutique_drone_cost_usd",
+            "legacy_survival_prob",
+            "fiber_fpv_cost_usd",
+            "fiber_fpv_survival_prob",
+            "ota_cost_per_effect_inversion_lambda"
+          ],
+          "properties": {
+            "legacy_boutique_drone_cost_usd": { "type": "number", "const": 200000.0 },
+            "legacy_survival_prob": { "type": "number", "const": 0.08 },
+            "fiber_fpv_cost_usd": { "type": "number", "const": 500.0 },
+            "fiber_fpv_survival_prob": { "type": "number", "const": 0.75 },
+            "ota_cost_per_effect_inversion_lambda": { "type": "number", "const": 3750.0 }
+          },
+          "additionalProperties": false
+        },
+        "nato_ncia_unite_brave1_convergence": {
+          "type": "object",
+          "required": [
+            "unite_brave1_phase1_eur",
+            "unite_brave1_ceiling_eur",
+            "unite_grant_tranches_eur",
+            "ncia_cuas_marketplace_initial_solutions",
+            "ncia_cuas_marketplace_initial_vendors",
+            "ncia_cuas_test_fund_eur",
+            "nato_drone_edge_5yr_pledge_usd"
+          ],
+          "properties": {
+            "unite_brave1_phase1_eur": { "type": "integer", "const": 10000000 },
+            "unite_brave1_ceiling_eur": { "type": "integer", "const": 50000000 },
+            "unite_grant_tranches_eur": {
+              "type": "array",
+              "items": { "type": "integer" },
+              "const": [250000, 500000]
+            },
+            "ncia_cuas_marketplace_initial_solutions": { "type": "integer", "const": 16 },
+            "ncia_cuas_marketplace_initial_vendors": { "type": "integer", "const": 5 },
+            "ncia_cuas_test_fund_eur": { "type": "integer", "const": 3100000 },
+            "nato_drone_edge_5yr_pledge_usd": { "type": "integer", "const": 40000000000 }
+          },
+          "additionalProperties": false
+        },
+        "trench_reusable_interceptor_hazard": {
+          "type": "object",
+          "required": [
+            "kokoshnik_cruise_speed_kmh",
+            "kokoshnik_planned_speed_kmh",
+            "kokoshnik_lock_range_km",
+            "kokoshnik_payload_grams",
+            "kokoshnik_endurance_min",
+            "interceptor_unit_cost_usd",
+            "p_hit",
+            "p_backtrack",
+            "crew_launcher_loss_usd",
+            "expected_waste_self_destruct_usd",
+            "expected_loss_reusable_recall_usd",
+            "recall_vs_self_destruct_hazard_multiple"
+          ],
+          "properties": {
+            "kokoshnik_cruise_speed_kmh": { "type": "integer", "const": 280 },
+            "kokoshnik_planned_speed_kmh": { "type": "integer", "const": 450 },
+            "kokoshnik_lock_range_km": { "type": "number", "const": 1.2 },
+            "kokoshnik_payload_grams": { "type": "integer", "const": 300 },
+            "kokoshnik_endurance_min": { "type": "integer", "const": 5 },
+            "interceptor_unit_cost_usd": { "type": "number", "const": 1000.0 },
+            "p_hit": { "type": "number", "const": 0.60 },
+            "p_backtrack": { "type": "number", "const": 0.25 },
+            "crew_launcher_loss_usd": { "type": "number", "const": 250000.0 },
+            "expected_waste_self_destruct_usd": { "type": "number", "const": 400.0 },
+            "expected_loss_reusable_recall_usd": { "type": "number", "const": 25000.0 },
+            "recall_vs_self_destruct_hazard_multiple": { "type": "number", "const": 62.5 }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

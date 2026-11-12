@@ -1,0 +1,261 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:protectorate_ashby_trap_v1.0.json",
+  "title": "Protectorate Ashby Trap Verification Schema v1.0",
+  "description": "Zero-rent verification schema for SPEC-PROTECTORATE-ASHBY-TRAP-v1.0: sovereign liability waterfall (2500.0B EUR, 4 tranches), OOD search survival under Common Law vs Civil Code Guild ex-ante friction, M/M/1 judicial queue instability, and Eastern Nullification Arbitrage (ECJ Case C-123/22). License: Unlicense.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "jurisdiction_context",
+    "cfaa_compliance_attestation",
+    "itar_ear_public_domain_attestation",
+    "entity_and_instrument_ids",
+    "catalyst_calendar",
+    "sovereign_liability_waterfall",
+    "model_metrics",
+    "verification_outputs"
+  ],
+  "properties": {
+    "jurisdiction_context": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["primary_jurisdictions", "iso_3166_1_codes", "statutory_modules"],
+      "properties": {
+        "primary_jurisdictions": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"type": "string"}
+        },
+        "iso_3166_1_codes": {
+          "type": "array",
+          "items": {"type": "string", "pattern": "^[A-Z]{2}$"}
+        },
+        "statutory_modules": {
+          "type": "array",
+          "items": {"type": "string"},
+          "description": "Locally processed statutory modules (EU GDPR/AI Act, UK repeal, ECJ tariff) per node identity; zero cross-custody data egress."
+        }
+      }
+    },
+    "cfaa_compliance_attestation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["statute", "attestation", "unauthorized_access_count"],
+      "properties": {
+        "statute": {"const": "18 U.S.C. 1030"},
+        "attestation": {"type": "string", "minLength": 1},
+        "unauthorized_access_count": {"const": 0}
+      }
+    },
+    "itar_ear_public_domain_attestation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["itar_exemption", "ear_exemption", "controlled_hardware_blueprints_count", "attestation"],
+      "properties": {
+        "itar_exemption": {"const": "22 C.F.R. 120.34 (Public Domain)"},
+        "ear_exemption": {"const": "15 C.F.R. 734.7 (Published Information / Fundamental Research)"},
+        "controlled_hardware_blueprints_count": {"const": 0},
+        "attestation": {"type": "string", "minLength": 1}
+      }
+    },
+    "entity_and_instrument_ids": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["sovereign_and_supranational_entities", "court_dockets", "sovereign_liability_tranches"],
+      "properties": {
+        "sovereign_and_supranational_entities": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["entity", "instrument"],
+            "properties": {
+              "entity": {"type": "string"},
+              "instrument": {"type": "string"},
+              "ticker": {"type": ["string", "null"]},
+              "cik": {"type": ["string", "null"]}
+            }
+          }
+        },
+        "court_dockets": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"type": "string"},
+          "description": "Must include ECJ Case C-123/22 (judgment 2024-06-13)."
+        },
+        "sovereign_liability_tranches": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 4,
+          "items": {
+            "type": "object",
+            "required": ["tranche", "name", "principal_bn_eur"],
+            "properties": {
+              "tranche": {"type": "integer", "minimum": 1, "maximum": 4},
+              "name": {"type": "string"},
+              "principal_bn_eur": {"type": "number", "exclusiveMinimum": 0}
+            }
+          }
+        }
+      }
+    },
+    "catalyst_calendar": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["date", "event", "type"],
+        "properties": {
+          "date": {"type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$"},
+          "event": {"type": "string", "minLength": 1},
+          "type": {"enum": ["judicial", "statutory", "regulatory", "political"]}
+        }
+      }
+    },
+    "sovereign_liability_waterfall": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "tranche_principals_bn_eur",
+        "total_principal_bn_eur",
+        "fulcrum_ev_bn_eur",
+        "tranche_4_recovery_at_fulcrum"
+      ],
+      "properties": {
+        "tranche_principals_bn_eur": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 4,
+          "prefixItems": [
+            {"const": 450.0},
+            {"const": 850.0},
+            {"const": 300.0},
+            {"const": 900.0}
+          ],
+          "items": {"type": "number", "exclusiveMinimum": 0}
+        },
+        "total_principal_bn_eur": {"const": 2500.0},
+        "fulcrum_ev_bn_eur": {"const": 1800.0},
+        "tranche_4_recovery_at_fulcrum": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["recovery_bn_eur", "recovery_pct"],
+          "properties": {
+            "recovery_bn_eur": {"const": 200.0},
+            "recovery_pct": {"const": 22.22}
+          }
+        }
+      }
+    },
+    "model_metrics": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "eu_ai_act_flops_cap",
+        "gdpr_turnover_fine_pct",
+        "german_nuclear_shut_gw_2023",
+        "german_total_nuclear_decommissioned_gw",
+        "industrial_power_cost_eu_mwh_eur",
+        "industrial_power_cost_us_mwh_eur",
+        "energy_cost_ratio_eu_to_us",
+        "ood_search_trials_N",
+        "ood_experiment_payoff_scale_eur",
+        "common_law_ex_ante_friction_eur",
+        "civil_code_guild_ex_ante_friction_eur",
+        "common_law_viable_ood_experiments",
+        "civil_code_viable_ood_experiments",
+        "guild_cartel_compliance_moat_ratio",
+        "asylum_inflow_lambda_annual",
+        "judicial_4_tier_service_mu_annual",
+        "queue_utilization_rho_continental",
+        "annual_unprocessed_backlog_continental",
+        "uk_parliamentary_repeal_majority_seats",
+        "uk_post_repeal_service_mu_annual",
+        "queue_utilization_rho_uk_unlocked",
+        "danish_fm_menapt_annual_net_drain_dkk_bn",
+        "dutch_asylum_cohort_npv_eur",
+        "skilled_western_cohort_npv_eur",
+        "ecj_hungary_lump_sum_fine_eur",
+        "ecj_hungary_daily_fine_eur",
+        "ecj_hungary_annualized_tariff_eur",
+        "hungary_avoided_cohort_fiscal_liability_npv_eur",
+        "nullification_arbitrage_benefit_to_cost_ratio",
+        "sweden_utsatta_omraden_count",
+        "france_qrr_enclave_count",
+        "tranche_4_recovery_pct",
+        "tranche_4_dollar_recovery_bn_eur"
+      ],
+      "properties": {
+        "eu_ai_act_flops_cap": {"const": 1e25},
+        "gdpr_turnover_fine_pct": {"const": 4.0},
+        "german_nuclear_shut_gw_2023": {"const": 4.1},
+        "german_total_nuclear_decommissioned_gw": {"const": 22.6},
+        "industrial_power_cost_eu_mwh_eur": {"const": 145.0},
+        "industrial_power_cost_us_mwh_eur": {"const": 48.0},
+        "energy_cost_ratio_eu_to_us": {"const": 3.0208},
+        "ood_search_trials_N": {"const": 1000},
+        "ood_experiment_payoff_scale_eur": {"const": 50000.0},
+        "common_law_ex_ante_friction_eur": {"const": 25000.0},
+        "civil_code_guild_ex_ante_friction_eur": {"const": 2500000.0},
+        "common_law_viable_ood_experiments": {"const": 606},
+        "civil_code_viable_ood_experiments": {"const": 0},
+        "guild_cartel_compliance_moat_ratio": {"const": 100.0},
+        "asylum_inflow_lambda_annual": {"const": 350000.0},
+        "judicial_4_tier_service_mu_annual": {"const": 70000.0},
+        "queue_utilization_rho_continental": {"const": 5.0},
+        "annual_unprocessed_backlog_continental": {"const": 280000.0},
+        "uk_parliamentary_repeal_majority_seats": {"const": 326},
+        "uk_post_repeal_service_mu_annual": {"const": 400000.0},
+        "queue_utilization_rho_uk_unlocked": {"const": 0.875},
+        "danish_fm_menapt_annual_net_drain_dkk_bn": {"const": -31.0},
+        "dutch_asylum_cohort_npv_eur": {"const": -475000.0},
+        "skilled_western_cohort_npv_eur": {"const": 125000.0},
+        "ecj_hungary_lump_sum_fine_eur": {"const": 200000000.0},
+        "ecj_hungary_daily_fine_eur": {"const": 1000000.0},
+        "ecj_hungary_annualized_tariff_eur": {"const": 565000000.0},
+        "hungary_avoided_cohort_fiscal_liability_npv_eur": {"const": 14250000000.0},
+        "nullification_arbitrage_benefit_to_cost_ratio": {"const": 25.2212},
+        "sweden_utsatta_omraden_count": {"const": 61},
+        "france_qrr_enclave_count": {"const": 62},
+        "tranche_4_recovery_pct": {"const": 22.22},
+        "tranche_4_dollar_recovery_bn_eur": {"const": 200.0}
+      }
+    },
+    "verification_outputs": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "proof_exit_code",
+        "waterfall_at_fulcrum",
+        "ood_viable_common_law",
+        "ood_viable_civil_code",
+        "rho_continental",
+        "rho_uk_unlocked",
+        "nullification_benefit_to_cost_ratio"
+      ],
+      "properties": {
+        "proof_exit_code": {"const": 0},
+        "waterfall_at_fulcrum": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 4,
+          "items": {
+            "type": "object",
+            "required": ["tranche", "recovery_bn_eur", "recovery_pct"],
+            "properties": {
+              "tranche": {"type": "integer", "minimum": 1, "maximum": 4},
+              "recovery_bn_eur": {"type": "number", "minimum": 0},
+              "recovery_pct": {"type": "number", "minimum": 0, "maximum": 100}
+            }
+          }
+        },
+        "ood_viable_common_law": {"const": 606},
+        "ood_viable_civil_code": {"const": 0},
+        "rho_continental": {"const": 5.0},
+        "rho_uk_unlocked": {"const": 0.875},
+        "nullification_benefit_to_cost_ratio": {"const": 25.2212}
+      }
+    }
+  }
+}

@@ -1,0 +1,254 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:cross_border_part26a_carveout_v1.0.json",
+  "title": "Cross-Border Part 26A Collateral Carveout and Chapter 15 Bypass - Locked Empirical Payload",
+  "description": "Validates the locked constants and governing-equation outputs (EQ-1 through EQ-8), the standardized security-master keys (entity_and_instrument_ids), the hard-date catalyst_calendar, and the parameterized tranche_recovery(ev) fulcrum waterfall pinned by SPEC-CROSS-BORDER-PART26A-COLLATERAL-CARVEOUT-AND-CHAPTER15-BYPASS-v1.0 and deterministically verified by proofs/proof_nfe_part26a_collateral_carveout.py. _usd fields are absolute USD; _millions fields are USD millions; _billions fields are USD billions; _pct fields are percentage values on a 0-100 basis; _share_pct fields are percentage equity ownership stakes; _shares fields are integer share counts.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "jurisdiction_context",
+    "cfaa_18_usc_1030_compliance_attestation",
+    "entity_and_instrument_ids",
+    "project_lady_forbearance_and_default_baseline",
+    "uk_part26a_plan_scope_and_uplift",
+    "brazilco_carveout_and_apr_part26a_equity_split",
+    "new_nfe_waterfall_shadow_seniority_and_otm_depth",
+    "consolidated_8k_cleansing_ledger_and_flng2_silo",
+    "series_a_mandatory_conversion_and_insider_debt_crossover",
+    "cleansing_vs_financing_case_decay_and_flng1_turbine_shock",
+    "catalyst_calendar"
+  ],
+  "properties": {
+    "jurisdiction_context": {
+      "type": "array",
+      "description": "ISO 3166-1 alpha-2 jurisdictions spanned by the transaction: US (Delaware parent, NY-law debt, SDNY Chapter 15 comity), GB (England & Wales Part 26A sanction venue), BR (BrazilCo crown-jewel LNG/power asset perimeter).",
+      "items": {"type": "string", "enum": ["US", "GB", "BR"]},
+      "minItems": 3,
+      "maxItems": 3,
+      "uniqueItems": true
+    },
+    "cfaa_18_usc_1030_compliance_attestation": {
+      "type": "object",
+      "description": "Immutable CFAA baseline attestation: every empirical input derives from public-domain primary records with zero unauthorized access to protected computers.",
+      "additionalProperties": false,
+      "required": ["statute", "attested", "no_unauthorized_access", "data_provenance"],
+      "properties": {
+        "statute": {"type": "string", "minLength": 1},
+        "attested": {"const": true},
+        "no_unauthorized_access": {"const": true},
+        "data_provenance": {"type": "string", "minLength": 1}
+      }
+    },
+    "entity_and_instrument_ids": {
+      "type": "object",
+      "description": "Standardized security-master keys: NFE common (ticker NFE, CIK 0001749723, CUSIP 644393308, ISIN US6443933089), New NFE Series A preferred (ticker NFEGP), the three controlling court dockets (Re NFE Global Holdings Ltd [2026] EWHC 1223 (Ch) and [2026] EWHC 1620 (Ch); In re NFE Global Holdings Ltd, Case No. 26-11268 (MG), Bankr. S.D.N.Y.), and the ten named pre-/post-restructuring debt and preferred tranches. CUSIP and ISIN mod-10 check digits are verified by the proof.",
+      "additionalProperties": false,
+      "required": ["ticker", "preferred_ticker", "cik", "cusip", "isin", "court_dockets", "tranches"],
+      "properties": {
+        "ticker": {"const": "NFE"},
+        "preferred_ticker": {"const": "NFEGP"},
+        "cik": {"const": "0001749723"},
+        "cusip": {"const": "644393308"},
+        "isin": {"const": "US6443933089"},
+        "court_dockets": {"type": "array", "minItems": 3, "maxItems": 3, "items": {"type": "string", "minLength": 1}},
+        "tranches": {"type": "array", "minItems": 10, "maxItems": 10, "uniqueItems": true, "items": {"type": "string", "minLength": 1}}
+      }
+    },
+    "project_lady_forbearance_and_default_baseline": {
+      "type": "object",
+      "description": "EQ-1 Act I 'Project Lady' forbearance baseline: MUFG RCF and Morgan Stanley TLB payment defaults (November-December 2025), exact principal acknowledgments, and the 10-day / 10-facility forbearance window per SEC Form 8-K Ex. 10.42-10.43 (January 20, 2026).",
+      "additionalProperties": false,
+      "required": [
+        "rcf_mufg_principal_usd", "rcf_mufg_principal_millions",
+        "tlb_morgan_stanley_principal_usd", "tlb_morgan_stanley_principal_millions",
+        "tlb_missed_interest_dec_2025_millions", "tla_missed_interest_dec_2025_millions",
+        "combined_rcf_tlb_principal_millions",
+        "forbearance_window_days", "forbearance_facilities_count"
+      ],
+      "properties": {
+        "rcf_mufg_principal_usd": {"$ref": "#/$defs/money_usd", "description": "Verbatim Ex. 10.42 principal acknowledgment: $660,400,000.00."},
+        "rcf_mufg_principal_millions": {"$ref": "#/$defs/money_m", "description": "P_RCF,USD / 1e6 = 660.4."},
+        "tlb_morgan_stanley_principal_usd": {"$ref": "#/$defs/money_usd", "description": "Verbatim Ex. 10.43 principal acknowledgment: $1,266,077,800.00."},
+        "tlb_morgan_stanley_principal_millions": {"$ref": "#/$defs/money_m", "description": "Two-decimal rounded disclosure of P_TLB,USD / 1e6 = 1,266.0778."},
+        "tlb_missed_interest_dec_2025_millions": {"$ref": "#/$defs/money_m", "description": "Missed December 2025 TLB interest payment of 30.644."},
+        "tla_missed_interest_dec_2025_millions": {"$ref": "#/$defs/money_m", "description": "Missed December 2025 TLA interest payment of 1.6."},
+        "combined_rcf_tlb_principal_millions": {"$ref": "#/$defs/money_m", "description": "(P_RCF,USD + P_TLB,USD) / 1e6 = 1,926,477,800.00 / 1e6 = 1,926.4778."},
+        "forbearance_window_days": {"$ref": "#/$defs/days", "description": "Project Lady forbearance window January 13-23, 2026 = 10 days."},
+        "forbearance_facilities_count": {"$ref": "#/$defs/facility_count", "description": "Ten simultaneous credit and note facilities under coordinated forbearance."}
+      }
+    },
+    "uk_part26a_plan_scope_and_uplift": {
+      "type": "object",
+      "description": "EQ-2 Act II UK Part 26A plan scope: gross compromised claims, extinguished third-party funded debt, total plan creditor consideration, projected uplift versus U.S. Chapter 11, and the 1-day NFE Brazil Newco Limited guarantor accession lead time (Re NFE Global Holdings Limited [2026] EWHC 1223 (Ch) and [2026] EWHC 1620 (Ch); Case No. 26-11268 (MG)).",
+      "additionalProperties": false,
+      "required": [
+        "gross_ukrp_compromised_claims_billions", "extinguished_third_party_funded_debt_millions",
+        "uk_plan_creditor_total_consideration_millions", "projected_ukrp_uplift_vs_ch11_millions",
+        "brazil_newco_accession_lead_time_days"
+      ],
+      "properties": {
+        "gross_ukrp_compromised_claims_billions": {"$ref": "#/$defs/volume_b", "description": "Gross UK RP compromised claims = 9.6B = 9,600.0M > funded debt."},
+        "extinguished_third_party_funded_debt_millions": {"$ref": "#/$defs/money_m", "description": "D_Pre = 5,700.0 of extinguished third-party funded debt."},
+        "uk_plan_creditor_total_consideration_millions": {"$ref": "#/$defs/money_m", "description": "V_Plan = 971.0 total plan creditor package valuation."},
+        "projected_ukrp_uplift_vs_ch11_millions": {"$ref": "#/$defs/money_m", "description": "Schedule 1-A projected UK RP recovery uplift versus U.S. Chapter 11 = 1,440.0."},
+        "brazil_newco_accession_lead_time_days": {"$ref": "#/$defs/days", "description": "NFE Brazil Newco Limited acceded as note guarantor exactly 1 day before English Part 26A proceedings commenced."}
+      }
+    },
+    "brazilco_carveout_and_apr_part26a_equity_split": {
+      "type": "object",
+      "description": "EQ-3 Prong 1 statutory arbitrage: BrazilCo crown-jewel carve-out shares and New NFE common equity split under UK Part 26A flexible priority versus the 0.0% legacy retention mandated by the Absolute Priority Rule (11 U.S.C. 1129(b)(2)(B)(ii)).",
+      "additionalProperties": false,
+      "required": [
+        "brazilco_creditor_equity_share_pct", "brazilco_legacy_shareholder_equity_share_pct",
+        "new_nfe_creditor_common_equity_share_pct", "new_nfe_legacy_common_equity_share_pct",
+        "ch11_apr_legacy_common_equity_share_pct"
+      ],
+      "properties": {
+        "brazilco_creditor_equity_share_pct": {"$ref": "#/$defs/pct_share", "description": "Plan Creditors receive 100.0% of BrazilCo common equity."},
+        "brazilco_legacy_shareholder_equity_share_pct": {"$ref": "#/$defs/pct_share", "description": "Legacy NFE shareholders retain 0.0% of BrazilCo: permanent carve-out."},
+        "new_nfe_creditor_common_equity_share_pct": {"$ref": "#/$defs/pct_share", "description": "Plan Creditors receive 65.0% of New NFE common equity."},
+        "new_nfe_legacy_common_equity_share_pct": {"$ref": "#/$defs/pct_share", "description": "Legacy shareholders retain 35.0% of New NFE common under UK flexible priority."},
+        "ch11_apr_legacy_common_equity_share_pct": {"$ref": "#/$defs/pct_share", "description": "Legacy retention under 11 U.S.C. 1129(b)(2)(B)(ii) cramdown = 0.0 absent consent or new value."}
+      }
+    },
+    "new_nfe_waterfall_shadow_seniority_and_otm_depth": {
+      "type": "object",
+      "description": "EQ-4/EQ-5 Act III deterministic waterfall: New NFE takeback term loans and new-money financing additions, preferred liquidation preference wall, true senior liquidation hurdle, shadow seniority multipliers, headline versus true senior claim reduction ex-Brazil, and common equity out-of-the-money depth at the plan valuation.",
+      "additionalProperties": false,
+      "required": [
+        "new_nfe_takeback_term_loans_millions", "new_nfe_new_money_financing_millions",
+        "new_nfe_total_funded_debt_millions", "new_nfe_headline_reported_debt_millions",
+        "new_nfe_preferred_liquidation_preference_millions",
+        "new_nfe_true_senior_liquidation_hurdle_millions",
+        "shadow_seniority_multiplier_exact", "shadow_seniority_multiplier_vs_headline",
+        "headline_debt_reduction_pct", "true_senior_claim_reduction_ex_brazil_pct",
+        "common_equity_out_of_the_money_depth_at_plan_val_millions"
+      ],
+      "properties": {
+        "new_nfe_takeback_term_loans_millions": {"$ref": "#/$defs/money_m", "description": "D_Takeback = 571.3 issued to Plan Creditors on the Restructuring Effective Date."},
+        "new_nfe_new_money_financing_millions": {"$ref": "#/$defs/money_m", "description": "D_NewMoney = 136.5 funded in cash on the Restructuring Effective Date."},
+        "new_nfe_total_funded_debt_millions": {"$ref": "#/$defs/money_m", "description": "D_New = D_Takeback + D_NewMoney = 571.3 + 136.5 = 707.8."},
+        "new_nfe_headline_reported_debt_millions": {"$ref": "#/$defs/money_m", "description": "Management headline 'approximately $700mm today' disclosure figure."},
+        "new_nfe_preferred_liquidation_preference_millions": {"$ref": "#/$defs/money_m", "description": "P_Liquidation = 2,450.0 of New NFE preferred equity liquidation preference held by Plan Creditors directly ahead of common."},
+        "new_nfe_true_senior_liquidation_hurdle_millions": {"$ref": "#/$defs/money_m", "description": "L_Senior = D_New + P_Liquidation = 707.8 + 2,450.0 = 3,157.8."},
+        "shadow_seniority_multiplier_exact": {"$ref": "#/$defs/multiple", "description": "M_Exact = L_Senior / D_New = 3,157.8 / 707.8 = 4.4614 (four-decimal rounding)."},
+        "shadow_seniority_multiplier_vs_headline": {"$ref": "#/$defs/multiple", "description": "M_Headline = L_Senior / D_Headline = 3,157.8 / 700.0 = 4.5111 (four-decimal rounding)."},
+        "headline_debt_reduction_pct": {"$ref": "#/$defs/pct_reduction", "description": "Delta_Headline = (D_Pre - D_New) / D_Pre = (5,700.0 - 707.8) / 5,700.0 = 87.58 (two-decimal rounding)."},
+        "true_senior_claim_reduction_ex_brazil_pct": {"$ref": "#/$defs/pct_reduction", "description": "Delta_TrueSenior = (D_Pre - L_Senior) / D_Pre = (5,700.0 - 3,157.8) / 5,700.0 = 44.60."},
+        "common_equity_out_of_the_money_depth_at_plan_val_millions": {"$ref": "#/$defs/money_m", "description": "Omega_OTM = L_Senior - V_Plan = 3,157.8 - 971.0 = 2,186.8; V_LegacyCommon(971.0) = 0.35 * max(0, 971.0 - 3,157.8) = 0.0."}
+      }
+    },
+    "consolidated_8k_cleansing_ledger_and_flng2_silo": {
+      "type": "object",
+      "description": "EQ-6 consolidated closing 8-K cleansing ledger: CoreCo (New NFE ex-Brazil) debt tranches (1st-out capital-raise TL 36.0, takeback TL 571.0, 2nd-out junior TL with PIK fee 103.0, surviving ZeroPark intermediation debt 58.0 = 768.0 total debt), the 2,455.0 Series A preferred cleansing figure (3,223.0 debt+preferred), and the FLNG2 non-recourse silo (400.0 term loans + 200.0 preferred) that lifts the true consolidated funded debt to 1,168.0 and the true consolidated senior stack to 3,823.0 = 5.4614x the 700.0 headline.",
+      "additionalProperties": false,
+      "required": [
+        "coreco_1st_out_capital_raise_tl_millions", "coreco_takeback_tl_cleansing_millions",
+        "coreco_2nd_out_junior_tl_with_pik_fee_millions", "coreco_surviving_other_debt_zeropark_intermediation_millions",
+        "coreco_total_debt_cleansing_millions", "coreco_series_a_preferred_cleansing_millions",
+        "coreco_total_debt_and_preferred_cleansing_millions",
+        "flng2_consolidated_nonrecourse_term_loans_millions", "flng2_consolidated_preferred_equity_millions",
+        "true_consolidated_funded_debt_millions", "true_consolidated_senior_stack_millions",
+        "consolidated_senior_multiplier_vs_headline"
+      ],
+      "properties": {
+        "coreco_1st_out_capital_raise_tl_millions": {"$ref": "#/$defs/money_m"},
+        "coreco_takeback_tl_cleansing_millions": {"$ref": "#/$defs/money_m"},
+        "coreco_2nd_out_junior_tl_with_pik_fee_millions": {"$ref": "#/$defs/money_m"},
+        "coreco_surviving_other_debt_zeropark_intermediation_millions": {"$ref": "#/$defs/money_m"},
+        "coreco_total_debt_cleansing_millions": {"$ref": "#/$defs/money_m", "description": "36.0 + 571.0 + 103.0 + 58.0 = 768.0."},
+        "coreco_series_a_preferred_cleansing_millions": {"$ref": "#/$defs/money_m"},
+        "coreco_total_debt_and_preferred_cleansing_millions": {"$ref": "#/$defs/money_m", "description": "768.0 + 2,455.0 = 3,223.0."},
+        "flng2_consolidated_nonrecourse_term_loans_millions": {"$ref": "#/$defs/money_m"},
+        "flng2_consolidated_preferred_equity_millions": {"$ref": "#/$defs/money_m"},
+        "true_consolidated_funded_debt_millions": {"$ref": "#/$defs/money_m", "description": "768.0 + 400.0 = 1,168.0."},
+        "true_consolidated_senior_stack_millions": {"$ref": "#/$defs/money_m", "description": "3,223.0 + 400.0 + 200.0 = 3,823.0."},
+        "consolidated_senior_multiplier_vs_headline": {"$ref": "#/$defs/multiple", "description": "3,823.0 / 700.0 = 5.4614 (four-decimal rounding)."}
+      }
+    },
+    "series_a_mandatory_conversion_and_insider_debt_crossover": {
+      "type": "object",
+      "description": "EQ-7 Series A mandatory conversion and insider debt-to-equity crossover: closing common pool (10,608,922 creditor / 5,712,496 legacy = 65.0% / 35.0%), 2,454,936 Series A preferred shares mandatorily converting to common at year-3 (87.0% diluted Series A / 13.0% closing pool; legacy diluted to 4.55%, creditor total 95.45%), and CEO Wes Edens' discounted $110.0M-face TLA debt purchase (208,588 common + 48,288 preferred recovery shares) plus the $1,667,985.02 closing cash strip purchase (28,313 common + 6,671 preferred) implying a ~$613.86M creditor preferred-and-common strip valuation.",
+      "additionalProperties": false,
+      "required": [
+        "closing_creditor_common_shares", "closing_legacy_common_shares_implied",
+        "series_a_preferred_shares_issued", "series_a_mandatory_conversion_years",
+        "series_a_post_conversion_diluted_common_share_pct", "closing_common_pool_post_conversion_share_pct",
+        "legacy_common_post_year3_conversion_share_pct", "creditor_total_post_year3_common_share_pct",
+        "edens_tla_discounted_debt_purchase_face_millions", "edens_tla_recovery_common_shares",
+        "edens_tla_recovery_preferred_shares", "edens_closing_cash_strip_purchase_usd",
+        "edens_closing_strip_common_shares", "edens_closing_strip_preferred_shares",
+        "implied_creditor_preferred_and_common_strip_valuation_millions"
+      ],
+      "properties": {
+        "closing_creditor_common_shares": {"$ref": "#/$defs/shares"},
+        "closing_legacy_common_shares_implied": {"$ref": "#/$defs/shares"},
+        "series_a_preferred_shares_issued": {"$ref": "#/$defs/shares"},
+        "series_a_mandatory_conversion_years": {"$ref": "#/$defs/days", "description": "3-year mandatory conversion horizon (integer years)."},
+        "series_a_post_conversion_diluted_common_share_pct": {"$ref": "#/$defs/pct_share", "description": "X / (X + 16,321,418) = 87.0 where X = 109,227,951.23 conversion shares."},
+        "closing_common_pool_post_conversion_share_pct": {"$ref": "#/$defs/pct_share", "description": "16,321,418 / (X + 16,321,418) = 13.0."},
+        "legacy_common_post_year3_conversion_share_pct": {"$ref": "#/$defs/pct_share", "description": "5,712,496 / (X + 16,321,418) = 4.55."},
+        "creditor_total_post_year3_common_share_pct": {"$ref": "#/$defs/pct_share", "description": "(10,608,922 + X) / (X + 16,321,418) = 95.45."},
+        "edens_tla_discounted_debt_purchase_face_millions": {"$ref": "#/$defs/money_m"},
+        "edens_tla_recovery_common_shares": {"$ref": "#/$defs/shares"},
+        "edens_tla_recovery_preferred_shares": {"$ref": "#/$defs/shares"},
+        "edens_closing_cash_strip_purchase_usd": {"$ref": "#/$defs/money_usd"},
+        "edens_closing_strip_common_shares": {"$ref": "#/$defs/shares"},
+        "edens_closing_strip_preferred_shares": {"$ref": "#/$defs/shares"},
+        "implied_creditor_preferred_and_common_strip_valuation_millions": {"$ref": "#/$defs/money_m", "description": "Preferred-share gross-up of the closing strip price: 1,667,985.02 * 2,454,936 / 6,671 / 1e6 ~= 613.86 (embeds two-decimal disclosure rounding)."}
+      }
+    },
+    "cleansing_vs_financing_case_decay_and_flng1_turbine_shock": {
+      "type": "object",
+      "description": "EQ-8 cleansing-versus-financing case AEBITDA decay and FLNG1 turbine shock: the $100.0M RSA minimum-monthly-liquidity covenant breached by the $72.0M August 2026 trough; FY27 total AEBITDA decaying 27.07% from the $410.0M cleansing case to the $299.0M financing case; the open-market-cargo-sales plug rising 5.6x from $30.0M to $168.0M (67.2% of the $250.0M base New NFE financing-case AEBITDA); and the 24-day post-closing FLNG1 turbine outage.",
+      "additionalProperties": false,
+      "required": [
+        "rsa_minimum_monthly_liquidity_covenant_millions", "aug_2026_liquidity_trough_millions",
+        "fy27_total_aebitda_cleansing_case_millions", "fy27_total_aebitda_financing_case_millions",
+        "fy27_aebitda_decay_pct", "fy27_base_new_nfe_aebitda_financing_case_millions",
+        "fy27_open_market_cargo_sales_cleansing_millions", "fy27_open_market_cargo_sales_financing_millions",
+        "open_cargo_sales_plug_multiplier", "open_cargo_sales_share_of_base_aebitda_pct",
+        "flng1_turbine_outage_post_closing_days"
+      ],
+      "properties": {
+        "rsa_minimum_monthly_liquidity_covenant_millions": {"$ref": "#/$defs/money_m"},
+        "aug_2026_liquidity_trough_millions": {"$ref": "#/$defs/money_m", "description": "72.0 < 100.0 covenant: a 28.0 breach depth."},
+        "fy27_total_aebitda_cleansing_case_millions": {"$ref": "#/$defs/money_m"},
+        "fy27_total_aebitda_financing_case_millions": {"$ref": "#/$defs/money_m"},
+        "fy27_aebitda_decay_pct": {"$ref": "#/$defs/pct_reduction", "description": "(410.0 - 299.0) / 410.0 = 27.07 (two-decimal rounding)."},
+        "fy27_base_new_nfe_aebitda_financing_case_millions": {"$ref": "#/$defs/money_m"},
+        "fy27_open_market_cargo_sales_cleansing_millions": {"$ref": "#/$defs/money_m"},
+        "fy27_open_market_cargo_sales_financing_millions": {"$ref": "#/$defs/money_m"},
+        "open_cargo_sales_plug_multiplier": {"$ref": "#/$defs/multiple", "description": "168.0 / 30.0 = 5.6."},
+        "open_cargo_sales_share_of_base_aebitda_pct": {"$ref": "#/$defs/pct_share", "description": "168.0 / 250.0 = 67.2."},
+        "flng1_turbine_outage_post_closing_days": {"$ref": "#/$defs/days", "description": "24 days post-closing (2026-09-11 + 24 = 2026-10-05)."}
+      }
+    },
+    "catalyst_calendar": {
+      "type": "array",
+      "description": "Hard-date catalyst and forbearance calendar (ISO YYYY-MM-DD), spanning the 2025-11-28 first missed RCF interest payment through the 2029-09-11 Series A mandatory conversion. Anchors the 10-day Project Lady forbearance window (2026-01-13 effective to 2026-01-23 termination), the EWHC sanction (2026-06-26), SDNY Chapter 15 recognition (2026-07-14), the 2026-09-11 Restructuring Effective Date, the FLNG1 turbine outage (closing + 24 days = 2026-10-05), and the year-3 conversion (closing + 3 years).",
+      "minItems": 10,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["date", "event"],
+        "properties": {
+          "date": {"type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$"},
+          "event": {"type": "string", "minLength": 1},
+          "source": {"type": "string"}
+        }
+      }
+    }
+  },
+  "$defs": {
+    "money_usd": {"type": "number", "minimum": 0},
+    "money_m": {"type": "number", "minimum": 0},
+    "volume_b": {"type": "number", "exclusiveMinimum": 0},
+    "pct_share": {"type": "number", "minimum": 0, "maximum": 100},
+    "pct_reduction": {"type": "number", "minimum": 0, "maximum": 100},
+    "multiple": {"type": "number", "minimum": 0},
+    "days": {"type": "integer", "minimum": 0},
+    "facility_count": {"type": "integer", "minimum": 1},
+    "shares": {"type": "integer", "minimum": 0}
+  }
+}

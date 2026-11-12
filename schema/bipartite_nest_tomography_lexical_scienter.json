@@ -1,0 +1,230 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:bipartite_nest_tomography_lexical_scienter.json",
+  "title": "Bipartite Nest Tomography and Graph-Filtered Lexical Scienter Schema",
+  "description": "Formal JSON Schema for SPEC-BIPARTITE-NEST-TOMOGRAPHY-AND-LEXICAL-SCIENTER-v1.0 validating the temporal bipartite elite-shell projection G_U(t) = B_t B_t^T, the six-shell generational metamorphosis chain with dynastic and mentorship edge-inheritance operators, the pre-silicon townhouse bisociation amplification bound, the strict multi-modal active-degree evidentiary sieve, the Groff master-calendar co-occurrence matrix, the sham-privilege Boolean product, the graph-filtered lexical scienter score, and the Milkovich disclosed-facts matrix.",
+  "type": "object",
+  "required": ["specification_id", "version", "license", "bipartite_projection", "pre_silicon_bisociation", "active_degree_sieve", "groff_cooccurrence_matrix", "sham_privilege_piercing", "lexical_scienter", "milkovich_matrix", "verification_vectors"],
+  "additionalProperties": false,
+  "properties": {
+    "specification_id": { "type": "string", "const": "SPEC-BIPARTITE-NEST-TOMOGRAPHY-AND-LEXICAL-SCIENTER-v1.0" },
+    "version": { "type": "string", "const": "1.0" },
+    "license": { "type": "string", "const": "Unlicense" },
+    "bipartite_projection": {
+      "type": "object", "additionalProperties": false,
+      "required": ["projection_equation", "shell_metamorphosis_chain", "edge_inheritance_operators", "conservation_invariants", "liquidation_2019"],
+      "properties": {
+        "projection_equation": { "type": "string", "const": "G_U(t) = B_t B_t^T" },
+        "shell_metamorphosis_chain": {
+          "type": "array", "minItems": 6, "maxItems": 6,
+          "items": { "type": "object", "additionalProperties": false, "required": ["shell_id", "name", "charter_window", "lineage_carriers", "liquidation_trigger"], "properties": {
+            "shell_id": { "type": "string", "pattern": "^v[1-6]$" }, "name": { "type": "string" },
+            "charter_window": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{4}$" },
+            "lineage_carriers": { "type": "array", "minItems": 3, "items": { "type": "string" } },
+            "liquidation_trigger": { "type": "string" }
+          } }
+        },
+        "edge_inheritance_operators": {
+          "type": "array", "minItems": 3, "maxItems": 3,
+          "items": { "type": "object", "additionalProperties": false, "required": ["chain_id", "operator", "source_principal", "successor_principal", "anchor"], "properties": {
+            "chain_id": { "type": "string", "enum": ["A", "B", "C"] },
+            "operator": { "type": "string", "enum": ["Phi_Dynastic", "Phi_Mentorship"] },
+            "source_principal": { "type": "string" }, "successor_principal": { "type": "string" },
+            "anchor": { "type": "string" }
+          } }
+        },
+        "conservation_invariants": {
+          "type": "object", "additionalProperties": false,
+          "required": ["rho_conserve_min", "delta_t_shell_months_max", "surviving_subset_normalization"],
+          "properties": {
+            "rho_conserve_min": { "type": "number", "const": 0.85 },
+            "delta_t_shell_months_max": { "type": "integer", "const": 48 },
+            "surviving_subset_normalization": { "type": "boolean", "const": true }
+          }
+        },
+        "liquidation_2019": {
+          "type": "object", "additionalProperties": false,
+          "required": ["collapse_year_month", "successor_charter_year_month", "delta_t_shell_months", "surviving_principal_subset", "severed_principals", "edges_pre_liquidation", "edges_post_liquidation", "rho_conserve", "median_principal_latency_months", "max_principal_latency_months"],
+          "properties": {
+            "collapse_year_month": { "type": "string", "const": "2019-07" },
+            "successor_charter_year_month": { "type": "string", "const": "2020-03" },
+            "delta_t_shell_months": { "type": "integer", "const": 8 },
+            "surviving_principal_subset": { "type": "array", "minItems": 7, "maxItems": 7, "items": { "type": "string" } },
+            "severed_principals": { "type": "array", "minItems": 3, "maxItems": 3, "items": { "type": "string" } },
+            "edges_pre_liquidation": { "type": "integer", "const": 21 },
+            "edges_post_liquidation": { "type": "integer", "const": 18 },
+            "rho_conserve": { "type": "number", "minimum": 0.85, "maximum": 1.0 },
+            "median_principal_latency_months": { "type": "integer", "maximum": 48 },
+            "max_principal_latency_months": { "type": "integer", "minimum": 1 }
+          }
+        }
+      }
+    },
+    "pre_silicon_bisociation": {
+      "type": "object", "additionalProperties": false,
+      "required": ["hub_address", "zero_consideration_conveyance", "harvard_ped_seed_usd", "single_recall_probability", "cross_domain_recall_probability", "pairwise_recall_unassisted", "pairwise_recall_exocortex", "r_unassisted", "r_symbiotic", "amplification_min", "female_principal_integration"],
+      "properties": {
+        "hub_address": { "type": "string", "const": "9 East 71st Street" },
+        "zero_consideration_conveyance": {
+          "type": "object", "additionalProperties": false, "required": ["year_month", "consideration_usd", "exhibit"],
+          "properties": {
+            "year_month": { "type": "string", "const": "2011-07" },
+            "consideration_usd": { "type": "integer", "const": 0 },
+            "exhibit": { "type": "string", "const": "SDNY GX-400" }
+          }
+        },
+        "harvard_ped_seed_usd": { "type": "integer", "const": 6500000 },
+        "single_recall_probability": { "type": "number", "const": 0.8187 },
+        "cross_domain_recall_probability": { "type": "number", "const": 0.9997 },
+        "pairwise_recall_unassisted": { "type": "number", "const": 0.01 },
+        "pairwise_recall_exocortex": { "type": "number", "const": 0.98 },
+        "r_unassisted": { "type": "number", "const": 0.008185 },
+        "r_symbiotic": { "type": "number", "const": 0.8021 },
+        "amplification_min": { "type": "number", "const": 97.0 },
+        "female_principal_integration": { "type": "array", "minItems": 4, "maxItems": 4, "items": { "type": "string" } }
+      }
+    },
+    "active_degree_sieve": {
+      "type": "object", "additionalProperties": false,
+      "required": ["threshold", "channels", "node_cohorts", "regime_census"],
+      "properties": {
+        "threshold": { "type": "integer", "const": 3 },
+        "channels": {
+          "type": "array", "minItems": 4, "maxItems": 4,
+          "items": { "type": "object", "additionalProperties": false, "required": ["channel_id", "predicate"], "properties": {
+            "channel_id": { "type": "integer", "minimum": 1, "maximum": 4 }, "predicate": { "type": "string" }
+          } }
+        },
+        "node_cohorts": {
+          "type": "array", "minItems": 14, "maxItems": 14,
+          "items": { "type": "object", "additionalProperties": false, "required": ["node", "emails_post_2008", "groff_calendar_entries", "financial_flow_usd", "island_ranch_lodge_visits", "d_active", "regime"], "properties": {
+            "node": { "type": "string" }, "emails_post_2008": { "type": "integer", "minimum": 0 },
+            "groff_calendar_entries": { "type": "integer", "minimum": 0 },
+            "financial_flow_usd": { "type": "integer", "minimum": 0 },
+            "island_ranch_lodge_visits": { "type": "integer", "minimum": 0 },
+            "d_active": { "type": "integer", "minimum": 0, "maximum": 4 },
+            "regime": { "type": "string", "enum": ["REGIME_3_ACTIVE_INSIDER", "REGIME_2_REVOLVING_DOOR_TRANSITION", "REGIME_1_SCREENING_WASHOUT_WITNESS", "REGIME_0_COLD_DIRECTORY_BASELINE"] }
+          } }
+        },
+        "regime_census": {
+          "type": "object", "additionalProperties": false,
+          "required": ["regime_3_nodes", "regime_2_nodes", "regime_1_nodes", "regime_0_cohort_size"],
+          "properties": {
+            "regime_3_nodes": { "type": "integer", "const": 10 }, "regime_2_nodes": { "type": "integer", "const": 1 },
+            "regime_1_nodes": { "type": "integer", "const": 2 }, "regime_0_cohort_size": { "type": "integer", "const": 1500 }
+          }
+        }
+      }
+    },
+    "groff_cooccurrence_matrix": {
+      "type": "object", "additionalProperties": false,
+      "required": ["operator", "clusters", "total_pairwise_cooccurrences"],
+      "properties": {
+        "operator": { "type": "string", "const": "C_ij(Delta_tau) = sum_{t_a in T_i} sum_{t_b in T_j} I(|t_a - t_b| <= Delta_tau)" },
+        "clusters": {
+          "type": "array", "minItems": 3, "maxItems": 3,
+          "items": { "type": "object", "additionalProperties": false, "required": ["cluster_id", "label", "window", "delta_tau", "principals", "pairwise_cooccurrences", "pin_cite"], "properties": {
+            "cluster_id": { "type": "integer", "minimum": 1, "maximum": 3 }, "label": { "type": "string" },
+            "window": { "type": "string" }, "delta_tau": { "type": "string" },
+            "principals": { "type": "array", "minItems": 4, "maxItems": 6, "items": { "type": "string" } },
+            "pairwise_cooccurrences": { "type": "integer", "minimum": 6, "maximum": 15 },
+            "pin_cite": { "type": "string" }
+          } }
+        },
+        "total_pairwise_cooccurrences": { "type": "integer", "const": 31 }
+      }
+    },
+    "sham_privilege_piercing": {
+      "type": "object", "additionalProperties": false,
+      "required": ["boolean_product", "gamma_sham", "authorities", "message_tests", "label_discipline"],
+      "properties": {
+        "boolean_product": { "type": "string", "const": "Privilege_Valid(m) = I(Predominant_Legal_Purpose_Upjohn(m)=1) * I(Third_Party_Present(m)=0) * I(Rule_502_Crime_Fraud_Exception(m)=0)" },
+        "gamma_sham": { "type": "number", "const": 1.5 },
+        "authorities": { "type": "array", "minItems": 4, "items": { "type": "string" }, "contains": { "type": "string", "const": "Upjohn Co. v. United States, 449 U.S. 383, 389-397 (1981)" } },
+        "message_tests": {
+          "type": "array", "minItems": 3,
+          "items": { "type": "object", "additionalProperties": false, "required": ["message_id", "posture", "predominant_legal_purpose", "third_party_present", "rule_502_exception_predicate", "privilege_valid"], "properties": {
+            "message_id": { "type": "string" },
+            "posture": { "type": "string", "enum": ["SHAM_COUNSEL_ROUTED", "GENUINE_LEGAL_ADVICE"] },
+            "predominant_legal_purpose": { "type": "integer", "enum": [0, 1] },
+            "third_party_present": { "type": "integer", "enum": [0, 1] },
+            "rule_502_exception_predicate": { "type": "integer", "enum": [0, 1] },
+            "privilege_valid": { "type": "integer", "enum": [0, 1] }
+          } }
+        },
+        "label_discipline": {
+          "type": "object", "additionalProperties": false,
+          "required": ["statutory_crime_labels_reserved_for", "structural_accounting_descriptors"],
+          "properties": {
+            "statutory_crime_labels_reserved_for": { "type": "string" },
+            "structural_accounting_descriptors": { "type": "array", "minItems": 5, "items": { "type": "string" } }
+          }
+        }
+      }
+    },
+    "lexical_scienter": {
+      "type": "object", "additionalProperties": false,
+      "required": ["composite_equation", "bourjaily_preponderance_threshold", "bayes_prior", "likelihood_ratio_calendar", "likelihood_ratio_ledger", "posterior_joint_venture", "lambda_weights", "regex_classes", "principal_scores", "tie_break_key"],
+      "properties": {
+        "composite_equation": { "type": "string", "const": "S_Scienter(u) = I(d_Active(u) >= 3) * gamma_Sham(u) * sum_{k=1}^{4} lambda_k * Count(Regex_Class_k(C_u))" },
+        "bourjaily_preponderance_threshold": { "type": "number", "const": 0.50 },
+        "bayes_prior": { "type": "number", "const": 0.20 },
+        "likelihood_ratio_calendar": { "type": "number", "const": 6.0 },
+        "likelihood_ratio_ledger": { "type": "number", "const": 9.0 },
+        "posterior_joint_venture": { "type": "number", "minimum": 0.50, "maximum": 1.0 },
+        "lambda_weights": {
+          "type": "object", "additionalProperties": false, "required": ["lambda_1", "lambda_2", "lambda_3", "lambda_4"],
+          "properties": {
+            "lambda_1": { "type": "number", "const": 3.0 }, "lambda_2": { "type": "number", "const": 4.0 },
+            "lambda_3": { "type": "number", "const": 2.5 }, "lambda_4": { "type": "number", "const": 3.5 }
+          }
+        },
+        "regex_classes": {
+          "type": "array", "minItems": 4, "maxItems": 4,
+          "items": { "type": "object", "additionalProperties": false, "required": ["class_id", "name", "lambda_k", "trigger_set", "verbatim_pin_cite"], "properties": {
+            "class_id": { "type": "integer", "minimum": 1, "maximum": 4 }, "name": { "type": "string" },
+            "lambda_k": { "type": "number", "minimum": 2.5, "maximum": 4.0 },
+            "trigger_set": { "type": "array", "minItems": 2, "items": { "type": "string" } },
+            "verbatim_pin_cite": { "type": "string" }
+          } }
+        },
+        "principal_scores": {
+          "type": "array", "minItems": 14, "maxItems": 14,
+          "items": { "type": "object", "additionalProperties": false, "required": ["node", "d_active", "gamma_sham", "class_hits", "raw_weighted_sum", "s_scienter"], "properties": {
+            "node": { "type": "string" }, "d_active": { "type": "integer", "minimum": 0, "maximum": 4 },
+            "gamma_sham": { "type": "number", "enum": [1.0, 1.5] },
+            "class_hits": { "type": "array", "minItems": 4, "maxItems": 4, "items": { "type": "integer", "minimum": 0 } },
+            "raw_weighted_sum": { "type": "number", "minimum": 0.0 }, "s_scienter": { "type": "number", "minimum": 0.0 }
+          } }
+        },
+        "tie_break_key": { "type": "string", "const": "(d_active DESC, emails_post_2008 DESC)" }
+      }
+    },
+    "milkovich_matrix": {
+      "type": "object", "additionalProperties": false,
+      "required": ["controlling_authorities", "rows", "rule_26_preservation_invariant"],
+      "properties": {
+        "controlling_authorities": { "type": "array", "minItems": 2, "items": { "type": "string" }, "contains": { "type": "string", "const": "Milkovich v. Lorain Journal Co., 497 U.S. 1 (1990)" } },
+        "rows": {
+          "type": "array", "minItems": 6, "maxItems": 6,
+          "items": { "type": "object", "additionalProperties": false, "required": ["principal", "h0_null_hypothesis", "h1_analytical_falsification", "rule_26_counter_discovery_predicate"], "properties": {
+            "principal": { "type": "string" }, "h0_null_hypothesis": { "type": "string" },
+            "h1_analytical_falsification": { "type": "string" },
+            "rule_26_counter_discovery_predicate": { "type": "string" }
+          } }
+        },
+        "rule_26_preservation_invariant": { "type": "string" }
+      }
+    },
+    "verification_vectors": {
+      "type": "object", "additionalProperties": false,
+      "required": ["proof_script", "exit_code", "schema_line_bound", "vector_count"],
+      "properties": {
+        "proof_script": { "type": "string", "const": "proofs/verify_bipartite_nest_tomography_lexical_scienter.py" },
+        "exit_code": { "type": "integer", "const": 0 },
+        "schema_line_bound": { "type": "integer", "const": 300 },
+        "vector_count": { "type": "integer", "const": 6 }
+      }
+    }
+  }
+}

@@ -1,0 +1,964 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:collateral_reclamation_osint_ucc_9609_swarm.json",
+  "$comment": "PLAIN-ENGLISH LEGAL NOTICE: This file is an abstract institutional-cybernetic and statutory-compliance validation checklist (JSON Schema), NOT an accusation, indictment, or evidentiary filing. Every field encodes a published statutory citation, a public court decision, or a closed-form algebraic invariant. No field authorizes entry into protected curtilage, breach of the peace, sUAS image capture prohibited by state surveillance statutes such as Tex. Gov't Code 423.003, or any act prohibited by U.C.C. 9-609(b)(2), 15 U.S.C. 1692f(6) (consumer paper only, per 15 U.S.C. 1692a(5)), or 11 U.S.C. 362.",
+  "title": "Navigable-Airspace Collateral OSINT, U.C.C. 9-609 In-Place Electronic Immobilization & Ex Parte Writ of Replevin Swarm Schema",
+  "description": "Validates the four-stage collateral reclamation pipeline: (1) bulk U.C.C. 9-501 financing-statement and UVTA 4(b) / N.Y. DCL 273(b) badges-of-fraud triage, (2) county parcel deed join plus commercial SAR/EO orbital change detection (G2a: chassis class and footprint only), (3) 14 C.F.R. Part 107 navigable-airspace stand-off verification (G2b: serialized identity), and (4) the three-rail statutory execution router. Enforces the automatic-stay gate (11 U.S.C. 362), the present-right-to-possession gate (U.C.C. 9-609(b)(2); 15 U.S.C. 1692f(6) for consumer paper only), the airspace compliance proof (49 U.S.C. 40103(a)(1)-(2) & (b)(1)-(2); 14 C.F.R. 107.51(b)), the Tier 2 private-actor state sUAS surveillance-statute jurisdiction gate (Tex. Gov't Code 423.003, 423.004, 423.006; Cal. Civ. Code 1708.8; Restatement (Second) of Torts 159), the G1 graph proof, the G2 telemetry proof with a 24-hour frame-freshness bound, and the Theorem 1-4 numerical bounds including the U.C.C. 9-626(a)(3)-(4) commercial deficiency forfeiture.",
+  "type": "object",
+  "required": [
+    "spec_version",
+    "jurisdiction_context",
+    "public_records_only_attestation",
+    "automatic_stay_clear",
+    "present_right_to_possession_verified",
+    "airspace_compliance_proof",
+    "state_suas_jurisdiction_gate",
+    "g1_graph_proof",
+    "g2_telemetry_proof",
+    "execution_rail_selector",
+    "four_stage_reclamation_rubric",
+    "theorem_1_gated_curtilage_inversion",
+    "theorem_2_ucc_9609a2_immobilization",
+    "theorem_3_breach_of_peace_avoidance",
+    "theorem_4_stigmergic_locate_bounty",
+    "stage_4_rail_compliance_gate"
+  ],
+  "properties": {
+    "spec_version": {
+      "type": "string",
+      "const": "SPEC-COLLATERAL-RECLAMATION-OSINT-AND-UCC-9609-SWARM-v1.0"
+    },
+    "jurisdiction_context": {
+      "type": "string",
+      "pattern": "^US-[A-Z]{2}(-[A-Z0-9]{2,8})?$",
+      "description": "U.S. state or federal district context governing the replevin and Article 9 analysis."
+    },
+    "public_records_only_attestation": {
+      "type": "boolean",
+      "const": true,
+      "description": "Attests that every Stage 1-2 input derives from public statutory registries, public court dockets, or public parcel rolls."
+    },
+    "automatic_stay_clear": {
+      "type": "boolean",
+      "const": true,
+      "description": "11 U.S.C. 362 gate. Must be true. A false value blocks all U.C.C. 9-609 self-help, electronic immobilization, and replevin filing until a 11 U.S.C. 362(d) order for relief from stay issues."
+    },
+    "present_right_to_possession_verified": {
+      "type": "boolean",
+      "const": true,
+      "description": "U.C.C. 9-609(b)(2) present-right-to-possession gate (15 U.S.C. 1692f(6) for 15 U.S.C. 1692a(5) consumer paper only). Must be true. Requires a perfected security interest (UCC-1 file number plus authenticated security agreement) and an uncured default prior to any dispossession act; failure arms U.C.C. 9-625(b) and 9-626(a)(3)-(4)."
+    },
+    "airspace_compliance_proof": {
+      "type": "object",
+      "description": "14 C.F.R. Part 107 and 49 U.S.C. 40103(a)(1) stand-off verification proof. Observation must originate from publicly navigable airspace with zero physical curtilage intrusion.",
+      "required": [
+        "launch_on_public_or_authorized_land",
+        "launch_surface_type",
+        "altitude_agl_feet",
+        "part_107_remote_id_active",
+        "visual_line_of_sight",
+        "curtilage_physical_intrusion",
+        "tpm_2_0_frame_signature",
+        "gnss_ephemeris_attested"
+      ],
+      "properties": {
+        "launch_on_public_or_authorized_land": {
+          "type": "boolean",
+          "const": true
+        },
+        "launch_surface_type": {
+          "type": "string",
+          "enum": [
+            "PUBLIC_ROAD_RIGHT_OF_WAY",
+            "PUBLIC_PARKING_LOT",
+            "CONSENTING_ADJACENT_PARCEL",
+            "PUBLIC_AIRPORT_SURFACE"
+          ]
+        },
+        "altitude_agl_feet": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 400,
+          "description": "14 C.F.R. 107.51(b) ceiling of 400 ft AGL within navigable airspace."
+        },
+        "part_107_remote_id_active": {
+          "type": "boolean",
+          "const": true
+        },
+        "visual_line_of_sight": {
+          "type": "boolean",
+          "const": true,
+          "description": "14 C.F.R. 107.31 visual line of sight requirement."
+        },
+        "curtilage_physical_intrusion": {
+          "type": "boolean",
+          "const": false,
+          "description": "Must be false. Any physical intrusion into protected curtilage voids the lawful-vantage-point predicate (United States v. Causby, 328 U.S. 256; Florida v. Riley, 488 U.S. 445; Dow Chemical Co. v. United States, 476 U.S. 227)."
+        },
+        "tpm_2_0_frame_signature": {
+          "type": "boolean",
+          "const": true
+        },
+        "gnss_ephemeris_attested": {
+          "type": "boolean",
+          "const": true
+        }
+      },
+      "additionalProperties": false
+    },
+    "state_suas_jurisdiction_gate": {
+      "type": "object",
+      "description": "Tier 2 private-actor legality gate. Dow Chemical and Riley are state-action holdings that bind the Sheriff executing a writ; they do not license a private hunter node. The binding private-actor boundary is state sUAS surveillance statutes (Tex. Gov't Code 423.003(a) Class C misdemeanor capture of privately owned real property; 423.004 separate offense per image possessed/disclosed/used; 423.006 civil action) plus common-law aerial trespass (Causby; Restatement (Second) of Torts 159). Where permissive_state is false, the sUAS modality is hard-disabled and G2b must be satisfied from a non-sUAS vantage.",
+      "required": [
+        "permissive_state",
+        "restrictive_statute_screened",
+        "suas_sortie_executed",
+        "non_permissive_fallback_modality"
+      ],
+      "properties": {
+        "permissive_state": {
+          "type": "boolean",
+          "description": "True only where the forum state imposes no sUAS image-capture prohibition reaching privately owned commercial real property."
+        },
+        "restrictive_statute_screened": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "enum": [
+              "TEX_GOV_CODE_423_003",
+              "TEX_GOV_CODE_423_004",
+              "TEX_GOV_CODE_423_006",
+              "CAL_CIV_CODE_1708_8",
+              "COMMON_LAW_AERIAL_TRESPASS_RESTATEMENT_159",
+              "NONE_IDENTIFIED"
+            ]
+          }
+        },
+        "suas_sortie_executed": {
+          "type": "boolean"
+        },
+        "non_permissive_fallback_modality": {
+          "type": "string",
+          "enum": [
+            "SAR_EO_SATELLITE",
+            "PUBLIC_ROW_GROUND_OPTICAL",
+            "PART_91_MANNED_AIRCRAFT",
+            "NOT_REQUIRED"
+          ],
+          "description": "Modality used to satisfy G2b_Serial when permissive_state is false. NOT_REQUIRED only where permissive_state is true."
+        }
+      },
+      "additionalProperties": false
+    },
+    "g1_graph_proof": {
+      "type": "object",
+      "description": "G1_Graph predicate: a verifiable relational path linking a defaulted U.C.C. 9-501 financing statement to a specific county parcel APN through UVTA 4(b) nominee entity filings.",
+      "required": [
+        "ucc1_file_number",
+        "ucc1_collateral_serial",
+        "debtor_entity_id",
+        "nominee_entity_id",
+        "nominee_parcel_apn",
+        "uvta_badges_matched",
+        "graph_path_edges",
+        "graph_path_verified"
+      ],
+      "properties": {
+        "ucc1_file_number": {
+          "type": "string",
+          "minLength": 4
+        },
+        "ucc1_collateral_serial": {
+          "type": "string",
+          "minLength": 4,
+          "description": "Serialized equipment description: OEM PIN, 17-character VIN, FAA N-number, USCG Official Number, container BIC code, or GPU skid serial."
+        },
+        "debtor_entity_id": {
+          "type": "string",
+          "minLength": 2
+        },
+        "nominee_entity_id": {
+          "type": "string",
+          "minLength": 2
+        },
+        "nominee_parcel_apn": {
+          "type": "string",
+          "pattern": "^[A-Z0-9][A-Z0-9.-]{3,31}$",
+          "description": "County Assessor Assessor Parcel Number for the candidate nominee parcel."
+        },
+        "uvta_badges_matched": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "enum": [
+              "TRANSFER_TO_INSIDER",
+              "RETENTION_OF_POSSESSION_OR_CONTROL",
+              "CONCEALMENT_OF_TRANSFER",
+              "ABSENCE_OF_CONSIDERATION",
+              "TRANSFER_AFTER_SUBSTANTIAL_DEBT_INCURRED",
+              "TRANSFER_OF_SUBSTANTIALLY_ALL_ASSETS",
+              "ABSENCE_OF_ADEQUATE_MEANS_TO_PAY_REMAINING_DEBTS",
+              "INSOLVENCY_AT_OR_SHORTLY_AFTER_TRANSFER",
+              "SHARED_REGISTERED_AGENT",
+              "SHARED_CMRA_SUITE",
+              "SHARED_ASN_SUBNET"
+            ]
+          },
+          "description": "UVTA 4(b) badges of fraud matched within the 24-month pre-default window."
+        },
+        "graph_path_edges": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 6
+        },
+        "graph_path_verified": {
+          "type": "boolean",
+          "const": true
+        }
+      },
+      "additionalProperties": false
+    },
+    "g2_telemetry_proof": {
+      "type": "object",
+      "description": "G2_Telemetry = G2a_Orbital AND G2b_Serial, a conjunction of two physically distinct apertures. G2a_Orbital: commercial SAR/EO imagery at 30-50 cm GSD resolving chassis bounding-box geometry, metallic backscatter, or shadow/stereo/DEM-fused height consistent with the OEM spec. A 30 cm pixel cannot resolve a ~10 mm stamped VIN/PIN plate (~30x below the resolution limit) and monostatic SAR yields no 3D height without shadow geometry, stereo pairs, or an external DEM, so G2a establishes class and footprint only. G2b_Serial: hardware-TPM-signed, GPS-ephemeris-attested stand-off evidence resolving the target's unique identifier (stamped chassis PIN/VIN plate, container BIC code, FAA N-number, USCG Official Number) or an active-transmitter RF match geobound to the same coordinates.",
+      "required": [
+        "sensor_modality",
+        "ground_sample_distance_cm",
+        "g2a_orbital_class_match",
+        "serial_or_vin_match",
+        "rf_beacon_match",
+        "frame_freshness_hours",
+        "sha256_frame_digest",
+        "tpm_signature_verified",
+        "gnss_ephemeris_attested",
+        "locate_probability"
+      ],
+      "properties": {
+        "sensor_modality": {
+          "type": "string",
+          "enum": [
+            "SAR_EO_SATELLITE",
+            "PART_107_SUAS_OPTICAL",
+            "PUBLIC_ROW_GROUND_OPTICAL",
+            "PART_91_MANNED_AIRCRAFT",
+            "FUSED_SAR_EO_SUAS"
+          ]
+        },
+        "ground_sample_distance_cm": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "maximum": 50,
+          "description": "Commercial SAR/EO resolution bound of 30 cm to 50 cm GSD. Class/footprint observable only; never a serial-plate observable."
+        },
+        "g2a_orbital_class_match": {
+          "type": "boolean",
+          "const": true,
+          "description": "G2a_Orbital predicate: chassis bounding-box geometry or SAR metallic backscatter consistent with the OEM specification on the UCC-1 schedule."
+        },
+        "serial_or_vin_match": {
+          "type": "boolean",
+          "const": true,
+          "description": "G2b_Serial optical predicate: stamped chassis PIN/VIN plate, container BIC code, FAA N-number, or USCG Official Number resolved at stand-off."
+        },
+        "rf_beacon_match": {
+          "type": "boolean",
+          "const": true,
+          "description": "G2b_Serial RF predicate, ACTIVE-TRANSMITTER ONLY: unencrypted IEEE 802.11/BLE MAC beacon, cellular/GNSS modem identifier, or active 315/433 MHz TPMS 32-bit sensor ID. Passive UHF EPC Gen2 (ISO 18000-63) backscatter tags are excluded by physics: a Gen2 tag has no battery and no transmitter and can only modulate-reflect an active ~900 MHz reader interrogation carrier, so a listen-only receiver at 400 ft AGL cannot detect one at any range."
+        },
+        "frame_freshness_hours": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "maximum": 24,
+          "description": "Age of the relied-upon G2b frame at the moment of ex parte affidavit filing. Stale imagery is the standard evidentiary attack on a CPLR 7102(c)(5) / CCP 512.010(b)(4) probable-cause showing and exposes the plaintiff on its CCP 515.010(a) / CPLR 7102(e) undertaking."
+        },
+        "sha256_frame_digest": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "tpm_signature_verified": {
+          "type": "boolean",
+          "const": true
+        },
+        "gnss_ephemeris_attested": {
+          "type": "boolean",
+          "const": true
+        },
+        "locate_probability": {
+          "type": "number",
+          "minimum": 0.94,
+          "maximum": 1,
+          "description": "Post-verification P(Location(A) in Parcel_k | Omega_Lawful) must clear the probable-cause threshold."
+        }
+      },
+      "additionalProperties": false
+    },
+    "execution_rail_selector": {
+      "type": "string",
+      "enum": [
+        "RAIL_A_JUDICIAL_REPLEVIN",
+        "RAIL_B_UCC_9609A2_IMMOBILIZE",
+        "RAIL_C_PUBLIC_ROW_SELF_HELP"
+      ],
+      "description": "Deterministic Stage 4 router output. RAIL_C is prohibited whenever located_inside_locked_gate is true or human_proximity_meters is below 50."
+    },
+    "four_stage_reclamation_rubric": {
+      "type": "object",
+      "required": [
+        "stage_1_ucc1_uvta_triage",
+        "stage_2_parcel_sar_eo_join",
+        "stage_3_part_107_standoff",
+        "stage_4_execution_router"
+      ],
+      "properties": {
+        "stage_1_ucc1_uvta_triage": {
+          "type": "object",
+          "required": [
+            "ucc1_bulk_ledger_ingested",
+            "pacer_stay_check_completed",
+            "uvta_badge_join_completed",
+            "insider_window_months"
+          ],
+          "properties": {
+            "ucc1_bulk_ledger_ingested": {
+              "type": "boolean",
+              "const": true
+            },
+            "pacer_stay_check_completed": {
+              "type": "boolean",
+              "const": true
+            },
+            "uvta_badge_join_completed": {
+              "type": "boolean",
+              "const": true
+            },
+            "insider_window_months": {
+              "type": "integer",
+              "const": 24
+            }
+          },
+          "additionalProperties": false
+        },
+        "stage_2_parcel_sar_eo_join": {
+          "type": "object",
+          "required": [
+            "candidate_parcels_after_graph_filter",
+            "sar_metallic_backscatter_detected",
+            "optical_bounding_box_match",
+            "revisit_hours"
+          ],
+          "properties": {
+            "candidate_parcels_after_graph_filter": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 5,
+              "description": "Relational graph filtering collapses the parcel search space to K <= 5."
+            },
+            "sar_metallic_backscatter_detected": {
+              "type": "boolean",
+              "const": true
+            },
+            "optical_bounding_box_match": {
+              "type": "boolean",
+              "const": true
+            },
+            "revisit_hours": {
+              "type": "number",
+              "exclusiveMinimum": 0,
+              "maximum": 24
+            }
+          },
+          "additionalProperties": false
+        },
+        "stage_3_part_107_standoff": {
+          "type": "object",
+          "required": [
+            "standoff_verification_completed",
+            "serialized_identification_captured",
+            "lawful_vantage_point"
+          ],
+          "properties": {
+            "standoff_verification_completed": {
+              "type": "boolean",
+              "const": true
+            },
+            "serialized_identification_captured": {
+              "type": "boolean",
+              "const": true
+            },
+            "lawful_vantage_point": {
+              "type": "boolean",
+              "const": true
+            }
+          },
+          "additionalProperties": false
+        },
+        "stage_4_execution_router": {
+          "type": "object",
+          "required": [
+            "located_inside_locked_gate",
+            "has_telemetric_interlock",
+            "equipment_stationary",
+            "human_proximity_meters",
+            "public_right_of_way"
+          ],
+          "properties": {
+            "located_inside_locked_gate": {
+              "type": "boolean"
+            },
+            "has_telemetric_interlock": {
+              "type": "boolean"
+            },
+            "equipment_stationary": {
+              "type": "boolean"
+            },
+            "human_proximity_meters": {
+              "type": "number",
+              "minimum": 0
+            },
+            "public_right_of_way": {
+              "type": "boolean"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "theorem_1_gated_curtilage_inversion": {
+      "type": "object",
+      "description": "Theorem 1: the Gated-Curtilage Catch-22 and the UCC-1 / parcel / navigable-airspace inversion. Writ issuance requires P(Location) >= theta_ProbableCause AND Trespass(Omega_Lawful) = 0.",
+      "required": [
+        "collateral_value_usd",
+        "legacy_cost_usd",
+        "legacy_locate_probability",
+        "swarm_cost_usd",
+        "swarm_locate_probability",
+        "ev_legacy_usd",
+        "ev_swarm_usd",
+        "recovery_multiplier",
+        "probable_cause_threshold"
+      ],
+      "properties": {
+        "collateral_value_usd": {
+          "type": "number",
+          "const": 450000
+        },
+        "legacy_cost_usd": {
+          "type": "number",
+          "const": 25000
+        },
+        "legacy_locate_probability": {
+          "type": "number",
+          "const": 0.12
+        },
+        "swarm_cost_usd": {
+          "type": "number",
+          "const": 350
+        },
+        "swarm_locate_probability": {
+          "type": "number",
+          "const": 0.94
+        },
+        "ev_legacy_usd": {
+          "type": "number",
+          "const": 29000
+        },
+        "ev_swarm_usd": {
+          "type": "number",
+          "const": 422650
+        },
+        "recovery_multiplier": {
+          "type": "number",
+          "const": 14.57
+        },
+        "probable_cause_threshold": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "maximum": 0.94
+        }
+      },
+      "additionalProperties": false
+    },
+    "theorem_2_ucc_9609a2_immobilization": {
+      "type": "object",
+      "description": "Theorem 2: U.C.C. 9-609(a)(2) in-place electronic immobilization versus kinetic extraction cost, with C_Negotiation = $8,400 over r_Space + L_Idle = $1,200/day yielding T* = 7 days and U.C.C. 9-612(b) 10-day non-consumer notification safe harbor.",
+      "required": [
+        "equipment_value_usd",
+        "c_kinetic_usd",
+        "c_immobilize_usd",
+        "cost_reduction_ratio",
+        "daily_holding_cost_usd",
+        "c_negotiation_usd",
+        "surrender_horizon_days",
+        "deadweight_holding_cost_usd",
+        "ucc_9612b_safe_harbor_days"
+      ],
+      "properties": {
+        "equipment_value_usd": {
+          "type": "number",
+          "const": 800000
+        },
+        "c_kinetic_usd": {
+          "type": "number",
+          "const": 45000
+        },
+        "c_immobilize_usd": {
+          "type": "number",
+          "const": 15
+        },
+        "cost_reduction_ratio": {
+          "type": "number",
+          "const": 3000
+        },
+        "daily_holding_cost_usd": {
+          "type": "number",
+          "const": 1200
+        },
+        "c_negotiation_usd": {
+          "type": "number",
+          "const": 8400
+        },
+        "surrender_horizon_days": {
+          "type": "integer",
+          "const": 7
+        },
+        "deadweight_holding_cost_usd": {
+          "type": "number",
+          "const": 8400
+        },
+        "ucc_9612b_safe_harbor_days": {
+          "type": "integer",
+          "const": 10
+        }
+      },
+      "additionalProperties": false
+    },
+    "theorem_3_breach_of_peace_avoidance": {
+      "type": "object",
+      "description": "Theorem 3: breach-of-the-peace liability avoidance and autonomous public right-of-way intercept. E[L_Breach] = p_Confrontation * (D_Conversion + D_Punitive + Delta_Deficiency). Commercial (non-consumer) collateral is governed by U.C.C. 9-625(b) noncompliance damages plus common-law conversion preserved by U.C.C. 1-103(b), and by the U.C.C. 9-626(a)(3)-(4) rebuttable-presumption deficiency forfeiture. FDCPA 15 U.S.C. 1692f(6)/1692k applies only to consumer paper per 15 U.S.C. 1692a(5).",
+      "required": [
+        "p_confrontation_human",
+        "d_total_usd",
+        "ev_liability_human_usd",
+        "p_confrontation_swarm",
+        "ev_liability_swarm_usd",
+        "liability_reduction_factor",
+        "r_safe_meters",
+        "secured_obligation_usd",
+        "complying_disposition_proceeds_usd",
+        "deficiency_forfeiture_usd",
+        "recoverable_deficiency_after_9626_presumption_usd",
+        "d_total_is_conservative_floor"
+      ],
+      "properties": {
+        "p_confrontation_human": {
+          "type": "number",
+          "const": 0.08
+        },
+        "d_total_usd": {
+          "type": "number",
+          "const": 175000,
+          "description": "Composite D_Conversion + D_Punitive + Delta_Deficiency. A deliberately conservative floor, not a ceiling."
+        },
+        "ev_liability_human_usd": {
+          "type": "number",
+          "const": 14000
+        },
+        "p_confrontation_swarm": {
+          "type": "number",
+          "const": 0.0001
+        },
+        "ev_liability_swarm_usd": {
+          "type": "number",
+          "const": 17.5
+        },
+        "liability_reduction_factor": {
+          "type": "number",
+          "const": 800
+        },
+        "r_safe_meters": {
+          "type": "number",
+          "const": 50
+        },
+        "secured_obligation_usd": {
+          "type": "number",
+          "const": 650000,
+          "description": "S + E + F, the secured obligation plus expenses and attorney's fees, on the Theorem 1 $450,000 excavator."
+        },
+        "complying_disposition_proceeds_usd": {
+          "type": "number",
+          "const": 450000,
+          "description": "Pi_Actual, the proceeds actually realized, used generously at full collateral liquidation value."
+        },
+        "deficiency_forfeiture_usd": {
+          "type": "number",
+          "const": 200000,
+          "description": "Delta_Deficiency = max(0, S + E + F - Pi_Actual) forfeited under U.C.C. 9-626(a)(3)-(4). Exceeds d_total_usd, confirming the composite is a floor."
+        },
+        "recoverable_deficiency_after_9626_presumption_usd": {
+          "type": "number",
+          "const": 0,
+          "description": "U.C.C. 9-626(a)(4) presumes the proceeds a complying disposition would have realized equal S + E + F, so the recoverable deficiency under 9-626(a)(3) collapses to zero unless the secured party rebuts the presumption."
+        },
+        "d_total_is_conservative_floor": {
+          "type": "boolean",
+          "const": true
+        }
+      },
+      "additionalProperties": false
+    },
+    "theorem_4_stigmergic_locate_bounty": {
+      "type": "object",
+      "description": "Theorem 4: two-tranche proof-of-location bounty settlement gated on G1_Graph AND G2_Telemetry, with a second tranche on WritOrPossession.",
+      "required": [
+        "v_note_usd",
+        "v_distressed_usd",
+        "v_located_usd",
+        "delta_v_usd",
+        "b_osint_usd",
+        "b_recovery_usd",
+        "b_locate_usd",
+        "creditor_rov",
+        "hunter_cost_usd",
+        "hunter_net_multiple"
+      ],
+      "properties": {
+        "v_note_usd": {
+          "type": "number",
+          "const": 500000
+        },
+        "v_distressed_usd": {
+          "type": "number",
+          "const": 40000
+        },
+        "v_located_usd": {
+          "type": "number",
+          "const": 380000
+        },
+        "delta_v_usd": {
+          "type": "number",
+          "const": 340000
+        },
+        "b_osint_usd": {
+          "type": "number",
+          "const": 10000
+        },
+        "b_recovery_usd": {
+          "type": "number",
+          "const": 24000
+        },
+        "b_locate_usd": {
+          "type": "number",
+          "const": 34000
+        },
+        "creditor_rov": {
+          "type": "number",
+          "const": 10.0
+        },
+        "hunter_cost_usd": {
+          "type": "number",
+          "const": 350
+        },
+        "hunter_net_multiple": {
+          "type": "number",
+          "const": 96.14
+        }
+      },
+      "additionalProperties": false
+    },
+    "stage_4_rail_compliance_gate": {
+      "type": "object",
+      "description": "Deterministic Stage 4 statutory execution router compliance gate. Encodes the three lawful rails and their mutually exclusive trigger predicates.",
+      "required": [
+        "rail_a_judicial_replevin",
+        "rail_b_ucc_9609a2_immobilize",
+        "rail_c_public_row_self_help",
+        "rail_c_prohibited_conditions"
+      ],
+      "properties": {
+        "rail_a_judicial_replevin": {
+          "type": "object",
+          "required": [
+            "statutory_authority",
+            "requires_locked_curtilage",
+            "requires_probable_cause_location",
+            "requires_frame_freshness_hours_max",
+            "requires_undertaking_filed"
+          ],
+          "properties": {
+            "statutory_authority": {
+              "type": "array",
+              "minItems": 3,
+              "items": {
+                "type": "string"
+              },
+              "description": "N.Y. CPLR 7102(c)(5), (d)(1) & (e); Cal. Civ. Proc. Code 512.010(b)(4), 512.070, 514.010(c)-(d) & 515.010(a); Fed. R. Civ. P. 64; Fuentes v. Shevin, 407 U.S. 67 (1972); Mitchell v. W.T. Grant Co., 416 U.S. 600 (1974). Lock-break authority is conditional (judicial direction plus non-delivery) and scoped to the private place specified in the writ (CCP 514.010(d))."
+            },
+            "requires_locked_curtilage": {
+              "type": "boolean",
+              "const": true
+            },
+            "requires_probable_cause_location": {
+              "type": "boolean",
+              "const": true
+            },
+            "requires_frame_freshness_hours_max": {
+              "type": "number",
+              "const": 24,
+              "description": "Maximum age of the relied-upon G2b frame at filing. Forecloses the removal-since-image-date staleness defense."
+            },
+            "requires_undertaking_filed": {
+              "type": "boolean",
+              "const": true,
+              "description": "CCP 515.010(a): no writ issues until the plaintiff files an undertaking of not less than twice the value of the defendant's interest. CPLR 7102(e): surety bound for not less than twice the value of the chattel."
+            }
+          },
+          "additionalProperties": false
+        },
+        "rail_b_ucc_9609a2_immobilize": {
+          "type": "object",
+          "required": [
+            "statutory_authority",
+            "requires_telemetric_interlock",
+            "requires_stationary_equipment",
+            "requires_zero_rpm_telemetry",
+            "requires_9611_notification_sent",
+            "notification_lead_days_min"
+          ],
+          "properties": {
+            "statutory_authority": {
+              "type": "array",
+              "minItems": 2,
+              "items": {
+                "type": "string"
+              },
+              "description": "U.C.C. 9-609(a)(2); U.C.C. 9-610; U.C.C. 9-611(b)-(c) (reasonable authenticated notification of disposition to debtor, secondary obligor, and competing secured parties/lienholders); U.C.C. 9-612(b) (10-day non-consumer safe harbor)."
+            },
+            "requires_telemetric_interlock": {
+              "type": "boolean",
+              "const": true
+            },
+            "requires_stationary_equipment": {
+              "type": "boolean",
+              "const": true
+            },
+            "requires_zero_rpm_telemetry": {
+              "type": "boolean",
+              "const": true
+            },
+            "requires_9611_notification_sent": {
+              "type": "boolean",
+              "const": true,
+              "description": "Omitting the 9-611 notification is Part 6 noncompliance that arms the 9-626(a)(3)-(4) deficiency forfeiture."
+            },
+            "notification_lead_days_min": {
+              "type": "number",
+              "const": 10,
+              "description": "U.C.C. 9-612(b): in a non-consumer transaction, notification sent after default and 10 days or more before the earliest time of disposition is sent within a reasonable time."
+            }
+          },
+          "additionalProperties": false
+        },
+        "rail_c_public_row_self_help": {
+          "type": "object",
+          "required": [
+            "statutory_authority",
+            "requires_public_right_of_way",
+            "requires_min_human_proximity_meters",
+            "requires_zero_contact"
+          ],
+          "properties": {
+            "statutory_authority": {
+              "type": "array",
+              "minItems": 2,
+              "items": {
+                "type": "string"
+              },
+              "description": "U.C.C. 9-609(b)(2); U.C.C. 9-625(b) noncompliance damages; U.C.C. 9-626(a)(3)-(4) commercial deficiency forfeiture; U.C.C. 1-103(b) preserved common-law conversion; Williams v. Ford Motor Credit Co., 674 F.2d 717; Clarin v. Minnesota Repossessors, Inc., 198 F.3d 661. FDCPA 15 U.S.C. 1692f(6)/1692k is added only where the pool includes consumer paper within 15 U.S.C. 1692a(5)."
+            },
+            "requires_public_right_of_way": {
+              "type": "boolean",
+              "const": true
+            },
+            "requires_min_human_proximity_meters": {
+              "type": "number",
+              "const": 50
+            },
+            "requires_zero_contact": {
+              "type": "boolean",
+              "const": true
+            }
+          },
+          "additionalProperties": false
+        },
+        "rail_c_prohibited_conditions": {
+          "type": "array",
+          "minItems": 2,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "enum": [
+              "LOCATED_INSIDE_LOCKED_GATE",
+              "HUMAN_PROXIMITY_BELOW_50_METERS",
+              "CURTILAGE_PHYSICAL_INTRUSION",
+              "AUTOMATIC_STAY_ACTIVE",
+              "PRESENT_RIGHT_TO_POSSESSION_UNVERIFIED"
+            ]
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "execution_rail_selector": {
+            "const": "RAIL_C_PUBLIC_ROW_SELF_HELP"
+          }
+        },
+        "required": [
+          "execution_rail_selector"
+        ]
+      },
+      "then": {
+        "properties": {
+          "four_stage_reclamation_rubric": {
+            "properties": {
+              "stage_4_execution_router": {
+                "properties": {
+                  "located_inside_locked_gate": {
+                    "const": false
+                  },
+                  "public_right_of_way": {
+                    "const": true
+                  },
+                  "human_proximity_meters": {
+                    "minimum": 50
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "execution_rail_selector": {
+            "const": "RAIL_B_UCC_9609A2_IMMOBILIZE"
+          }
+        },
+        "required": [
+          "execution_rail_selector"
+        ]
+      },
+      "then": {
+        "properties": {
+          "four_stage_reclamation_rubric": {
+            "properties": {
+              "stage_4_execution_router": {
+                "properties": {
+                  "has_telemetric_interlock": {
+                    "const": true
+                  },
+                  "equipment_stationary": {
+                    "const": true
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "execution_rail_selector": {
+            "const": "RAIL_A_JUDICIAL_REPLEVIN"
+          }
+        },
+        "required": [
+          "execution_rail_selector"
+        ]
+      },
+      "then": {
+        "properties": {
+          "g1_graph_proof": {
+            "properties": {
+              "graph_path_verified": {
+                "const": true
+              }
+            }
+          },
+          "g2_telemetry_proof": {
+            "properties": {
+              "locate_probability": {
+                "minimum": 0.94
+              },
+              "frame_freshness_hours": {
+                "maximum": 24
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "state_suas_jurisdiction_gate": {
+            "properties": {
+              "permissive_state": {
+                "const": false
+              }
+            },
+            "required": [
+              "permissive_state"
+            ]
+          }
+        },
+        "required": [
+          "state_suas_jurisdiction_gate"
+        ]
+      },
+      "then": {
+        "properties": {
+          "state_suas_jurisdiction_gate": {
+            "properties": {
+              "suas_sortie_executed": {
+                "const": false
+              },
+              "non_permissive_fallback_modality": {
+                "enum": [
+                  "SAR_EO_SATELLITE",
+                  "PUBLIC_ROW_GROUND_OPTICAL",
+                  "PART_91_MANNED_AIRCRAFT"
+                ]
+              }
+            }
+          },
+          "g2_telemetry_proof": {
+            "properties": {
+              "sensor_modality": {
+                "enum": [
+                  "SAR_EO_SATELLITE",
+                  "PUBLIC_ROW_GROUND_OPTICAL",
+                  "PART_91_MANNED_AIRCRAFT"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  ],
+  "additionalProperties": false
+}

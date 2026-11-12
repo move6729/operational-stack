@@ -1,0 +1,215 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:kernel_aligned_capital_allocation_v1.0.json",
+  "title": "KernelAlignedCapitalAllocation",
+  "description": "Schema for the five Kernel invariants of sovereign capital allocation: negative-cost reinsurance float, FX-duration-matched JPY sogo shosha carry, thermodynamic operating-segment EBT, sovereign T-bill clearinghouse, and operating stub absolute yield (SPEC-KERNEL-ALIGNED-CAPITAL-ALLOCATION-AND-FLOAT-CLEARINGHOUSE-v1.0).",
+  "type": "object",
+  "properties": {
+    "analysis_id": { "type": "string", "pattern": "^KACA-[A-Fa-f0-9]{12}$" },
+    "jurisdiction_context": { "type": "string", "default": "US" },
+    "cfaa_compliant": { "type": "boolean", "const": true },
+    "reporting_entity": { "type": "string" },
+    "cik": { "type": "string", "pattern": "^[0-9]{10}$" },
+    "fiscal_baseline": { "type": "string" },
+    "negative_cost_float": {
+      "type": "object",
+      "description": "Invariant I: after-tax cost of reinsurance float versus Neocloud recourse debt.",
+      "properties": {
+        "float_musd": { "type": "number", "minimum": 0.0 },
+        "earned_premium_musd": { "type": "number", "minimum": 0.0 },
+        "combined_ratio": { "type": "number", "exclusiveMinimum": 0.0, "maximum": 2.0 },
+        "pre_tax_underwriting_ebt_musd": { "type": "number" },
+        "after_tax_underwriting_profit_musd": { "type": "number" },
+        "effective_after_tax_cost_of_float_pct": { "type": "number", "maximum": 0.0 },
+        "effective_pre_tax_cost_of_float_pct": { "type": "number", "maximum": 0.0 },
+        "neocloud_debt_cost_low_pct": { "type": "number", "minimum": 0.0 },
+        "neocloud_debt_cost_high_pct": { "type": "number", "minimum": 0.0 },
+        "financing_spread_low_bps": { "type": "number", "minimum": 1300.0 },
+        "financing_spread_high_bps": { "type": "number", "minimum": 1300.0 },
+        "negative_cost_proven": { "type": "boolean" }
+      },
+      "required": [
+        "float_musd",
+        "earned_premium_musd",
+        "combined_ratio",
+        "pre_tax_underwriting_ebt_musd",
+        "after_tax_underwriting_profit_musd",
+        "effective_after_tax_cost_of_float_pct",
+        "effective_pre_tax_cost_of_float_pct",
+        "neocloud_debt_cost_low_pct",
+        "neocloud_debt_cost_high_pct",
+        "financing_spread_low_bps",
+        "financing_spread_high_bps",
+        "negative_cost_proven"
+      ],
+      "additionalProperties": false
+    },
+    "jpy_sogo_shosha_carry": {
+      "type": "object",
+      "description": "Invariant II: FX-duration-matched physical trade carry between JPY senior notes and sogo shosha equity stakes.",
+      "properties": {
+        "jpy_notes_par_billions_jpy": { "type": "number", "minimum": 0.0 },
+        "jpy_notes_carrying_musd": { "type": "number", "minimum": 0.0 },
+        "weighted_average_coupon_pct": { "type": "number", "minimum": 0.0 },
+        "annual_interest_musd": { "type": "number", "minimum": 0.0 },
+        "sogo_shosha_cost_basis_musd": { "type": "number", "minimum": 0.0 },
+        "sogo_shosha_market_value_musd": { "type": "number", "minimum": 0.0 },
+        "annual_dividends_musd": { "type": "number", "minimum": 0.0 },
+        "dividend_yield_on_cost_pct": { "type": "number", "minimum": 0.0 },
+        "coverage_ratio": { "type": "number", "minimum": 4.5 },
+        "net_cash_carry_musd": { "type": "number" },
+        "unrealized_gain_musd": { "type": "number", "minimum": 0.0 },
+        "fx_spot_variance_neutralized": { "type": "boolean" }
+      },
+      "required": [
+        "jpy_notes_par_billions_jpy",
+        "jpy_notes_carrying_musd",
+        "weighted_average_coupon_pct",
+        "annual_interest_musd",
+        "sogo_shosha_cost_basis_musd",
+        "sogo_shosha_market_value_musd",
+        "annual_dividends_musd",
+        "dividend_yield_on_cost_pct",
+        "coverage_ratio",
+        "net_cash_carry_musd",
+        "unrealized_gain_musd",
+        "fx_spot_variance_neutralized"
+      ],
+      "additionalProperties": false
+    },
+    "thermodynamic_operating_segments": {
+      "type": "object",
+      "description": "Invariant III: hard-substrate operating EBT reconciliation and stigmergic zero-C2 headquarters ratio.",
+      "properties": {
+        "segment_ebt_musd": {
+          "type": "object",
+          "properties": {
+            "insurance_underwriting": { "type": "number" },
+            "insurance_investment_income": { "type": "number" },
+            "bnsf_railway": { "type": "number" },
+            "berkshire_hathaway_energy": { "type": "number" },
+            "manufacturing": { "type": "number" },
+            "service_and_retailing": { "type": "number" },
+            "pilot_travel_centers": { "type": "number" },
+            "mclane": { "type": "number" }
+          },
+          "required": [
+            "insurance_underwriting",
+            "insurance_investment_income",
+            "bnsf_railway",
+            "berkshire_hathaway_energy",
+            "manufacturing",
+            "service_and_retailing",
+            "pilot_travel_centers",
+            "mclane"
+          ],
+          "additionalProperties": false
+        },
+        "total_segment_ebt_musd": { "type": "number" },
+        "net_operating_cash_flow_musd": { "type": "number" },
+        "neocloud_1h26_fcf_musd": { "type": "number" },
+        "cash_flow_swing_musd": { "type": "number" },
+        "hq_headcount": { "type": "integer", "minimum": 1 },
+        "total_employees": { "type": "integer", "minimum": 1 },
+        "hq_ratio": { "type": "number", "exclusiveMinimum": 0.0, "maximum": 0.0001 },
+        "zero_c2_federation_proven": { "type": "boolean" }
+      },
+      "required": [
+        "segment_ebt_musd",
+        "total_segment_ebt_musd",
+        "net_operating_cash_flow_musd",
+        "neocloud_1h26_fcf_musd",
+        "cash_flow_swing_musd",
+        "hq_headcount",
+        "total_employees",
+        "hq_ratio",
+        "zero_c2_federation_proven"
+      ],
+      "additionalProperties": false
+    },
+    "sovereign_tbill_clearinghouse": {
+      "type": "object",
+      "description": "Invariant IV: sovereign T-bill liquidity reserve, self-imposed catastrophe reserve floor ($30,000M), and 13F concentration.",
+      "properties": {
+        "q1_insurance_other_cash_musd": { "type": "number", "minimum": 0.0 },
+        "q1_us_tbill_musd": { "type": "number", "minimum": 0.0 },
+        "q1_insurance_liquidity_musd": { "type": "number", "minimum": 0.0 },
+        "q1_consolidated_peak_musd": { "type": "number", "minimum": 0.0 },
+        "q2_consolidated_liquidity_musd": { "type": "number", "minimum": 0.0 },
+        "statutory_catastrophe_floor_musd": {
+          "type": "number",
+          "minimum": 0.0,
+          "description": "Permanent self-imposed catastrophe reserve floor ($30,000M policy floor) in USD millions."
+        },
+        "q2_deployable_dry_powder_musd": { "type": "number", "minimum": 0.0 },
+        "top10_13f_concentration_pct": { "type": "number", "minimum": 0.0, "maximum": 100.0 },
+        "top10_13f_market_value_musd": { "type": "number", "minimum": 0.0 },
+        "total_13f_portfolio_musd": { "type": "number", "minimum": 0.0 },
+        "clearinghouse_call_option_proven": { "type": "boolean" }
+      },
+      "required": [
+        "q1_insurance_other_cash_musd",
+        "q1_us_tbill_musd",
+        "q1_insurance_liquidity_musd",
+        "q1_consolidated_peak_musd",
+        "q2_consolidated_liquidity_musd",
+        "statutory_catastrophe_floor_musd",
+        "q2_deployable_dry_powder_musd",
+        "top10_13f_concentration_pct",
+        "top10_13f_market_value_musd",
+        "total_13f_portfolio_musd",
+        "clearinghouse_call_option_proven"
+      ],
+      "additionalProperties": false
+    },
+    "sotp_operating_stub_valuation": {
+      "type": "object",
+      "description": "Invariant V: residual operating stub EV and absolute pre-tax/after-tax cash yield against the risk-free UST and negative cost of float.",
+      "properties": {
+        "market_cap_usd_m": { "type": "number", "minimum": 0.0 },
+        "gross_liquid_and_public_assets_usd_m": { "type": "number", "minimum": 0.0 },
+        "parent_debt_usd_m": { "type": "number", "minimum": 0.0 },
+        "net_liquid_and_public_backing_usd_m": { "type": "number" },
+        "implied_operating_stub_ev_usd_m": { "type": "number" },
+        "pure_operating_stub_ebt_usd_m": { "type": "number" },
+        "stub_pre_tax_yield_pct": { "type": "number" },
+        "stub_after_tax_yield_pct": { "type": "number" },
+        "risk_free_ust_rate_pct": { "type": "number", "minimum": 0.0 },
+        "spread_over_ust_pre_tax_bps": { "type": "number" },
+        "spread_over_ust_after_tax_bps": { "type": "number" },
+        "internal_spread_over_float_bps": { "type": "number" }
+      },
+      "required": [
+        "market_cap_usd_m",
+        "gross_liquid_and_public_assets_usd_m",
+        "parent_debt_usd_m",
+        "net_liquid_and_public_backing_usd_m",
+        "implied_operating_stub_ev_usd_m",
+        "pure_operating_stub_ebt_usd_m",
+        "stub_pre_tax_yield_pct",
+        "stub_after_tax_yield_pct",
+        "risk_free_ust_rate_pct",
+        "spread_over_ust_pre_tax_bps",
+        "spread_over_ust_after_tax_bps",
+        "internal_spread_over_float_bps"
+      ],
+      "additionalProperties": false
+    },
+    "kernel_invariants_satisfied": { "type": "boolean" }
+  },
+  "required": [
+    "analysis_id",
+    "jurisdiction_context",
+    "cfaa_compliant",
+    "reporting_entity",
+    "cik",
+    "fiscal_baseline",
+    "negative_cost_float",
+    "jpy_sogo_shosha_carry",
+    "thermodynamic_operating_segments",
+    "sovereign_tbill_clearinghouse",
+    "sotp_operating_stub_valuation",
+    "kernel_invariants_satisfied"
+  ],
+  "additionalProperties": false
+}

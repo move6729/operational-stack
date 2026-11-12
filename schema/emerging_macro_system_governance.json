@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:emerging_macro_system_governance.json",
+  "title": "Emerging Macro System Governance & Actuarial Risk Schema",
+  "type": "object",
+  "required": [
+    "spec_version",
+    "jurisdiction_context",
+    "cfaa_compliance_attestation",
+    "macro_system_governance_metrics"
+  ],
+  "properties": {
+    "spec_version": {
+      "type": "string",
+      "const": "EMERGING-MACRO-SYSTEM-GOVERNANCE-v1.0"
+    },
+    "jurisdiction_context": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}$"
+    },
+    "cfaa_compliance_attestation": {
+      "type": "boolean",
+      "const": true
+    },
+    "macro_system_governance_metrics": {
+      "type": "object",
+      "required": [
+        "category_error_personhood_refuted",
+        "actuarial_dynamic_risk_pricing_enforced",
+        "unseverable_personal_liability_active"
+      ],
+      "properties": {
+        "category_error_personhood_refuted": {
+          "type": "boolean",
+          "const": true
+        },
+        "actuarial_dynamic_risk_pricing_enforced": {
+          "type": "boolean",
+          "const": true
+        },
+        "unseverable_personal_liability_active": {
+          "type": "boolean",
+          "const": true
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:pro_se_arbitrage_execution.json",
+  "title": "ProSeArbitrageExecutionPayload",
+  "type": "object",
+  "required": [
+    "spec_version",
+    "jurisdiction_context",
+    "cfaa_compliance_attestation",
+    "joint_defendants",
+    "service_method",
+    "regulatory_disgorgement_requested"
+  ],
+  "properties": {
+    "spec_version": {
+      "type": "string",
+      "const": "PRO-SE-ARBITRAGE-BYPASS-v1.0"
+    },
+    "jurisdiction_context": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}$"
+    },
+    "cfaa_compliance_attestation": {
+      "type": "boolean",
+      "const": true
+    },
+    "joint_defendants": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 2
+    },
+    "service_method": {
+      "type": "string",
+      "const": "PHYSICAL_CERTIFIED_MAIL_RRR"
+    },
+    "regulatory_disgorgement_requested": {
+      "type": "boolean",
+      "const": true
+    }
+  }
+}

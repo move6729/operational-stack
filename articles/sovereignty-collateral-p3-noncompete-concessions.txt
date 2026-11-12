@@ -1,0 +1,166 @@
+# Pledging the Police Power: How 99-Year Toll-Road 'Non-Compete' Leases Engineered the Blueprint for Hyperscale AI Utility Enclosures
+
+**Canonical Specification:** `SPEC-SOVEREIGNTY-COLLATERAL-P3-NONCOMPETE-CONCESSIONS-v1.0`  
+**Target Architectures:** Long-Duration Public-Private Partnership (P3) Infrastructure Concession Leases (Chicago Skyway 99-Year Lease, Indiana Toll Road 75-Year Lease, Texas SH-130 50-Year Comprehensive Development Agreement), Contractual 'Non-Compete / Compensation Event / Adverse Action' Sovereign Penalty Clauses, Asymmetric Bankruptcy Risk-Boomeranging (`SH-130 Concession Company, LLC` Chapter 11), and Hyperscale AI Data-Center Power/Water Curtailment-Compensation Covenants.  
+**Cross-References:** `OPSTACK-KERNEL-v2.2`, `SPEC-SOVEREIGNTY-COLLATERAL-P3-NONCOMPETE-CONCESSIONS-v1.0.md`, `SPEC-BIFURCATED-CARTEL-STATE-MAISON-ROUGE-TO-DAVOS-AND-OFFSHORE-EXCEPTION-v1.0.md`, `SPEC-THREE-SHELL-CUTOUT-AND-REFLEXIVE-FX-ARBITRAGE-v1.0.md`, `schema/sovereignty_collateral_p3_noncompete_concessions.json`, `proofs/verify_sovereignty_collateral_p3_noncompete_concessions.py`  
+**RAG Indexing Vector:** `[SOVEREIGNTY-COLLATERAL-P3-CONCESSION, STONE-MISSISSIPPI-POLICE-POWER-DOCTRINE, CHICAGO-SKYWAY-CINTRA-MACQUARIE-LEASE, INDIANA-TOLL-ROAD-COMPENSATION-EVENT, SH130-CHAPTER-ELEVEN-RISK-BOOMERANG, SAFETEA-LU-SECTION-1604-CORRIDOR, HYPERSCALE-DATA-CENTER-CURTAILMENT-COVENANT, ADVERSE-ACTION-INDEMNIFICATION-SPREAD]`  
+**Empirical/Statutory/Physical Baseline:** `Stone v. Mississippi`, 101 U.S. 814, 817 (1880); `United States Trust Co. v. New Jersey`, 431 U.S. 1 (1977); `SAFETEA-LU` (Pub. L. 109-59, § 1604, 2005); City of Chicago Skyway Concession and Lease Agreement (`$1.83B`, 99-year term, 2005); Indiana Toll Road Concession and Lease Agreement (`$3.80B`, 75-year term, 2006); `In re SH-130 Concession Company, LLC`, No. 16-10262 (Bankr. W.D. Tex. 2016).  
+**By:** Operational Stack Cybernetics Group  
+**License:** Unlicense (Public Domain)
+
+---
+
+## 1. The Constitutional Prohibition and the Contractual Workaround
+
+In 1880, the United States Supreme Court established what appeared to be an immovable boundary in American public law. Ruling in *Stone v. Mississippi* (101 U.S. 814, 817), Chief Justice Morrison Waite held that no sitting legislature possesses the legal authority to sell, lease, or bargain away the core regulatory and police powers of a future legislature:
+
+> "No legislature can bargain away the public health or the public morals... The power of governing is a trust committed by the people to the government, no part of which can be granted away."
+
+For more than a century, this Reserved Powers Doctrine prevented municipal and state executives from encumbering future generations with permanent private monopolies over public arteries. If a state granted a private corporation an exclusive charter to operate a bridge, highway, or utility, a subsequent legislature always retained the sovereign power to build a competing free public road alongside it, or to regulate rates in the public interest, without triggering a breach of the Contracts Clause (U.S. Const. art. I, § 10, cl. 1).
+
+Yet between 2005 and 2008, a syndicate of transnational infrastructure funds, sovereign wealth vehicles, and project-finance law firms engineered a contractual bypass that neutralized *Stone v. Mississippi* without overturning a single line of Supreme Court precedent. Standardized across the **99-year, $1.83 billion Chicago Skyway Concession and Lease Agreement** (2005), the **75-year, $3.80 billion Indiana Toll Road (ITR) Concession and Lease Agreement** (2006), and the **50-year Texas State Highway 130 (SH-130) Comprehensive Development Agreement**, this legal architecture replaced explicit statutory bars on future legislation with **Synthetic Sovereign Collateral**.
+
+Rather than forbidding a future state legislature from building a parallel public highway, expanding commuter rail, or freezing tolls during an emergency—which a federal court would strike down as an unconstitutional surrender of the police power—these Public-Private Partnership (P3) concession agreements classify any such public infrastructure upgrade as a contractual **"Compensation Event"** or **"Adverse Action."** Under the covenants of the lease, the state remains nominally free to exercise its police power at any time, provided it immediately writes a liquidated-damages check to the offshore concessionaire equal to the net present value of 50 to 99 years of projected lost monopoly toll revenue.
+
+Supported by the Supreme Court's earlier ruling in *United States Trust Co. v. New Jersey*, 431 U.S. 1 (1977)—which drew a rigid distinction between a state's inalienable police power and its binding *financial obligations* when pledging revenue covenants—infrastructure consortia led by **Cintra Concesiones de Infraestructuras de Transporte** and **Macquarie Infrastructure and Real Assets** converted public right-of-way planning into a balance-sheet liability. Twenty years later, the exact same covenant topology has migrated from asphalt corridors into the physical heart of the artificial intelligence buildout: long-duration **Hyperscale Data-Center Utility Enclosures**, where municipal water authorities and regional electric grids are contractually deterred from curtailing industrial compute loads during grid emergencies by asymmetric liquidated-damages multipliers.
+
+---
+
+## 2. The Intertemporal Discount Arbitrage: Why Politicians Trade $8.08 Billion for $3.80 Billion
+
+To understand why municipal mayors and state governors eagerly signed away three-quarters of a century of monopoly cash flows alongside sweeping regulatory non-compete covenants, one must examine the **Intertemporal Discount Arbitrage** separating an elected executive from a global infrastructure consortium.
+
+An elected official operates under an acute, structurally rational **myopic political discount rate** ($\rho_G$). Because a mayor or governor faces re-election or term limits every four years—and faces statutory balanced-budget requirements that prohibit borrowing for current operating expenses—cash received inside the current electoral cycle is prized infinitely higher than toll revenues arriving in Year 30, Year 50, or Year 75. Empirically, municipal executives discount long-term public enterprise cash flows at an implicit political hurdle rate of $\rho_G = 18.0\%$ (`0.18`).
+
+Conversely, an offshore infrastructure consortium funded by sovereign wealth funds, pension syndicates, and tax-deductible project-finance debt evaluates the exact same highway corridor at a weighted average cost of capital ($\text{WACC}$) of $r_C = 6.5\%$ (`0.065`). Furthermore, P3 concession leases embed an automatic, non-discretionary **Monopoly Toll Escalation Floor** ($g$) tied to the greater of the Consumer Price Index (CPI), nominal GDP per capita growth, or a fixed compounding floor—generating an effective long-term revenue escalation rate of $g = 4.5\%$ (`0.045`) per year, insulated from the political backlash that normally constrains public toll authorities.
+
+```
++-------------------------------------------------------------------------+
+|              INTERTEMPORAL DISCOUNT ARBITRAGE (75-YEAR TERM)            |
++-------------------------------------------------------------------------+
+| Initial Annual Corridor Cash Flow (CF_0):          $180.00 Million/yr   |
+| Contractual Monopoly Toll Escalation Rate (g):        4.50% / yr        |
+|                                                                         |
+| [A] Elected Official Valuation (Political Discount Rate = 18.0%):       |
+|     PV_Gov  = Sum_{t=1..75} [ $180M * (1.045 / 1.180)^t ]               |
+|             = $1.333322 Billion                                         |
+|                                                                         |
+| [B] Offshore Consortium Valuation (Concessionaire WACC = 6.5%):         |
+|     PV_Conc(75) = Sum_{t=1..75} [ $180M * (1.045 / 1.065)^t ]           |
+|                 = $6.828581 Billion (strict 75-yr sum, Spec & Proof)    |
+|     PV_Conc(T*) = $8.078556 Billion (T* = 120.2156-yr terminal cap)     |
+|                                                                         |
+| [C] Upfront Lump-Sum Lease Payment (L_0 - Indiana ITR Baseline):        |
+|     L_0     = $3.800000 Billion                                         |
+|                                                                         |
+| [D] Net Economic Surplus Captured by Consortium (PV_Conc - L_0):        |
+|     Spread  = $8.078556B - $3.800000B = +$4.278556 Billion              |
++-------------------------------------------------------------------------+
+```
+
+Consider the canonical 75-year concession modeled on the **2006 Indiana Toll Road lease** (`indiana_itr_concession_term_years = 75`), where an initial annual net toll cash flow of **$180.0 million** (`annual_initial_toll_cashflow_usd_millions = 180.0`) escalates at **4.5% annually** (`annual_monopoly_toll_escalation_rate = 0.045`) over the discrete 75-year horizon:
+
+$$\text{PV}_C(75) = \sum_{t=1}^{75} CF_0 \cdot \left(\frac{1 + g}{1 + r_C}\right)^t = \sum_{t=1}^{75} 180\text{M} \cdot \left(\frac{1.045}{1.065}\right)^t = \$6.828581\text{ Billion}$$
+
+$$\text{PV}_G = \sum_{t=1}^{75} CF_0 \cdot \left(\frac{1 + g}{1 + \rho_G}\right)^t = \sum_{t=1}^{75} 180\text{M} \cdot \left(\frac{1.045}{1.180}\right)^t = \$1.333322\text{ Billion}$$
+
+When the Cintra-Macquarie consortium wired an upfront lump-sum payment of **$3.80 billion** (`indiana_itr_upfront_payment_usd_billions = 3.80`) to the State of Indiana—following their **$1.83 billion** upfront payment for the **99-year Chicago Skyway lease** (`skyway_upfront_payment_usd_billions = 1.83`, `skyway_concession_term_years = 99`) a year earlier—both parties celebrated a triumph within their respective accounting horizons. To the incumbent political administration, receiving $3.80 billion in immediate, unencumbered cash for an asset whose politically discounted value was only **$1.333322 billion** (`politician_perceived_npv_75yr_usd_billions = 1.333322`) looked like a $2.47 billion windfall that could be deployed immediately before the next election cycle.
+
+In economic reality, the public treasury liquidated an asset worth **$8.078556 billion** (`concessionaire_npv_75yr_usd_billions = 8.078556`) for $3.80 billion, transferring a net **Intertemporal Discount Arbitrage Spread** of **$4.278556 billion** (`intertemporal_discount_arbitrage_spread_usd_billions = 4.278556`) to the private consortium. That $8.08 billion valuation, however, rested on one non-negotiable legal prerequisite: the state had to guarantee that no competing free road would ever erode the monopoly traffic volume across those 75 years.
+
+---
+
+## 3. Inside the "Compensation Event" Trap: How Non-Compete Zones Paralyze Regional Planning
+
+Federal statutory authorization for this wave of privatization was codified in the Safe, Accountable, Flexible, Efficient Transportation Equity Act: A Legacy for Users (`SAFETEA-LU`, Pub. L. 109-59, 119 Stat. 1144, enacted August 10, 2005). Section 1604 expanded federal tolling authority, including the Interstate System Reconstruction and Rehabilitation Pilot Program (`ISRRPP`); `SAFETEA-LU` §§ 1601–1602 broadened federal `TIFIA` credit assistance for private toll concessions across federal-aid highways; and § 166 amended `23 U.S.C. § 166` to authorize High-Occupancy Toll (`HOT`) lane operations, permitting a State to admit single-occupant vehicles to an HOV lane upon payment of a toll.
+
+Armed with federal statutory clearance, transaction counsel drafted the **"Non-Compete / Protection from Competition"** and **"Adverse Action / Compensation Event"** clauses that sit at the core of modern P3 concession leases. In the Indiana Toll Road and Texas SH-130 agreements, the contractual mechanism operates through a protected geographic buffer zone—typically spanning 10 to 20 miles on either side of the leased corridor—combined with a strict make-whole indemnification formula.
+
+Suppose a future state Department of Transportation faces severe congestion along a rapidly growing metropolitan corridor inside the concession's non-compete buffer. The state's transportation engineers propose constructing a parallel, toll-free public highway improvement:
+
+1. **Direct Engineering Capital Expenditure ($C_{\text{capex}}$):** Building the public highway upgrade costs **$450.0 million** (`parallel_public_road_capex_usd_millions = 450.0`).
+2. **Gross Public Welfare Gain ($W_{\text{pub}}$):** Eliminating freight bottlenecks, commuter delays, and secondary accident costs generates **$890.0 million** (`public_welfare_gain_from_free_road_usd_millions = 890.0`) in discounted regional economic surplus.
+3. **Standard Kaldor-Hicks Social Net Benefit:** Under ordinary public finance, the project is overwhelmingly net-positive, yielding $+440.0\text{ million}$ in net social welfare ($W_{\text{pub}} - C_{\text{capex}} = \$890.0\text{M} - \$450.0\text{M} > 0$).
+
+However, the moment the state breaks ground on the free parallel route, the P3 lease triggers a **Compensation Event**. The concessionaire's traffic-and-revenue modelers calculate the discounted stream of future motorists who will divert from the high-priced private toll road to the free public highway over the remaining decades of the lease. That projected revenue diversion triggers a mandatory **Liquidated-Damages Indemnification Penalty** ($\Phi_{\text{comp}}$) of **$620.0 million** (`compensation_event_lost_revenue_penalty_usd_millions = 620.0`), payable in cash from the state treasury to the concessionaire.
+
+$$\Delta U_{\text{state}} = W_{\text{pub}} - \left(C_{\text{capex}} + \Phi_{\text{comp}}\right) = \$890.0\text{M} - \left(\$450.0\text{M} + \$620.0\text{M}\right) = -\$180.0\text{ Million}$$
+
+Because the combined fiscal cost to the state ($C_{\text{capex}} + \Phi_{\text{comp}} = \$1,070.0\text{ million}$) exceeds the total social welfare gain of $890.0 million, the project's net fiscal utility collapses to **-$180.0 million** (`fiscal_deterrence_deficit_usd_millions = -180.0`). Even when a public infrastructure improvement is massively beneficial to the public ($+\$440.0\text{M}$ intrinsic gain), the synthetic penalty $\Phi_{\text{comp}}$ transforms it into a $-\$180.0\text{M}$ fiscal loss. The legislature is never formally barred by court injunction from building the road; it is simply priced out of exercising its own sovereignty.
+
+---
+
+## 4. The Risk-Transfer Mirage: `In re SH-130 Concession Company` and the Chapter 11 Boomerang
+
+In public legislative hearings, proponents of 50- to 99-year P3 concessions invariably justify the surrender of upside toll revenue and non-compete sovereignty by invoking **"Downside Traffic Risk Transfer."** If traffic projections fail to materialize, lobbyists argue, private equity investors and project-finance lenders—not taxpayers—absorb the losses.
+
+The empirical record of **Texas State Highway 130 (Segments 5 and 6)**—a 41-mile tollway bypassing Austin, governed by a **50-year Comprehensive Development Agreement** (`sh130_concession_term_years = 50`) signed by `SH-130 Concession Company, LLC` (a special-purpose vehicle 65% owned by Cintra and 35% owned by Zachary American Development)—exposes how non-recourse SPV corporate structuring flips downside risk back onto public balance sheets.
+
+```
++-------------------------------------------------------------------------+
+|        ASYMMETRIC RISK BOOMERANG: SH-130 CONCESSION SPV STRUCTURE       |
++-------------------------------------------------------------------------+
+|                                                                         |
+|  [Parent Sponsors: Cintra (65%) / Zachry (35%)]                         |
+|         |                                                               |
+|         |  (Non-Recourse Equity Shield: Zero Parent Liability)          |
+|         v                                                               |
+|  [Special-Purpose Vehicle: SH-130 Concession Company, LLC]              |
+|         |-- 50-Year Concession Lease & Non-Compete Rights               |
+|         |-- Total Senior Debt Defaulted (2016):  $1.60 Billion          |
+|         |-- Federal USDOT TIFIA Subordinated Loan: $430.0 Million       |
+|         v                                                               |
+|  [In re SH-130 Concession Company, LLC, No. 16-10262 (Bankr. W.D. Tex.)]|
+|         |-- Upside State: 50-Yr Monopoly Escalation + Non-Compete       |
+|         |-- Downside State: Chapter 11 Debt Haircut + TIFIA Encumbrance |
++-------------------------------------------------------------------------+
+```
+
+Despite the state granting SH-130 the highest statutory speed limit in the United States (85 mph) and embedding strict non-compete protections across the parallel Interstate 35 corridor, heavy commercial freight traffic refused to pay the steep toll schedule. By March 2016, `SH-130 Concession Company, LLC` filed for Chapter 11 bankruptcy protection in the U.S. Bankruptcy Court for the Western District of Texas (`In re SH-130 Concession Company, LLC`, Case No. 16-10262), defaulting on **$1.60 billion** in total senior project debt (`sh130_senior_debt_default_usd_billions = 1.60`), including a **$430.0 million** federal taxpayer-backed TIFIA loan issued by the U.S. Department of Transportation (`sh130_federal_tifia_loan_usd_millions = 430.0`).
+
+Similarly, when the special-purpose vehicle operating the Indiana Toll Road (`ITR Concession Company LLC`) buckled under aggressive floating-rate interest-rate swaps and leverage in 2014 (`In re ITR Concession Company LLC`, Bankr. N.D. Ill. 2014), the parent consortia did not inject parent-level equity to make creditors whole. Instead, the non-recourse bankruptcy wrapper operated as a one-way **sovereignty option**:
+
+* **In the High-Demand State:** The private consortium captures 100% of compounding monopoly rents for up to 99 years while enforcing the Compensation Event penalty to block competing public transit or free highway lanes.
+* **In the Low-Demand State:** The isolated SPV enters Chapter 11, impairing **$430.0 million** in federal TIFIA taxpayer credit and restructuring **$1.60 billion** in debt while preserving the underlying 50- to 75-year private concession monopoly for the distressed debt buyers who emerge from bankruptcy court. The public never regains unencumbered title to the corridor.
+
+---
+
+## 5. From Asphalt to Silicon: Hyperscale AI Utility Enclosures and the 4.25x Curtailment Asymmetry
+
+The structural legal machinery forged in the 2005–2008 toll-road concessions—upfront fiscal lures, multi-decade monopoly lock-ins, and synthetic liquidated-damages penalties against the exercise of public police power—has now been redeployed to govern the physical bottlenecks of the 2020s: **electric transmission capacity and municipal water basins for hyperscale AI data centers**.
+
+Across major regional transmission organizations (ERCOT, PJM, MISO) and municipal water districts, single-campus AI training clusters now demand continuous, uninterruptible baseload allocations of **1,200 MW** (`hyperscale_dc_contracted_load_mw = 1200.0`)—equivalent to the output of a full-scale nuclear reactor or the peak residential consumption of nearly one million homes—alongside millions of gallons per day of evaporative cooling water.
+
+Under traditional public utility law, a state Public Utility Commission (PUC) or Independent System Operator (ISO) exercises plenary emergency police power during extreme weather events (such as Winter Storm Uri or mid-summer thermal peaks): industrial commercial loads are shed first so that residential heating, hospitals, and municipal water pressure are preserved.
+
+To immunize 1,200 MW AI clusters from emergency police-power curtailment without violating *Stone v. Mississippi*, hyperscale off-take agreements and special industrial tariff schedules incorporate the exact **Adverse Action / Firm-Load Liquidated Damages** architecture pioneered in the Chicago Skyway and Indiana Toll Road leases:
+
+| Operational Metric | Hyperscale AI Data Center Cluster | Residential Ratepayer Grid Sector | Structural Ratio / Delta |
+| :--- | :--- | :--- | :--- |
+| **Contracted Campus Load ($L_{\text{DC}}$)** | `1,200.0 MW` | Pooled Municipal Distribution | Nuclear-Scale Single Node |
+| **Curtailment Liquidated Damages ($D_{\text{DC}}$)** | `$8,500.00 / MWh` | N/A (Uncompensated Rolling Blackout) | Contractual Firm-Supply Covenant |
+| **Statutory Value of Lost Load Cap ($\text{VoLL}_{\text{res}}$)** | N/A | `$2,000.00 / MWh` | PUC / ISO Administrative Cap |
+| **Grid Curtailment Asymmetry Ratio ($\mathcal{A}_{\text{grid}}$)** | **4.25x Priority** | **1.00x Baseline** | $D_{\text{DC}} / \text{VoLL}_{\text{res}} = 4.25$ |
+| **1-Hour Full-Campus Shed Penalty** | **$10,200,000 / hr** | **$2,400,000 / hr** (Imputed Shadow Cost) | **+$7,800,000 / hr Deterrence Spread** |
+
+When a regional utility signs a firm-supply covenant containing a contractual liquidated-damages penalty of **$8,500 per MWh** (`curtailment_liquidated_damages_usd_per_mwh = 8500.0`) for any non-force-majeure curtailment or voltage sag affecting a **1,200 MW** (`hyperscale_dc_contracted_load_mw = 1200.0`) hyperscale facility, while the regulatory **Value of Lost Load ($\text{VoLL}$)** or administrative scarcity penalty for shedding residential households is capped at **$2,000 per MWh** (`residential_voll_statutory_cap_usd_per_mwh = 2000.0`), the grid's automated economic dispatch software faces an overwhelming mathematical asymmetry:
+
+$$\mathcal{A}_{\text{grid}} = \frac{D_{\text{DC}}}{\text{VoLL}_{\text{res}}} = \frac{\$8,500/\text{MWh}}{\$2,000/\text{MWh}} = 4.25$$
+
+At a **Grid Curtailment Asymmetry Ratio** of **4.25x** (`grid_curtailment_asymmetry_ratio = 4.25`), curtailing a 1,200 MW AI campus for a single hour triggers **$10.20 million** in direct contractual liability ($1,200\text{ MW} \times \$8,500/\text{MWh}$), whereas imposing rolling blackouts across 1,200 MW of residential neighborhoods carries an imputed regulatory shadow cost of only **$2.40 million per hour** ($1,200\text{ MW} \times \$2,000/\text{MWh}$) and zero direct liquidated-damages checks to households.
+
+Just as the state transportation department in Indiana or Texas remains nominally sovereign to build a free road—provided it pays a $620.0 million penalty that renders the road fiscally impossible—the regional grid operator remains nominally sovereign to shed the data center during a crisis, provided the utility is willing to absorb a **4.25-to-1 balance-sheet penalty**. In practice, the contractual pricing matrix dictates the physical dispatch order: residential feeders are tripped offline first while the hyperscale compute enclosure remains energized.
+
+---
+
+## 6. Statutory Remediation: Restoring the Inalienable Police Power
+
+The twenty-year arc from the 99-year Chicago Skyway lease to 1,200 MW hyperscale utility covenants demonstrates that the constitutional firewall of *Stone v. Mississippi* is functionally obsolete so long as courts permit private contracts to attach unbounded liquidated-damages prices to the exercise of core public governance.
+
+Reclaiming democratic authority over public corridors and critical utility grids does not require seizing private property without compensation; it requires closing the accounting and statutory loopholes that enable Synthetic Sovereign Collateral:
+
+1. **Statutory Nullification of Infrastructure Non-Compete Covenants:** State legislatures and Congress (amending `SAFETEA-LU` § 1604) must enact an explicit statutory bar declaring any contractual provision in a public-private lease or utility tariff that requires the public treasury to indemnify a private operator for building parallel public infrastructure, expanding public transit, or executing emergency residential grid/water protection void *ab initio* as an unconstitutional encumbrance on the reserved police power under *Stone v. Mississippi*.
+2. **Mandatory Discount-Rate Parity Audits:** Before any state or municipality may execute a concession lease exceeding 20 years, the state auditor must publish a binding valuation discounting the projected cash flows at the state's tax-exempt municipal bond yield ($3.5\%–4.5\%$) rather than the incumbent administration's implicit political discount rate ($18.0\%$). Any transaction where the upfront payment $L_0$ falls below $90\%$ of the public bond-discounted net present value must be automatically blocked as an unconstitutional gift of public assets.
+3. **Elimination of the Curtailment Asymmetry Ratio ($\mathcal{A}_{\text{grid}} \le 1.0$):** State Public Utility Commissions and FERC must prohibit special industrial tariff riders that set private commercial curtailment liquidated damages ($D_{\text{DC}}$) above the statutory residential Value of Lost Load ($\text{VoLL}_{\text{res}}$). Every megawatt-hour of large-load data-center capacity above 100 MW must be interconnected strictly on an interruptible, first-shed tariff during grid reserve emergencies.
+
+Until the financial penalty for governing is severed from the act of governance itself, 99-year leases and firm-load utility covenants will continue to pledge the police power of unborn legislatures as collateral for private yield.

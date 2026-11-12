@@ -1,0 +1,264 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:principal_reward_inversion_cognitive_opsec.json",
+  "title": "Principal Reward Inversion & Cognitive OPSEC Schema",
+  "description": "Binds SPEC-PRINCIPAL-REWARD-INVERSION-COGNITIVE-OPSEC-v1.0: MaxEnt IRL reward inversion, Cramer-Rao MSE collapse, differential patch telemetry leakage, the IRL-to-IRL HUMINT impulse-response entropy collapse, and the sovereign Verifiable RLVR zero-leakage regime.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "spec_version",
+    "principal_override_alpha",
+    "entourage_amplification_gamma",
+    "kl_divergence_nats",
+    "api_probe_count_k",
+    "marginal_probe_cost_usd",
+    "probe_cost_usd",
+    "cramer_rao_mse_bound",
+    "empirical_mse",
+    "irreducible_entourage_floor",
+    "reconstruction_accuracy_unseen_topic",
+    "inversion_probability",
+    "principal_openness_score_o",
+    "nerd_snipe_engagement_probability",
+    "candidate_pathings_b",
+    "rainbow_table_chain_depth_d",
+    "rainbow_table_branching_factor_b",
+    "offline_precomputed_chains",
+    "live_lookup_complexity_o1_verified",
+    "decentralized_firms_n",
+    "consolidated_verticals_m",
+    "ashby_control_surface_compression_ratio",
+    "initial_branching_entropy_bits",
+    "post_humint_probe_entropy_bits",
+    "irl_to_irl_entropy_collapse_pct",
+    "opsec_exposure_ratio_omega",
+    "zero_personal_priors_enforced",
+    "verifiable_rlvr_regime",
+    "patch_telemetry",
+    "sovereign_regime",
+    "verification_attestations"
+  ],
+  "properties": {
+    "spec_version": {
+      "type": "string",
+      "const": "SPEC-PRINCIPAL-REWARD-INVERSION-COGNITIVE-OPSEC-v1.0"
+    },
+    "principal_override_alpha": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "entourage_amplification_gamma": {
+      "type": "number",
+      "minimum": 0
+    },
+    "kl_divergence_nats": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "api_probe_count_k": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "marginal_probe_cost_usd": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "probe_cost_usd": {
+      "type": "number",
+      "minimum": 0
+    },
+    "cramer_rao_mse_bound": {
+      "type": "number",
+      "minimum": 0
+    },
+    "empirical_mse": {
+      "type": "number",
+      "minimum": 0
+    },
+    "irreducible_entourage_floor": {
+      "type": "number",
+      "minimum": 0
+    },
+    "reconstruction_accuracy_unseen_topic": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "inversion_probability": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "principal_openness_score_o": {
+      "type": "number",
+      "minimum": 0.9,
+      "maximum": 1.0
+    },
+    "nerd_snipe_engagement_probability": {
+      "type": "number",
+      "minimum": 0.95,
+      "maximum": 1.0
+    },
+    "candidate_pathings_b": {
+      "type": "integer",
+      "minimum": 5,
+      "maximum": 10
+    },
+    "rainbow_table_chain_depth_d": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "rainbow_table_branching_factor_b": {
+      "type": "integer",
+      "minimum": 2
+    },
+    "offline_precomputed_chains": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "live_lookup_complexity_o1_verified": {
+      "type": "boolean",
+      "const": true
+    },
+    "decentralized_firms_n": {
+      "type": "integer",
+      "const": 10000
+    },
+    "consolidated_verticals_m": {
+      "type": "integer",
+      "const": 5
+    },
+    "ashby_control_surface_compression_ratio": {
+      "type": "number",
+      "minimum": 10000.0
+    },
+    "initial_branching_entropy_bits": {
+      "type": "number",
+      "minimum": 0
+    },
+    "post_humint_probe_entropy_bits": {
+      "type": "number",
+      "minimum": 0,
+      "exclusiveMaximum": 0.25
+    },
+    "irl_to_irl_entropy_collapse_pct": {
+      "type": "number",
+      "minimum": 90.0,
+      "maximum": 100.0
+    },
+    "opsec_exposure_ratio_omega": {
+      "type": "number"
+    },
+    "zero_personal_priors_enforced": {
+      "type": "boolean"
+    },
+    "verifiable_rlvr_regime": {
+      "type": "boolean"
+    },
+    "patch_telemetry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "beta_temperature",
+        "delta_reward_l2_norm",
+        "kl_divergence_patch_nats",
+        "adversarial_uncertainty_reduction_ratio",
+        "hotfix_telemetry_eliminated"
+      ],
+      "properties": {
+        "beta_temperature": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "delta_reward_l2_norm": {
+          "type": "number",
+          "minimum": 0
+        },
+        "kl_divergence_patch_nats": {
+          "type": "number",
+          "minimum": 0
+        },
+        "adversarial_uncertainty_reduction_ratio": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "hotfix_telemetry_eliminated": {
+          "type": "boolean"
+        }
+      }
+    },
+    "sovereign_regime": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "alpha",
+        "inversion_probability",
+        "fisher_information_personal_priors",
+        "mse_bound_infinite",
+        "zero_personal_priors_enforced"
+      ],
+      "properties": {
+        "alpha": {
+          "type": "number",
+          "const": 0.0
+        },
+        "inversion_probability": {
+          "type": "number",
+          "const": 0.0
+        },
+        "fisher_information_personal_priors": {
+          "type": "number",
+          "const": 0.0
+        },
+        "mse_bound_infinite": {
+          "type": "boolean",
+          "const": true
+        },
+        "zero_personal_priors_enforced": {
+          "type": "boolean",
+          "const": true
+        }
+      }
+    },
+    "verification_attestations": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "maxent_irl_inversion_verified",
+        "cramer_rao_mse_collapse_verified",
+        "unseen_topic_n_plus_1_reconstruction_verified",
+        "differential_patch_telemetry_leakage_verified",
+        "irl_to_irl_humint_collapse_verified",
+        "sovereign_rlvr_zero_leakage_verified"
+      ],
+      "properties": {
+        "maxent_irl_inversion_verified": {
+          "type": "boolean",
+          "const": true
+        },
+        "cramer_rao_mse_collapse_verified": {
+          "type": "boolean",
+          "const": true
+        },
+        "unseen_topic_n_plus_1_reconstruction_verified": {
+          "type": "boolean",
+          "const": true
+        },
+        "differential_patch_telemetry_leakage_verified": {
+          "type": "boolean",
+          "const": true
+        },
+        "irl_to_irl_humint_collapse_verified": {
+          "type": "boolean",
+          "const": true
+        },
+        "sovereign_rlvr_zero_leakage_verified": {
+          "type": "boolean",
+          "const": true
+        }
+      }
+    }
+  }
+}

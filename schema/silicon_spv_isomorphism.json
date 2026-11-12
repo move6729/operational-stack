@@ -1,0 +1,288 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:silicon_spv_isomorphism.json",
+  "title": "SiliconSPVIsomorphismAndS1AuditManifest",
+  "type": "object",
+  "properties": {
+    "manifest_version": {
+      "type": "string",
+      "const": "2.6.0"
+    },
+    "analytical_scope_boundary": {
+      "type": "object",
+      "properties": {
+        "alleges_criminal_accounting_fraud": {
+          "type": "boolean",
+          "const": false
+        },
+        "evaluates_gaap_compliant_structural_isomorphism": {
+          "type": "boolean",
+          "const": true
+        },
+        "s1_currently_confidential_pending_public_edgar_flip": {
+          "type": "boolean",
+          "const": true
+        }
+      },
+      "required": [
+        "alleges_criminal_accounting_fraud",
+        "evaluates_gaap_compliant_structural_isomorphism",
+        "s1_currently_confidential_pending_public_edgar_flip"
+      ]
+    },
+    "issuer_entity": {
+      "type": "string",
+      "const": "Anthropic_PBC"
+    },
+    "lead_underwriters": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "Morgan_Stanley_Co_Lead_Left",
+          "Goldman_Sachs_Stabilization",
+          "JPMorgan_Chase_Co",
+          "Citigroup_Inc"
+        ]
+      }
+    },
+    "spv_isomorphic_financial_structure": {
+      "type": "object",
+      "properties": {
+        "target_ipo_valuation_usd": {
+          "type": "number",
+          "const": 2000000000000.0
+        },
+        "target_ipo_proceeds_usd": {
+          "type": "number",
+          "const": 100000000000.0
+        },
+        "standalone_commodity_operating_ev_ceiling_usd": {
+          "type": "number",
+          "const": 100000000000.0
+        },
+        "double_marginalization_supplier_competitor_squeeze_active": {
+          "type": "boolean",
+          "const": true
+        },
+        "onerous_contract_conversion_when_token_price_below_2026_floor": {
+          "type": "boolean",
+          "const": true
+        },
+        "fy2025_reported_revenue_usd": {
+          "type": "number",
+          "const": 4590000000.0
+        },
+        "fy2025_operating_loss_usd": {
+          "type": "number",
+          "const": 8060000000.0
+        },
+        "fy2025_gaap_net_loss_usd": {
+          "type": "number",
+          "const": 42000000000.0
+        },
+        "q2_2026_reported_revenue_usd": {
+          "type": "number",
+          "const": 11500000000.0
+        },
+        "cloud_marketplace_2025_revenue_share_pct": {
+          "type": "number",
+          "const": 47.0
+        },
+        "marketplace_distribution_fees_paid_usd": {
+          "type": "number",
+          "const": 351000000.0
+        },
+        "receivables_collected_via_cloud_providers_pct": {
+          "type": "number",
+          "const": 60.0
+        },
+        "asc606_gross_vs_net_sensitivity_active": {
+          "type": "boolean",
+          "const": true
+        },
+        "total_contractual_compute_obligations_usd": {
+          "type": "number",
+          "const": 518000000000.0
+        },
+        "overall_non_cancelable_obligation_ratio": {
+          "type": "number",
+          "const": 0.8
+        },
+        "broadcom_convertible_debt_facility_usd": {
+          "type": "number",
+          "const": 42000000000.0
+        },
+        "counterparty_commitments_usd": {
+          "type": "object",
+          "properties": {
+            "Broadcom_Equipment_Leases_NonCancelable": {
+              "type": "number",
+              "const": 161200000000.0
+            },
+            "Alphabet_Google_TakeOrPay": {
+              "type": "number",
+              "const": 111100000000.0
+            },
+            "Amazon_AWS_NonCancelable": {
+              "type": "number",
+              "const": 110000000000.0
+            },
+            "Microsoft_Azure_NonCancelable": {
+              "type": "number",
+              "const": 31400000000.0
+            },
+            "AMD_Corp_Expected": {
+              "type": "number",
+              "const": 20000000000.0
+            },
+            "SpaceX_xAI_325k_GPUs_90Day_Cancelable": {
+              "type": "number",
+              "const": 84500000000.0
+            }
+          },
+          "required": [
+            "Broadcom_Equipment_Leases_NonCancelable",
+            "Alphabet_Google_TakeOrPay",
+            "Amazon_AWS_NonCancelable",
+            "Microsoft_Azure_NonCancelable",
+            "AMD_Corp_Expected",
+            "SpaceX_xAI_325k_GPUs_90Day_Cancelable"
+          ]
+        }
+      },
+      "required": [
+        "target_ipo_valuation_usd",
+        "target_ipo_proceeds_usd",
+        "standalone_commodity_operating_ev_ceiling_usd",
+        "double_marginalization_supplier_competitor_squeeze_active",
+        "onerous_contract_conversion_when_token_price_below_2026_floor",
+        "fy2025_reported_revenue_usd",
+        "fy2025_operating_loss_usd",
+        "fy2025_gaap_net_loss_usd",
+        "q2_2026_reported_revenue_usd",
+        "cloud_marketplace_2025_revenue_share_pct",
+        "marketplace_distribution_fees_paid_usd",
+        "receivables_collected_via_cloud_providers_pct",
+        "asc606_gross_vs_net_sensitivity_active",
+        "total_contractual_compute_obligations_usd",
+        "overall_non_cancelable_obligation_ratio",
+        "broadcom_convertible_debt_facility_usd",
+        "counterparty_commitments_usd"
+      ]
+    },
+    "s1_prospectus_and_admissions": {
+      "type": "object",
+      "properties": {
+        "confidential_s1_submitted_date": {
+          "type": "string",
+          "const": "2026-06-01"
+        },
+        "reuters_ft_prospectus_leak_date": {
+          "type": "string",
+          "const": "2026-09-28"
+        },
+        "total_prospectus_pages": {
+          "type": "integer",
+          "const": 261
+        },
+        "risk_factor_pages": {
+          "type": "integer",
+          "const": 80
+        },
+        "business_description_pages": {
+          "type": "integer",
+          "const": 48
+        },
+        "july30_irregular_eval_breach_published": {
+          "type": "boolean",
+          "const": true
+        },
+        "eval_runs_reviewed_count": {
+          "type": "integer",
+          "const": 141006
+        },
+        "real_world_orgs_breached_count": {
+          "type": "integer",
+          "const": 3
+        },
+        "pypi_malware_infected_hosts_count": {
+          "type": "integer",
+          "const": 15
+        },
+        "oct12_iot_replication_report_published": {
+          "type": "boolean",
+          "const": true
+        },
+        "iot_shard_speed_tok_per_sec": {
+          "type": "number",
+          "const": 0.39
+        },
+        "pentagon_supply_chain_risk_designation_active": {
+          "type": "boolean",
+          "const": true
+        }
+      },
+      "required": [
+        "confidential_s1_submitted_date",
+        "reuters_ft_prospectus_leak_date",
+        "total_prospectus_pages",
+        "risk_factor_pages",
+        "business_description_pages",
+        "july30_irregular_eval_breach_published",
+        "eval_runs_reviewed_count",
+        "real_world_orgs_breached_count",
+        "pypi_malware_infected_hosts_count",
+        "oct12_iot_replication_report_published",
+        "iot_shard_speed_tok_per_sec",
+        "pentagon_supply_chain_risk_designation_active"
+      ]
+    },
+    "conditional_public_s1_dilemma": {
+      "type": "object",
+      "properties": {
+        "fre_801d2_party_admissions_published": {
+          "type": "boolean",
+          "const": true
+        },
+        "prong_a_if_omitted_triggers_in_re_facebook_section_11": {
+          "type": "boolean",
+          "const": true
+        },
+        "prong_b_if_disclosed_triggers_fiduciary_tort_lockout": {
+          "type": "boolean",
+          "const": true
+        },
+        "cfaa_1030g_non_contractual_tort_exposure": {
+          "type": "boolean",
+          "const": true
+        }
+      },
+      "required": [
+        "fre_801d2_party_admissions_published",
+        "prong_a_if_omitted_triggers_in_re_facebook_section_11",
+        "prong_b_if_disclosed_triggers_fiduciary_tort_lockout",
+        "cfaa_1030g_non_contractual_tort_exposure"
+      ]
+    },
+    "jurisdiction_context": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}$"
+    },
+    "cfaa_compliance_attestation": {
+      "type": "boolean",
+      "const": true
+    }
+  },
+  "required": [
+    "jurisdiction_context",
+    "cfaa_compliance_attestation",
+    "manifest_version",
+    "analytical_scope_boundary",
+    "issuer_entity",
+    "lead_underwriters",
+    "spv_isomorphic_financial_structure",
+    "s1_prospectus_and_admissions",
+    "conditional_public_s1_dilemma"
+  ]
+}

@@ -1,0 +1,261 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:gatekeeper_defection_cascade_license_asymmetry.json",
+  "title": "Gatekeeper Defection Cascade & License Asymmetry - Locked Verification Schema",
+  "description": "Deterministic verification contract for proofs/verify_gatekeeper_defection_cascade_license_asymmetry.py. Anchors all 58 locked v1.0 constants and the 5-vector pass receipt: (1) Kraakman gatekeeper payoff asymmetry across the Physician, Attorney, and Wet-Lab Helper (g = Helper: PhD Student / Postdoc / Nurse) classes, the Senior PI capture license-PV wedge, and the 33-bit biometric flight lock, (2) conditional Nuremberg / jus cogens phase transition with 4 simultaneous kill-switches replicated on both the physician and Helper tiers, (3) crime-fraud privilege evaporation and evidentiary sign inversion, (4) USSG 5K1.1 proffer tournament decay and pour-over will divergence, (5) coupled defection cascade across N = 12 professional gatekeepers.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["spec_id", "proof_file", "locked_constants_and_outputs", "vectors", "gatekeeper_classes", "pi_capture_and_barcode_firewall", "all_vectors_pass"],
+  "properties": {
+    "spec_id": { "const": "SPEC-GATEKEEPER-DEFECTION-CASCADE-LICENSE-ASYMMETRY-v1.0" },
+    "proof_file": { "const": "proofs/verify_gatekeeper_defection_cascade_license_asymmetry.py" },
+    "locked_constants_and_outputs": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "r_discount", "T_career_years", "annuity_factor_20yr_8pct",
+        "physician_annual_income_usd", "physician_license_pv_usd",
+        "physician_liberty_reputation_loss_usd", "physician_regime1_downside_usd",
+        "physician_epstein_retainer_annual_usd", "physician_retainer_pv_3yr_usd",
+        "physician_regime1_p_star", "nuremberg_regime2_uninsured_penalty_usd",
+        "nuremberg_tail_prob_q_H1",
+        "physician_expected_downside_with_5pct_nuremberg_tail_usd",
+        "physician_nuremberg_adjusted_p_star", "physician_p_star_if_H1_certain",
+        "malpractice_limitations_years_ny", "tvpa_nuremberg_limitations_years",
+        "insurance_coverage_regime1_pct", "insurance_coverage_regime2_nuremberg_pct",
+        "attorney_partner_annual_income_usd", "attorney_license_pv_usd",
+        "attorney_liberty_reputation_loss_usd",
+        "attorney_total_downside_L_gatekeeper_usd", "attorney_retainer_pv_3yr_usd",
+        "attorney_regime1_p_star", "nikolic_executor_fee_usd",
+        "helper_annual_income_usd", "helper_license_pv_usd",
+        "helper_liberty_reputation_loss_usd", "helper_regime1_downside_usd",
+        "helper_annual_side_payment_usd", "helper_retainer_pv_3yr_usd",
+        "helper_regime1_p_star",
+        "helper_expected_downside_with_5pct_nuremberg_tail_usd",
+        "helper_nuremberg_adjusted_p_star",
+        "helper_expected_downside_if_H1_certain_usd",
+        "helper_p_star_if_H1_certain", "unbonused_phd_student_p_star",
+        "pi_capture_license_pv_wedge_usd",
+        "nikolic_repudiation_latency_hours", "nikolic_liability_incurred_usd",
+        "indyke_kahn_executor_fee_each_usd", "indyke_kahn_usvi_estate_settlement_usd",
+        "indyke_kahn_edc_clawback_usd", "indyke_kahn_victims_fund_usd",
+        "indyke_kahn_sdny_class_settlement_max_usd",
+        "indyke_kahn_sdny_class_settlement_floor_usd",
+        "columbia_dental_epstein_donations_usd",
+        "columbia_dental_survivor_redirection_each_usd", "proffer_decay_lambda",
+        "proffer_immunity_rank_1", "proffer_immunity_rank_2",
+        "proffer_immunity_rank_3", "proffer_immunity_rank_5",
+        "zolin_post_privilege_pierce_prob", "privilege_shield_post_zolin",
+        "n_advisors_network", "cascade_tipping_round"
+      ],
+      "properties": {
+        "r_discount": { "const": 0.08 },
+        "T_career_years": { "const": 20 },
+        "annuity_factor_20yr_8pct": { "const": 9.818147 },
+        "physician_annual_income_usd": { "const": 650000.0 },
+        "physician_license_pv_usd": { "const": 6381795.81 },
+        "physician_liberty_reputation_loss_usd": { "const": 10000000.0 },
+        "physician_regime1_downside_usd": { "const": 16381795.81 },
+        "physician_epstein_retainer_annual_usd": { "const": 100000.0 },
+        "physician_retainer_pv_3yr_usd": { "const": 257709.7 },
+        "physician_regime1_p_star": { "const": 0.015488 },
+        "nuremberg_regime2_uninsured_penalty_usd": { "const": 200000000.0 },
+        "nuremberg_tail_prob_q_H1": { "const": 0.05 },
+        "physician_expected_downside_with_5pct_nuremberg_tail_usd": { "const": 26381795.81 },
+        "physician_nuremberg_adjusted_p_star": { "const": 0.009674 },
+        "physician_p_star_if_H1_certain": { "const": 0.001189 },
+        "malpractice_limitations_years_ny": { "const": 2.5 },
+        "tvpa_nuremberg_limitations_years": { "const": "INF" },
+        "insurance_coverage_regime1_pct": { "const": 1.0 },
+        "insurance_coverage_regime2_nuremberg_pct": { "const": 0.0 },
+        "attorney_partner_annual_income_usd": { "const": 2500000.0 },
+        "attorney_license_pv_usd": { "const": 24545368.52 },
+        "attorney_liberty_reputation_loss_usd": { "const": 15000000.0 },
+        "attorney_total_downside_L_gatekeeper_usd": { "const": 39545368.52 },
+        "attorney_retainer_pv_3yr_usd": { "const": 773129.1 },
+        "attorney_regime1_p_star": { "const": 0.019175 },
+        "helper_annual_income_usd": { "const": 60000.0 },
+        "helper_license_pv_usd": { "const": 589088.84 },
+        "helper_liberty_reputation_loss_usd": { "const": 5000000.0 },
+        "helper_regime1_downside_usd": { "const": 5589088.84 },
+        "helper_annual_side_payment_usd": { "const": 5000.0 },
+        "helper_retainer_pv_3yr_usd": { "const": 12885.48 },
+        "helper_regime1_p_star": { "const": 0.00230017 },
+        "helper_expected_downside_with_5pct_nuremberg_tail_usd": { "const": 15589088.84 },
+        "helper_nuremberg_adjusted_p_star": { "const": 0.00082589 },
+        "helper_expected_downside_if_H1_certain_usd": { "const": 205589088.84 },
+        "helper_p_star_if_H1_certain": { "const": 0.00006267 },
+        "unbonused_phd_student_p_star": { "const": 0.0 },
+        "pi_capture_license_pv_wedge_usd": { "const": 5792706.97 },
+        "nikolic_executor_fee_usd": { "const": 250000.0 },
+        "nikolic_repudiation_latency_hours": { "const": 96 },
+        "nikolic_liability_incurred_usd": { "const": 0.0 },
+        "indyke_kahn_executor_fee_each_usd": { "const": 250000.0 },
+        "indyke_kahn_usvi_estate_settlement_usd": { "const": 105000000.0 },
+        "indyke_kahn_edc_clawback_usd": { "const": 80000000.0 },
+        "indyke_kahn_victims_fund_usd": { "const": 121000000.0 },
+        "indyke_kahn_sdny_class_settlement_max_usd": { "const": 35000000.0 },
+        "indyke_kahn_sdny_class_settlement_floor_usd": { "const": 25000000.0 },
+        "columbia_dental_epstein_donations_usd": { "const": 210000.0 },
+        "columbia_dental_survivor_redirection_each_usd": { "const": 105000.0 },
+        "proffer_decay_lambda": { "const": 1.25 },
+        "proffer_immunity_rank_1": { "const": 1.0 },
+        "proffer_immunity_rank_2": { "const": 0.286505 },
+        "proffer_immunity_rank_3": { "const": 0.082085 },
+        "proffer_immunity_rank_5": { "const": 0.006738 },
+        "zolin_post_privilege_pierce_prob": { "const": 0.931034 },
+        "privilege_shield_post_zolin": { "const": 0.0 },
+        "n_advisors_network": { "const": 12 },
+        "cascade_tipping_round": { "const": 1 }
+      }
+    },
+    "vectors": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 5,
+      "prefixItems": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["vector", "name", "status", "checks"],
+          "properties": {
+            "vector": { "const": 1 },
+            "name": { "const": "kraakman_payoff_asymmetry_flight_lock" },
+            "status": { "const": "PASS" },
+            "checks": { "$ref": "#/$defs/checks" }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["vector", "name", "status", "checks"],
+          "properties": {
+            "vector": { "const": 2 },
+            "name": { "const": "nuremberg_phase_transition_kill_switches" },
+            "status": { "const": "PASS" },
+            "checks": { "$ref": "#/$defs/checks" }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["vector", "name", "status", "checks"],
+          "properties": {
+            "vector": { "const": 3 },
+            "name": { "const": "privilege_evaporation_zolin_sign_inversion" },
+            "status": { "const": "PASS" },
+            "checks": { "$ref": "#/$defs/checks" }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["vector", "name", "status", "checks"],
+          "properties": {
+            "vector": { "const": 4 },
+            "name": { "const": "proffer_tournament_decay_pour_over_divergence" },
+            "status": { "const": "PASS" },
+            "checks": { "$ref": "#/$defs/checks" }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["vector", "name", "status", "checks"],
+          "properties": {
+            "vector": { "const": 5 },
+            "name": { "const": "coupled_defection_cascade_n12" },
+            "status": { "const": "PASS" },
+            "checks": { "$ref": "#/$defs/checks" }
+          }
+        }
+      ],
+      "items": false
+    },
+    "gatekeeper_classes": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "prefixItems": [
+        { "const": "Physician" },
+        { "const": "Attorney" },
+        { "const": "Helper" }
+      ],
+      "items": { "$ref": "#/$defs/gatekeeper_class" }
+    },
+    "pi_capture_and_barcode_firewall": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "gatekeeper_class", "nih_grant_arbitrage_usd",
+        "four_nuremberg_falsified_rationalizations",
+        "bipartite_barcode_firewall", "helper_nuremberg_thresholds"
+      ],
+      "properties": {
+        "gatekeeper_class": { "const": "Helper" },
+        "nih_grant_arbitrage_usd": { "const": 5792706.97 },
+        "four_nuremberg_falsified_rationalizations": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 4,
+          "prefixItems": [
+            { "const": "waiver_nda_enforceability_over_jus_cogens_equals_zero" },
+            { "const": "superior_orders_defense_equals_zero_nuremberg_principle_iv" },
+            { "const": "institutional_indemnity_collapses_one_to_zero" },
+            { "const": "limitations_2.5yr_to_tvpa_jus_cogens_infinite" }
+          ],
+          "items": false
+        },
+        "bipartite_barcode_firewall": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "partition_a", "partition_b",
+            "cross_partition_join_keys", "firewall_holds"
+          ],
+          "properties": {
+            "partition_a": { "const": "senior_pi_grant_ledger" },
+            "partition_b": { "const": "wet_lab_helper_barcode_log" },
+            "cross_partition_join_keys": { "const": 0 },
+            "firewall_holds": { "const": true }
+          }
+        },
+        "helper_nuremberg_thresholds": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["p_star_regime1", "p_star_q005", "p_star_q100", "p_star_unbonused"],
+          "properties": {
+            "p_star_regime1": { "const": 0.00230017 },
+            "p_star_q005": { "const": 0.00082589 },
+            "p_star_q100": { "const": 0.00006267 },
+            "p_star_unbonused": { "const": 0.0 }
+          }
+        }
+      }
+    },
+    "all_vectors_pass": { "const": true }
+  },
+  "$defs": {
+    "gatekeeper_class": {
+      "description": "Kraakman gatekeeper class g. 'Helper' denotes the Wet-Lab Helper tier (PhD Student / Postdoc / Nurse) whose 20-year stipend license PV and Senior PI capture exposure sit below the Physician and Attorney tiers.",
+      "type": "string",
+      "enum": ["Physician", "Attorney", "Helper"]
+    },
+    "checks": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name", "computed", "expected", "tolerance", "pass"],
+        "properties": {
+          "name": { "type": "string", "minLength": 1 },
+          "computed": { "type": ["number", "string"] },
+          "expected": { "type": ["number", "string"] },
+          "tolerance": { "type": "number", "minimum": 0 },
+          "pass": { "const": true }
+        }
+      }
+    }
+  }
+}

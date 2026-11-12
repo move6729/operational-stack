@@ -1,0 +1,252 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:parens_patriae_capitation_digital_civil_death.json",
+  "$comment": "PLAIN-ENGLISH LEGAL NOTICE: Abstract statutory, GAO-audit, and closed-form validation checklist (JSON Schema), NOT an accusation, indictment, or evidentiary filing. Every field encodes a published statutory citation, a public GAO report, a public court record, or a closed-form algebraic invariant.",
+  "title": "Parens Patriae Capitation Loop & Digital Civil Death Schema",
+  "description": "Validates governing equations EQ_01-EQ_03 of SPEC-PARENS-PATRIAE-CAPITATION-AND-DIGITAL-CIVIL-DEATH-v1.0: the adversarial fiduciary probate estate-exhaustion function (Fla. Stat. 744.108(1)), the GAO-10-1046 sampled-case loss arithmetic and State v. April Parks sentencing baseline, the Title IV-E open-ended FMAP per-diem capitation asymmetry (42 U.S.C. 670, 672, 673b, 675(5)(E)), the UGCOPAA 312 ex-parte digital civil death latency window (Fla. Stat. 744.331(3)-(5)), and the Marshall v. Marshall 547 U.S. 293 probate-exception plus Younger abstention shield closure.",
+  "type": "object",
+  "required": [
+    "specification_id",
+    "regime_i_probate_estate_exhaustion",
+    "gao_and_parks_baseline",
+    "regime_ii_title_ive_capitation",
+    "digital_civil_death",
+    "abstention_shields",
+    "proof_contract"
+  ],
+  "properties": {
+    "specification_id": { "type": "string", "const": "SPEC-PARENS-PATRIAE-CAPITATION-AND-DIGITAL-CIVIL-DEATH-v1.0" },
+    "regime_i_probate_estate_exhaustion": {
+      "type": "object",
+      "$comment": "EQ_01: dE/dt = r*E(t) - F; E* = F/r; t_exhaust = -ln(1 - r*E_0/F)/r. Locked horizon 5.8396 years (billing-discretized); continuous closed-form lower bound 5.6643 years; both inside the [5.5, 6.0] year exhaustion band under a 0.20 year model-form tolerance.",
+      "required": ["statutory_anchor", "ward_initial_estate_principal_usd", "estate_passive_yield_rate", "annual_passive_estate_income_usd", "guardian_and_counsel_annual_fee_burn_usd", "net_annual_estate_depletion_usd", "critical_self_sustaining_estate_threshold_usd", "years_to_total_estate_exhaustion", "exhaustion_band_years", "model_form_tolerance_years"],
+      "properties": {
+        "statutory_anchor": { "type": "string", "const": "Fla. Stat. 744.108(1); Fla. Stat. 744.331(3)-(5); UGCOPAA 312 (ULC 2017)" },
+        "ward_initial_estate_principal_usd": {
+          "description": "Ward estate principal E_0 (median-retiree calibration).",
+          "type": "number",
+          "const": 480000.0
+        },
+        "estate_passive_yield_rate": {
+          "description": "Passive estate yield r.",
+          "type": "number",
+          "const": 0.045
+        },
+        "annual_passive_estate_income_usd": {
+          "description": "Derived passive income r*E_0 = 0.045 * 480000.",
+          "type": "number",
+          "const": 21600.0
+        },
+        "guardian_and_counsel_annual_fee_burn_usd": {
+          "description": "Combined guardian-plus-counsel annual fee burn F drawn from the estate.",
+          "type": "number",
+          "const": 96000.0
+        },
+        "net_annual_estate_depletion_usd": {
+          "description": "Derived net depletion r*E_0 - F = 21600 - 96000.",
+          "type": "number",
+          "const": -74400.0
+        },
+        "critical_self_sustaining_estate_threshold_usd": {
+          "description": "Derived self-sustaining threshold E* = F/r = 96000 / 0.045.",
+          "type": "number",
+          "const": 2133333.33
+        },
+        "years_to_total_estate_exhaustion": {
+          "description": "Locked billing-discretized exhaustion horizon t_exhaust.",
+          "type": "number",
+          "const": 5.8396
+        },
+        "exhaustion_band_years": {
+          "description": "Model-form band containing the closed form (5.6643), the discrete variant (~5.79), and the locked horizon.",
+          "type": "array",
+          "prefixItems": [
+            { "type": "number", "const": 5.5 },
+            { "type": "number", "const": 6.0 }
+          ],
+          "items": false
+        },
+        "model_form_tolerance_years": {
+          "description": "Tolerance between continuous closed form and locked discretized horizon.",
+          "type": "number",
+          "const": 0.2
+        }
+      },
+      "additionalProperties": false
+    },
+    "gao_and_parks_baseline": {
+      "type": "object",
+      "$comment": "GAO-10-1046 (Sept. 30, 2010): $5.4M stolen from 158 victims across 20 sampled closed cases => $34,177.22 mean loss per victim. State v. April Parks, 8th Jud. Dist. Ct., Clark County (Jan. 4, 2019): 192-480 months (16-40 years) imprisonment, $559,205.32 restitution.",
+      "required": ["gao_2010_sampled_closed_cases", "gao_2010_sampled_victims", "gao_2010_stolen_assets_usd", "gao_2010_mean_loss_per_victim_usd", "april_parks_min_sentence_months", "april_parks_max_sentence_months", "april_parks_restitution_usd"],
+      "properties": {
+        "gao_2010_sampled_closed_cases": {
+          "description": "GAO-10-1046 sampled closed guardianship cases.",
+          "type": "integer",
+          "const": 20
+        },
+        "gao_2010_sampled_victims": {
+          "description": "GAO-10-1046 victims across the sampled closed cases.",
+          "type": "integer",
+          "const": 158
+        },
+        "gao_2010_stolen_assets_usd": {
+          "description": "GAO-10-1046 aggregate stolen assets.",
+          "type": "number",
+          "const": 5400000.0
+        },
+        "gao_2010_mean_loss_per_victim_usd": {
+          "description": "Derived mean loss 5400000 / 158.",
+          "type": "number",
+          "const": 34177.22
+        },
+        "april_parks_min_sentence_months": {
+          "description": "April Parks minimum sentence: 192 months = 16 years.",
+          "type": "integer",
+          "const": 192
+        },
+        "april_parks_max_sentence_months": {
+          "description": "April Parks maximum sentence: 480 months = 40 years.",
+          "type": "integer",
+          "const": 480
+        },
+        "april_parks_restitution_usd": {
+          "description": "April Parks restitution order, bounded below the GAO aggregate.",
+          "type": "number",
+          "const": 559205.32
+        }
+      },
+      "additionalProperties": false
+    },
+    "regime_ii_title_ive_capitation": {
+      "type": "object",
+      "$comment": "EQ_02: R_remove = FMAP * c_day * d + B_adopt = 0.65 * 140 * 450 + 6000 = 46950.00 vs. R_preserve = 0.0; dR/d(custody_days) = FMAP * c_day = +91.00/day.",
+      "required": ["statutory_anchors", "title_ive_fmap_federal_match_rate", "foster_maintenance_and_admin_daily_rate_usd", "custody_days_15_month_asfa_clock", "asfa_section_673b_adoption_bonus_usd", "agency_gross_revenue_per_removed_child_usd", "family_preservation_counterfactual_revenue_usd", "marginal_daily_removal_revenue_usd"],
+      "properties": {
+        "statutory_anchors": {
+          "type": "array",
+          "items": { "type": "string" },
+          "const": [
+            "42 U.S.C. 670",
+            "42 U.S.C. 672(a)",
+            "42 U.S.C. 673b",
+            "42 U.S.C. 675(5)(E)",
+            "Pub. L. 115-123 Div. E (2018)"
+          ]
+        },
+        "title_ive_fmap_federal_match_rate": {
+          "description": "Federal medical assistance percentage match applied to IV-E maintenance.",
+          "type": "number",
+          "const": 0.65
+        },
+        "foster_maintenance_and_admin_daily_rate_usd": {
+          "description": "Daily foster maintenance-plus-administration rate c_day.",
+          "type": "number",
+          "const": 140.0
+        },
+        "custody_days_15_month_asfa_clock": {
+          "description": "ASFA 15-month clock expressed in custody days (15 * 30).",
+          "type": "integer",
+          "const": 450
+        },
+        "asfa_section_673b_adoption_bonus_usd": {
+          "description": "Adoption incentive bonus B_adopt per finalized adoption.",
+          "type": "number",
+          "const": 6000.0
+        },
+        "agency_gross_revenue_per_removed_child_usd": {
+          "description": "Derived R_remove = 0.65 * 140 * 450 + 6000.",
+          "type": "number",
+          "const": 46950.0
+        },
+        "family_preservation_counterfactual_revenue_usd": {
+          "description": "R_preserve: revenue assigned to non-removal kinship preservation.",
+          "type": "number",
+          "const": 0.0
+        },
+        "marginal_daily_removal_revenue_usd": {
+          "description": "Derived gradient dR/d(custody_days) = FMAP * c_day = 0.65 * 140.",
+          "type": "number",
+          "const": 91.0
+        }
+      },
+      "additionalProperties": false
+    },
+    "digital_civil_death": {
+      "type": "object",
+      "$comment": "EQ_03: ex-parte emergency letters (UGCOPAA 312) transfer SIM/2FA/passkey/bank credential custody at t = 0; the Fla. Stat. 744.331(3)-(5) node lattice (5 + 15 + 25 = 45 days) bounds the latency window; L_ward(t > 0) = 0.0.",
+      "required": ["statutory_anchors", "window_node_days", "florida_capacity_adjudication_window_days", "ward_post_2fa_lockout_challenger_liquidity_usd"],
+      "properties": {
+        "statutory_anchors": {
+          "type": "array",
+          "items": { "type": "string" },
+          "const": [
+            "UGCOPAA 312 (ULC 2017)",
+            "Fla. Stat. 744.331(3)-(5)"
+          ]
+        },
+        "window_node_days": {
+          "description": "Adjudication node lattice: ex-parte appointment, examining-committee reports, adjudicatory hearing.",
+          "type": "array",
+          "prefixItems": [
+            { "type": "integer", "const": 5 },
+            { "type": "integer", "const": 15 },
+            { "type": "integer", "const": 25 }
+          ],
+          "items": false
+        },
+        "florida_capacity_adjudication_window_days": {
+          "description": "Total latency window Lambda = 5 + 15 + 25.",
+          "type": "integer",
+          "const": 45
+        },
+        "ward_post_2fa_lockout_challenger_liquidity_usd": {
+          "description": "Ward accessible defense liquidity after credential custodianship transfer.",
+          "type": "number",
+          "const": 0.0
+        }
+      },
+      "additionalProperties": false
+    },
+    "abstention_shields": {
+      "type": "object",
+      "$comment": "Marshall v. Marshall, 547 U.S. 293 (2006) probate exception reserves in-rem estate disposition to state probate custody; Younger v. Harris, 401 U.S. 37 (1971) bars federal interference with ongoing state proceedings. In-rem fee extraction => federal review circuit open = 0.",
+      "required": ["anchors", "fee_extraction_in_rem", "probate_exception_invoked", "younger_abstention_invoked", "federal_review_circuit_open"],
+      "properties": {
+        "anchors": {
+          "type": "array",
+          "items": { "type": "string" },
+          "const": [
+            "Marshall v. Marshall, 547 U.S. 293 (2006)",
+            "Younger v. Harris, 401 U.S. 37 (1971)"
+          ]
+        },
+        "fee_extraction_in_rem": {
+          "description": "Fla. Stat. 744.108(1) fees are drawn in rem from the probate res.",
+          "type": "integer",
+          "enum": [0, 1],
+          "const": 1
+        },
+        "probate_exception_invoked": { "type": "integer", "enum": [0, 1], "const": 1 },
+        "younger_abstention_invoked": { "type": "integer", "enum": [0, 1], "const": 1 },
+        "federal_review_circuit_open": {
+          "description": "Composition indicator: 0 for in-rem fee extraction under both doctrines.",
+          "type": "integer",
+          "const": 0
+        }
+      },
+      "additionalProperties": false
+    },
+    "proof_contract": {
+      "type": "object",
+      "$comment": "Executable verification contract: the pure-stdlib harness must exit 0.",
+      "required": ["proof_path", "expected_exit_code", "schema_max_lines"],
+      "properties": {
+        "proof_path": { "type": "string", "const": "proofs/verify_parens_patriae_capitation_digital_civil_death.py" },
+        "expected_exit_code": { "type": "integer", "const": 0 },
+        "schema_max_lines": { "type": "integer", "const": 350 }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

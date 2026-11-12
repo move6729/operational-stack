@@ -1,0 +1,288 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:anthropic_s1a_trillion_dollar_encumbrance_and_wework_insolvency_audit.json",
+  "title": "Anthropic Form S-1/A Trillion-Dollar Encumbrance and WeWork Insolvency Audit Manifest",
+  "description": "Typed measurement schema for the Anthropic, PBC (SEC CIK 0002130357; Nasdaq: ANT) Form S-1/A trillion-dollar encumbrance audit and its WeWork insolvency isomorphism. LOCK A: quarterly progression Q1 2025 $376M -> Q2 2025 $787M -> Q3 2025 $1,382M -> Q4 2025 $2,040M -> Q1 2026 ($4,731M revenue / $3,387M compute = 1.396811x, +131.91% QoQ) -> Q2 2026 ($11,555M / $5,558M = 2.078985x, 48.1004% compute share, +144.24% QoQ, +$974M GAAP operating income, $2,235M adjusted operating income = 19.3423%) -> Q3 2026 ($16,956M / $9,863M = 1.719152x, 58.1682% compute share, +46.7417% QoQ, -17.3081% revenue-per-compute-dollar collapse, -$(567)M GAAP operating loss, $2,500M adjusted operating income = 14.7440%). LOCK B: Q3 2026 marginal compute cost ($9,863M - $5,558M) / ($16,956M - $11,555M) = $4,305M / $5,401M = 79.707462%, $5,000M Q3 short-term compute, $24.0B total short-term compute ($17.4B + $6.6B), $600M price-cut haircut, $2,000M donation match. LOCK C: 9M 2026 revenue $33,242M, compute $18,808M, GAAP operating loss -$(1,260)M, net loss -$(104,039)M across 273 days = -$381.095238M/day, convertible fair-value loss -$(94,302)M, partner deal expense -$(10,400)M, stock-based compensation -$(3,320)M, policy-violation revenue 5%-7% = [$1,662.10M, $2,326.94M]. LOCK D: $895.4B five-piece tie-out ($320.0B + $17.4B + $451.2B + $100.2B + $6.6B) plus $150.0B-$175.0B unpriced TPU/AMD and $4.7B developer guaranties = [$1,050.1B, $1,075.1B] all-in encumbrance; ASC 842 concealment multiple $451,200M / $4,484M = 100.624442x; next-12-month locked share ($69.8B - $4.3B) / $69.8B = 93.839542%; Amazon convert multiple $130.5B / $6.2B = 21.048387x; Google updated exposure $121.3B + [$125.0B, $150.0B] = [$246.3B, $271.3B]. LOCK E: absolute-priority tranche waterfall over the senior hybrid/lease/take-or-pay stack versus the Class A subordinated public equity stub, six-category security-master ring, ISO catalyst calendar, and the WeWork precedent (S-1 2019-08-14 -> IPO withdrawal 2019-09-24 -> Chapter 11 2023-11-06, Bankr. D.N.J. Case No. 23-90706). All monetary values USD.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "specification_id",
+    "jurisdiction_context",
+    "cfaa_compliant_18_usc_1030",
+    "quarterly_progression",
+    "marginal_and_short_term_compute",
+    "nine_month_2026_totals",
+    "encumbrance_tie_out",
+    "tranche_waterfall",
+    "entity_and_instrument_ids",
+    "catalyst_calendar",
+    "wework_precedent_isomorphism"
+  ],
+  "properties": {
+    "specification_id": { "type": "string", "const": "SPEC-ANTHROPIC-S1A-TRILLION-DOLLAR-ENCUMBRANCE-AND-WEWORK-INSOLVENCY-AUDIT-v1.0" },
+    "jurisdiction_context": { "type": "string", "pattern": "^[A-Z]{2}$", "const": "US", "description": "ISO 3166-1 alpha-2 jurisdiction context." },
+    "cfaa_compliant_18_usc_1030": { "type": "boolean", "const": true, "description": "Zero unauthorized access under 18 U.S.C. 1030: every measured artifact is a public SEC EDGAR filing, a public federal court docket, or a public bankruptcy docket, analyzed read-only." },
+    "quarterly_progression": {
+      "type": "object",
+      "description": "LOCK A: quarterly revenue/compute progression Q1 2025 -> Q3 2026 with ratio, QoQ, compute-share, and adjusted-margin identities.",
+      "additionalProperties": false,
+      "required": ["q1_2025_revenue_m", "q2_2025_revenue_m", "q3_2025_revenue_m", "q4_2025_revenue_m", "q1_2026_revenue_m", "q1_2026_compute_m", "q1_2026_rev_per_dollar_compute", "q1_2026_qoq_revenue_growth_pct", "q2_2026_revenue_m", "q2_2026_compute_m", "q2_2026_rev_per_dollar_compute", "q2_2026_compute_share", "q2_2026_qoq_revenue_growth_pct", "q2_2026_gaap_operating_income_m", "q2_2026_adjusted_op_income_m", "q2_2026_adjusted_op_margin_pct", "q3_2026_revenue_m", "q3_2026_compute_m", "q3_2026_rev_per_dollar_compute", "q3_2026_compute_share", "q3_2026_qoq_revenue_growth_pct", "q3_2026_rev_per_compute_drop_pct", "q3_2026_gaap_operating_loss_m", "q3_2026_adjusted_op_income_m", "q3_2026_adjusted_op_margin_pct"],
+      "properties": {
+        "q1_2025_revenue_m": { "type": "number", "const": 376.0 },
+        "q2_2025_revenue_m": { "type": "number", "const": 787.0 },
+        "q3_2025_revenue_m": { "type": "number", "const": 1382.0 },
+        "q4_2025_revenue_m": { "type": "number", "const": 2040.0 },
+        "q1_2026_revenue_m": { "type": "number", "const": 4731.0 },
+        "q1_2026_compute_m": { "type": "number", "const": 3387.0 },
+        "q1_2026_rev_per_dollar_compute": { "type": "number", "const": 1.396811 },
+        "q1_2026_qoq_revenue_growth_pct": { "type": "number", "const": 131.91 },
+        "q2_2026_revenue_m": { "type": "number", "const": 11555.0 },
+        "q2_2026_compute_m": { "type": "number", "const": 5558.0 },
+        "q2_2026_rev_per_dollar_compute": { "type": "number", "const": 2.078985 },
+        "q2_2026_compute_share": { "type": "number", "const": 0.481004 },
+        "q2_2026_qoq_revenue_growth_pct": { "type": "number", "const": 144.24 },
+        "q2_2026_gaap_operating_income_m": { "type": "number", "const": 974.0 },
+        "q2_2026_adjusted_op_income_m": { "type": "number", "const": 2235.0 },
+        "q2_2026_adjusted_op_margin_pct": { "type": "number", "const": 19.3423 },
+        "q3_2026_revenue_m": { "type": "number", "const": 16956.0 },
+        "q3_2026_compute_m": { "type": "number", "const": 9863.0 },
+        "q3_2026_rev_per_dollar_compute": { "type": "number", "const": 1.719152 },
+        "q3_2026_compute_share": { "type": "number", "const": 0.581682 },
+        "q3_2026_qoq_revenue_growth_pct": { "type": "number", "const": 46.7417 },
+        "q3_2026_rev_per_compute_drop_pct": { "type": "number", "const": -17.3081 },
+        "q3_2026_gaap_operating_loss_m": { "type": "number", "const": -567.0 },
+        "q3_2026_adjusted_op_income_m": { "type": "number", "const": 2500.0 },
+        "q3_2026_adjusted_op_margin_pct": { "type": "number", "const": 14.744 }
+      }
+    },
+    "marginal_and_short_term_compute": {
+      "type": "object",
+      "description": "LOCK B: Q3 2026 marginal compute cost, the short-term compute stack, the price-cut haircut, and the donation match.",
+      "additionalProperties": false,
+      "required": ["q3_2026_marginal_compute_numerator_m", "q3_2026_marginal_compute_denominator_m", "q3_2026_marginal_compute_cost_pct", "q3_2026_short_term_compute_m", "short_term_compute_primary_b", "short_term_compute_secondary_b", "total_short_term_compute_b", "price_cut_haircut_m", "donation_match_m"],
+      "properties": {
+        "q3_2026_marginal_compute_numerator_m": { "type": "number", "const": 4305.0 },
+        "q3_2026_marginal_compute_denominator_m": { "type": "number", "const": 5401.0 },
+        "q3_2026_marginal_compute_cost_pct": { "type": "number", "const": 79.707462 },
+        "q3_2026_short_term_compute_m": { "type": "number", "const": 5000.0 },
+        "short_term_compute_primary_b": { "type": "number", "const": 17.4 },
+        "short_term_compute_secondary_b": { "type": "number", "const": 6.6 },
+        "total_short_term_compute_b": { "type": "number", "const": 24.0 },
+        "price_cut_haircut_m": { "type": "number", "const": 600.0 },
+        "donation_match_m": { "type": "number", "const": 2000.0 }
+      }
+    },
+    "nine_month_2026_totals": {
+      "type": "object",
+      "description": "LOCK C: 9M 2026 consolidation across 273 days with below-the-line items and the policy-violation revenue range.",
+      "additionalProperties": false,
+      "required": ["revenue_m", "compute_m", "gaap_operating_loss_m", "net_loss_m", "days_in_period", "daily_net_loss_m", "convertible_fair_value_loss_m", "partner_deal_expense_m", "stock_based_compensation_m", "policy_violation_revenue_share_range", "policy_violation_revenue_range_m"],
+      "properties": {
+        "revenue_m": { "type": "number", "const": 33242.0 },
+        "compute_m": { "type": "number", "const": 18808.0 },
+        "gaap_operating_loss_m": { "type": "number", "const": -1260.0 },
+        "net_loss_m": { "type": "number", "const": -104039.0 },
+        "days_in_period": { "type": "integer", "const": 273 },
+        "daily_net_loss_m": { "type": "number", "const": -381.095238 },
+        "convertible_fair_value_loss_m": { "type": "number", "const": -94302.0 },
+        "partner_deal_expense_m": { "type": "number", "const": -10400.0 },
+        "stock_based_compensation_m": { "type": "number", "const": -3320.0 },
+        "policy_violation_revenue_share_range": { "type": "array", "minItems": 2, "maxItems": 2, "prefixItems": [ { "type": "number", "const": 0.05 }, { "type": "number", "const": 0.07 } ] },
+        "policy_violation_revenue_range_m": { "type": "array", "minItems": 2, "maxItems": 2, "prefixItems": [ { "type": "number", "const": 1662.1 }, { "type": "number", "const": 2326.94 } ] }
+      }
+    },
+    "encumbrance_tie_out": {
+      "type": "object",
+      "description": "LOCK D: $895.4B five-piece tie-out, all-in encumbrance envelope, ASC 842 concealment multiple, next-12-month locked share, Amazon convert multiple, and updated Google exposure.",
+      "additionalProperties": false,
+      "required": ["five_piece_tie_out_b", "tie_out_total_b", "unpriced_tpu_amd_low_b", "unpriced_tpu_amd_high_b", "developer_guaranties_b", "all_in_encumbrance_low_b", "all_in_encumbrance_high_b", "asc842_off_balance_sheet_m", "asc842_on_balance_sheet_m", "asc842_concealment_multiple_x", "next_12m_total_commitments_b", "next_12m_cancelable_b", "next_12m_locked_b", "next_12m_locked_share", "amazon_convert_exposure_b", "amazon_equity_investment_b", "amazon_convert_multiple_x", "google_base_exposure_b", "google_additional_range_b", "google_updated_exposure_range_b"],
+      "properties": {
+        "five_piece_tie_out_b": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["undiscounted_lease_obligations", "off_balance_sheet_purchase_commitments", "booked_tpu_silicon_commitments", "short_term_compute_primary", "short_term_compute_secondary"],
+          "properties": {
+            "undiscounted_lease_obligations": { "type": "number", "const": 320.0 },
+            "off_balance_sheet_purchase_commitments": { "type": "number", "const": 451.2 },
+            "booked_tpu_silicon_commitments": { "type": "number", "const": 100.2 },
+            "short_term_compute_primary": { "type": "number", "const": 17.4 },
+            "short_term_compute_secondary": { "type": "number", "const": 6.6 }
+          }
+        },
+        "tie_out_total_b": { "type": "number", "const": 895.4 },
+        "unpriced_tpu_amd_low_b": { "type": "number", "const": 150.0 },
+        "unpriced_tpu_amd_high_b": { "type": "number", "const": 175.0 },
+        "developer_guaranties_b": { "type": "number", "const": 4.7 },
+        "all_in_encumbrance_low_b": { "type": "number", "const": 1050.1 },
+        "all_in_encumbrance_high_b": { "type": "number", "const": 1075.1 },
+        "asc842_off_balance_sheet_m": { "type": "number", "const": 451200.0 },
+        "asc842_on_balance_sheet_m": { "type": "number", "const": 4484.0 },
+        "asc842_concealment_multiple_x": { "type": "number", "const": 100.624442 },
+        "next_12m_total_commitments_b": { "type": "number", "const": 69.8 },
+        "next_12m_cancelable_b": { "type": "number", "const": 4.3 },
+        "next_12m_locked_b": { "type": "number", "const": 65.5 },
+        "next_12m_locked_share": { "type": "number", "const": 0.93839542 },
+        "amazon_convert_exposure_b": { "type": "number", "const": 130.5 },
+        "amazon_equity_investment_b": { "type": "number", "const": 6.2 },
+        "amazon_convert_multiple_x": { "type": "number", "const": 21.048387 },
+        "google_base_exposure_b": { "type": "number", "const": 121.3 },
+        "google_additional_range_b": { "type": "array", "minItems": 2, "maxItems": 2, "prefixItems": [ { "type": "number", "const": 125.0 }, { "type": "number", "const": 150.0 } ] },
+        "google_updated_exposure_range_b": { "type": "array", "minItems": 2, "maxItems": 2, "prefixItems": [ { "type": "number", "const": 246.3 }, { "type": "number", "const": 271.3 } ] }
+      }
+    },
+    "tranche_waterfall": {
+      "type": "array",
+      "description": "LOCK E: absolute-priority recovery waterfall over the senior hybrid/lease/take-or-pay stack, terminating with the Class A subordinated public equity residual stub (principal null). breakeven_ev_b is the cumulative EV at which each tranche is fully recovered.",
+      "const": [
+        { "tranche": "senior_take_or_pay_lease_stack", "principal_b": 320.0, "seniority": 1, "breakeven_ev_b": 320.0 },
+        { "tranche": "asc842_off_balance_sheet_commitments", "principal_b": 451.2, "seniority": 2, "breakeven_ev_b": 771.2 },
+        { "tranche": "hybrid_convertible_silicon_stack", "principal_b": 100.2, "seniority": 3, "breakeven_ev_b": 871.4 },
+        { "tranche": "short_term_compute_commitments", "principal_b": 24.0, "seniority": 4, "breakeven_ev_b": 895.4 },
+        { "tranche": "unpriced_tpu_amd_low_bound", "principal_b": 150.0, "seniority": 5, "breakeven_ev_b": 1045.4 },
+        { "tranche": "developer_guaranties", "principal_b": 4.7, "seniority": 6, "breakeven_ev_b": 1050.1 },
+        { "tranche": "class_a_subordinated_public_equity", "principal_b": null, "seniority": 7, "breakeven_ev_b": 1050.1 }
+      ],
+      "minItems": 7,
+      "maxItems": 7
+    },
+    "entity_and_instrument_ids": {
+      "type": "object",
+      "description": "Six-category multi-counterparty security-master ring.",
+      "additionalProperties": false,
+      "required": ["primary_target", "bdc_colenders_credit_funds", "insurer_reinsurance_sidecars", "auditors_valuation_agents_fund_admins", "pension_lps_swfs_consultants", "trustees_admin_agents_rating_agencies", "counsel_co_investors"],
+      "properties": {
+        "primary_target": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["entity", "role", "identifiers"],
+          "properties": {
+            "entity": { "type": "string", "const": "Anthropic, PBC" },
+            "role": { "type": "string", "const": "primary" },
+            "identifiers": { "type": "object", "additionalProperties": false, "required": ["sec_cik", "ticker", "jurisdiction_of_incorporation", "filing"], "properties": {
+              "sec_cik": { "type": "string", "pattern": "^0002130357$" },
+              "ticker": { "type": "string", "const": "ANT" },
+              "jurisdiction_of_incorporation": { "type": "string", "const": "Delaware" },
+              "filing": { "type": "string", "const": "Form S-1/A confidential amendment (trillion-dollar encumbrance restatement)" }
+            } }
+          }
+        },
+        "bdc_colenders_credit_funds": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["role", "counterparties"],
+          "properties": {
+            "role": { "type": "string", "const": "vendor_financed_compute_credit_counterparties" },
+            "counterparties": {
+              "type": "array", "minItems": 5, "maxItems": 5,
+              "items": { "type": "object", "additionalProperties": false, "required": ["entity", "ticker", "cik", "instrument"], "properties": {
+                "entity": { "type": "string", "minLength": 3 },
+                "ticker": { "type": "string", "pattern": "^[A-Z]{2,5}$" },
+                "cik": { "type": "string", "pattern": "^[0-9]{10}$" },
+                "instrument": { "type": "string", "minLength": 16 }
+              } }
+            }
+          }
+        },
+        "insurer_reinsurance_sidecars": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["role", "counterparties", "attestation"],
+          "properties": {
+            "role": { "type": "string", "const": "regulated_insurance_balance_sheet_counterparties" },
+            "counterparties": { "type": "array", "maxItems": 0 },
+            "attestation": { "type": "string", "const": "no regulated insurance or reinsurance sidecar counterparty named in the S-1/A locked constants" }
+          }
+        },
+        "auditors_valuation_agents_fund_admins": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["role", "counterparties"],
+          "properties": {
+            "role": { "type": "string", "const": "pcaob_registered_independent_auditors" },
+            "counterparties": {
+              "type": "array", "minItems": 2, "maxItems": 2,
+              "items": { "type": "object", "additionalProperties": false, "required": ["entity", "scope"], "properties": {
+                "entity": { "type": "string", "enum": ["Ernst & Young LLP", "Grant Thornton LLP"] },
+                "scope": { "type": "string", "minLength": 16 }
+              } }
+            }
+          }
+        },
+        "pension_lps_swfs_consultants": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["role", "counterparties", "attestation"],
+          "properties": {
+            "role": { "type": "string", "const": "fiduciary_passive_index_transfer_vector" },
+            "counterparties": { "type": "array", "maxItems": 0 },
+            "attestation": { "type": "string", "const": "post-IPO S&P 500 index inclusion transfers encumbrance risk onto public pensions, 401(k) plans, and passive index funds; no named FOIA-subject LP in the locked constants" }
+          }
+        },
+        "trustees_admin_agents_rating_agencies": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["role", "counterparties", "attestation"],
+          "properties": {
+            "role": { "type": "string", "const": "deal_agents_underwriting_syndicate" },
+            "counterparties": {
+              "type": "array", "minItems": 4, "maxItems": 4,
+              "items": { "type": "object", "additionalProperties": false, "required": ["entity", "role"], "properties": {
+                "entity": { "type": "string", "enum": ["Morgan Stanley & Co. LLC", "Goldman Sachs & Co. LLC", "JPMorgan Chase & Co.", "Citigroup Global Markets Inc."] },
+                "role": { "type": "string", "enum": ["lead_left_underwriter", "stabilization_agent", "bookrunner"] }
+              } }
+            },
+            "attestation": { "type": "string", "const": "issuer unrated; no indenture trustee or rating agency coverage in the locked constants" }
+          }
+        },
+        "counsel_co_investors": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["role", "court_dockets"],
+          "properties": {
+            "role": { "type": "string", "const": "litigation_counsel_and_named_dockets" },
+            "court_dockets": {
+              "type": "array", "minItems": 1, "maxItems": 1,
+              "items": { "type": "object", "additionalProperties": false, "required": ["case", "docket", "status"], "properties": {
+                "case": { "type": "string", "const": "Bartz et al. v. Anthropic PBC" },
+                "docket": { "type": "string", "const": "N.D. Cal. Case No. 3:24-cv-05417-WHA" },
+                "status": { "type": "string", "const": "$1,500.0M settlement" }
+              } }
+            }
+          }
+        }
+      }
+    },
+    "catalyst_calendar": {
+      "type": "array",
+      "description": "Hard-date catalyst calendar in strictly ascending ISO 8601 order.",
+      "minItems": 6,
+      "maxItems": 6,
+      "prefixItems": [
+        { "type": "object", "additionalProperties": false, "required": ["date", "type", "catalyst"], "properties": { "date": { "type": "string", "const": "2026-09-30" }, "type": { "type": "string", "const": "measurement_period_end" }, "catalyst": { "type": "string", "minLength": 16 } } },
+        { "type": "object", "additionalProperties": false, "required": ["date", "type", "catalyst"], "properties": { "date": { "type": "string", "const": "2026-12-31" }, "type": { "type": "string", "const": "filing_window" }, "catalyst": { "type": "string", "minLength": 16 } } },
+        { "type": "object", "additionalProperties": false, "required": ["date", "type", "catalyst"], "properties": { "date": { "type": "string", "const": "2027-03-31" }, "type": { "type": "string", "const": "s1_filing" }, "catalyst": { "type": "string", "minLength": 16 } } },
+        { "type": "object", "additionalProperties": false, "required": ["date", "type", "catalyst"], "properties": { "date": { "type": "string", "const": "2027-09-30" }, "type": { "type": "string", "const": "maturity_cliff" }, "catalyst": { "type": "string", "minLength": 16 } } },
+        { "type": "object", "additionalProperties": false, "required": ["date", "type", "catalyst"], "properties": { "date": { "type": "string", "const": "2028-12-31" }, "type": { "type": "string", "const": "encumbrance_step_up" }, "catalyst": { "type": "string", "minLength": 16 } } },
+        { "type": "object", "additionalProperties": false, "required": ["date", "type", "catalyst"], "properties": { "date": { "type": "string", "const": "2036-04-30" }, "type": { "type": "string", "const": "take_or_pay_maturity" }, "catalyst": { "type": "string", "minLength": 16 } } }
+      ],
+      "items": { "type": "object", "additionalProperties": false, "required": ["date", "type", "catalyst"], "properties": { "date": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" }, "type": { "type": "string", "enum": ["measurement_period_end", "filing_window", "s1_filing", "maturity_cliff", "encumbrance_step_up", "take_or_pay_maturity"] }, "catalyst": { "type": "string", "minLength": 16 } } }
+    },
+    "wework_precedent_isomorphism": {
+      "type": "object",
+      "description": "WeWork insolvency isomorphism: public S-1 -> IPO withdrawal -> Chapter 11, measured against the Anthropic ASC 842 concealment profile (on-balance-sheet recognition below 1% of the undiscounted off-balance-sheet stack; concealment multiple above 100x).",
+      "additionalProperties": false,
+      "required": ["wework_s1_public_filing_date", "wework_ipo_withdrawn_date", "wework_chapter_11_petition_date", "wework_chapter_11_docket", "s1_to_ipo_withdrawal_days", "s1_to_chapter_11_days", "anthropic_on_balance_recognition_ratio", "concealment_multiple_threshold_x", "isomorphism_flag"],
+      "properties": {
+        "wework_s1_public_filing_date": { "type": "string", "const": "2019-08-14" },
+        "wework_ipo_withdrawn_date": { "type": "string", "const": "2019-09-24" },
+        "wework_chapter_11_petition_date": { "type": "string", "const": "2023-11-06" },
+        "wework_chapter_11_docket": { "type": "string", "const": "Bankr. D.N.J. Case No. 23-90706 (WeWork Companies Inc.)" },
+        "s1_to_ipo_withdrawal_days": { "type": "integer", "const": 41 },
+        "s1_to_chapter_11_days": { "type": "integer", "const": 1545 },
+        "anthropic_on_balance_recognition_ratio": { "type": "number", "const": 0.009938 },
+        "concealment_multiple_threshold_x": { "type": "number", "const": 100.0 },
+        "isomorphism_flag": { "type": "boolean", "const": true }
+      }
+    }
+  }
+}

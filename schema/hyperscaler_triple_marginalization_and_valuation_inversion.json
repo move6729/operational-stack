@@ -1,0 +1,251 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:hyperscaler_triple_marginalization_and_valuation_inversion.json",
+  "title": "Hyperscaler Triple-Marginalization & Valuation Inversion Bundle",
+  "description": "Schema for the EQ1-EQ6 governing-equation bundle: valuation inversion (MSFT vs. GOOGL), Spengler triple-marginalization vs. Coasean TPU verticalization, Note 13 uncommenced lease shadow stack, Copilot seat compression, RPO/HLBV earnings quality, and the parameterized $30.0B neocloud tranche waterfall.",
+  "type": "object",
+  "required": [
+    "jurisdiction_context",
+    "cfaa_compliance_attestation",
+    "valuation_inversion_metrics",
+    "spengler_triple_marginalization_stack",
+    "note_13_uncommenced_lease_audit",
+    "copilot_seat_and_windows_recall_discovery_trap",
+    "neocloud_tranche_waterfall",
+    "entity_and_instrument_ids",
+    "catalyst_calendar"
+  ],
+  "properties": {
+    "jurisdiction_context": {
+      "type": "string",
+      "description": "ISO 3166-1 alpha-2 jurisdiction context for localized statutory module execution.",
+      "enum": ["US", "EU", "GB"]
+    },
+    "cfaa_compliance_attestation": {
+      "type": "object",
+      "required": ["statute", "zero_unauthorized_access", "attestation"],
+      "properties": {
+        "statute": { "const": "18 U.S.C. § 1030" },
+        "zero_unauthorized_access": { "const": true },
+        "attestation": {
+          "const": "All mesh participants operate within authorized-access boundaries; non-compliant state execution fails cryptographic validation and halts propagation."
+        }
+      },
+      "additionalProperties": false
+    },
+    "valuation_inversion_metrics": {
+      "type": "object",
+      "required": ["msft", "googl", "ev_spread_b", "mcap_spread_b", "pe_inversion_ratio", "net_cash_spread_b"],
+      "properties": {
+        "msft": { "$ref": "#/$defs/company_valuation" },
+        "googl": { "$ref": "#/$defs/company_valuation" },
+        "ev_spread_b": { "const": 690.0 },
+        "mcap_spread_b": { "const": 510.0 },
+        "pe_inversion_ratio": { "const": 1.8930 },
+        "revenue_delta_b": { "const": 124.65 },
+        "revenue_growth_pct": { "const": 35.98 },
+        "net_income_delta_b": { "const": 93.06 },
+        "net_income_growth_pct": { "const": 65.25 },
+        "net_cash_spread_b": { "const": 184.19 }
+      },
+      "additionalProperties": false
+    },
+    "spengler_triple_marginalization_stack": {
+      "type": "object",
+      "required": ["tpu_atc_usd_per_hr", "neocloud_gpu_atc_usd_per_hr", "coasean_ratio", "msft_fully_stacked_multiple_of_tpu", "srmc_floor_usd_per_hr"],
+      "properties": {
+        "tpu_atc_usd_per_hr": { "const": 0.68 },
+        "tpu_capex_component": { "const": 0.568 },
+        "tpu_power_ops_component": { "const": 0.112 },
+        "neocloud_gpu_atc_usd_per_hr": { "const": 2.18 },
+        "neocloud_capex_component": { "const": 1.825 },
+        "neocloud_power_ops_component": { "const": 0.355 },
+        "coasean_ratio": { "const": 3.2059 },
+        "openai_layer3_royalty_usd_per_hr": { "const": 0.07 },
+        "msft_fully_stacked_atc_usd_per_hr": { "const": 2.25 },
+        "msft_fully_stacked_multiple_of_tpu": { "const": 3.3088 },
+        "srmc_floor_usd_per_hr": { "const": 0.18 }
+      },
+      "additionalProperties": false
+    },
+    "note_13_uncommenced_lease_audit": {
+      "type": "object",
+      "required": ["msft_uncommenced_leases_fy26_b", "msft_uncommenced_leases_fy24_b", "uncommenced_growth_multiple", "msft_total_on_bs_leases_b", "off_to_on_bs_ratio", "lease_adjusted_ev_spread_b"],
+      "properties": {
+        "msft_uncommenced_leases_fy26_b": { "const": 329.1 },
+        "msft_uncommenced_leases_fy24_b": { "const": 108.0 },
+        "uncommenced_growth_multiple": { "const": 3.0472 },
+        "msft_on_bs_finance_leases_m": { "const": 66594.0 },
+        "msft_on_bs_operating_leases_m": { "const": 21925.0 },
+        "msft_total_on_bs_leases_b": { "const": 88.519 },
+        "off_to_on_bs_ratio": { "const": 3.7178 },
+        "msft_lease_adjusted_ev_b": { "const": 4449.1 },
+        "googl_uncommenced_leases_b": { "const": 130.5 },
+        "googl_lease_adjusted_ev_b": { "const": 3560.5 },
+        "lease_adjusted_ev_spread_b": { "const": 888.6 },
+        "crwv_msft_revenue_share": { "const": 0.67 },
+        "crwv_fy25_interest_to_revenue": { "const": 0.2410 }
+      },
+      "additionalProperties": false
+    },
+    "copilot_seat_and_windows_recall_discovery_trap": {
+      "type": "object",
+      "required": ["copilot_list_price_mo_usd", "breakeven_hours_list", "breakeven_hours_promo", "seat_overcharge_multiple", "windows_recall_storage"],
+      "properties": {
+        "copilot_list_price_mo_usd": { "const": 21.00 },
+        "copilot_promo_price_mo_usd": { "const": 18.00 },
+        "fractional_gpu_plus_openai_cost_usd_per_hr": { "const": 0.42 },
+        "breakeven_hours_list": { "const": 50.0 },
+        "breakeven_hrs_per_day_over_20_workdays": { "const": 2.50 },
+        "breakeven_hours_promo": { "const": 42.86 },
+        "mvno_tpu_equivalent_50hrs_usd": { "const": 3.40 },
+        "seat_overcharge_multiple": { "const": 6.1765 },
+        "windows_recall_storage": {
+          "type": "object",
+          "required": ["min_free_gb", "max_cap_gb", "pause_floor_gb", "post_midnight_pause_persistence_hrs"],
+          "properties": {
+            "min_free_gb": { "const": 50.0 },
+            "max_cap_gb": { "const": 150.0 },
+            "pause_floor_gb": { "const": 25.0 },
+            "post_midnight_pause_persistence_hrs": { "const": 0.0 }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "neocloud_tranche_waterfall": {
+      "type": "object",
+      "required": ["cluster_face_value_b", "tranche_face_values_b", "verification_points", "switching_cost_decay"],
+      "properties": {
+        "cluster_face_value_b": { "const": 30.0 },
+        "tranche_face_values_b": {
+          "type": "array",
+          "prefixItems": [
+            { "const": 18.0 },
+            { "const": 7.5 },
+            { "const": 4.5 }
+          ],
+          "items": false,
+          "minItems": 3,
+          "maxItems": 3
+        },
+        "verification_points": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "items": {
+            "type": "object",
+            "required": ["ev_b", "recovery_dollars_b", "recovery_cents_on_dollar"],
+            "properties": {
+              "ev_b": { "enum": [19.5, 13.5] },
+              "recovery_dollars_b": {
+                "type": "array",
+                "prefixItems": [
+                  { "type": "number", "minimum": 0, "maximum": 18.0 },
+                  { "type": "number", "minimum": 0, "maximum": 7.5 },
+                  { "type": "number", "minimum": 0, "maximum": 4.5 }
+                ],
+                "items": false,
+                "minItems": 3,
+                "maxItems": 3
+              },
+              "recovery_cents_on_dollar": {
+                "type": "array",
+                "prefixItems": [
+                  { "type": "number", "minimum": 0, "maximum": 100.0 },
+                  { "type": "number", "minimum": 0, "maximum": 100.0 },
+                  { "type": "number", "minimum": 0, "maximum": 100.0 }
+                ],
+                "items": false,
+                "minItems": 3,
+                "maxItems": 3
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "switching_cost_decay": {
+          "type": "object",
+          "required": ["c_s0_usd", "a_p", "gamma", "c_s_usd", "reduction_pct"],
+          "properties": {
+            "c_s0_usd": { "const": 1200.0 },
+            "a_p": { "const": 0.985 },
+            "gamma": { "const": 2.0 },
+            "c_s_usd": { "const": 0.27 },
+            "reduction_pct": { "const": 99.9775 }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "entity_and_instrument_ids": {
+      "type": "object",
+      "required": [
+        "ring_1_primary_targets_sponsors",
+        "ring_2_public_bdc_co_lenders_credit_funds",
+        "ring_3_insurance_balance_sheet_bermuda_sidecars",
+        "ring_4_pcaob_auditors_valuation_agents_fund_admins",
+        "ring_5_foia_subject_pension_lps_swfs_gatekeeper_consultants",
+        "ring_6_indenture_trustees_admin_agents_rating_agencies_counsel",
+        "total_entity_count"
+      ],
+      "properties": {
+        "ring_1_primary_targets_sponsors": { "$ref": "#/$defs/ring4" },
+        "ring_2_public_bdc_co_lenders_credit_funds": { "$ref": "#/$defs/ring4" },
+        "ring_3_insurance_balance_sheet_bermuda_sidecars": { "$ref": "#/$defs/ring4" },
+        "ring_4_pcaob_auditors_valuation_agents_fund_admins": { "$ref": "#/$defs/ring4" },
+        "ring_5_foia_subject_pension_lps_swfs_gatekeeper_consultants": { "$ref": "#/$defs/ring4" },
+        "ring_6_indenture_trustees_admin_agents_rating_agencies_counsel": { "$ref": "#/$defs/ring4" },
+        "total_entity_count": { "const": 24 }
+      },
+      "additionalProperties": false
+    },
+    "catalyst_calendar": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 5,
+      "items": {
+        "type": "object",
+        "required": ["date", "event", "category"],
+        "properties": {
+          "date": {
+            "type": "string",
+            "format": "date",
+            "enum": ["2026-07-29", "2026-11-09", "2027-06-30", "2028-03-31", "2030-08-31"]
+          },
+          "event": { "type": "string", "minLength": 10 },
+          "category": { "enum": ["earnings_disclosure", "statutory_filing", "forbearance_expiration", "maturity_cliff", "court_hearing"] }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "$defs": {
+    "company_valuation": {
+      "type": "object",
+      "required": ["ticker", "market_cap_b", "ev_b", "pe_trailing", "pe_forward", "ps", "ttm_revenue_b", "ttm_net_income_b", "cash_b", "debt_b", "net_cash_b"],
+      "properties": {
+        "ticker": { "enum": ["MSFT", "GOOGL"] },
+        "market_cap_b": { "type": "number", "exclusiveMinimum": 0 },
+        "ev_b": { "type": "number" },
+        "pe_trailing": { "type": "number", "exclusiveMinimum": 0 },
+        "pe_forward": { "type": "number", "exclusiveMinimum": 0 },
+        "ps": { "type": "number", "exclusiveMinimum": 0 },
+        "ttm_revenue_b": { "type": "number", "exclusiveMinimum": 0 },
+        "ttm_net_income_b": { "type": "number" },
+        "cash_b": { "type": "number", "minimum": 0 },
+        "debt_b": { "type": "number", "minimum": 0 },
+        "net_cash_b": { "type": "number" }
+      },
+      "additionalProperties": false
+    },
+    "ring4": {
+      "type": "array",
+      "minItems": 4,
+      "maxItems": 4,
+      "items": { "type": "string", "minLength": 2 }
+    }
+  }
+}

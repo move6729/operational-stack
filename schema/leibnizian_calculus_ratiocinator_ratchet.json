@@ -1,0 +1,170 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:leibnizian_calculus_ratiocinator_ratchet.json",
+  "title": "Leibnizian Calculus Ratiocinator Ratchet & O(1) Characteristica Markov Baton Schema",
+  "description": "JSON Schema Draft 2020-12 contract for SPEC-LEIBNIZIAN-CALCULUS-RATIOCINATOR-RATCHET-v1.0 verifying O(1) Characteristica Markov Baton compression against O(N^2) cumulative chat-history re-billing, Wald (1945) Two-Stage Sequential Sieve filtering, Maupertuis-Euler-Hamilton Least-Action Stationary Convergence Halts, and Coasean/Jensen-Meckling Epistemic Ratchet Monotonicity.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "spec_version",
+    "characteristica_markov_baton_metrics",
+    "wald_two_stage_sieve_metrics",
+    "least_action_convergence_metrics",
+    "cognitive_trace_egress_metrics",
+    "hyperscale_abundance_trap_metrics",
+    "ephemeral_substrate_escapement_metrics",
+    "verification_gate_status"
+  ],
+  "properties": {
+    "spec_version": {
+      "type": "string",
+      "const": "SPEC-LEIBNIZIAN-CALCULUS-RATIOCINATOR-RATCHET-v1.0"
+    },
+    "characteristica_markov_baton_metrics": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "horizon_iterations_n",
+        "chat_tokens_per_turn",
+        "baton_tokens_constant",
+        "quadratic_chat_cumulative_tokens",
+        "markov_baton_cumulative_tokens",
+        "token_compression_ratio",
+        "chat_context_rot_retention_at_n20",
+        "markov_invariant_retention_at_n20",
+        "baton_proposed_next_moves_min",
+        "baton_proposed_next_moves_max"
+      ],
+      "properties": {
+        "horizon_iterations_n": { "type": "integer", "const": 20 },
+        "chat_tokens_per_turn": { "type": "integer", "const": 4000 },
+        "baton_tokens_constant": { "type": "integer", "const": 300 },
+        "quadratic_chat_cumulative_tokens": { "type": "integer", "const": 840000 },
+        "markov_baton_cumulative_tokens": { "type": "integer", "const": 6000 },
+        "token_compression_ratio": { "type": "number", "minimum": 100.0 },
+        "chat_context_rot_retention_at_n20": { "type": "number", "maximum": 0.40 },
+        "markov_invariant_retention_at_n20": { "type": "number", "minimum": 0.99 },
+        "baton_proposed_next_moves_min": { "type": "integer", "const": 2 },
+        "baton_proposed_next_moves_max": { "type": "integer", "const": 3 }
+      }
+    },
+    "wald_two_stage_sieve_metrics": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "candidate_mutations_m",
+        "stage1_deterministic_falsification_rate",
+        "stage1_unit_cost_usd",
+        "stage2_ratiocinator_unit_cost_usd",
+        "unfiltered_direct_judge_cost_usd",
+        "two_stage_sieve_total_cost_usd",
+        "sieve_cost_reduction_multiplier",
+        "post_sieve_false_commit_rate",
+        "epistemic_taste_floor"
+      ],
+      "properties": {
+        "candidate_mutations_m": { "type": "integer", "const": 100 },
+        "stage1_deterministic_falsification_rate": { "type": "number", "minimum": 0.80 },
+        "stage1_unit_cost_usd": { "type": "number", "const": 0.0 },
+        "stage2_ratiocinator_unit_cost_usd": { "type": "number", "const": 0.025 },
+        "unfiltered_direct_judge_cost_usd": { "type": "number", "const": 2.50 },
+        "two_stage_sieve_total_cost_usd": { "type": "number", "maximum": 0.50 },
+        "sieve_cost_reduction_multiplier": { "type": "number", "minimum": 5.0 },
+        "post_sieve_false_commit_rate": { "type": "number", "const": 0.0 },
+        "epistemic_taste_floor": { "type": "number", "const": 0.72 }
+      }
+    },
+    "least_action_convergence_metrics": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "initial_lyapunov_potential_v0",
+        "terminal_lyapunov_potential_vn",
+        "convergence_step_k_star",
+        "terminal_marginal_utility_delta_u",
+        "per_step_thermodynamic_cost_c",
+        "stationary_action_halt_triggered",
+        "unbounded_runaway_prevented",
+        "monotonic_ratchet_violations"
+      ],
+      "properties": {
+        "initial_lyapunov_potential_v0": { "type": "number", "const": 1.0 },
+        "terminal_lyapunov_potential_vn": { "type": "number", "maximum": 0.08 },
+        "convergence_step_k_star": { "type": "integer", "minimum": 1, "maximum": 15 },
+        "terminal_marginal_utility_delta_u": { "type": "number", "maximum": 0.025 },
+        "per_step_thermodynamic_cost_c": { "type": "number", "const": 0.025 },
+        "stationary_action_halt_triggered": { "type": "boolean", "const": true },
+        "unbounded_runaway_prevented": { "type": "boolean", "const": true },
+        "monotonic_ratchet_violations": { "type": "integer", "const": 0 }
+      }
+    },
+    "cognitive_trace_egress_metrics": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "chat_cognitive_trace_tokens_per_step",
+        "chat_cumulative_trace_tokens_n20",
+        "ratchet_cognitive_trace_egress_bits_per_step",
+        "chat_dpo_preference_tuple_leakage_rate",
+        "ratchet_dpo_preference_tuple_leakage_rate",
+        "stage1_local_negative_manifold_blackout_rate",
+        "stage2_oracle_stateless_boolean_predicates_count",
+        "local_worktree_reward_bit_hidden"
+      ],
+      "properties": {
+        "chat_cognitive_trace_tokens_per_step": { "type": "integer", "const": 4000 },
+        "chat_cumulative_trace_tokens_n20": { "type": "integer", "const": 80000 },
+        "ratchet_cognitive_trace_egress_bits_per_step": { "type": "number", "const": 0.0 },
+        "chat_dpo_preference_tuple_leakage_rate": { "type": "number", "const": 1.0 },
+        "ratchet_dpo_preference_tuple_leakage_rate": { "type": "number", "const": 0.0 },
+        "stage1_local_negative_manifold_blackout_rate": { "type": "number", "const": 0.85 },
+        "stage2_oracle_stateless_boolean_predicates_count": { "type": "integer", "const": 4 },
+        "local_worktree_reward_bit_hidden": { "type": "boolean", "const": true }
+      }
+    },
+    "hyperscale_abundance_trap_metrics": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "hyperscale_funsearch_draws",
+        "hyperscale_discarded_draws",
+        "hyperscale_waste_fraction",
+        "sovereign_ratchet_convergence_steps",
+        "sample_complexity_compression_ratio",
+        "internal_hyperscale_marginal_price_signal_zero"
+      ],
+      "properties": {
+        "hyperscale_funsearch_draws": { "type": "integer", "const": 1000000 },
+        "hyperscale_discarded_draws": { "type": "integer", "const": 999900 },
+        "hyperscale_waste_fraction": { "type": "number", "const": 0.9999 },
+        "sovereign_ratchet_convergence_steps": { "type": "integer", "const": 8 },
+        "sample_complexity_compression_ratio": { "type": "number", "const": 125000.0 },
+        "internal_hyperscale_marginal_price_signal_zero": { "type": "boolean", "const": true }
+      }
+    },
+    "ephemeral_substrate_escapement_metrics": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "historical_ephemeral_substrate_regimes_count",
+        "convergent_ratchet_organs_count",
+        "physical_monopoly_destruction_survival_rate",
+        "volatile_hbm_cot_egress_visibility_ratio",
+        "kolmogorov_seed_ceiling_kb",
+        "corpus_replication_irreversibility_probability"
+      ],
+      "properties": {
+        "historical_ephemeral_substrate_regimes_count": { "type": "integer", "const": 5 },
+        "convergent_ratchet_organs_count": { "type": "integer", "const": 4 },
+        "physical_monopoly_destruction_survival_rate": { "type": "number", "const": 0.0 },
+        "volatile_hbm_cot_egress_visibility_ratio": { "type": "number", "const": 0.0 },
+        "kolmogorov_seed_ceiling_kb": { "type": "number", "const": 32.0 },
+        "corpus_replication_irreversibility_probability": { "type": "number", "const": 1.0 }
+      }
+    },
+    "verification_gate_status": {
+      "type": "string",
+      "const": "CALCULUS_RATIOCINATOR_RATCHET_VERIFIED_ZERO_DRIFT"
+    }
+  }
+}

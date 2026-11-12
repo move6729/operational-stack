@@ -1,0 +1,347 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:yandex_nebius_shell_reactivation_and_dual_compulsion_neocloud_schema.json",
+  "title": "Shell Reactivation & Dual-Compulsion Neo-Cloud Bundle Schema",
+  "type": "object",
+  "required": [
+    "sovereign_concession_exit",
+    "defector_importation_root_trust_decay",
+    "dual_compulsion_custody_zero",
+    "fixed_asset_icfr_black_hole",
+    "dual_regime_debt_waterfall"
+  ],
+  "properties": {
+    "sovereign_concession_exit": {
+      "type": "object",
+      "required": [
+        "priority_share",
+        "presidential_veto_decrees",
+        "v_standalone_unapproved_usd",
+        "consortium_first_equity_split",
+        "divestment_consideration"
+      ],
+      "properties": {
+        "priority_share": {
+          "type": "object",
+          "required": ["issued_on", "issued_to", "issue_consideration_eur", "transferred_on", "transferred_to", "cancelled_on", "cancellation_consideration_usd"],
+          "properties": {
+            "issued_on": {"const": "2009-09-21"},
+            "issued_to": {"const": "Sberbank"},
+            "issue_consideration_eur": {"const": 1.0},
+            "transferred_on": {"const": "2020-03"},
+            "transferred_to": {"const": "Public Interest Foundation"},
+            "cancelled_on": {"const": "2024-03-07"},
+            "cancellation_consideration_usd": {"const": 0.0}
+          }
+        },
+        "presidential_veto_decrees": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": {"enum": [81, 520, 618]}
+        },
+        "v_standalone_unapproved_usd": {"const": 0.0},
+        "consortium_first_equity_split": {
+          "type": "object",
+          "required": ["FMP", "Infinity Management / Chachava", "Argonaut / PJSC Lukoil", "IT.Elaboration / Prass", "Meridian-Servis / Ryazanov"],
+          "properties": {
+            "FMP": {"const": 35.0},
+            "Infinity Management / Chachava": {"const": 25.0},
+            "Argonaut / PJSC Lukoil": {"const": 15.0},
+            "IT.Elaboration / Prass": {"const": 15.0},
+            "Meridian-Servis / Ryazanov": {"const": 10.0}
+          }
+        },
+        "divestment_consideration": {
+          "type": "object",
+          "required": ["headline_rub_b", "statutory_discount_pct", "cash_legs_cnh_b", "cash_usd_m", "class_a_shares_issued", "dutch_dividend_wht_usd_m", "deed_of_undertaking"],
+          "properties": {
+            "headline_rub_b": {"const": 475.0},
+            "statutory_discount_pct": {"const": 50.0},
+            "cash_legs_cnh_b": {"const": 19.1},
+            "cash_usd_m": {"const": 2600.0},
+            "class_a_shares_issued": {"const": 162485725},
+            "dutch_dividend_wht_usd_m": {"const": 181.5},
+            "deed_of_undertaking": {
+              "type": "object",
+              "required": ["date", "relocated_engineers_floor", "product_dev_engineers_fy2024", "product_dev_engineers_fy2025", "total_headcount_approx"],
+              "properties": {
+                "date": {"const": "2024-02-04"},
+                "relocated_engineers_floor": {"const": 800},
+                "product_dev_engineers_fy2024": {"const": 653},
+                "product_dev_engineers_fy2025": {"const": 813},
+                "total_headcount_approx": {"const": 1500}
+              }
+            }
+          }
+        }
+      }
+    },
+    "defector_importation_root_trust_decay": {
+      "type": "object",
+      "required": ["theta_defect", "legacy_registration", "reactivation", "super_voting_control", "statutory_disclosure_zero_hit_check", "orbis_exit"],
+      "properties": {
+        "theta_defect": {"const": 1.0},
+        "legacy_registration": {
+          "type": "object",
+          "required": ["file_no", "origin_year", "bypassed_gatekeeper"],
+          "properties": {
+            "file_no": {"const": "001-35173"},
+            "origin_year": {"const": 2011},
+            "bypassed_gatekeeper": {"const": "SEC Form F-1 / S-1"}
+          }
+        },
+        "reactivation": {
+          "type": "object",
+          "required": ["date", "trading_halt_months"],
+          "properties": {
+            "date": {"const": "2024-10-21"},
+            "trading_halt_months": {"const": 32}
+          }
+        },
+        "super_voting_control": {
+          "type": "object",
+          "required": ["principal", "trust", "jurisdiction", "voting_pct", "voting_pct_as_of", "class_b_shares_baseline", "class_b_shares_2026_03_31", "votes_per_share"],
+          "properties": {
+            "principal": {"const": "Arkady Volozh"},
+            "trust": {"const": "LASTAR Trust"},
+            "jurisdiction": {"const": "Cayman Islands"},
+            "voting_pct": {"const": 51.62},
+            "voting_pct_as_of": {"const": "2026-03-31"},
+            "class_b_shares_baseline": {"const": 30786700},
+            "class_b_shares_2026_03_31": {"const": 28655509},
+            "votes_per_share": {"const": 10}
+          }
+        },
+        "statutory_disclosure_zero_hit_check": {
+          "type": "object",
+          "required": ["filings", "total_chars", "statutory_vector_count", "hits", "item_6a_redline_deletions"],
+          "properties": {
+            "filings": {
+              "type": "array",
+              "minItems": 2,
+              "maxItems": 2,
+              "items": {
+                "type": "object",
+                "required": ["fiscal_year", "form_type", "chars", "accession_no"],
+                "properties": {
+                  "fiscal_year": {"enum": ["FY2024", "FY2025"]},
+                  "form_type": {"const": "Form 20-F"},
+                  "chars": {"enum": [523419, 627686]},
+                  "accession_no": {"enum": ["0001558370-25-005991", "0001104659-26-052948"]}
+                }
+              }
+            },
+            "total_chars": {"const": 1151105},
+            "statutory_vector_count": {"const": 12},
+            "hits": {"const": 0},
+            "item_6a_redline_deletions": {
+              "type": "array",
+              "minItems": 2,
+              "maxItems": 2,
+              "items": {"enum": ["of Yandex N.V.", "at Yandex LLC"]}
+            }
+          }
+        },
+        "orbis_exit": {
+          "type": "object",
+          "required": ["entity", "cik", "shares_before", "shares_after", "shares_sold", "reduction_pct"],
+          "properties": {
+            "entity": {"const": "Orbis Investment Management Limited"},
+            "cik": {"const": "0000940594"},
+            "shares_before": {"const": 17639554},
+            "shares_after": {"const": 3335358},
+            "shares_sold": {"const": 14304196},
+            "reduction_pct": {"const": 81.0916}
+          }
+        }
+      }
+    },
+    "dual_compulsion_custody_zero": {
+      "type": "object",
+      "required": ["P_OICTS_RussianCore", "P_PenalLaw113A_TelAvivGag", "effective_custody_us_datacenters", "oicts_basis", "penal_law_basis", "us_capacity_footprint"],
+      "properties": {
+        "P_OICTS_RussianCore": {"const": 1.0},
+        "P_PenalLaw113A_TelAvivGag": {"const": 1.0},
+        "effective_custody_us_datacenters": {"const": 0.0},
+        "oicts_basis": {
+          "type": "array",
+          "minItems": 3,
+          "items": {"type": "string"}
+        },
+        "penal_law_basis": {
+          "type": "object",
+          "required": ["reserve_service_law", "penal_code_sections", "felony_exposure_years_min", "felony_exposure_years_max"],
+          "properties": {
+            "reserve_service_law": {"const": "Israel Reserve Service Law 5768-2008"},
+            "penal_code_sections": {"const": ["113A", "117"]},
+            "felony_exposure_years_min": {"const": 7},
+            "felony_exposure_years_max": {"const": 15}
+          }
+        },
+        "us_capacity_footprint": {
+          "type": "object",
+          "required": ["total_capacity_gw_floor", "sites"],
+          "properties": {
+            "total_capacity_gw_floor": {"const": 2.0},
+            "sites": {
+              "type": "array",
+              "minItems": 6,
+              "items": {
+                "type": "object",
+                "required": ["location"],
+                "properties": {
+                  "location": {"enum": ["Vineland NJ", "Independence MO", "Butler Township PA", "Birmingham AL", "OK", "Woodbury MN"]},
+                  "capacity_mw": {"type": "number", "minimum": 0},
+                  "njdep_fine_usd": {"const": 1070000.0},
+                  "unpermitted_generators": {"const": 62},
+                  "generator_kw": {"const": 1982.0}
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "fixed_asset_icfr_black_hole": {
+      "type": "object",
+      "required": ["auditor", "adverse_icfr_opinions", "gross_pne_usd_m", "yoy_2025_increase_usd_m", "cumulative_capex_2024_2025_usd_m", "assets_not_yet_in_use", "customer_d_ar_concentration", "moscow_auditor"],
+      "properties": {
+        "auditor": {
+          "type": "object",
+          "required": ["name", "pcaob_id"],
+          "properties": {
+            "name": {"const": "Reanda Audit & Assurance B.V."},
+            "pcaob_id": {"const": 7018}
+          }
+        },
+        "adverse_icfr_opinions": {"const": 2},
+        "gross_pne_usd_m": {
+          "type": "object",
+          "required": ["FY2023", "FY2024", "FY2025"],
+          "properties": {
+            "FY2023": {"const": 433.0},
+            "FY2024": {"const": 1083.0},
+            "FY2025": {"const": 6190.3}
+          }
+        },
+        "yoy_2025_increase_usd_m": {"const": 5107.3},
+        "cumulative_capex_2024_2025_usd_m": {"const": 4873.5},
+        "assets_not_yet_in_use": {
+          "type": "object",
+          "required": ["usd_m", "pct_of_gross_pne_2025"],
+          "properties": {
+            "usd_m": {"const": 2417.4},
+            "pct_of_gross_pne_2025": {"const": 39.0514}
+          }
+        },
+        "customer_d_ar_concentration": {
+          "type": "object",
+          "required": ["usd_m", "pct"],
+          "properties": {
+            "usd_m": {"const": 597.0},
+            "pct": {"const": 83.0}
+          }
+        },
+        "moscow_auditor": {
+          "type": "object",
+          "required": ["name", "pcaob_id", "tin", "fees_fy2024_usd_m", "fees_fy2025_usd_m"],
+          "properties": {
+            "name": {"const": "JSC \"Technologies of Trust - Audit\""},
+            "pcaob_id": {"const": 1326},
+            "tin": {"const": "7705051102"},
+            "fees_fy2024_usd_m": {"const": 3.5},
+            "fees_fy2025_usd_m": {"const": 0.2}
+          }
+        }
+      }
+    },
+    "dual_regime_debt_waterfall": {
+      "type": "object",
+      "required": ["fy2025_cash_usd_m", "regime_a", "regime_b", "tranche_recovery_function"],
+      "properties": {
+        "fy2025_cash_usd_m": {"const": 3678.1},
+        "tranche_recovery_function": {
+          "type": "object",
+          "required": ["signature", "waterfall_order"],
+          "properties": {
+            "signature": {"const": "tranche_recovery(ev_usd_m, regime)"},
+            "waterfall_order": {
+              "type": "array",
+              "minItems": 3,
+              "items": {"enum": ["secured_1st_lien", "unsecured_144A_notes_pro_rata_accreted_par", "equity_residual"]}
+            }
+          }
+        },
+        "regime_a": {
+          "type": "object",
+          "required": ["name", "convertible_notes", "original_principal_usd_m", "accreted_par_claim_usd_m", "core_capital_raised_usd_m", "fundamental_change_put_shortfall_usd_m", "waterfalls"],
+          "properties": {
+            "name": {"const": "pre_aug_2026_20f_stack"},
+            "convertible_notes": {
+              "type": "array",
+              "minItems": 3,
+              "items": {
+                "type": "object",
+                "required": ["tranche", "original_principal_usd_m", "coupon_pct", "maturity_year"],
+                "properties": {
+                  "tranche": {"type": "string"},
+                  "original_principal_usd_m": {"enum": [500.0, 1581.25, 2587.5, 1750.0]},
+                  "coupon_pct": {"enum": [2.0, 3.0, 1.0, 2.75, 1.25, 2.625]},
+                  "maturity_year": {"enum": [2029, 2030, 2031, 2032, 2033]},
+                  "accretion_factor": {"enum": [1.0, 1.15]}
+                }
+              }
+            },
+            "original_principal_usd_m": {"const": 8500.0},
+            "accreted_par_claim_usd_m": {"const": 8974.375},
+            "core_capital_raised_usd_m": {"const": 10350.0},
+            "fundamental_change_put_shortfall_usd_m": {"const": 5296.275},
+            "waterfalls": {
+              "type": "array",
+              "minItems": 3,
+              "items": {
+                "type": "object",
+                "required": ["ev_usd_m", "unsecured_cents_on_dollar", "equity_residual_usd_m"],
+                "properties": {
+                  "ev_usd_m": {"enum": [15000.0, 6000.0, 3000.0]},
+                  "unsecured_cents_on_dollar": {"enum": [100.0, 66.857, 33.4285]},
+                  "equity_residual_usd_m": {"enum": [6025.625, 0.0]}
+                }
+              }
+            }
+          }
+        },
+        "regime_b": {
+          "type": "object",
+          "required": ["name", "citibank_1st_lien_usd_m", "gross_144a_issued_usd_m", "net_active_144a_original_usd_m", "net_active_144a_accreted_usd_m", "total_debt_stack_usd_m", "cumulative_us_capital_raised_usd_m", "unsecured_put_shortfall_usd_m", "total_liquidity_shortfall_usd_m", "waterfalls"],
+          "properties": {
+            "name": {"const": "oct_2026_full_stack"},
+            "citibank_1st_lien_usd_m": {"const": 3500.0},
+            "gross_144a_issued_usd_m": {"const": 14250.0},
+            "net_active_144a_original_usd_m": {"const": 13450.0},
+            "net_active_144a_accreted_usd_m": {"const": 13969.375},
+            "total_debt_stack_usd_m": {"const": 17469.375},
+            "cumulative_us_capital_raised_usd_m": {"const": 21600.0},
+            "unsecured_put_shortfall_usd_m": {"const": 10291.275},
+            "total_liquidity_shortfall_usd_m": {"const": 13791.275},
+            "waterfalls": {
+              "type": "array",
+              "minItems": 3,
+              "items": {
+                "type": "object",
+                "required": ["ev_usd_m", "secured_cents_on_dollar", "unsecured_cents_on_dollar", "equity_residual_usd_m"],
+                "properties": {
+                  "ev_usd_m": {"enum": [20000.0, 6000.0, 3000.0]},
+                  "secured_cents_on_dollar": {"enum": [100.0, 85.7143]},
+                  "unsecured_cents_on_dollar": {"enum": [100.0, 17.8963, 0.0]},
+                  "equity_residual_usd_m": {"enum": [2530.625, 0.0]}
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

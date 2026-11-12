@@ -1,0 +1,310 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:bureaucratic_agent_virtualization_and_cognitive_honeypot.json",
+  "title": "Bureaucratic Agent Virtualization & Cognitive Honeypot Verification Record",
+  "description": "Draft 2020-12 validation schema for the deterministic proof outputs of SPEC-BUREAUCRATIC-AGENT-VIRTUALIZATION-AND-COGNITIVE-HONEYPOT-v1.0: EQ-1 bureaucratic token multiplier and 40x cache-miss re-bill, EQ-2 hourly capital-efficiency destruction ratio and self-licking meta-churn, EQ-3 therapy-note observability Gramian vs 1-bit control inversion, EQ-4 YC 2024-2026 Form D stack and LP herd token drain, EQ-5 dual-angle stray-light failure, and the Anthropic PBC 4-tranche recovery waterfall with hard-date catalyst calendar and multi-counterparty security-master identifiers.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "bundle", "status", "locked_constants", "equation_outputs", "tranche_waterfall", "catalyst_calendar", "entity_and_instrument_ids"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "bundle": {"const": "bureaucratic_agent_virtualization_and_cognitive_honeypot"},
+    "status": {"enum": ["PASS", "FAIL"]},
+    "locked_constants": {"$ref": "#/$defs/locked_constants"},
+    "equation_outputs": {"$ref": "#/$defs/equation_outputs"},
+    "tranche_waterfall": {"$ref": "#/$defs/tranche_waterfall"},
+    "catalyst_calendar": {"$ref": "#/$defs/catalyst_calendar"},
+    "entity_and_instrument_ids": {"$ref": "#/$defs/entity_and_instrument_ids"}
+  },
+  "$defs": {
+    "locked_constants": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "tan_annual_token_spend_min_usd", "tan_annual_token_spend_max_usd", "tan_annual_token_spend_mid_usd", "tan_daily_token_spend_max_usd",
+        "tan_active_eng_hours_per_year", "tan_burn_per_active_eng_hour_mid_usd", "tan_burn_per_active_eng_hour_max_usd", "opstack_daily_token_spend_mid_usd",
+        "opstack_annual_token_spend_mid_usd", "opstack_waste_trim_fraction", "opstack_trimmed_annual_spend_usd", "opstack_active_eng_hours_per_year",
+        "opstack_burn_per_active_eng_hour_raw_usd", "opstack_burn_per_active_eng_hour_trimmed_usd", "hourly_capital_efficiency_destruction_ratio_mid", "hourly_capital_efficiency_destruction_ratio_max",
+        "hourly_capital_efficiency_destruction_ratio_vs_trimmed_max", "raw_annual_spend_multiple_max", "gstack_specialist_personas_count", "gstack_power_tools_count",
+        "capy_captains_count", "capy_14_day_prs_gstack", "capy_14_day_prs_prior_gstack", "capy_14_day_versions_shipped",
+        "capy_peak_daily_prs_merged", "capy_14_day_prs_across_8_repos", "capy_daily_prs_across_8_repos", "gstack_median_pr_lines_before",
+        "gstack_median_pr_lines_after", "gstack_pr_size_shrink_ratio", "gstack_ship_tokens_per_pr_unbounded_m", "gstack_ship_subagent_default_cap_m",
+        "gstack_runaway_thread_rotate_limit_m", "gstack_runaway_thread_warn_limit_m", "gstack_max_parent_context_observed_b", "gstack_empty_wake_threshold_pct",
+        "gstack_cache_miss_idle_gap_s", "gstack_cache_miss_rebill_multiplier", "gstack_effective_billing_multiplier_eq1", "gstack_effective_cached_equiv_tokens_per_sprint_m",
+        "gstack_paid_eval_gate_cost_usd", "gstack_slop_scan_initial_score", "tan_2013_logical_sloc_total", "tan_2013_logical_sloc_per_day",
+        "tan_2026_108d_logical_sloc_total", "tan_2026_logical_sloc_per_day", "tan_claimed_pace_multiple", "gbrain_total_pages",
+        "gbrain_total_people", "gbrain_total_companies", "gbrain_autonomous_cron_jobs", "tan_therapy_notes_years",
+        "gbrain_production_r_at_5", "gbrain_baseline_r_at_5", "gbrain_retrieval_miss_rate", "yc_2026_vintage_lp_capital_usd",
+        "yc_2024_vintage_lp_capital_usd", "yc_combined_2024_2026_lp_capital_usd", "yc_2026_qualified_purchaser_lps_count", "yc_portfolio_herd_burn_2500_devs_at_37500_usd_m",
+        "yc_portfolio_herd_burn_2500_devs_at_150000_usd_m", "anthropic_s1_9m26_implied_revenue_usd_m", "anthropic_s1_100k_customers_count", "anthropic_s1_compute_encumbrance_min_usd_b",
+        "anthropic_s1_compute_encumbrance_max_usd_b", "anthropic_s1_total_fulcrum_usd_b", "anthropic_s1_stockholders_deficit_usd_m"
+      ],
+      "properties": {
+        "tan_annual_token_spend_min_usd": {"type": "number", "const": 100000.0},
+        "tan_annual_token_spend_max_usd": {"type": "number", "const": 200000.0},
+        "tan_annual_token_spend_mid_usd": {"type": "number", "const": 150000.0},
+        "tan_daily_token_spend_max_usd": {"type": "number", "const": 547.9452},
+        "tan_active_eng_hours_per_year": {"type": "number", "const": 1040.0},
+        "tan_burn_per_active_eng_hour_mid_usd": {"type": "number", "const": 144.2308},
+        "tan_burn_per_active_eng_hour_max_usd": {"type": "number", "const": 192.3077},
+        "opstack_daily_token_spend_mid_usd": {"type": "number", "const": 45.0},
+        "opstack_annual_token_spend_mid_usd": {"type": "number", "const": 16425.0},
+        "opstack_waste_trim_fraction": {"type": "number", "const": 0.15},
+        "opstack_trimmed_annual_spend_usd": {"type": "number", "const": 13961.25},
+        "opstack_active_eng_hours_per_year": {"type": "number", "const": 4745.0},
+        "opstack_burn_per_active_eng_hour_raw_usd": {"type": "number", "const": 3.4615},
+        "opstack_burn_per_active_eng_hour_trimmed_usd": {"type": "number", "const": 2.9423},
+        "hourly_capital_efficiency_destruction_ratio_mid": {"type": "number", "const": 41.6667},
+        "hourly_capital_efficiency_destruction_ratio_max": {"type": "number", "const": 55.5556},
+        "hourly_capital_efficiency_destruction_ratio_vs_trimmed_max": {"type": "number", "const": 65.3595},
+        "raw_annual_spend_multiple_max": {"type": "number", "const": 12.1766},
+        "gstack_specialist_personas_count": {"type": "integer", "const": 23},
+        "gstack_power_tools_count": {"type": "integer", "const": 8},
+        "capy_captains_count": {"type": "integer", "const": 7},
+        "capy_14_day_prs_gstack": {"type": "integer", "const": 197},
+        "capy_14_day_prs_prior_gstack": {"type": "integer", "const": 65},
+        "capy_14_day_versions_shipped": {"type": "integer", "const": 194},
+        "capy_peak_daily_prs_merged": {"type": "integer", "const": 36},
+        "capy_14_day_prs_across_8_repos": {"type": "integer", "const": 1874},
+        "capy_daily_prs_across_8_repos": {"type": "number", "const": 133.8571},
+        "gstack_median_pr_lines_before": {"type": "integer", "const": 1292},
+        "gstack_median_pr_lines_after": {"type": "integer", "const": 422},
+        "gstack_pr_size_shrink_ratio": {"type": "number", "const": 0.3266},
+        "gstack_ship_tokens_per_pr_unbounded_m": {"type": "number", "const": 50.0},
+        "gstack_ship_subagent_default_cap_m": {"type": "number", "const": 100.0},
+        "gstack_runaway_thread_rotate_limit_m": {"type": "number", "const": 500.0},
+        "gstack_runaway_thread_warn_limit_m": {"type": "number", "const": 400.0},
+        "gstack_max_parent_context_observed_b": {"type": "number", "const": 1.36},
+        "gstack_empty_wake_threshold_pct": {"type": "number", "const": 25.0},
+        "gstack_cache_miss_idle_gap_s": {"type": "integer", "const": 300},
+        "gstack_cache_miss_rebill_multiplier": {"type": "number", "const": 40.0},
+        "gstack_effective_billing_multiplier_eq1": {"type": "number", "const": 16.9333},
+        "gstack_effective_cached_equiv_tokens_per_sprint_m": {"type": "number", "const": 338.6667},
+        "gstack_paid_eval_gate_cost_usd": {"type": "number", "const": 93.0},
+        "gstack_slop_scan_initial_score": {"type": "number", "const": 5.24},
+        "tan_2013_logical_sloc_total": {"type": "integer", "const": 5143},
+        "tan_2013_logical_sloc_per_day": {"type": "integer", "const": 14},
+        "tan_2026_108d_logical_sloc_total": {"type": "integer", "const": 1233062},
+        "tan_2026_logical_sloc_per_day": {"type": "integer", "const": 11417},
+        "tan_claimed_pace_multiple": {"type": "number", "const": 810.0},
+        "gbrain_total_pages": {"type": "integer", "const": 155795},
+        "gbrain_total_people": {"type": "integer", "const": 24589},
+        "gbrain_total_companies": {"type": "integer", "const": 5340},
+        "gbrain_autonomous_cron_jobs": {"type": "integer", "const": 66},
+        "tan_therapy_notes_years": {"type": "integer", "const": 20},
+        "gbrain_production_r_at_5": {"type": "number", "const": 0.7241},
+        "gbrain_baseline_r_at_5": {"type": "number", "const": 0.6626},
+        "gbrain_retrieval_miss_rate": {"type": "number", "const": 0.2759},
+        "yc_2026_vintage_lp_capital_usd": {"type": "integer", "const": 2668504997},
+        "yc_2024_vintage_lp_capital_usd": {"type": "integer", "const": 663897553},
+        "yc_combined_2024_2026_lp_capital_usd": {"type": "integer", "const": 3332402550},
+        "yc_2026_qualified_purchaser_lps_count": {"type": "integer", "const": 87},
+        "yc_portfolio_herd_burn_2500_devs_at_37500_usd_m": {"type": "number", "const": 93.75},
+        "yc_portfolio_herd_burn_2500_devs_at_150000_usd_m": {"type": "number", "const": 375.0},
+        "anthropic_s1_9m26_implied_revenue_usd_m": {"type": "number", "const": 33086.0},
+        "anthropic_s1_100k_customers_count": {"type": "integer", "const": 11900},
+        "anthropic_s1_compute_encumbrance_min_usd_b": {"type": "number", "const": 732.0},
+        "anthropic_s1_compute_encumbrance_max_usd_b": {"type": "number", "const": 757.0},
+        "anthropic_s1_total_fulcrum_usd_b": {"type": "number", "const": 998.076},
+        "anthropic_s1_stockholders_deficit_usd_m": {"type": "number", "const": -127619.0}
+      }
+    },
+    "equation_outputs": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["eq1", "eq2", "eq3", "eq4", "eq5"],
+      "properties": {
+        "eq1": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["multiplier", "cached_equiv_tokens_m"],
+          "properties": {
+            "multiplier": {"type": "number", "const": 16.9333},
+            "cached_equiv_tokens_m": {"type": "number", "const": 338.6667}
+          }
+        },
+        "eq2": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["tan_burn_per_hr_mid_usd", "tan_burn_per_hr_max_usd", "stigmergic_burn_per_hr_raw_usd", "stigmergic_burn_per_hr_trimmed_usd", "destruction_ratio_mid", "destruction_ratio_max", "destruction_ratio_max_vs_trimmed", "raw_annual_spend_multiple_max", "pr_size_shrink_ratio", "sloc_pace_multiple"],
+          "properties": {
+            "tan_burn_per_hr_mid_usd": {"type": "number", "const": 144.2308},
+            "tan_burn_per_hr_max_usd": {"type": "number", "const": 192.3077},
+            "stigmergic_burn_per_hr_raw_usd": {"type": "number", "const": 3.4615},
+            "stigmergic_burn_per_hr_trimmed_usd": {"type": "number", "const": 2.9423},
+            "destruction_ratio_mid": {"type": "number", "const": 41.6667},
+            "destruction_ratio_max": {"type": "number", "const": 55.5556},
+            "destruction_ratio_max_vs_trimmed": {"type": "number", "const": 65.3595},
+            "raw_annual_spend_multiple_max": {"type": "number", "const": 12.1766},
+            "pr_size_shrink_ratio": {"type": "number", "const": 0.3266},
+            "sloc_pace_multiple": {"type": "number", "minimum": 809.0, "maximum": 811.0}
+          }
+        },
+        "eq3": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["mi_therapy_ast_bits", "h_reply_bits", "observability_rank"],
+          "properties": {
+            "mi_therapy_ast_bits": {"type": "number", "const": 0.0},
+            "h_reply_bits": {"type": "number", "const": 1.0},
+            "observability_rank": {"type": "number", "const": 1.0}
+          }
+        },
+        "eq4": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["vintage_2026_usd", "vintage_2024_usd", "combined_usd", "herd_drain_37500_usd_m", "herd_drain_150000_usd_m"],
+          "properties": {
+            "vintage_2026_usd": {"type": "integer", "const": 2668504997},
+            "vintage_2024_usd": {"type": "integer", "const": 663897553},
+            "combined_usd": {"type": "integer", "const": 3332402550},
+            "herd_drain_37500_usd_m": {"type": "number", "const": 93.75},
+            "herd_drain_150000_usd_m": {"type": "number", "const": 375.0}
+          }
+        },
+        "eq5": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["retrieval_miss_rate", "effective_precision_post_noise", "ood_attenuation_factor"],
+          "properties": {
+            "retrieval_miss_rate": {"type": "number", "const": 0.2759},
+            "effective_precision_post_noise": {"type": "number", "const": 0.014482},
+            "ood_attenuation_factor": {"type": "number", "const": 1024.0}
+          }
+        }
+      }
+    },
+    "tranche_waterfall": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 5,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["ev_usd_b", "tranches"],
+        "properties": {
+          "ev_usd_b": {"type": "number", "exclusiveMinimum": 0},
+          "tranches": {
+            "type": "array",
+            "minItems": 4,
+            "maxItems": 4,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["tranche", "principal_usd_b", "recovery_usd_b", "cents_on_dollar"],
+              "properties": {
+                "tranche": {"enum": ["senior_credit_facility", "unconditional_compute_lease_obligations", "preferred_stock_liquidation_preference", "common_equity_residual"]},
+                "principal_usd_b": {"type": "number", "minimum": 0},
+                "recovery_usd_b": {"type": "number", "minimum": 0},
+                "cents_on_dollar": {"type": ["number", "null"], "minimum": 0, "maximum": 100}
+              }
+            }
+          }
+        }
+      }
+    },
+    "catalyst_calendar": {
+      "type": "array",
+      "minItems": 6,
+      "maxItems": 6,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["date", "type", "catalyst"],
+        "properties": {
+          "date": {"type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$"},
+          "type": {"enum": ["filing_window", "s1_filing", "measurement_period_end", "encumbrance_step_up", "forbearance_expiry", "maturity_cliff"]},
+          "catalyst": {"type": "string", "minLength": 16}
+        }
+      }
+    },
+    "entity_and_instrument_ids": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["primary_target", "fulcrum_issuer", "form_d_issuers", "lp_herd"],
+      "properties": {
+        "primary_target": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["entity", "role", "identifiers"],
+          "properties": {
+            "entity": {"type": "string", "minLength": 1},
+            "role": {"const": "primary"},
+            "identifiers": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["sec_cik", "stack_components"],
+              "properties": {
+                "sec_cik": {"type": "null"},
+                "stack_components": {"type": "array", "minItems": 3, "maxItems": 3, "items": {"type": "string"}}
+              }
+            }
+          }
+        },
+        "fulcrum_issuer": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["entity", "role", "identifiers", "instruments"],
+          "properties": {
+            "entity": {"const": "Anthropic PBC"},
+            "role": {"const": "fulcrum_issuer"},
+            "identifiers": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["sec_cik"],
+              "properties": {"sec_cik": {"type": "string", "pattern": "^0002130357$"}}
+            },
+            "instruments": {
+              "type": "array",
+              "minItems": 4,
+              "maxItems": 4,
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["instrument", "principal_usd_b"],
+                "properties": {
+                  "instrument": {"enum": ["senior_credit_facility", "unconditional_compute_lease_obligations", "preferred_stock_liquidation_preference", "common_equity_residual"]},
+                  "principal_usd_b": {"type": "number", "minimum": 0}
+                }
+              }
+            }
+          }
+        },
+        "form_d_issuers": {
+          "type": "array",
+          "minItems": 6,
+          "maxItems": 6,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["issuer", "sec_cik", "vintage", "lp_capital_usd"],
+            "properties": {
+              "issuer": {"type": "string", "minLength": 3},
+              "sec_cik": {"type": "string", "pattern": "^\\d{10}$"},
+              "vintage": {"enum": ["2024", "2026"]},
+              "lp_capital_usd": {"type": "integer", "exclusiveMinimum": 0}
+            }
+          }
+        },
+        "lp_herd": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["entity", "role", "identifiers"],
+          "properties": {
+            "entity": {"type": "string", "minLength": 1},
+            "role": {"const": "fiduciary_credit_allocator"},
+            "identifiers": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["qualified_purchaser_lps", "portfolio_devs"],
+              "properties": {
+                "qualified_purchaser_lps": {"type": "integer", "const": 87},
+                "portfolio_devs": {"type": "integer", "const": 2500}
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

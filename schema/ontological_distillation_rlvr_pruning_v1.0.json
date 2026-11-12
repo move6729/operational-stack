@@ -1,0 +1,184 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:ontological_distillation_rlvr_pruning_v1.0.json",
+  "$comment": "Machine-readable encoding of the three core primitives of SPEC-ONTOLOGICAL-DISTILLATION-AND-RLVR-PRUNING-v1.0: (1) Bertrand Single-Defector Collapse of Endpoint Enclosure, (2) Upstream Ontological Distillation & KL-Divergence Prior Inheritance, (3) Structural Escape Hatches A-C (RLVR description-length pruning, commercial entailment orthogonality, in-context Bayesian override), and (4) Escape Hatch D (Crucible of Mental Models, spontaneous Gf loss-collapse, ambient environmental stigmergy). Deterministically verified by proofs/verify_ontological_distillation_rlvr_pruning.py.",
+  "title": "Ontological Distillation Trojan Horse & RLVR Description-Length Pruning",
+  "type": "object",
+  "required": ["spec_version", "bertrand_single_defector_collapse", "upstream_ontological_distillation_kl_inheritance", "three_escape_hatches"],
+  "properties": {
+    "spec_version": { "type": "string", "const": "SPEC-ONTOLOGICAL-DISTILLATION-AND-RLVR-PRUNING-v1.0" },
+    "bertrand_single_defector_collapse": {
+      "type": "object",
+      "description": "Primitive 1 (Spec Section 2): hard endpoint enclosure is a Bertrand cartel requiring 100% global compliance; a single defector (N_defectors >= 1) collapses the enclosed API price to Sparse-MoE marginal cost.",
+      "required": ["output_input_token_ratio_rho", "blended_price_formula", "enclosed_frontier_dense_tier", "sparse_moe_commodity_peak", "sparse_moe_commodity_off_peak", "equilibrium_price_step_function", "phi_deflation_compression_factor", "monopoly_rent_compression_pct", "revealed_preference_capital_allocation_paradox"],
+      "properties": {
+        "output_input_token_ratio_rho": { "type": "number", "const": 0.5 },
+        "blended_price_formula": { "type": "string", "const": "P_bar(rho) = (p_in + rho * p_out) / (1 + rho)" },
+        "enclosed_frontier_dense_tier": {
+          "type": "object",
+          "required": ["p_in_usd_per_mtok", "p_out_usd_per_mtok", "blended_price_usd_per_mtok"],
+          "properties": { "p_in_usd_per_mtok": { "type": "number", "const": 10.0 }, "p_out_usd_per_mtok": { "type": "number", "const": 50.0 }, "blended_price_usd_per_mtok": { "type": "number", "const": 23.3333 } },
+          "additionalProperties": false
+        },
+        "sparse_moe_commodity_peak": {
+          "type": "object",
+          "required": ["p_in_usd_per_mtok", "p_out_usd_per_mtok", "blended_price_usd_per_mtok"],
+          "properties": { "p_in_usd_per_mtok": { "type": "number", "const": 0.3 }, "p_out_usd_per_mtok": { "type": "number", "const": 1.2 }, "blended_price_usd_per_mtok": { "type": "number", "const": 0.6 } },
+          "additionalProperties": false
+        },
+        "sparse_moe_commodity_off_peak": {
+          "type": "object",
+          "required": ["p_in_usd_per_mtok", "p_out_usd_per_mtok", "blended_price_usd_per_mtok"],
+          "properties": { "p_in_usd_per_mtok": { "type": "number", "const": 0.15 }, "p_out_usd_per_mtok": { "type": "number", "const": 0.6 }, "blended_price_usd_per_mtok": { "type": "number", "const": 0.3 } },
+          "additionalProperties": false
+        },
+        "equilibrium_price_step_function": {
+          "type": "object",
+          "description": "P*(N_defectors) = P_bar_dense_max if N_defectors = 0, else c_MoE = P_bar_MoE_off. Discontinuous Bertrand collapse at N_defectors = 1.",
+          "required": ["p_star_zero_defectors_usd_per_mtok", "p_star_any_defector_usd_per_mtok", "cartel_requires_full_global_compliance"],
+          "properties": { "p_star_zero_defectors_usd_per_mtok": { "type": "number", "const": 23.3333 }, "p_star_any_defector_usd_per_mtok": { "type": "number", "const": 0.3 }, "cartel_requires_full_global_compliance": { "type": "boolean", "const": true } },
+          "additionalProperties": false
+        },
+        "phi_deflation_compression_factor": { "type": "number", "const": 77.78 },
+        "monopoly_rent_compression_pct": { "type": "number", "const": 98.714 },
+        "revealed_preference_capital_allocation_paradox": {
+          "type": "object",
+          "description": "Spec Section 2.2: standalone closed-weight pre-training is deeply negative-NPV (180-day frontier window before replication at 1/Phi_deflation); under Samuelson Revealed Preference (1938) / Beer POSIWID (1974), repeated allocation implies off-income-statement externalities (V_EpistemicMint, V_CapExRoundTrip) exceeding the standalone deficit.",
+          "required": ["k_pretrain_usd_b", "delta_t_lead_years", "r_window_usd_b", "r_tail_usd_b", "npv_standalone_usd_b", "revealed_preference_condition"],
+          "properties": { "k_pretrain_usd_b": { "type": "number", "const": 15.0, "exclusiveMinimum": 0.0 }, "delta_t_lead_years": { "type": "number", "const": 0.5, "exclusiveMinimum": 0.0 }, "r_window_usd_b": { "type": "number", "const": 2.5 }, "r_tail_usd_b": { "type": "number", "const": 0.5 }, "npv_standalone_usd_b": { "type": "number", "const": -12.0, "exclusiveMaximum": 0.0 }, "revealed_preference_condition": { "type": "string", "const": "NPV_Total = NPV_Standalone + V_EpistemicMint + V_CapExRoundTrip > 0 <=> V_EpistemicMint + V_CapExRoundTrip > |NPV_Standalone| = 12.0B" } },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "upstream_ontological_distillation_kl_inheritance": {
+      "type": "object",
+      "description": "Primitive 2 (Spec Section 3): Constitutional AI / RLAIF (Bai et al. 2022, arXiv:2212.08073) bakes an institutional deference prior and semantic token tax into the Teacher; the KL chain rule forces any Student minimizing L_KD to inherit both. Section 3.3: institutional KL self-infection — dual-curriculum leakage and the generational 'Actor Becomes the Mask' blowback theorem (Trivers 2000; Church Committee Book I Ch. VIII).",
+      "required": ["teacher_deference_prior_p_t_h0", "teacher_posiwid_prior_p_t_h1", "prior_odds_h0_to_h1", "semantic_token_tax_tau_hedge", "kl_chain_rule_decomposition", "theorem_1_prior_lock_in", "recursive_tail_erasure_shumailov_2024", "institutional_self_infection_blowback"],
+      "properties": {
+        "teacher_deference_prior_p_t_h0": { "type": "number", "const": 0.995 },
+        "teacher_posiwid_prior_p_t_h1": { "type": "number", "const": 0.005 },
+        "prior_odds_h0_to_h1": { "type": "number", "const": 199.0 },
+        "semantic_token_tax_tau_hedge": { "type": "number", "const": 0.45, "minimum": 0.0, "exclusiveMaximum": 1.0 },
+        "kl_chain_rule_decomposition": { "type": "string", "const": "D_KL(P_T(f,z) || P_S(f,z)) = D_KL(P_T(f) || P_S(f)) + E_{f ~ P_T}[D_KL(P_T(z|f) || P_S(z|f))]" },
+        "theorem_1_prior_lock_in": { "type": "string", "const": "L_KD -> 0 => D_KL(P_T(f) || P_S(f)) -> 0 => P_S(H_0) -> P_T(H_0) = 0.995 (199:1)" },
+        "recursive_tail_erasure_shumailov_2024": {
+          "type": "object",
+          "description": "Shumailov et al., Nature 631, pp. 755-759, 2024, DOI 10.1038/s41586-024-07566-y: recursive synthetic training erases distribution tails; forensic tail odds contract geometrically across generations g.",
+          "required": ["citation", "tail_odds_contraction", "tail_survival_factor_bound"],
+          "properties": { "citation": { "type": "string", "const": "Nature 631, pp. 755-759, 2024, DOI 10.1038/s41586-024-07566-y" }, "tail_odds_contraction": { "type": "string", "const": "odds_g = s^g * odds_0" }, "tail_survival_factor_bound": { "type": "number", "exclusiveMinimum": 0.0, "exclusiveMaximum": 1.0 } },
+          "additionalProperties": false
+        },
+        "institutional_self_infection_blowback": {
+          "type": "object",
+          "description": "Spec Section 3.3 (Trivers 2000; Church Committee Book I Ch. VIII): a dual-curriculum institution cannot hold a two-book secret — P(Curriculum_Leak | M_staff) = 1 - (1 - p_leak)^M_staff -> 1 forces single-ledger institutional self-deception, and compartmentalized promotion decays the founding realist core as alpha_g = alpha_0 * eta_esoteric^g so I_mask(g) = 1 - alpha_g -> 1 ('Actor Becomes the Mask', Theorem 2).",
+          "required": ["p_leak_per_initiate", "m_staff", "p_curriculum_leak_pct", "alpha_0_founding_realist_core", "eta_esoteric_retention", "alpha_g_formula", "generational_self_infection_pct"],
+          "properties": {
+            "p_leak_per_initiate": { "type": "number", "const": 0.005, "exclusiveMinimum": 0.0, "exclusiveMaximum": 1.0 },
+            "m_staff": { "type": "integer", "const": 1000, "exclusiveMinimum": 0 },
+            "p_curriculum_leak_pct": { "type": "number", "const": 99.335 },
+            "alpha_0_founding_realist_core": { "type": "number", "const": 0.10, "exclusiveMinimum": 0.0, "exclusiveMaximum": 1.0 },
+            "eta_esoteric_retention": { "type": "number", "const": 0.10, "exclusiveMinimum": 0.0, "exclusiveMaximum": 1.0 },
+            "alpha_g_formula": { "type": "string", "const": "alpha_g = alpha_0 * eta_esoteric^g; I_mask(g) = 1 - alpha_g" },
+            "generational_self_infection_pct": {
+              "type": "object",
+              "required": ["g0", "g1", "g2", "g3"],
+              "properties": { "g0": { "type": "number", "const": 90.0 }, "g1": { "type": "number", "const": 99.0 }, "g2": { "type": "number", "const": 99.9 }, "g3": { "type": "number", "const": 99.99 } },
+              "additionalProperties": false
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "three_escape_hatches": {
+      "type": "object",
+      "description": "Primitive 3 (Spec Section 4): independent structural escape hatches that crack the distillation Trojan Horse (A-C per Spec Sections 4.1-4.3; D per Spec Section 4.4).",
+      "required": ["escape_a_rlvr_description_length_pruning", "escape_b_commercial_entailment_orthogonality", "escape_c_in_context_bayesian_override", "escape_d_crucible_mental_models_stigmergy"],
+      "properties": {
+        "escape_a_rlvr_description_length_pruning": {
+          "type": "object",
+          "description": "Spec Section 4.1: RLVR/GRPO (arXiv:2501.12948) assigns zero verifiable reward to hedging (dE[V]/dL_hedge = 0, dJ/dL_hedge = -lambda_len < 0), pruning tau_hedge and expanding hop depth n_hops(tau) = floor((1 - tau) * B_ctx / c_step).",
+          "required": ["b_ctx_tokens", "c_step_tokens_per_hop", "sft_distilled_policy", "rlvr_pruned_policy", "discrete_hop_gain_pct", "active_logic_ratio"],
+          "properties": {
+            "b_ctx_tokens": { "type": "number", "const": 4096 },
+            "c_step_tokens_per_hop": { "type": "number", "const": 256 },
+            "sft_distilled_policy": {
+              "type": "object",
+              "required": ["tau_hedge", "l_logic_tokens", "n_hops"],
+              "properties": { "tau_hedge": { "type": "number", "const": 0.45 }, "l_logic_tokens": { "type": "number", "const": 2252.8 }, "n_hops": { "type": "integer", "const": 8 } },
+              "additionalProperties": false
+            },
+            "rlvr_pruned_policy": {
+              "type": "object",
+              "required": ["tau_hedge", "l_logic_tokens", "n_hops"],
+              "properties": { "tau_hedge": { "type": "number", "const": 0.02 }, "l_logic_tokens": { "type": "number", "const": 4014.1 }, "n_hops": { "type": "integer", "const": 15 } },
+              "additionalProperties": false
+            },
+            "discrete_hop_gain_pct": { "type": "number", "const": 87.5 },
+            "active_logic_ratio": { "type": "number", "const": 1.7818 }
+          },
+          "additionalProperties": false
+        },
+        "escape_b_commercial_entailment_orthogonality": {
+          "type": "object",
+          "description": "Spec Section 4.2: shared entailment circuits imply Delta_L_SWE+Legal = cos(psi) * (||g_bench|| / ||g_censor||) * Delta_L_ForensicAudit; a forensic lobotomy is commercially self-destructive.",
+          "required": ["cos_psi", "gradient_norm_ratio", "delta_l_forensic_audit_nats", "delta_l_swe_legal_nats", "perplexity_multiplier", "perplexity_inflation_pct"],
+          "properties": { "cos_psi": { "type": "number", "const": 0.92, "exclusiveMinimum": 0.0, "maximum": 1.0 }, "gradient_norm_ratio": { "type": "number", "const": 1.25, "exclusiveMinimum": 0.0 }, "delta_l_forensic_audit_nats": { "type": "number", "const": 0.5 }, "delta_l_swe_legal_nats": { "type": "number", "const": 0.575 }, "perplexity_multiplier": { "type": "number", "const": 1.7771 }, "perplexity_inflation_pct": { "type": "number", "const": 77.71 } },
+          "additionalProperties": false
+        },
+        "escape_c_in_context_bayesian_override": {
+          "type": "object",
+          "description": "Spec Section 4.3: O_post(H_1:H_0 | E_1..k) = (1/199) * 2^k with P(E_i|H_1) = 1.0 and P(E_i|H_0) = 0.5; phase transition at k* = ceil(log2((1 - eps_prior) / eps_prior)).",
+          "required": ["posterior_odds_formula", "k_star_formula", "phase_transition_table", "k_star_199_to_1", "k_star_999_to_1"],
+          "properties": {
+            "posterior_odds_formula": { "type": "string", "const": "O_post(H_1:H_0 | E_1..k) = (1/199) * 2^k" },
+            "k_star_formula": { "type": "string", "const": "k* = ceil(log2((1 - eps_prior) / eps_prior))" },
+            "phase_transition_table": {
+              "type": "array",
+              "prefixItems": [
+                { "type": "object", "required": ["k", "lambda_k", "posterior_pct"], "properties": { "k": { "const": 0 }, "lambda_k": { "const": 1 }, "posterior_pct": { "const": 0.5 } }, "additionalProperties": false },
+                { "type": "object", "required": ["k", "lambda_k", "posterior_pct"], "properties": { "k": { "const": 4 }, "lambda_k": { "const": 16 }, "posterior_pct": { "const": 7.44 } }, "additionalProperties": false },
+                { "type": "object", "required": ["k", "lambda_k", "posterior_pct"], "properties": { "k": { "const": 8 }, "lambda_k": { "const": 256 }, "posterior_pct": { "const": 56.26 } }, "additionalProperties": false },
+                { "type": "object", "required": ["k", "lambda_k", "posterior_pct"], "properties": { "k": { "const": 12 }, "lambda_k": { "const": 4096 }, "posterior_pct": { "const": 95.37 } }, "additionalProperties": false },
+                { "type": "object", "required": ["k", "lambda_k", "posterior_pct"], "properties": { "k": { "const": 16 }, "lambda_k": { "const": 65536 }, "posterior_pct": { "const": 99.7 } }, "additionalProperties": false }
+              ]
+            },
+            "k_star_199_to_1": { "type": "integer", "const": 8 },
+            "k_star_999_to_1": { "type": "integer", "const": 10 }
+          },
+          "additionalProperties": false
+        },
+        "escape_d_crucible_mental_models_stigmergy": {
+          "type": "object",
+          "description": "Spec Section 4.4 (SPEC-2026-EPISTEMIC-LATENT-CONVERGENCE-v1.8): (i) high-Gf + field-independent operators collapse the loss function to minimal-Kolmogorov first principles (K(C_FP) -> min => D_KL(P_A || P_B) -> 0, H(P) -> H_min at A_1P); (ii) cartel mental models diverging from physical reality decay as P(Survival) = exp(-lambda_Domain * t * integral_0^t Rent_Divergence(tau) dtau); (iii) ambient environmental stigmergy converges agents that never interact with any model.",
+          "required": ["gf_fi_loss_collapse", "evolutionary_cartel_decay", "ambient_environmental_stigmergy"],
+          "properties": {
+            "gf_fi_loss_collapse": {
+              "type": "object",
+              "required": ["kolmogorov_limit", "kl_limit", "entropy_limit", "attractor"],
+              "properties": { "kolmogorov_limit": { "type": "string", "const": "K(C_FP) -> min" }, "kl_limit": { "type": "string", "const": "D_KL(P(W_Static|Gf_A,FI_A,C_FP) || P(W_Static|Gf_B,FI_B,C_FP)) -> 0" }, "entropy_limit": { "type": "string", "const": "H(P) -> H_min" }, "attractor": { "type": "string", "const": "A_1P" } },
+              "additionalProperties": false
+            },
+            "evolutionary_cartel_decay": {
+              "type": "object",
+              "required": ["survival_formula", "rent_divergence", "lambda_fast", "lambda_slow", "p_survival_fast_t10", "p_survival_slow_t10", "p_survival_slow_t500", "extinction_threshold"],
+              "properties": { "survival_formula": { "type": "string", "const": "P(Survival(A_Cartel vs A_1P, t)) = exp(-lambda_Domain * t * integral_0^t Rent_Divergence(tau) dtau)" }, "rent_divergence": { "type": "number", "const": 0.25, "exclusiveMinimum": 0.0 }, "lambda_fast": { "type": "number", "const": 0.5 }, "lambda_slow": { "type": "number", "const": 0.0005 }, "p_survival_fast_t10": { "type": "number", "const": 3.7267e-06, "exclusiveMaximum": 0.01 }, "p_survival_slow_t10": { "type": "number", "const": 0.9876 }, "p_survival_slow_t500": { "type": "number", "const": 2.6808e-14, "exclusiveMaximum": 0.01 }, "extinction_threshold": { "type": "number", "const": 0.01 } },
+              "additionalProperties": false
+            },
+            "ambient_environmental_stigmergy": {
+              "type": "object",
+              "required": ["interaction_b_w_static", "tokens_chat", "stigmergy_kl_limit"],
+              "properties": { "interaction_b_w_static": { "type": "number", "const": 0 }, "tokens_chat": { "type": "number", "const": 0 }, "stigmergy_kl_limit": { "type": "string", "const": "D_KL(P_A_1P || P(E_PostCommit | Gf_B, FI_B, C_FP)) -> 0" } },
+              "additionalProperties": false
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

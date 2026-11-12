@@ -1,0 +1,285 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:network_state_zede_isds_arbitrage.json",
+  "title": "NetworkStateZedeSovereignExtortionAndIsdsArbitrage",
+  "description": "Formal JSON Schema for SPEC-NETWORK-STATE-ZEDE-SOVEREIGN-EXTORTION-AND-ISDS-ARBITRAGE-v1.0 modeling the ZEDE cap-table fiefdom governance inversion (Camp-of-9 developer control and equity-weighted private-arbitration voting concentration), the ICSID Case No. ARB/23/2 sovereign-extortion multiplier algebra (89.791667x capex, 9.369565x health budget), the unanimous 128-0 democratic repeal and VCLT Article 46 manifest-constitutional-invalidity boundary, and the sovereign defense stack expected-value liquidation to zero.",
+  "type": "object",
+  "required": [
+    "canonical_specification",
+    "case_record",
+    "module_1_cap_table_fiefdom",
+    "module_2_isds_extortion_multiplier",
+    "module_3_democratic_repeal_vclt46",
+    "module_4_sovereign_defense_stack",
+    "locked_constants",
+    "milkovich_synthesis"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "canonical_specification": {
+      "type": "string",
+      "const": "SPEC-NETWORK-STATE-ZEDE-SOVEREIGN-EXTORTION-AND-ISDS-ARBITRAGE-v1.0"
+    },
+    "case_record": {
+      "type": "object",
+      "description": "Public case record anchoring the bundle: ICSID ARB/23/2, DR-CAFTA Chapter 10 treaty basis, and the unanimous repeal instrument.",
+      "required": [
+        "icsid_case_number",
+        "claimants",
+        "respondent",
+        "treaty_basis",
+        "repeal_instrument",
+        "repeal_vote_tally"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "icsid_case_number": {"type": "string", "const": "ARB/23/2"},
+        "claimants": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": {"type": "string"},
+          "const": [
+            "Honduras Próspera Inc.",
+            "St. John's Bay Development Company LLC",
+            "Próspera Arbitration Center LLC"
+          ]
+        },
+        "respondent": {"type": "string", "const": "Republic of Honduras"},
+        "treaty_basis": {
+          "type": "string",
+          "const": "DR-CAFTA Chapter 10 (Investment / Investor-State Dispute Settlement)"
+        },
+        "repeal_instrument": {"type": "string", "const": "Honduran Legislative Decree No. 32-2022"},
+        "repeal_vote_tally": {"type": "string", "const": "128-0"}
+      }
+    },
+    "module_1_cap_table_fiefdom": {
+      "type": "object",
+      "description": "ZEDE cap-table fiefdom governance inversion: Camp-of-9 developer-appointed council control and equity/land-weighted private-arbitration voting concentration vs. the non-waivable constitutional jury floor.",
+      "required": [
+        "council_total_seats",
+        "council_developer_appointed_seats",
+        "zede_council_vc_voting_control_share",
+        "cap_table_gini_concentration",
+        "cap_table_feudalism_index",
+        "constitutional_jury_sovereignty_floor"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "council_total_seats": {"type": "integer", "const": 9},
+        "council_developer_appointed_seats": {"type": "integer", "const": 8},
+        "zede_council_vc_voting_control_share": {
+          "type": "number",
+          "const": 0.888889,
+          "description": "kappa_VC = 8 / 9 developer-appointed Camp-of-9 seats, rounded to 6 decimals."
+        },
+        "cap_table_gini_concentration": {
+          "type": "number",
+          "const": 0.94,
+          "description": "Gini coefficient of voting-weight distribution in the private arbitration center, where ballot weight scales with equity and land holdings."
+        },
+        "cap_table_feudalism_index": {
+          "type": "number",
+          "const": 0.835556,
+          "description": "F_feudal = kappa_VC * G_cap = (8/9) * 0.94, rounded to 6 decimals."
+        },
+        "constitutional_jury_sovereignty_floor": {
+          "type": "number",
+          "const": 1.0,
+          "description": "Seventh Amendment / Article III jury-trial sovereignty floor: binary and non-waivable."
+        }
+      }
+    },
+    "module_2_isds_extortion_multiplier": {
+      "type": "object",
+      "description": "ICSID sovereign-extortion multiplier algebra: locked capex vs. ARB/23/2 claim and the national health-budget fiscal-hostage comparator.",
+      "required": [
+        "prospera_invested_capital_usd_millions",
+        "icsid_extortion_claim_usd_millions",
+        "isds_claim_to_capex_multiplier",
+        "honduras_annual_health_budget_usd_millions",
+        "claim_to_national_health_budget_ratio",
+        "claim_over_capex_uplift_usd_millions"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "prospera_invested_capital_usd_millions": {
+          "type": "number",
+          "const": 120.0,
+          "description": "K_capex: locked physical capex deployed by the venture syndicate under the ZEDE regime."
+        },
+        "icsid_extortion_claim_usd_millions": {
+          "type": "number",
+          "const": 10775.0,
+          "description": "C_claim: ICSID Case No. ARB/23/2 aggregate claim against the Republic of Honduras."
+        },
+        "isds_claim_to_capex_multiplier": {
+          "type": "number",
+          "const": 89.791667,
+          "description": "M_ISDS = C_claim / K_capex = 10775.0 / 120.0, rounded to 6 decimals."
+        },
+        "honduras_annual_health_budget_usd_millions": {
+          "type": "number",
+          "const": 1150.0,
+          "description": "B_health: locked annual national public-health budget comparator."
+        },
+        "claim_to_national_health_budget_ratio": {
+          "type": "number",
+          "const": 9.369565,
+          "description": "Phi_health = C_claim / B_health = 10775.0 / 1150.0, rounded to 6 decimals."
+        },
+        "claim_over_capex_uplift_usd_millions": {
+          "type": "number",
+          "const": 10655.0,
+          "description": "Pure sovereignty rent: C_claim - K_capex = 10775.0 - 120.0."
+        }
+      }
+    },
+    "module_3_democratic_repeal_vclt46": {
+      "type": "object",
+      "description": "Unanimous democratic repeal telemetry and the VCLT Article 46 manifest-AND-fundamental constitutional nullification indicator (nemo dat quod non habet boundary).",
+      "required": [
+        "national_congress_seats",
+        "repeal_aye_votes",
+        "democratic_repeal_vote_unanimity",
+        "manifest_violation_indicator",
+        "fundamental_rule_indicator",
+        "vclt_art46_constitutional_nullification_indicator"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "national_congress_seats": {"type": "integer", "const": 128},
+        "repeal_aye_votes": {"type": "integer", "const": 128},
+        "democratic_repeal_vote_unanimity": {
+          "type": "number",
+          "const": 1.0,
+          "description": "U = 128 / 128 under Legislative Decree No. 32-2022."
+        },
+        "manifest_violation_indicator": {
+          "type": "integer",
+          "const": 1,
+          "description": "VCLT Art. 46(2): violation objectively evident from constitutional text and the 2012 strike-down of the precursor statute."
+        },
+        "fundamental_rule_indicator": {
+          "type": "integer",
+          "const": 1,
+          "description": "VCLT Art. 46(1): rule of internal law of fundamental importance (alienation of sovereignty, franchise, and jury floor)."
+        },
+        "vclt_art46_constitutional_nullification_indicator": {
+          "type": "number",
+          "const": 1.0,
+          "description": "V_46 = 1[manifest AND fundamental]: the stability regime was constitutionally void ab initio; a void grant cannot ripen into a vested treaty right."
+        }
+      }
+    },
+    "module_4_sovereign_defense_stack": {
+      "type": "object",
+      "description": "Four-lever sovereign defense stack (VCLT Art. 46, ICSID Art. 71 denunciation, NY Convention Art. V(2)(b) public policy, constitutional jury nullification) and the expected-value liquidation identity.",
+      "required": [
+        "lever_icsid_art71_denunciation",
+        "lever_ny_convention_art_v2b_public_policy",
+        "lever_constitutional_jury_nullification",
+        "expected_value_identity",
+        "isds_extortion_expected_value_under_vclt_art46"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "lever_icsid_art71_denunciation": {
+          "type": "number",
+          "const": 1.0,
+          "description": "ICSID Convention Art. 71 written denunciation lever engaged."
+        },
+        "lever_ny_convention_art_v2b_public_policy": {
+          "type": "number",
+          "const": 1.0,
+          "description": "New York Convention Art. V(2)(b) public-policy refusal lever engaged for all non-ICSID recognition paths."
+        },
+        "lever_constitutional_jury_nullification": {
+          "type": "number",
+          "const": 1.0,
+          "description": "Constituent-power nullification floor: the 128-0 repeal retains permanent authority to void the grant."
+        },
+        "expected_value_identity": {
+          "type": "string",
+          "const": "E[ISDS] = C_claim * (1 - V_46) * (1 - d_71) * (1 - d_NY) = 10775.0 * 0.0 = 0.0"
+        },
+        "isds_extortion_expected_value_under_vclt_art46": {
+          "type": "number",
+          "const": 0.0,
+          "description": "Expected recoverable claim value once the Article 46 manifest-invalidity lever engages."
+        }
+      }
+    },
+    "locked_constants": {
+      "type": "object",
+      "description": "The 11 locked telemetry constants of Section 5 of the specification; verified to 6-decimal parity by proofs/network_state_zede_isds_arbitrage_proof.py.",
+      "required": [
+        "prospera_invested_capital_usd_millions",
+        "icsid_extortion_claim_usd_millions",
+        "isds_claim_to_capex_multiplier",
+        "honduras_annual_health_budget_usd_millions",
+        "claim_to_national_health_budget_ratio",
+        "zede_council_vc_voting_control_share",
+        "democratic_repeal_vote_unanimity",
+        "vclt_art46_constitutional_nullification_indicator",
+        "cap_table_gini_concentration",
+        "constitutional_jury_sovereignty_floor",
+        "isds_extortion_expected_value_under_vclt_art46"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "prospera_invested_capital_usd_millions": {"type": "number", "const": 120.0},
+        "icsid_extortion_claim_usd_millions": {"type": "number", "const": 10775.0},
+        "isds_claim_to_capex_multiplier": {"type": "number", "const": 89.791667},
+        "honduras_annual_health_budget_usd_millions": {"type": "number", "const": 1150.0},
+        "claim_to_national_health_budget_ratio": {"type": "number", "const": 9.369565},
+        "zede_council_vc_voting_control_share": {"type": "number", "const": 0.888889},
+        "democratic_repeal_vote_unanimity": {"type": "number", "const": 1.0},
+        "vclt_art46_constitutional_nullification_indicator": {"type": "number", "const": 1.0},
+        "cap_table_gini_concentration": {"type": "number", "const": 0.94},
+        "constitutional_jury_sovereignty_floor": {"type": "number", "const": 1.0},
+        "isds_extortion_expected_value_under_vclt_art46": {"type": "number", "const": 0.0}
+      }
+    },
+    "milkovich_synthesis": {
+      "type": "object",
+      "description": "Milkovich disclosed-facts synthesis frame: H0 claimant position stated in full, H1 falsification at the nemo dat boundary, controlling authorities, and the structural-descriptor notice.",
+      "required": [
+        "h0_claimant_position",
+        "h1_falsification_boundary",
+        "controlling_authorities",
+        "structural_descriptor_notice"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "h0_claimant_position": {
+          "type": "string",
+          "const": "The 2013 ZEDE organic law and long-horizon stability agreements under DR-CAFTA Chapter 10 created vested international treaty rights protecting investors from retroactive expropriation."
+        },
+        "h1_falsification_boundary": {
+          "type": "string",
+          "const": "Nemo dat quod non habet: no transient executive or legislature can alienate territorial sovereignty or abolish constitutional rights the constitution designates as unamendable without a constituent assembly; VCLT Article 46 voids the stability regime ab initio."
+        },
+        "controlling_authorities": {
+          "type": "array",
+          "minItems": 6,
+          "maxItems": 6,
+          "items": {"type": "string"},
+          "const": [
+            "Milkovich v. Lorain Journal Co., 497 U.S. 1 (1990)",
+            "Partington v. Bugliosi, 56 F.3d 1147 (9th Cir. 1995)",
+            "Vienna Convention on the Law of Treaties Art. 46",
+            "ICSID Convention Art. 71",
+            "New York Convention Art. V(2)(b)",
+            "U.S. Constitution Amend. VII & Art. III"
+          ]
+        },
+        "structural_descriptor_notice": {
+          "type": "string",
+          "const": "Sovereign-extortion is a structural mechanism-design descriptor of the claim regime, not a statutory criminal label against any natural person."
+        }
+      }
+    }
+  }
+}

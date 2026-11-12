@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:ewaste_exocortex_node.json",
+  "title": "EWasteExocortexNodePayload",
+  "type": "object",
+  "required": [
+    "spec_version",
+    "jurisdiction_context",
+    "cfaa_compliance_attestation",
+    "hardware_profile"
+  ],
+  "properties": {
+    "spec_version": {
+      "type": "string",
+      "const": "EWASTE-EXOCORTEX-MESH-v1.0"
+    },
+    "jurisdiction_context": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}$"
+    },
+    "cfaa_compliance_attestation": {
+      "type": "boolean",
+      "const": true
+    },
+    "hardware_profile": {
+      "type": "object",
+      "required": [
+        "amortized_capex_usd",
+        "power_draw_watts",
+        "quantization_type"
+      ],
+      "properties": {
+        "amortized_capex_usd": {
+          "type": "number",
+          "const": 0
+        },
+        "power_draw_watts": {
+          "type": "number",
+          "maximum": 15.0
+        },
+        "quantization_type": {
+          "type": "string",
+          "enum": [
+            "GGUF_Q2_K",
+            "GGUF_Q4_K_M"
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,272 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:centralization_percolation_paralysis.json",
+  "title": "Centralization Percolation Paralysis Schema",
+  "description": "Formal JSON Schema for SPEC-CENTRALIZATION-PERCOLATION-PARALYSIS-v1.0 validating the star-vs-mesh percolation asymmetry (EQ-1), synchronous coupling paralysis (EQ-2), extortion Coasean asymmetry (EQ-3), municipal queue blowup (EQ-4), regulatory boomerang double extortion (EQ-5), the CDK Global Holdings, LLC LBO tranche_recovery(ev) waterfall (EQ-6), and the VARTA AG StaRUG tranche_recovery(ev) waterfall (EQ-7).",
+  "type": "object",
+  "required": [
+    "specification_id",
+    "version",
+    "license",
+    "jurisdiction_context",
+    "cfaa_compliance_attestation",
+    "itar_ear_public_domain_attestation",
+    "entity_and_instrument_ids",
+    "star_vs_mesh_percolation_eq1",
+    "synchronous_coupling_paralysis_eq2",
+    "extortion_coasean_asymmetry_eq3",
+    "municipal_queue_blowup_eq4",
+    "regulatory_boomerang_eq5",
+    "capital_structure_cdk_waterfall_eq6",
+    "capital_structure_varta_starug_eq7",
+    "catalyst_calendar",
+    "mathematical_invariants",
+    "verification_vectors"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "specification_id": { "type": "string", "const": "SPEC-CENTRALIZATION-PERCOLATION-PARALYSIS-v1.0" },
+    "version": { "type": "string", "const": "1.0" },
+    "license": { "type": "string", "const": "Unlicense" },
+    "jurisdiction_context": {
+      "type": "array",
+      "const": ["US", "DE", "EU"],
+      "description": "ISO 3166-1 / supranational jurisdiction contexts; statutory modules (18 U.S.C. 1030 CFAA, GDPR Art. 83(4)-(5), NIS2 Art. 34, StaRUG) processed locally per node identity without cross-custody data egress."
+    },
+    "cfaa_compliance_attestation": {
+      "type": "boolean",
+      "const": true,
+      "description": "18 U.S.C. 1030 (CFAA) zero-unauthorized-access attestation; all inputs derive from public-record filings, court dockets, and open sources with verifiable chain-of-custody."
+    },
+    "itar_ear_public_domain_attestation": {
+      "type": "boolean",
+      "const": true,
+      "description": "22 C.F.R. 120.34 / 15 C.F.R. 734.7 public-domain systems-spec boundary; zero export-controlled hardware blueprints."
+    },
+    "entity_and_instrument_ids": {
+      "type": "object",
+      "description": "Multi-counterparty security-master cross-index: CDK Global Holdings, LLC (primary target, US, private, Brookfield-owned); VARTA AG (primary target, ETR:VAR1, ISIN DE000A0TGJ55); Brookfield Business Partners L.P. (NYSE:BBU, LBO sponsor); Porsche Automobil Holding SE (ETR:PAH3, rescue equity); Montana Tech Components AG (Tojner rescue equity); syndicated loan and Schuldschein holders (senior lenders); Suedwestfalen IT GmbH (municipal consortium operator); extraterritorial ransomware counterparty (zero jurisdictional reachability).",
+      "required": ["primary_targets", "counterparty_ring"],
+      "additionalProperties": false,
+      "properties": {
+        "primary_targets": { "type": "array", "minItems": 2, "maxItems": 2, "items": { "$ref": "#/$defs/entity_id" } },
+        "counterparty_ring": { "type": "array", "minItems": 4, "items": { "$ref": "#/$defs/entity_id" } }
+      }
+    },
+    "star_vs_mesh_percolation_eq1": {
+      "type": "object",
+      "description": "EQ-1 (Molloy & Reed 1995; Callaway et al. 2000): p_c = <k>/(<k^2>-<k>); f_c = 1 - p_c; kappa = <k^2>/<k>. The mesh (k0=4.0, <k^2>=16.0, kappa=4.0) shatters at f_c=0.666667 (10,000 of 15,000 nodes); the dealer star (<k>=1.999867, <k^2>_hub=14999.000067, kappa=7500.5) collapses at f_targeted=0.00006666 (single hub node): lambda_extort=10,000x adversary leverage.",
+      "required": ["N_edge_nodes", "V_star_vertices", "mesh_degree_k0", "mesh_second_moment_k2", "mesh_kappa", "mesh_percolation_threshold_pc", "mesh_critical_removal_fraction_fc", "mesh_nodes_to_compromise", "star_avg_degree_k", "star_second_moment_k2", "star_kappa", "star_targeted_removal_fraction_f_targeted", "star_nodes_to_compromise", "adversary_leverage_multiplier_lambda_extort"],
+      "additionalProperties": false,
+      "properties": {
+        "N_edge_nodes": { "type": "integer", "const": 15000 },
+        "V_star_vertices": { "type": "integer", "const": 15001 },
+        "mesh_degree_k0": { "type": "number", "const": 4.0 },
+        "mesh_second_moment_k2": { "type": "number", "const": 16.0 },
+        "mesh_kappa": { "type": "number", "const": 4.0 },
+        "mesh_percolation_threshold_pc": { "type": "number", "const": 0.333333 },
+        "mesh_critical_removal_fraction_fc": { "type": "number", "const": 0.666667 },
+        "mesh_nodes_to_compromise": { "type": "integer", "const": 10000 },
+        "star_avg_degree_k": { "type": "number", "const": 1.999867 },
+        "star_second_moment_k2": { "type": "number", "const": 14999.000067 },
+        "star_kappa": { "type": "number", "const": 7500.5 },
+        "star_targeted_removal_fraction_f_targeted": { "type": "number", "const": 0.00006666 },
+        "star_nodes_to_compromise": { "type": "integer", "const": 1 },
+        "adversary_leverage_multiplier_lambda_extort": { "type": "number", "const": 10000.0 }
+      }
+    },
+    "synchronous_coupling_paralysis_eq2": {
+      "type": "object",
+      "description": "EQ-2: A_eff = A_phys * A_hub^gamma. Cloud/SaaS coupling (gamma=1.0) => A_eff = 0.0 under total hub fault; air-gapped local custody (gamma=0.0) => A_eff = 0.9999. Cloud LLM/ERP p99 850 ms against a 2 ms PLC scan cycle = 425x latency penalty: synchronous real-time control coupling through the hub is physically infeasible.",
+      "required": ["edge_physical_availability_A_phys", "hub_availability_under_fault_A_hub", "coupling_exponent_cloud_saas_gamma", "coupling_exponent_airgapped_local_gamma", "effective_availability_centralized", "effective_availability_airgapped_local", "plc_scan_cycle_ms", "cloud_llm_erp_p99_ms", "latency_penalty_multiplier"],
+      "additionalProperties": false,
+      "properties": {
+        "edge_physical_availability_A_phys": { "type": "number", "const": 0.9999 },
+        "hub_availability_under_fault_A_hub": { "type": "number", "const": 0.0 },
+        "coupling_exponent_cloud_saas_gamma": { "type": "number", "const": 1.0 },
+        "coupling_exponent_airgapped_local_gamma": { "type": "number", "const": 0.0 },
+        "effective_availability_centralized": { "type": "number", "const": 0.0 },
+        "effective_availability_airgapped_local": { "type": "number", "const": 0.9999 },
+        "plc_scan_cycle_ms": { "type": "number", "const": 2.0 },
+        "cloud_llm_erp_p99_ms": { "type": "number", "const": 850.0 },
+        "latency_penalty_multiplier": { "type": "number", "const": 425.0 }
+      }
+    },
+    "extortion_coasean_asymmetry_eq3": {
+      "type": "object",
+      "description": "EQ-3: Coasean bargaining collapse. Aggregate dealer loss = M x daily_loss x D = 15,000 x $4,800 x 14 = $1,008,000,000 against a $25,000,000 ransom = 40.32x loss-to-ransom ratio (adversary captures 2.48% of imposed loss); OEM JIT line-stop penalties EUR 25,000/min = EUR 1,500,000/hr = EUR 36,000,000/day.",
+      "required": ["cdk_dealers_M", "cdk_daily_loss_per_dealer_usd", "cdk_outage_days_D", "cdk_aggregate_dealer_loss_usd", "cdk_ransom_paid_usd", "cdk_loss_to_ransom_ratio", "oem_jit_penalty_eur_per_min", "oem_jit_penalty_eur_per_hour", "oem_jit_penalty_eur_per_day"],
+      "additionalProperties": false,
+      "properties": {
+        "cdk_dealers_M": { "type": "integer", "const": 15000 },
+        "cdk_daily_loss_per_dealer_usd": { "type": "number", "const": 4800.0 },
+        "cdk_outage_days_D": { "type": "integer", "const": 14 },
+        "cdk_aggregate_dealer_loss_usd": { "type": "number", "const": 1008000000.0 },
+        "cdk_ransom_paid_usd": { "type": "number", "const": 25000000.0 },
+        "cdk_loss_to_ransom_ratio": { "type": "number", "const": 40.32 },
+        "oem_jit_penalty_eur_per_min": { "type": "number", "const": 25000.0 },
+        "oem_jit_penalty_eur_per_hour": { "type": "number", "const": 1500000.0 },
+        "oem_jit_penalty_eur_per_day": { "type": "number", "const": 36000000.0 }
+      }
+    },
+    "municipal_queue_blowup_eq4": {
+      "type": "object",
+      "description": "EQ-4: Lambda = lambda0 * N * (1 + beta * ln N) = 2.0 x 72 x (1 + 0.35 x ln 72) = 359.544/hr against degraded central service rate mu = 180/hr => rho = 1.997467 > 1 (M/M/1 stability violated); queue drift delta_Q = 179.544/hr; 4,320-hour (180-day) accumulated backlog = 775,630 transactions across 72 municipalities and 1,600,000 citizens.",
+      "required": ["municipalities_N", "citizens_affected", "base_exception_rate_lambda0_per_hr", "coupling_growth_beta", "total_arrival_rate_Lambda_per_hr", "degraded_central_service_rate_mu_per_hr", "utilization_rho", "queue_drift_delta_Q_per_hr", "outage_hours_6_months", "accumulated_backlog_transactions"],
+      "additionalProperties": false,
+      "properties": {
+        "municipalities_N": { "type": "integer", "const": 72 },
+        "citizens_affected": { "type": "integer", "const": 1600000 },
+        "base_exception_rate_lambda0_per_hr": { "type": "number", "const": 2.0 },
+        "coupling_growth_beta": { "type": "number", "const": 0.35 },
+        "total_arrival_rate_Lambda_per_hr": { "type": "number", "const": 359.544 },
+        "degraded_central_service_rate_mu_per_hr": { "type": "number", "const": 180.0 },
+        "utilization_rho": { "type": "number", "const": 1.997467 },
+        "queue_drift_delta_Q_per_hr": { "type": "number", "const": 179.544 },
+        "outage_hours_6_months": { "type": "integer", "const": 4320 },
+        "accumulated_backlog_transactions": { "type": "integer", "const": 775630 }
+      }
+    },
+    "regulatory_boomerang_eq5": {
+      "type": "object",
+      "description": "EQ-5: GDPR Art. 83(4)-(5) ceiling = max(4% x EUR 500M, EUR 20M) = EUR 20M; NIS2 Art. 34 ceiling = max(2% x EUR 500M, EUR 10M) = EUR 10M; p_audit = 0.5 => EUR 10M expected regulatory fine surcharge; expanded extortion reserve ceiling = EUR 5M direct downtime loss + EUR 10M expected surcharge = EUR 15M = 3.0x boomerang leverage expansion; settled ransom demand EUR 1.5M sits inside the rational settlement band. Adversary jurisdictional reachability 0.0 vs victim domestic reachability 1.0.",
+      "required": ["adversary_jurisdictional_reachability", "victim_domestic_reachability", "example_victim_revenue_eur", "gdpr_art83_max_fine_pct", "gdpr_art83_statutory_ceiling_eur", "nis2_art34_max_fine_pct", "nis2_art34_statutory_ceiling_eur", "audit_penalty_probability_p_audit", "direct_downtime_loss_eur", "expected_regulatory_fine_surcharge_eur", "expanded_extortion_reserve_ceiling_eur", "ransom_demand_settled_eur", "boomerang_leverage_expansion_ratio"],
+      "additionalProperties": false,
+      "properties": {
+        "adversary_jurisdictional_reachability": { "type": "number", "const": 0.0 },
+        "victim_domestic_reachability": { "type": "number", "const": 1.0 },
+        "example_victim_revenue_eur": { "type": "number", "const": 500000000.0 },
+        "gdpr_art83_max_fine_pct": { "type": "number", "const": 0.04 },
+        "gdpr_art83_statutory_ceiling_eur": { "type": "number", "const": 20000000.0 },
+        "nis2_art34_max_fine_pct": { "type": "number", "const": 0.02 },
+        "nis2_art34_statutory_ceiling_eur": { "type": "number", "const": 10000000.0 },
+        "audit_penalty_probability_p_audit": { "type": "number", "const": 0.5 },
+        "direct_downtime_loss_eur": { "type": "number", "const": 5000000.0 },
+        "expected_regulatory_fine_surcharge_eur": { "type": "number", "const": 10000000.0 },
+        "expanded_extortion_reserve_ceiling_eur": { "type": "number", "const": 15000000.0 },
+        "ransom_demand_settled_eur": { "type": "number", "const": 1500000.0 },
+        "boomerang_leverage_expansion_ratio": { "type": "number", "const": 3.0 }
+      }
+    },
+    "capital_structure_cdk_waterfall_eq6": {
+      "type": "object",
+      "description": "EQ-6: Deterministic absolute-priority waterfall tranche_recovery(ev) over the CDK Global Holdings, LLC $8,300M LBO capitalization (RCF $650M / TLB $3,800M / unsecured notes $1,000M / sponsor equity $2,850M; breakeven EV thresholds $650M / $4,450M / $5,450M / $8,300M). At stressed EV $4,200M the TLB is the fulcrum security: RCF 100.0 cents, TLB $3,550M = 93.42 cents, unsecured notes 0.0 cents, sponsor equity 0.0 cents.",
+      "required": ["total_lbo_capitalization_m", "rcf_principal_m", "rcf_breakeven_ev_m", "tlb_principal_m", "tlb_breakeven_ev_m", "unsecured_notes_principal_m", "unsecured_breakeven_ev_m", "sponsor_equity_principal_m", "sponsor_breakeven_ev_m", "stressed_ev_m", "stressed_recovery_rcf_cents", "stressed_recovery_tlb_m", "stressed_recovery_tlb_cents", "stressed_recovery_unsecured_cents", "stressed_recovery_equity_cents"],
+      "additionalProperties": false,
+      "properties": {
+        "total_lbo_capitalization_m": { "type": "number", "const": 8300.0 },
+        "rcf_principal_m": { "type": "number", "const": 650.0 },
+        "rcf_breakeven_ev_m": { "type": "number", "const": 650.0 },
+        "tlb_principal_m": { "type": "number", "const": 3800.0 },
+        "tlb_breakeven_ev_m": { "type": "number", "const": 4450.0 },
+        "unsecured_notes_principal_m": { "type": "number", "const": 1000.0 },
+        "unsecured_breakeven_ev_m": { "type": "number", "const": 5450.0 },
+        "sponsor_equity_principal_m": { "type": "number", "const": 2850.0 },
+        "sponsor_breakeven_ev_m": { "type": "number", "const": 8300.0 },
+        "stressed_ev_m": { "type": "number", "const": 4200.0 },
+        "stressed_recovery_rcf_cents": { "type": "number", "const": 100.0 },
+        "stressed_recovery_tlb_m": { "type": "number", "const": 3550.0 },
+        "stressed_recovery_tlb_cents": { "type": "number", "const": 93.42 },
+        "stressed_recovery_unsecured_cents": { "type": "number", "const": 0.0 },
+        "stressed_recovery_equity_cents": { "type": "number", "const": 0.0 }
+      }
+    },
+    "capital_structure_varta_starug_eq7": {
+      "type": "object",
+      "description": "EQ-7: VARTA AG StaRUG (Unternehmensstabilisierungs- und -restrukturierungsgesetz) plan waterfall tranche_recovery(ev): EUR 485M pre-plan senior stack (EUR 235M syndicated loan + EUR 250M Schuldschein notes) reorganized to EUR 200M => EUR 285M senior haircut, 41.24 cents pari passu senior recovery, 0.0 cents public equity recovery, EUR 60M new rescue equity (Porsche Automobil Holding SE / Michael Tojner).",
+      "required": ["pre_starug_gross_debt_m", "syndicated_loan_m", "schuldschein_notes_m", "post_starug_reorganized_debt_m", "senior_debt_haircut_m", "senior_debt_recovery_cents", "public_equity_recovery_cents", "new_rescue_equity_porsche_tojner_m"],
+      "additionalProperties": false,
+      "properties": {
+        "pre_starug_gross_debt_m": { "type": "number", "const": 485.0 },
+        "syndicated_loan_m": { "type": "number", "const": 235.0 },
+        "schuldschein_notes_m": { "type": "number", "const": 250.0 },
+        "post_starug_reorganized_debt_m": { "type": "number", "const": 200.0 },
+        "senior_debt_haircut_m": { "type": "number", "const": 285.0 },
+        "senior_debt_recovery_cents": { "type": "number", "const": 41.24 },
+        "public_equity_recovery_cents": { "type": "number", "const": 0.0 },
+        "new_rescue_equity_porsche_tojner_m": { "type": "number", "const": 60.0 }
+      }
+    },
+    "catalyst_calendar": {
+      "type": "array",
+      "minItems": 7,
+      "description": "Hard-date catalyst and forbearance calendar (ISO 8601): SIT intrusion onset 2023-10-30 (exact); VARTA StaRUG plan agreement window 2024-03 (month precision); SIT 180-day degraded-service boundary 2024-04-27 (derived from 4,320 outage hours); CDK intrusion onset 2024-06-19 (exact); CDK $25M ransom payment 2024-06-21 (reported); VARTA plan implementation window 2024-07 (month precision); CDK 14-day core-outage boundary 2024-07-03 (derived from D=14).",
+      "items": {
+        "type": "object",
+        "required": ["iso_date", "event", "jurisdiction", "date_precision"],
+        "additionalProperties": false,
+        "properties": {
+          "iso_date": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+          "event": { "type": "string", "minLength": 8 },
+          "jurisdiction": { "type": "string", "enum": ["US", "DE", "EU"] },
+          "date_precision": { "type": "string", "enum": ["exact", "month", "derived", "reported"] }
+        }
+      }
+    },
+    "mathematical_invariants": {
+      "type": "array",
+      "minItems": 7,
+      "maxItems": 7,
+      "description": "Governing closed-form invariants EQ-1..EQ-7 with locked values and tolerances, compiled 1:1 into proofs/centralization_percolation_paralysis_proof.py.",
+      "items": {
+        "type": "object",
+        "required": ["id", "expression", "locked_value", "tolerance"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string", "enum": ["EQ-1", "EQ-2", "EQ-3", "EQ-4", "EQ-5", "EQ-6", "EQ-7"] },
+          "expression": { "type": "string", "minLength": 8 },
+          "locked_value": { "type": "number" },
+          "tolerance": { "type": "number", "exclusiveMinimum": 0 }
+        }
+      }
+    },
+    "verification_vectors": {
+      "type": "array",
+      "minItems": 9,
+      "maxItems": 9,
+      "items": {
+        "type": "string",
+        "enum": [
+          "star_vs_mesh_percolation",
+          "synchronous_coupling",
+          "extortion_coasean_asymmetry",
+          "municipal_queue_blowup",
+          "regulatory_boomerang",
+          "cdk_tranche_recovery_waterfall",
+          "varta_starug_tranche_recovery",
+          "catalyst_calendar_chronology",
+          "schema_integrity_gate"
+        ]
+      }
+    }
+  },
+  "$defs": {
+    "entity_id": {
+      "type": "object",
+      "required": ["role", "legal_name", "jurisdiction"],
+      "additionalProperties": false,
+      "properties": {
+        "role": {
+          "type": "string",
+          "enum": [
+            "primary_target",
+            "lbo_sponsor",
+            "rescue_equity",
+            "senior_lender_syndicate",
+            "schuldschein_holder",
+            "municipal_consortium_operator",
+            "statutory_venue",
+            "ransomware_counterparty"
+          ]
+        },
+        "legal_name": { "type": "string", "minLength": 2 },
+        "jurisdiction": { "type": "string", "enum": ["US", "DE", "EU", "CA", "XX"] },
+        "ticker": { "type": ["string", "null"] },
+        "isin": { "type": ["string", "null"], "pattern": "^[A-Z]{2}[A-Z0-9]{9}[0-9]$" },
+        "cik": { "type": ["string", "null"], "pattern": "^[0-9]{10}$" },
+        "court_docket": { "type": ["string", "null"] },
+        "instrument": { "type": ["string", "null"] }
+      }
+    }
+  }
+}

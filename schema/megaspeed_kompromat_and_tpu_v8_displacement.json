@@ -1,0 +1,187 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:megaspeed_kompromat_and_tpu_v8_displacement.json",
+  "title": "MegaspeedExportDiversionAndTpuV8DisplacementVerificationSchema",
+  "description": "Formal JSON Schema Draft 2020-12 certifying Schelling kompromat elasticity, ECRA double-gross penalties, 4-channel compute fungibility, and custom TPU v8 displacement across merchant neocloud capital structures.",
+  "type": "object",
+  "required": [
+    "specification_id",
+    "jurisdiction_context",
+    "cfaa_compliance_attestation",
+    "schelling_kompromat_model",
+    "megaspeed_export_diversion_audit",
+    "four_channel_compute_fungibility",
+    "tpu_v8_displacement_metrics",
+    "security_master_6_ring",
+    "tranche_recovery_waterfall",
+    "catalyst_calendar"
+  ],
+  "properties": {
+    "specification_id": {
+      "type": "string",
+      "const": "SPEC-MEGASPEED-KOMPROMAT-AND-TPU-V8-DISPLACEMENT-v1.0"
+    },
+    "jurisdiction_context": {
+      "type": "string",
+      "enum": ["US", "SG", "EU", "GB", "KY"]
+    },
+    "cfaa_compliance_attestation": {
+      "type": "boolean",
+      "const": true,
+      "description": "Zero unauthorized access affirmation under 18 U.S.C. 1030."
+    },
+    "schelling_kompromat_model": {
+      "type": "object",
+      "required": [
+        "boy_scout_persona_gap",
+        "equity_wipe_after_hours_usd_b",
+        "ecra_fine_ceiling_usd_b",
+        "lambda_boy_scout_usd_b",
+        "zero_halo_operator_gap",
+        "lambda_zero_halo_usd_b"
+      ],
+      "properties": {
+        "boy_scout_persona_gap": { "type": "number", "minimum": 0.0, "maximum": 1.0 },
+        "equity_wipe_after_hours_usd_b": { "type": "number", "minimum": 0.0 },
+        "ecra_fine_ceiling_usd_b": { "type": "number", "minimum": 0.0 },
+        "lambda_boy_scout_usd_b": { "type": "number", "minimum": 0.0 },
+        "zero_halo_operator_gap": { "type": "number", "minimum": 0.0, "maximum": 1.0 },
+        "lambda_zero_halo_usd_b": { "type": "number", "minimum": 0.0 }
+      }
+    },
+    "megaspeed_export_diversion_audit": {
+      "type": "object",
+      "required": [
+        "megaspeed_direct_gpus",
+        "megaspeed_direct_usd_b",
+        "megaspeed_2023_cash_max_usd_m",
+        "cash_multiple",
+        "ownership_transfer_to_ncp_lag_days",
+        "alice_huang_network_total_gpus",
+        "alice_huang_network_total_usd_b",
+        "ecra_multiplier",
+        "ecra_fine_floor_direct_usd_b",
+        "ecra_fine_ceiling_total_usd_b"
+      ],
+      "properties": {
+        "megaspeed_direct_gpus": { "type": "integer", "minimum": 1 },
+        "megaspeed_direct_usd_b": { "type": "number", "minimum": 0.0 },
+        "megaspeed_2023_cash_max_usd_m": { "type": "number", "minimum": 0.0 },
+        "cash_multiple": { "type": "number", "minimum": 1.0 },
+        "ownership_transfer_to_ncp_lag_days": { "type": "integer", "minimum": 0 },
+        "alice_huang_network_total_gpus": { "type": "integer", "minimum": 1 },
+        "alice_huang_network_total_usd_b": { "type": "number", "minimum": 0.0 },
+        "ecra_multiplier": { "type": "number", "const": 2.0 },
+        "ecra_fine_floor_direct_usd_b": { "type": "number", "minimum": 0.0 },
+        "ecra_fine_ceiling_total_usd_b": { "type": "number", "minimum": 0.0 }
+      }
+    },
+    "four_channel_compute_fungibility": {
+      "type": "object",
+      "required": [
+        "smuggled_channel_units",
+        "foreign_shell_units",
+        "remote_ssh_units",
+        "domestic_silicon_units",
+        "blanket_ban_effective_q",
+        "rofr_us_priority_allocation_pct"
+      ],
+      "properties": {
+        "smuggled_channel_units": { "type": "integer", "minimum": 0 },
+        "foreign_shell_units": { "type": "integer", "minimum": 0 },
+        "remote_ssh_units": { "type": "integer", "minimum": 0 },
+        "domestic_silicon_units": { "type": "integer", "minimum": 0 },
+        "blanket_ban_effective_q": { "type": "number", "minimum": 0.0 },
+        "rofr_us_priority_allocation_pct": { "type": "number", "minimum": 0.0, "maximum": 100.0 }
+      }
+    },
+    "tpu_v8_displacement_metrics": {
+      "type": "object",
+      "required": [
+        "tpu_8i_max_hbm_gb",
+        "tpu_8i_max_bandwidth_tbps",
+        "broadcom_anthropic_credit_facility_usd_b",
+        "anthropic_gw_initial",
+        "anthropic_gw_target",
+        "openai_xpu_gw_target",
+        "morgan_stanley_tpu_spv_usd_b",
+        "broadcom_spv_residual_guarantee_usd_b",
+        "nvidia_merchant_gross_margin_pct",
+        "torchtpu_mfu_pct",
+        "neocloud_breakeven_atc_usd_hr",
+        "srmc_energy_floor_usd_hr"
+      ],
+      "properties": {
+        "tpu_8i_max_hbm_gb": { "type": "integer", "minimum": 1 },
+        "tpu_8i_max_bandwidth_tbps": { "type": "number", "minimum": 0.0 },
+        "broadcom_anthropic_credit_facility_usd_b": { "type": "number", "minimum": 0.0 },
+        "anthropic_gw_initial": { "type": "number", "minimum": 0.0 },
+        "anthropic_gw_target": { "type": "number", "minimum": 0.0 },
+        "openai_xpu_gw_target": { "type": "number", "minimum": 0.0 },
+        "morgan_stanley_tpu_spv_usd_b": { "type": "number", "minimum": 0.0 },
+        "broadcom_spv_residual_guarantee_usd_b": { "type": "number", "minimum": 0.0 },
+        "nvidia_merchant_gross_margin_pct": { "type": "number", "minimum": 0.0, "maximum": 100.0 },
+        "torchtpu_mfu_pct": { "type": "number", "minimum": 0.0, "maximum": 100.0 },
+        "neocloud_breakeven_atc_usd_hr": { "type": "number", "minimum": 0.0 },
+        "srmc_energy_floor_usd_hr": { "type": "number", "minimum": 0.0 }
+      }
+    },
+    "security_master_6_ring": {
+      "type": "object",
+      "required": [
+        "primary_targets",
+        "bdc_co_lenders",
+        "insurance_and_sidecars",
+        "auditors_and_valuation_agents",
+        "public_pension_lps",
+        "trustees_and_counsel"
+      ],
+      "properties": {
+        "primary_targets": { "type": "array", "items": { "type": "string" } },
+        "bdc_co_lenders": { "type": "array", "items": { "type": "string" } },
+        "insurance_and_sidecars": { "type": "array", "items": { "type": "string" } },
+        "auditors_and_valuation_agents": { "type": "array", "items": { "type": "string" } },
+        "public_pension_lps": { "type": "array", "items": { "type": "string" } },
+        "trustees_and_counsel": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "tranche_recovery_waterfall": {
+      "type": "object",
+      "required": [
+        "total_debt_stack_usd_b",
+        "test_distressed_ev_usd_b",
+        "tranches"
+      ],
+      "properties": {
+        "total_debt_stack_usd_b": { "type": "number", "const": 42.15 },
+        "test_distressed_ev_usd_b": { "type": "number", "const": 19.75 },
+        "tranches": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["tranche_id", "principal_usd_b", "breakeven_ev_usd_b", "test_recovery_cents_on_dollar"],
+            "properties": {
+              "tranche_id": { "type": "string" },
+              "principal_usd_b": { "type": "number", "minimum": 0.0 },
+              "breakeven_ev_usd_b": { "type": "number", "minimum": 0.0 },
+              "test_recovery_cents_on_dollar": { "type": "number", "minimum": 0.0, "maximum": 100.0 }
+            }
+          }
+        }
+      }
+    },
+    "catalyst_calendar": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["date", "event", "statutory_or_contractual_forum"],
+        "properties": {
+          "date": { "type": "string", "format": "date" },
+          "event": { "type": "string" },
+          "statutory_or_contractual_forum": { "type": "string" }
+        }
+      }
+    }
+  },
+  "additionalProperties": false
+}

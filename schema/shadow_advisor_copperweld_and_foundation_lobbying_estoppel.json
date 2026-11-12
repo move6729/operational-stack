@@ -1,0 +1,175 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:shadow_advisor_copperweld_and_foundation_lobbying_estoppel.json",
+  "$comment": "PLAIN-ENGLISH LEGAL NOTICE: This file is an abstract institutional-cybernetic, securities-disclosure, antitrust, and private-foundation-excise validation checklist (JSON Schema), NOT an accusation, indictment, or evidentiary filing. Every field encodes a published statutory citation, a public court docket or agency filing, a pinned press disclosure, or a closed-form algebraic invariant. Inferential claims are protected analytical synthesis over disclosed primary records.",
+  "title": "Shadow-Advisor Copperweld / American Needle Agency Fork & Foundation-Lobbying Estoppel Schema",
+  "description": "Validates the six executable verification vectors of SPEC-SHADOW-ADVISOR-COPPERWELD-AND-FOUNDATION-LOBBYING-ESTOPPEL-v1.0: (1) the sworn 102,992,934-share Schedule 13D dark-switch baseline (1.386177% < 5.0%), (2) the Forbes 66,870,000-share cascade and 36,122,934-share Branch 1A/1B boolean fork, (3) the foundation-trust CIK 0001166559 13F decoy exit to zero visible shares, (4) the Copperweld / American Needle alpha_agency fork and $262,378.67M Xi_destruct stack, (5) the IRC 4941/4946 disqualified-person excise stack on the $300.00M media-grant base, and (6) the SEC 21F / IRS 7623(b) bounty lattice with the Rule 26 discovery-trap truth table.",
+  "type": "object",
+  "required": [
+    "spec_version",
+    "jurisdiction_context",
+    "cfaa_compliance_attestation",
+    "Check1SwornSecBaselineDarkSwitch",
+    "Check2CascadeForbesBooleanFork",
+    "Check3FoundationTrust13fDecoyExit",
+    "Check4CopperweldAmericanNeedleAgencyFork",
+    "Check5Irc4941SelfDealingExcise",
+    "Check6WhistleblowerBountyRule26Lock",
+    "verification",
+    "empirical_anchors"
+  ],
+  "properties": {
+    "spec_version": {"type": "string", "const": "SPEC-SHADOW-ADVISOR-COPPERWELD-AND-FOUNDATION-LOBBYING-ESTOPPEL-v1.0"},
+    "jurisdiction_context": {"type": "string", "pattern": "^[A-Z]{2}$"},
+    "cfaa_compliance_attestation": {"type": "boolean", "const": true},
+    "Check1SwornSecBaselineDarkSwitch": {
+      "type": "object",
+      "description": "pct_float_sworn = 102,992,934 / 7,430,000,000 = 0.0138617677 (1.386177%) < 0.05 Schedule 13D/13G threshold (dark switch: no percentage-based filing trigger); V_sworn = 102,992,934 * $521.36 = $53,696.39607M -> $53,696.40M; alpha_sworn = 53,696.39607 / 119,000 = 45.123022% -> 45.12% of the $119B Bloomberg net-worth denominator.",
+      "required": ["n_sworn_2020", "n_float_2026", "pct_float_sworn", "sec_13d_threshold", "p_msft_may2026", "v_sworn_m", "v_sworn_2dp_m", "w_bloomberg_m", "alpha_sworn_pct", "alpha_sworn_2dp", "dark_switch_sub_5pct"],
+      "properties": {
+        "n_sworn_2020": {"type": "integer", "const": 102992934},
+        "n_float_2026": {"type": "integer", "const": 7430000000},
+        "pct_float_sworn": {"type": "number", "const": 0.0138617677},
+        "sec_13d_threshold": {"type": "number", "const": 0.05},
+        "p_msft_may2026": {"type": "number", "const": 521.36},
+        "v_sworn_m": {"type": "number", "const": 53696.39607},
+        "v_sworn_2dp_m": {"type": "number", "const": 53696.40},
+        "w_bloomberg_m": {"type": "number", "const": 119000.0},
+        "alpha_sworn_pct": {"type": "number", "const": 45.123022},
+        "alpha_sworn_2dp": {"type": "number", "const": 45.12},
+        "dark_switch_sub_5pct": {"type": "boolean", "const": true}
+      },
+      "additionalProperties": false
+    },
+    "Check2CascadeForbesBooleanFork": {
+      "type": "object",
+      "description": "N_delta = 102,992,934 - 66,870,000 = 36,122,934; V_forbes(May 2026) = 66,870,000 * $521.36 = $34,863.3432M -> $34,863.34M (29.296927% -> 29.30% of $119B); V_delta = 36,122,934 * $521.36 = $18,833.05287M -> $18,833.05M (15.826095% -> 15.83%). Branch 1A (sold == False): Exchange Act Sec 20(a) + Lorenzo v. SEC, 587 U.S. 71 (2019) Rule 10b-5(a)/(c) + Securities Act Sec 17(a)-(b). Branch 1B (sold == True): Rule 16a-1(f) + Rule 10b-5 / United States v. O'Hagan, 521 U.S. 642 (1997) MNPI disgorgement of $18,833.05M. The fork is exhaustive and exclusive: coverage 2/2.",
+      "required": ["pct_float_forbes", "n_forbes_2025", "v_forbes_may2025_m", "v_forbes_may2026_m", "v_forbes_may2026_2dp_m", "alpha_forbes_pct", "alpha_forbes_2dp", "n_delta_fork", "v_delta_fork_m", "v_delta_fork_2dp_m", "alpha_delta_pct", "alpha_delta_2dp", "branch_1a_predicate", "branch_1b_predicate", "branch_1b_disgorge_base_m", "fork_coverage_states", "fork_xor_exhaustive"],
+      "properties": {
+        "pct_float_forbes": {"type": "number", "const": 0.009},
+        "n_forbes_2025": {"type": "integer", "const": 66870000},
+        "v_forbes_may2025_m": {"type": "number", "const": 28000.0},
+        "v_forbes_may2026_m": {"type": "number", "const": 34863.3432},
+        "v_forbes_may2026_2dp_m": {"type": "number", "const": 34863.34},
+        "alpha_forbes_pct": {"type": "number", "const": 29.296927},
+        "alpha_forbes_2dp": {"type": "number", "const": 29.30},
+        "n_delta_fork": {"type": "integer", "const": 36122934},
+        "v_delta_fork_m": {"type": "number", "const": 18833.05287},
+        "v_delta_fork_2dp_m": {"type": "number", "const": 18833.05},
+        "alpha_delta_pct": {"type": "number", "const": 15.826095},
+        "alpha_delta_2dp": {"type": "number", "const": 15.83},
+        "branch_1a_predicate": {"type": "string", "const": "sold == False"},
+        "branch_1b_predicate": {"type": "string", "const": "sold == True"},
+        "branch_1b_disgorge_base_m": {"type": "number", "const": 18833.05},
+        "fork_coverage_states": {"type": "integer", "const": 2},
+        "fork_xor_exhaustive": {"type": "boolean", "const": true}
+      },
+      "additionalProperties": false
+    },
+    "Check3FoundationTrust13fDecoyExit": {
+      "type": "object",
+      "description": "Foundation trust (CIK 0001166559) 13F-visible MSFT position exits from the Q2 2025 peak band 26,191,207-28,500,000 shares through the Q3 2025 65% cut (26,191,207 * 0.35 = 9,166,922.45 residue) and the Q1 2026 final dump of 7,700,000 shares ($3,200.00M, implied $415.58/share < the $521.36 May 2026 mark) to 0 visible shares, while the personal stake remains 66,870,000-102,992,934 shares ($34,863.34M-$53,696.40M). The 13F exit is a visibility event, not a beneficial-ownership disposition: the lobbying-estoppel invariant holds.",
+      "required": ["cik", "n_trust_peak_low", "n_trust_peak_high", "pct_trust_q3_2025_cut", "n_trust_q1_2026_final_dump", "v_trust_q1_2026_final_dump_m", "n_trust_q1_2026_end", "personal_band_shares_low", "personal_band_shares_high", "personal_band_value_low_m", "personal_band_value_high_m", "decoy_exit_estoppel_holds"],
+      "properties": {
+        "cik": {"type": "string", "const": "0001166559"},
+        "n_trust_peak_low": {"type": "integer", "const": 26191207},
+        "n_trust_peak_high": {"type": "integer", "const": 28500000},
+        "pct_trust_q3_2025_cut": {"type": "number", "const": 0.65},
+        "n_trust_q1_2026_final_dump": {"type": "integer", "const": 7700000},
+        "v_trust_q1_2026_final_dump_m": {"type": "number", "const": 3200.0},
+        "n_trust_q1_2026_end": {"type": "integer", "const": 0},
+        "personal_band_shares_low": {"type": "integer", "const": 66870000},
+        "personal_band_shares_high": {"type": "integer", "const": 102992934},
+        "personal_band_value_low_m": {"type": "number", "const": 34863.34},
+        "personal_band_value_high_m": {"type": "number", "const": 53696.40},
+        "decoy_exit_estoppel_holds": {"type": "boolean", "const": true}
+      },
+      "additionalProperties": false
+    },
+    "Check4CopperweldAmericanNeedleAgencyFork": {
+      "type": "object",
+      "description": "Xi_destruct = D_treble + F_crim_Sec2 + CatchUp_ASC360 + Onerous_lease = 71,060.00 + 48,200.00 + 77,298.67 + 65,820.00 = $262,378.67M, with D_treble ~= 3 * Delta_forecl (23,686.67) and F_crim_Sec2 = 2 * R_OpenAI_26 (24,100.00). Exhaustive over alpha_agency in {0,1} x capability A in {False,True} (4/4 states, XOR): Branch 2A (alpha_agency == 1): FRE 801(d)(2)(C)/(D) imputation to MSFT triggers the horn-invariant $262,378.67M Xi_destruct Horn A/B fork plus Caremark oversight liability; Branch 2B (alpha_agency == 0): Copperweld Corp. v. Independence Tube Corp., 467 U.S. 752 (1984) single-entity immunity stripped under American Needle v. NFL, 560 U.S. 183 (2010), admitting 15 U.S.C. Sec 1 multi-entity conspiracy with the $71,060.00M treble-damages floor.",
+      "required": ["parent_k_stack_m", "parent_k_exposed_m", "parent_r_openai_26_m", "parent_delta_forecl_m", "parent_d_treble_m", "parent_f_crim_sec2_m", "parent_catchup_asc360_m", "parent_onerous_lease_m", "parent_xi_destruct_m", "parent_delta_star", "branch_2a_predicate", "branch_2a_exposure_m", "branch_2a_horn_invariant", "branch_2b_predicate", "branch_2b_exposure_floor_m", "agency_fork_coverage_states", "agency_fork_xor_exhaustive"],
+      "properties": {
+        "parent_k_stack_m": {"type": "number", "const": 445048.0},
+        "parent_k_exposed_m": {"type": "number", "const": 511642.0},
+        "parent_r_openai_26_m": {"type": "number", "const": 24100.0},
+        "parent_delta_forecl_m": {"type": "number", "const": 23686.67},
+        "parent_d_treble_m": {"type": "number", "const": 71060.0},
+        "parent_f_crim_sec2_m": {"type": "number", "const": 48200.0},
+        "parent_catchup_asc360_m": {"type": "number", "const": 77298.67},
+        "parent_onerous_lease_m": {"type": "number", "const": 65820.0},
+        "parent_xi_destruct_m": {"type": "number", "const": 262378.67},
+        "parent_delta_star": {"type": "number", "const": 0.0939},
+        "branch_2a_predicate": {"type": "string", "const": "alpha_agency == 1"},
+        "branch_2a_exposure_m": {"type": "number", "const": 262378.67},
+        "branch_2a_horn_invariant": {"type": "boolean", "const": true},
+        "branch_2b_predicate": {"type": "string", "const": "alpha_agency == 0"},
+        "branch_2b_exposure_floor_m": {"type": "number", "const": 71060.0},
+        "agency_fork_coverage_states": {"type": "integer", "const": 4},
+        "agency_fork_xor_exhaustive": {"type": "boolean", "const": true}
+      },
+      "additionalProperties": false
+    },
+    "Check5Irc4941SelfDealingExcise": {
+      "type": "object",
+      "description": "Disqualified-person status under 26 U.S.C. 4946(a)(1)(A) attaches to the substantial contributor as a person and is invariant to the trust 13F MSFT position exiting to 0. IRC 4941 self-dealing excise on the $300.00M media-grant base: Tier 1 = 10% * 300.00 = $30.00M; Tier 2 (correction-period failure) = 200% * 300.00 = $600.00M; total = $630.00M.",
+      "required": ["dp_statute", "dp_status_invariant_to_trust_13f_zero", "v_media_grants_m", "tau_4941_tier1", "tau_4941_tier2", "tax_4941_tier1_media_m", "tax_4941_tier2_media_m", "tax_4941_total_media_m"],
+      "properties": {
+        "dp_statute": {"type": "string", "const": "26 U.S.C. 4946(a)(1)(A)"},
+        "dp_status_invariant_to_trust_13f_zero": {"type": "boolean", "const": true},
+        "v_media_grants_m": {"type": "number", "const": 300.0},
+        "tau_4941_tier1": {"type": "number", "const": 0.10},
+        "tau_4941_tier2": {"type": "number", "const": 2.00},
+        "tax_4941_tier1_media_m": {"type": "number", "const": 30.0},
+        "tax_4941_tier2_media_m": {"type": "number", "const": 600.0},
+        "tax_4941_total_media_m": {"type": "number", "const": 630.0}
+      },
+      "additionalProperties": false
+    },
+    "Check6WhistleblowerBountyRule26Lock": {
+      "type": "object",
+      "description": "SEC Rule 21F-4(b)(3) bounty band 10%-30% on the Branch 1B $18,833.05M disgorgement base = $1,883.31M-$5,649.92M; IRS 26 U.S.C. 7623(b) bounty band 15%-30% on the $630.00M Sec 4941 recovery = $94.50M-$189.00M. Rule 26(b)(1) discovery-trap truth table over 5 branches x {produced, not produced} = 10 rows: contesting any branch is viable only upon production of all 3 artifacts (sworn beneficial-ownership and custody records; trust 13F history plus final-dump trade confirms; media-grant ledgers plus foundation board minutes), because every H0 -> H1 falsification hinges on objective accounting identities.",
+      "required": ["bounty_sec_min", "bounty_sec_max", "bounty_irs_min", "bounty_irs_max", "bounty_1b_disgorge_min_m", "bounty_1b_disgorge_max_m", "bounty_4941_media_min_m", "bounty_4941_media_max_m", "rule26_artifact_count", "rule26_branch_count", "rule26_truth_table_rows", "discovery_lock_holds"],
+      "properties": {
+        "bounty_sec_min": {"type": "number", "const": 0.10},
+        "bounty_sec_max": {"type": "number", "const": 0.30},
+        "bounty_irs_min": {"type": "number", "const": 0.15},
+        "bounty_irs_max": {"type": "number", "const": 0.30},
+        "bounty_1b_disgorge_min_m": {"type": "number", "const": 1883.31},
+        "bounty_1b_disgorge_max_m": {"type": "number", "const": 5649.92},
+        "bounty_4941_media_min_m": {"type": "number", "const": 94.50},
+        "bounty_4941_media_max_m": {"type": "number", "const": 189.00},
+        "rule26_artifact_count": {"type": "integer", "const": 3},
+        "rule26_branch_count": {"type": "integer", "const": 5},
+        "rule26_truth_table_rows": {"type": "integer", "const": 10},
+        "discovery_lock_holds": {"type": "boolean", "const": true}
+      },
+      "additionalProperties": false
+    },
+    "verification": {
+      "type": "object",
+      "required": ["proof", "exit_code", "checks_verified"],
+      "properties": {
+        "proof": {"type": "string", "const": "proofs/shadow_advisor_copperweld_and_foundation_lobbying_estoppel_proof.py"},
+        "exit_code": {"type": "integer", "const": 0},
+        "checks_verified": {"type": "string", "const": "6/6"}
+      },
+      "additionalProperties": false
+    },
+    "empirical_anchors": {
+      "type": "array",
+      "minItems": 3,
+      "items": {
+        "type": "object",
+        "required": ["source", "pin_cite"],
+        "properties": {
+          "source": {"type": "string", "minLength": 1},
+          "pin_cite": {"type": "string", "minLength": 1}
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

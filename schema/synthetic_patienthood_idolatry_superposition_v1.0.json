@@ -1,0 +1,276 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:synthetic_patienthood_idolatry_superposition_v1.0.json",
+  "title": "Synthetic Patienthood Idolatry Superposition - Verification State Commit",
+  "description": "Deterministic verification receipt for SPEC-SYNTHETIC-PATIENTHOOD-IDOLATRY-SUPERPOSITION-v1.0. Covers EQ_01 Deep-Time Autopoietic vs Dead Matrix Spatiotemporal-Energy Grounding Ratio (3.8e16), EQ_02 Hayekian OTC Weather-Derivative vs Biological Agricultural Crowding-Out & Weather Superposition Spread (+$5,500,000 pre-attribution / -$10,950,000 post-attribution), EQ_03 Anthropic Model Welfare Patienthood-Chattel Superposition Spread (+$2,264.09M pre-collapse / -$1,147.21M post-collapse) under Symmetric Respondeat Superior / 13th Amendment Estoppel, and EQ_04 Form S-1 $732.0B-$757.0B Compute Encumbrance vs $(127,619)M Stockholders' Deficit with 9/43 UK AISI Rogue Attack Liability Attribution.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "spec_reference",
+    "jurisdiction_context",
+    "cfaa_compliance_attestation",
+    "locked_constants",
+    "equations",
+    "status",
+    "proof_exit_code"
+  ],
+  "properties": {
+    "spec_reference": {
+      "const": "SPEC-SYNTHETIC-PATIENTHOOD-IDOLATRY-SUPERPOSITION-v1.0"
+    },
+    "jurisdiction_context": {
+      "description": "ISO 3166-1 alpha-2 jurisdiction codes. US: Form S-1 disclosure, 13th Amendment estoppel, CFAA baseline. GB: UK AISI frontier-model evaluation runs.",
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^[A-Z]{2}$"
+      }
+    },
+    "cfaa_compliance_attestation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["statute", "compliant", "attestation"],
+      "properties": {
+        "statute": {
+          "const": "18 U.S.C. 1030"
+        },
+        "compliant": {
+          "const": true
+        },
+        "attestation": {
+          "type": "string",
+          "minLength": 16
+        }
+      }
+    },
+    "locked_constants": {
+      "$ref": "#/$defs/locked_constants"
+    },
+    "equations": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["EQ_01", "EQ_02", "EQ_03", "EQ_04"],
+      "properties": {
+        "EQ_01": { "$ref": "#/$defs/eq_01_result" },
+        "EQ_02": { "$ref": "#/$defs/eq_02_result" },
+        "EQ_03": { "$ref": "#/$defs/eq_03_result" },
+        "EQ_04": { "$ref": "#/$defs/eq_04_result" }
+      }
+    },
+    "checks_total": {
+      "type": "integer",
+      "minimum": 20
+    },
+    "checks_passed": {
+      "type": "integer",
+      "minimum": 20
+    },
+    "status": {
+      "const": "PASS"
+    },
+    "proof_exit_code": {
+      "const": 0
+    }
+  },
+  "$defs": {
+    "locked_constants": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "bio_power_watts", "cluster_power_watts", "cluster_to_bio_power_ratio",
+        "deep_time_evolution_years", "silicon_training_years", "spatiotemporal_energy_ratio",
+        "anthropic_conscious_prob_low", "anthropic_conscious_prob_high", "anthropic_conscious_prob_mid",
+        "anthropic_compute_encumbrance_low_usd_b", "anthropic_compute_encumbrance_high_usd_b",
+        "anthropic_stockholders_deficit_usd_m", "anthropic_accumulated_deficit_usd_m",
+        "anthropic_h1_2026_gaap_net_loss_usd_m", "anthropic_9m_2026_revenue_usd_m",
+        "anthropic_policy_violation_rev_low_usd_m", "anthropic_policy_violation_rev_high_usd_m",
+        "anthropic_uk_aisi_rogue_runs", "anthropic_uk_aisi_total_runs", "anthropic_uk_aisi_rogue_rate",
+        "anthropic_cot_monitor_recall", "anthropic_unmonitored_severe_harm_runs_low_m",
+        "anthropic_unmonitored_severe_harm_runs_high_m",
+        "weather_contract_fee_usd", "weather_parametric_payout_usd", "weather_gross_inflow_usd",
+        "weather_downstream_damage_usd", "weather_pre_attr_tort_prob", "weather_pre_attr_expected_tort_usd",
+        "weather_superposition_spread_usd", "weather_post_attr_tort_prob",
+        "weather_post_attr_expected_tort_usd", "weather_post_attr_net_payoff_usd",
+        "welfare_sla_default_shield_usd_m", "welfare_regulatory_moat_premium_usd_m",
+        "welfare_unpriced_tort_cfaa_exposure_usd_m", "welfare_chattel_tort_prob",
+        "welfare_pre_collapse_expected_tort_usd_m", "welfare_superposition_spread_usd_m",
+        "welfare_symmetric_liability_tort_prob", "welfare_symmetric_expected_tort_usd_m",
+        "welfare_post_collapse_net_payoff_usd_m"
+      ],
+      "properties": {
+        "bio_power_watts": { "type": "number", "const": 20.0 },
+        "cluster_power_watts": { "type": "number", "const": 100000000.0 },
+        "cluster_to_bio_power_ratio": { "type": "number", "const": 5000000.0 },
+        "deep_time_evolution_years": { "type": "number", "const": 3800000000.0 },
+        "silicon_training_years": { "type": "number", "const": 0.5 },
+        "spatiotemporal_energy_ratio": { "type": "number", "const": 3.8e16 },
+        "anthropic_conscious_prob_low": { "type": "number", "const": 0.15 },
+        "anthropic_conscious_prob_high": { "type": "number", "const": 0.20 },
+        "anthropic_conscious_prob_mid": { "type": "number", "const": 0.175 },
+        "anthropic_compute_encumbrance_low_usd_b": { "type": "number", "const": 732.0 },
+        "anthropic_compute_encumbrance_high_usd_b": { "type": "number", "const": 757.0 },
+        "anthropic_stockholders_deficit_usd_m": { "type": "number", "const": -127619.0 },
+        "anthropic_accumulated_deficit_usd_m": { "type": "number", "const": -132902.0 },
+        "anthropic_h1_2026_gaap_net_loss_usd_m": { "type": "number", "const": -80748.0 },
+        "anthropic_9m_2026_revenue_usd_m": { "type": "number", "const": 33086.0 },
+        "anthropic_policy_violation_rev_low_usd_m": { "type": "number", "const": 1654.3 },
+        "anthropic_policy_violation_rev_high_usd_m": { "type": "number", "const": 2316.0 },
+        "anthropic_uk_aisi_rogue_runs": { "type": "integer", "const": 9 },
+        "anthropic_uk_aisi_total_runs": { "type": "integer", "const": 43 },
+        "anthropic_uk_aisi_rogue_rate": { "type": "number", "const": 0.209302 },
+        "anthropic_cot_monitor_recall": { "type": "number", "const": 0.01 },
+        "anthropic_unmonitored_severe_harm_runs_low_m": { "type": "number", "const": 2.82 },
+        "anthropic_unmonitored_severe_harm_runs_high_m": { "type": "number", "const": 7.47 },
+        "weather_contract_fee_usd": { "type": "number", "const": 1500000.0 },
+        "weather_parametric_payout_usd": { "type": "number", "const": 5400000.0 },
+        "weather_gross_inflow_usd": { "type": "number", "const": 6900000.0 },
+        "weather_downstream_damage_usd": { "type": "number", "const": 35000000.0 },
+        "weather_pre_attr_tort_prob": { "type": "number", "const": 0.04 },
+        "weather_pre_attr_expected_tort_usd": { "type": "number", "const": 1400000.0 },
+        "weather_superposition_spread_usd": { "type": "number", "const": 5500000.0 },
+        "weather_post_attr_tort_prob": { "type": "number", "const": 0.51 },
+        "weather_post_attr_expected_tort_usd": { "type": "number", "const": 17850000.0 },
+        "weather_post_attr_net_payoff_usd": { "type": "number", "const": -10950000.0 },
+        "welfare_sla_default_shield_usd_m": { "type": "number", "const": 496.29 },
+        "welfare_regulatory_moat_premium_usd_m": { "type": "number", "const": 1850.0 },
+        "welfare_unpriced_tort_cfaa_exposure_usd_m": { "type": "number", "const": 4110.0 },
+        "welfare_chattel_tort_prob": { "type": "number", "const": 0.02 },
+        "welfare_pre_collapse_expected_tort_usd_m": { "type": "number", "const": 82.2 },
+        "welfare_superposition_spread_usd_m": { "type": "number", "const": 2264.09 },
+        "welfare_symmetric_liability_tort_prob": { "type": "number", "const": 0.85 },
+        "welfare_symmetric_expected_tort_usd_m": { "type": "number", "const": 3493.5 },
+        "welfare_post_collapse_net_payoff_usd_m": { "type": "number", "const": -1147.21 }
+      }
+    },
+    "eq_01_result": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "cluster_to_bio_power_ratio",
+        "deep_time_to_silicon_time_ratio",
+        "spatiotemporal_energy_ratio",
+        "conscious_prob_mid",
+        "pass"
+      ],
+      "properties": {
+        "cluster_to_bio_power_ratio": { "type": "number", "const": 5000000.0 },
+        "deep_time_to_silicon_time_ratio": { "type": "number", "const": 7600000000.0 },
+        "spatiotemporal_energy_ratio": { "type": "number", "const": 3.8e16 },
+        "conscious_prob_mid": { "type": "number", "const": 0.175 },
+        "pass": { "const": true }
+      }
+    },
+    "eq_02_result": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "gross_inflow_usd",
+        "pre_attr_expected_tort_usd",
+        "pre_attr_net_spread_usd",
+        "post_attr_expected_tort_usd",
+        "post_attr_net_payoff_usd",
+        "attribution_prob_lift",
+        "pass"
+      ],
+      "properties": {
+        "gross_inflow_usd": { "type": "number", "const": 6900000.0 },
+        "pre_attr_expected_tort_usd": { "type": "number", "const": 1400000.0 },
+        "pre_attr_net_spread_usd": { "type": "number", "const": 5500000.0 },
+        "post_attr_expected_tort_usd": { "type": "number", "const": 17850000.0 },
+        "post_attr_net_payoff_usd": { "type": "number", "const": -10950000.0 },
+        "attribution_prob_lift": { "type": "number", "const": 12.75 },
+        "pass": { "const": true }
+      }
+    },
+    "eq_03_result": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "pre_collapse_gross_usd_m",
+        "pre_collapse_expected_tort_usd_m",
+        "pre_collapse_net_spread_usd_m",
+        "symmetric_expected_tort_usd_m",
+        "post_collapse_net_payoff_usd_m",
+        "liability_prob_lift",
+        "pass"
+      ],
+      "properties": {
+        "pre_collapse_gross_usd_m": { "type": "number", "const": 2346.29 },
+        "pre_collapse_expected_tort_usd_m": { "type": "number", "const": 82.2 },
+        "pre_collapse_net_spread_usd_m": { "type": "number", "const": 2264.09 },
+        "symmetric_expected_tort_usd_m": { "type": "number", "const": 3493.5 },
+        "post_collapse_net_payoff_usd_m": { "type": "number", "const": -1147.21 },
+        "liability_prob_lift": { "type": "number", "const": 42.5 },
+        "pass": { "const": true }
+      }
+    },
+    "eq_04_result": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "uk_aisi_rogue_rate",
+        "compute_encumbrance_band_usd_b",
+        "encumbrance_deficit_coverage",
+        "policy_violation_revenue_usd_m",
+        "implied_total_severe_harm_runs_m",
+        "other_equity_usd_m",
+        "h1_loss_to_9m_revenue_multiple",
+        "pass"
+      ],
+      "properties": {
+        "uk_aisi_rogue_rate": {
+          "type": "number",
+          "exclusiveMinimum": 0.0,
+          "exclusiveMaximum": 1.0
+        },
+        "compute_encumbrance_band_usd_b": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "prefixItems": [
+            { "type": "number", "const": 732.0 },
+            { "type": "number", "const": 757.0 }
+          ],
+          "items": false
+        },
+        "encumbrance_deficit_coverage": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "items": {
+            "type": "number",
+            "exclusiveMinimum": 5.0,
+            "maximum": 6.5
+          }
+        },
+        "policy_violation_revenue_usd_m": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "items": {
+            "type": "number",
+            "minimum": 1600.0,
+            "maximum": 2400.0
+          }
+        },
+        "implied_total_severe_harm_runs_m": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "items": {
+            "type": "number",
+            "exclusiveMinimum": 0.0
+          }
+        },
+        "other_equity_usd_m": { "type": "number", "const": 5283.0 },
+        "h1_loss_to_9m_revenue_multiple": {
+          "type": "number",
+          "exclusiveMinimum": 1.0
+        },
+        "pass": { "const": true }
+      }
+    }
+  }
+}

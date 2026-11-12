@@ -1,0 +1,174 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:inverse_zdr_paradox_and_lexical_deescalation_sieve.json",
+  "title": "Inverse ZDR Paradox and Lexical De-Escalation Sieve Verification Output",
+  "description": "Validates the JSON summary emitted by the pure-stdlib verification engine for the inverse zero-data-retention paradox: vendor abuse-moderation telemetry carveouts (trust-and-safety score retention, activity-feed retention, abuse-log TTLs) outlive the nominal content channel, so the classifier-flag/telemetry-fault retention union defeats zero-data-retention claims. Covers the isomorphic lexical de-escalation sieve routing economics across local appliance, sieve-then-cloud, and direct wholesale cloud routes, and the breach-contingent strict-seniority credit waterfall.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["verification", "equations_verified", "vendor_carveout_constants", "domains", "eq5_hardware_tco", "eq6_credit_waterfall", "exit_code"],
+  "properties": {
+    "verification": { "const": "PASS" },
+    "exit_code": { "const": 0 },
+    "equations_verified": {
+      "type": "array",
+      "minItems": 6,
+      "maxItems": 6,
+      "items": { "enum": ["EQ-1", "EQ-2", "EQ-3", "EQ-4", "EQ-5", "EQ-6"] }
+    },
+    "vendor_carveout_constants": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "openai_default_abuse_log_ttl_days",
+        "openai_psp_encrypted_bucket_ttl_days",
+        "anthropic_flagged_io_retention_years",
+        "anthropic_flagged_ts_score_retention_years",
+        "anthropic_activity_feed_and_local_transcript_retention_years",
+        "derived_score_to_content_half_life_multiplier",
+        "sdny_mdl_3143_compelled_consumer_logs_count"
+      ],
+      "properties": {
+        "openai_default_abuse_log_ttl_days": { "type": "integer", "const": 30 },
+        "openai_psp_encrypted_bucket_ttl_days": { "type": "integer", "const": 30 },
+        "anthropic_flagged_io_retention_years": { "type": "integer", "const": 2 },
+        "anthropic_flagged_ts_score_retention_years": { "type": "integer", "const": 7 },
+        "anthropic_activity_feed_and_local_transcript_retention_years": { "type": "integer", "const": 6 },
+        "derived_score_to_content_half_life_multiplier": { "type": "number", "const": 3.5 },
+        "sdny_mdl_3143_compelled_consumer_logs_count": { "type": "integer", "const": 20000000 }
+      }
+    },
+    "domains": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 5,
+      "items": { "$ref": "#/$defs/domain_result" }
+    },
+    "eq5_hardware_tco": { "$ref": "#/$defs/hardware_tco" },
+    "eq6_credit_waterfall": { "$ref": "#/$defs/credit_waterfall" }
+  },
+  "$defs": {
+    "route": {
+      "enum": ["DIRECT_WHOLESALE_CLOUD", "ISOMORPHIC_LOCAL_SIEVE_THEN_WHOLESALE_CLOUD", "LOCAL_APPLIANCE_320B_A18B_ZERO_EGRESS"]
+    },
+    "probability": { "type": "number", "minimum": 0, "maximum": 1 },
+    "domain_result": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "domain",
+        "sensitivity_s_x",
+        "raw_z",
+        "ner_only_z",
+        "isomorphic_sieve_z",
+        "telemetry_fault_prob",
+        "conditional_discovery_leak_prob",
+        "breach_liability_usd",
+        "raw_classifier_prob",
+        "raw_retention_prob",
+        "ner_only_retention_prob",
+        "sieve_retention_prob",
+        "expected_raw_liability_usd",
+        "expected_ner_only_liability_usd",
+        "expected_sieve_liability_usd",
+        "optimal_route",
+        "route_monthly_costs_usd"
+      ],
+      "properties": {
+        "domain": { "type": "string", "minLength": 1 },
+        "sensitivity_s_x": { "$ref": "#/$defs/probability" },
+        "raw_z": { "type": "number" },
+        "ner_only_z": { "type": "number" },
+        "isomorphic_sieve_z": { "type": "number" },
+        "telemetry_fault_prob": { "type": "number", "const": 0.0005 },
+        "conditional_discovery_leak_prob": { "type": "number", "const": 0.02 },
+        "breach_liability_usd": { "type": "number", "minimum": 0 },
+        "raw_classifier_prob": { "$ref": "#/$defs/probability" },
+        "raw_retention_prob": { "$ref": "#/$defs/probability" },
+        "ner_only_retention_prob": { "$ref": "#/$defs/probability" },
+        "sieve_retention_prob": { "$ref": "#/$defs/probability" },
+        "expected_raw_liability_usd": { "type": "number", "minimum": 0 },
+        "expected_ner_only_liability_usd": { "type": "number", "minimum": 0 },
+        "expected_sieve_liability_usd": { "type": "number", "minimum": 0 },
+        "optimal_route": { "$ref": "#/$defs/route" },
+        "route_monthly_costs_usd": {
+          "type": "object",
+          "required": ["DIRECT_WHOLESALE_CLOUD", "LOCAL_APPLIANCE_320B_A18B_ZERO_EGRESS"],
+          "additionalProperties": { "type": "number", "minimum": 0 }
+        }
+      }
+    },
+    "hardware_tco": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["tier_0_30b_a3b", "tier_1_320b_a18b", "tier_2_wholesale_cloud_700b_plus", "sieve_certification_z_bound", "sieve_certification_flag_probability"],
+      "properties": {
+        "tier_0_30b_a3b": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["monthly_capex_usd", "monthly_electricity_usd", "monthly_total_tco_usd"],
+          "properties": {
+            "monthly_capex_usd": { "type": "number", "const": 33.33 },
+            "monthly_electricity_usd": { "type": "number", "const": 1.87 },
+            "monthly_total_tco_usd": { "type": "number", "const": 35.2 }
+          }
+        },
+        "tier_1_320b_a18b": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["monthly_capex_epyc_usd", "monthly_capex_unified_usd", "monthly_capex_4x_h200_usd"],
+          "properties": {
+            "monthly_capex_epyc_usd": { "type": "number", "const": 116.67 },
+            "monthly_capex_unified_usd": { "type": "number", "const": 155.53 },
+            "monthly_capex_4x_h200_usd": { "type": "number", "const": 3888.89 }
+          }
+        },
+        "tier_2_wholesale_cloud_700b_plus": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["direct_api_cost_per_query_usd", "monthly_direct_api_cost_usd"],
+          "properties": {
+            "direct_api_cost_per_query_usd": { "type": "number", "const": 0.03 },
+            "monthly_direct_api_cost_usd": { "type": "number", "const": 45.0 }
+          }
+        },
+        "sieve_certification_z_bound": { "type": "number", "const": -3.0 },
+        "sieve_certification_flag_probability": { "type": "number", "minimum": 0.001, "maximum": 0.0015 }
+      }
+    },
+    "tranche_result": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "principal_m", "breakeven_ev_m", "recovery_at_post_breach_ev_m", "recovery_cents_at_post_breach_ev"],
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "principal_m": { "type": "number", "minimum": 0 },
+        "breakeven_ev_m": { "type": "number", "minimum": 0 },
+        "recovery_at_post_breach_ev_m": { "type": "number", "minimum": 0 },
+        "recovery_cents_at_post_breach_ev": { "type": "number", "minimum": 0, "maximum": 100 }
+      }
+    },
+    "credit_waterfall": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["pre_breach_ev_m", "post_breach_ev_m", "total_debt_m", "ev_impairment_pct", "tranches"],
+      "properties": {
+        "pre_breach_ev_m": { "type": "number", "const": 650.0 },
+        "post_breach_ev_m": { "type": "number", "const": 245.0 },
+        "total_debt_m": { "type": "number", "const": 420.0 },
+        "ev_impairment_pct": { "type": "number", "minimum": 60, "maximum": 65 },
+        "tranches": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 4,
+          "items": false,
+          "prefixItems": [
+            { "$ref": "#/$defs/tranche_result", "properties": { "name": { "const": "1st_Lien_RCF" }, "principal_m": { "const": 75.0 }, "breakeven_ev_m": { "const": 75.0 } } },
+            { "$ref": "#/$defs/tranche_result", "properties": { "name": { "const": "1st_Lien_BDC_Unitranche" }, "principal_m": { "const": 225.0 }, "breakeven_ev_m": { "const": 300.0 } } },
+            { "$ref": "#/$defs/tranche_result", "properties": { "name": { "const": "2nd_Lien_Schedule_BA_HoldCo_PIK" }, "principal_m": { "const": 120.0 }, "breakeven_ev_m": { "const": 420.0 } } },
+            { "$ref": "#/$defs/tranche_result", "properties": { "name": { "const": "Sponsor_Preferred_and_Common_Equity" }, "principal_m": { "const": 230.0 }, "breakeven_ev_m": { "const": 650.0 } } }
+          ]
+        }
+      }
+    }
+  }
+}

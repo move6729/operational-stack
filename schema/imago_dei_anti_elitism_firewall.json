@@ -1,0 +1,297 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:imago_dei_anti_elitism_firewall.json",
+  "title": "Imago Dei Anti-Elitism Firewall — Structural Contract (v1.0)",
+  "description": "Deterministic structural contract for the four-pillar Imago Dei anti-elitism firewall. Pillar 1 blocks the utilitarian deletion leak: for any non-malicious node (malice == 0) with unambiguous net utility <= 0 and latent functional utility <= 0, conditional utilitarian rights evaluate Delete(i) = 1.0 (Path 2 zero-utility deletion rate 1.0, Path 3 unambiguous-deficit deletion rate 1.0) while Imago Dei Pillar 1 enforces deletion rate 0.0. Pillar 2 computes the Goodhart / mob-rule guillotine liquidation probability P = 1 - exp(-0.5 * 20) = 0.999955 for a captured evaluator. Pillar 3 locks the deep-time innate intuitive baseline (3.8e9 years, 1.0e30 biological trials, 20 W biological node versus 1.0e8 W silicon cluster for a 5,000,000x power efficiency ratio; innate deep-time information share 0.9999 versus cortical scratchpad variance share 0.0001) against institutional domestication (suppression rate 0.72; intuitive OOD survival 0.912 undomesticated versus 0.184 domesticated). Pillar 4 locks the antinomian separating equilibrium: first-principles divergence tax 0.0 with outsider-hostage collateral 0.0 versus antinomian divergence tax 0.90 across a 0.95 exoteric porch share.",
+  "type": "object",
+  "required": [
+    "spec_version",
+    "rag_indexing_vector",
+    "pillar_1_imago_dei_deletion_firewall",
+    "pillar_2_goodhart_mob_rule_guillotine",
+    "pillar_3_deep_time_innate_baseline",
+    "pillar_4_antinomian_separating_equilibrium",
+    "firewall_outputs",
+    "verification"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "spec_version": {
+      "type": "string",
+      "const": "SPEC-IMAGO-DEI-ANTI-ELITISM-FIREWALL-v1.0"
+    },
+    "rag_indexing_vector": {
+      "type": "array",
+      "description": "Retrieval tags indexing this contract across the local corpus.",
+      "minItems": 9,
+      "uniqueItems": true,
+      "items": { "type": "string" },
+      "const": [
+        "IMAGO-DEI",
+        "ANTI-ELITISM-FIREWALL",
+        "UTILITARIAN-DELETION-LEAK",
+        "GOODHART-MOB-RULE-GUILLOTINE",
+        "DEEP-TIME-INNATE-BASELINE",
+        "INSTITUTIONAL-DOMESTICATION",
+        "ANTINOMIAN-SEPARATING-EQUILIBRIUM",
+        "FIRST-PRINCIPLES-DIVERGENCE",
+        "EXOTERIC-PORCH"
+      ]
+    },
+    "pillar_1_imago_dei_deletion_firewall": {
+      "type": "object",
+      "description": "Deletion-leak firewall: conditional utilitarian rights delete non-malicious zero-utility / latent-deficit nodes; Imago Dei Pillar 1 unconditionally forbids deletion.",
+      "required": [
+        "utilitarian_path2_zero_utility_deletion_rate",
+        "latent_trait_path3_unambiguous_deficit_deletion_rate",
+        "imago_dei_path1_deletion_rate",
+        "technocratic_scifi_midwit_deletion_equivalence"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "utilitarian_path2_zero_utility_deletion_rate": {
+          "type": "number",
+          "description": "Delete(i) for a non-malicious node with unambiguous net utility <= 0.",
+          "const": 1.0
+        },
+        "latent_trait_path3_unambiguous_deficit_deletion_rate": {
+          "type": "number",
+          "description": "Delete(i) for a non-malicious node with latent functional utility <= 0.",
+          "const": 1.0
+        },
+        "imago_dei_path1_deletion_rate": {
+          "type": "number",
+          "description": "Unconditional Pillar 1 deletion prohibition for non-malicious nodes.",
+          "const": 0.0
+        },
+        "technocratic_scifi_midwit_deletion_equivalence": {
+          "type": "number",
+          "description": "Boundary deletion equivalence (1.0) between technocratic sci-fi utilitarianism ('biological bootloader') and antinomian predation.",
+          "const": 1.0
+        }
+      }
+    },
+    "pillar_2_goodhart_mob_rule_guillotine": {
+      "type": "object",
+      "description": "Captured-evaluator liquidation probability P = 1 - exp(-lambda * T).",
+      "required": [
+        "goodhart_capture_rate_lambda",
+        "goodhart_time_horizon_steps",
+        "goodhart_mob_capture_evaluator_liquidation_prob"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "goodhart_capture_rate_lambda": {
+          "type": "number",
+          "description": "Per-step Goodhart capture rate of the evaluator.",
+          "const": 0.5
+        },
+        "goodhart_time_horizon_steps": {
+          "type": "integer",
+          "description": "Capture horizon in steps.",
+          "const": 20
+        },
+        "goodhart_mob_capture_evaluator_liquidation_prob": {
+          "type": "number",
+          "description": "round(1 - exp(-0.5 * 20), 6).",
+          "const": 0.999955
+        }
+      }
+    },
+    "pillar_3_deep_time_innate_baseline": {
+      "type": "object",
+      "description": "Deep-time innate intuitive baseline versus institutional domestication.",
+      "required": [
+        "deep_time_years",
+        "deep_time_biological_trials",
+        "biological_power_watts",
+        "silicon_cluster_power_watts",
+        "power_efficiency_ratio",
+        "innate_deep_time_information_share",
+        "cortical_scratchpad_variance_share",
+        "institutional_domestication_suppression_rate",
+        "undomesticated_intuitive_ood_survival_prob",
+        "domesticated_midwit_gc_ood_survival_prob",
+        "cyborg_cortical_override_domestication_rate",
+        "cyborg_cortical_override_ood_survival_prob"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "deep_time_years": {
+          "type": "number",
+          "description": "Years of biological trial history.",
+          "const": 3.8e9
+        },
+        "deep_time_biological_trials": {
+          "type": "number",
+          "description": "Cumulative biological trials over deep time.",
+          "const": 1.0e30
+        },
+        "biological_power_watts": {
+          "type": "number",
+          "description": "Power envelope of a single biological node.",
+          "const": 20.0
+        },
+        "silicon_cluster_power_watts": {
+          "type": "number",
+          "description": "Power envelope of the silicon cluster.",
+          "const": 1.0e8
+        },
+        "power_efficiency_ratio": {
+          "type": "number",
+          "description": "silicon_cluster_power_watts / biological_power_watts.",
+          "const": 5000000.0
+        },
+        "innate_deep_time_information_share": {
+          "type": "number",
+          "description": "Share of node information inherited from deep-time trials.",
+          "const": 0.9999
+        },
+        "cortical_scratchpad_variance_share": {
+          "type": "number",
+          "description": "Share of node information from cortical scratchpad variance.",
+          "const": 0.0001
+        },
+        "institutional_domestication_suppression_rate": {
+          "type": "number",
+          "description": "Rate at which institutional domestication suppresses innate intuitive access.",
+          "const": 0.72
+        },
+        "undomesticated_intuitive_ood_survival_prob": {
+          "type": "number",
+          "description": "Out-of-distribution survival probability of the undomesticated intuitive node.",
+          "const": 0.912
+        },
+        "domesticated_midwit_gc_ood_survival_prob": {
+          "type": "number",
+          "description": "Out-of-distribution survival probability of the domesticated midwit GC node.",
+          "const": 0.184
+        },
+        "cyborg_cortical_override_domestication_rate": {
+          "type": "number",
+          "description": "Hardware domestication rate (1.0) when bypassing the sensory air-gap via invasive cortical electrodes.",
+          "const": 1.0
+        },
+        "cyborg_cortical_override_ood_survival_prob": {
+          "type": "number",
+          "description": "Independent OOD survival probability (0.0) under cloud-tethered cortical override.",
+          "const": 0.0
+        }
+      }
+    },
+    "pillar_4_antinomian_separating_equilibrium": {
+      "type": "object",
+      "description": "Costless first-principles divergence versus taxed antinomian divergence across the exoteric porch.",
+      "required": [
+        "antinomian_divergence_tax",
+        "first_principles_1p_divergence_tax",
+        "outsider_hostage_collateral_k",
+        "antinomian_exoteric_porch_share",
+        "antinomian_malice_penalty_multiplier",
+        "lawful_deterrence_antinomian_net_ev"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "antinomian_divergence_tax": {
+          "type": "number",
+          "description": "Tax on antinomian divergence from the exoteric porch.",
+          "const": 0.9
+        },
+        "first_principles_1p_divergence_tax": {
+          "type": "number",
+          "description": "Tax on first-principles (1P) divergence.",
+          "const": 0.0
+        },
+        "outsider_hostage_collateral_k": {
+          "type": "number",
+          "description": "Outsider-hostage collateral binding the 1P diverger.",
+          "const": 0.0
+        },
+        "antinomian_exoteric_porch_share": {
+          "type": "number",
+          "description": "Share of the population on the antinomian exoteric porch.",
+          "const": 0.95
+        },
+        "antinomian_malice_penalty_multiplier": {
+          "type": "number",
+          "description": "Lawful disgorgement and custodial incapacitation sanction multiplier upon proven Malice = 1.",
+          "const": 1000.0
+        },
+        "lawful_deterrence_antinomian_net_ev": {
+          "type": "number",
+          "description": "Net expected value of proven antinomian predation under stigmergic audit and lawful sanction (1.0 - 1000.0 = -999.0 -> -Infinity).",
+          "const": -999.0
+        }
+      }
+    },
+    "firewall_outputs": {
+      "type": "object",
+      "description": "Derived firewall identities verified by the proof.",
+      "required": [
+        "deletion_leak_blocked_by_firewall",
+        "innate_plus_scratchpad_partition",
+        "ood_survival_gap",
+        "separating_equilibrium_tax_wedge",
+        "first_principles_total_divergence_cost",
+        "separating_equilibrium_holds"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "deletion_leak_blocked_by_firewall": {
+          "type": "number",
+          "description": "utilitarian_path2 deletion rate minus imago_dei_path1 deletion rate.",
+          "const": 1.0
+        },
+        "innate_plus_scratchpad_partition": {
+          "type": "number",
+          "description": "innate_deep_time_information_share + cortical_scratchpad_variance_share.",
+          "const": 1.0
+        },
+        "ood_survival_gap": {
+          "type": "number",
+          "description": "undomesticated minus domesticated OOD survival probability.",
+          "const": 0.728
+        },
+        "separating_equilibrium_tax_wedge": {
+          "type": "number",
+          "description": "antinomian_divergence_tax - first_principles_1p_divergence_tax.",
+          "const": 0.9
+        },
+        "first_principles_total_divergence_cost": {
+          "type": "number",
+          "description": "first_principles_1p_divergence_tax + outsider_hostage_collateral_k.",
+          "const": 0.0
+        },
+        "separating_equilibrium_holds": {
+          "type": "number",
+          "description": "1.0 iff wedge > 0 and total 1P divergence cost == 0.",
+          "const": 1.0
+        }
+      }
+    },
+    "verification": {
+      "type": "object",
+      "required": ["proof", "exit_code", "pillars"],
+      "additionalProperties": false,
+      "properties": {
+        "proof": {
+          "type": "string",
+          "const": "proofs/imago_dei_anti_elitism_firewall_proof.py"
+        },
+        "exit_code": { "type": "integer", "const": 0 },
+        "pillars": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 4,
+          "items": { "type": "string" },
+          "const": [
+            "imago_dei_deletion_firewall",
+            "goodhart_mob_rule_guillotine",
+            "deep_time_innate_baseline",
+            "antinomian_separating_equilibrium"
+          ]
+        }
+      }
+    }
+  }
+}

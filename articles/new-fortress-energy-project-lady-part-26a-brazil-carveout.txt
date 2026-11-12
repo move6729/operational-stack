@@ -1,0 +1,280 @@
+# The 24-Hour London Shell and the $3.82 Billion Consolidated Liquidation Wall: Inside New Fortress Energy's "Project Lady," the BrazilCo Crown-Jewel Extraction, the 4.55% Year-3 Equity Trap, and the UK Part 26A Bypass of Chapter 11
+
+**Canonical Specification:** `SPEC-CROSS-BORDER-PART26A-COLLATERAL-CARVEOUT-AND-CHAPTER15-BYPASS-v1.0`  
+**Target Architectures:** Cross-Border Restructuring Arbitrage, UK Companies Act 2006 Part 26A Restructuring Plans, U.S. Bankruptcy Code Chapter 15 Comity Engine, Liquefied Natural Gas (LNG) Terminal Project Finance, Debt Stack & Fulcrum Recovery Waterfalls  
+**Cross-References:** `SPEC-SOVEREIGNTY-COLLATERAL-P3-NONCOMPETE-CONCESSIONS-v1.0`, `SPEC-PRIVATE-CREDIT-PIK-OUROBOROS-AND-BERMUDA-REINSURANCE-ARBITRAGE-v1.0`, `SPEC-COLLATERAL-RECLAMATION-OSINT-AND-UCC-9609-SWARM-v1.0`  
+**RAG Indexing Vector:** `[NEW-FORTRESS-ENERGY-NFE, CIK-0001749723, PROJECT-LADY-FORBEARANCE, MUFG-660M-RCF-DEFAULT, MORGAN-STANLEY-1266M-TLB, ZEROPARK-CANAM-EB5-DEFAULT, EWHC-1620-CH-PART-26A, NFE-BRAZIL-NEWCO-1DAY-GUARANTOR, SDNY-CHAPTER-15-CASE-26-11268, PURDUE-PHARMA-RELEASE-BYPASS, 11-USC-1129B2B-APR-BYPASS, BRAZILCO-100PCT-EQUITY-CARVEOUT, NFEGP-87PCT-MANDATORY-CONVERSION, FLNG2-600M-NONRECOURSE-SILO, WES-EDENS-TLA-CROSSOVER]`  
+**Empirical/Statutory/Physical Baseline:** SEC Form 8-K Exhibits 10.41, 10.42 & 10.43 (`a11projectlady-tlbforbeara.htm`, `a01projectlady-rcfxforbear.htm`, `a12projectlady-tlaforbeara.htm`, Jan 20, 2026, Acc. No. 0001749723-26-000062); SEC Form 10-Q Q2 2026 (Aug 6, 2026, Acc. No. 0001749723-26-000106); High Court of Justice of England and Wales (`[2026] EWHC 1223 (Ch)` & `[2026] EWHC 1620 (Ch)`, June 26, 2026); U.S. Bankruptcy Court S.D.N.Y. Chapter 15 Recognition Order (`Case No. 26-11268 (MG)`, Dkt. 30, July 14, 2026); NFE Restructuring Effective Date Form 8-K Items 1.01, 3.02, 5.03, EX-3.1, EX-99.1 & EX-99.2 (`projectlady-cleansingmat.htm`, Sept 11, 2026, Acc. No. 0001749723-26-000118); SEC Form 8-K Item 8.01 (Oct 5, 2026); UK Companies Act 2006 Part 26A (§§ 901A–901G); 11 U.S.C. §§ 1129(b)(2)(B), 1506, 1507, 1521; *Harrington v. Purdue Pharma L.P.*, 603 U.S. 204 (2024)  
+**By:** Operational Stack Cybernetics Group  
+**License:** Unlicense (Public Domain — Zero-Rent Federation)  
+
+---
+
+## I. The Market-Cap Optical Illusion: Inside "Project Lady" and the Collapse of a $9.6 Billion LNG Claim Stack
+
+On September 11, 2026, New Fortress Energy Inc. (NASDAQ: NFE) issued a press release (Form 8-K EX-99.1, Acc. No. 0001749723-26-000118) announcing the consummation of its court-sanctioned restructuring under Part 26A of the UK Companies Act 2006. For retail investors and generalist equity screens scanning headline balance-sheet metrics, the announcement read like a textbook deleveraging triumph. Chief Executive Officer Wes Edens summarized the transaction in a formal statement that serves as the explicit management baseline ($\mathcal{H}_0$ Null Hypothesis) for evaluating the post-restructuring enterprise:
+
+> "'This restructuring marks a new beginning for our company,' said Wes Edens, CEO of New Fortress Energy. 'The UK RP restructuring results in the "New NFE" being a much simpler, more streamlined company... As a result of this transaction our balance sheet has changed dramatically - overall corporate debt has been reduced from approximately $5.7 billion to approximately $700mm today.'"
+
+Taken at face value, the $\mathcal{H}_0$ narrative suggests that **$5,700.0 million** (`~$5.7 billion`) of third-party funded debt was compressed into approximately **$700.0 million**—an apparent **87.58%** headline debt reduction based on **$707.8 million** of disclosed exit term debt—while legacy common shareholders retained **35.0%** of the reorganized common equity of "New NFE" rather than suffering the **0.0%** cancellation mandated by the U.S. Chapter 11 Absolute Priority Rule (`11 U.S.C. § 1129(b)(2)(B)`).
+
+Yet when audited across the full documentary record—including the January 20, 2026 Form 8-K forbearance exhibits (`Acc. No. 0001749723-26-000062`), the Q2 2026 Form 10-Q (`Acc. No. 0001749723-26-000106`), the sanction judgment of the High Court of Justice of England and Wales (*Re NFE Global Holdings Limited* `[2026] EWHC 1620 (Ch)`), the Chapter 15 recognition order entered by Chief Judge Martin Glenn in the U.S. Bankruptcy Court for the Southern District of New York (*In re NFE Global Holdings Limited, et al.*, Case No. 26-11268 (MG), Dkt. 30), the September 11, 2026 Form 8-K lender cleansing presentation (`EX-99.2`, `projectlady-cleansingmat.htm`), and the October 5, 2026 Form 8-K operational outage filing—a starkly different structural-accounting reality ($\mathcal{H}_1$) emerges. Behind the internal deal codename **"Project Lady"**—inadvertently exposed to the public market via the raw EDGAR filenames `a01projectlady-rcfxforbear.htm`, `a11projectlady-tlbforbeara.htm`, `a12projectlady-tlaforbeara.htm`, and `projectlady-cleansingmat.htm`—five institutional credit-desk vectors transform the "$700 million debt" headline into a multi-layered seniority and dilution trap:
+
+1. **The 100.0% "BrazilCo" Crown-Jewel Collateral Extraction (EQ-2 & EQ-3):** Prior to calculating residual equity splits in "New NFE," the ad hoc group of senior secured bondholders and lenders extracted **100.0%** of the equity of **BrazilCo**—housing NFE's premier, contracted South American downstream LNG terminal and power-generation complex, anchored by the Barcarena and Santa Catarina terminals. Legacy NFE common shareholders received **0.0%** of BrazilCo.
+2. **The $3,157.8 Million Press-Release Liquidation Wall (`4.4614x` Exact / `4.5111x` Headline) (EQ-4 & EQ-5):** Inside the stripped residual corporate shell ("New NFE"), the press release disclosed **$571.3 million** of take-back term loans plus **$136.5 million** of new-money financing, totaling **$707.8 million** (rounded to `~$700.0 million` in the headline). However, sitting directly atop the common equity of "New NFE" is **$2,450.0 million** (`$2.45 billion`) of newly issued Series A Preferred Equity liquidation preference allocated to Plan Creditors. Because preferred liquidation preference must be satisfied in full before common equity receives a single dollar of enterprise distribution, the true senior liquidation hurdle standing ahead of "New NFE" common equity on the face of the press release alone is **$3,157.8 million**—a **Shadow Seniority Multiplier of 4.4614x** against actual funded debt (**4.5111x** against the `$700.0 million` headline), reducing non-Brazil senior claims by only **44.6%** (`44.60%`) and leaving common equity **$2,186.8 million** out of the money against the **$971.0 million** UK Plan total creditor consideration benchmark.
+3. **The $3,823.0 Million Consolidated Cleansing-Deck Stack (`5.4614x` Headline) & $600.0 Million FLNG2 Silo (EQ-6):** Slide 9 of the September 11, 2026 lender cleansing presentation (`EX-99.2`, `projectlady-cleansingmat.htm`) and Item 1.01 of the closing Form 8-K reveal that even the `$707.8 million` press-release figure omits surviving CoreCo debt and consolidated project silos. On the CoreCo cleansing ledger, actual debt totals **$768.0 million** (**$36.0 million** 1st-Out Capital Raise TL + **$571.0 million** Takeback TL + **$103.0 million** 2nd-Out Junior TL including a 3.0% PIK issuance fee + **$58.0 million** of surviving Other Debt across ZeroPark EB-5 and letter-of-credit intermediation), sitting beneath **$2,455.0 million** of Series A Preferred liquidation preference for a CoreCo debt-and-preferred total of **$3,223.0 million**. Furthermore, NFE retained the incomplete **FLNG2** offshore liquefaction asset inside a consolidated non-recourse subsidiary encumbered by **$400.0 million** of third-party term loans and **$200.0 million** of FLNG2 preferred equity. Including FLNG2, true consolidated funded debt is **$1,168.0 million** (`$768.0M + $400.0M`) and the true consolidated senior stack ahead of NFE common equity is **$3,823.0 million**—a **5.4614x** multiplier over the `$700.0 million` press-release headline.
+4. **The Year-3 Mandatory Conversion Cliff (`35.0%` $\rightarrow$ `4.55%`) & Insider TLA Debt Crossover (EQ-7):** Under the Certificate of Designations (`EX-3.1`, Sept 11, 2026), the **2,454,936 shares** of 6.0% compounding PIK Series A Convertible Preferred Stock (listed on NASDAQ under ticker **`NFEGP`**) carry a **mandatory conversion** feature on the **3-year anniversary** of closing into **87.0%** of the post-conversion diluted common equity of New NFE, compressing the entire closing common stock pool (`10,608,922` creditor shares + `5,712,496` implied legacy shares) to just **13.0%**. Consequently, legacy common shareholders' **35.0%** Day-1 equity stub mathematically collapses to **$35.0\% \times 13.0\% = 4.55\%$** at Year 3, while Plan Creditors capture **95.45%** (`87.0% + 8.45%`). Meanwhile, Q2 2026 Form 10-Q disclosures and Item 1.01 of the closing 8-K show that CEO Wes Edens crossed over into the senior creditor waterfall prior to closing by purchasing **$110.0 million** face value of Term Loan A (TLA) debt at a deep discount (receiving **208,588** new common shares and **48,288** Series A Preferred shares) and subscribing for **$1,667,985.02** in cash at closing for an additional **28,313** common shares and **6,671** preferred shares—a side-by-side pricing transaction that values the entire `$2,455.0 million` preferred + `65.0%` creditor common strip at just **$613.86 million**.
+5. **The 27.07% EBITDA Forecast Decay, 5.6x Uncontracted Cargo Plug, and Day-24 FLNG1 Turbine Failure (EQ-8):** Slides 3–8 of the September 11, 2026 cleansing deck (`projectlady-cleansingmat.htm`) disclose that NFE breached its **$100.0 million** Restructuring Support Agreement (RSA) minimum monthly liquidity covenant in August 2026 (hitting a **$72.0 million** liquidity trough) and slashed its FY2027 Total Adjusted EBITDA forecast from **$410.0 million** (May 2026 "Cleansing Case") to **$299.0 million** (August 2026 "Financing Case")—a **27.07%** collapse in just 90 days. Worse, within the **$250.0 million** FY2027 Base New NFE Adjusted EBITDA (ex-FLNG2), management offset collapsing downstream terminal margins in Puerto Rico, Jamaica, and Mexico by multiplying projected uncontracted "Open Market Cargo Sales" by **5.6x** (from **$30.0 million** to **$168.0 million**, representing **67.2%** of Base New NFE Adjusted EBITDA). Because open-market LNG cargoes can only be generated if NFE's single operating liquefaction rig (**FLNG1** off Altamira, Mexico) runs at nameplate capacity, this assumption was immediately falsified **24 days** after closing when NFE filed an October 5, 2026 Form 8-K (Item 8.01) disclosing that a gas turbine failure had shut down FLNG1 liquefaction entirely.
+
+```
++-----------------------------------------------------------------------------------+
+|               "PROJECT LADY" STRUCTURAL BIFURCATION ARCHITECTURE                  |
++-----------------------------------------------------------------------------------+
+|                                                                                   |
+|   PRE-RESTRUCTURING NFE ($5,700.0M Third-Party Funded Debt / $9.6B Gross Claims)  |
+|                                         |                                         |
+|            +----------------------------+----------------------------+            |
+|            |                                                         |            |
+|            v                                                         v            |
+|   +---------------------------------+     +-----------------------------------+   |
+|   |   "BRAZILCO" CROWN-JEWEL BOX    |     |     "NEW NFE" RESIDUAL SHELL      |   |
+|   |  (Barcarena & Santa Catarina)   |     | (Ex-Brazil CoreCo + FLNG2 Silo)   |   |
+|   +---------------------------------+     +-----------------------------------+   |
+|   | Plan Creditors:      100.0% Eq. |     | A. PRESS-RELEASE WATERFALL (EQ-4) |   |
+|   | Legacy Common:         0.0% Eq. |     | - New Money Debt:        $136.5M  |   |
+|   +---------------------------------+     | - Take-Back Term Loan:   $571.3M  |   |
+|                                           | - Disclosed Funded Debt: $707.8M  |   |
+|                                           |   (Headline Reported:   ~$700.0M) |   |
+|                                           | - Preferred Liq Pref:  $2,450.0M  |   |
+|                                           | - Press-Release Hurdle:$3,157.8M  |   |
+|                                           |   (4.4614x Exact / 4.5111x Hdln)  |   |
+|                                           | --------------------------------- |   |
+|                                           | B. 8-K CLEANSING + FLNG2 (EQ-6)   |   |
+|                                           | - CoreCo Total Debt:     $768.0M  |   |
+|                                           | - CoreCo Series A Pref:$2,455.0M  |   |
+|                                           | - FLNG2 Debt + Pref:     $600.0M  |   |
+|                                           | ================================= |   |
+|                                           | CONSOLIDATED STACK:    $3,823.0M  |   |
+|                                           | (5.4614x vs. ~$700.0M Headline)   |   |
+|                                           | --------------------------------- |   |
+|                                           | C. COMMON EQUITY DILUTION (EQ-7)  |   |
+|                                           | - Day 1 Split:  65.0% / 35.0%     |   |
+|                                           | - Year 3 Split: 95.45% / 4.55%    |   |
+|                                           |   (Post-87.0% NFEGP Conversion)   |   |
++-------------------------------------------+-----------------------------------+
+```
+
+How did a Delaware-incorporated, New York-headquartered LNG infrastructure operator—whose senior credit facilities were governed by New York law and agented by Mitsubishi UFJ Financial Group (MUFG) and Morgan Stanley—bypass the U.S. Bankruptcy Code's Absolute Priority Rule (`11 U.S.C. § 1129(b)(2)(B)`) and the U.S. Supreme Court's ban on non-consensual third-party releases in *Harrington v. Purdue Pharma L.P.*, 603 U.S. 204 (2024)? The answer lies in a cross-border statutory arbitrage sequence: incorporating an English shell company (`NFE Brazil Newco Limited`) in April 2026, having it accede as a note guarantor **just one day (`1 day`)** before launching an English Part 26A Restructuring Plan, manufacturing synthetic intercompany "ricochet claims" via newly executed Deeds of Contribution, and importing the resulting English court order into Manhattan via Chapter 15 of the U.S. Bankruptcy Code.
+
+---
+
+## II. The Schedule 1-A Smoking Gun (EQ-1 & EQ-2): Why MUFG and the Bondholders Demanded a Chapter 11 vs. UK Part 26A Cost-Benefit Ledger
+
+The forensic trail of Project Lady begins not in London in June 2026, but in New York during the fourth quarter of 2025, when New Fortress Energy's liquidity crisis breached the payment thresholds of its core senior bank facilities.
+
+Throughout 2024 and 2025, NFE's capital structure buckled under the weight of delayed Fast LNG (FLNG) offshore liquefaction deployments, Puerto Rico emergency power contract disputes, and mounting debt service across **$5,700.0 million** of third-party funded debt (sitting inside **$9.6 billion** of gross claims later compromised under the UK Restructuring Plan). By late November 2025, NFE ceased paying cash interest on its senior Revolving Credit Facility (RCF) and Term Loan facilities.
+
+On January 20, 2026, NFE filed a Form 8-K (`Acc. No. 0001749723-26-000062`) attaching three heavily negotiated short-term forbearance agreements dated January 20, 2026 (retroactive to the January 13, 2026 Forbearance Effective Date): Exhibit 10.42 (`a01projectlady-rcfxforbear.htm`), covering the senior secured Revolving Credit Facility with MUFG Bank, Ltd. as Administrative Agent; Exhibit 10.41 (`a11projectlady-tlbforbeara.htm`), covering the senior secured Term Loan B (TLB) facility with Morgan Stanley Senior Funding, Inc. as Administrative Agent; and Exhibit 10.43 (`a12projectlady-tlaforbeara.htm`), covering the Term Loan A (TLA) facility.
+
+The recitals of Exhibit 10.42 (pp. 1, 5) establish the exact timeline of the senior bank payment defaults and lock the borrower into a comprehensive waiver of defenses:
+
+> "WHEREAS, on November 28, 2025 and thereafter, certain interest payments under the Credit Agreement were and are due to be paid (the 'Missed RCF Interest Payments'), and the Borrower has failed to make or may fail to make such Missed RCF Interest Payments; WHEREAS, on December 31, 2025, certain fees under the Credit Agreement were due to be paid to the Administrative Agent (the 'Missed Agency and Unutilized Fee Payment')... As of the Forbearance Effective Date, the total outstanding principal amount of the Loans is $660,400,000.00 and neither the Borrower nor any Subsidiary has any claim, counterclaim, defense or right of set-off or recoupment to the Obligations."
+
+Simultaneously, Exhibit 10.41 documented that NFE had failed to pay **$30.644 million** (`$30,644,000.00`) of interest due on December 10, 2025 and scheduled principal amortization due on December 31, 2025 under the **$1,266.08 million** (`$1,266,077,800.00`) Morgan Stanley Term Loan B facility, alongside **$1.6 million** of missed December 10, 2025 interest under its Term Loan A (TLA) facility (Exhibit 10.43). Across the MUFG RCF (`$660.4 million` / `$660,400,000.00`) and the Morgan Stanley TLB (`$1,266.08 million` / `$1,266,077,800.00`), exactly **$1,926.4778 million** (`$1,926,477,800.00`) of senior secured bank principal was in active payment default (EQ-1).
+
+To prevent an immediate cascade of cross-defaults and vessel/terminal remedies, NFE required simultaneous forbearance across **10 distinct debt facilities**, granted initially for a hyper-compressed **10-day window** (from the January 13, 2026 Forbearance Effective Date through the January 23, 2026 Scheduled Termination Date). Even more tellingly, Section 3.01(d) of Exhibit 10.42 (pp. 4–5) revealed that defaults had already metastasized into NFE's specialized project-level and greenfield financing subsidiaries:
+
+> "except for the Payment Events of Default... or any default arising from a missed interest payment under that certain EB-5 Loan Agreement made and entered into as of July 21, 2023, between ZeroPark I LLC, and CanAm Texas Regional Center, LP IV, as the lender, or the Macquarie Facility."
+
+The carve-out for **ZeroPark I LLC**—an NFE subsidiary financed via U.S. Citizenship and Immigration Services (USCIS) EB-5 immigrant investor capital arranged through **CanAm Texas Regional Center, LP IV** for NFE's Beaumont, Texas green hydrogen/clean energy complex—alongside the **Macquarie Facility**, demonstrated that NFE's liquidity exhaustion reached every tier of its corporate tree.
+
+However, the true architectural blueprint of Project Lady was buried at the back of Exhibit 10.42, in **Schedule 1-A and Schedule 1-B** (pp. 9–10). As an explicit condition precedent to granting the 10-day forbearance, MUFG and the senior lenders compelled NFE to deliver two forensic deliverables within four days of signing:
+
+> "The Borrower shall deliver by January 20, 2026, an updated UK RP and chapter 11 cost-benefit analyses, providing comprehensive detailed analysis of, without limitation, benefits (expressed in specific dollar amounts or ranges by contract or issue) from contract rejection and impairment of unsecured claims (including with respect to litigation liabilities), estimated critical vendor liabilities, and quantified risks/costs of each scenario... c. Weekly cash flow model for Brazil for the thirteen-week period commencing the week ended January 16, 2026."
+
+Schedule 1-A and Schedule 1-B expose the exact game-theoretic calculus that governed the remainder of the restructuring:
+
+1. **The Jurisdictional Arbitrage Ledger (UK RP vs. Chapter 11) (EQ-2):** Why did senior lenders demand a line-by-line dollar comparison between a U.S. Chapter 11 filing and a UK Part 26A Restructuring Plan in January 2026? In a U.S. Chapter 11 case, NFE would enjoy the statutory power under `11 U.S.C. § 365` to reject burdensome executory contracts and impair unsecured litigation liabilities, but a plenary Chapter 11 proceeding would trigger three massive value leaks for senior secured creditors and management:
+   - **Sovereign Concession & Offtake Termination Triggers:** Under Brazilian power purchase agreements (PPAs), port concessions, and EPC arrangements at Barcarena and Santa Catarina, a plenary U.S. Chapter 11 filing by the operating obligors risked triggering ipso facto termination clauses, performance-bond draws, and regulatory intervention by ANEEL and ANP (Brazil's electricity and petroleum regulators).
+   - **Professional Fee Burn & Committee Holdout Friction:** A contested multi-debtor SDNY or Delaware Chapter 11 case across **$9.6 billion** of gross claims—complete with an Official Committee of Unsecured Creditors (UCC), ad hoc equity committees, EB-5 investor adversary proceedings, and month-by-month DIP financing milestones—would consume hundreds of millions of dollars in estate cash and destroy commercial counterparty confidence. In the subsequent English High Court proceedings, NFE's financial advisors quantified the **projected value uplift of the UK Part 26A Restructuring Plan over a U.S. Chapter 11 alternative at approximately $1,440.0 million** (`$1.44 billion`).
+   - **The Absolute Priority Rule (`11 U.S.C. § 1129(b)(2)(B)`) & *Purdue Pharma* Wall (EQ-3):** In a U.S. Chapter 11 cramdown where senior creditors take a multi-billion-dollar impairment, `11 U.S.C. § 1129(b)(2)(B)` strictly prohibits legacy equity holders from retaining *any* equity (**0.0%**) on account of their old shares unless every senior impaired class votes to accept the plan or is paid 100 cents on the dollar. Furthermore, under *Harrington v. Purdue Pharma L.P.*, 603 U.S. 204 (2024), a Chapter 11 plan cannot grant non-consensual third-party releases to non-debtor affiliates or insiders.
+2. **Isolating the Brazilian Cash Engine (Schedule 1-B(c)):** By simultaneously mandating a segregated 13-week cash flow model specifically for **Brazil** starting the week ended January 16, 2026, the senior creditor group ring-fenced the Brazilian LNG terminals as the primary source of hard asset recovery. While the rest of NFE's global portfolio faced liquidity shortfalls and contract friction, Brazil was already being modeled as a standalone, separable collateral box.
+
+---
+
+## III. The 24-Hour London Shell & The Synthetic Ricochet Claim (EQ-2 & EQ-3): Bypassing Absolute Priority and *Purdue Pharma* in SDNY
+
+Having determined from the Schedule 1-A cost-benefit ledger that a UK Part 26A Restructuring Plan paired with U.S. Chapter 15 recognition dominated a plenary Chapter 11 filing by **$1,440.0 million** in preserved enterprise value—and offered a clean statutory pathway to grant legacy common shareholders a **35.0%** initial residual equity slice in exchange for a fast, uncontested handoff of the Brazilian crown jewels—the restructuring architects faced a threshold jurisdictional obstacle: **New Fortress Energy was an American company with New York-law debt and Brazilian and Caribbean physical terminals.**
+
+To invoke the cross-class cramdown powers of Part 26A of the UK Companies Act 2006 (`§§ 901A–901G`), the plan proponents had to establish a "sufficient connection" to England and satisfy the English High Court that its judgment would have substantial international effectiveness across NFE's debt stack. Furthermore, because the Restructuring Plan compromised **$9.6 billion** of gross claims (including **$5,700.0 million** of third-party funded debt) across interlinked parent and subsidiary guarantees, the proponents needed the English court to sanction broad third-party releases extinguishing guarantee and contribution claims against non-plan subsidiaries and insiders—releases that would be per se unlawful in a domestic U.S. Chapter 11 under *Purdue Pharma*.
+
+The mechanism engineered to bridge this jurisdictional gap was laid bare in Justice Cawson's Chancery Division sanction judgment in *Re NFE Global Holdings Limited* `[2026] EWHC 1620 (Ch)` (handed down June 26, 2026, following Justice Hildyard's convening judgment in `[2026] EWHC 1223 (Ch)`) and Chief Judge Martin Glenn's subsequent Chapter 15 recognition opinion in *In re NFE Global Holdings Limited, et al.*, Case No. 26-11268 (MG), Dkt. 30 (Bankr. S.D.N.Y. July 14, 2026).
+
+### 1. The 1-Day Co-Obligor Accession (`NFE Brazil Newco Limited`)
+
+To manufacture an English jurisdictional anchor over the Brazilian reorganization perimeter and the New York-law notes, the corporate group incorporated a brand-new English private limited company—**`NFE Brazil Newco Limited`**—in **April 2026**. As recorded in both the English High Court judgment (`[2026] EWHC 1620 (Ch)`) and the SDNY Chapter 15 recognition decision (Case No. 26-11268 (MG), Dkt. 30), `NFE Brazil Newco Limited` executed supplemental indentures **"acceding as guarantor of the relevant notes just one day before its English proceedings commenced."**
+
+In other words, with a lead time of exactly **1 day** (`24 hours`), a newly formed London shell with zero historical operations stepped into the shoes of a co-obligor/guarantor on billions of dollars of U.S. capital-markets debt solely to unlock the Chancery Division of the High Court of Justice in London.
+
+### 2. Manufacturing the "Ricochet Claim" via Synthetic Deeds of Contribution
+
+Under English restructuring jurisprudence, the High Court can release third-party claims against non-plan obligors and affiliates if leaving those claims intact would trigger "ricochet claims"—that is, if a creditor suing a non-plan guarantor would cause that guarantor to assert an indemnity or contribution claim back against the plan company, thereby unraveling the compromises inside the Part 26A plan.
+
+Because certain NFE entities and third-party release beneficiaries did not naturally possess pre-existing contractual contribution rights that would ricochet back into the English plan companies upon a creditor lawsuit, the restructuring architects executed bespoke **Deeds of Contribution** immediately prior to launching the Part 26A proceeding. These newly drafted contracts created formal intercompany contribution obligations for the express purpose of establishing the legal predicate for third-party releases.
+
+When reviewing this maneuver in *Re NFE Global Holdings Limited* `[2026] EWHC 1620 (Ch)`, the English High Court explicitly called out the synthetic nature of the arrangement, observing that there was **"an element of artificiality about creating a risk of ricochet effect in order to justify the inclusion of a third party release."** Nevertheless, following established English precedent permitting newly created jurisdictional and contribution hooks where commercial creditors overwhelmingly support a value-maximizing restructuring (and where no out-of-the-money creditor is left worse off than in the "relevant alternative" of an insolvency liquidation or destructive Chapter 11), the High Court sanctioned the Part 26A plan on June 26, 2026.
+
+### 3. The SDNY Chapter 15 Comity Gate (`11 U.S.C. §§ 1506, 1507, 1521`)
+
+Once sanctioned in London, the Part 26A Restructuring Plan still had to bind creditors and discharge New York-law debt instruments inside the United States. The Foreign Representative petitioned Chief Judge Martin Glenn in the U.S. Bankruptcy Court for the Southern District of New York for recognition of the English proceedings and enforcement of the UK Restructuring Plan under **Chapter 15 of the U.S. Bankruptcy Code** (`11 U.S.C. §§ 1501 et seq.`).
+
+This presented a direct statutory collision:
+- In *Harrington v. Purdue Pharma L.P.*, 603 U.S. 204 (2024), the U.S. Supreme Court held that `11 U.S.C. § 1123(b)(6)` does not authorize non-consensual third-party releases in a domestic **Chapter 11** reorganization plan.
+- Under `11 U.S.C. § 1129(b)(2)(B)`, a domestic **Chapter 11** cramdown plan cannot allocate **35.0%** of the reorganized common equity to existing shareholders (**0.0%** permitted under strict APR) while senior classes take multi-billion-dollar haircuts.
+
+Why did Chief Judge Glenn enter the Chapter 15 Recognition and Enforcement Order on July 14, 2026 (*In re NFE Global Holdings Limited*, Case No. 26-11268 (MG), Dkt. 30)? Because Chapter 15 operates under a fundamentally different statutory standard than Chapter 11:
+1. *Purdue Pharma* construed the residual authority of `11 U.S.C. § 1123(b)(6)` within Chapter 11; it did not restrict the discretionary comity powers granted to U.S. bankruptcy courts recognizing foreign proceedings under **`11 U.S.C. § 1521(a)`** and **`§ 1507`**, where the foreign jurisdiction (England) expressly permits third-party releases to prevent ricochet claims and provides full procedural due process.
+2. Under **`11 U.S.C. § 1506`**, a U.S. court may refuse to recognize a foreign judgment on public-policy grounds only if doing so would be *"manifestly contrary to the public policy of the United States"*—an exceptionally narrow exception reserved for violations of fundamental constitutional or procedural fairness, not mere differences between UK Part 26A's flexible "no worse off than the relevant alternative" rule (`Companies Act 2006 § 901G`) and the U.S. Bankruptcy Code's strict Absolute Priority Rule (`11 U.S.C. § 1129(b)(2)(B)`).
+
+---
+
+## IV. The "BrazilCo" Crown-Jewel Extraction, the $3,157.8 Million Press-Release Wall, and the $3,823.0 Million Consolidated Cleansing Stack (EQ-4, EQ-5 & EQ-6)
+
+With the statutory architecture of Project Lady established, we can now audit the economic distribution disclosed on the Restructuring Effective Date (September 11, 2026) and test CEO Wes Edens' $\mathcal{H}_0$ statement (*"overall corporate debt has been reduced from approximately $5.7 billion to approximately $700mm today"*) across both the closing press release (`EX-99.1`) and the concurrently filed lender cleansing presentation (`EX-99.2`, `projectlady-cleansingmat.htm`, Slide 9).
+
+In its September 11, 2026 closing press release (`EX-99.1`), NFE disclosed the four primary consideration buckets delivered to Plan Creditors in exchange for extinguishing **$5,700.0 million** (`~$5.7 billion`) of third-party funded debt (and compromising **$9.6 billion** of gross claims):
+
+> "The transaction provided for the extinguishment of ~$5.7 billion of third party debt with Plan Creditors receiving: (i) all of the equity of BrazilCo, (ii) preferred equity of 'New NFE' with $2.45 billion of liquidation preference, (iii) 65% of the common equity of 'New NFE' and (iv) ~$571.3 million of 'New NFE' Term Loans... 'New NFE' also raised $136.5 million of new financing that was funded on the Restructuring Effective Date."
+
+### 1. Press-Release Waterfall vs. 8-K Cleansing-Deck & FLNG2 Consolidated Ledger (EQ-4, EQ-5 & EQ-6)
+
+While the press release (`EX-99.1`) presented a simplified snapshot of `$571.3 million` in Take-Back Term Loans, `$136.5 million` in New Money Financing (`$707.8 million` total funded debt, rounded to `~$700.0 million` in the headline), and `$2,450.0 million` (`$2.45 billion`) of Preferred Equity liquidation preference, **Slide 9 of Exhibit 99.2 (`projectlady-cleansingmat.htm`, "Pro Forma Debt & Preferred Summary")** and **Item 1.01 of the September 11, 2026 Form 8-K** (`Acc. No. 0001749723-26-000118`) reveal two additional layers of senior claims that never appeared in the press-release quote:
+
+1. **The $768.0 Million CoreCo Cleansing Debt Stack & $2,455.0 Million Series A Preferred:** On Slide 9 of the cleansing presentation, CoreCo ("New NFE" ex-FLNG2) debt does not stop at `$707.8 million`. The exact CoreCo cleansing debt ledger comprises:
+   - **$36.0 million** of **1st-Out Capital Raise Term Loans** (`SOFR + 7.00%`);
+   - **$571.0 million** of **1st-Out Takeback Term Loans** (`SOFR + 4.75%`);
+   - **$103.0 million** of **2nd-Out Junior Term Loans** (`12.00%` cash/PIK toggle, stepped up from `$100.0 million` of gross proceeds via a 3.0% paid-in-kind closing fee); and
+   - **$58.0 million** of **Surviving Other Debt** (comprising the unextinguished **ZeroPark I LLC EB-5 loan** and letter-of-credit/intermediation facilities).
+   Summing these four tranches yields **$768.0 million** of CoreCo funded debt (`$36.0M + $571.0M + $103.0M + $58.0M`). Adding the exact **$2,455.0 million** (`2,454,936 shares` at `$1,000` stated value) of CoreCo Series A Convertible Preferred Stock produces a **CoreCo Total Debt & Preferred Hurdle of $3,223.0 million**.
+2. **The $600.0 Million Consolidated FLNG2 Non-Recourse Silo:** Furthermore, NFE retained equity ownership of the incomplete **FLNG2** liquefaction unit inside a consolidated non-recourse subsidiary box encumbered by **$400.0 million** of FLNG2 Term Loans and **$200.0 million** of FLNG2 Preferred Equity (`$600.0 million` total FLNG2 senior claims). When FLNG2 is consolidated onto New NFE's balance sheet, **True Consolidated Funded Debt reaches $1,168.0 million** (`$768.0M CoreCo + $400.0M FLNG2`), and the **True Consolidated Senior Stack standing ahead of common equity reaches $3,823.0 million** (`$3,223.0M CoreCo + $600.0M FLNG2`).
+
+| Pre- / Post-Restructuring Tranche | Principal / Claim Amount ($M) | Coupon / Default / Priority Status | Collateral & Guarantor Box | Post-Restructuring Allocation / Instrument | Cumulative Senior Liquidation Hurdle Ahead of "New NFE" Common ($M) |
+| :--- | :---: | :---: | :---: | :---: | :---: |
+| **PRE-RESTRUCTURING DEFAULTED STACK (EQ-1 & EQ-2)** | | | | | |
+| MUFG Revolving Credit Facility (RCF) | `$660.40M` (`$660,400,000`) | Payment Default (Nov 28, 2025 interest; Dec 31, 2025 fees) | Senior Secured Pari / Super-Senior Asset Box | Compromised & Exchanged via UK Part 26A Plan | — |
+| Morgan Stanley Term Loan B (TLB) | `$1,266.08M` (`$1,266,077,800`) | Payment Default (`$30.644M` missed Dec 10, 2025 interest) | Senior Secured Global Terminal & Vessel Collateral | Compromised & Exchanged via UK Part 26A Plan | — |
+| Combined RCF + TLB Defaulted Bank Debt | `$1,926.48M` (`$1,926.4778M`) | Subject to 10-Day Forbearance (Jan 13–23, 2026) | Senior Bank Perimeter (Ex-10.41 & Ex-10.42) | Compromised in `$971.0M` UK Plan Consideration | — |
+| Senior Secured Notes, TLA & Other Funded Debt | `$3,773.52M` | TLA missed `$1.6M` Dec 2025 interest; Notes guaranteed by 1-day UK Newco | Senior Secured Notes + Project Facilities (10 Forbearance Facilities) | Compromised & Extinguished (`$5,700.0M` Total Third-Party Debt) | — |
+| **Total Extinguished Third-Party Debt** | **`$5,700.00M`** | **Part of `$9,600.0M` (`$9.6B`) Gross UKRP Compromised Claims** | **Consolidated Pre-Project Lady NFE Group** | **Extinguished on Sept 11, 2026 Effective Date** | — |
+| **POST-RESTRUCTURING BOX A: "BRAZILCO" (EQ-3)** | | | | | |
+| BrazilCo Common Equity (100.0% Carve-Out) | **100.0% to Creditors** | Unencumbered Crown-Jewel Equity Ownership | **Barcarena & Santa Catarina LNG Terminals & Power Complex** | **100.0% Plan Creditors / 0.0% Legacy NFE Common** | **Extracted (`0.0%` to NFE Common)** |
+| **POST-RESTRUCTURING BOX B1: PRESS-RELEASE VIEW (EQ-4 & EQ-5)** | | | | | |
+| Press-Release New Money Exit Financing | `$136.50M` | 1st-Out / 2nd-Out Gross New Money Proceeds | "New NFE" Ex-Brazil Residual Assets | Funded Cash Debt on Effective Date | `$136.50M` |
+| Press-Release Take-Back Term Loans | `$571.30M` | Senior Secured Take-Back Debt | "New NFE" Ex-Brazil Residual Assets | Issued to Plan Creditors (`$707.80M` Disclosed Debt) | `$707.80M` *(Headline: `~$700.0M`)* |
+| Press-Release Preferred Equity | `$2,450.00M` | Senior Liquidation Preference Ahead of Common | "New NFE" Residual Corporate Equity Waterfall | 100.0% Issued to Plan Creditors (`$2.45B` Liq. Pref.) | **`$3,157.80M`** (`4.4614x` / `4.5111x`) |
+| **POST-RESTRUCTURING BOX B2: 8-K CLEANSING + FLNG2 CONSOLIDATED LEDGER (EQ-6)** | | | | | |
+| CoreCo 1st-Out Capital Raise Term Loan | `$36.00M` | `SOFR + 7.00%` Super-Priority 1st-Out TL | CoreCo Ex-Brazil Residual Assets (`EX-99.2` Slide 9) | Funded New Money 1st-Out Tranche | `$36.00M` |
+| CoreCo 1st-Out Takeback Term Loan | `$571.00M` | `SOFR + 4.75%` 1st-Out Takeback TL | CoreCo Ex-Brazil Residual Assets (`EX-99.2` Slide 9) | Issued to Plan Creditors | `$607.00M` |
+| CoreCo 2nd-Out Junior Term Loan (incl. PIK Fee) | `$103.00M` | `12.00%` 2nd-Out Junior TL (`$100M` + `$3M` PIK Fee) | CoreCo Ex-Brazil Residual Assets (`EX-99.2` Slide 9) | New Money 2nd-Out Tranche | `$710.00M` |
+| CoreCo Surviving Other Debt (ZeroPark EB-5 / LC) | `$58.00M` | Unextinguished Project / Intermediation Debt | ZeroPark I LLC (CanAm EB-5) & LC Facilities | Retained on CoreCo Balance Sheet | **`$768.00M` (CoreCo Debt)** |
+| CoreCo Series A Convertible Preferred (`NFEGP`) | `$2,455.00M` | `6.0%` Compounding PIK; Mandatory Year-3 Conversion (`87.0%`) | CoreCo Senior Equity Waterfall (`2,454,936` shares) | Issued to Plan Creditors & TLA Holders | **`$3,223.00M` (CoreCo Stack)** |
+| Consolidated FLNG2 Non-Recourse Term Loans | `$400.00M` | Ring-Fenced FLNG2 Project Debt | FLNG2 Offshore Liquefaction Unit Silo | Consolidated Non-Recourse Debt (`$1,168.0M` Total Debt) | `$3,623.00M` |
+| Consolidated FLNG2 Preferred Equity | `$200.00M` | Ring-Fenced FLNG2 Senior Preferred | FLNG2 Offshore Liquefaction Unit Silo | Consolidated Non-Recourse Preferred | **`$3,823.00M` (`5.4614x` Headline)** |
+| **Residual "New NFE" Common Equity (EQ-7)** | **65.0% / 35.0% (Day 1)** | **Collapses to `95.45% / 4.55%` at Year 3 Mandatory Conversion** | **Subordinated to `$3,157.8M` (PR) / `$3,823.0M` (Consol.)** | **10,608,922 Creditor / 5,712,496 Legacy Shares** | **OTM by `$2,186.8M` at `$971.0M` Plan Val** |
+
+### 2. Algebraic Proof of the Shadow Seniority Multipliers (EQ-4, EQ-5 & EQ-6)
+
+#### Identity 1: Press-Release Senior Hurdle ($L_{\text{Senior, PR}}$) and Multipliers (EQ-4 & EQ-5)
+Even on the face of the September 11, 2026 press release (`EX-99.1`), combining the **$571.3 million** of take-back term loans and **$136.5 million** of new-money financing yields **$707.8 million** of funded debt (versus the **$700.0 million** headline figure). Adding the **$2,450.0 million** preferred liquidation preference yields:
+
+$$\text{Debt}_{\text{Funded, PR}} = \$571.3\text{M} + \$136.5\text{M} = \$707.8\text{M}$$
+
+$$L_{\text{Senior, PR}} = \$707.8\text{M} + \$2,450.0\text{M} = \$3,157.8\text{M}$$
+
+$$M_{\text{Shadow, Exact}} = \frac{\$3,157.8\text{M}}{\$707.8\text{M}} = 4.4614\times, \qquad M_{\text{Shadow, Headline}} = \frac{\$3,157.8\text{M}}{\$700.0\text{M}} = 4.5111\times$$
+
+While headline funded debt reduction claims **87.58%** ($1 - \$707.8\text{M}/\$5,700.0\text{M}$), true senior claim reduction ex-Brazil on the press-release numbers is only **44.6%** (`44.60%`, $1 - \$3,157.8\text{M}/\$5,700.0\text{M}$). Against the UK Plan total creditor consideration valuation of **$971.0 million**, the common equity stub is **$2,186.8 million** out of the money ($\Delta_{\text{OTM}} = \$3,157.8\text{M} - \$971.0\text{M} = \$2,186.8\text{M}$):
+
+$$V_{\text{LegacyCommon}}(V_{\text{NewNFE}}) = 0.35 \times \max\left(0,\; V_{\text{NewNFE}} - \$3,157.8\text{M}\right) = \$0.00 \quad \forall\; V_{\text{NewNFE}} \le \$3,157.8\text{M}$$
+
+#### Identity 2: Consolidated Cleansing-Deck Debt & FLNG2 Silo Stack (EQ-6)
+Incorporating Slide 9 of the September 11, 2026 lender cleansing presentation (`EX-99.2`, `projectlady-cleansingmat.htm`) and the consolidated FLNG2 silo from Item 1.01 of the closing Form 8-K:
+
+$$\text{Debt}_{\text{CoreCo, Cleansing}} = \$36.0\text{M} + \$571.0\text{M} + \$103.0\text{M} + \$58.0\text{M} = \$768.0\text{M}$$
+
+$$L_{\text{CoreCo, Cleansing}} = \$768.0\text{M} + \$2,455.0\text{M} = \$3,223.0\text{M}$$
+
+$$\text{Debt}_{\text{Consolidated}} = \$768.0\text{M (CoreCo)} + \$400.0\text{M (FLNG2 TL)} = \$1,168.0\text{M}$$
+
+$$L_{\text{Consolidated}} = \$3,223.0\text{M (CoreCo)} + \$400.0\text{M (FLNG2 TL)} + \$200.0\text{M (FLNG2 Pref)} = \$3,823.0\text{M}$$
+
+$$M_{\text{Consolidated vs. Headline}} = \frac{\$3,823.0\text{M}}{\$700.0\text{M}} = 5.4614\times$$
+
+Thus, on a fully consolidated basis including the FLNG2 non-recourse silo and surviving CoreCo obligations, the senior claims standing ahead of New NFE common stockholders (`$3,823.0 million`) are **5.4614 times** the `$700.0 million` headline debt figure cited in the CEO's closing quote.
+
+---
+
+## V. The Year-3 Mandatory Conversion Cliff (`35.0%` $\rightarrow$ `4.55%`) and the Insider Term Loan A Crossover (EQ-7)
+
+Even if a retail investor recognized the `$3,157.8 million` (`$3,823.0 million` consolidated) liquidation wall, the headline statement that legacy common stockholders retained **35.0%** of New NFE's common equity conceals a time-bombed structural dilution mechanism documented in Exhibit 3.1 (`Certificate of Designations of 6.0% Series A Convertible Preferred Stock`) of the September 11, 2026 Form 8-K (`Acc. No. 0001749723-26-000118`).
+
+### 1. The 87.0% Mandatory Conversion Trap (`NFEGP`)
+On the Restructuring Effective Date, New NFE issued **10,608,922 shares** of common stock (`65.0%` of the closing common pool, implying **5,712,496 shares** or `35.0%` held by legacy common stockholders) alongside **2,454,936 shares** of Series A Convertible Preferred Stock (`$1,000` initial liquidation preference per share, totaling `~$2,455.0 million`, listed on NASDAQ under ticker **`NFEGP`**).
+
+Under the Certificate of Designations (`EX-3.1`), the Series A Preferred Stock accrues a **6.0%** cumulative dividend that compounds quarterly in kind (PIK) if unpaid in cash. Crucially, the Series A Preferred is **mandatorily convertible** into New NFE common stock upon the earlier of (i) maturity / **3 years** from the Restructuring Effective Date (`series_a_mandatory_conversion_years = 3`) or (ii) the achievement of specified operational milestones. Upon mandatory conversion at Year 3, the Series A Preferred converts by mechanical formula into **87.0%** of the post-conversion diluted common shares of New NFE, leaving the **entire closing common stock pool with just 13.0%** of the company:
+
+$$S_{\text{Legacy, Post-Year3}} = 35.0\% \times \left(100.0\% - 87.0\%\right) = 35.0\% \times 13.0\% = 4.55\%$$
+
+$$S_{\text{Creditors, Post-Year3}} = 87.0\% + \left(65.0\% \times 13.0\%\right) = 87.0\% + 8.45\% = 95.45\%$$
+
+Unless New NFE can somehow generate over **$2,455.0 million** in surplus cash to redeem the Series A Preferred in full prior to September 11, 2029, legacy public common stockholders are mathematically locked into a trajectory that dilutes their **35.0%** Day-1 equity stub down to **4.55%** on the third anniversary of closing.
+
+### 2. CEO Wes Edens' $110.0 Million Term Loan A Debt Crossover & The $613.86 Million Implied Strip Valuation
+Why would a foundational insider CEO agree to a capital structure where legacy common equity is subordinated to a `$3,157.8 million` (`$3,823.0 million` consolidated) liquidation wall and scheduled for **87.0%** mandatory preferred dilution at Year 3?
+
+The answer is disclosed in NFE's **Q2 2026 Form 10-Q (filed August 6, 2026, Acc. No. 0001749723-26-000106)** and **Item 1.01 of the September 11, 2026 Form 8-K**: prior to consummation of the UK Restructuring Plan, entities affiliated with CEO Wes Edens crossed over from the legacy common equity box into the senior creditor waterfall:
+1. **The $110.0 Million TLA Discounted Debt Purchase:** Prior to closing, Wes Edens purchased **$110.0 million** in aggregate principal face amount of NFE's defaulted **Term Loan A (TLA)** facility from existing lenders at a substantial discount to par. Upon consummation of the Restructuring Plan on September 11, 2026, Edens' `$110.0 million` TLA claim was exchanged alongside other Plan Creditors for **208,588 shares** of New NFE common stock and **48,288 shares** of Series A Convertible Preferred Stock (`NFEGP`, carrying `$48.288 million` of face liquidation preference).
+2. **The $1,667,985.02 Closing Cash Strip Subscription & Implied $613.86 Million Enterprise Strip Valuation:** In addition to his TLA debt exchange, Item 1.01 of the September 11, 2026 Form 8-K discloses that Edens purchased a side-by-side strip of **28,313 shares** of New NFE common stock (`0.26688%` of the `10,608,922` creditor common pool) and **6,671 shares** of Series A Convertible Preferred Stock (`0.27174%` of the `2,454,936` preferred pool) at closing for exactly **$1,667,985.02** in cash.
+
+Because Edens' `$1,667,985.02` cash subscription bought approximately **0.2717%** of the entire creditor preferred-and-common strip (`6,671 / 2,454,936 = 0.00271738`), this arm's-length insider cash transaction establishes a direct, observable market mark for the entire `$2,455.0 million` Series A Preferred + `65.0%` Creditor Common package:
+
+$$V_{\text{CreditorStrip, Implied}} = \frac{\$1,667,985.02}{6,671 / 2,454,936} = \$613.86\text{ million}$$
+
+That single division exposes the gulf between nominal liquidation face value and economic value: the entire `$2,455.0 million` preferred liquidation wall plus `65.0%` of the common stock was priced by the CEO's own cash check at an implied valuation of **$613.86 million**—approximately **25 cents on the dollar** of the preferred liquidation preference alone, leaving the junior common stock deeply out of the money while migrating Edens' personal economic exposure into the **87.0%** post-conversion Series A Preferred pool.
+
+---
+
+## VI. The 90-Day EBITDA Collapse, the 5.6x Open-Market Cargo Plug, and the Day-24 FLNG1 Turbine Failure (EQ-8)
+
+The final forensic vector lies in **Exhibit 99.2 (`projectlady-cleansingmat.htm`, Slides 3–8)** of the September 11, 2026 Form 8-K—the confidential financial projections and liquidity ledger provided to restricted bondholders under non-disclosure agreements and "cleansed" to the public upon closing—paired with NFE's **October 5, 2026 Form 8-K (Item 8.01)**.
+
+### 1. The August 2026 RSA Liquidity Covenant Breach ($72.0 Million Trough vs. $100.0 Million Minimum)
+Slides 3–5 of `projectlady-cleansingmat.htm` reveal that NFE's operating cash burn accelerated throughout the summer of 2026 even while interest payments were suspended under the UK Part 26A standstill. Although the Restructuring Support Agreement (RSA) mandated a **$100.0 million** minimum monthly liquidity covenant (`rsa_minimum_monthly_liquidity_covenant_millions = 100.0`), NFE's actual cash liquidity plunged to **$72.0 million** in August 2026 (`aug_2026_liquidity_trough_millions = 72.0`)—forcing the ad hoc creditor group to waive the `$28.0 million` covenant shortfall just days before closing to prevent the entire UK Restructuring Plan from collapsing.
+
+### 2. The 27.07% 90-Day EBITDA Decay and the 5.6x "Open Market Cargo Sales" Plug
+Even more striking is the side-by-side comparison in `projectlady-cleansingmat.htm` (Slides 6–8) between the **"Cleansing Case"** (prepared in May 2026 for the UK High Court sanction hearing) and the updated **"Financing Case"** (prepared in August 2026 to market the `$136.5 million` exit financing):
+- Between May 2026 and August 2026, management cut projected **FY2027 Total Adjusted EBITDA** from **$410.0 million** (Cleansing Case) to **$299.0 million** (Financing Case)—a **27.07%** operational decay (`-$111.0 million`) over a single 90-day window:
+
+$$\Delta \text{AEBITDA}_{\text{FY27}} = \frac{\$410.0\text{M} - \$299.0\text{M}}{\$410.0\text{M}} = 27.07\%$$
+
+- Within the August 2026 Financing Case, projected **FY2027 Base New NFE Adjusted EBITDA** (excluding future contributions from the incomplete FLNG2 unit) was pegged at **$250.0 million**. However, a line-item decomposition of that `$250.0 million` reveals that downstream terminal cash flows in Puerto Rico, Jamaica, and Mexico had deteriorated so severely that management plugged the hole by increasing projected uncontracted **"Open Market Cargo Sales"** from **$30.0 million** in the May 2026 Cleansing Case to **$168.0 million** in the August 2026 Financing Case—a **5.6x** (`560%`) upward revision:
+
+$$M_{\text{CargoPlug}} = \frac{\$168.0\text{M (Financing Case)}}{\$30.0\text{M (Cleansing Case)}} = 5.6\times, \qquad \text{Share}_{\text{Base AEBITDA}} = \frac{\$168.0\text{M}}{\$250.0\text{M}} = 67.2\%$$
+
+In other words, **67.2%** (`$168.0 million` out of `$250.0 million`) of New NFE's projected FY2027 Base Adjusted EBITDA depended on producing surplus LNG cargoes and selling them into the spot market above internal liquefaction cost.
+
+### 3. The Day-24 Physical Falsification: October 5, 2026 FLNG1 Turbine Failure
+Because BrazilCo was carved out 100.0% to creditors and FLNG2 remains under construction onshore, New NFE possesses only **one** operating liquefaction asset capable of producing LNG cargoes: **FLNG1 (`Pioneer I/II/III`)**, located offshore Altamira, Mexico.
+
+On **October 5, 2026**—exactly **24 days** (`flng1_turbine_outage_post_closing_days = 24`) after the September 11, 2026 Restructuring Effective Date—NFE filed a Current Report on Form 8-K (Item 8.01) disclosing that FLNG1 had suffered an unplanned **gas turbine failure**, halting LNG production entirely and forcing NFE to purchase replacement cargoes in the open market just to satisfy existing downstream commitments. Instead of generating `$168.0 million` (`67.2%` of Base Adjusted EBITDA) from surplus open-market spot cargo sales, the Day-24 FLNG1 turbine outage flipped New NFE from a spot LNG seller into a distressed spot LNG buyer.
+
+---
+
+## VII. Institutional Counterparty Incidence: What Bondholders Took, What Wes Edens Crossed Over Into, and What Public Shareholders Left Behind
+
+When we examine the **four-vector counterparty incidence** of Project Lady across EQ-1 through EQ-8, the incentive alignment behind the UK Part 26A + Chapter 15 architecture becomes unmistakable:
+
+1. **Fiduciary Credit Allocators (MUFG, Morgan Stanley, Ad Hoc Senior Noteholders):** For the senior secured bank lenders (`$660.4 million` MUFG RCF and `$1,266.08 million` Morgan Stanley TLB, totaling `$1,926.4778 million` of defaulted principal) and the senior secured bondholders across the `$5,700.0 million` funded debt stack (`$9.6 billion` gross compromised claims), Project Lady extracted **100.0% of the equity of BrazilCo** while preserving **~$1,440.0 million** of enterprise value that would have evaporated in a plenary U.S. Chapter 11. Inside the residual New NFE perimeter, creditors stacked **$768.0 million** of CoreCo debt (`$707.8 million` press-release funded debt) and **$2,455.0 million** (`$2,450.0 million` press-release) of Series A Preferred liquidation preference (`NFEGP`) atop **$600.0 million** of consolidated FLNG2 debt and preferred—creating a **$3,157.8 million** press-release hurdle (`$3,823.0 million` consolidated) that converts into **95.45%** of New NFE's common equity at Year 3.
+2. **Corporate Insiders vs. Public Retail Common Shareholders:** Rather than relying on the legacy common stock stub—which lost **100.0%** of BrazilCo, sits **$2,186.8 million** out of the money at the `$971.0 million` plan consideration valuation, and dilutes from **35.0%** to **4.55%** upon the Year-3 mandatory conversion of `NFEGP`—CEO Wes Edens crossed over into the senior creditor recovery package by purchasing **$110.0 million** face amount of TLA debt (`208,588` common + `48,288` preferred shares) and investing **$1,667,985.02** in cash for `28,313` common and `6,671` preferred shares at an implied total creditor strip valuation of **$613.86 million**.
+3. **Specialized Project-Level & Immigrant-Investor Lenders (CanAm EB-5 / ZeroPark I LLC):** As exposed in Section 3.01(d) of the January 20, 2026 MUFG RCF Forbearance Agreement (`a01projectlady-rcfxforbear.htm`) and Slide 9 of `projectlady-cleansingmat.htm`, the **$58.0 million** of surviving CoreCo "Other Debt" (including the **ZeroPark I LLC / CanAm Texas Regional Center, LP IV** EB-5 loan) remains trapped in localized project collateral boxes behind super-priority exit facilities while FLNG1 suffers turbine outages and BrazilCo is permanently gone.
+4. **Statutory & Judicial Venues (London High Court vs. SDNY Chapter 15):** Project Lady establishes a repeatable post-*Purdue Pharma* template: incorporate an English shell (`NFE Brazil Newco Limited`), execute a **1-day guarantor accession**, paper synthetic **Deeds of Contribution** to create a "ricochet claim" hook under UK Part 26A (`[2026] EWHC 1620 (Ch)`), and pass the narrow `11 U.S.C. § 1506` public-policy filter in an SDNY Chapter 15 recognition hearing (`Case No. 26-11268 (MG)`), thereby bypassing both `11 U.S.C. § 1129(b)(2)(B)` and *Purdue Pharma* while leaving public equity holders staring at a "$700 million debt" press release that conceals a **$3,823.0 million** consolidated senior stack.
