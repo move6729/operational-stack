@@ -1,0 +1,346 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:orbital_monopsony_trap.json",
+  "title": "Orbital Monopsony Trap - Locked Constants and Outputs (v1.0)",
+  "description": "Canonical locked constants and derived outputs for SPEC-ORBITAL-MONOPSONY-TRAP-v1.0: NSSL Phase 3 Lane 2 inverse-cost viability transfer (10 U.S.C. Sec. 2273(b)(1)), SpaceX (SPCX) Q3 2026 financials and FAR 15.404-4 / 10 U.S.C. Sec. 3702 regulated defense-utility valuation compression, the $78,844.0M senior fixed-claim tranche recovery waterfall including the Apollo GPU master finance lease (Form 8-K accession 0001104659-26-118614), and the Alphabet (GOOGL) Note 12 / ASC 820-10-35-6B liquidity-blind restricted-security lockup overhang. Units: usd_m = USD millions, pct = percent, c_on_dollar = cents on the dollar, x = multiple, usd = USD per share. Deterministically verified by proofs/orbital_monopsony_trap_proof.py (pure stdlib, exit code 0).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "specification_id",
+    "jurisdiction_context",
+    "cfaa_compliance_attestation",
+    "itar_ear_public_domain_attestation",
+    "entity_and_instrument_ids",
+    "nssl_phase3_lane2_procurement_matrix",
+    "statutory_rate_cap_and_foci_parameters",
+    "spacex_debt_and_gpu_lease_stack",
+    "alphabet_note12_asc820_overhang",
+    "tranche_recovery_waterfall",
+    "catalyst_calendar"
+  ],
+  "$defs": {
+    "counterparty_entity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["legal_name", "instrument_or_mandate"],
+      "properties": {
+        "legal_name": {"type": "string", "minLength": 1},
+        "ticker": {"type": "string"},
+        "cik": {"type": "string", "pattern": "^[0-9]{10}$"},
+        "crd_number": {"type": "string"},
+        "naic_code": {"type": "string"},
+        "court_dockets": {"type": "array", "items": {"type": "string"}},
+        "instrument_or_mandate": {"type": "string", "minLength": 1}
+      }
+    },
+    "counterparty_ring": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["ring_description", "entities"],
+      "properties": {
+        "ring_description": {"type": "string", "minLength": 1},
+        "entities": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/counterparty_entity"}}
+      }
+    }
+  },
+  "properties": {
+    "specification_id": {"const": "SPEC-ORBITAL-MONOPSONY-TRAP-v1.0"},
+    "jurisdiction_context": {"type": "string", "pattern": "^(US|GB|EU)$"},
+    "cfaa_compliance_attestation": {"const": true},
+    "itar_ear_public_domain_attestation": {"const": true},
+    "entity_and_instrument_ids": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "ring_1_primary_target_gp_sponsor",
+        "ring_2_public_bdc_co_lenders_and_credit_funds",
+        "ring_3_regulated_insurer_and_bermuda_sidecar_counterparties",
+        "ring_4_pcaob_auditors_valuation_agents_and_fund_admins",
+        "ring_5_foia_subject_public_pension_lp_swf_and_gatekeeper_consultants",
+        "ring_6_indenture_trustees_admin_agents_rating_agencies_and_restructuring_counsel"
+      ],
+      "properties": {
+        "ring_1_primary_target_gp_sponsor": {"$ref": "#/$defs/counterparty_ring"},
+        "ring_2_public_bdc_co_lenders_and_credit_funds": {"$ref": "#/$defs/counterparty_ring"},
+        "ring_3_regulated_insurer_and_bermuda_sidecar_counterparties": {"$ref": "#/$defs/counterparty_ring"},
+        "ring_4_pcaob_auditors_valuation_agents_and_fund_admins": {"$ref": "#/$defs/counterparty_ring"},
+        "ring_5_foia_subject_public_pension_lp_swf_and_gatekeeper_consultants": {"$ref": "#/$defs/counterparty_ring"},
+        "ring_6_indenture_trustees_admin_agents_rating_agencies_and_restructuring_counsel": {"$ref": "#/$defs/counterparty_ring"}
+      }
+    },
+    "nssl_phase3_lane2_procurement_matrix": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "statutory_basis", "total_missions", "total_award_usd_m",
+        "weighted_avg_price_per_mission_usd_m",
+        "spacex_baseline_price_per_mission_usd_m",
+        "statutory_competitor_viability_subsidy_total_usd_m", "providers"
+      ],
+      "properties": {
+        "statutory_basis": {"const": "10 U.S.C. Sec. 2273(b)(1)"},
+        "total_missions": {"const": 54},
+        "total_award_usd_m": {"const": 13680.0},
+        "weighted_avg_price_per_mission_usd_m": {"const": 253.3333},
+        "spacex_baseline_price_per_mission_usd_m": {"const": 211.4286},
+        "statutory_competitor_viability_subsidy_total_usd_m": {"const": 2262.8571},
+        "providers": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["spacex", "ula", "blue_origin"],
+          "properties": {
+            "spacex": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["missions", "award_usd_m", "price_per_mission_usd_m", "mission_share_pct", "dollar_share_pct", "dollar_minus_mission_share_pct", "viability_subsidy_vs_spacex_baseline_usd_m"],
+              "properties": {
+                "missions": {"const": 28},
+                "award_usd_m": {"const": 5920.0},
+                "price_per_mission_usd_m": {"const": 211.4286},
+                "mission_share_pct": {"const": 51.8519},
+                "dollar_share_pct": {"const": 43.2749},
+                "dollar_minus_mission_share_pct": {"const": -8.577},
+                "viability_subsidy_vs_spacex_baseline_usd_m": {"const": 0.0}
+              }
+            },
+            "ula": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["missions", "award_usd_m", "price_per_mission_usd_m", "mission_share_pct", "dollar_share_pct", "dollar_minus_mission_share_pct", "viability_subsidy_vs_spacex_baseline_usd_m"],
+              "properties": {
+                "missions": {"const": 19},
+                "award_usd_m": {"const": 5370.0},
+                "price_per_mission_usd_m": {"const": 282.6316},
+                "mission_share_pct": {"const": 35.1852},
+                "dollar_share_pct": {"const": 39.2544},
+                "dollar_minus_mission_share_pct": {"const": 4.0692},
+                "viability_subsidy_vs_spacex_baseline_usd_m": {"const": 1352.8571}
+              }
+            },
+            "blue_origin": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["missions", "award_usd_m", "price_per_mission_usd_m", "mission_share_pct", "dollar_share_pct", "dollar_minus_mission_share_pct", "viability_subsidy_vs_spacex_baseline_usd_m"],
+              "properties": {
+                "missions": {"const": 7},
+                "award_usd_m": {"const": 2390.0},
+                "price_per_mission_usd_m": {"const": 341.4286},
+                "mission_share_pct": {"const": 12.963},
+                "dollar_share_pct": {"const": 17.4708},
+                "dollar_minus_mission_share_pct": {"const": 4.5078},
+                "viability_subsidy_vs_spacex_baseline_usd_m": {"const": 910.0}
+              }
+            }
+          }
+        }
+      }
+    },
+    "statutory_rate_cap_and_foci_parameters": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "statutory_basis", "annualization_factor",
+        "far_15_404_4_weighted_guidelines_ebit_cap_pct",
+        "annualized_revenue_base_usd_m", "capped_ebit_usd_m",
+        "statutory_tax_rate_pct", "nopat_usd_m",
+        "defense_prime_ev_nopat_multiple_x", "regulated_ev_usd_m",
+        "blended_utility_ceiling_usd_m", "q3_2026_market_cap_usd_m",
+        "multiple_compression_low_pct", "multiple_compression_high_pct",
+        "foci_national_security_basis"
+      ],
+      "properties": {
+        "statutory_basis": {"const": "FAR 15.404-4 / 10 U.S.C. Sec. 3702"},
+        "annualization_factor": {"const": 4.0},
+        "far_15_404_4_weighted_guidelines_ebit_cap_pct": {"const": 12.5},
+        "annualized_revenue_base_usd_m": {"const": 58300.0},
+        "capped_ebit_usd_m": {"const": 7287.5},
+        "statutory_tax_rate_pct": {"const": 21.0},
+        "nopat_usd_m": {"const": 5757.1},
+        "defense_prime_ev_nopat_multiple_x": {"const": 18.0},
+        "regulated_ev_usd_m": {"const": 103628.25},
+        "blended_utility_ceiling_usd_m": {"const": 135000.0},
+        "q3_2026_market_cap_usd_m": {"const": 1881978.5},
+        "multiple_compression_low_pct": {"const": 92.8},
+        "multiple_compression_high_pct": {"const": 94.5},
+        "foci_national_security_basis": {"const": "32 CFR Part 117 (NISPOM) / 32 CFR Part 802"}
+      }
+    },
+    "spacex_debt_and_gpu_lease_stack": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "ipo_date", "ipo_class_a_shares", "ipo_price_per_share_usd", "ipo_gross_proceeds_usd_m",
+        "q3_2026_close_price_usd", "q3_2026_diluted_waso_m", "q3_2026_market_cap_usd_m",
+        "q3_2026_revenue_usd_m", "q3_2026_gross_profit_usd_m", "q3_2026_gross_margin_pct",
+        "q3_2026_operating_income_usd_m", "q3_2026_operating_margin_pct",
+        "nine_month_2026_revenue_usd_m", "nine_month_2026_operating_income_usd_m",
+        "nine_month_2026_gaap_net_loss_usd_m",
+        "t1_senior_secured_term_debt_and_revolver_usd_m",
+        "t2_equipment_and_launch_pad_finance_leases_usd_m",
+        "combined_on_balance_sheet_debt_and_finance_leases_usd_m",
+        "t3_apollo_gpu_master_finance_lease_usd_m", "t3_apollo_8_k_accession", "t3_apollo_8_k_date",
+        "total_senior_fixed_claims_usd_m",
+        "t4_diluted_shares_m", "t4_xai_merger_goodwill_non_recoverable_usd_m",
+        "t4_accumulated_deficit_usd_m"
+      ],
+      "properties": {
+        "ipo_date": {"const": "2026-06-12"},
+        "ipo_class_a_shares": {"const": 638888888},
+        "ipo_price_per_share_usd": {"const": 135.0},
+        "ipo_gross_proceeds_usd_m": {"const": 86250.0},
+        "q3_2026_close_price_usd": {"const": 150.86},
+        "q3_2026_diluted_waso_m": {"const": 12475.0},
+        "q3_2026_market_cap_usd_m": {"const": 1881978.5},
+        "q3_2026_revenue_usd_m": {"const": 14575.0},
+        "q3_2026_gross_profit_usd_m": {"const": 9097.0},
+        "q3_2026_gross_margin_pct": {"const": 62.4151},
+        "q3_2026_operating_income_usd_m": {"const": 2791.0},
+        "q3_2026_operating_margin_pct": {"const": 19.1492},
+        "nine_month_2026_revenue_usd_m": {"const": 27083.0},
+        "nine_month_2026_operating_income_usd_m": {"const": 705.0},
+        "nine_month_2026_gaap_net_loss_usd_m": {"const": -413.0},
+        "t1_senior_secured_term_debt_and_revolver_usd_m": {"const": 18844.0},
+        "t2_equipment_and_launch_pad_finance_leases_usd_m": {"const": 20000.0},
+        "combined_on_balance_sheet_debt_and_finance_leases_usd_m": {"const": 38844.0},
+        "t3_apollo_gpu_master_finance_lease_usd_m": {"const": 40000.0},
+        "t3_apollo_8_k_accession": {"const": "0001104659-26-118614"},
+        "t3_apollo_8_k_date": {"const": "2026-10-26"},
+        "total_senior_fixed_claims_usd_m": {"const": 78844.0},
+        "t4_diluted_shares_m": {"const": 12475.0},
+        "t4_xai_merger_goodwill_non_recoverable_usd_m": {"const": 48423.0},
+        "t4_accumulated_deficit_usd_m": {"const": -37448.0}
+      }
+    },
+    "alphabet_note12_asc820_overhang": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schedule_13g_date", "schedule_13g_class_a_shares", "pct_of_class_a_pct",
+        "jan_2015_cost_basis_usd_m", "asc_820_10_35_6b_measurement_basis",
+        "q3_2026_spcx_close_price_usd",
+        "restricted_shares", "restricted_fair_value_usd_m",
+        "unlocked_shares_q3_2026", "unlocked_fair_value_usd_m",
+        "q3_2026_price_drop_from_usd", "q3_2026_price_drop_per_share_usd",
+        "pretax_mark_loss_usd_m", "pct_of_googl_q3_2026_marketable_equity_loss_pct",
+        "googl_diluted_shares", "tax_effected_retention_pct",
+        "eps_sensitivity_per_1d_spcx_move_usd",
+        "lockup_expiration_date", "lockup_overhang_ratio_pct"
+      ],
+      "properties": {
+        "schedule_13g_date": {"const": "2026-08-14"},
+        "schedule_13g_class_a_shares": {"const": 551189500},
+        "pct_of_class_a_pct": {"const": 7.2},
+        "jan_2015_cost_basis_usd_m": {"const": 900.0},
+        "asc_820_10_35_6b_measurement_basis": {"const": "liquidity_blind_restricted_security_fair_value_at_close_price"},
+        "q3_2026_spcx_close_price_usd": {"const": 150.86},
+        "restricted_shares": {"const": 498480000},
+        "restricted_fair_value_usd_m": {"const": 75200.69},
+        "unlocked_shares_q3_2026": {"const": 52709500},
+        "unlocked_fair_value_usd_m": {"const": 7951.76},
+        "q3_2026_price_drop_from_usd": {"const": 170.86},
+        "q3_2026_price_drop_per_share_usd": {"const": -20.0},
+        "pretax_mark_loss_usd_m": {"const": -11023.79},
+        "pct_of_googl_q3_2026_marketable_equity_loss_pct": {"const": 88.9},
+        "googl_diluted_shares": {"const": 12485000000},
+        "tax_effected_retention_pct": {"const": 81.8},
+        "eps_sensitivity_per_1d_spcx_move_usd": {"const": 0.036113},
+        "lockup_expiration_date": {"const": "2026-12-09"},
+        "lockup_overhang_ratio_pct": {"const": 86.2731}
+      }
+    },
+    "tranche_recovery_waterfall": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "allocation_rule", "tranche_claim_stack_usd_m",
+        "breakeven_full_recovery_ev_usd_m",
+        "t4_cents_denominator_market_cap_usd_m", "recovery_vectors"
+      ],
+      "properties": {
+        "allocation_rule": {"const": "absolute_priority_sequential_t1_t2_t3_residual_to_t4"},
+        "tranche_claim_stack_usd_m": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "t1_senior_secured_term_debt_and_revolver",
+            "t2_equipment_and_launch_pad_finance_leases",
+            "t3_apollo_gpu_master_finance_lease",
+            "combined_on_balance_sheet_debt_and_finance_leases",
+            "total_senior_fixed_claims"
+          ],
+          "properties": {
+            "t1_senior_secured_term_debt_and_revolver": {"const": 18844.0},
+            "t2_equipment_and_launch_pad_finance_leases": {"const": 20000.0},
+            "t3_apollo_gpu_master_finance_lease": {"const": 40000.0},
+            "combined_on_balance_sheet_debt_and_finance_leases": {"const": 38844.0},
+            "total_senior_fixed_claims": {"const": 78844.0}
+          }
+        },
+        "breakeven_full_recovery_ev_usd_m": {"const": 78844.0},
+        "t4_cents_denominator_market_cap_usd_m": {"const": 1881978.5},
+        "recovery_vectors": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["ev_40000", "ev_65000", "ev_100000", "ev_135000"],
+          "properties": {
+            "ev_40000": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["ev_usd_m", "t1_recovery_usd_m", "t1_c_on_dollar", "t2_recovery_usd_m", "t2_c_on_dollar", "t3_recovery_usd_m", "t3_c_on_dollar", "t4_recovery_usd_m", "t4_c_on_dollar"],
+              "properties": {
+                "ev_usd_m": {"const": 40000.0},
+                "t1_recovery_usd_m": {"const": 18844.0}, "t1_c_on_dollar": {"const": 100.0},
+                "t2_recovery_usd_m": {"const": 20000.0}, "t2_c_on_dollar": {"const": 100.0},
+                "t3_recovery_usd_m": {"const": 1156.0}, "t3_c_on_dollar": {"const": 2.89},
+                "t4_recovery_usd_m": {"const": 0.0}, "t4_c_on_dollar": {"const": 0.0}
+              }
+            },
+            "ev_65000": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["ev_usd_m", "t1_recovery_usd_m", "t1_c_on_dollar", "t2_recovery_usd_m", "t2_c_on_dollar", "t3_recovery_usd_m", "t3_c_on_dollar", "t4_recovery_usd_m", "t4_c_on_dollar"],
+              "properties": {
+                "ev_usd_m": {"const": 65000.0},
+                "t1_recovery_usd_m": {"const": 18844.0}, "t1_c_on_dollar": {"const": 100.0},
+                "t2_recovery_usd_m": {"const": 20000.0}, "t2_c_on_dollar": {"const": 100.0},
+                "t3_recovery_usd_m": {"const": 26156.0}, "t3_c_on_dollar": {"const": 65.39},
+                "t4_recovery_usd_m": {"const": 0.0}, "t4_c_on_dollar": {"const": 0.0}
+              }
+            },
+            "ev_100000": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["ev_usd_m", "t1_recovery_usd_m", "t1_c_on_dollar", "t2_recovery_usd_m", "t2_c_on_dollar", "t3_recovery_usd_m", "t3_c_on_dollar", "t4_recovery_usd_m", "t4_c_on_dollar"],
+              "properties": {
+                "ev_usd_m": {"const": 100000.0},
+                "t1_recovery_usd_m": {"const": 18844.0}, "t1_c_on_dollar": {"const": 100.0},
+                "t2_recovery_usd_m": {"const": 20000.0}, "t2_c_on_dollar": {"const": 100.0},
+                "t3_recovery_usd_m": {"const": 40000.0}, "t3_c_on_dollar": {"const": 100.0},
+                "t4_recovery_usd_m": {"const": 21156.0}, "t4_c_on_dollar": {"const": 1.1241}
+              }
+            },
+            "ev_135000": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["ev_usd_m", "t1_recovery_usd_m", "t1_c_on_dollar", "t2_recovery_usd_m", "t2_c_on_dollar", "t3_recovery_usd_m", "t3_c_on_dollar", "t4_recovery_usd_m", "t4_c_on_dollar"],
+              "properties": {
+                "ev_usd_m": {"const": 135000.0},
+                "t1_recovery_usd_m": {"const": 18844.0}, "t1_c_on_dollar": {"const": 100.0},
+                "t2_recovery_usd_m": {"const": 20000.0}, "t2_c_on_dollar": {"const": 100.0},
+                "t3_recovery_usd_m": {"const": 40000.0}, "t3_c_on_dollar": {"const": 100.0},
+                "t4_recovery_usd_m": {"const": 56156.0}, "t4_c_on_dollar": {"const": 2.9839}
+              }
+            }
+          }
+        }
+      }
+    },
+    "catalyst_calendar": {
+      "type": "array",
+      "minItems": 7,
+      "items": {"type": "object", "additionalProperties": false, "required": ["date", "event"],
+        "properties": {"date": {"type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"},
+                       "event": {"type": "string", "minLength": 1}}}
+    }
+  }
+}

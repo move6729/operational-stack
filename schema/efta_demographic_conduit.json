@@ -1,0 +1,131 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:efta_demographic_conduit.json",
+  "title": "EFTA Demographic Discourse and Academic Conduit Bundle",
+  "description": "Schema for SPEC-EFTA-DEMOGRAPHIC-DISCOURSE-AND-ACADEMIC-CONDUIT-v1.0: Shannon-filter corpus compression, academic/genomic funding conduits, Nikolic agency economics, banking concentration, and restitution waterfall.",
+  "type": "object",
+  "required": ["eq1_shannon_filter", "eq2_academic_and_genomic_conduits", "eq3_nikolic_agency", "eq4_banking_concentration", "eq5_restitution_waterfall", "entity_and_instrument_ids", "catalyst_calendar"],
+  "properties": {
+    "eq1_shannon_filter": {
+      "type": "object",
+      "required": ["n_corpus", "n_raw", "n_core", "n_signal", "p_precision", "fdr", "i_raw_bits", "i_signal_bits", "delta_i_bits"],
+      "properties": {
+        "n_corpus": {"const": 1380932},
+        "n_raw": {"const": 3082},
+        "n_core": {"const": 517},
+        "n_signal": {"const": 18},
+        "p_precision": {"type": "number", "minimum": 0, "maximum": 1},
+        "fdr": {"type": "number", "minimum": 0, "maximum": 1},
+        "i_raw_bits": {"type": "number", "minimum": 0},
+        "i_signal_bits": {"type": "number", "minimum": 0},
+        "delta_i_bits": {"type": "number"}
+      },
+      "additionalProperties": false
+    },
+    "eq2_academic_and_genomic_conduits": {
+      "type": "object",
+      "required": ["f_bach_enhanced_mit_usd", "f_bach_jevi_direct_usd", "f_bach_traced_usd", "f_mit_post2008_usd", "f_mit_media_lab_usd", "f_mit_lloyd_usd", "f_mit_pre2008_usd", "mit_media_lab_share", "f_harvard_pre2008_usd", "f_harvard_ped_nowak_usd", "harvard_ped_share", "f_couq_2005_grants_total_usd", "f_couq_2005_net_assets_end_usd", "f_couq_edge_foundation_usd", "couq_edge_share", "f_couq_harvard_2005_usd", "f_thakuria_pgp_check_usd", "f_georgarage_androcyte_usd"],
+      "properties": {
+        "f_bach_enhanced_mit_usd": {"const": 50000},
+        "f_bach_jevi_direct_usd": {"const": 35000},
+        "f_bach_traced_usd": {"const": 85000},
+        "f_mit_post2008_usd": {"const": 850000},
+        "f_mit_media_lab_usd": {"const": 525000},
+        "f_mit_lloyd_usd": {"const": 225000},
+        "f_mit_pre2008_usd": {"const": 100000},
+        "mit_media_lab_share": {"type": "number", "minimum": 0, "maximum": 1},
+        "f_harvard_pre2008_usd": {"const": 9179000},
+        "f_harvard_ped_nowak_usd": {"const": 6500000},
+        "harvard_ped_share": {"type": "number", "minimum": 0, "maximum": 1},
+        "f_couq_2005_grants_total_usd": {"const": 1237003},
+        "f_couq_2005_net_assets_end_usd": {"const": 19570322},
+        "f_couq_edge_foundation_usd": {"const": 200000},
+        "couq_edge_share": {"type": "number", "minimum": 0, "maximum": 1},
+        "f_couq_harvard_2005_usd": {"const": 110000},
+        "f_thakuria_pgp_check_usd": {"const": 2000},
+        "f_georgarage_androcyte_usd": {"const": 200000}
+      },
+      "additionalProperties": false
+    },
+    "eq3_nikolic_agency": {
+      "type": "object",
+      "required": ["mandate_range_cap_usd", "foundation_medicine_basis_usd", "researchgate_basis_usd", "combined_basis_usd", "advance_tranche_1_usd", "advance_tranche_2_usd", "total_advance_usd", "foundation_medicine_max_upside_share", "researchgate_max_upside_share", "default_interest_rate", "max_payment_demands", "v_nikolic_at_3x_fmv_net_usd", "estate_gross_probate_usd", "will_executor_fee_usd"],
+      "properties": {
+        "mandate_range_cap_usd": {"const": 100000000},
+        "foundation_medicine_basis_usd": {"const": 10000000},
+        "researchgate_basis_usd": {"const": 10000000},
+        "combined_basis_usd": {"const": 20000000},
+        "advance_tranche_1_usd": {"const": 1250000},
+        "advance_tranche_2_usd": {"const": 1250000},
+        "total_advance_usd": {"const": 2500000},
+        "foundation_medicine_max_upside_share": {"const": 1.0},
+        "researchgate_max_upside_share": {"const": 0.5},
+        "default_interest_rate": {"const": 0.12},
+        "max_payment_demands": {"const": 4},
+        "v_nikolic_at_3x_fmv_net_usd": {"const": 27500000},
+        "estate_gross_probate_usd": {"const": 577672654},
+        "will_executor_fee_usd": {"const": 250000}
+      },
+      "additionalProperties": false
+    },
+    "eq4_banking_concentration": {
+      "type": "object",
+      "required": ["bank_column_totals_usd", "total_cash_all_32_entities_usd", "db_share_all_32", "hhi_7_banks_all_32", "top_7_entities_usd", "top_7_subtotal_usd", "top_7_db_subtotal_usd", "top_7_db_share", "top_3_entity_share_of_top_7", "enhanced_education_cash_usd"],
+      "properties": {
+        "bank_column_totals_usd": {"type": "array", "items": {"type": "object", "required": ["bank", "usd"], "properties": {"bank": {"type": "string"}, "usd": {"type": "number", "minimum": 0}}, "additionalProperties": false}},
+        "total_cash_all_32_entities_usd": {"const": 121833887},
+        "db_share_all_32": {"type": "number", "minimum": 0, "maximum": 1},
+        "hhi_7_banks_all_32": {"type": "number", "minimum": 0, "maximum": 10000},
+        "top_7_entities_usd": {"type": "array", "items": {"type": "object", "required": ["entity", "usd"], "properties": {"entity": {"type": "string"}, "usd": {"type": "number", "minimum": 0}}, "additionalProperties": false}},
+        "top_7_subtotal_usd": {"const": 118240243},
+        "top_7_db_subtotal_usd": {"const": 97380768},
+        "top_7_db_share": {"type": "number", "minimum": 0, "maximum": 1},
+        "top_3_entity_share_of_top_7": {"type": "number", "minimum": 0, "maximum": 1},
+        "enhanced_education_cash_usd": {"const": 140201}
+      },
+      "additionalProperties": false
+    },
+    "eq5_restitution_waterfall": {
+      "type": "object",
+      "required": ["tranches_usd", "total_pool_usd", "ev_schedule", "restitution_to_academic_gift_ratio"],
+      "properties": {
+        "tranches_usd": {"type": "array", "items": {"type": "number", "minimum": 0}},
+        "total_pool_usd": {"const": 773500000},
+        "ev_schedule": {"type": "array", "items": {"type": "object", "required": ["ev_usd", "recovery_vector_usd"], "properties": {"ev_usd": {"type": "number", "minimum": 0}, "recovery_vector_usd": {"type": "array", "items": {"type": "number"}}}, "additionalProperties": false}},
+        "restitution_to_academic_gift_ratio": {"type": "number", "minimum": 0}
+      },
+      "additionalProperties": false
+    },
+    "entity_and_instrument_ids": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["legal_name", "ring", "role"],
+        "properties": {
+          "legal_name": {"type": "string"},
+          "ring": {"enum": [1, 2, 3, 4, 5, 6]},
+          "role": {"type": "string"},
+          "cik": {"type": "string", "pattern": "^\\d{10}$"},
+          "crd": {"type": "string", "pattern": "^(801-)?\\d+$"},
+          "pcaob_id": {"type": "string"},
+          "naic_code": {"type": "string"},
+          "court_dockets": {"type": "array", "items": {"type": "string"}}
+        },
+        "additionalProperties": false
+      }
+    },
+    "catalyst_calendar": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["date", "event"],
+        "properties": {
+          "date": {"type": "string", "format": "date", "pattern": "^\\d{4}-\\d{2}-\\d{2}$"},
+          "event": {"type": "string"}
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

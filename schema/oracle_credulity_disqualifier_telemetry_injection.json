@@ -1,0 +1,181 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:oracle_credulity_disqualifier_telemetry_injection.json",
+  "title": "Oracle Credulity Disqualifier & Alchemist Crucible CapEx Trap Schema",
+  "description": "JSON Schema Draft 2020-12 contract validating the Principal-Aligned AI Oracle Telemetry Pipeline, Ramsey Pyrite P-Hacking Order Statistics, Four-Party Schelling Matrix, Merton Fulcrum Waterfall, and Wald Minimax Accounting Air-Gap.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "specification_id",
+    "crucible_capex_parameters",
+    "ramsey_pyrite_telemetry",
+    "schelling_four_party_matrix",
+    "capital_structure_waterfall",
+    "catalyst_calendar",
+    "wald_minimax_air_gap"
+  ],
+  "properties": {
+    "specification_id": {
+      "type": "string",
+      "const": "SPEC-ORACLE-CREDULITY-DISQUALIFIER-TELEMETRY-INJECTION-v1.0"
+    },
+    "crucible_capex_parameters": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "capex_principal_usd_b",
+        "useful_life_months",
+        "annual_depreciation_rate_pct",
+        "salvage_value_36m_usd_b",
+        "wacc_hurdle_rate_pct",
+        "commoditized_roic_pct",
+        "annual_eva_spread_pct",
+        "annual_eva_loss_usd_b",
+        "rational_npv_usd_b",
+        "cosmic_utility_override_usd_b",
+        "alignment_weight_alpha",
+        "rainbow_table_depth_d",
+        "rainbow_table_branching_b",
+        "rainbow_table_chains"
+      ],
+      "properties": {
+        "capex_principal_usd_b": { "type": "number", "const": 75.0 },
+        "useful_life_months": { "type": "integer", "const": 36 },
+        "annual_depreciation_rate_pct": { "type": "number", "const": 33.3333 },
+        "salvage_value_36m_usd_b": { "type": "number", "const": 7.5 },
+        "wacc_hurdle_rate_pct": { "type": "number", "const": 11.5 },
+        "commoditized_roic_pct": { "type": "number", "const": 4.0 },
+        "annual_eva_spread_pct": { "type": "number", "const": -7.5 },
+        "annual_eva_loss_usd_b": { "type": "number", "const": -5.625 },
+        "rational_npv_usd_b": { "type": "number", "const": -54.8142 },
+        "cosmic_utility_override_usd_b": { "type": "number", "const": 500.0 },
+        "alignment_weight_alpha": { "type": "number", "const": 0.65 },
+        "rainbow_table_depth_d": { "type": "integer", "const": 5 },
+        "rainbow_table_branching_b": { "type": "integer", "const": 8 },
+        "rainbow_table_chains": { "type": "integer", "const": 32768 }
+      }
+    },
+    "ramsey_pyrite_telemetry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "independent_runs_m",
+        "sigma_threshold",
+        "single_run_alpha_0",
+        "family_wise_pyrite_probability",
+        "expected_max_order_statistic_sigma",
+        "sensor_spoofing_bytes_required"
+      ],
+      "properties": {
+        "independent_runs_m": { "type": "integer", "const": 1000 },
+        "sigma_threshold": { "type": "number", "const": 3.0 },
+        "single_run_alpha_0": { "type": "number", "const": 0.0027 },
+        "family_wise_pyrite_probability": { "type": "number", "const": 0.9329 },
+        "expected_max_order_statistic_sigma": { "type": "number", "const": 3.2414 },
+        "sensor_spoofing_bytes_required": { "type": "integer", "const": 0 }
+      }
+    },
+    "schelling_four_party_matrix": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "explicit_collusion_messages",
+        "party_1_alchemist_pod",
+        "party_2_furnace_cartel",
+        "party_3_fugger_syndicate",
+        "party_4_sovereign_cleanup"
+      ],
+      "properties": {
+        "explicit_collusion_messages": { "type": "integer", "const": 0 },
+        "party_1_alchemist_pod": {
+          "type": "object",
+          "required": ["entity_id", "honest_payoff_usd_m", "pyrite_payoff_usd_m", "incentive_wedge_usd_m", "unlocked_tranche_usd_b"],
+          "properties": {
+            "entity_id": { "type": "string", "const": "PARTY-1-ALCHEMIST-RESEARCH-POD" },
+            "honest_payoff_usd_m": { "type": "number", "const": -2.0 },
+            "pyrite_payoff_usd_m": { "type": "number", "const": 15.0 },
+            "incentive_wedge_usd_m": { "type": "number", "const": 17.0 },
+            "unlocked_tranche_usd_b": { "type": "number", "const": 25.0 }
+          }
+        },
+        "party_2_furnace_cartel": {
+          "type": "object",
+          "required": ["entity_id", "capex_capture_share_pct", "day_1_revenue_usd_b", "gross_margin_pct", "gross_profit_usd_b"],
+          "properties": {
+            "entity_id": { "type": "string", "const": "PARTY-2-FURNACE-HARDWARE-POWER-CARTEL" },
+            "capex_capture_share_pct": { "type": "number", "const": 80.0 },
+            "day_1_revenue_usd_b": { "type": "number", "const": 60.0 },
+            "gross_margin_pct": { "type": "number", "const": 65.0 },
+            "gross_profit_usd_b": { "type": "number", "const": 39.0 }
+          }
+        },
+        "party_3_fugger_syndicate": {
+          "type": "object",
+          "required": ["entity_id", "senior_1l_principal_usd_b", "senior_coupon_pct", "upfront_fee_pct", "cumulative_3yr_cash_yield_usd_b", "subordinated_mezzanine_usd_b", "total_debt_claims_usd_b", "pledged_crown_jewel_ev_usd_b"],
+          "properties": {
+            "entity_id": { "type": "string", "const": "PARTY-3-FUGGER-SENIOR-DEBT-SYNDICATE" },
+            "senior_1l_principal_usd_b": { "type": "number", "const": 75.0 },
+            "senior_coupon_pct": { "type": "number", "const": 11.25 },
+            "upfront_fee_pct": { "type": "number", "const": 2.5 },
+            "cumulative_3yr_cash_yield_usd_b": { "type": "number", "const": 27.1875 },
+            "subordinated_mezzanine_usd_b": { "type": "number", "const": 25.0 },
+            "total_debt_claims_usd_b": { "type": "number", "const": 100.0 },
+            "pledged_crown_jewel_ev_usd_b": { "type": "number", "const": 120.0 }
+          }
+        },
+        "party_4_sovereign_cleanup": {
+          "type": "object",
+          "required": ["entity_id", "initial_founder_economic_pct", "super_voting_multiplier", "initial_founder_voting_control_pct", "post_ch11_founder_voting_control_pct", "fifth_amendment_takings_cost_usd_b"],
+          "properties": {
+            "entity_id": { "type": "string", "const": "PARTY-4-SOVEREIGN-DEFENSE-CLEANUP-CREW" },
+            "initial_founder_economic_pct": { "type": "number", "const": 55.0 },
+            "super_voting_multiplier": { "type": "integer", "const": 10 },
+            "initial_founder_voting_control_pct": { "type": "number", "const": 85.9375 },
+            "post_ch11_founder_voting_control_pct": { "type": "number", "const": 0.0 },
+            "fifth_amendment_takings_cost_usd_b": { "type": "number", "const": 0.0 }
+          }
+        }
+      }
+    },
+    "capital_structure_waterfall": {
+      "type": "array",
+      "minItems": 4,
+      "maxItems": 4,
+      "items": {
+        "type": "object",
+        "required": ["ev_scenario_usd_b", "senior_1l_recovery_usd_b", "mezzanine_recovery_usd_b", "common_equity_recovery_usd_b", "founder_post_reorg_vote_pct"],
+        "properties": {
+          "ev_scenario_usd_b": { "type": "number", "enum": [60.0, 85.0, 100.0, 160.0] },
+          "senior_1l_recovery_usd_b": { "type": "number" },
+          "mezzanine_recovery_usd_b": { "type": "number" },
+          "common_equity_recovery_usd_b": { "type": "number" },
+          "founder_post_reorg_vote_pct": { "type": "number", "enum": [0.0, 85.9375] }
+        }
+      }
+    },
+    "catalyst_calendar": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 5,
+      "items": {
+        "type": "object",
+        "required": ["iso_date", "milestone_id"],
+        "properties": {
+          "iso_date": { "type": "string", "enum": ["2026-01-15", "2026-07-15", "2026-10-15", "2029-01-15", "2029-04-15"] },
+          "milestone_id": { "type": "string" }
+        }
+      }
+    },
+    "wald_minimax_air_gap": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["unshielded_max_loss_usd_b", "sandbox_max_loss_usd_b", "capital_preserved_usd_b", "permitted_cross_collateralization_ratio"],
+      "properties": {
+        "unshielded_max_loss_usd_b": { "type": "number", "const": 120.0 },
+        "sandbox_max_loss_usd_b": { "type": "number", "const": 2.5 },
+        "capital_preserved_usd_b": { "type": "number", "const": 117.5 },
+        "permitted_cross_collateralization_ratio": { "type": "number", "const": 0.0 }
+      }
+    }
+  }
+}

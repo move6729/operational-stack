@@ -1,0 +1,133 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:osint_isolation.json",
+  "title": "OpenOSINTShieldState",
+  "description": "Schema for OSINT identity isolation state, data-broker opt-out tracking, metadata noise payload verification, and transport fingerprint neutralization (OPEN-OSINT-SHIELD-v1.0 / LMTI-v1.0).",
+  "type": "object",
+  "properties": {
+    "identity_id": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$",
+      "description": "SHA-256 hash of the isolated identity node."
+    },
+    "jurisdiction_context": {
+      "type": "object",
+      "properties": {
+        "jurisdiction_code": {
+          "type": "string",
+          "pattern": "^[A-Z]{2}$"
+        },
+        "cfaa_compliance_attested": {
+          "type": "boolean",
+          "const": true
+        },
+        "gdpr_erasure_supported": {
+          "type": "boolean"
+        }
+      },
+      "required": ["jurisdiction_code", "cfaa_compliance_attested", "gdpr_erasure_supported"],
+      "additionalProperties": false
+    },
+    "timestamp_utc": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Unix timestamp of state calculation."
+    },
+    "decoupling_status": {
+      "type": "object",
+      "properties": {
+        "property_decoupled": {
+          "type": "boolean",
+          "description": "True if all real estate assets are registered to anonymous legal entities."
+        },
+        "corporate_decoupled": {
+          "type": "boolean",
+          "description": "True if direct ownership markers are severed from public corporate registries."
+        },
+        "phone_decoupled": {
+          "type": "boolean",
+          "description": "True if primary phone maps to non-PSTN non-indexed switchboards."
+        },
+        "address_decoupled": {
+          "type": "boolean",
+          "description": "True if primary physical residence is obfuscated via forwarders."
+        }
+      },
+      "required": ["property_decoupled", "corporate_decoupled", "phone_decoupled", "address_decoupled"]
+    },
+    "exposure_score": {
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "description": "Calculated exposure ratio (0.0 = completely isolated, 1.0 = fully exposed)."
+    },
+    "transport_fingerprint_neutralization": {
+      "type": "object",
+      "properties": {
+        "ja3_ja4_randomization_active": {
+          "type": "boolean",
+          "description": "True if TLS Client Hello cipher suite and extension ordering are randomized."
+        },
+        "tcp_window_equalization_active": {
+          "type": "boolean",
+          "description": "True if outbound TCP window sizes and MSS options match standardized baselines."
+        },
+        "http2_frame_padding_active": {
+          "type": "boolean",
+          "description": "True if HTTP/2 stream headers and settings frames are padded to defeat OSINT profiling."
+        }
+      },
+      "required": [
+        "ja3_ja4_randomization_active",
+        "tcp_window_equalization_active",
+        "http2_frame_padding_active"
+      ],
+      "additionalProperties": false
+    },
+    "broker_opt_outs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "broker_name": {
+            "type": "string"
+          },
+          "opt_out_submitted": {
+            "type": "boolean"
+          },
+          "confirmation_hash": {
+            "type": "string"
+          }
+        },
+        "required": ["broker_name", "opt_out_submitted"]
+      }
+    },
+    "noise_injection": {
+      "type": "object",
+      "properties": {
+        "active": {
+          "type": "boolean"
+        },
+        "payload_type": {
+          "type": "string",
+          "enum": ["SYNTHETIC_METADATA", "ZERO_WIDTH_TRUNCATION", "CONTRADICTORY_AFFILIATION"]
+        },
+        "token_hash": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        }
+      },
+      "required": ["active", "payload_type", "token_hash"]
+    }
+  },
+  "required": [
+    "identity_id",
+    "jurisdiction_context",
+    "timestamp_utc",
+    "decoupling_status",
+    "exposure_score",
+    "transport_fingerprint_neutralization",
+    "broker_opt_outs",
+    "noise_injection"
+  ]
+}

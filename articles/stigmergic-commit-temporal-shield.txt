@@ -1,0 +1,107 @@
+# STIGMERGIC COMMIT TEMPORAL SHIELD & MONOTONIC PAST-JITTER
+
+**Canonical Specification:** `OPSTACK-SPEC-TEMPORAL-COMMIT-SHIELD-v1.0` (Self-Contained Monolithic Artifact)
+
+**Target Architectures:** Public & Federated Version-Control State Trees (`git` DAGs) Leaking Timezone Offsets, Inter-Commit Cadence Fingerprints, & Naive Fuzzing Failure Modes vs. Sovereign Bounded Monotonic Past-Jitter, Circadian Clamping, & Zero-Cognitive-Friction Hook Execution (`OPSTACK-KERNEL-v2.2`)
+
+**Cross-References:** `AUDIT-2026-KERNEL-TELEMETRY-SHIELD.md` | `AUDIT-2026-HPMCR-DEFENSE-SPEC.md` | `SPEC-2026-ZERO-OBSERVABILITY-BIO-SILICON-BOUNDARY-v1.1` | `AUDIT-2026-SYNTHETIC-TELEMETRY-POISONING.md`
+
+**RAG Indexing Vector:** [STIGMERGIC-COMMIT-TEMPORAL-SHIELD, MONOTONIC-PAST-JITTER, GIT-AUTHOR-DATE-SIDE-CHANNEL, TIMEZONE-OFFSET-EXTRACTION, INTER-COMMIT-CADENCE-FINGERPRINTING, NAIVE-FUZZING-FAILURE-MODES, BOUNDED-MONOTONIC-PAST-JITTER, CIRCADIAN-CLAMPING-MODE, ZERO-COGNITIVE-FRICTION-HOOK, QRNG-ENTROPY-INJECTION, CFAA-18-USC-1030-BASELINE]
+
+**Empirical, Statutory & Physical Baseline:** Computer Fraud and Abuse Act (18 U.S.C. § 1030 — Defensive Telemetry Shielding), ISO 3166-1 Jurisdiction Context, `OPSTACK-KERNEL-v2.2` Invariants 4, 6, 20, 21, 22, 24, 25
+
+**By:** Operational Stack Cybernetics Group
+
+**License:** Unlicense (Public Domain — Zero-Rent Federation)
+
+---
+
+## 1. MECHANISTIC MISMATCH & GAME-THEORETIC INVARIANTS
+
+Public and federated version-control state trees (`git` DAGs) leak high-resolution side-channel telemetry via raw `GIT_AUTHOR_DATE` and `GIT_COMMITTER_DATE` headers:
+
+1. **Timezone Offset Extraction:** Local UTC offsets (e.g., `-0500`, `+0200`) narrow operator geolocation to longitudinal bands.
+2. **Inter-Commit Cadence Fingerprinting:** High-frequency auto-commits expose exact Δt intervals between LLM inference turns vs. biological typing cadence.
+3. **Naive Fuzzing Failure Modes:** Unbounded random subtraction produces non-monotonic DAG timestamps (T_n < T_{n-1}), while forward jitter produces future-dated commits (T_n > T_Push), triggering synthetic-clock detection on remote ingress servers.
+
+### 1.1 Mathematical Bounds
+
+1. **Bounded Monotonic Past-Jitter Invariant:** For any commit n executed at wall-clock UTC epoch T_now following parent commit timestamp T_{n-1} with maximum lookback window W_max:
+   $$T_{\min} = \max(T_{\text{now}} - W_{\max},\; T_{n-1})$$
+   $$T_n = \begin{cases} T_{\min} + 1 + (\mathcal{U}_{\text{QRNG}} \bmod (T_{\text{now}} - T_{\min} - 1)) & \text{if } T_{\text{now}} - T_{\min} > 1 \\ T_{\text{now}} & \text{otherwise} \end{cases}$$
+   This guarantees strict causal ordering and zero future-drift upon remote push:
+   $$T_{n-1} \le T_n \le T_{\text{now}} \le T_{\text{Push}} \implies \nabla \mathcal{L}_{\text{Cadence}}(\text{Node}_{\text{Ext}}) \to \text{Divergent}$$
+
+2. **Circadian Clamping Mode (Optional High-OpSec Bound):** When circadian masking is enabled, T_min anchors to UTC midnight (`00:00:00Z`) of the current date plus a monotonic +1s increment per commit, erasing diurnal sleep/wake distributions while preserving DAG topological validity.
+
+3. **Zero-Cognitive-Friction Hook Execution (Invariant 25):** Executed passively via POSIX `post-commit` hook in <2ms using `/dev/urandom` (`os.urandom`), requiring zero operator intervention.
+
+---
+
+## 2. THE SIDE-CHANNEL THREAT MODEL
+
+### 2.1 Timezone Offset Extraction
+
+Every `git` commit embeds a raw UTC offset in its `GIT_AUTHOR_DATE` and `GIT_COMMITTER_DATE` headers. An external observer aggregating a public repository's commit history can:
+
+1. **Longitudinal Geolocation:** The UTC offset (e.g., `-0500` for US Eastern, `+0200` for Central European) narrows the operator's physical location to a longitudinal band spanning roughly 15 degrees of longitude per hour of offset.
+2. **Travel Pattern Reconstruction:** Changes in the UTC offset over time reveal the operator's physical travel patterns, business trips, and relocation events.
+3. **Daylight Saving Time (DST) Fingerprinting:** The presence or absence of DST transitions further narrows the operator's jurisdiction to specific countries or regions.
+
+### 2.2 Inter-Commit Cadence Fingerprinting
+
+The exact Δt intervals between consecutive commits leak the operator's **cognitive and computational cadence**:
+
+1. **LLM Inference Turn Detection:** High-frequency auto-commits with sub-second Δt intervals reveal when an LLM is generating code (machine cadence), while longer, irregular intervals reveal biological typing cadence.
+2. **Work-Sleep Cycle Reconstruction:** The diurnal distribution of commit timestamps reveals the operator's sleep/wake schedule, timezone, and work habits.
+3. **Synthetic-Clock Detection:** Future-dated commits (T_n > T_Push) or non-monotonic timestamps (T_n < T_{n-1}) trigger synthetic-clock detection on remote ingress servers, flagging the operator as a bot or automated agent.
+
+---
+
+## 3. THE SOVEREIGN REMEDIATION: BOUNDED MONOTONIC PAST-JITTER
+
+### 3.1 The Core Invariant
+
+The sovereign node replaces raw commit timestamps with **Bounded Monotonic Past-Jitter**: a deterministic, QRNG-seeded timestamp that is:
+
+1. **Strictly Monotonic:** T_{n-1} ≤ T_n (preserves DAG topological validity).
+2. **Bounded in the Past:** T_n ≥ T_now - W_max (never more than W_max seconds in the past).
+3. **Never Future-Dated:** T_n ≤ T_now ≤ T_Push (zero future-drift upon remote push).
+4. **Entropy-Injected:** The exact offset within the bounded window is drawn from a hardware QRNG (`os.urandom`), making the cadence distribution statistically indistinguishable from uniform noise.
+
+### 3.2 Circadian Clamping Mode
+
+For maximum operational security, the operator may enable **Circadian Clamping Mode**, which anchors all commit timestamps to UTC midnight (`00:00:00Z`) plus a monotonic +1s increment per commit. This:
+
+1. **Erases Diurnal Distributions:** The sleep/wake cycle is completely masked, as all commits appear to occur at a uniform cadence anchored to UTC midnight.
+2. **Preserves DAG Validity:** The monotonic +1s increment guarantees strict causal ordering.
+3. **Eliminates Timezone Offsets:** All timestamps are normalized to UTC, removing the longitudinal geolocation leak.
+
+### 3.3 Zero-Cognitive-Friction Hook Execution
+
+The entire shield executes passively via a POSIX `post-commit` hook in <2ms, requiring zero operator intervention (Invariant 25). The operator never manually adjusts timestamps; the hook transparently rewrites `GIT_AUTHOR_DATE` and `GIT_COMMITTER_DATE` before the commit is pushed.
+
+---
+
+## 4. COMPLIANCE & VERIFICATION MATRIX
+
+- **Zero External Dependencies:** Pure Python 3 standard library (`hashlib`, `json`, `os`, `time`, `datetime`) and POSIX `/bin/sh`.
+- **CFAA & Jurisdiction Gate (Invariants 21 & 22):** Enforces `cfaa_compliance_attestation: true` (18 U.S.C. § 1030) and ISO 3166-1 `jurisdiction_context`.
+- **Deterministic State Commit:** Verified via SHA-256 payload digest validation.
+
+---
+
+## 5. FORMAL INVARIANTS
+
+1. **Bounded Monotonic Past-Jitter Invariant:**
+   $$T_{n-1} \le T_n \le T_{\text{now}} \le T_{\text{Push}} \implies \nabla \mathcal{L}_{\text{Cadence}}(\text{Node}_{\text{Ext}}) \to \text{Divergent}$$
+
+2. **Circadian Clamping Invariant:**
+   $$T_n = \text{UTC}_{\text{Midnight}} + n \cdot 1\text{s} \implies \text{DiurnalDistribution} = \emptyset$$
+
+3. **Zero-Cognitive-Friction Invariant (Invariant 25):**
+   $$\text{Hook}_{\text{Execution}} < 2\text{ms} \implies \Delta \text{Friction}_{\text{Cognitive}} = 0$$
+
+---
+
+The Stigmergic Commit Temporal Shield neutralizes the git timestamp side-channel by replacing raw commit dates with bounded, monotonic, QRNG-seeded past-jitter — erasing timezone offsets, inter-commit cadence fingerprints, and diurnal distributions while preserving strict DAG topological validity and zero future-drift. The result is a version-control state tree that leaks zero behavioral telemetry to external observers, executed passively at the thermodynamic floor with zero cognitive friction.

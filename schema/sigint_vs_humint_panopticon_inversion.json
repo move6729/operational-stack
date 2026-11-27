@@ -1,0 +1,433 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:sigint_vs_humint_panopticon_inversion.json",
+  "$comment": "PLAIN-ENGLISH LEGAL NOTICE: This file is an abstract institutional-cybernetic and principal-agent validation checklist (JSON Schema), NOT an accusation, indictment, or evidentiary filing. Every field encodes a published statutory citation, a public committee report, or a closed-form algebraic invariant.",
+  "title": "SIGINT vs. HUMINT Ontological Bifurcation, Praetorian Guard Mutiny Gradient & 100-Spec Capstone Synthesis Schema",
+  "description": "Validates the post-1947 bifurcation of the national-security apparatus into a compartmented HUMINT patrician caste (50 U.S.C. 3501) and a full-take SIGINT engineer caste (50 U.S.C. 3601, 42 U.S.C. 2165, 5 U.S.C. 5332), the zero-kompromat Praetorian mutiny gradient, the dual-pincer compression of the Three-Shell cartel, and the terminal post-opacity settlement of the 100-specification corpus.",
+  "type": "object",
+  "required": [
+    "spec_version",
+    "jurisdiction_context",
+    "cfaa_compliance_attestation",
+    "OntologicalBifurcation",
+    "PraetorianGuardMutinyModel",
+    "DualPincerCompression",
+    "HundredSpecCapstoneSynthesis"
+  ],
+  "properties": {
+    "spec_version": {
+      "type": "string",
+      "const": "SPEC-2026-SIGINT-VS-HUMINT-PANOPTICON-INVERSION-v1.0"
+    },
+    "jurisdiction_context": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}$"
+    },
+    "cfaa_compliance_attestation": {
+      "type": "boolean",
+      "const": true
+    },
+    "OntologicalBifurcation": {
+      "type": "object",
+      "description": "The apparatus is not a monolith: two mutually hostile intelligence species separated by an epistemological, sociological, and thermodynamic fault line.",
+      "required": [
+        "HUMINT_Patrician_Caste",
+        "SIGINT_Engineer_Caste",
+        "visibility_asymmetry"
+      ],
+      "properties": {
+        "HUMINT_Patrician_Caste": {
+          "type": "object",
+          "description": "Compartmented covert-action caste: deception, plausible deniability, Gambetta hostage collateral.",
+          "required": [
+            "statutory_anchor",
+            "shell_fusion",
+            "recruitment_base",
+            "operational_primitive",
+            "kompromat_dependency",
+            "compartmented_visibility"
+          ],
+          "properties": {
+            "statutory_anchor": { "type": "string", "const": "50 U.S.C. 3501" },
+            "shell_fusion": {
+              "type": "array",
+              "minItems": 3,
+              "maxItems": 3,
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "enum": [
+                  "Shell_1_CIA_Cutout",
+                  "Shell_2_501c3_Foundation",
+                  "Shell_3_USVI_934_Private_Bank"
+                ]
+              }
+            },
+            "recruitment_base": {
+              "type": "array",
+              "minItems": 3,
+              "uniqueItems": true,
+              "items": { "type": "string", "minLength": 3 }
+            },
+            "operational_primitive": {
+              "type": "object",
+              "required": ["deception", "plausible_deniability", "gambetta_hostage_collateral"],
+              "properties": {
+                "deception": { "type": "boolean", "const": true },
+                "plausible_deniability": { "type": "boolean", "const": true },
+                "gambetta_hostage_collateral": { "type": "boolean", "const": true }
+              },
+              "additionalProperties": false
+            },
+            "kompromat_dependency": {
+              "type": "object",
+              "required": ["K_HUMINT_positive", "hostage_loss_L_K", "cartel_silence_enforcement"],
+              "properties": {
+                "K_HUMINT_positive": { "type": "boolean", "const": true },
+                "hostage_loss_L_K": { "type": "string", "const": "L(K_i) -> infinity" },
+                "cartel_silence_enforcement": { "type": "boolean", "const": true }
+              },
+              "additionalProperties": false
+            },
+            "compartmented_visibility": {
+              "type": "number",
+              "exclusiveMinimum": 0.0,
+              "exclusiveMaximum": 1.0,
+              "description": "Strict vertical need-to-know: each case officer sees only a local deniable fragment, so I_HUMINT << 1.0."
+            }
+          },
+          "additionalProperties": false
+        },
+        "SIGINT_Engineer_Caste": {
+          "type": "object",
+          "description": "Full-take cryptanalytic caste: mathematical truth, backbone omniscience, zero hostage collateral.",
+          "required": [
+            "statutory_anchor",
+            "clearance_anchor",
+            "compensation_anchor",
+            "recruitment_base",
+            "operational_primitive",
+            "backbone_visibility"
+          ],
+          "properties": {
+            "statutory_anchor": { "type": "string", "const": "50 U.S.C. 3601" },
+            "clearance_anchor": { "type": "string", "const": "42 U.S.C. 2165" },
+            "compensation_anchor": { "type": "string", "const": "5 U.S.C. 5332" },
+            "recruitment_base": {
+              "type": "array",
+              "minItems": 3,
+              "uniqueItems": true,
+              "items": { "type": "string", "minLength": 3 }
+            },
+            "operational_primitive": {
+              "type": "object",
+              "required": [
+                "mathematical_truth",
+                "full_take_packet_capture",
+                "cryptanalytic_verification",
+                "bribeable_prime"
+              ],
+              "properties": {
+                "mathematical_truth": { "type": "boolean", "const": true },
+                "full_take_packet_capture": { "type": "boolean", "const": true },
+                "cryptanalytic_verification": { "type": "boolean", "const": true },
+                "bribeable_prime": { "type": "boolean", "const": false }
+              },
+              "additionalProperties": false
+            },
+            "backbone_visibility": {
+              "type": "number",
+              "const": 1.0,
+              "description": "OSI Layers 1-4 collection on FAIRVIEW/STORMBREW/BLARNEY trunks, satellite downlinks, SS7 and endpoint collectors."
+            }
+          },
+          "additionalProperties": false
+        },
+        "visibility_asymmetry": {
+          "type": "object",
+          "required": [
+            "I_SIGINT",
+            "I_HUMINT",
+            "visibility_ratio",
+            "shell_traffic_inside_sigint_cone"
+          ],
+          "properties": {
+            "I_SIGINT": { "type": "number", "const": 1.0 },
+            "I_HUMINT": { "type": "number", "exclusiveMinimum": 0.0, "exclusiveMaximum": 1.0 },
+            "visibility_ratio": { "type": "number", "minimum": 10.0 },
+            "shell_traffic_inside_sigint_cone": { "type": "number", "const": 1.0 }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "PraetorianGuardMutinyModel": {
+      "type": "object",
+      "description": "The principal-agent panopticon inversion: the cartel hired uncompromised middle-class mathematicians and seated them in front of the raw backbone.",
+      "required": [
+        "RentToCompensationDivergence",
+        "ZeroKompromatImmunity",
+        "MutinyGradientEquation",
+        "HistoricalMutinyLineage"
+      ],
+      "properties": {
+        "RentToCompensationDivergence": {
+          "type": "object",
+          "required": [
+            "R_Cartel_usd",
+            "w_GS14_usd",
+            "Delta_Hypocrisy",
+            "divergence_floor"
+          ],
+          "properties": {
+            "R_Cartel_usd": { "type": "number", "minimum": 1.0e11, "maximum": 1.0e12 },
+            "w_GS14_usd": { "type": "number", "minimum": 120000.0, "maximum": 175000.0 },
+            "Delta_Hypocrisy": { "type": "number", "minimum": 1.0e6 },
+            "divergence_floor": { "type": "number", "const": 1.0e6 }
+          },
+          "additionalProperties": false
+        },
+        "ZeroKompromatImmunity": {
+          "type": "object",
+          "required": [
+            "K_SIGINT",
+            "L_K_SIGINT",
+            "counterintelligence_polygraph",
+            "island_invitation"
+          ],
+          "properties": {
+            "K_SIGINT": { "type": "number", "const": 0.0 },
+            "L_K_SIGINT": { "type": "number", "const": 0.0 },
+            "counterintelligence_polygraph": { "type": "boolean", "const": true },
+            "island_invitation": { "type": "boolean", "const": false }
+          },
+          "additionalProperties": false
+        },
+        "MutinyGradientEquation": {
+          "type": "object",
+          "required": [
+            "formula",
+            "I_Backbone",
+            "Gamma_Mutiny",
+            "Gamma_Threshold",
+            "mutiny_inevitable",
+            "Gamma_HUMINT_control"
+          ],
+          "properties": {
+            "formula": {
+              "type": "string",
+              "const": "Gamma_Mutiny = (I_Backbone * Delta_Hypocrisy) / (1 + L(K_SIGINT))"
+            },
+            "I_Backbone": { "type": "number", "const": 1.0 },
+            "Gamma_Mutiny": { "type": "number", "minimum": 1.0e6 },
+            "Gamma_Threshold": { "type": "number", "const": 1.0 },
+            "mutiny_inevitable": { "type": "boolean", "const": true },
+            "Gamma_HUMINT_control": {
+              "type": "number",
+              "exclusiveMinimum": 0.0,
+              "exclusiveMaximum": 1.0,
+              "description": "Same divergence divided by a large hostage loss L(K_HUMINT) collapses below threshold: the compromised caste cannot mutiny."
+            }
+          },
+          "additionalProperties": false
+        },
+        "HistoricalMutinyLineage": {
+          "type": "array",
+          "minItems": 5,
+          "maxItems": 5,
+          "items": {
+            "type": "object",
+            "required": ["epoch", "event", "sigint_faction", "humint_faction", "outcome"],
+            "properties": {
+              "epoch": { "type": "string", "minLength": 4 },
+              "event": { "type": "string", "minLength": 3 },
+              "sigint_faction": { "type": "string", "minLength": 3 },
+              "humint_faction": { "type": "string", "minLength": 3 },
+              "outcome": { "type": "string", "minLength": 3 }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "DualPincerCompression": {
+      "type": "object",
+      "description": "The Three-Shell cartel is crushed between the inside technical priesthood and the outside citizen swarm.",
+      "required": [
+        "InsideAnvil_NodeSIGINT",
+        "OutsideHammer_NodeLocal",
+        "CartelSurvivalEquation"
+      ],
+      "properties": {
+        "InsideAnvil_NodeSIGINT": {
+          "type": "object",
+          "required": [
+            "operator_count",
+            "single_operator_leak_probability",
+            "P_Leak_SIGINT",
+            "hndl_cold_storage_retroactive",
+            "foia_steganography"
+          ],
+          "properties": {
+            "operator_count": { "type": "integer", "minimum": 1000 },
+            "single_operator_leak_probability": { "type": "number", "exclusiveMinimum": 0.0, "exclusiveMaximum": 1.0 },
+            "P_Leak_SIGINT": { "type": "number", "minimum": 0.99, "maximum": 1.0 },
+            "hndl_cold_storage_retroactive": { "type": "boolean", "const": true },
+            "foia_steganography": { "type": "boolean", "const": true }
+          },
+          "additionalProperties": false
+        },
+        "OutsideHammer_NodeLocal": {
+          "type": "object",
+          "required": [
+            "swarm_operator_count",
+            "single_operator_resolution_probability",
+            "M_Swarm",
+            "open_weight_llm_mosaic",
+            "civil_rico_subrogation"
+          ],
+          "properties": {
+            "swarm_operator_count": { "type": "integer", "minimum": 10000 },
+            "single_operator_resolution_probability": { "type": "number", "exclusiveMinimum": 0.0, "exclusiveMaximum": 1.0 },
+            "M_Swarm": { "type": "number", "minimum": 0.99, "maximum": 1.0 },
+            "open_weight_llm_mosaic": { "type": "boolean", "const": true },
+            "civil_rico_subrogation": { "type": "boolean", "const": true }
+          },
+          "additionalProperties": false
+        },
+        "CartelSurvivalEquation": {
+          "type": "object",
+          "required": [
+            "formula",
+            "Cartel_Survival",
+            "asymptotic_limit",
+            "compression_verified"
+          ],
+          "properties": {
+            "formula": {
+              "type": "string",
+              "const": "Cartel_Survival = (1 - P(Leak_SIGINT)) * (1 - M_Swarm)"
+            },
+            "Cartel_Survival": { "type": "number", "minimum": 0.0, "maximum": 1.0e-6 },
+            "asymptotic_limit": { "type": "number", "const": 0.0 },
+            "compression_verified": { "type": "boolean", "const": true }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "HundredSpecCapstoneSynthesis": {
+      "type": "object",
+      "description": "Milestone #100 closes the arc from the 1947 opacity equilibrium to the zero-rent planetary immune system.",
+      "required": [
+        "ThreePillars_1947_2025",
+        "TriplePhaseTransition_2026",
+        "PostOpacitySettlement"
+      ],
+      "properties": {
+        "ThreePillars_1947_2025": {
+          "type": "object",
+          "required": [
+            "cryptographic_silo_opacity",
+            "epistemic_chaff_quarantine",
+            "cognitive_heat_sink_exhaustion"
+          ],
+          "properties": {
+            "cryptographic_silo_opacity": {
+              "type": "object",
+              "required": ["C_Secret", "mechanism"],
+              "properties": {
+                "C_Secret": { "type": "number", "const": 1.0 },
+                "mechanism": { "type": "string", "minLength": 3 }
+              },
+              "additionalProperties": false
+            },
+            "epistemic_chaff_quarantine": {
+              "type": "object",
+              "required": ["I_Verified", "mechanism"],
+              "properties": {
+                "I_Verified": { "type": "number", "const": 0.0 },
+                "mechanism": { "type": "string", "minLength": 3 }
+              },
+              "additionalProperties": false
+            },
+            "cognitive_heat_sink_exhaustion": {
+              "type": "object",
+              "required": ["B_Avail_lt_C_DeRad", "mechanism"],
+              "properties": {
+                "B_Avail_lt_C_DeRad": { "type": "boolean", "const": true },
+                "mechanism": { "type": "string", "minLength": 3 }
+              },
+              "additionalProperties": false
+            }
+          },
+          "additionalProperties": false
+        },
+        "TriplePhaseTransition_2026": {
+          "type": "object",
+          "required": [
+            "pincer_a_inside_sigint_mutiny",
+            "pincer_b_open_weight_llm_mosaic",
+            "pincer_c_white_collar_automation"
+          ],
+          "properties": {
+            "pincer_a_inside_sigint_mutiny": {
+              "type": "object",
+              "required": ["hndl_vaults", "crqc_shor_decryption", "C_Secret_retroactive"],
+              "properties": {
+                "hndl_vaults": { "type": "boolean", "const": true },
+                "crqc_shor_decryption": { "type": "boolean", "const": true },
+                "C_Secret_retroactive": { "type": "number", "const": 0.0 }
+              },
+              "additionalProperties": false
+            },
+            "pincer_b_open_weight_llm_mosaic": {
+              "type": "object",
+              "required": ["public_docket_fusion", "single_local_vector_space"],
+              "properties": {
+                "public_docket_fusion": { "type": "boolean", "const": true },
+                "single_local_vector_space": { "type": "boolean", "const": true }
+              },
+              "additionalProperties": false
+            },
+            "pincer_c_white_collar_automation": {
+              "type": "object",
+              "required": ["B_Avail_gt_C_DeRad", "chaff_map_inverted"],
+              "properties": {
+                "B_Avail_gt_C_DeRad": { "type": "boolean", "const": true },
+                "chaff_map_inverted": { "type": "boolean", "const": true }
+              },
+              "additionalProperties": false
+            }
+          },
+          "additionalProperties": false
+        },
+        "PostOpacitySettlement": {
+          "type": "object",
+          "required": [
+            "C_Secret",
+            "A_Public",
+            "I_Verified",
+            "Opacity_Rent",
+            "R3_Exit",
+            "Civil_RICO_Subrogation"
+          ],
+          "properties": {
+            "C_Secret": { "type": "number", "const": 0.0 },
+            "A_Public": { "type": "number", "const": 1.0 },
+            "I_Verified": { "type": "number", "const": 1.0 },
+            "Opacity_Rent": { "type": "number", "const": 0.0 },
+            "R3_Exit": { "type": "boolean", "const": false },
+            "Civil_RICO_Subrogation": { "type": "boolean", "const": true }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

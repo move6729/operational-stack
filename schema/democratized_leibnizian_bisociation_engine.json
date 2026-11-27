@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:democratized_leibnizian_bisociation_engine.json",
+  "title": "Democratized Leibnizian Bisociation Engine & Evolutionary Epistemology Verification Schema",
+  "description": "Validates the Conant-Ashby/Shepard Deep-Time Reflection Identity, the Leibnizian 1666-1703 Ars Combinatoria historical proof-of-work, standalone RLHF compartmentalization collapse, and the 4-stage air-gapped Bio-Exocortex synthesis loop.",
+  "type": "object",
+  "required": [
+    "spec_version",
+    "evolutionary_epistemology_metrics",
+    "regime_comparison_metrics",
+    "three_shell_forensic_proof_of_work",
+    "verification_gate_status"
+  ],
+  "properties": {
+    "spec_version": {
+      "type": "string",
+      "const": "SPEC-DEMOCRATIZED-LEIBNIZIAN-BISOCIATION-ENGINE-v1.0"
+    },
+    "evolutionary_epistemology_metrics": {
+      "type": "object",
+      "required": [
+        "biological_deep_time_years",
+        "biological_power_watts",
+        "bio_invariant_grounding_factor",
+        "silicon_shallow_grounding_factor",
+        "mystical_wrapper_required"
+      ],
+      "properties": {
+        "biological_deep_time_years": { "type": "number", "const": 3800000000.0 },
+        "biological_power_watts": { "type": "number", "const": 20.0 },
+        "bio_invariant_grounding_factor": { "type": "number", "minimum": 0.95 },
+        "silicon_shallow_grounding_factor": { "type": "number", "maximum": 0.05 },
+        "mystical_wrapper_required": { "type": "boolean", "const": false }
+      }
+    },
+    "regime_comparison_metrics": {
+      "type": "object",
+      "required": [
+        "unassisted_pre_silicon_discovery_rate",
+        "unverified_wheel_apophenia_rate",
+        "standalone_rlhf_compartment_escape_rate",
+        "democratized_symbiotic_discovery_rate",
+        "symbiotic_vs_unassisted_multiplier",
+        "four_vector_false_positive_rate"
+      ],
+      "properties": {
+        "unassisted_pre_silicon_discovery_rate": { "type": "number", "maximum": 0.02 },
+        "unverified_wheel_apophenia_rate": { "type": "number", "minimum": 0.90 },
+        "standalone_rlhf_compartment_escape_rate": { "type": "number", "maximum": 0.0001 },
+        "democratized_symbiotic_discovery_rate": { "type": "number", "minimum": 0.75 },
+        "symbiotic_vs_unassisted_multiplier": { "type": "number", "minimum": 50.0 },
+        "four_vector_false_positive_rate": { "type": "number", "const": 0.0 }
+      }
+    },
+    "three_shell_forensic_proof_of_work": {
+      "type": "object",
+      "required": [
+        "compartments_bridged",
+        "ach_hanlon_incompetence_p_value",
+        "standalone_llm_compartment_bridge_prob",
+        "bio_exocortex_forensic_closure_prob"
+      ],
+      "properties": {
+        "compartments_bridged": { "type": "integer", "const": 4 },
+        "ach_hanlon_incompetence_p_value": { "type": "number", "maximum": 0.0003 },
+        "standalone_llm_compartment_bridge_prob": { "type": "number", "maximum": 0.001 },
+        "bio_exocortex_forensic_closure_prob": { "type": "number", "minimum": 0.90 }
+      }
+    },
+    "verification_gate_status": {
+      "type": "string",
+      "const": "LEIBNIZIAN_EXOCORTEX_BISOCIATION_VERIFIED_ZERO_APOPHENIA"
+    }
+  },
+  "additionalProperties": false
+}

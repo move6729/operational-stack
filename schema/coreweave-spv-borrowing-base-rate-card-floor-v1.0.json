@@ -1,0 +1,177 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:coreweave-spv-borrowing-base-rate-card-floor-v1.0.json",
+  "title": "CoreWeave SPV Borrowing-Base Rate-Card Floor Verification Record",
+  "description": "Validation schema for the forensic verification record pairing SPEC-COREWEAVE-SPV-BORROWING-BASE-RATE-CARD-FLOOR-v1.0: Q3 2026 Form 10-Q (accession 0001769628-26-000465) financials, SPV borrowing-base rate-card floor breakeven token volumes, 23-model public inference clearinghouse head-to-head multiples, OBDC fair-value mark divergence, and the parameterized 4-tier debt-stack recovery waterfall.",
+  "type": "object",
+  "required": [
+    "jurisdiction_context",
+    "cfaa_compliance_attestation",
+    "filing_metadata",
+    "q3_2026_financials",
+    "rate_card_floor",
+    "obdc_mark_divergence",
+    "recovery_waterfall"
+  ],
+  "properties": {
+    "jurisdiction_context": {
+      "type": "string",
+      "description": "ISO 3166-1 jurisdiction governing the record (e.g., 'US').",
+      "enum": ["US", "EU", "GB"]
+    },
+    "cfaa_compliance_attestation": {
+      "type": "object",
+      "description": "Attestation that all data derives exclusively from public filings and zero unauthorized-access vectors (18 U.S.C. 1030).",
+      "required": ["compliant", "public_record_only", "unauthorized_access_vectors"],
+      "properties": {
+        "compliant": { "const": true },
+        "public_record_only": { "const": true },
+        "unauthorized_access_vectors": { "const": 0 },
+        "attestation_note": {
+          "type": "string",
+          "const": "All figures sourced from public SEC filings; no unauthorized access to any non-public system or record."
+        }
+      },
+      "additionalProperties": false
+    },
+    "filing_metadata": {
+      "type": "object",
+      "required": ["cik", "accession_number", "filing_date", "period_end"],
+      "properties": {
+        "cik": { "type": "string", "pattern": "^0001769628$" },
+        "accession_number": { "type": "string", "pattern": "^0001769628-26-000465$" },
+        "filing_date": { "type": "string", "format": "date" },
+        "period_end": { "type": "string", "format": "date" }
+      },
+      "additionalProperties": false
+    },
+    "q3_2026_financials": {
+      "type": "object",
+      "required": [
+        "q3_revenue_m", "nine_m_revenue_m", "q3_net_loss_m", "nine_m_net_loss_m",
+        "nine_m_ocf_m", "nine_m_capex_m", "nine_m_fcf_m", "debt_principal_m",
+        "recourse_gross_m", "nonrecourse_gross_m", "total_debt_net_m",
+        "op_lease_liab_m", "total_obligations_m", "spv_collateral_box_m"
+      ],
+      "properties": {
+        "q3_revenue_m": { "type": "number", "const": 3661.0 },
+        "nine_m_revenue_m": { "type": "number", "const": 8314.0 },
+        "q3_net_loss_m": { "type": "number", "const": -709.0 },
+        "nine_m_net_loss_m": { "type": "number", "const": -2075.0 },
+        "nine_m_ocf_m": { "type": "number", "const": 5638.0 },
+        "nine_m_capex_m": { "type": "number", "const": 23558.0 },
+        "nine_m_fcf_m": { "type": "number", "const": -17920.0 },
+        "debt_principal_m": { "type": "number", "const": 47505.0 },
+        "recourse_gross_m": { "type": "number", "const": 42152.0 },
+        "nonrecourse_gross_m": { "type": "number", "const": 5353.0 },
+        "total_debt_net_m": { "type": "number", "const": 46873.0 },
+        "op_lease_liab_m": { "type": "number", "const": 18697.0 },
+        "total_obligations_m": { "type": "number", "const": 66202.0 },
+        "spv_collateral_box_m": { "type": "number", "const": 25900.0 },
+        "maturity_schedule_m": {
+          "type": "object",
+          "required": ["remaining_2026", "fy2027", "fy2028", "fy2029", "fy2030", "thereafter"],
+          "properties": {
+            "remaining_2026": { "type": "number", "const": 2433.0 },
+            "fy2027": { "type": "number", "const": 10974.0 },
+            "fy2028": { "type": "number", "const": 5479.0 },
+            "fy2029": { "type": "number", "const": 4727.0 },
+            "fy2030": { "type": "number", "const": 4247.0 },
+            "thereafter": { "type": "number", "const": 19645.0 }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "rate_card_floor": {
+      "type": "object",
+      "required": ["spot_floor_per_mtok_usd", "breakeven_capital_only_mtok_yr", "breakeven_incl_cor_mtok_yr", "head_to_head_multiples"],
+      "properties": {
+        "spot_floor_per_mtok_usd": { "type": "number", "const": 0.04 },
+        "breakeven_capital_only_mtok_yr": { "type": "number", "const": 266900000 },
+        "breakeven_incl_cor_mtok_yr": { "type": "number", "const": 385200000 },
+        "head_to_head_multiples": {
+          "type": "array",
+          "minItems": 5,
+          "maxItems": 5,
+          "items": {
+            "type": "object",
+            "required": ["model_slug", "input_multiple", "output_multiple"],
+            "properties": {
+              "model_slug": { "type": "string" },
+              "input_multiple": { "type": "number", "minimum": 1.0 },
+              "output_multiple": { "type": "number", "minimum": 1.0 }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "obdc_mark_divergence": {
+      "type": "object",
+      "required": ["par_k", "amortized_cost_k", "fair_value_k", "fv_pct_of_par", "public_bond_range_cents", "spread_points"],
+      "properties": {
+        "par_k": { "type": "number", "const": 8969.0 },
+        "amortized_cost_k": { "type": "number", "const": 8531.0 },
+        "fair_value_k": { "type": "number", "const": 9025.0 },
+        "fv_pct_of_par": { "type": "number", "const": 100.6244 },
+        "public_bond_range_cents": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "items": { "type": "number", "minimum": 0, "maximum": 100 }
+        },
+        "spread_points": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "items": { "type": "number", "minimum": 0 }
+        }
+      },
+      "additionalProperties": false
+    },
+    "recovery_waterfall": {
+      "type": "object",
+      "required": ["tiers", "verification_points"],
+      "properties": {
+        "tiers": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 4,
+          "items": {
+            "type": "object",
+            "required": ["name", "principal_m", "breakeven_ev_m"],
+            "properties": {
+              "name": { "type": "string" },
+              "principal_m": { "type": "number", "exclusiveMinimum": 0 },
+              "breakeven_ev_m": { "type": "number", "exclusiveMinimum": 0 }
+            },
+            "additionalProperties": false
+          }
+        },
+        "verification_points": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["ev_m", "tier_recoveries_cents", "blended_recovery_cents"],
+            "properties": {
+              "ev_m": { "type": "number", "exclusiveMinimum": 0 },
+              "tier_recoveries_cents": {
+                "type": "array",
+                "minItems": 4,
+                "maxItems": 4,
+                "items": { "type": "number", "minimum": 0, "maximum": 100 }
+              },
+              "blended_recovery_cents": { "type": "number", "minimum": 0, "maximum": 100 }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

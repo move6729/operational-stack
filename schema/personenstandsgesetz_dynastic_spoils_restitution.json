@@ -1,0 +1,226 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:personenstandsgesetz_dynastic_spoils_restitution.json",
+  "title": "PersonenstandsgesetzDynasticSpoilsRestitution",
+  "description": "Formal JSON Schema for SPEC-PERSONENSTANDSGESETZ-PRIVACY-FIREWALL-AND-DYNASTIC-SPOILS-RESTITUTION-v1.0 modeling the Personenstandsgesetz Sec. 5 registry lock horizons, continuous-compounding dynastic spoils identities, Rosenburg / NARA RG 242 / Berlin Document Center evidentiary anchors, registry disambiguation collision algebra, and present-tense adult ratification scoring.",
+  "type": "object",
+  "required": [
+    "canonical_specification",
+    "module_1_pstg_lock_horizon",
+    "module_2_dynastic_spoils_compounding",
+    "module_3_evidentiary_anchors",
+    "module_4_registry_disambiguation_and_ratification"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "canonical_specification": {
+      "type": "string",
+      "const": "SPEC-PERSONENSTANDSGESETZ-PRIVACY-FIREWALL-AND-DYNASTIC-SPOILS-RESTITUTION-v1.0"
+    },
+    "module_1_pstg_lock_horizon": {
+      "type": "object",
+      "required": [
+        "pstg_birth_lock_years",
+        "pstg_marriage_lock_years",
+        "pstg_death_lock_years",
+        "generation_span_years",
+        "shielded_generations_ratio"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "pstg_birth_lock_years": {
+          "type": "integer",
+          "const": 110,
+          "description": "PStG Sec. 5 birth-register lock horizon in years (binding maximum lock)."
+        },
+        "pstg_marriage_lock_years": {
+          "type": "integer",
+          "const": 80,
+          "description": "PStG Sec. 5 marriage-register lock horizon in years."
+        },
+        "pstg_death_lock_years": {
+          "type": "integer",
+          "const": 30,
+          "description": "PStG Sec. 5 death-register lock horizon in years."
+        },
+        "generation_span_years": {
+          "type": "number",
+          "const": 30.0,
+          "description": "Standard generational span in years used to normalize lock horizons."
+        },
+        "shielded_generations_ratio": {
+          "type": "number",
+          "const": 3.6667,
+          "description": "Birth lock divided by generation span: full dynastic generations shielded from registry disclosure."
+        }
+      }
+    },
+    "module_2_dynastic_spoils_compounding": {
+      "type": "object",
+      "required": [
+        "guilt_counter_at_birth",
+        "initial_cartel_capital_usd",
+        "annual_compounding_rate",
+        "compounding_horizon_years",
+        "compounded_dynastic_spoils_usd",
+        "clean_slate_reputation_premium_usd",
+        "free_option_secrecy_payoff_usd",
+        "disgorgement_liability_under_concealment_usd"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "guilt_counter_at_birth": {
+          "type": "number",
+          "const": 0.0,
+          "description": "Axiom: descendants inherit zero personal guilt at birth; liability attaches to the capital, not the person."
+        },
+        "initial_cartel_capital_usd": {
+          "type": "number",
+          "const": 5000000.0,
+          "description": "Initial cartel capital principal in USD seeded at the start of the shielded horizon."
+        },
+        "annual_compounding_rate": {
+          "type": "number",
+          "const": 0.08,
+          "description": "Continuous annual compounding rate r applied over the shielded horizon."
+        },
+        "compounding_horizon_years": {
+          "type": "number",
+          "const": 75.0,
+          "description": "Compounding horizon T in years spanning the registry-locked interval."
+        },
+        "compounded_dynastic_spoils_usd": {
+          "type": "number",
+          "const": 2017143967.46,
+          "description": "A = P * e^(rT) = 5,000,000 * e^(0.08 * 75) = 5,000,000 * e^6 USD."
+        },
+        "clean_slate_reputation_premium_usd": {
+          "type": "number",
+          "const": 250000000.0,
+          "description": "Reputation premium monetized by the clean-slate identity under continued concealment."
+        },
+        "free_option_secrecy_payoff_usd": {
+          "type": "number",
+          "const": 2267143967.46,
+          "description": "Free-option secrecy payoff = compounded spoils + clean-slate reputation premium."
+        },
+        "disgorgement_liability_under_concealment_usd": {
+          "type": "number",
+          "const": 2017143967.46,
+          "description": "Restitution floor: disgorgement liability under concealment equals the compounded spoils."
+        }
+      }
+    },
+    "module_3_evidentiary_anchors": {
+      "type": "object",
+      "required": [
+        "rosenburg_nsdap_jurist_share",
+        "nara_rg242_nsdap_cards",
+        "bdc_embargo_battle_years",
+        "unscr_276_year",
+        "swakopmund_enclave_year"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "rosenburg_nsdap_jurist_share": {
+          "type": "number",
+          "const": 0.77,
+          "description": "Peak share of former NSDAP-member jurists in the post-war Federal Ministry of Justice per the Rosenburg study."
+        },
+        "nara_rg242_nsdap_cards": {
+          "type": "integer",
+          "const": 10700000,
+          "description": "NSDAP membership cards held in NARA Record Group 242 (Berlin Document Center collection)."
+        },
+        "bdc_embargo_battle_years": {
+          "type": "integer",
+          "const": 49,
+          "description": "Berlin Document Center embargo span in years: 1994 custody transfer minus 1945 seizure."
+        },
+        "unscr_276_year": {
+          "type": "integer",
+          "const": 1970,
+          "description": "UN Security Council Resolution 276 adoption year."
+        },
+        "swakopmund_enclave_year": {
+          "type": "integer",
+          "const": 1977,
+          "description": "Swakopmund enclave year; must strictly postdate UNCR 276."
+        }
+      }
+    },
+    "module_4_registry_disambiguation_and_ratification": {
+      "type": "object",
+      "required": [
+        "raw_surname_candidates",
+        "dob_disambiguation_factor",
+        "municipality_disambiguation_factor",
+        "joint_disambiguation_space",
+        "expected_collision_rate_4tuple",
+        "maiden_name_disambiguation_factor",
+        "expected_collision_rate_5tuple",
+        "deterministic_precision_5tuple",
+        "adult_ratification_vector",
+        "adult_ratification_score"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "raw_surname_candidates": {
+          "type": "integer",
+          "const": 12500,
+          "description": "Raw surname-only candidate pool before registry disambiguation."
+        },
+        "dob_disambiguation_factor": {
+          "type": "number",
+          "const": 7305.0,
+          "description": "Date-of-birth disambiguation factor (days in the 20-year cohort window)."
+        },
+        "municipality_disambiguation_factor": {
+          "type": "number",
+          "const": 2500.0,
+          "description": "Municipality-of-registration disambiguation factor."
+        },
+        "joint_disambiguation_space": {
+          "type": "number",
+          "const": 18262500.0,
+          "description": "Joint disambiguation space = DOB factor x municipality factor."
+        },
+        "expected_collision_rate_4tuple": {
+          "type": "number",
+          "const": 0.000684,
+          "description": "Expected collision rate for the surname x DOB x municipality 4-tuple lookup."
+        },
+        "maiden_name_disambiguation_factor": {
+          "type": "number",
+          "const": 1000.0,
+          "description": "Maiden-name disambiguation factor contributed by the marriage register."
+        },
+        "expected_collision_rate_5tuple": {
+          "type": "number",
+          "const": 0.000000684,
+          "description": "Expected collision rate after adding the maiden-name axis to the 5-tuple lookup."
+        },
+        "deterministic_precision_5tuple": {
+          "type": "number",
+          "const": 0.999999316,
+          "description": "Deterministic identification precision of the 5-tuple: 1 minus the 5-tuple collision rate."
+        },
+        "adult_ratification_vector": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "enum": [0, 1]
+          },
+          "minItems": 4,
+          "maxItems": 4,
+          "description": "4-dimensional binary indicator vector for present-tense adult ratification (1: Carl Schmitt Ausnahmezustand endorsement, 2: Southern Trust LP bridge retention, 3: Roatan ZEDE Grossraum financing, 4: St. Kitts 28-subject trial capitalization and board seat)."
+        },
+        "adult_ratification_score": {
+          "type": "integer",
+          "const": 4,
+          "description": "Present-tense adult ratification score: 4 of 4 operational dimensions ratified."
+        }
+      }
+    }
+  }
+}

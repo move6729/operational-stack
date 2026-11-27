@@ -1,0 +1,102 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:pbm_rebate_coinsurance_inversion.json",
+  "title": "PBM Rebate-Retention and Coinsurance List-Price Inversion — Locked Telemetry",
+  "description": "Machine-readable lock of the 15 telemetry constants for SPEC-PBM-REBATE-RETENTION-AND-COINSURANCE-INVERSION-v1.0. Record base: In the Matter of Caremark Rx, LLC; Zinc Health Services, LLC; Express Scripts, Inc.; Ascent Health Services LLC; OptumRx, Inc.; and Emisar Pharma Services LLC (FTC Docket No. 9437, 2024 Administrative Complaint), FTC Interim Staff Reports on Prescription Drug Middlemen (July 2024 & January 2025), 29 U.S.C. 1104/1106 (ERISA 404/406), Lewandowski v. Johnson & Johnson (D.N.J. Case No. 3:24-cv-00671), 42 U.S.C. 1320a-7b(b). Executable verification: proofs/pbm_rebate_coinsurance_inversion_proof.py (exit code 0).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "true_manufacturing_plus_margin_cost_usd",
+    "inflated_wac_list_price_usd",
+    "wac_to_production_cost_ratio",
+    "manufacturer_kickback_rebate_rate",
+    "total_rebate_pool_usd",
+    "offshore_gpo_pbm_retained_rebate_share",
+    "pbm_retained_rebate_extraction_usd",
+    "patient_coinsurance_rate_on_wac",
+    "patient_out_of_pocket_coinsurance_usd",
+    "net_post_rebate_drug_cost_usd",
+    "patient_share_of_true_net_cost_ratio",
+    "insurer_plan_net_outlay_after_rebate_and_patient_copay_usd",
+    "specialty_generic_nadac_acquisition_cost_usd",
+    "pbm_spread_pricing_plan_billed_usd",
+    "pbm_specialty_generic_markup_multiplier"
+  ],
+  "properties": {
+    "true_manufacturing_plus_margin_cost_usd": {
+      "type": "number",
+      "const": 25.0,
+      "description": "C_true: true manufacturing cost plus a reasonable margin for the archetype drug (USD)."
+    },
+    "inflated_wac_list_price_usd": {
+      "type": "number",
+      "const": 1000.0,
+      "description": "P_WAC: formulary-preferred Wholesale Acquisition Cost list price, inflated above true cost (USD)."
+    },
+    "wac_to_production_cost_ratio": {
+      "type": "number",
+      "const": 40.0,
+      "description": "kappa = P_WAC / C_true = 1000.0 / 25.0. WAC list-price inflation multiplier (E-1)."
+    },
+    "manufacturer_kickback_rebate_rate": {
+      "type": "number",
+      "const": 0.75,
+      "description": "r: secret reverse-auction manufacturer rebate rate off WAC, conditioned on formulary placement (FTC Docket No. 9437 mechanism)."
+    },
+    "total_rebate_pool_usd": {
+      "type": "number",
+      "const": 750.0,
+      "description": "R = r * P_WAC = 0.75 * 1000.0. Total rebate pool routed through the captive GPO (USD, E-2)."
+    },
+    "offshore_gpo_pbm_retained_rebate_share": {
+      "type": "number",
+      "const": 0.20,
+      "description": "s: share of the rebate pool retained by the PBM's captive Rebate Aggregator GPO (Zinc / Ascent / Emisar) as an administrative cut."
+    },
+    "pbm_retained_rebate_extraction_usd": {
+      "type": "number",
+      "const": 150.0,
+      "description": "Pi_PBM = s * r * P_WAC = 0.20 * 0.75 * 1000.0. PBM retained rebate extraction per claim (USD, E-3); dPi_PBM/dP_WAC = s * r = 0.15 > 0 (E-3b)."
+    },
+    "patient_coinsurance_rate_on_wac": {
+      "type": "number",
+      "const": 0.25,
+      "description": "c: patient coinsurance rate levied at the counter on the fictional unrebated WAC list price."
+    },
+    "patient_out_of_pocket_coinsurance_usd": {
+      "type": "number",
+      "const": 250.0,
+      "description": "OOP = c * P_WAC = 0.25 * 1000.0. Patient out-of-pocket coinsurance at the pharmacy counter (USD, E-5)."
+    },
+    "net_post_rebate_drug_cost_usd": {
+      "type": "number",
+      "const": 250.0,
+      "description": "P_net = P_WAC - R = 1000.0 - 750.0. True net post-rebate drug cost at plan settlement (USD, E-4)."
+    },
+    "patient_share_of_true_net_cost_ratio": {
+      "type": "number",
+      "const": 1.0,
+      "description": "sigma = OOP / P_net = c / (1 - r) = 250.0 / 250.0. Patient share of the true net cost: the coinsurance inversion identity, sigma >= 1.0 whenever c >= 1 - r (E-6)."
+    },
+    "insurer_plan_net_outlay_after_rebate_and_patient_copay_usd": {
+      "type": "number",
+      "const": 0.0,
+      "description": "Phi_plan = P_net - OOP = 250.0 - 250.0. Insurer/plan net outlay after rebate and patient coinsurance: the reverse-subsidy identity (USD, E-7)."
+    },
+    "specialty_generic_nadac_acquisition_cost_usd": {
+      "type": "number",
+      "const": 90.0,
+      "description": "C_NADAC: specialty-generic pharmacy acquisition cost per the National Average Drug Acquisition Cost benchmark (USD; FTC January 2025 Interim Staff Report archetype)."
+    },
+    "pbm_spread_pricing_plan_billed_usd": {
+      "type": "number",
+      "const": 4500.0,
+      "description": "P_billed: amount the PBM-owned mail-order pharmacy bills the self-funded ERISA employer plan for the same specialty-generic fill (USD)."
+    },
+    "pbm_specialty_generic_markup_multiplier": {
+      "type": "number",
+      "const": 50.0,
+      "description": "M_spread = P_billed / C_NADAC = 4500.0 / 90.0. Specialty-generic spread-pricing markup multiplier (E-8a); retained spread S = P_billed - C_NADAC = 4410.0 USD (E-8b), the ERISA 406(b) self-dealing quantum per claim."
+    }
+  }
+}

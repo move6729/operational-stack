@@ -1,0 +1,164 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:minsky_patronage.json",
+  "title": "Minsky Patronage and Thinking Machines Capital Structure Schema",
+  "description": "Formal JSON Schema for SPEC-MINSKY-PATRONAGE-ARCHITECTURE-v1.0 validating the Lighthill (1973) combinatorial-explosion funding bound, the Thinking Machines Corp Chapter 11 absolute-priority tranche waterfall, the Epstein-MIT patronage ledger multipliers, and the post-conviction EFTA contract-window temporal identity.",
+  "type": "object",
+  "required": [
+    "specification_id",
+    "version",
+    "license",
+    "jurisdiction_context",
+    "cfaa_compliance_attestation",
+    "six_ring_security_master",
+    "tranche_recovery_waterfall",
+    "epstein_patronage_ledger",
+    "catalyst_calendar",
+    "efta_and_docket_pins"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "specification_id": {
+      "type": "string",
+      "const": "SPEC-MINSKY-PATRONAGE-ARCHITECTURE-v1.0"
+    },
+    "version": { "type": "string", "const": "1.0" },
+    "license": { "type": "string", "const": "Unlicense" },
+    "jurisdiction_context": {
+      "type": "string",
+      "description": "ISO 3166-1 jurisdiction scope for statutory module localization.",
+      "enum": ["US"]
+    },
+    "cfaa_compliance_attestation": {
+      "type": "object",
+      "description": "Zero-unauthorized-access attestation under 18 U.S.C. § 1030; all records sourced from public filings and public-record archives.",
+      "required": ["cfaa_statute", "unauthorized_access", "data_provenance", "attestation"],
+      "additionalProperties": false,
+      "properties": {
+        "cfaa_statute": { "type": "string", "const": "18 U.S.C. § 1030" },
+        "unauthorized_access": { "type": "boolean", "const": false },
+        "data_provenance": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Public-record sources: SEC EDGAR, MIT FY financial reports, EFTA public flight-log archives, court dockets."
+        },
+        "attestation": { "type": "string" }
+      }
+    },
+    "six_ring_security_master": {
+      "type": "object",
+      "description": "6-category multi-counterparty security-master cross-index (entity_and_instrument_ids).",
+      "required": ["rings"],
+      "additionalProperties": false,
+      "properties": {
+        "rings": {
+          "type": "array",
+          "minItems": 6,
+          "maxItems": 6,
+          "items": {
+            "type": "object",
+            "required": ["ring_id", "category", "entities"],
+            "additionalProperties": false,
+            "properties": {
+              "ring_id": { "type": "integer", "minimum": 1, "maximum": 6 },
+              "category": { "type": "string" },
+              "entities": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": ["name", "role"],
+                  "additionalProperties": false,
+                  "properties": {
+                    "name": { "type": "string" },
+                    "role": { "type": "string" },
+                    "ticker": { "type": "string" },
+                    "cik": { "type": "string" },
+                    "court_docket": { "type": "string" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "tranche_recovery_waterfall": {
+      "type": "object",
+      "description": "Thinking Machines Corp Chapter 11 absolute-priority waterfall (filed 1994-08-16).",
+      "required": ["debtor", "filing_date", "total_claims_stack_usd", "tranches", "distress_liquidation_ev_usd", "distress_recovery_vector"],
+      "additionalProperties": false,
+      "properties": {
+        "debtor": { "type": "string", "const": "Thinking Machines Corp" },
+        "filing_date": { "type": "string", "pattern": "^1994-08-16$" },
+        "total_claims_stack_usd": { "type": "number", "const": 97000000.00 },
+        "tranches": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["tranche", "principal_usd", "seniority"],
+            "additionalProperties": false,
+            "properties": {
+              "tranche": { "type": "string", "enum": ["Senior Secured", "Unsecured", "Preferred Equity", "Common Equity"] },
+              "principal_usd": { "type": "number", "minimum": 0 },
+              "seniority": { "type": "integer", "minimum": 1, "maximum": 4 }
+            }
+          }
+        },
+        "distress_liquidation_ev_usd": { "type": "number", "const": 25000000.00 },
+        "distress_recovery_vector": {
+          "type": "object",
+          "required": ["senior_secured_cents", "unsecured_cents", "preferred_cents", "common_cents"],
+          "additionalProperties": false,
+          "properties": {
+            "senior_secured_cents": { "type": "number", "const": 100.00 },
+            "unsecured_cents": { "type": "number", "const": 31.82 },
+            "preferred_cents": { "type": "number", "const": 0.00 },
+            "common_cents": { "type": "number", "const": 0.00 }
+          }
+        }
+      }
+    },
+    "epstein_patronage_ledger": {
+      "type": "object",
+      "description": "Direct-gift and ecosystem patronage waterfall with locked multipliers.",
+      "required": ["minsky_2002_seed_usd", "post_conviction_mit_usd", "total_mit_direct_usd", "direct_multiplier_post_to_pre", "minsky_seed_share_pct", "ecosystem_footprint_usd", "ecosystem_leverage_multiplier"],
+      "additionalProperties": false,
+      "properties": {
+        "minsky_2002_seed_usd": { "type": "number", "const": 100000.00 },
+        "post_conviction_mit_usd": { "type": "number", "const": 750000.00 },
+        "total_mit_direct_usd": { "type": "number", "const": 850000.00 },
+        "direct_multiplier_post_to_pre": { "type": "number", "const": 7.50 },
+        "minsky_seed_share_pct": { "type": "number", "const": 11.76 },
+        "ecosystem_footprint_usd": { "type": "number", "const": 4413333.33 },
+        "ecosystem_leverage_multiplier": { "type": "number", "const": 44.13 }
+      }
+    },
+    "catalyst_calendar": {
+      "type": "array",
+      "description": "Hard-date catalyst and forbearance calendar (ISO 8601).",
+      "items": {
+        "type": "object",
+        "required": ["date", "event"],
+        "additionalProperties": false,
+        "properties": {
+          "date": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+          "event": { "type": "string" }
+        }
+      }
+    },
+    "efta_and_docket_pins": {
+      "type": "object",
+      "description": "EFTA contract-window temporal identity pins falsifying the pre-conviction-only H0.",
+      "required": ["efta_00287078_start", "lsj_conference_start", "lsj_conference_end", "efta_00584662_termination", "joint_payment_usd", "h0_pre_conviction_only"],
+      "additionalProperties": false,
+      "properties": {
+        "efta_00287078_start": { "type": "string", "const": "2011-08-13" },
+        "lsj_conference_start": { "type": "string", "const": "2011-12-09" },
+        "lsj_conference_end": { "type": "string", "const": "2011-12-12" },
+        "efta_00584662_termination": { "type": "string", "const": "2012-02-15" },
+        "joint_payment_usd": { "type": "number", "const": 8333.33 },
+        "h0_pre_conviction_only": { "type": "string", "enum": ["falsified", "upheld"] }
+      }
+    }
+  }
+}

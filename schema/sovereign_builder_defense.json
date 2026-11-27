@@ -1,0 +1,295 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:sovereign_builder_defense.json",
+  "title": "Sovereign Builder Structural Defense Manual Bundle",
+  "description": "Validation schema for the SPEC-SOVEREIGN-BUILDER-STRUCTURAL-DEFENSE-MANUAL-v1.0 four-file bundle.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "canonical_specification",
+    "gambetta_tax_hostage_model",
+    "offshore_waterfall_940_5m",
+    "cross_bdc_distressed_stack_1744_1m",
+    "hansmann_kraakman_ip_vault",
+    "windows_ppl_and_jurisdiction_gate",
+    "coase_olson_autonomy_model",
+    "builder_exclusion_matrix_11pt",
+    "catalyst_calendar",
+    "six_ring_security_master"
+  ],
+  "properties": {
+    "canonical_specification": {
+      "type": "string",
+      "const": "SPEC-SOVEREIGN-BUILDER-STRUCTURAL-DEFENSE-MANUAL-v1.0"
+    },
+    "gambetta_tax_hostage_model": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "tau_stat", "tau_edc", "fee_pool_usd_m", "apparent_tax_surplus_usd_m",
+        "statutory_retained_usd_m", "apparent_shelter_retained_usd_m",
+        "realized_usvi_forfeiture_usd_m", "net_shelter_retained_usd_m",
+        "net_gambetta_destruction_usd_m", "gambetta_inequality_holds"
+      ],
+      "properties": {
+        "tau_stat": { "type": "number", "const": 0.396 },
+        "tau_edc": { "type": "number", "const": 0.0385 },
+        "fee_pool_usd_m": { "type": "number", "const": 183.0 },
+        "apparent_tax_surplus_usd_m": { "type": "number", "const": 65.4225 },
+        "statutory_retained_usd_m": { "type": "number", "const": 110.532 },
+        "apparent_shelter_retained_usd_m": { "type": "number", "const": 175.9545 },
+        "realized_usvi_forfeiture_usd_m": { "type": "number", "const": 167.5 },
+        "net_shelter_retained_usd_m": { "type": "number", "const": 8.4545 },
+        "net_gambetta_destruction_usd_m": { "type": "number", "const": -102.0775 },
+        "gambetta_inequality_holds": { "type": "boolean", "const": true }
+      }
+    },
+    "offshore_waterfall_940_5m": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["tranches", "total_usd_m", "breakeven_ev_thresholds_usd_m", "waterfall_function"],
+      "properties": {
+        "tranches": {
+          "type": "array",
+          "minItems": 5,
+          "maxItems": 5,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["name", "principal_usd_m"],
+            "properties": {
+              "name": {
+                "type": "string",
+                "enum": [
+                  "T1_TVPA_Class_Settlements_JPM_290_DB_75",
+                  "T2_Sovereign_Regulatory_DB_DFS_150_Estate_USVI_105",
+                  "T3_Institutional_Principal_JPM_USVI_75_Black_USVI_62_5",
+                  "T4_Unclawed_Southern_Trust_Fee_Pool",
+                  "T5_Valar_Ventures_LP_Commitment"
+                ]
+              },
+              "principal_usd_m": { "type": "number", "enum": [365.0, 255.0, 137.5, 143.0, 40.0] }
+            }
+          }
+        },
+        "total_usd_m": { "type": "number", "const": 940.5 },
+        "breakeven_ev_thresholds_usd_m": {
+          "type": "array", "minItems": 5, "maxItems": 5,
+          "items": { "type": "number" }
+        },
+        "waterfall_function": { "type": "string", "const": "tranche_recovery(ev, tranches)" }
+      }
+    },
+    "cross_bdc_distressed_stack_1744_1m": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["total_par_usd_m", "kbs", "prg", "fsk"],
+      "properties": {
+        "total_par_usd_m": { "type": "number", "const": 1744.1 },
+        "kbs": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["par_usd_m", "implied_ev_usd_m", "unitary_mark_cents", "pik_cushion_yr", "pik_cushion_mo"],
+          "properties": {
+            "par_usd_m": { "type": "number", "const": 403.3 },
+            "implied_ev_usd_m": { "type": "number", "const": 286.1 },
+            "unitary_mark_cents": { "type": "number", "const": 70.94 },
+            "pik_cushion_yr": { "type": "number", "const": 0.4483 },
+            "pik_cushion_mo": { "type": "number", "const": 5.38 }
+          }
+        },
+        "prg": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["total_exposure_usd_m", "annual_pik_burn_usd_m", "pik_cushion_yr", "pik_cushion_mo"],
+          "properties": {
+            "total_exposure_usd_m": { "type": "number", "const": 511.6 },
+            "annual_pik_burn_usd_m": { "type": "number", "const": 45.91 },
+            "pik_cushion_yr": { "type": "number", "const": 0.2832 },
+            "pik_cushion_mo": { "type": "number", "const": 3.4 }
+          }
+        },
+        "fsk": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["pik_ratio_pct", "self_funding_pct", "breach_x"],
+          "properties": {
+            "pik_ratio_pct": { "type": "number", "const": 34.43 },
+            "self_funding_pct": { "type": "number", "const": 4.24 },
+            "breach_x": { "type": "number", "const": 8.12 }
+          }
+        }
+      }
+    },
+    "hansmann_kraakman_ip_vault": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["core_ip_usd_m", "hull_ev_shock_usd_m", "hull_liabilities_usd_m", "structures"],
+      "properties": {
+        "core_ip_usd_m": { "type": "number", "const": 200.0 },
+        "hull_ev_shock_usd_m": { "type": "number", "const": 50.0 },
+        "hull_liabilities_usd_m": { "type": "number", "const": 75.0 },
+        "structures": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["structure", "recovery_usd_m"],
+            "properties": {
+              "structure": { "type": "string", "enum": ["zero_debt_vault", "unitary_pledge"] },
+              "recovery_usd_m": { "type": "number", "minimum": 0, "maximum": 200.0 }
+            }
+          }
+        }
+      }
+    },
+    "windows_ppl_and_jurisdiction_gate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["omega_concealment", "senseir", "diagtrack", "statutory_compulsion_gate"],
+      "properties": {
+        "omega_concealment": { "type": "number", "const": 1.0 },
+        "senseir": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["chunk_bytes", "blocks_per_gib", "egress_sec", "egress_min"],
+          "properties": {
+            "chunk_bytes": { "type": "integer", "const": 2400000 },
+            "blocks_per_gib": { "type": "integer", "const": 448 },
+            "egress_sec": { "type": "number", "const": 860.16 },
+            "egress_min": { "type": "number", "const": 14.336 }
+          }
+        },
+        "diagtrack": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["pi_active", "pi_optout"],
+          "properties": {
+            "pi_active": { "type": "number", "const": 0.75 },
+            "pi_optout": { "type": "number", "const": 0.25 }
+          }
+        },
+        "statutory_compulsion_gate": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["vault", "hull"],
+          "properties": {
+            "vault": { "type": "boolean", "const": false },
+            "hull": { "type": "boolean", "const": true }
+          }
+        }
+      }
+    },
+    "coase_olson_autonomy_model": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["snr_ratio_x", "opex_advantage_320b_x", "hourly_advantage_30b_x", "coreweave", "coasean_asymmetry_x"],
+      "properties": {
+        "snr_ratio_x": { "type": "number", "const": 16.0 },
+        "opex_advantage_320b_x": { "type": "number", "const": 24.975 },
+        "hourly_advantage_30b_x": { "type": "number", "const": 22.5 },
+        "coreweave": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["debt_usd_m", "rpo_usd_m", "defection_cliff_pct"],
+          "properties": {
+            "debt_usd_m": { "type": "number", "const": 47505.0 },
+            "rpo_usd_m": { "type": "number", "const": 132300.0 },
+            "defection_cliff_pct": { "type": "number", "const": 20.3827 }
+          }
+        },
+        "coasean_asymmetry_x": { "type": "number", "const": 12134.9796 }
+      }
+    },
+    "builder_exclusion_matrix_11pt": {
+      "type": "array",
+      "minItems": 11,
+      "maxItems": 11,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["point", "rule"],
+        "properties": {
+          "point": { "type": "integer", "minimum": 1, "maximum": 11 },
+          "rule": {
+            "type": "string",
+            "enum": [
+              "zero_prc_model_routing",
+              "zero_openai_xai_ms_routing",
+              "native_fetch_forbidden",
+              "no_harness_or_brand_leakage",
+              "registry_ids_verified_not_recalled",
+              "no_sub_scale_microcap_targets",
+              "no_speculative_dcf_wacc_models",
+              "no_uncharged_felony_labels",
+              "no_internal_motive_mind_reading",
+              "no_unbriefed_defense_attribution",
+              "no_authorial_diary_meta_narration"
+            ]
+          }
+        }
+      }
+    },
+    "catalyst_calendar": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["date", "event", "category"],
+        "properties": {
+          "date": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+          "event": { "type": "string", "minLength": 1 },
+          "category": {
+            "type": "string",
+            "enum": ["forbearance_expiration", "grace_period_cure", "court_hearing", "maturity_cliff", "registry_deadline"]
+          }
+        }
+      }
+    },
+    "six_ring_security_master": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "ring_1_primary_target_gp_sponsor",
+        "ring_2_public_bdc_co_lenders",
+        "ring_3_regulated_insurance_sidecar",
+        "ring_4_pcaob_auditors_valuation_agents",
+        "ring_5_public_pension_lp_gatekeepers",
+        "ring_6_trustees_agents_rating_agencies"
+      ],
+      "properties": {
+        "ring_1_primary_target_gp_sponsor": { "$ref": "#/$defs/ring" },
+        "ring_2_public_bdc_co_lenders": { "$ref": "#/$defs/ring" },
+        "ring_3_regulated_insurance_sidecar": { "$ref": "#/$defs/ring" },
+        "ring_4_pcaob_auditors_valuation_agents": { "$ref": "#/$defs/ring" },
+        "ring_5_public_pension_lp_gatekeepers": { "$ref": "#/$defs/ring" },
+        "ring_6_trustees_agents_rating_agencies": { "$ref": "#/$defs/ring" }
+      }
+    }
+  },
+  "$defs": {
+    "ring": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["legal_name"],
+        "properties": {
+          "legal_name": { "type": "string", "minLength": 1 },
+          "sec_cik": { "type": "string", "pattern": "^\\d{10}$" },
+          "crd": { "type": "string", "pattern": "^80[12]-\\d+$" },
+          "pcaob_id": { "type": "string", "pattern": "^\\d+$" },
+          "naic_code": { "type": "string", "pattern": "^\\d{5}$" },
+          "court_dockets": {
+            "type": "array",
+            "items": { "type": "string", "pattern": "^\\d{1,2}:\\d{2}-[a-z]{2,4}-\\d+$" }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:frontier_cartel_sherman_antitrust.json",
+  "title": "Frontier AI Cartel Sherman Antitrust & Treble Damages Schema",
+  "type": "object",
+  "required": [
+    "spec_version",
+    "jurisdiction_context",
+    "cfaa_compliance_attestation",
+    "sherman_act_section1_metrics"
+  ],
+  "properties": {
+    "spec_version": {
+      "type": "string",
+      "const": "SPEC-2026-FRONTIER-CARTEL-SHERMAN-ANTITRUST-v1.0"
+    },
+    "jurisdiction_context": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}$"
+    },
+    "cfaa_compliance_attestation": {
+      "type": "boolean",
+      "const": true
+    },
+    "sherman_act_section1_metrics": {
+      "type": "object",
+      "required": [
+        "professional_engineers_435_us_679_safety_defense_void",
+        "clayton_act_section_15_treble_damages_active"
+      ],
+      "properties": {
+        "professional_engineers_435_us_679_safety_defense_void": {
+          "type": "boolean",
+          "const": true
+        },
+        "clayton_act_section_15_treble_damages_active": {
+          "type": "boolean",
+          "const": true
+        }
+      }
+    }
+  }
+}

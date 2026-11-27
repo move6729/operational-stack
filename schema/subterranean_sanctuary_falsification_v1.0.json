@@ -1,0 +1,436 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:subterranean_sanctuary_falsification_v1.0.json",
+  "title": "Subterranean Sanctuary Falsification — Structural Contract",
+  "description": "Deterministic structural contract for the GBU-57A/B Massive Ordnance Penetrator kinetic baseline, the single-shot versus sequential double-tap penetration law, the Minimum-Cut Portal Collapse Theorem, the lithostatic rubble lock against blast-door actuators, the stoichiometric LiOH CO2 scrubbing clock, the transient semi-infinite rock conduction thermal runaway clock, and the Elite Exit versus Sovereign Portal-Sealing payoff inversion.",
+  "type": "object",
+  "required": [
+    "audit_id",
+    "gbu57_mop_kinetic_parameters",
+    "penetration_model",
+    "portal_minimum_cut",
+    "rubble_lock",
+    "closed_volume_thermodynamics",
+    "elite_exit_game",
+    "sovereign_portal_sealing",
+    "verification",
+    "empirical_anchors"
+  ],
+  "properties": {
+    "audit_id": {
+      "type": "string",
+      "const": "SPEC-SUBTERRANEAN-SANCTUARY-FALSIFICATION-v1.0"
+    },
+    "gbu57_mop_kinetic_parameters": {
+      "type": "object",
+      "required": [
+        "designation",
+        "warhead_body",
+        "total_mass_kg",
+        "length_m",
+        "diameter_m",
+        "sectional_density_kg_m2",
+        "casing_alloy",
+        "he_fill_total_kg",
+        "he_fill_afx757_kg",
+        "he_fill_pbxn114_kg",
+        "impact_velocity_m_s",
+        "terminal_kinetic_energy_j",
+        "fuze_architecture",
+        "delivery_platform"
+      ],
+      "properties": {
+        "designation": { "type": "string", "const": "GBU-57A/B" },
+        "warhead_body": { "type": "string", "const": "BLU-127" },
+        "total_mass_kg": { "type": "number", "const": 12304 },
+        "length_m": { "type": "number", "const": 6.25 },
+        "diameter_m": { "type": "number", "const": 0.8 },
+        "sectional_density_kg_m2": { "type": "number", "minimum": 24000, "maximum": 25000 },
+        "casing_alloy": { "type": "string", "const": "Eglin Steel ES-1" },
+        "he_fill_total_kg": { "type": "number", "const": 2423 },
+        "he_fill_afx757_kg": { "type": "number", "const": 2082 },
+        "he_fill_pbxn114_kg": { "type": "number", "const": 341 },
+        "impact_velocity_m_s": { "type": "number", "minimum": 300, "maximum": 400 },
+        "terminal_kinetic_energy_j": { "type": "number", "minimum": 6.0e8, "maximum": 7.0e8 },
+        "fuze_architecture": { "type": "string", "const": "Large Penetrator Smart Fuze (LPSF)" },
+        "delivery_platform": { "type": "string", "const": "Northrop B-2 Spirit" }
+      },
+      "additionalProperties": false
+    },
+    "penetration_model": {
+      "type": "object",
+      "required": [
+        "single_shot_formula",
+        "sequential_formula",
+        "reference_depth_m",
+        "reference_strength_mpa",
+        "strength_scaling_exponent",
+        "bore_alignment_efficiency_min",
+        "bore_alignment_efficiency_max",
+        "materials"
+      ],
+      "properties": {
+        "single_shot_formula": {
+          "type": "string",
+          "const": "D_pen(1) = D_ref * (f_c / 34 MPa)^(-alpha) * cos(theta)"
+        },
+        "sequential_formula": {
+          "type": "string",
+          "const": "D_pen(k) = sum_{i=1..k} eta_i * D_ref * (f_c,i / 34 MPa)^(-alpha) * cos(theta_i)"
+        },
+        "reference_depth_m": { "type": "number", "const": 18.0 },
+        "reference_strength_mpa": { "type": "number", "const": 34.0 },
+        "strength_scaling_exponent": { "type": "number", "const": 0.5 },
+        "bore_alignment_efficiency_min": { "type": "number", "const": 0.65 },
+        "bore_alignment_efficiency_max": { "type": "number", "const": 0.9 },
+        "materials": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 4,
+          "items": { "$ref": "#/$defs/penetration_material" }
+        }
+      },
+      "additionalProperties": false
+    },
+    "portal_minimum_cut": {
+      "type": "object",
+      "required": [
+        "theorem",
+        "portal_overburden_m",
+        "chamber_overburden_m",
+        "umbilical_count_min",
+        "umbilical_count_max",
+        "min_cut_cost_formula",
+        "depth_invariance"
+      ],
+      "properties": {
+        "theorem": {
+          "type": "string",
+          "const": "C_min-cut = sum_{j=1..K} E_destroy(e_j) << C_roof = H_chamber * f_c"
+        },
+        "portal_overburden_m": { "type": "number", "const": 0.0 },
+        "chamber_overburden_m": {
+          "type": "object",
+          "required": ["min", "max"],
+          "properties": {
+            "min": { "type": "number", "const": 20.0 },
+            "max": { "type": "number", "const": 100.0 }
+          },
+          "additionalProperties": false
+        },
+        "umbilical_count_min": { "type": "integer", "const": 2 },
+        "umbilical_count_max": { "type": "integer", "const": 6 },
+        "min_cut_cost_formula": {
+          "type": "string",
+          "const": "C_min-cut = K * C_MOP, independent of H_chamber"
+        },
+        "depth_invariance": { "type": "boolean", "const": true }
+      },
+      "additionalProperties": false
+    },
+    "rubble_lock": {
+      "type": "object",
+      "required": [
+        "mass_formula",
+        "rock_density_kg_m3",
+        "adit_area_m2",
+        "chimney_height_m",
+        "bulking_factor",
+        "rubble_mass_min_metric_tons",
+        "rubble_mass_max_metric_tons",
+        "rock_friction_coefficient",
+        "actuator_force_n",
+        "lock_force_formula",
+        "lock_to_actuator_ratio_min"
+      ],
+      "properties": {
+        "mass_formula": {
+          "type": "string",
+          "const": "M_rubble = rho_rock * A_adit * h_chimney * phi_bulking"
+        },
+        "rock_density_kg_m3": { "type": "number", "const": 2650 },
+        "adit_area_m2": { "type": "number", "const": 16 },
+        "chimney_height_m": { "type": "number", "const": 25 },
+        "bulking_factor": { "type": "number", "const": 1.35 },
+        "rubble_mass_min_metric_tons": { "type": "number", "minimum": 1000 },
+        "rubble_mass_max_metric_tons": { "type": "number", "minimum": 15000 },
+        "rock_friction_coefficient": { "type": "number", "minimum": 0.5, "maximum": 0.7 },
+        "actuator_force_n": { "type": "number", "const": 500000 },
+        "lock_force_formula": {
+          "type": "string",
+          "const": "F_lock = mu_rock * M_rubble * g"
+        },
+        "lock_to_actuator_ratio_min": { "type": "number", "minimum": 10 }
+      },
+      "additionalProperties": false
+    },
+    "closed_volume_thermodynamics": {
+      "type": "object",
+      "required": [
+        "cohort_size",
+        "air_volume_m3",
+        "co2_generation_kg_person_day",
+        "o2_consumption_kg_person_day",
+        "co2_lethal_fraction",
+        "lithium_hydroxide",
+        "rock_conduction",
+        "internal_heat_load_kw",
+        "habitat_thermal_capacity_j_k",
+        "wet_bulb_critical_c",
+        "thermal_runaway_formula"
+      ],
+      "properties": {
+        "cohort_size": { "type": "integer", "const": 25 },
+        "air_volume_m3": { "type": "number", "const": 3000 },
+        "co2_generation_kg_person_day": { "type": "number", "const": 1.0 },
+        "o2_consumption_kg_person_day": { "type": "number", "const": 0.84 },
+        "co2_lethal_fraction": { "type": "number", "const": 0.05 },
+        "lithium_hydroxide": {
+          "type": "object",
+          "required": [
+            "reaction",
+            "molar_mass_lioh_g_mol",
+            "molar_mass_co2_g_mol",
+            "stoichiometric_ratio_kg_kg",
+            "packing_utilization",
+            "reaction_enthalpy_kj_mol_co2",
+            "heat_release_mj_kg_co2",
+            "endurance_formula"
+          ],
+          "properties": {
+            "reaction": {
+              "type": "string",
+              "const": "2 LiOH(s) + CO2(g) -> Li2CO3(s) + H2O(g)"
+            },
+            "molar_mass_lioh_g_mol": { "type": "number", "const": 23.95 },
+            "molar_mass_co2_g_mol": { "type": "number", "const": 44.01 },
+            "stoichiometric_ratio_kg_kg": { "type": "number", "minimum": 1.08, "maximum": 1.09 },
+            "packing_utilization": { "type": "number", "const": 0.8 },
+            "reaction_enthalpy_kj_mol_co2": { "type": "number", "const": -89.4 },
+            "heat_release_mj_kg_co2": { "type": "number", "minimum": 2.0, "maximum": 2.1 },
+            "endurance_formula": {
+              "type": "string",
+              "const": "tau_LiOH = eta_pack * M_LiOH / (1.088 * N * r_CO2)"
+            }
+          },
+          "additionalProperties": false
+        },
+        "rock_conduction": {
+          "type": "object",
+          "required": [
+            "conductivity_w_m_k",
+            "diffusivity_m2_s",
+            "wall_area_m2",
+            "boundary_layer_formula",
+            "max_flux_formula"
+          ],
+          "properties": {
+            "conductivity_w_m_k": { "type": "number", "const": 2.5 },
+            "diffusivity_m2_s": { "type": "number", "minimum": 1.1e-6, "maximum": 1.3e-6 },
+            "wall_area_m2": { "type": "number", "minimum": 500 },
+            "boundary_layer_formula": {
+              "type": "string",
+              "const": "delta_th(t) = sqrt(pi * alpha_rock * t)"
+            },
+            "max_flux_formula": {
+              "type": "string",
+              "const": "Q_rock_max(t) = A_wall * k_rock * (T_crit - T_rock_inf) / sqrt(pi * alpha_rock * t)"
+            }
+          },
+          "additionalProperties": false
+        },
+        "internal_heat_load_kw": {
+          "type": "object",
+          "required": ["min", "max"],
+          "properties": {
+            "min": { "type": "number", "const": 15 },
+            "max": { "type": "number", "const": 250 }
+          },
+          "additionalProperties": false
+        },
+        "habitat_thermal_capacity_j_k": { "type": "number", "minimum": 1.0e7 },
+        "wet_bulb_critical_c": { "type": "number", "const": 35 },
+        "thermal_runaway_formula": {
+          "type": "string",
+          "const": "integral_0^tau_therm max(0, P_in - Q_rock_max(t)) dt = C_hab * (T_crit - T_0)"
+        }
+      },
+      "additionalProperties": false
+    },
+    "elite_exit_game": {
+      "type": "object",
+      "required": [
+        "players",
+        "strategies",
+        "baseline_wealth",
+        "predatory_rent",
+        "value_of_life_and_estate",
+        "naive_payoff_formula",
+        "actual_payoff_formula",
+        "seal_probability_formula",
+        "critical_seal_probability_formula",
+        "tiers"
+      ],
+      "properties": {
+        "players": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "items": { "type": "string", "enum": ["Subterranean Defector", "Sovereign Surface Enforcer"] }
+        },
+        "strategies": {
+          "type": "object",
+          "required": ["defector", "sovereign"],
+          "properties": {
+            "defector": {
+              "type": "array",
+              "minItems": 2,
+              "maxItems": 2,
+              "items": { "type": "string", "enum": ["Cooperate", "Defect"] }
+            },
+            "sovereign": {
+              "type": "array",
+              "minItems": 2,
+              "maxItems": 2,
+              "items": { "type": "string", "enum": ["Tolerate", "Seal Portals"] }
+            }
+          },
+          "additionalProperties": false
+        },
+        "baseline_wealth": { "type": "number", "minimum": 0 },
+        "predatory_rent": { "type": "number", "minimum": 0 },
+        "value_of_life_and_estate": { "type": "number", "minimum": 0 },
+        "naive_payoff_formula": {
+          "type": "string",
+          "const": "E[U_naive(Defect,H)] = W_0 + dR - C_bunker(H)"
+        },
+        "actual_payoff_formula": {
+          "type": "string",
+          "const": "E[U_actual(Defect,H)] = W_0 + dR - C_bunker(H) - p_seal * (W_0 + dR + V_life)"
+        },
+        "seal_probability_formula": {
+          "type": "string",
+          "const": "p_seal = 1 - exp(-lambda * K), independent of H_chamber"
+        },
+        "critical_seal_probability_formula": {
+          "type": "string",
+          "const": "p_star = (dR - C_bunker(H)) / (W_0 + dR + V_life)"
+        },
+        "tiers": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": { "$ref": "#/$defs/sanctuary_tier" }
+        }
+      },
+      "additionalProperties": false
+    },
+    "sovereign_portal_sealing": {
+      "type": "object",
+      "required": [
+        "strike_cost_formula",
+        "mop_rounds_min",
+        "mop_rounds_max",
+        "cost_invariance_to_depth",
+        "survival_probability_after_seal"
+      ],
+      "properties": {
+        "strike_cost_formula": {
+          "type": "string",
+          "const": "C_strike = k * C_MOP, k in [1,6]"
+        },
+        "mop_rounds_min": { "type": "integer", "const": 1 },
+        "mop_rounds_max": { "type": "integer", "const": 6 },
+        "cost_invariance_to_depth": { "type": "boolean", "const": true },
+        "survival_probability_after_seal": { "type": "number", "const": 0.0 }
+      },
+      "additionalProperties": false
+    },
+    "verification": {
+      "type": "object",
+      "required": ["proof_path", "exit_code", "stdlib_only"],
+      "properties": {
+        "proof_path": {
+          "type": "string",
+          "const": "proofs/subterranean_sanctuary_falsification_proof.py"
+        },
+        "exit_code": { "type": "integer", "const": 0 },
+        "stdlib_only": { "type": "boolean", "const": true }
+      },
+      "additionalProperties": false
+    },
+    "empirical_anchors": {
+      "type": "array",
+      "minItems": 3,
+      "items": {
+        "type": "object",
+        "required": ["anchor", "value", "unit"],
+        "properties": {
+          "anchor": { "type": "string" },
+          "value": { "type": "number" },
+          "unit": { "type": "string" }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "penetration_material": {
+      "type": "object",
+      "required": [
+        "material",
+        "compressive_strength_mpa",
+        "single_shot_depth_m",
+        "double_tap_depth_m",
+        "empirical_floor_m"
+      ],
+      "properties": {
+        "material": {
+          "type": "string",
+          "enum": ["soil", "concrete_34mpa", "concrete_69mpa", "fordow_limestone_172mpa"]
+        },
+        "compressive_strength_mpa": { "type": "number", "minimum": 0 },
+        "single_shot_depth_m": { "type": "number", "minimum": 0 },
+        "double_tap_depth_m": { "type": "number", "minimum": 0 },
+        "empirical_floor_m": { "type": "number", "minimum": 0 }
+      },
+      "additionalProperties": false
+    },
+    "sanctuary_tier": {
+      "type": "object",
+      "required": [
+        "tier",
+        "architecture",
+        "overburden_min_m",
+        "overburden_max_m",
+        "bunker_capital",
+        "seal_probability",
+        "naive_expected_utility",
+        "actual_expected_utility",
+        "critical_seal_probability",
+        "primary_kill_mechanism"
+      ],
+      "properties": {
+        "tier": { "type": "integer", "minimum": 1, "maximum": 3 },
+        "architecture": { "type": "string" },
+        "overburden_min_m": { "type": "number", "minimum": 0 },
+        "overburden_max_m": { "type": "number", "minimum": 0 },
+        "bunker_capital": { "type": "number", "minimum": 0 },
+        "seal_probability": { "type": "number", "minimum": 0, "maximum": 1 },
+        "naive_expected_utility": { "type": "number" },
+        "actual_expected_utility": { "type": "number" },
+        "critical_seal_probability": { "type": "number", "minimum": 0, "maximum": 1 },
+        "primary_kill_mechanism": {
+          "type": "string",
+          "enum": [
+            "direct_vertical_roof_breach",
+            "cap_plug_breach_and_portal_lock",
+            "lithostatic_portal_rubble_lock_and_thermal_runaway"
+          ]
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

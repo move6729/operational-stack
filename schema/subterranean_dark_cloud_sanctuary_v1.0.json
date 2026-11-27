@@ -1,0 +1,182 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:subterranean_dark_cloud_sanctuary_v1.0.json",
+  "title": "Subterranean Dark-Cloud and Forbidden-Join Sanctuary Bundle v1.0",
+  "description": "Locked constants, tranche waterfalls, catalyst calendar, and 6-ring security-master cross-index for SPEC-SUBTERRANEAN-DARK-CLOUD-AND-FORBIDDEN-JOIN-SANCTUARY-v1.0.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["canonical_specification", "locked_constants", "tranche_structures", "catalyst_calendar", "six_ring_security_master"],
+  "properties": {
+    "canonical_specification": { "const": "SPEC-SUBTERRANEAN-DARK-CLOUD-AND-FORBIDDEN-JOIN-SANCTUARY-v1.0" },
+    "locked_constants": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["srmc_cloud", "cost_bunker", "m_tco", "p_pipe", "k_pipes", "p_detect_onshore", "p_detect_bunker", "coalitions", "multi_pipe_joins", "chiller_tons", "kw_per_ton", "q_chiller_kw", "villa_baseline_kw", "m_thermal", "fee_black", "fee_edr", "gross_fees", "market_fee", "m_fee", "implied_base", "vigorish_pct", "tax_surplus", "retained_usvi", "retained_us", "cart_total", "cart_unextracted", "black_hole_pct", "consumer_mac_pct", "t_rock", "t_human_wb", "t_silicon", "dt_human", "dt_silicon", "gamma_therm", "k_rock", "a_wall", "l_eff", "q_rock_human_kw", "q_rock_silicon_kw", "n_humans", "co2_kg_day", "lioh_ratio", "lioh_burn_kg_day", "per_human_kg_day", "human_consumables_kg_yr", "tau_human_hrs", "tau_silicon_hrs", "endurance_ratio", "guards_m", "omega_guards", "omega_principal", "p_defect_human", "p_defect_silicon", "raid_lag_days", "raid_lag_hrs", "raid_lag_sec", "nvme_erase_sec", "zeroization_margin", "precautionary_limit_kw"],
+      "properties": {
+        "srmc_cloud": { "const": 0.18 },
+        "cost_bunker": { "const": 3.4875 },
+        "m_tco": { "const": 19.375 },
+        "p_pipe": { "const": 0.95 },
+        "k_pipes": { "const": 4 },
+        "p_detect_onshore": { "const": 0.99999375 },
+        "p_detect_bunker": { "const": 0.0 },
+        "coalitions": { "const": 15 },
+        "multi_pipe_joins": { "const": 11 },
+        "chiller_tons": { "const": 18.0 },
+        "kw_per_ton": { "const": 3.5166666666666666 },
+        "q_chiller_kw": { "const": 63.3 },
+        "villa_baseline_kw": { "const": 3.0 },
+        "m_thermal": { "const": 21.1 },
+        "fee_black": { "const": 158.0 },
+        "fee_edr": { "const": 25.0 },
+        "gross_fees": { "const": 183.0 },
+        "market_fee": { "const": 2.0 },
+        "m_fee": { "const": 79.0 },
+        "implied_base": { "const": 1580.0 },
+        "vigorish_pct": { "const": 10.0 },
+        "tax_surplus": { "const": 65.4225 },
+        "retained_usvi": { "const": 175.9545 },
+        "retained_us": { "const": 110.532 },
+        "cart_total": { "const": 62 },
+        "cart_unextracted": { "const": 51 },
+        "black_hole_pct": { "const": 82.2581 },
+        "consumer_mac_pct": { "const": 17.7419 },
+        "t_rock": { "const": 20.0 },
+        "t_human_wb": { "const": 35.0 },
+        "t_silicon": { "const": 100.0 },
+        "dt_human": { "const": 15.0 },
+        "dt_silicon": { "const": 80.0 },
+        "gamma_therm": { "const": 5.333333 },
+        "k_rock": { "const": 2.5 },
+        "a_wall": { "const": 4800.0 },
+        "l_eff": { "const": 4.0 },
+        "q_rock_human_kw": { "const": 45.0 },
+        "q_rock_silicon_kw": { "const": 240.0 },
+        "n_humans": { "const": 25 },
+        "co2_kg_day": { "const": 1.0 },
+        "lioh_ratio": { "const": 1.088 },
+        "lioh_burn_kg_day": { "const": 27.2 },
+        "per_human_kg_day": { "const": 3.264 },
+        "human_consumables_kg_yr": { "const": 29784.0 },
+        "tau_human_hrs": { "const": 72.1893 },
+        "tau_silicon_hrs": { "const": 87600.0 },
+        "endurance_ratio": { "const": 1213.4762 },
+        "guards_m": { "const": 12 },
+        "omega_guards": { "const": 0.923077 },
+        "omega_principal": { "const": 0.076923 },
+        "p_defect_human": { "const": 1.0 },
+        "p_defect_silicon": { "const": 0.0 },
+        "raid_lag_days": { "const": 37 },
+        "raid_lag_hrs": { "const": 888.0 },
+        "raid_lag_sec": { "const": 3196800.0 },
+        "nvme_erase_sec": { "const": 0.5 },
+        "zeroization_margin": { "const": 6393600.0 },
+        "precautionary_limit_kw": { "const": 10.0 }
+      }
+    },
+    "tranche_structures": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["subterranean_compute_spv", "southern_trust_liability_stack"],
+      "properties": {
+        "subterranean_compute_spv": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["total_m", "tranches_m", "labels"],
+          "properties": {
+            "total_m": { "const": 850.0 },
+            "tranches_m": { "const": [350.0, 275.0, 125.0, 100.0] },
+            "labels": { "const": ["Tranche A", "Tranche B", "Tranche C", "Tranche D"] }
+          }
+        },
+        "southern_trust_liability_stack": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["total_m", "tranches_m", "labels"],
+          "properties": {
+            "total_m": { "const": 940.5 },
+            "tranches_m": { "const": [365.0, 255.0, 137.5, 143.0, 40.0] },
+            "labels": { "const": ["T1", "T2", "T3", "T4", "T5"] }
+          }
+        }
+      }
+    },
+    "catalyst_calendar": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["trust_formation", "forbearance_expiration", "collateral_call", "chapter_11_filing", "plan_confirmation", "spv_maturity_cliff", "forbearance_expiration_current", "lease_renewal_notice"],
+      "properties": {
+        "trust_formation": { "const": "2012-09-17", "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" },
+        "forbearance_expiration": { "const": "2013-02-26", "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" },
+        "collateral_call": { "const": "2015-06-15", "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" },
+        "chapter_11_filing": { "const": "2015-10-05", "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" },
+        "plan_confirmation": { "const": "2019-08-12", "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" },
+        "spv_maturity_cliff": { "const": "2026-06-30", "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" },
+        "forbearance_expiration_current": { "const": "2026-09-30", "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" },
+        "lease_renewal_notice": { "const": "2027-03-31", "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" }
+      }
+    },
+    "six_ring_security_master": {
+      "type": "array",
+      "minItems": 6,
+      "maxItems": 6,
+      "prefixItems": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["ring", "registry_entries"],
+          "properties": {
+            "ring": { "const": "Primary Target / GP / Sponsor" },
+            "registry_entries": { "const": ["0001020569", "0001679688 / CRD 290954", "0001769628", "0001326801", "0000019617"] }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["ring", "registry_entries"],
+          "properties": {
+            "ring": { "const": "Public BDC Co-Lenders & Credit Funds" },
+            "registry_entries": { "const": ["OBDC 0001655888 / CRD 282575", "ARCC 0001287750 / CRD 130074", "BXSL 0001736035 / CRD 137519", "FSK 0001422183"] }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["ring", "registry_entries"],
+          "properties": {
+            "ring": { "const": "Regulated Insurance Balance-Sheet & Bermuda Sidecar Counterparties" },
+            "registry_entries": { "const": ["APO 0001858681 / 0001411494 / CRD 143161", "ATHS 0001527469 / CRD 36867", "BN 0001001085 / CRD 151605"] }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["ring", "registry_entries"],
+          "properties": {
+            "ring": { "const": "PCAOB Auditors, Valuation Agents & Fund Admins" },
+            "registry_entries": { "const": ["Deloitte PCAOB 34", "EY PCAOB 42", "PwC PCAOB 238", "KPMG PCAOB 185"] }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["ring", "registry_entries"],
+          "properties": {
+            "ring": { "const": "FOIA-Subject Public Pension LPs, SWFs & Gatekeeper Consultants" },
+            "registry_entries": { "const": ["Hamilton Lane CRD 107876 / 801-55813", "StepStone CRD 143635 / 801-68079", "Founders Fund CRD 155462 / 802-75555"] }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["ring", "registry_entries"],
+          "properties": {
+            "ring": { "const": "Indenture Trustees, Admin Agents, Rating Agencies & Restructuring Counsel" },
+            "registry_entries": { "const": ["USB 0000036104", "MTB 0000036270", "BNY 0001390777"] }
+          }
+        }
+      ],
+      "items": false
+    }
+  }
+}

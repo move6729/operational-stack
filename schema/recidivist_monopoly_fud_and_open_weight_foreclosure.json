@@ -1,0 +1,305 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:recidivist_monopoly_fud_and_open_weight_foreclosure.json",
+  "title": "SPEC-RECIDIVIST-MONOPOLY-FUD-AND-OPEN-WEIGHT-FORECLOSURE-v1.0",
+  "description": "Thirty-year middleware foreclosure isomorphism (phi: M_1995 -> W_2026), the statutory CBRN/grid FUD estoppel fork (Restatement (Second) of Torts 519-520 XOR 15 U.S.C. 2 felony monopolization), the FY2026 $445.05B CapEx-plus-uncommenced-lease motive, the grim-trigger objective-function inversion (delta* = 0.0939), and the Theta_dismantle product-by-product structural severance operating system funded by non-recourse litigation capital and direct-purchaser class counsel.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "canonical_specification": { "type": "string", "const": "SPEC-RECIDIVIST-MONOPOLY-FUD-AND-OPEN-WEIGHT-FORECLOSURE-v1.0" },
+    "middleware_isomorphism": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "phi_is_bijection": { "type": "boolean", "const": true },
+        "dimension_count": { "type": "integer", "const": 5 },
+        "mappings": {
+          "type": "array", "minItems": 5, "maxItems": 5,
+          "items": {
+            "type": "object", "additionalProperties": false,
+            "properties": {
+              "dimension": { "type": "string" },
+              "operator_1995": { "type": "string" },
+              "image_2026": { "type": "string" },
+              "adjudicated_anchor": { "type": "string" }
+            },
+            "required": ["dimension", "operator_1995", "image_2026", "adjudicated_anchor"]
+          }
+        },
+        "halloween_constraint": {
+          "type": "object", "additionalProperties": false,
+          "properties": {
+            "commercial_fud_expected_payoff_nonpositive": { "type": "boolean", "const": true },
+            "verbatim": { "type": "string", "const": "OSS is long-term credible ... FUD tactics can not be used to combat it." },
+            "forced_escalation_to_statutory_fud": { "type": "boolean", "const": true }
+          },
+          "required": ["commercial_fud_expected_payoff_nonpositive", "verbatim", "forced_escalation_to_statutory_fud"]
+        }
+      },
+      "required": ["phi_is_bijection", "dimension_count", "mappings", "halloween_constraint"]
+    },
+    "fy2026_ten_k_forensics": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "accession_number": { "type": "string", "const": "0001193125-26-323660" },
+        "revenue_usd_m": { "type": "number", "minimum": 331000, "maximum": 333000 },
+        "capex_usd_m": { "type": "number", "const": 115948 },
+        "capex_pct_revenue": { "type": "number", "minimum": 34.8, "maximum": 35.0 },
+        "ocf_usd_m": { "type": "number", "minimum": 182900, "maximum": 183000 },
+        "capex_pct_ocf": { "type": "number", "minimum": 63.3, "maximum": 63.5 },
+        "fcf_usd_m": { "type": "number", "const": 66987 },
+        "net_cash_prior_usd_m": { "type": "number", "const": 5242 },
+        "net_debt_current_usd_m": { "type": "number", "const": -30045 },
+        "net_cash_swing_usd_m": { "type": "number", "minimum": 35286, "maximum": 35288 },
+        "finance_lease_liabilities_usd_m": { "type": "number", "const": 66594 },
+        "uncommenced_leases_usd_m": { "type": "number", "const": 329100 },
+        "k_stack_usd_m": { "type": "number", "minimum": 445047, "maximum": 445049 },
+        "k_exposed_usd_m": { "type": "number", "minimum": 511641, "maximum": 511643 },
+        "openai_supplied_revenue_usd_m": { "type": "number", "const": 24100 },
+        "openai_revenue_pct_total": { "type": "number", "minimum": 7.2, "maximum": 7.4 },
+        "commercial_rpo_usd_m": { "type": "number", "const": 678000 },
+        "rpo_yoy_growth_pct": { "type": "number", "const": 84 },
+        "combined_lease_obligations_usd_m": { "type": "number", "minimum": 395693, "maximum": 395695 }
+      },
+      "required": ["accession_number", "revenue_usd_m", "capex_usd_m", "capex_pct_revenue", "ocf_usd_m", "capex_pct_ocf", "fcf_usd_m", "finance_lease_liabilities_usd_m", "uncommenced_leases_usd_m", "k_stack_usd_m", "k_exposed_usd_m", "openai_supplied_revenue_usd_m", "commercial_rpo_usd_m"]
+    },
+    "open_weight_primitives": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "gamma_distill_min": { "type": "number", "minimum": 89.66, "maximum": 89.68 },
+        "gamma_distill_max": { "type": "number", "minimum": 179.33, "maximum": 179.35 },
+        "phi_api_std": { "type": "number", "minimum": 58.3, "maximum": 58.31 },
+        "phi_api_offpeak": { "type": "number", "minimum": 99.99, "maximum": 100.01 },
+        "omega_capture": { "type": "number", "minimum": 13.3332, "maximum": 13.3334 },
+        "overcharge_share": { "type": "number", "minimum": 0.9828, "maximum": 0.9829 },
+        "delta_forecl_usd_m": { "type": "number", "minimum": 23686, "maximum": 23687 },
+        "d_treble_usd_m": { "type": "number", "minimum": 71059, "maximum": 71061 }
+      },
+      "required": ["gamma_distill_min", "gamma_distill_max", "phi_api_std", "phi_api_offpeak", "omega_capture", "overcharge_share", "delta_forecl_usd_m", "d_treble_usd_m"]
+    },
+    "estoppel_fork": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "tertium_non_datur": { "type": "boolean", "const": true },
+        "horn_a": {
+          "type": "object", "additionalProperties": false,
+          "properties": {
+            "predicate": { "type": "string", "const": "capability_assertion_true" },
+            "strict_tort_rest2d_519_520": { "type": "boolean", "const": true },
+            "eula_liability_cap_void": { "type": "boolean", "const": true },
+            "insurer_cbrn_cyber_exclusion_triggered": { "type": "boolean", "const": true },
+            "asc_450_20_reserve_usd_m": { "type": "number", "const": 0 },
+            "asc_450_20_reserve_deficit_positive": { "type": "boolean", "const": true },
+            "sec_item_105_omission": { "type": "boolean", "const": true }
+          },
+          "required": ["predicate", "strict_tort_rest2d_519_520", "asc_450_20_reserve_usd_m", "asc_450_20_reserve_deficit_positive", "sec_item_105_omission"]
+        },
+        "horn_b": {
+          "type": "object", "additionalProperties": false,
+          "properties": {
+            "predicate": { "type": "string", "const": "capability_assertion_false" },
+            "fraudulent_fud_foreclosure": { "type": "boolean", "const": true },
+            "sherman_sec2_willful_intent": { "type": "boolean", "const": true },
+            "professional_engineers_safety_defense_void": { "type": "boolean", "const": true },
+            "noerr_immunity_scope": { "type": "string", "const": "liability_doctrine_only_not_evidentiary_privilege_sham_exception_applies_to_paired_commercial_conduct" },
+            "fre_404b_admissibility_probability": { "type": "number", "minimum": 0.99, "maximum": 1.0 },
+            "fre_801_d_2_party_admission": { "type": "boolean", "const": true }
+          },
+          "required": ["predicate", "fraudulent_fud_foreclosure", "sherman_sec2_willful_intent", "professional_engineers_safety_defense_void", "noerr_immunity_scope", "fre_404b_admissibility_probability"]
+        },
+        "eu_recidivism_ledger_eur": {
+          "type": "object", "additionalProperties": false,
+          "properties": {
+            "comp_c_3_37792_2004": { "type": "integer", "const": 497000000 },
+            "art_24_2_periodic_penalty_2008": { "type": "integer", "const": 899000000 },
+            "browser_choice_2013": { "type": "integer", "const": 561000000 },
+            "total": { "type": "integer", "const": 1957000000 }
+          },
+          "required": ["comp_c_3_37792_2004", "art_24_2_periodic_penalty_2008", "browser_choice_2013", "total"]
+        },
+        "criminal_fine_ceiling": {
+          "type": "object", "additionalProperties": false,
+          "properties": {
+            "statutory_base_usd": { "type": "integer", "const": 100000000 },
+            "alternative_fine_3571d_usd_m": { "type": "number", "minimum": 48199, "maximum": 48201 },
+            "multiple_of_statutory_base": { "type": "number", "minimum": 481, "maximum": 483 },
+            "max_imprisonment_years": { "type": "integer", "const": 10 }
+          },
+          "required": ["statutory_base_usd", "alternative_fine_3571d_usd_m", "multiple_of_statutory_base", "max_imprisonment_years"]
+        }
+      },
+      "required": ["tertium_non_datur", "horn_a", "horn_b", "eu_recidivism_ledger_eur", "criminal_fine_ceiling"]
+    },
+    "physical_bottleneck": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "weight_leak_probability_limit": { "type": "number", "const": 1.0 },
+        "first_amendment_anchor": { "type": "string", "const": "Bernstein v. DOJ, 176 F.3d 1132 (9th Cir. 1999)" },
+        "ieepa_berman_amendment": { "type": "string", "const": "50 U.S.C. 1702(b)(3)" },
+        "ghg_surge_2024_pct": { "type": "number", "const": 29 },
+        "ghg_surge_2026_pct": { "type": "number", "const": 25 },
+        "scope2_share_pct": { "type": "number", "const": 13 },
+        "scope3_share_pct": { "type": "number", "const": 85.8 },
+        "power_portfolio_gw": { "type": "number", "const": 40 },
+        "tmi_crane_ppa_mw": { "type": "number", "const": 835 },
+        "tmi_crane_ppa_years": { "type": "integer", "const": 20 },
+        "terrapower_natrium_ardp_usd_b": { "type": "number", "const": 2.0 },
+        "natrium_capacity_mw": { "type": "number", "const": 345 }
+      },
+      "required": ["weight_leak_probability_limit", "first_amendment_anchor", "ieepa_berman_amendment", "tmi_crane_ppa_mw", "terrapower_natrium_ardp_usd_b"]
+    },
+    "objective_function_inversion": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "protected_rent_base_usd_m": { "type": "number", "minimum": 20339, "maximum": 20341 },
+        "p_capture_pre": { "type": "number", "const": 0.05 },
+        "p_capture_post": { "type": "number", "const": 0.005 },
+        "u_pre_usd_m": { "type": "number", "minimum": 1016, "maximum": 1018 },
+        "u_post_usd_m": { "type": "number", "minimum": -9814, "maximum": -9812 },
+        "penalty_channels_usd_m": {
+          "type": "object", "additionalProperties": false,
+          "properties": {
+            "strict_tort_asc450_item105": { "type": "number", "minimum": 1204, "maximum": 1206 },
+            "sherman_sec2_3571d_treble": { "type": "number", "minimum": 1927, "maximum": 1929 },
+            "asc360_uncommenced_lease_reprice": { "type": "number", "minimum": 6581, "maximum": 6583 },
+            "ferc_puc_baseload_delay": { "type": "number", "minimum": 199, "maximum": 201 },
+            "total": { "type": "number", "minimum": 9914, "maximum": 9916 }
+          },
+          "required": ["strict_tort_asc450_item105", "sherman_sec2_3571d_treble", "asc360_uncommenced_lease_reprice", "ferc_puc_baseload_delay", "total"]
+        },
+        "penalty_to_rent_ratio": { "type": "number", "minimum": 97.4, "maximum": 97.6 },
+        "total_swing_usd_m": { "type": "number", "minimum": 10829, "maximum": 10831 },
+        "delta_star": { "type": "number", "minimum": 0.0938, "maximum": 0.094 },
+        "delta_star_below_solvent_threshold": { "type": "boolean", "const": true },
+        "punishment_pv_at_delta_0_90_usd_m": { "type": "number", "minimum": 88318, "maximum": 88321 },
+        "credibility_surplus_usd_m": { "type": "number", "minimum": 87301, "maximum": 87304 },
+        "p_capture_breakeven": { "type": "number", "minimum": 0.4874, "maximum": 0.4876 },
+        "phi_api_manifold_funding_floor": { "type": "number", "minimum": 2.157, "maximum": 2.158 },
+        "phi_api_anchor_funding_floor": { "type": "number", "minimum": 1.006, "maximum": 1.008 }
+      },
+      "required": ["protected_rent_base_usd_m", "u_pre_usd_m", "u_post_usd_m", "penalty_channels_usd_m", "penalty_to_rent_ratio", "delta_star", "delta_star_below_solvent_threshold", "punishment_pv_at_delta_0_90_usd_m"]
+    },
+    "dismantle_operating_system": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "implication": { "type": "string", "const": "CaptureAttempt(Gates OR MSFT) IMPLIES StructuralDestruction(MSFT)" },
+        "theme_classifier": {
+          "type": "array", "minItems": 6, "maxItems": 6,
+          "items": {
+            "type": "object", "additionalProperties": false,
+            "properties": {
+              "theme_id": { "type": "string", "pattern": "^T[1-6]$" },
+              "definition": { "type": "string" },
+              "adjudicated_anchor": { "type": "string" },
+              "prior_findings_n0": { "type": "integer", "minimum": 0, "maximum": 5 },
+              "q_win_at_n0": { "type": "number", "minimum": 0.24, "maximum": 0.64 }
+            },
+            "required": ["theme_id", "definition", "adjudicated_anchor", "prior_findings_n0", "q_win_at_n0"]
+          }
+        },
+        "q_win_ratchet": {
+          "type": "object", "additionalProperties": false,
+          "properties": {
+            "q0": { "type": "number", "const": 0.25 },
+            "delta_q_max": { "type": "number", "const": 0.4 },
+            "rho": { "type": "number", "const": 0.5 },
+            "strictly_increasing_in_n": { "type": "boolean", "const": true },
+            "saturating": { "type": "boolean", "const": true }
+          },
+          "required": ["q0", "delta_q_max", "rho", "strictly_increasing_in_n", "saturating"]
+        },
+        "product_manifold": {
+          "type": "array", "minItems": 10, "maxItems": 10,
+          "items": {
+            "type": "object", "additionalProperties": false,
+            "properties": {
+              "product_id": { "type": "string" },
+              "product_line": { "type": "string" },
+              "theme_id": { "type": "string", "pattern": "^T[1-6]$" },
+              "sigma_allocation_weight": { "type": "number", "minimum": 0.001, "maximum": 1.0 },
+              "treble_base_usd_m": { "type": "number", "minimum": 300, "maximum": 60000 },
+              "structural_remedy": { "type": "string" },
+              "clears_standalone_funding": { "type": "boolean" },
+              "clears_consolidated_funding": { "type": "boolean" }
+            },
+            "required": ["product_id", "product_line", "theme_id", "sigma_allocation_weight", "treble_base_usd_m", "structural_remedy", "clears_standalone_funding", "clears_consolidated_funding"]
+          }
+        },
+        "sigma_weights_sum_to_unity": { "type": "boolean", "const": true },
+        "litigation_capital_stack": {
+          "type": "object", "additionalProperties": false,
+          "properties": {
+            "c_lit_usd_m": { "type": "number", "const": 40 },
+            "k_f": { "type": "number", "const": 0.2 },
+            "s_fund": { "type": "number", "const": 0.3 },
+            "alpha_contingency": { "type": "number", "const": 0.25 },
+            "g_min_pre_estoppel_usd_m": { "type": "number", "minimum": 853, "maximum": 854 },
+            "g_min_post_estoppel_usd_m": { "type": "number", "minimum": 387.5, "maximum": 388.2 },
+            "estoppel_threshold_reduction_multiple": { "type": "number", "minimum": 2.19, "maximum": 2.21 },
+            "g_min_consolidated_usd_m": { "type": "number", "minimum": 75.2, "maximum": 75.4 },
+            "consolidation_collapse_multiple": { "type": "number", "minimum": 5.14, "maximum": 5.16 },
+            "portfolio_volatility_ratio": { "type": "number", "minimum": 0.8245, "maximum": 0.8247 },
+            "anchor_clearance_multiple": { "type": "number", "minimum": 141.9, "maximum": 142.1 },
+            "anchor_funder_ev_usd_m": { "type": "number", "minimum": 6766, "maximum": 6768 },
+            "standalone_funded_count": { "type": "integer", "const": 9 },
+            "consolidated_funded_count": { "type": "integer", "const": 10 }
+          },
+          "required": ["c_lit_usd_m", "k_f", "s_fund", "alpha_contingency", "g_min_pre_estoppel_usd_m", "g_min_post_estoppel_usd_m", "estoppel_threshold_reduction_multiple", "g_min_consolidated_usd_m", "anchor_clearance_multiple", "anchor_funder_ev_usd_m", "standalone_funded_count", "consolidated_funded_count"]
+        },
+        "clustered_filing_dominance": {
+          "type": "object", "additionalProperties": false,
+          "properties": {
+            "supermodular_in_shared_theme": { "type": "boolean", "const": true },
+            "test_treble_base_usd_m": { "type": "number", "const": 5000 },
+            "ev_theme_t1_usd_m": { "type": "number", "minimum": 570.5, "maximum": 571.0 },
+            "ev_theme_t5_usd_m": { "type": "number", "minimum": 233.0, "maximum": 233.5 },
+            "dominance_ratio": { "type": "number", "minimum": 2.446, "maximum": 2.448 },
+            "ratchet_gain_next_t1_claim_usd_m": { "type": "number", "minimum": 56.2, "maximum": 56.3 },
+            "filing_order": { "type": "array", "minItems": 4, "items": { "type": "string" } }
+          },
+          "required": ["supermodular_in_shared_theme", "ev_theme_t1_usd_m", "ev_theme_t5_usd_m", "dominance_ratio", "ratchet_gain_next_t1_claim_usd_m", "filing_order"]
+        },
+        "iteration_steps": { "type": "array", "minItems": 6, "maxItems": 6, "items": { "type": "string" } },
+        "termination_condition": { "type": "string" }
+      },
+      "required": ["implication", "theme_classifier", "q_win_ratchet", "product_manifold", "sigma_weights_sum_to_unity", "litigation_capital_stack", "clustered_filing_dominance", "iteration_steps", "termination_condition"]
+    },
+    "structural_destruction_operator": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "asc360_depreciation_catchup_usd_m": { "type": "number", "minimum": 77298, "maximum": 77299.5 },
+        "onerous_lease_conversion_usd_m": { "type": "number", "minimum": 65819, "maximum": 65821 },
+        "criminal_alternative_fine_usd_m": { "type": "number", "minimum": 48199, "maximum": 48201 },
+        "treble_foreclosure_overcharge_usd_m": { "type": "number", "minimum": 71059, "maximum": 71061 },
+        "xi_destruct_total_usd_m": { "type": "number", "minimum": 262378, "maximum": 262379.5 },
+        "tau_econ_years": { "type": "number", "const": 2.0 },
+        "tau_gaap_years": { "type": "number", "const": 6.0 },
+        "h_lease": { "type": "number", "const": 0.2 },
+        "xi_over_fcf26": { "type": "number", "minimum": 3.916, "maximum": 3.918 },
+        "xi_over_revenue_pct": { "type": "number", "minimum": 79.0, "maximum": 79.1 },
+        "xi_over_k_exposed_pct": { "type": "number", "minimum": 51.2, "maximum": 51.3 },
+        "xi_over_eu_recidivism_ledger": { "type": "number", "minimum": 134.0, "maximum": 134.2 }
+      },
+      "required": ["asc360_depreciation_catchup_usd_m", "onerous_lease_conversion_usd_m", "criminal_alternative_fine_usd_m", "treble_foreclosure_overcharge_usd_m", "xi_destruct_total_usd_m", "xi_over_fcf26", "xi_over_revenue_pct", "xi_over_eu_recidivism_ledger"]
+    },
+    "verification": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "proof_path": { "type": "string", "const": "proofs/recidivist_monopoly_fud_and_open_weight_foreclosure_proof.py" },
+        "proof_exit_code": { "type": "integer", "const": 0 },
+        "third_party_imports": { "type": "integer", "const": 0 },
+        "assertion_count": { "type": "integer", "minimum": 11 }
+      },
+      "required": ["proof_path", "proof_exit_code", "third_party_imports", "assertion_count"]
+    }
+  },
+  "required": ["canonical_specification", "middleware_isomorphism", "fy2026_ten_k_forensics", "open_weight_primitives", "estoppel_fork", "physical_bottleneck", "objective_function_inversion", "dismantle_operating_system", "structural_destruction_operator", "verification"]
+}

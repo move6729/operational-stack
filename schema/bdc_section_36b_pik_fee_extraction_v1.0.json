@@ -1,0 +1,341 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:bdc_section_36b_pik_fee_extraction_v1.0.json",
+  "title": "BDC Section 36(b) PIK Fee Extraction and Cross-Held Software Tranche Waterfall",
+  "description": "Typed measurement schema for the Investment Company Act of 1940 Section 36(b) fiduciary-duty fee-extraction mechanism at Blue Owl Capital Corp (OWL) and its two non-traded BDCs (OBDC, OTF). EQ-1 prices the cash-fee-on-paper-PIK drain at 0.9175 / 0.9200 of cash out per $1.00 of non-cash PIK income under a 90% Subchapter M distribution requirement. EQ-2 fixes the 4.24% critical PIK threshold against OTF's observed 25.0% share (5.8962x). EQ-3 cascades an 11.1% reported versus 20-30% true software share on $157.8B of credit AUM into $14.0442B-$29.8242B of hidden software, $2.80884B-$5.96484B of avoided 20% markdown, $42.1326M-$89.4726M of preserved 1.5% base fee, and $926.9172M-$1,968.3972M of OWL parent market cap at 22.0x FRE. EQ-4 re-bases a 17.5% / 20.0% incentive fee onto cash NII at 23.33% / 26.67% and caps the FY2025 disgorgement surface at the $690.4M combined OBDC + OTF fee stack. Also types the $291.263M combined cross-held Finastra / Pluralsight / CivicPlus tranche recovery waterfall and the zero-rent peer Schedule-of-Investments mosaic. All monetary values are USD.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "jurisdiction_context", "cfaa_compliance_attestation", "itar_ear_public_domain_attestation", "entity_and_instrument_ids", "catalyst_calendar", "eq1_cash_fee_on_paper_pik", "eq2_critical_pik_threshold", "eq3_software_reclassification", "eq4_section_36b_effective_cash_fee_rate", "cross_held_tranche_stack", "tranche_recovery_waterfall", "peer_schedule_of_investments", "platform_and_parent_baseline"],
+  "properties": {
+    "schema_version": { "type": "string", "const": "1.0" },
+    "jurisdiction_context": { "$ref": "#/$defs/jurisdiction_context" },
+    "cfaa_compliance_attestation": { "type": "boolean", "const": true, "description": "Zero unauthorized access under 18 U.S.C. 1030: every measured artifact is a public SEC EDGAR filing (Form 10-Q, Form 40-33, NPORT-P Schedule of Investments) or a public federal court docket, analyzed read-only." },
+    "itar_ear_public_domain_attestation": { "type": "boolean", "const": true, "description": "Public-domain game-theoretic and accounting-identity systems specification; zero export-controlled technical data, hardware blueprints, or firmware (22 C.F.R. 120.34; 15 C.F.R. 734.7)." },
+    "entity_and_instrument_ids": { "$ref": "#/$defs/entity_and_instrument_ids" },
+    "catalyst_calendar": { "type": "array", "minItems": 10, "maxItems": 10, "description": "Hard-date catalyst and statutory-deadline calendar in strictly ascending ISO 8601 order.", "items": { "$ref": "#/$defs/catalyst_entry" } },
+    "eq1_cash_fee_on_paper_pik": { "$ref": "#/$defs/eq1_cash_fee_on_paper_pik" },
+    "eq2_critical_pik_threshold": { "$ref": "#/$defs/eq2_critical_pik_threshold" },
+    "eq3_software_reclassification": { "$ref": "#/$defs/eq3_software_reclassification" },
+    "eq4_section_36b_effective_cash_fee_rate": { "$ref": "#/$defs/eq4_section_36b_effective_cash_fee_rate" },
+    "cross_held_tranche_stack": { "$ref": "#/$defs/cross_held_tranche_stack" },
+    "tranche_recovery_waterfall": { "$ref": "#/$defs/tranche_recovery_waterfall" },
+    "peer_schedule_of_investments": { "$ref": "#/$defs/peer_schedule_of_investments" },
+    "platform_and_parent_baseline": { "$ref": "#/$defs/platform_and_parent_baseline" }
+  },
+  "$defs": {
+    "jurisdiction_context": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["iso_3166_1_alpha_2", "statutory_venue"],
+      "properties": {
+        "iso_3166_1_alpha_2": { "type": "string", "pattern": "^[A-Z]{2}$", "description": "ISO 3166-1 alpha-2 jurisdiction code." },
+        "statutory_venue": { "type": "string", "minLength": 16, "description": "Investment Company Act of 1940 Section 36(b); SDNY 7:26-cv-03468-KPF and 1:26-cv-05183-KPF; SEC EDGAR Form 10-Q / Form 40-33; Subchapter M RIC 90%-distribution requirement." }
+      }
+    },
+    "entity_and_instrument_ids": {
+      "type": "object",
+      "description": "Standardized security-master keys for every named principal, docket, accession, and debt tranche.",
+      "additionalProperties": false,
+      "required": ["ticker", "cik", "court_dockets", "form_40_33_accessions", "periodic_report_accessions", "named_debt_tranches"],
+      "properties": {
+        "ticker": { "type": "object", "additionalProperties": { "type": "string", "pattern": "^[A-Z.]{1,6}$" }, "required": ["blue_owl_capital_corp", "blue_owl_capital_corp_ii", "blue_owl_technology_finance_corp"], "properties": { "blue_owl_capital_corp": { "const": "OWL" }, "blue_owl_capital_corp_ii": { "const": "OBDC" }, "blue_owl_technology_finance_corp": { "const": "OTF" }, "crescent_capital_bdc": { "const": "CGBD" } } },
+        "cik": { "type": "object", "additionalProperties": { "type": "string", "pattern": "^[0-9]{10}$" }, "required": ["blue_owl_capital_corp", "blue_owl_capital_corp_ii", "blue_owl_technology_finance_corp", "star_mountain", "bow_river", "crescent_capital_bdc"], "properties": { "blue_owl_capital_corp": { "const": "0001823945" }, "blue_owl_capital_corp_ii": { "const": "0001655888" }, "blue_owl_technology_finance_corp": { "const": "0001747777" }, "star_mountain": { "const": "0001786835" }, "bow_river": { "const": "0001810256" }, "crescent_capital_bdc": { "const": "0001633336" } } },
+        "court_dockets": { "type": "object", "additionalProperties": { "type": "string", "pattern": "^[0-9]:[0-9]{2}-cv-[0-9]{5}-[A-Z]{3}$" }, "required": ["blue_owl_capital_corp_ii", "blue_owl_technology_finance_corp"], "properties": { "blue_owl_capital_corp_ii": { "const": "7:26-cv-03468-KPF" }, "blue_owl_technology_finance_corp": { "const": "1:26-cv-05183-KPF" } } },
+        "form_40_33_accessions": { "type": "object", "additionalProperties": { "type": "string", "pattern": "^[0-9]{10}-[0-9]{2}-[0-9]{6}$" }, "required": ["blue_owl_capital_corp_ii", "blue_owl_technology_finance_corp"], "properties": { "blue_owl_capital_corp_ii": { "const": "0001193125-26-201635" }, "blue_owl_technology_finance_corp": { "const": "0001193125-26-285516" } } },
+        "periodic_report_accessions": { "type": "object", "additionalProperties": { "type": "string", "pattern": "^[0-9]{10}-[0-9]{2}-[0-9]{6}$" }, "required": ["blue_owl_capital_corp", "blue_owl_capital_corp_ii", "blue_owl_technology_finance_corp"], "properties": { "blue_owl_capital_corp": { "const": "0001823945-26-000040" }, "blue_owl_capital_corp_ii": { "const": "0001655888-26-000056" }, "blue_owl_technology_finance_corp": { "const": "0001747777-26-000028" } } },
+        "named_debt_tranches": { "type": "array", "minItems": 5, "maxItems": 5, "items": { "$ref": "#/$defs/named_debt_tranche" } }
+      }
+    },
+    "named_debt_tranche": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["tranche", "borrower", "terms", "seniority", "par_m", "fair_value_m", "mark_pct"],
+      "properties": {
+        "tranche": { "type": "string", "minLength": 4 },
+        "borrower": { "type": "string", "minLength": 4 },
+        "terms": { "type": "string", "minLength": 4 },
+        "seniority": { "type": "integer", "minimum": 1, "maximum": 5 },
+        "par_m": { "type": "number", "exclusiveMinimum": 0 },
+        "fair_value_m": { "type": "number", "minimum": 0 },
+        "mark_pct": { "type": "number", "minimum": 0, "maximum": 105 }
+      }
+    },
+    "catalyst_entry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["date", "event", "basis"],
+      "properties": {
+        "date": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$", "description": "Exact ISO 8601 calendar date (YYYY-MM-DD)." },
+        "event": { "type": "string", "minLength": 16 },
+        "basis": { "type": "string", "enum": ["reporting_period_end", "statutory_deadline_10q_45d", "statutory_deadline_10q_45d_next_business_day", "statutory_deadline_10k_60d", "ric_90pct_distribution_measurement", "section_36b_lookback_window_close"] }
+      }
+    },
+    "eq1_cash_fee_on_paper_pik": {
+      "type": "object",
+      "description": "EQ-1: drain(r) = r + 0.90 x (1 - r) = 0.90 + 0.10r of cash out per $1.00 of non-cash PIK income.",
+      "additionalProperties": false,
+      "required": ["pik_income_m", "pik_share_pct", "implied_nii_m", "cash_nii_m", "ric_distribution_requirement", "cash_drain_per_pik_dollar_17_5_pct", "cash_drain_per_pik_dollar_20_0_pct", "q1_2026_pik_cash_drain_17_5_m", "q1_2026_pik_cash_drain_20_0_m", "q1_2026_pik_incentive_fee_17_5_m", "q1_2026_pik_incentive_fee_20_0_m", "annualized_pik_cash_drain_17_5_m"],
+      "properties": {
+        "pik_income_m": { "type": "number", "const": 43.0 },
+        "pik_share_pct": { "type": "number", "const": 25.0 },
+        "implied_nii_m": { "type": "number", "const": 172.0 },
+        "cash_nii_m": { "type": "number", "const": 129.0 },
+        "ric_distribution_requirement": { "type": "number", "const": 0.9 },
+        "cash_drain_per_pik_dollar_17_5_pct": { "type": "number", "const": 0.9175 },
+        "cash_drain_per_pik_dollar_20_0_pct": { "type": "number", "const": 0.92 },
+        "q1_2026_pik_cash_drain_17_5_m": { "type": "number", "const": 39.4525 },
+        "q1_2026_pik_cash_drain_20_0_m": { "type": "number", "const": 39.56 },
+        "q1_2026_pik_incentive_fee_17_5_m": { "type": "number", "const": 7.525 },
+        "q1_2026_pik_incentive_fee_20_0_m": { "type": "number", "const": 8.6 },
+        "annualized_pik_cash_drain_17_5_m": { "type": "number", "const": 157.81 }
+      }
+    },
+    "eq2_critical_pik_threshold": {
+      "type": "object",
+      "description": "EQ-2: 25.0 / 4.24 = 5.8962x breach of the 90%-distribution cash-coverage critical PIK threshold.",
+      "additionalProperties": false,
+      "required": ["critical_threshold_pct", "observed_otf_pik_share_pct", "breach_multiple", "threshold_excess_pts", "zero_retained_cash_ceiling_pct", "cash_collected_share_at_threshold_pct", "threshold_pik_cash_drain_m", "threshold_retained_cash_m", "observed_pik_cash_drain_m", "observed_retained_cash_m"],
+      "properties": {
+        "critical_threshold_pct": { "type": "number", "const": 4.24 },
+        "observed_otf_pik_share_pct": { "type": "number", "const": 25.0 },
+        "breach_multiple": { "type": "number", "const": 5.8962 },
+        "threshold_excess_pts": { "type": "number", "const": 20.76 },
+        "zero_retained_cash_ceiling_pct": { "type": "number", "const": 8.25 },
+        "cash_collected_share_at_threshold_pct": { "type": "number", "const": 95.76 },
+        "threshold_pik_cash_drain_m": { "type": "number", "const": 6.691144 },
+        "threshold_retained_cash_m": { "type": "number", "const": 6.8972 },
+        "observed_pik_cash_drain_m": { "type": "number", "const": 39.4525 },
+        "observed_retained_cash_m": { "type": "number", "const": -28.81, "description": "Negative retained cash at a 25.0% PIK share proves the cash-fee-on-paper-PIK regime." }
+      }
+    },
+    "eq3_software_reclassification": {
+      "type": "object",
+      "description": "EQ-3: 11.1% reported versus 20-30% true software share on $157.8B of credit AUM, cascaded to OWL parent market cap at 22.0x FRE.",
+      "additionalProperties": false,
+      "required": ["credit_aum_bn", "reported_software_pct", "true_software_pct_range", "understatement_pts_range", "reported_software_bn", "hidden_software_bn_range", "avoided_markdown_20pct_bn_range", "preserved_base_fee_1_5pct_m_range", "preserved_owl_market_cap_22x_m_range", "preserved_owl_market_cap_range_m_range", "fre_multiple_range", "fre_margin_pct_range"],
+      "properties": {
+        "credit_aum_bn": { "type": "number", "const": 157.8 },
+        "reported_software_pct": { "type": "number", "const": 11.1 },
+        "true_software_pct_range": { "$ref": "#/$defs/ascending_pair" },
+        "understatement_pts_range": { "$ref": "#/$defs/ascending_pair" },
+        "reported_software_bn": { "type": "number", "const": 17.5158 },
+        "hidden_software_bn_range": { "$ref": "#/$defs/ascending_pair" },
+        "avoided_markdown_20pct_bn_range": { "$ref": "#/$defs/ascending_pair" },
+        "preserved_base_fee_1_5pct_m_range": { "$ref": "#/$defs/ascending_pair" },
+        "preserved_owl_market_cap_22x_m_range": { "$ref": "#/$defs/ascending_pair" },
+        "preserved_owl_market_cap_range_m_range": { "$ref": "#/$defs/ascending_pair" },
+        "fre_multiple_range": { "$ref": "#/$defs/ascending_pair" },
+        "fre_margin_pct_range": { "$ref": "#/$defs/ascending_pair" }
+      }
+    },
+    "eq4_section_36b_effective_cash_fee_rate": {
+      "type": "object",
+      "description": "EQ-4: effective = nominal / (1 - pik_share); 17.5% / 0.75 = 23.33% and 20.0% / 0.75 = 26.67%, against a $690.4M combined FY2025 disgorgement cap.",
+      "additionalProperties": false,
+      "required": ["nominal_incentive_rate_pct_range", "pik_share_pct", "effective_cash_incentive_rate_pct_range", "effective_rate_gross_up_pts_range", "obdc_fees_2021_m", "obdc_fees_2025_m", "obdc_base_fee_2025_m", "obdc_incentive_fee_2025_m", "obdc_fee_growth_pct", "otf_fees_2021_m", "otf_fees_2025_m", "otf_fee_growth_pct", "combined_fees_2021_m", "combined_fees_2025_m", "combined_fee_delta_m", "combined_fee_growth_pct", "section_36b_fy2025_disgorgement_cap_m", "pik_attributable_disgorgement_cap_m", "otf_obdc_overlap_min_pct"],
+      "properties": {
+        "nominal_incentive_rate_pct_range": { "$ref": "#/$defs/ascending_pair" },
+        "pik_share_pct": { "type": "number", "const": 25.0 },
+        "effective_cash_incentive_rate_pct_range": { "$ref": "#/$defs/ascending_pair" },
+        "effective_rate_gross_up_pts_range": { "$ref": "#/$defs/ascending_pair" },
+        "obdc_fees_2021_m": { "type": "number", "const": 282.4 },
+        "obdc_fees_2025_m": { "type": "number", "const": 414.4 },
+        "obdc_base_fee_2025_m": { "type": "number", "const": 252.1 },
+        "obdc_incentive_fee_2025_m": { "type": "number", "const": 162.3 },
+        "obdc_fee_growth_pct": { "type": "number", "const": 46.74 },
+        "otf_fees_2021_m": { "type": "number", "const": 95.0 },
+        "otf_fees_2025_m": { "type": "number", "const": 276.0 },
+        "otf_fee_growth_pct": { "type": "number", "const": 190.53 },
+        "combined_fees_2021_m": { "type": "number", "const": 377.4 },
+        "combined_fees_2025_m": { "type": "number", "const": 690.4 },
+        "combined_fee_delta_m": { "type": "number", "const": 313.0 },
+        "combined_fee_growth_pct": { "type": "number", "const": 82.94 },
+        "section_36b_fy2025_disgorgement_cap_m": { "type": "number", "const": 690.4, "description": "Combined OBDC + OTF FY2025 fee stack bounding the Section 36(b) disgorgement surface." },
+        "pik_attributable_disgorgement_cap_m": { "type": "number", "const": 172.6 },
+        "otf_obdc_overlap_min_pct": { "type": "number", "const": 70.0 }
+      }
+    },
+    "cross_held_tranche_stack": {
+      "type": "object",
+      "description": "Combined OBDC + OTF cross-held software tranche stack: $291.263M of claim against $177.264M of reported fair value.",
+      "additionalProperties": false,
+      "required": ["total_claim_m", "total_claim_usd", "aggregate_fair_value_m", "aggregate_mark_pct", "tranches", "mark_vs_waterfall_divergence", "max_abs_divergence_m"],
+      "properties": {
+        "total_claim_m": { "type": "number", "const": 291.263 },
+        "total_claim_usd": { "type": "number", "const": 291263000.0 },
+        "aggregate_fair_value_m": { "type": "number", "const": 177.264 },
+        "aggregate_mark_pct": { "type": "number", "const": 60.8605 },
+        "tranches": { "type": "array", "minItems": 5, "maxItems": 5, "items": { "$ref": "#/$defs/stack_tranche" } },
+        "mark_vs_waterfall_divergence": { "type": "array", "minItems": 5, "maxItems": 5, "description": "Per-tranche reported mark less sequential-waterfall recovery at ev = $177.264M; the vector sums to zero (aggregate conservation) while individual tranches diverge by up to $53.013M.", "items": { "$ref": "#/$defs/divergence_row" } },
+        "max_abs_divergence_m": { "type": "number", "const": 53.013 }
+      }
+    },
+    "stack_tranche": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["tranche", "borrower", "terms", "seniority", "claim_basis", "claim_m", "fair_value_m", "mark_pct", "breakeven_ev_m"],
+      "properties": {
+        "tranche": { "type": "string", "minLength": 4 },
+        "borrower": { "type": "string", "minLength": 4 },
+        "terms": { "type": "string", "minLength": 4 },
+        "seniority": { "type": "integer", "minimum": 1, "maximum": 5 },
+        "claim_basis": { "type": "string", "enum": ["par", "cost"] },
+        "claim_m": { "type": "number", "exclusiveMinimum": 0 },
+        "fair_value_m": { "type": "number", "minimum": 0 },
+        "mark_pct": { "type": "number", "minimum": 0, "maximum": 105 },
+        "breakeven_ev_m": { "type": "number", "exclusiveMinimum": 0, "maximum": 291.263, "description": "Cumulative claim boundary: the enterprise value at which this tranche reaches 100 cents on the dollar." }
+      }
+    },
+    "divergence_row": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["tranche", "reported_fair_value_m", "waterfall_recovery_m", "divergence_m"],
+      "properties": {
+        "tranche": { "type": "string", "minLength": 4 },
+        "reported_fair_value_m": { "type": "number", "minimum": 0 },
+        "waterfall_recovery_m": { "type": "number", "minimum": 0 },
+        "divergence_m": { "type": "number", "minimum": -291.263, "maximum": 291.263 }
+      }
+    },
+    "tranche_recovery_waterfall": {
+      "type": "object",
+      "description": "Parameterized tranche_recovery(ev) evaluated at the three governing boundary regimes.",
+      "additionalProperties": false,
+      "required": ["at_zero_ev", "at_aggregate_fair_value", "at_total_claim"],
+      "properties": {
+        "at_zero_ev": { "$ref": "#/$defs/waterfall_result" },
+        "at_aggregate_fair_value": { "$ref": "#/$defs/waterfall_result" },
+        "at_total_claim": { "$ref": "#/$defs/waterfall_result" }
+      }
+    },
+    "waterfall_result": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["ev_m", "ev_usd", "total_claim_m", "total_recovery_m", "total_recovery_usd", "stack_cents_on_dollar", "fulcrum_tranche", "unrecovered_ev_m", "tranches"],
+      "properties": {
+        "ev_m": { "type": "number", "minimum": 0 },
+        "ev_usd": { "type": "number", "minimum": 0 },
+        "total_claim_m": { "type": "number", "const": 291.263 },
+        "total_recovery_m": { "type": "number", "minimum": 0, "maximum": 291.263 },
+        "total_recovery_usd": { "type": "number", "minimum": 0 },
+        "stack_cents_on_dollar": { "type": "number", "minimum": 0, "maximum": 100 },
+        "fulcrum_tranche": { "type": ["string", "null"], "description": "First tranche recovering strictly between 0 and its full claim; null at the zero-EV and full-claim boundaries." },
+        "unrecovered_ev_m": { "type": "number", "minimum": 0 },
+        "tranches": { "type": "array", "minItems": 5, "maxItems": 5, "items": { "$ref": "#/$defs/waterfall_tranche" } }
+      }
+    },
+    "waterfall_tranche": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["tranche", "borrower", "seniority", "claim_basis", "claim_m", "claim_usd", "breakeven_ev_m", "recovery_m", "recovery_usd", "cents_on_dollar"],
+      "properties": {
+        "tranche": { "type": "string", "minLength": 4 },
+        "borrower": { "type": "string", "minLength": 4 },
+        "seniority": { "type": "integer", "minimum": 1, "maximum": 5 },
+        "claim_basis": { "type": "string", "enum": ["par", "cost"] },
+        "claim_m": { "type": "number", "exclusiveMinimum": 0 },
+        "claim_usd": { "type": "number", "exclusiveMinimum": 0 },
+        "breakeven_ev_m": { "type": "number", "exclusiveMinimum": 0 },
+        "recovery_m": { "type": "number", "minimum": 0 },
+        "recovery_usd": { "type": "number", "minimum": 0 },
+        "cents_on_dollar": { "type": "number", "minimum": 0, "maximum": 100 }
+      }
+    },
+    "peer_schedule_of_investments": {
+      "type": "object",
+      "description": "Zero-rent public credit mosaic: Star Mountain, Bow River, Crescent BDC, Digital Alpha, and the distressed US tech book.",
+      "additionalProperties": false,
+      "required": ["star_mountain", "bow_river", "crescent_bdc", "digital_alpha", "distressed_tech"],
+      "properties": {
+        "star_mountain": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["japonesque_sofr_spread_bps", "japonesque_cash_pct", "japonesque_pik_pct", "cmt_cash_spread_range_bps", "cmt_pik_spread_range_bps", "cmt_pik_toggle_premium_bps_range", "mpusa_pik_pct", "caregility_proactive_pik_pct"],
+          "properties": {
+            "japonesque_sofr_spread_bps": { "type": "integer", "const": 948 },
+            "japonesque_cash_pct": { "type": "number", "const": 0.0 },
+            "japonesque_pik_pct": { "type": "number", "const": 69.0 },
+            "cmt_cash_spread_range_bps": { "$ref": "#/$defs/ascending_int_pair" },
+            "cmt_pik_spread_range_bps": { "$ref": "#/$defs/ascending_int_pair" },
+            "cmt_pik_toggle_premium_bps_range": { "$ref": "#/$defs/ascending_int_pair" },
+            "mpusa_pik_pct": { "type": "number", "const": 12.91 },
+            "caregility_proactive_pik_pct": { "type": "number", "const": 10.0 }
+          }
+        },
+        "bow_river": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["cost_usd", "fair_value_usd", "unrealized_gain_usd", "unrealized_gain_pct_of_cost", "cost_pct_of_fair_value", "credit_facility_m", "quarterly_mgmt_fee_m", "quarterly_mgmt_fee_pct_of_facility", "annualized_mgmt_fee_pct"],
+          "properties": {
+            "cost_usd": { "type": "integer", "const": 486830334 },
+            "fair_value_usd": { "type": "integer", "const": 568523676 },
+            "unrealized_gain_usd": { "type": "integer", "const": 81693342 },
+            "unrealized_gain_pct_of_cost": { "type": "number", "const": 16.7807 },
+            "cost_pct_of_fair_value": { "type": "number", "const": 85.6306 },
+            "credit_facility_m": { "type": "number", "const": 73.0 },
+            "quarterly_mgmt_fee_m": { "type": "number", "const": 4.53 },
+            "quarterly_mgmt_fee_pct_of_facility": { "type": "number", "const": 6.2055 },
+            "annualized_mgmt_fee_pct": { "type": "number", "const": 24.822 }
+          }
+        },
+        "crescent_bdc": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["sofr_pik_facilities_count"],
+          "properties": { "sofr_pik_facilities_count": { "type": "integer", "const": 26 } }
+        },
+        "digital_alpha": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["all_in_pct", "pik_pct", "pik_share_of_all_in_pct"],
+          "properties": {
+            "all_in_pct": { "type": "number", "const": 14.86 },
+            "pik_pct": { "type": "number", "const": 9.5 },
+            "pik_share_of_all_in_pct": { "type": "number", "const": 63.93 }
+          }
+        },
+        "distressed_tech": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["distressed_us_tech_loans_bn", "software_loans_sub_80c_bn", "sub_80c_share_pct", "private_credit_software_default_pct", "syndicated_software_default_pct", "default_rate_ratio"],
+          "properties": {
+            "distressed_us_tech_loans_bn": { "type": "number", "const": 46.9 },
+            "software_loans_sub_80c_bn": { "type": "number", "const": 25.0 },
+            "sub_80c_share_pct": { "type": "number", "const": 53.3 },
+            "private_credit_software_default_pct": { "type": "number", "const": 8.0 },
+            "syndicated_software_default_pct": { "type": "number", "const": 5.5 },
+            "default_rate_ratio": { "type": "number", "const": 1.4545 }
+          }
+        }
+      }
+    },
+    "platform_and_parent_baseline": {
+      "type": "object",
+      "description": "OWL parent fee-related earnings, platform AUM shares, and the Kuvare general-account acquisition baseline.",
+      "additionalProperties": false,
+      "required": ["total_aum_bn", "credit_aum_bn", "bdc_sector_aum_2025_03_bn", "credit_share_of_total_aum_pct", "credit_share_of_bdc_sector_pct", "q1_2026_fre_m", "q2_2026_fre_m", "h1_2026_fre_m", "h1_2026_de_m", "h1_2026_de_to_fre_pct", "h1_2026_fre_annualized_m", "implied_market_cap_22x_m", "preserved_cap_share_of_implied_pct_range", "kuvare_acquisition_price_m", "kuvare_preferred_equity_m", "kuvare_preferred_share_pct", "kuvare_general_account_aum_bn", "kuvare_aum_share_pct"],
+      "properties": {
+        "total_aum_bn": { "type": "number", "const": 307.4 },
+        "credit_aum_bn": { "type": "number", "const": 157.8 },
+        "bdc_sector_aum_2025_03_bn": { "type": "number", "const": 475.0 },
+        "credit_share_of_total_aum_pct": { "type": "number", "const": 51.3338 },
+        "credit_share_of_bdc_sector_pct": { "type": "number", "const": 33.2211 },
+        "q1_2026_fre_m": { "type": "number", "const": 393.626 },
+        "q2_2026_fre_m": { "type": "number", "const": 392.18 },
+        "h1_2026_fre_m": { "type": "number", "const": 785.806 },
+        "h1_2026_de_m": { "type": "number", "const": 643.782 },
+        "h1_2026_de_to_fre_pct": { "type": "number", "const": 81.9263 },
+        "h1_2026_fre_annualized_m": { "type": "number", "const": 1571.612 },
+        "implied_market_cap_22x_m": { "type": "number", "const": 34575.464 },
+        "preserved_cap_share_of_implied_pct_range": { "$ref": "#/$defs/ascending_pair" },
+        "kuvare_acquisition_price_m": { "type": "number", "const": 750.0 },
+        "kuvare_preferred_equity_m": { "type": "number", "const": 250.0 },
+        "kuvare_preferred_share_pct": { "type": "number", "const": 33.3333 },
+        "kuvare_general_account_aum_bn": { "type": "number", "const": 20.0 },
+        "kuvare_aum_share_pct": { "type": "number", "const": 6.5062 }
+      }
+    },
+    "ascending_pair": { "type": "array", "minItems": 2, "maxItems": 2, "description": "Locked [low, high] numeric range with low <= high.", "items": { "type": "number" } },
+    "ascending_int_pair": { "type": "array", "minItems": 2, "maxItems": 2, "description": "Locked [low, high] integer range with low <= high.", "items": { "type": "integer" } }
+  }
+}

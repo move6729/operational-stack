@@ -1,0 +1,224 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:offshore_dark_cloud.json",
+  "$comment": "PLAIN-ENGLISH LEGAL NOTICE: This JSON Schema formalizes a public-interest forensic accounting and distributed-systems engineering model derived from public court dockets, SEC filings, and government disclosures under Milkovich v. Lorain Journal Co., 497 U.S. 1 (1990). It is NOT an accusation, indictment, or evidentiary filing attributing uncharged criminal conduct to any living person or institution.",
+  "title": "Offshore Dark Cloud Forensic Bundle",
+  "type": "object",
+  "required": [
+    "document_id",
+    "canonical_specification",
+    "markopolos_epistemic_sections",
+    "four_pipe_cross_join_lattice",
+    "gambetta_cloud_kyc_gate",
+    "usvi_934_tax_and_vigorish_metrics",
+    "cart_hardware_attrition_metrics",
+    "entity_and_instrument_ids",
+    "catalyst_calendar",
+    "tranche_waterfall"
+  ],
+  "properties": {
+    "document_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_-]+$",
+      "minLength": 1
+    },
+    "canonical_specification": {
+      "type": "string",
+      "const": "SPEC-OFFSHORE-DARK-CLOUD-v1.0"
+    },
+    "markopolos_epistemic_sections": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["section_id", "h0_baseline", "h1_mechanism", "falsification_record"],
+        "properties": {
+          "section_id": {"type": "string", "minLength": 1},
+          "h0_baseline": {"type": "string", "minLength": 1},
+          "h1_mechanism": {"type": "string", "minLength": 1},
+          "falsification_record": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "four_pipe_cross_join_lattice": {
+      "type": "object",
+      "required": ["pipes", "non_empty_subsets", "pairwise_joins", "higher_order_joins", "onshore_detection_probability", "offshore_sanctuary_detection_probability"],
+      "properties": {
+        "pipes": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 4,
+          "items": {
+            "type": "string",
+            "enum": ["GLBA_BANKING", "CPNI_TELECOM_E911", "ENTERPRISE_DEAL_GRAPH", "HIPAA_GENOMIC_BEHAVIORAL"]
+          }
+        },
+        "non_empty_subsets": {"type": "integer", "const": 15},
+        "pairwise_joins": {"type": "integer", "const": 6},
+        "higher_order_joins": {"type": "integer", "const": 11},
+        "onshore_detection_probability": {"type": "number", "const": 0.99999375},
+        "offshore_sanctuary_detection_probability": {"type": "number", "const": 0.0}
+      }
+    },
+    "gambetta_cloud_kyc_gate": {
+      "type": "object",
+      "required": ["bond_threshold_formula", "tenants"],
+      "properties": {
+        "bond_threshold_formula": {
+          "type": "string",
+          "const": "L(K_i) >= B_reg + (q_audit/(1 - q_audit))*V_i"
+        },
+        "tenants": {
+          "type": "array",
+          "minItems": 3,
+          "items": {
+            "type": "object",
+            "required": ["tenant_class", "access", "defection_incentive", "defection_prob"],
+            "properties": {
+              "tenant_class": {"type": "string", "enum": ["un_bonded_outsider", "bonded_pipe_contributor", "bonded_vigorish_payer"]},
+              "access": {"type": "integer", "enum": [0, 1]},
+              "defection_incentive": {"type": "boolean"},
+              "defection_prob": {"type": "number", "minimum": 0, "maximum": 1}
+            }
+          }
+        }
+      }
+    },
+    "usvi_934_tax_and_vigorish_metrics": {
+      "type": "object",
+      "required": ["tau_usvi", "tau_us", "tax_rate_spread", "F_in", "V_usvi", "V_us", "delta_v_tax_surplus", "v_vig", "M_fee", "btop_grant_total"],
+      "properties": {
+        "tau_usvi": {"type": "number", "const": 0.0385},
+        "tau_us": {"type": "number", "const": 0.396},
+        "tax_rate_spread": {"type": "number", "const": 0.3575},
+        "F_black": {"type": "number", "const": 158.0},
+        "F_rothschild": {"type": "number", "const": 25.0},
+        "F_in": {"type": "number", "const": 183.0},
+        "V_usvi": {"type": "number", "const": 175.9545},
+        "V_us": {"type": "number", "const": 110.532},
+        "delta_v_tax_surplus": {"type": "number", "const": 65.4225},
+        "v_vig": {"type": "number", "const": 0.1},
+        "M_fee": {"type": "number", "const": 79.0},
+        "edc_historical_savings_musd": {"type": "number", "const": 144.9},
+        "jpm_cited_savings_musd": {"type": "number", "const": 219.8},
+        "btop_grant_total": {"type": "number", "const": 67.454924},
+        "undersea_cable_miles": {"type": "integer", "const": 3720},
+        "middle_mile_fiber_miles": {"type": "integer", "const": 244},
+        "capacity_gbps": {"type": "number", "const": 10.0}
+      }
+    },
+    "cart_hardware_attrition_metrics": {
+      "type": "object",
+      "required": ["total_devices", "extracted_consumer_devices", "unextracted_devices", "extracted_docs", "enterprise_server_pbx_unfi_docs", "little_st_james_raid_lag_days"],
+      "properties": {
+        "total_devices": {"type": "integer", "const": 62},
+        "extracted_consumer_devices": {"type": "integer", "const": 11},
+        "unextracted_devices": {"type": "integer", "const": 51},
+        "extraction_ratio": {"type": "number", "const": 0.17741935483870968},
+        "black_hole_ratio": {"type": "number", "const": 0.8225806451612904},
+        "extracted_docs": {"type": "integer", "const": 2227},
+        "enterprise_server_pbx_unfi_docs": {"type": "integer", "const": 0},
+        "little_st_james_raid_lag_days": {"type": "integer", "const": 37}
+      }
+    },
+    "entity_and_instrument_ids": {
+      "type": "object",
+      "required": ["primary_target_gp_sponsor", "public_bdc_co_lenders", "regulated_insurance_counterparties", "auditors_valuation_agents_fund_admins", "public_pension_lps_swfs_gatekeepers", "trustees_agents_rating_agencies_counsel", "court_dockets"],
+      "properties": {
+        "primary_target_gp_sponsor": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["legal_name", "role"],
+            "properties": {
+              "legal_name": {"type": "string", "minLength": 1},
+              "role": {"type": "string", "minLength": 1},
+              "ticker": {"type": "string"},
+              "cik": {"type": "string", "pattern": "^[0-9]{10}$"},
+              "crd": {"type": ["string", "null"], "pattern": "^[0-9]+$"},
+              "pcacob_id": {"type": ["string", "null"], "pattern": "^[0-9]+$"}
+            }
+          }
+        },
+        "public_bdc_co_lenders": {"$ref": "#/$defs/entityArray"},
+        "regulated_insurance_counterparties": {"$ref": "#/$defs/entityArray"},
+        "auditors_valuation_agents_fund_admins": {"$ref": "#/$defs/entityArray"},
+        "public_pension_lps_swfs_gatekeepers": {"$ref": "#/$defs/entityArray"},
+        "trustees_agents_rating_agencies_counsel": {"$ref": "#/$defs/entityArray"},
+        "court_dockets": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["docket_id", "court", "filing_description"],
+            "properties": {
+              "docket_id": {"type": "string", "minLength": 1},
+              "court": {"type": "string", "minLength": 1},
+              "filing_description": {"type": "string", "minLength": 1}
+            }
+          }
+        }
+      }
+    },
+    "catalyst_calendar": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["iso_date", "event"],
+        "properties": {
+          "iso_date": {"type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"},
+          "event": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "tranche_waterfall": {
+      "type": "object",
+      "required": ["total_claim_stack", "tranches"],
+      "properties": {
+        "total_claim_stack": {"type": "number", "const": 940.5},
+        "tranches": {
+          "type": "array",
+          "minItems": 5,
+          "maxItems": 5,
+          "items": {
+            "type": "object",
+            "required": ["name", "principal", "breakeven_ev"],
+            "properties": {
+              "name": {
+                "type": "string",
+                "enum": [
+                  "T1_TVPA_CLASS_SETTLEMENTS",
+                  "T2_SOVEREIGN_REGULATORY_ENFORCEMENT",
+                  "T3_INSTITUTIONAL_PRINCIPAL_USVI_SETTLEMENTS",
+                  "T4_SOUTHERN_TRUST_UNCLAWED_RETAINED_FEE_POOL",
+                  "T5_DOWNSTREAM_VENTURE_LP_ALLOCATION"
+                ]
+              },
+              "principal": {"type": "number", "exclusiveMinimum": 0},
+              "breakeven_ev": {"type": "number", "exclusiveMinimum": 0}
+            }
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "entityArray": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["legal_name", "role"],
+        "properties": {
+          "legal_name": {"type": "string", "minLength": 1},
+          "role": {"type": "string", "minLength": 1},
+          "ticker": {"type": "string"},
+          "cik": {"type": "string", "pattern": "^[0-9]{10}$"},
+          "crd": {"type": ["string", "null"], "pattern": "^[0-9]+$"},
+          "naic_code": {"type": ["string", "null"], "pattern": "^[0-9]{5}$"}
+        }
+      }
+    }
+  },
+  "additionalProperties": false
+}

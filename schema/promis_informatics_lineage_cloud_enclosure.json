@@ -1,0 +1,321 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:promis_informatics_lineage_cloud_enclosure.json",
+  "title": "PROMIS Informatics Lineage, _NSAKEY / PRISM Middleware Tap, Southern Trust DNA-Database Charter & Closed-Weight Cloud Enclosure Schema",
+  "description": "Validates the empirical, statutory and physical baseline of SPEC-PROMIS-INFORMATICS-LINEAGE-AND-CLOUD-ENCLOSURE-v1.0: the Inslaw/EOUSA 94-office PROMIS implementation contract and its adjudicated ledger (83 B.R. 89, 932 F.2d 1467, H.R. Rep. No. 102-857, DOJ Special Counsel Nicholas J. Bua, Court of Federal Claims 39 Fed. Cl. 307 / 40 Fed. Cl. 843 (1998)); the _NSAKEY dual-key disassembly in ADVAPI32.DLL (Aug. 31, 1999) and PRISM US-984XN partner chronology; the 26 U.S.C. 934 Southern Trust Company, Inc. 'DNA database and data mining / biomedical and financial informatics' charter and its 1999-2018 cutout revenue ledger; the Epstein-directed Gates/MIT Media Lab routing, the 2017 Antonova threat, the ST-19-PB-00080 probate instruments, the Southern Trust to Valar Ventures LP capital bridge, and the Microsoft/OpenAI/C2PA closed-weight enclosure; plus the Milkovich/Partington/Hepps disclosed-facts doctrine and the expressly quarantined, unadjudicated Maxwell PROMIS-distribution allegation.",
+  "type": "object",
+  "properties": {
+    "promis_implementation_contract_usd": {
+      "type": "integer",
+      "const": 10000000,
+      "description": "March 1982 EOUSA three-year PROMIS implementation contract awarded to Inslaw, Inc. (83 B.R. 89, 96-102)."
+    },
+    "eo_usa_offices_total": {
+      "type": "integer",
+      "const": 94,
+      "description": "Total federal prosecutorial districts spanned by the EOUSA implementation contract (n in Equation E1)."
+    },
+    "inslaw_chapter11_filing": {
+      "type": "string",
+      "const": "1985-02",
+      "pattern": "^[0-9]{4}-[0-9]{2}$",
+      "description": "Inslaw, Inc. Chapter 11 bankruptcy filing month (February 1985), listing DOJ as creditor."
+    },
+    "bankruptcy_ruling_cite": {
+      "type": "string",
+      "const": "83 B.R. 89 (Bankr. D.D.C. 1988)",
+      "description": "Bankruptcy Court merits adjudication finding DOJ trickery, fraud, and deceit."
+    },
+    "dc_circuit_cite": {
+      "type": "string",
+      "const": "932 F.2d 1467 (D.C. Cir. 1991)",
+      "description": "D.C. Circuit jurisdictional vacatur of 83 B.R. 89 (May 7, 1991)."
+    },
+    "house_report": {
+      "type": "string",
+      "const": "H.R. Rep. No. 102-857 (Sept. 10, 1992)",
+      "description": "House Judiciary Committee report, The INSLAW Affair."
+    },
+    "court_of_federal_claims_year": {
+      "type": "integer",
+      "const": 1998,
+      "description": "Year the U.S. Court of Federal Claims ruled against Inslaw on congressional reference."
+    },
+    "nsakey_report_date": {
+      "type": "string",
+      "const": "1999-08-31",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+      "description": "Publication date of Cryptonym Corporation binary analysis (Andrew D. Fernandes), Microsoft, the NSA, and You."
+    },
+    "nsakey_module": {
+      "type": "string",
+      "const": "ADVAPI32.DLL",
+      "description": "Windows NT 4.0 SP5 CryptoAPI verification module containing _KEY and _NSAKEY."
+    },
+    "nsakey_rsa_bits": {
+      "type": "integer",
+      "const": 1024,
+      "description": "RSA key width (bits) of both embedded public verification keys."
+    },
+    "nsakey_public_exponent": {
+      "type": "integer",
+      "const": 65537,
+      "description": "Public exponent e of the embedded RSA verification keys."
+    },
+    "prism_sigad": {
+      "type": "string",
+      "const": "US-984XN",
+      "pattern": "^US-[0-9]{3}[A-Z]{2}$",
+      "description": "PRISM Special SIGAD designation on the leaked ODNI/NSA Overview slide (published June 6, 2013)."
+    },
+    "prism_microsoft_join_date": {
+      "type": "string",
+      "const": "2007-09-11",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+      "description": "Microsoft onboarding date as PRISM Partner #1."
+    },
+    "prism_skype_join_date": {
+      "type": "string",
+      "const": "2012-02-06",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+      "description": "Skype post-acquisition PRISM onboarding date."
+    },
+    "prism_top3_production_share": {
+      "type": "number",
+      "const": 0.98,
+      "description": "Verbatim US-984XN slide share: 98 percent of PRISM production based on Yahoo, Google, and Microsoft."
+    },
+    "southern_trust_charter_statute": {
+      "type": "string",
+      "const": "26 U.S.C. \u00a7 934",
+      "description": "USVI EDC territorial tax-incentive statute under which Southern Trust Company, Inc. was chartered (2013)."
+    },
+    "southern_trust_charter_language": {
+      "type": "string",
+      "enum": ["a DNA database and data mining", "biomedical and financial informatics"],
+      "description": "Verbatim corporate charter language declaring the PROMIS 2.0 key-set extension (Equation E7)."
+    },
+    "southern_trust_sheltered_revenue_usd_min": {
+      "type": "integer",
+      "const": 300000000,
+      "description": "Minimum corporate revenues sheltered by Southern Trust behind the 90% federal exemption (USD)."
+    },
+    "forbes_southern_financial_trust_revenue_1999_2018_usd_min": {
+      "type": "integer",
+      "const": 800000000,
+      "description": "Forbes-documented combined 1999-2018 revenue minimum of Southern Trust and Financial Trust Company, Inc. (USD)."
+    },
+    "forbes_effective_tax_rate": {
+      "type": "number",
+      "const": 0.04,
+      "description": "Forbes-documented effective tax rate across the 1999-2018 cutout revenues."
+    },
+    "gates_mit_media_lab_donation_usd": {
+      "type": "integer",
+      "const": 2000000,
+      "description": "Gates donation to the MIT Media Lab logged internally as directed by Jeffrey Epstein (Goodwin Procter, pp. 19-22)."
+    },
+    "gates_mit_donation_month": {
+      "type": "string",
+      "const": "2014-10",
+      "pattern": "^[0-9]{4}-[0-9]{2}$",
+      "description": "Month of the Epstein-directed Gates MIT Media Lab donation."
+    },
+    "goodwin_procter_pages": {
+      "type": "string",
+      "const": "19-22",
+      "pattern": "^[0-9]+-[0-9]+$",
+      "description": "Page range of the Goodwin Procter LLP MIT Media Lab report (Jan. 2020) documenting the directed donation."
+    },
+    "epstein_antonova_threat_year": {
+      "type": "integer",
+      "const": 2017,
+      "description": "Year of Epstein's admitted written reimbursement/leverage threat to Gates re Mila Antonova (WSJ, May 21, 2023)."
+    },
+    "wsj_confirmation_date": {
+      "type": "string",
+      "const": "2023-05-21",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+      "description": "The Wall Street Journal date on which Gates's spokesperson confirmed the threat on the record."
+    },
+    "epstein_will_execution_date": {
+      "type": "string",
+      "const": "2019-08-08",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+      "description": "Execution date of Epstein's Last Will and Testament, forty-eight hours before his death."
+    },
+    "epstein_estate_usd": {
+      "type": "integer",
+      "const": 630000000,
+      "description": "Value of the Epstein estate governed by probate case ST-19-PB-00080 (USD)."
+    },
+    "nikolic_role": {
+      "type": "string",
+      "const": "backup executor",
+      "description": "Role designated for Dr. Boris Nikolic in the August 8, 2019 Last Will (declined; stated shock, not consulted)."
+    },
+    "probate_case": {
+      "type": "string",
+      "const": "ST-19-PB-00080",
+      "pattern": "^ST-[0-9]{2}-PB-[0-9]{5}$",
+      "description": "Superior Court of the Virgin Islands probate case number, In re Estate of Jeffrey E. Epstein."
+    },
+    "valar_lp_commitment_usd": {
+      "type": "integer",
+      "const": 40000000,
+      "description": "Southern Trust LP capital commitment wired into Valar Ventures funds in 2015-2016 (USD)."
+    },
+    "valar_position_2025_usd": {
+      "type": "integer",
+      "const": 170000000,
+      "description": "June 2025 valuation of the Valar position per NYT June 4, 2025, p. A1 (USD)."
+    },
+    "valar_moic": {
+      "type": "number",
+      "const": 4.25,
+      "description": "Multiple on Invested Capital, 170.0M / 40.0M."
+    },
+    "valar_cagr": {
+      "type": "number",
+      "const": 0.1557,
+      "description": "Compound annual growth rate, 4.25^(1/10) - 1, over T = 10 years."
+    },
+    "edmond_rothschild_contract_usd": {
+      "type": "integer",
+      "const": 25000000,
+      "description": "Banque Privee Edmond de Rothschild advisory and structuring contract executed by Southern Trust (USD)."
+    },
+    "edmond_rothschild_contract_month": {
+      "type": "string",
+      "const": "2015-10",
+      "pattern": "^[0-9]{4}-[0-9]{2}$",
+      "description": "Month of the Edmond de Rothschild contract, contemporaneous with DOJ Swiss Bank Program settlement negotiations."
+    },
+    "c2pa_founding": {
+      "type": "string",
+      "const": "2021-02",
+      "pattern": "^[0-9]{4}-[0-9]{2}$",
+      "description": "Founding month of the Coalition for Content Provenance and Authenticity (t_C2PA in Equation E5)."
+    },
+    "openai_microsoft_investment_usd_min": {
+      "type": "integer",
+      "const": 13000000000,
+      "description": "Minimum Microsoft deployment to lock down OpenAI closed-weight cloud hosting and commercial IP (USD)."
+    },
+    "summers_board_install": {
+      "type": "string",
+      "const": "2023-11",
+      "pattern": "^[0-9]{4}-[0-9]{2}$",
+      "description": "Month Lawrence H. Summers was installed on the reconstituted OpenAI board."
+    },
+    "summers_board_resignation": {
+      "type": "string",
+      "const": "2025-11-19",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+      "description": "Date Summers resigned from the OpenAI board, six days after the Nov. 13, 2025 House Oversight release."
+    },
+    "keyset_dim_promis_1_0": {
+      "type": "integer",
+      "const": 3,
+      "description": "Dimension of K_1.0 = {docket, wire, name} (Equation E7)."
+    },
+    "keyset_dim_promis_2_0": {
+      "type": "integer",
+      "const": 6,
+      "description": "Dimension of K_2.0 = K_1.0 union {genome, assay, bio-telemetry} (Equation E7)."
+    },
+    "bio_extension_dims": {
+      "type": "integer",
+      "const": 3,
+      "description": "Number of added biological informatics dimensions d_bio."
+    },
+    "maxwell_death_date": {
+      "type": "string",
+      "const": "1991-11-05",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+      "description": "Date Robert Maxwell died, six months after 932 F.2d 1467 vacated 83 B.R. 89."
+    },
+    "maxwell_yacht": {
+      "type": "string",
+      "const": "Lady Ghislaine",
+      "description": "Motor yacht from which Maxwell's body was recovered near the Canary Islands."
+    },
+    "ghislaine_maxwell_conviction_year": {
+      "type": "integer",
+      "const": 2021,
+      "description": "Year of the United States v. Maxwell (S.D.N.Y. 2021) trial establishing the 9 East 71st Street monitoring record."
+    },
+    "milkovich_cite": {
+      "type": "string",
+      "const": "497 U.S. 1 (1990)",
+      "description": "Milkovich v. Lorain Journal Co., disclosed-facts opinion doctrine."
+    },
+    "partington_cite": {
+      "type": "string",
+      "const": "56 F.3d 1147 (9th Cir. 1995)",
+      "description": "Partington v. Bugliosi, Ninth Circuit disclosed-facts synthesis precedent."
+    },
+    "hepps_cite": {
+      "type": "string",
+      "const": "475 U.S. 767 (1986)",
+      "description": "Philadelphia Newspapers, Inc. v. Hepps, substantial-truth and burden doctrine."
+    },
+    "maxwell_promis_distribution_status": {
+      "type": "string",
+      "const": "unadjudicated allegation \u2014 expressly quarantined; not substantiated by H.R. Rep. No. 102-857; rejected by DOJ special counsel; Court of Federal Claims ruled against Inslaw 1998",
+      "description": "Evidentiary status of the Robert Maxwell PROMIS-distribution claim: zero governing equations depend upon it."
+    }
+  },
+  "required": [
+    "promis_implementation_contract_usd",
+    "eo_usa_offices_total",
+    "inslaw_chapter11_filing",
+    "bankruptcy_ruling_cite",
+    "dc_circuit_cite",
+    "house_report",
+    "court_of_federal_claims_year",
+    "nsakey_report_date",
+    "nsakey_module",
+    "nsakey_rsa_bits",
+    "nsakey_public_exponent",
+    "prism_sigad",
+    "prism_microsoft_join_date",
+    "prism_skype_join_date",
+    "prism_top3_production_share",
+    "southern_trust_charter_statute",
+    "southern_trust_charter_language",
+    "southern_trust_sheltered_revenue_usd_min",
+    "forbes_southern_financial_trust_revenue_1999_2018_usd_min",
+    "forbes_effective_tax_rate",
+    "gates_mit_media_lab_donation_usd",
+    "gates_mit_donation_month",
+    "goodwin_procter_pages",
+    "epstein_antonova_threat_year",
+    "wsj_confirmation_date",
+    "epstein_will_execution_date",
+    "epstein_estate_usd",
+    "nikolic_role",
+    "probate_case",
+    "valar_lp_commitment_usd",
+    "valar_position_2025_usd",
+    "valar_moic",
+    "valar_cagr",
+    "edmond_rothschild_contract_usd",
+    "edmond_rothschild_contract_month",
+    "c2pa_founding",
+    "openai_microsoft_investment_usd_min",
+    "summers_board_install",
+    "summers_board_resignation",
+    "keyset_dim_promis_1_0",
+    "keyset_dim_promis_2_0",
+    "bio_extension_dims",
+    "maxwell_death_date",
+    "maxwell_yacht",
+    "ghislaine_maxwell_conviction_year",
+    "milkovich_cite",
+    "partington_cite",
+    "hepps_cite",
+    "maxwell_promis_distribution_status"
+  ],
+  "additionalProperties": false
+}

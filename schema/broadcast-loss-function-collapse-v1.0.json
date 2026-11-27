@@ -1,0 +1,282 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:broadcast-loss-function-collapse-v1.0.json",
+  "title": "Broadcast Loss-Function Collapse and Statutory Counter-Liquidation Schema",
+  "description": "Formal JSON Schema for SPEC-BROADCAST-LOSS-FUNCTION-COLLAPSE-AND-STATUTORY-COUNTER-LIQUIDATION-v1.0 validating the 5-Point Broadcast Lagrangian, Chapter 15 Statement Analysis & Jurisdictional Negative-Space Theorem, 3-Way Heuer ACH Posterior & 3x4 Control Matrix, and the 5-Weapon Statutory Counter-Liquidation Engine.",
+  "type": "object",
+  "required": [
+    "specification_id",
+    "version",
+    "license",
+    "broadcast_lagrangian",
+    "chapter_15_statement_analysis",
+    "heuer_ach_and_control_matrix",
+    "statutory_counter_liquidation_engine",
+    "verification_vectors"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "specification_id": {
+      "type": "string",
+      "const": "SPEC-BROADCAST-LOSS-FUNCTION-COLLAPSE-AND-STATUTORY-COUNTER-LIQUIDATION-v1.0"
+    },
+    "version": {
+      "type": "string",
+      "const": "1.0"
+    },
+    "license": {
+      "type": "string",
+      "const": "Unlicense"
+    },
+    "broadcast_lagrangian": {
+      "type": "object",
+      "required": [
+        "principal_age_years",
+        "foundation_sunset_year",
+        "coercive_frontload_horizon_years",
+        "abundance_deferral_horizon_years",
+        "effective_post_actuarial_weight_max",
+        "propositions"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "principal_age_years": {
+          "type": "number",
+          "minimum": 70.0,
+          "maximum": 72.0
+        },
+        "foundation_sunset_year": {
+          "type": "integer",
+          "const": 2045
+        },
+        "coercive_frontload_horizon_years": {
+          "type": "integer",
+          "const": 5
+        },
+        "abundance_deferral_horizon_years": {
+          "type": "integer",
+          "minimum": 20
+        },
+        "effective_post_actuarial_weight_max": {
+          "type": "number",
+          "maximum": 0.08
+        },
+        "propositions": {
+          "type": "array",
+          "minItems": 5,
+          "maxItems": 5,
+          "items": {
+            "type": "object",
+            "required": [
+              "id",
+              "name",
+              "transcript_timestamps",
+              "lagrangian_target"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 5
+              },
+              "name": { "type": "string" },
+              "transcript_timestamps": {
+                "type": "array",
+                "items": { "type": "string" }
+              },
+              "lagrangian_target": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "chapter_15_statement_analysis": {
+      "type": "object",
+      "required": [
+        "transcript_window",
+        "pr_stoploss_baseline_seconds",
+        "actual_response_seconds",
+        "three_shell_dinner_participants",
+        "jurisdictional_negative_space"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "transcript_window": {
+          "type": "string",
+          "const": "52:22-56:34"
+        },
+        "pr_stoploss_baseline_seconds": {
+          "type": "integer",
+          "const": 8
+        },
+        "actual_response_seconds": {
+          "type": "integer",
+          "const": 252
+        },
+        "three_shell_dinner_participants": {
+          "type": "object",
+          "required": [
+            "shell_1_sovereign",
+            "shell_2_endowment",
+            "shell_3_offshore_banking",
+            "connective_cutout"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "shell_1_sovereign": {
+              "type": "string",
+              "const": "Lawrence H. Summers"
+            },
+            "shell_2_endowment": {
+              "type": "string",
+              "const": "Bill Gates"
+            },
+            "shell_3_offshore_banking": {
+              "type": "string",
+              "const": "James 'Jes' Staley (JPMorgan)"
+            },
+            "connective_cutout": {
+              "type": "string",
+              "const": "Jeffrey E. Epstein (9 East 71st Street / Southern Trust Co.)"
+            }
+          }
+        },
+        "jurisdictional_negative_space": {
+          "type": "object",
+          "required": [
+            "denied_jurisdiction",
+            "statutes_evaded",
+            "conceded_complement_jurisdictions"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "denied_jurisdiction": {
+              "type": "string",
+              "const": "Little St. James / U.S. Virgin Islands"
+            },
+            "statutes_evaded": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": [
+                  "14 V.I.C. § 605 (USVI CICO)",
+                  "26 U.S.C. § 934(b)(1) (USVI EDC Nexus)"
+                ]
+              }
+            },
+            "conceded_complement_jurisdictions": {
+              "type": "array",
+              "items": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "heuer_ach_and_control_matrix": {
+      "type": "object",
+      "required": [
+        "hypotheses",
+        "h3_posterior_min",
+        "external_vault_holders",
+        "endogenous_controllers"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "hypotheses": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": {
+            "type": "object",
+            "required": ["id", "label", "status"],
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "string",
+                "enum": ["H1", "H2", "H3"]
+              },
+              "label": { "type": "string" },
+              "status": {
+                "type": "string",
+                "enum": ["FALSIFIED", "VERIFIED_EQUILIBRIUM"]
+              }
+            }
+          }
+        },
+        "h3_posterior_min": {
+          "type": "number",
+          "minimum": 0.999
+        },
+        "external_vault_holders": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": { "type": "string" }
+        },
+        "endogenous_controllers": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 4,
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "statutory_counter_liquidation_engine": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 5,
+      "items": {
+        "type": "object",
+        "required": [
+          "weapon_id",
+          "name",
+          "statutory_citations",
+          "requires_federal_doj_permission",
+          "mechanism"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "weapon_id": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "name": { "type": "string" },
+          "statutory_citations": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "requires_federal_doj_permission": {
+            "type": "boolean",
+            "const": false
+          },
+          "mechanism": { "type": "string" }
+        }
+      }
+    },
+    "verification_vectors": {
+      "type": "object",
+      "required": [
+        "proof_script",
+        "exit_code",
+        "stranded_capex_net_loss_usd_min"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "proof_script": {
+          "type": "string",
+          "const": "proofs/verify_broadcast_loss_function_collapse.py"
+        },
+        "exit_code": {
+          "type": "integer",
+          "const": 0
+        },
+        "stranded_capex_net_loss_usd_min": {
+          "type": "number",
+          "minimum": 450000000000
+        }
+      }
+    }
+  }
+}

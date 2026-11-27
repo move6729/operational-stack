@@ -1,0 +1,187 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:stigmergic_technocracy_epistemic_judo_v1.0.json",
+  "title": "Stigmergic Technocracy Epistemic Judo Bundle",
+  "description": "Corpus bundle schema for SPEC-STIGMERGIC-TECHNOCRACY-EPISTEMIC-JUDO-v1.0: Shannon-DPI model collapse, the human-telemetry laundromat Akerlof filter, dead-Gauss vs living-Lucas corpus dynamics, the Kolmogorov MDL epistemic-judo inverter, and the $14.3B Neocloud GPU SPV capital-structure waterfall.",
+  "type": "object",
+  "required": [
+    "canonical_specification",
+    "shannon_dpi_and_model_collapse",
+    "human_telemetry_laundromat_and_akerlof_filter",
+    "dead_vs_living_corpus_dynamics",
+    "epistemic_judo_kolmogorov_attractor",
+    "capital_structure_waterfall",
+    "catalyst_calendar",
+    "six_ring_security_master_registry"
+  ],
+  "properties": {
+    "canonical_specification": {
+      "const": "SPEC-STIGMERGIC-TECHNOCRACY-EPISTEMIC-JUDO-v1.0"
+    },
+    "shannon_dpi_and_model_collapse": {
+      "type": "object",
+      "required": ["delta_i_synthetic_bits", "kl_pure_synthetic_nats", "kl_human_anchored_nats", "generations", "n_eff"],
+      "additionalProperties": false,
+      "properties": {
+        "delta_i_synthetic_bits": { "type": "number", "const": 0.0 },
+        "kl_pure_synthetic_nats": { "type": "number", "enum": [4.5] },
+        "kl_human_anchored_nats": { "type": "number", "enum": [0.045] },
+        "generations": { "type": "integer", "minimum": 1 },
+        "n_eff": { "type": "number", "exclusiveMinimum": 0 }
+      }
+    },
+    "human_telemetry_laundromat_and_akerlof_filter": {
+      "type": "object",
+      "required": ["gig_wage_usd_per_hour", "sovereign_vanguard_reservation_wage_usd_per_hour", "piece_rate_foundry_variety_score", "sovereign_open_commons_variety_score"],
+      "additionalProperties": false,
+      "properties": {
+        "gig_wage_usd_per_hour": { "type": "number", "const": 125.0 },
+        "sovereign_vanguard_reservation_wage_usd_per_hour": { "type": "number", "const": 2500.0 },
+        "piece_rate_foundry_variety_score": { "type": "number", "const": 0.14 },
+        "sovereign_open_commons_variety_score": { "type": "number", "const": 0.96 },
+        "variety_efficiency_ratio_x": { "type": "number", "const": 6.86 }
+      }
+    },
+    "dead_vs_living_corpus_dynamics": {
+      "type": "object",
+      "required": ["rho_dead", "rho_living", "lambda_lucas", "eta_dead", "expected_search_steps_dead", "expected_search_steps_living"],
+      "additionalProperties": false,
+      "properties": {
+        "rho_dead": { "type": "number", "const": 0.08 },
+        "rho_living": { "type": "number", "const": 0.92 },
+        "lambda_lucas": { "type": "number", "const": 0.18 },
+        "eta_dead": { "type": "number", "enum": [0.000889] },
+        "expected_search_steps_dead": { "type": "number", "const": 15625.0 },
+        "expected_search_steps_living": { "type": "number", "const": 24.0 },
+        "search_step_ratio_x": { "type": "number", "const": 651.04 }
+      }
+    },
+    "epistemic_judo_kolmogorov_attractor": {
+      "type": "object",
+      "required": ["k_oligarch_bits", "k_vanguard_bits", "beta", "p_vanguard", "p_oligarch"],
+      "additionalProperties": false,
+      "properties": {
+        "k_oligarch_bits": { "type": "number", "const": 800.0 },
+        "k_vanguard_bits": { "type": "number", "const": 64.0 },
+        "beta": { "type": "number", "const": 0.01 },
+        "p_vanguard": { "type": "number", "enum": [0.99936] },
+        "p_oligarch": { "type": "number", "enum": [0.00064] }
+      }
+    },
+    "capital_structure_waterfall": {
+      "type": "object",
+      "required": ["currency", "total_principal_usd_billion", "tranches", "recovery_scenarios"],
+      "additionalProperties": false,
+      "properties": {
+        "currency": { "const": "USD" },
+        "total_principal_usd_billion": { "type": "number", "const": 14.3 },
+        "tranches": {
+          "type": "array",
+          "minItems": 5,
+          "maxItems": 5,
+          "items": {
+            "type": "object",
+            "required": ["name", "principal_usd_billion", "seniority"],
+            "additionalProperties": false,
+            "properties": {
+              "name": { "type": "string", "minLength": 1 },
+              "principal_usd_billion": { "type": "number", "exclusiveMinimum": 0 },
+              "seniority": { "type": "integer", "minimum": 1, "maximum": 5 }
+            }
+          }
+        },
+        "recovery_scenarios": {
+          "type": "object",
+          "required": ["bull", "base", "stress"],
+          "additionalProperties": false,
+          "properties": {
+            "bull": { "$ref": "#/$defs/recoveryScenario" },
+            "base": { "$ref": "#/$defs/recoveryScenario" },
+            "stress": { "$ref": "#/$defs/recoveryScenario" }
+          }
+        }
+      }
+    },
+    "catalyst_calendar": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["date", "event"],
+        "additionalProperties": false,
+        "properties": {
+          "date": { "$ref": "#/$defs/isoDate" },
+          "event": { "type": "string", "minLength": 1 },
+          "category": {
+            "type": "string",
+            "enum": ["maturity", "forbearance_expiration", "grace_period_cure", "court_hearing", "interest_payment", "amendment_deadline"]
+          }
+        }
+      }
+    },
+    "six_ring_security_master_registry": {
+      "type": "array",
+      "minItems": 6,
+      "maxItems": 6,
+      "items": {
+        "type": "object",
+        "required": ["ring", "category", "entities"],
+        "additionalProperties": false,
+        "properties": {
+          "ring": { "type": "integer", "minimum": 1, "maximum": 6 },
+          "category": {
+            "type": "string",
+            "enum": [
+              "primary_target_gp_sponsor",
+              "public_bdc_co_lenders_credit_funds",
+              "regulated_insurance_balance_sheet_counterparties",
+              "pcaob_auditors_valuation_agents_fund_admins",
+              "foia_subject_public_pension_lps_swfs_gatekeepers",
+              "indenture_trustees_admin_agents_rating_agencies_counsel"
+            ]
+          },
+          "entities": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": ["legal_name"],
+              "additionalProperties": false,
+              "properties": {
+                "legal_name": { "type": "string", "minLength": 1 },
+                "ticker": { "type": "string" },
+                "cik": { "type": "string", "pattern": "^[0-9]{10}$" },
+                "crd": { "type": "string", "pattern": "^[0-9]{4,9}$" },
+                "naic_code": { "type": "string" },
+                "pcaob_id": { "type": "string" },
+                "court_dockets": { "type": "array", "items": { "type": "string" } }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "isoDate": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+    },
+    "recoveryScenario": {
+      "type": "object",
+      "required": ["scenario", "ev_usd_billion", "recovery_cents_on_dollar"],
+      "additionalProperties": false,
+      "properties": {
+        "scenario": { "type": "string", "enum": ["bull", "base", "stress"] },
+        "ev_usd_billion": { "type": "number", "exclusiveMinimum": 0 },
+        "recovery_cents_on_dollar": {
+          "type": "array",
+          "minItems": 5,
+          "maxItems": 5,
+          "items": { "type": "number", "minimum": 0, "maximum": 100 }
+        }
+      }
+    }
+  },
+  "additionalProperties": false
+}

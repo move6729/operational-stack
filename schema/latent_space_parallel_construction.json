@@ -1,0 +1,128 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:latent_space_parallel_construction.json",
+  "title": "Latent Space Parallel Construction Bundle Manifest",
+  "type": "object",
+  "required": [
+    "spec_version",
+    "jurisdiction_context",
+    "cfaa_18_usc_1030_compliance",
+    "cook_levin_mosaic_collapse",
+    "carlini_gmr_stealth_bound",
+    "harsanyi_preemption_and_spne",
+    "stigler_gambetta_fratricide",
+    "capital_structure_waterfall"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "spec_version": {
+      "const": "SPEC-LATENT-SPACE-PARALLEL-CONSTRUCTION-v1.0"
+    },
+    "jurisdiction_context": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1
+    },
+    "cfaa_18_usc_1030_compliance": {
+      "type": "object",
+      "required": ["attested", "zero_unauthorized_access", "blueprint_free", "statutory_citation"],
+      "additionalProperties": false,
+      "properties": {
+        "attested": { "const": true },
+        "zero_unauthorized_access": { "const": true },
+        "blueprint_free": {
+          "const": true,
+          "description": "No USML/CCL-controlled hardware blueprints; mathematical-systems level only (22 CFR 120.34, 15 CFR 734.7)."
+        },
+        "statutory_citation": { "const": "18 U.S.C. 1030" }
+      }
+    },
+    "cook_levin_mosaic_collapse": {
+      "type": "object",
+      "required": ["branching_factor_b", "hop_depth_d", "unseeded_search_space_n", "unseeded_entropy_bits", "seeded_effective_branching_b_eff", "seeded_expected_queries", "seeded_entropy_bits", "search_collapse_ratio_log10", "entropy_collapse_delta_bits"],
+      "additionalProperties": false,
+      "properties": {
+        "branching_factor_b": { "const": 1000 },
+        "hop_depth_d": { "const": 5 },
+        "unseeded_search_space_n": { "const": 1000000000000000 },
+        "unseeded_entropy_bits": { "const": 49.828921 },
+        "seeded_effective_branching_b_eff": { "const": 2.0 },
+        "seeded_expected_queries": { "const": 10.0 },
+        "seeded_entropy_bits": { "const": 3.321928 },
+        "search_collapse_ratio_log10": { "const": 14.0 },
+        "entropy_collapse_delta_bits": { "const": 46.506993 }
+      }
+    },
+    "carlini_gmr_stealth_bound": {
+      "type": "object",
+      "required": ["carlini_kl_stealth_ceiling_bits", "actual_kl_divergence_bits", "verbatim_extraction_probability", "mutual_info_crqc_blueprint_bits"],
+      "additionalProperties": false,
+      "properties": {
+        "carlini_kl_stealth_ceiling_bits": { "const": 0.015 },
+        "actual_kl_divergence_bits": { "const": 0.0084 },
+        "verbatim_extraction_probability": { "const": 0.0 },
+        "mutual_info_crqc_blueprint_bits": { "const": 0.0 }
+      }
+    },
+    "harsanyi_preemption_and_spne": {
+      "type": "object",
+      "required": ["payoff_raw_dump", "payoff_direct_indictment", "payoff_latent_parallel", "rival_crqc_hazard_rate_per_yr", "convergence_window_years", "unpurged_capture_probability_2yr", "controlled_burn_delay_penalty_usd_m", "spne_dominant_strategy", "vertical_custody_triad_global_cap", "pqc_straggler_window_years", "non_markovian_retroactive_survival"],
+      "additionalProperties": false,
+      "properties": {
+        "payoff_raw_dump": { "const": -0.62 },
+        "payoff_direct_indictment": { "const": -0.18 },
+        "payoff_latent_parallel": { "const": 0.91 },
+        "rival_crqc_hazard_rate_per_yr": { "const": 0.45 },
+        "convergence_window_years": { "const": 2.0 },
+        "unpurged_capture_probability_2yr": { "const": 0.59343 },
+        "controlled_burn_delay_penalty_usd_m": { "const": 712.116 },
+        "spne_dominant_strategy": { "const": "LatentParallel" },
+        "vertical_custody_triad_global_cap": { "type": "integer", "const": 2 },
+        "pqc_straggler_window_years": { "type": "number", "const": 9.0, "description": "2035.0 - 2026.0 NIST IR 8547 PQC straggler window." },
+        "non_markovian_retroactive_survival": { "type": "number", "const": 0.0 }
+      }
+    },
+    "stigler_gambetta_fratricide": {
+      "type": "object",
+      "required": ["planetary_id_entropy_bits", "cartel_prior_internal_leak_p0", "independent_public_hits_k", "likelihood_ratio_per_hit_lambda", "cartel_posterior_internal_betrayal", "stigler_defection_threshold_theta"],
+      "additionalProperties": false,
+      "properties": {
+        "planetary_id_entropy_bits": { "const": 32.897 },
+        "cartel_prior_internal_leak_p0": { "const": 0.05 },
+        "independent_public_hits_k": { "const": 4 },
+        "likelihood_ratio_per_hit_lambda": { "const": 6.0 },
+        "cartel_posterior_internal_betrayal": { "const": 0.985551 },
+        "stigler_defection_threshold_theta": { "const": 0.65 }
+      }
+    },
+    "capital_structure_waterfall": {
+      "type": "object",
+      "required": ["facility_principal_usd_m", "tranches", "pre_collapse_mark_ev_usd_m", "post_mosaic_realized_ev_usd_m", "breakeven_ev_threshold_usd_m"],
+      "additionalProperties": false,
+      "properties": {
+        "facility_principal_usd_m": { "const": 1200.0 },
+        "pre_collapse_mark_ev_usd_m": { "const": 1450.0 },
+        "post_mosaic_realized_ev_usd_m": { "const": 540.0 },
+        "breakeven_ev_threshold_usd_m": { "const": 600.0 },
+        "tranches": {
+          "type": "array",
+          "minItems": 4,
+          "items": {
+            "type": "object",
+            "required": ["name", "principal_usd_m", "coupon_pik", "seniority", "collateral_guarantor_box", "post_mosaic_recovery_usd_m", "post_mosaic_recovery_cents"],
+            "additionalProperties": false,
+            "properties": {
+              "name": { "enum": ["Senior-1L", "Second-Lien-PIK", "Mezzanine-Sidecar", "Sponsor-Equity"] },
+              "principal_usd_m": { "type": "number", "minimum": 0 },
+              "coupon_pik": { "type": ["string", "null"] },
+              "seniority": { "type": "integer", "minimum": 1, "maximum": 4 },
+              "collateral_guarantor_box": { "type": "string" },
+              "post_mosaic_recovery_usd_m": { "type": "number", "minimum": 0 },
+              "post_mosaic_recovery_cents": { "type": "number", "minimum": 0, "maximum": 1 }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,214 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:absence_of_evidence_arbitrage_v1.0.json",
+  "title": "Absence-of-Evidence Arbitrage: Bayesian Step-Threshold Truncation, Bourjaily Admissibility, Deep-Time Crucible, Lehman Repo 105, Bates Excision, ASC 842 Lease Chasm, and Fulcrum Recovery Waterfall",
+  "description": "Typed measurement schema for the absence-of-evidence arbitrage mechanism: an adversary or 'midwit' aggregator manufactures absence of evidence by applying a step-function threshold (tau = 0.95) that discards every sub-threshold signal, while a correct Bayesian aggregator multiplying likelihood ratios (lambda = 3.0 over k = 5 independent signals) reaches 243/244 = 0.995902 at an equal prior and 27/28 = 0.964286 at a conservative 0.10 prior. BLOCK-2 fixes the Bourjaily / Fed. R. Evid. 801(d)(2)(E) admissibility benchmark at 13.5/14.5 = 0.931034 (> 0.50 preponderance). BLOCK-3 prices the Landauer deep-time crucible at 1e8 W / 20 W = 5,000,000x with a 760-year cluster burn of the 3.8-Gyr biological energy budget. BLOCK-4 types the Lehman Repo 105 quarter-end removals ($38.6B / $49.1B / $50.38B), the 4.76% / 7.41% haircut cost, and the E&Y NY AG $10M / $150M = 0.066667 settlement ratio. BLOCK-5 types the post-discovery Bates excision (9,298 JPM + 47,759 DB = 57,057 of 125,373 dual-stamped pages; rho = 21,283 / 21,353 = 0.996722) and the BDC PIK drain (0.9175 per PIK dollar; 25.0% = 5.8962x the 4.24% critical threshold). BLOCK-6 types the ASC 842 lease chasm (321.4 / 0.931 = 345.2202x; $320.469B unrecognized). BLOCK-7 types the Lehman fulcrum recovery waterfall over the $265.38B debt-and-claims stack plus the $25.0B subordinated-and-equity stub, where the true unwound EV of $145.38B leaves the senior unsecured tranche at 20.0 cents. All monetary values are USD.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "jurisdiction_context", "cfaa_compliance_attestation", "itar_ear_public_domain_attestation", "entity_and_instrument_ids", "catalyst_calendar", "bayesian_truncation_arbitrage", "bourjaily_admissibility_benchmark", "deep_time_crucible", "lehman_repo_105", "bates_excision_and_bdc_pik", "lease_chasm", "tranche_recovery_waterfall", "security_master_key_counts"],
+  "properties": {
+    "schema_version": { "type": "string", "const": "1.0" },
+    "jurisdiction_context": { "$ref": "#/$defs/jurisdiction_context" },
+    "cfaa_compliance_attestation": { "type": "boolean", "const": true, "description": "Zero unauthorized access under 18 U.S.C. 1030: every measured artifact is a public SEC EDGAR filing, a public federal court docket, a public bankruptcy examiner report, or a public DOJ EFTA production, analyzed read-only." },
+    "itar_ear_public_domain_attestation": { "type": "boolean", "const": true, "description": "Public-domain game-theoretic, Bayesian, and accounting-identity systems specification; zero export-controlled technical data, hardware blueprints, or firmware (22 C.F.R. 120.34; 15 C.F.R. 734.7)." },
+    "entity_and_instrument_ids": { "$ref": "#/$defs/entity_and_instrument_ids" },
+    "catalyst_calendar": { "type": "array", "minItems": 5, "maxItems": 5, "description": "Hard-date catalyst and statutory-deadline calendar in strictly ascending ISO 8601 order.", "items": { "$ref": "#/$defs/catalyst_entry" } },
+    "bayesian_truncation_arbitrage": { "$ref": "#/$defs/bayesian_truncation_arbitrage" },
+    "bourjaily_admissibility_benchmark": { "$ref": "#/$defs/bourjaily_admissibility_benchmark" },
+    "deep_time_crucible": { "$ref": "#/$defs/deep_time_crucible" },
+    "lehman_repo_105": { "$ref": "#/$defs/lehman_repo_105" },
+    "bates_excision_and_bdc_pik": { "$ref": "#/$defs/bates_excision_and_bdc_pik" },
+    "lease_chasm": { "$ref": "#/$defs/lease_chasm" },
+    "tranche_recovery_waterfall": { "$ref": "#/$defs/tranche_recovery_waterfall" },
+    "security_master_key_counts": { "$ref": "#/$defs/security_master_key_counts" }
+  },
+  "$defs": {
+    "jurisdiction_context": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["iso_3166_1_alpha_2", "statutory_venue"],
+      "properties": {
+        "iso_3166_1_alpha_2": { "type": "string", "pattern": "^[A-Z]{2}$", "description": "ISO 3166-1 alpha-2 jurisdiction code." },
+        "statutory_venue": { "type": "string", "minLength": 16, "description": "Bankr. S.D.N.Y. Case No. 08-13555; S.D.N.Y. Case No. 1:22-cv-10018 and 1:22-cv-10019; Fed. R. Evid. 801(d)(2)(E) and 104(a) (Bourjaily, 483 U.S. 171); Daubert, 509 U.S. 579; SFAS 140 / ASC 842; Investment Company Act of 1940 Section 36(b)." }
+      }
+    },
+    "entity_and_instrument_ids": {
+      "type": "object",
+      "description": "Standardized security-master keys for every named principal, docket, and Supreme Court pin cite.",
+      "additionalProperties": false,
+      "required": ["ticker", "cik", "court_dockets"],
+      "properties": {
+        "ticker": { "type": "object", "additionalProperties": { "type": "string", "pattern": "^[A-Z.]{1,6}$" }, "required": ["lehman_brothers_holdings", "blue_owl_capital_corp_ii", "ares_capital_corp", "fs_kkr_capital_corp", "blackstone_secured_lending_fund", "jpmorgan_chase", "deutsche_bank_ag"], "properties": { "lehman_brothers_holdings": { "const": "LEHMQ" }, "blue_owl_capital_corp_ii": { "const": "OBDC" }, "ares_capital_corp": { "const": "ARCC" }, "fs_kkr_capital_corp": { "const": "FSK" }, "blackstone_secured_lending_fund": { "const": "BXSL" }, "jpmorgan_chase": { "const": "JPM" }, "deutsche_bank_ag": { "const": "DB" } } },
+        "cik": { "type": "object", "additionalProperties": { "type": "string", "pattern": "^[0-9]{10}$" }, "required": ["lehman_brothers_holdings", "blue_owl_capital_corp_ii", "ares_capital_corp", "jpmorgan_chase"], "properties": { "lehman_brothers_holdings": { "const": "0000806085" }, "blue_owl_capital_corp_ii": { "const": "0001655888" }, "ares_capital_corp": { "const": "0001287750" }, "jpmorgan_chase": { "const": "0000019617" } } },
+        "court_dockets": { "type": "object", "additionalProperties": { "type": "string", "minLength": 8 }, "required": ["lehman_chapter_11", "jpm_settlement", "db_settlement", "daubert", "bourjaily"], "properties": { "lehman_chapter_11": { "const": "Bankr. S.D.N.Y. Case No. 08-13555 (In re Lehman Brothers Holdings Inc.)" }, "jpm_settlement": { "const": "S.D.N.Y. Case No. 1:22-cv-10018 ($290M JPM Settlement)" }, "db_settlement": { "const": "S.D.N.Y. Case No. 1:22-cv-10019 ($75M DB Settlement)" }, "daubert": { "const": "509 U.S. 579 (Daubert v. Merrell Dow)" }, "bourjaily": { "const": "483 U.S. 171 (Bourjaily v. United States)" } } }
+      }
+    },
+    "catalyst_entry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["date", "event", "basis"],
+      "properties": {
+        "date": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$", "description": "Exact ISO 8601 calendar date (YYYY-MM-DD)." },
+        "event": { "type": "string", "minLength": 16 },
+        "basis": { "type": "string", "enum": ["balance_sheet_snapshot", "chapter_11_petition", "regulatory_inspection_failure", "examiner_report_release", "statutory_lookback_window_close"] }
+      }
+    },
+    "bayesian_truncation_arbitrage": {
+      "type": "object",
+      "description": "BLOCK-1: a midwit step-threshold at tau = 0.95 counts zero of k = 5 lambda = 3.0 signals (isolated posterior 0.75 < tau), truncating the evidence sum to 0.0, while the Bayesian aggregate reaches 243/244 (equal prior) and 27/28 (conservative 0.10 prior).",
+      "additionalProperties": false,
+      "required": ["prior_probability_p0", "prior_odds_o0", "k_independent_signals", "per_signal_likelihood_ratio_lambda", "per_signal_isolated_posterior_at_equal_prior", "equal_prior_5_signal_odds", "equal_prior_5_signal_posterior", "conservative_prior_0_10_5_signal_odds", "conservative_prior_0_10_5_signal_posterior", "midwit_step_threshold_tau", "midwit_signals_counted", "midwit_truncated_sum", "absence_of_evidence_arbitrage_gap_conservative", "absence_of_evidence_arbitrage_gap_equal_prior", "hanlon_unidirectional_events_n", "hanlon_incompetence_probability", "hanlon_whitelist_likelihood_ratio"],
+      "properties": {
+        "prior_probability_p0": { "type": "number", "const": 0.1 },
+        "prior_odds_o0": { "type": "number", "const": 0.111111 },
+        "k_independent_signals": { "type": "integer", "const": 5 },
+        "per_signal_likelihood_ratio_lambda": { "type": "number", "const": 3.0 },
+        "per_signal_isolated_posterior_at_equal_prior": { "type": "number", "const": 0.75 },
+        "equal_prior_5_signal_odds": { "type": "number", "const": 243.0 },
+        "equal_prior_5_signal_posterior": { "type": "number", "const": 0.995902 },
+        "conservative_prior_0_10_5_signal_odds": { "type": "number", "const": 27.0 },
+        "conservative_prior_0_10_5_signal_posterior": { "type": "number", "const": 0.964286 },
+        "midwit_step_threshold_tau": { "type": "number", "const": 0.95 },
+        "midwit_signals_counted": { "type": "integer", "const": 0 },
+        "midwit_truncated_sum": { "type": "number", "const": 0.0 },
+        "absence_of_evidence_arbitrage_gap_conservative": { "type": "number", "const": 0.964286 },
+        "absence_of_evidence_arbitrage_gap_equal_prior": { "type": "number", "const": 0.995902 },
+        "hanlon_unidirectional_events_n": { "type": "integer", "const": 12 },
+        "hanlon_incompetence_probability": { "type": "number", "const": 0.000244 },
+        "hanlon_whitelist_likelihood_ratio": { "type": "number", "const": 4096.0 }
+      }
+    },
+    "bourjaily_admissibility_benchmark": {
+      "type": "object",
+      "description": "BLOCK-2: Rule 801(d)(2)(E) / Fed. R. Evid. 104(a) co-conspirator predicate. A 0.20 prior (odds 0.25) times LR_calendar 6.0 and LR_ledger 9.0 gives posterior odds 13.5 and posterior 13.5/14.5 = 0.931034, clearing the 0.50 preponderance threshold (Bourjaily, 483 U.S. 171).",
+      "additionalProperties": false,
+      "required": ["prior_probability", "prior_odds", "lr_calendar", "lr_ledger", "posterior_odds", "posterior_probability", "preponderance_threshold", "clears_preponderance"],
+      "properties": {
+        "prior_probability": { "type": "number", "const": 0.20 },
+        "prior_odds": { "type": "number", "const": 0.25 },
+        "lr_calendar": { "type": "number", "const": 6.0 },
+        "lr_ledger": { "type": "number", "const": 9.0 },
+        "posterior_odds": { "type": "number", "const": 13.5 },
+        "posterior_probability": { "type": "number", "const": 0.931034 },
+        "preponderance_threshold": { "type": "number", "const": 0.50 },
+        "clears_preponderance": { "type": "boolean", "const": true }
+      }
+    },
+    "deep_time_crucible": {
+      "type": "object",
+      "description": "BLOCK-3: Landauer / Invariant 2 power asymmetry. A 20 W biological node carrying 3.8e9 years of evolutionary fitness evidence against a 1e8 W (100 MW) shallow cluster: a 5,000,000x power advantage; the cluster burns the biological node's 3.8-Gyr cumulative energy budget in 760 years.",
+      "additionalProperties": false,
+      "required": ["biological_deep_time_years", "biological_power_watts", "shallow_cluster_power_watts", "power_advantage_multiple", "cluster_years_to_burn_biological_deep_time_energy"],
+      "properties": {
+        "biological_deep_time_years": { "type": "number", "const": 3800000000.0 },
+        "biological_power_watts": { "type": "number", "const": 20.0 },
+        "shallow_cluster_power_watts": { "type": "number", "const": 100000000.0 },
+        "power_advantage_multiple": { "type": "number", "const": 5000000.0 },
+        "cluster_years_to_burn_biological_deep_time_energy": { "type": "number", "const": 760.0 }
+      }
+    },
+    "lehman_repo_105": {
+      "type": "object",
+      "description": "BLOCK-4: the canonical absence-of-evidence accounting fraud. Quarter-end balance-sheet removals via repos structured with a >= 5% haircut so SFAS 140 treated them as sales; haircut cost is h / (100 + h). The Q2 2008 removal ($50.38B) is the Repo 105 secured waterfall tranche.",
+      "additionalProperties": false,
+      "required": ["q4_2007_removed_bn", "q1_2008_removed_bn", "q2_2008_removed_bn", "cumulative_removed_bn", "repo_105_haircut_cost_pct", "repo_108_haircut_cost_pct", "ey_ny_ag_claim_mn", "ey_ny_ag_settlement_mn", "ey_settlement_to_claim_ratio"],
+      "properties": {
+        "q4_2007_removed_bn": { "type": "number", "const": 38.6 },
+        "q1_2008_removed_bn": { "type": "number", "const": 49.1 },
+        "q2_2008_removed_bn": { "type": "number", "const": 50.38 },
+        "cumulative_removed_bn": { "type": "number", "const": 138.08 },
+        "repo_105_haircut_cost_pct": { "type": "number", "const": 4.76 },
+        "repo_108_haircut_cost_pct": { "type": "number", "const": 7.41 },
+        "ey_ny_ag_claim_mn": { "type": "number", "const": 150.0 },
+        "ey_ny_ag_settlement_mn": { "type": "number", "const": 10.0 },
+        "ey_settlement_to_claim_ratio": { "type": "number", "const": 0.066667 }
+      }
+    },
+    "bates_excision_and_bdc_pik": {
+      "type": "object",
+      "description": "BLOCK-5: post-discovery Bates excision (9,298 JPM + 47,759 DB = 57,057 of 125,373 dual-stamped pages; rho = 21,283 / 21,353 = 0.996722 of excision events at the SDNY_GM -> EFTA gate) and the BDC PIK cash drain (0.9175 per PIK dollar at a 17.5% incentive fee under a 90% RIC distribution requirement; 25.0% observed = 5.8962x the 4.24% critical threshold).",
+      "additionalProperties": false,
+      "required": ["dual_stamped_pages", "excised_bank_pages_total", "excised_jpm_pages", "excised_db_pages", "post_discovery_excision_events", "total_excision_events", "post_discovery_excision_share_rho", "bdc_sector_aum_tn", "bdc_cash_drain_per_pik", "bdc_critical_pik_share_pct", "bdc_actual_pik_share_pct", "bdc_breach_multiple"],
+      "properties": {
+        "dual_stamped_pages": { "type": "integer", "const": 125373 },
+        "excised_bank_pages_total": { "type": "integer", "const": 57057 },
+        "excised_jpm_pages": { "type": "integer", "const": 9298 },
+        "excised_db_pages": { "type": "integer", "const": 47759 },
+        "post_discovery_excision_events": { "type": "integer", "const": 21283 },
+        "total_excision_events": { "type": "integer", "const": 21353 },
+        "post_discovery_excision_share_rho": { "type": "number", "const": 0.996722 },
+        "bdc_sector_aum_tn": { "type": "number", "const": 1.7 },
+        "bdc_cash_drain_per_pik": { "type": "number", "const": 0.9175 },
+        "bdc_critical_pik_share_pct": { "type": "number", "const": 4.24 },
+        "bdc_actual_pik_share_pct": { "type": "number", "const": 25.0 },
+        "bdc_breach_multiple": { "type": "number", "const": 5.8962 }
+      }
+    },
+    "lease_chasm": {
+      "type": "object",
+      "description": "BLOCK-6: ASC 842 lease chasm. $321.4B of undiscounted operating-lease obligations against $0.931B recognized on-balance-sheet = 345.2202x, leaving $320.469B of lease liability absent from the recognized balance sheet.",
+      "additionalProperties": false,
+      "required": ["undiscounted_bn", "recognized_bn", "multiple", "unrecognized_bn"],
+      "properties": {
+        "undiscounted_bn": { "type": "number", "const": 321.4 },
+        "recognized_bn": { "type": "number", "const": 0.931 },
+        "multiple": { "type": "number", "const": 345.2202 },
+        "unrecognized_bn": { "type": "number", "const": 320.469 }
+      }
+    },
+    "tranche_recovery_waterfall": {
+      "type": "object",
+      "description": "BLOCK-7: the Lehman fulcrum recovery waterfall evaluated at zero, true unwound ($145.38B), and reported window-dressed ($265.38B) enterprise value. The window-dressing gap is $120.0B.",
+      "additionalProperties": false,
+      "required": ["at_zero_ev", "at_true_unwound_ev", "at_reported_window_dressed_ev", "window_dressing_gap_bn"],
+      "properties": {
+        "at_zero_ev": { "$ref": "#/$defs/waterfall_result" },
+        "at_true_unwound_ev": { "$ref": "#/$defs/waterfall_result" },
+        "at_reported_window_dressed_ev": { "$ref": "#/$defs/waterfall_result" },
+        "window_dressing_gap_bn": { "type": "number", "const": 120.0 }
+      }
+    },
+    "waterfall_result": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["ev_bn", "ev_usd", "total_claim_bn", "total_debt_and_claims_bn", "total_recovery_bn", "total_recovery_usd", "stack_cents_on_dollar", "fulcrum_tranche", "unrecovered_ev_bn", "tranches"],
+      "properties": {
+        "ev_bn": { "type": "number", "minimum": 0 },
+        "ev_usd": { "type": "number", "minimum": 0 },
+        "total_claim_bn": { "type": "number", "const": 290.38 },
+        "total_debt_and_claims_bn": { "type": "number", "const": 265.38 },
+        "total_recovery_bn": { "type": "number", "minimum": 0, "maximum": 290.38 },
+        "total_recovery_usd": { "type": "number", "minimum": 0 },
+        "stack_cents_on_dollar": { "type": "number", "minimum": 0, "maximum": 100 },
+        "fulcrum_tranche": { "type": ["string", "null"], "description": "The single tranche with a partial (0 < recovery < claim) recovery, or null when no tranche is partially recovered." },
+        "unrecovered_ev_bn": { "type": "number", "minimum": 0 },
+        "tranches": { "type": "array", "minItems": 4, "maxItems": 4, "items": { "$ref": "#/$defs/waterfall_tranche" } }
+      }
+    },
+    "waterfall_tranche": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["tranche", "seniority", "claim_bn", "claim_usd", "breakeven_ev_bn", "recovery_bn", "recovery_usd", "cents_on_dollar"],
+      "properties": {
+        "tranche": { "type": "string", "minLength": 4 },
+        "seniority": { "type": "integer", "minimum": 1, "maximum": 4 },
+        "claim_bn": { "type": "number", "exclusiveMinimum": 0 },
+        "claim_usd": { "type": "number", "exclusiveMinimum": 0 },
+        "breakeven_ev_bn": { "type": "number", "exclusiveMinimum": 0, "maximum": 290.38 },
+        "recovery_bn": { "type": "number", "minimum": 0 },
+        "recovery_usd": { "type": "number", "minimum": 0 },
+        "cents_on_dollar": { "type": "number", "minimum": 0, "maximum": 100 }
+      }
+    },
+    "security_master_key_counts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["tickers", "ciks", "dockets"],
+      "properties": {
+        "tickers": { "type": "integer", "const": 7 },
+        "ciks": { "type": "integer", "const": 4 },
+        "dockets": { "type": "integer", "const": 5 }
+      }
+    }
+  }
+}

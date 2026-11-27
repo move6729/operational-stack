@@ -1,0 +1,276 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:distributed_antitrust_fiduciary_and_cloud_subpoena_liquidation_v1.0.json",
+  "title": "Distributed Antitrust Common-Ownership, Fiduciary, and Cloud-Subpoena Liquidation Bundle",
+  "description": "Locked constant and output validation surface for SPEC-DISTRIBUTED-ANTITRUST-COMMON-OWNERSHIP-AND-FIDUCIARY-LIQUIDATION-v1.0. Covers the MHHI common-ownership presumption gate, ERISA fiduciary loss and exact fee disgorgement, housing-cartel and wage-suppression treble overcharges, the FRCP 37(e)(2) cloud-metadata spoliation inference, distributed-enforcement joint-capture arithmetic, and the combined cartel-liquidation identity.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["canonical_specification", "antitrust_common_ownership", "erisa_fiduciary", "housing_cartel", "wage_suppression", "cloud_subpoena_spoliation", "distributed_enforcement", "combined_liquidation"],
+  "properties": {
+    "canonical_specification": {
+      "type": "string",
+      "const": "SPEC-DISTRIBUTED-ANTITRUST-COMMON-OWNERSHIP-AND-FIDUCIARY-LIQUIDATION-v1.0"
+    },
+    "antitrust_common_ownership": {
+      "type": "object",
+      "description": "Common-ownership MHHI gate. Identities: HHI_Base = 10000/N; Delta_HHI_CO = lambda_CO * 10000 * (N - 1) / N; MHHI_Total = HHI_Base + Delta_HHI_CO; Multiple = Delta_HHI_CO / DOJ_Delta_HHI_Threshold.",
+      "additionalProperties": false,
+      "required": ["N_Competitors_Coal", "HHI_Base_Pts", "beta_Big3_Combined_Share", "lambda_CO_Internalization", "Delta_HHI_CO_Pts", "MHHI_Total_Pts", "DOJ_HHI_Threshold_Pts", "DOJ_Delta_HHI_Threshold_Pts", "Multiple_Above_DOJ_Delta_Limit"],
+      "properties": {
+        "N_Competitors_Coal": {
+          "type": "integer",
+          "const": 5,
+          "description": "Number of competitors in the common-ownership coalition."
+        },
+        "HHI_Base_Pts": {
+          "type": "number",
+          "const": 2000.0,
+          "description": "Baseline Herfindahl-Hirschman Index in points; equals the equal-share anchor 10000/N."
+        },
+        "beta_Big3_Combined_Share": {
+          "type": "number",
+          "const": 0.22,
+          "description": "Combined equity share of the three largest coalition members; bounds the internalization coupling."
+        },
+        "lambda_CO_Internalization": {
+          "type": "number",
+          "const": 0.35,
+          "description": "Common-ownership profit-internalization weight (fraction in [0, 1])."
+        },
+        "Delta_HHI_CO_Pts": {
+          "type": "number",
+          "const": 2800.0,
+          "description": "HHI increment induced by common-ownership internalization (points)."
+        },
+        "MHHI_Total_Pts": {
+          "type": "number",
+          "const": 4800.0,
+          "description": "Modified HHI after common-ownership internalization (points)."
+        },
+        "DOJ_HHI_Threshold_Pts": {
+          "type": "number",
+          "const": 1800.0,
+          "description": "DOJ/FTC highly concentrated market HHI threshold (points)."
+        },
+        "DOJ_Delta_HHI_Threshold_Pts": {
+          "type": "number",
+          "const": 100.0,
+          "description": "DOJ/FTC change-in-HHI structural presumption threshold (points)."
+        },
+        "Multiple_Above_DOJ_Delta_Limit": {
+          "type": "number",
+          "const": 28.0,
+          "description": "Factor by which Delta_HHI_CO exceeds the DOJ delta threshold."
+        }
+      }
+    },
+    "erisa_fiduciary": {
+      "type": "object",
+      "description": "ERISA fiduciary block. Identities: L_plan = A * Delta_r * T; D_fee = A * phi * T; L_single = L_plan + D_fee; L_systemic = L_single * N_plans. Conflict predicate: Rank_Equity <= 5 with debt exposure > 0.",
+      "additionalProperties": false,
+      "required": ["A_Plan_BlackRock_USD", "D_Corp_BlackRock_Debt_USD", "Rank_Equity_BlackRock", "Delta_r_ESG_Drag", "phi_Management_Fee", "T_ERISA_Window_Yrs", "L_ERISA_Plan_Loss_USD", "D_ERISA_Fee_Disgorgement_Exact_USD", "L_ERISA_Total_Single_Plan_USD", "N_S_and_P_Plans_Exposed", "L_ERISA_Systemic_100Plans_USD"],
+      "properties": {
+        "A_Plan_BlackRock_USD": {
+          "type": "number",
+          "const": 10000000000.0,
+          "description": "Single-employer plan assets under management (USD)."
+        },
+        "D_Corp_BlackRock_Debt_USD": {
+          "type": "number",
+          "const": 400000000.0,
+          "description": "Corporate debt exposure creating the creditor-versus-equity conflict (USD)."
+        },
+        "Rank_Equity_BlackRock": {
+          "type": "integer",
+          "const": 4,
+          "description": "Equity-holder rank; satisfies the top-5 conflict-standing predicate."
+        },
+        "Delta_r_ESG_Drag": {
+          "type": "number",
+          "const": 0.0125,
+          "description": "Annual ESG-drag return penalty (fraction, 125 bps)."
+        },
+        "phi_Management_Fee": {
+          "type": "number",
+          "const": 0.0015,
+          "description": "Annual management-fee rate subject to disgorgement (fraction, 15 bps)."
+        },
+        "T_ERISA_Window_Yrs": {
+          "type": "integer",
+          "const": 4,
+          "description": "ERISA limitations window (years)."
+        },
+        "L_ERISA_Plan_Loss_USD": {
+          "type": "number",
+          "const": 500000000.0,
+          "description": "Single-plan fiduciary loss A * Delta_r * T (USD)."
+        },
+        "D_ERISA_Fee_Disgorgement_Exact_USD": {
+          "type": "number",
+          "const": 60000000.0,
+          "description": "Exact fee disgorgement A * phi * T (USD)."
+        },
+        "L_ERISA_Total_Single_Plan_USD": {
+          "type": "number",
+          "const": 560000000.0,
+          "description": "Single-plan total liability, loss plus disgorgement (USD)."
+        },
+        "N_S_and_P_Plans_Exposed": {
+          "type": "integer",
+          "const": 100,
+          "description": "Number of exposed comparable single-employer plans."
+        },
+        "L_ERISA_Systemic_100Plans_USD": {
+          "type": "number",
+          "const": 56000000000.0,
+          "description": "Systemic exposure across all exposed plans (USD)."
+        }
+      }
+    },
+    "housing_cartel": {
+      "type": "object",
+      "description": "Housing-cartel block. Identities: O_annual = U * R * delta_rent; O_4yr = O_annual * T_SOL; L_treble = 3 * O_4yr under Clayton Act Section 4.",
+      "additionalProperties": false,
+      "required": ["U_Cartel_Housing_Units", "N_States_Housing_Cartel", "R_Unit_Annual_Base_USD", "delta_Rent_Markup", "T_Antitrust_SOL_Yrs", "O_Housing_Annual_Overcharge_USD", "O_Housing_4yr_Overcharge_USD", "L_Housing_Treble_Damages_USD"],
+      "properties": {
+        "U_Cartel_Housing_Units": {
+          "type": "integer",
+          "const": 1300000,
+          "description": "Cartel-controlled housing units."
+        },
+        "N_States_Housing_Cartel": {
+          "type": "integer",
+          "const": 44,
+          "description": "States containing the cartel footprint."
+        },
+        "R_Unit_Annual_Base_USD": {
+          "type": "number",
+          "const": 20000.0,
+          "description": "Baseline annual rent per unit (USD)."
+        },
+        "delta_Rent_Markup": {
+          "type": "number",
+          "const": 0.05,
+          "description": "Collusive rent markup (fraction, 500 bps)."
+        },
+        "T_Antitrust_SOL_Yrs": {
+          "type": "integer",
+          "const": 4,
+          "description": "Antitrust statute-of-limitations window (years)."
+        },
+        "O_Housing_Annual_Overcharge_USD": {
+          "type": "number",
+          "const": 1300000000.0,
+          "description": "Annual tenant overcharge U * R * delta_rent (USD)."
+        },
+        "O_Housing_4yr_Overcharge_USD": {
+          "type": "number",
+          "const": 5200000000.0,
+          "description": "Cumulative four-year tenant overcharge (USD)."
+        },
+        "L_Housing_Treble_Damages_USD": {
+          "type": "number",
+          "const": 15600000000.0,
+          "description": "Clayton Act Section 4 treble damages on the four-year overcharge (USD)."
+        }
+      }
+    },
+    "wage_suppression": {
+      "type": "object",
+      "description": "Wage-suppression block. Identities: O_annual = N_workers * W * delta_wage; O_4yr = O_annual * T_SOL; L_treble = 3 * O_4yr under RICO Section 1964(c) and Clayton Act Section 4.",
+      "additionalProperties": false,
+      "required": ["N_Workers_Wage_Class", "W_Annual_Base_Wage_USD", "delta_Wage_Suppression_Arbitrage", "O_Wage_Annual_Suppression_USD", "O_Wage_4yr_Suppression_USD", "L_RICO_Clayton_Wage_Treble_USD"],
+      "properties": {
+        "N_Workers_Wage_Class": {
+          "type": "integer",
+          "const": 250000,
+          "description": "Workers in the wage-suppression class."
+        },
+        "W_Annual_Base_Wage_USD": {
+          "type": "number",
+          "const": 50000.0,
+          "description": "Baseline annual wage per worker (USD)."
+        },
+        "delta_Wage_Suppression_Arbitrage": {
+          "type": "number",
+          "const": 0.08,
+          "description": "Wage-suppression arbitrage spread (fraction, 800 bps)."
+        },
+        "O_Wage_Annual_Suppression_USD": {
+          "type": "number",
+          "const": 1000000000.0,
+          "description": "Annual wage suppression N_workers * W * delta_wage (USD)."
+        },
+        "O_Wage_4yr_Suppression_USD": {
+          "type": "number",
+          "const": 4000000000.0,
+          "description": "Cumulative four-year wage suppression (USD)."
+        },
+        "L_RICO_Clayton_Wage_Treble_USD": {
+          "type": "number",
+          "const": 12000000000.0,
+          "description": "RICO Section 1964(c) and Clayton Act treble wage damages (USD)."
+        }
+      }
+    },
+    "cloud_subpoena_spoliation": {
+      "type": "object",
+      "description": "Cloud-subpoena spoliation block. Identity: Omega == 0 implies P_adverse under FRCP Rule 37(e)(2) equals 1.",
+      "additionalProperties": false,
+      "required": ["Omega_Cloud_Metadata", "P_Adverse_Inference_Rule37e2"],
+      "properties": {
+        "Omega_Cloud_Metadata": {
+          "type": "number",
+          "const": 0.0,
+          "description": "Preserved fraction of subpoenaed cloud metadata; 0.0 denotes total spoliation."
+        },
+        "P_Adverse_Inference_Rule37e2": {
+          "type": "number",
+          "const": 1.0,
+          "description": "Probability of the FRCP Rule 37(e)(2) adverse-inference instruction."
+        }
+      }
+    },
+    "distributed_enforcement": {
+      "type": "object",
+      "description": "Distributed-enforcement block. Identities: P_survival = p_capture^K rounded to 6 decimal places; P_cascade = 1 - P_survival. The cartel must capture all K independent nodes simultaneously to survive.",
+      "additionalProperties": false,
+      "required": ["p_Capture_Single_Regulator", "K_Distributed_Enforcer_Nodes", "P_Cartel_Survival_Distributed", "P_Collateral_Estoppel_Cascade"],
+      "properties": {
+        "p_Capture_Single_Regulator": {
+          "type": "number",
+          "const": 0.85,
+          "description": "Probability that the cartel captures a single regulator."
+        },
+        "K_Distributed_Enforcer_Nodes": {
+          "type": "integer",
+          "const": 20,
+          "description": "Number of independent distributed enforcement nodes."
+        },
+        "P_Cartel_Survival_Distributed": {
+          "type": "number",
+          "const": 0.038760,
+          "description": "Joint-capture survival probability p_capture^K (6 decimal places)."
+        },
+        "P_Collateral_Estoppel_Cascade": {
+          "type": "number",
+          "const": 0.961240,
+          "description": "Collateral-estoppel cascade probability, 1 - P_survival."
+        }
+      }
+    },
+    "combined_liquidation": {
+      "type": "object",
+      "description": "Combined liquidation identity: L_combined = L_ERISA_Systemic + L_Housing_Treble + L_RICO_Clayton_Wage_Treble.",
+      "additionalProperties": false,
+      "required": ["L_Combined_Cartel_Liquidation_USD"],
+      "properties": {
+        "L_Combined_Cartel_Liquidation_USD": {
+          "type": "number",
+          "const": 83600000000.0,
+          "description": "Total combined cartel liquidation across all three liability vectors (USD)."
+        }
+      }
+    }
+  }
+}

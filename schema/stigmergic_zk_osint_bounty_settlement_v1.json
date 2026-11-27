@@ -1,0 +1,148 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:stigmergic_zk_osint_bounty_settlement_v1.json",
+  "title": "Zero-C2 Stigmergic OSINT Bounty Settlement Schema (v1.0)",
+  "description": "Deterministic state-transition contract for trustless zk-SNARK and adaptor-signature proof-of-verification bounty markets. Enforces Tokens_Chat = 0, zero platform rent, and statutory public-interest predicate gating.",
+  "type": "object",
+  "required": [
+    "spec_version",
+    "bounty_beacon_layer1",
+    "zk_adaptor_settlement_layer2",
+    "game_theoretic_equilibria"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "spec_version": {
+      "type": "string",
+      "const": "SPEC-STIGMERGIC-ZK-OSINT-BOUNTY-SETTLEMENT-v1.0"
+    },
+    "bounty_beacon_layer1": {
+      "type": "object",
+      "description": "Layer 1 pheromone deposit: objective machine-verifiable predicate P(D) = 1 escrow beacon.",
+      "required": [
+        "bounty_usd",
+        "predicate_class",
+        "verification_key_hash",
+        "tokens_chat",
+        "statutory_public_interest_ast_compliant"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "bounty_usd": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "description": "Locked bounty B in USD. Must satisfy B + C_Gas/ZK < Delta_V_Clearance (Theorem 1) and B - C_Solve > V_Hoard_Effective (Theorem 2)."
+        },
+        "predicate_class": {
+          "type": "string",
+          "enum": [
+            "CLASS_I_ZK_EMAIL_X509",
+            "CLASS_II_MERKLE_HNDL_PREIMAGE",
+            "CLASS_III_RLVR_STATUTORY_AUDIT"
+          ]
+        },
+        "verification_key_hash": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$",
+          "description": "SHA-256 digest of the Groth16 verification key vk_P bound to predicate P."
+        },
+        "tokens_chat": {
+          "type": "integer",
+          "const": 0,
+          "description": "Zero-C2 invariant: no interactive coordination channel exists."
+        },
+        "statutory_public_interest_ast_compliant": {
+          "type": "boolean",
+          "const": true,
+          "description": "Predicate P must belong to AST_StatutoryPublicInterest; otherwise VerifierContract(vk_P) = REJECT."
+        }
+      }
+    },
+    "zk_adaptor_settlement_layer2": {
+      "type": "object",
+      "description": "Layer 2 zero-knowledge witness plus BIP-340 functional adaptor signature atomic settlement.",
+      "required": [
+        "prover_route",
+        "prover_cycles",
+        "live_oracle_bandwidth_mb",
+        "ciphertext_cid_sha256",
+        "adaptor_key_extracted",
+        "platform_rent_pct"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "prover_route": {
+          "type": "string",
+          "enum": [
+            "ROUTE_A_STATIC_OFFLINE_ZK",
+            "ROUTE_B_MPC_TLS_ORACLE"
+          ]
+        },
+        "prover_cycles": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "zkVM cycle count. Route A RSA-2048 baseline is 17,400,000 cycles."
+        },
+        "live_oracle_bandwidth_mb": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Live network traffic in MB. Route A is 0.0 MB (fully offline); Route B TLSNotary is 25 + 10*TX_KB + 0.04*RX_KB."
+        },
+        "ciphertext_cid_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$",
+          "description": "Content-addressed digest H_C of ciphertext C_D = Enc_{K_D}(D)."
+        },
+        "adaptor_key_extracted": {
+          "type": "boolean",
+          "const": true,
+          "description": "K_D = sigma - tilde_sigma (mod q) is publicly extractable in the same block as payout."
+        },
+        "platform_rent_pct": {
+          "type": "number",
+          "const": 0.0,
+          "description": "Zero platform rent invariant: no brokerage or intermediary cut."
+        }
+      }
+    },
+    "game_theoretic_equilibria": {
+      "type": "object",
+      "description": "Closed-form equilibrium bounds for the four governing theorems.",
+      "required": [
+        "productive_capital_rov",
+        "kompromat_effective_hoard_value_usd",
+        "preemption_leverage_ratio",
+        "spammer_expected_payoff_usd",
+        "funder_human_review_hours"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "productive_capital_rov": {
+          "type": "number",
+          "exclusiveMinimum": 1.0,
+          "description": "ROV = Delta_V_Clearance / (B + C_Gas/ZK). Baseline 39.196x."
+        },
+        "kompromat_effective_hoard_value_usd": {
+          "type": "number",
+          "minimum": 0,
+          "description": "V_Hoard_Effective = r_Hoard*(1-lambda)^(M-1) / (1 - delta*(1-lambda)^(M-1)). Baseline 515.20 USD."
+        },
+        "preemption_leverage_ratio": {
+          "type": "number",
+          "exclusiveMinimum": 1.0,
+          "description": "V_Hoard_Monopoly / B_Preempt. Baseline 50.0x."
+        },
+        "spammer_expected_payoff_usd": {
+          "type": "number",
+          "exclusiveMaximum": 0,
+          "description": "E[Pi_Spammer] = -N_Spam * c_Slash. Baseline -115000.0 USD."
+        },
+        "funder_human_review_hours": {
+          "type": "number",
+          "const": 0.0,
+          "description": "Reverse-Turing RLVR gate imposes zero human review load."
+        }
+      }
+    }
+  }
+}

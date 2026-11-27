@@ -1,0 +1,315 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:anthropic_november_gun_jumping_and_valuation_inversion_audit.json",
+  "title": "Anthropic November Gun-Jumping and Valuation Inversion Audit Manifest",
+  "description": "Typed measurement schema for the Anthropic, PBC (SEC CIK 0002130357; proposed NASDAQ: ANT) November gun-jumping and valuation-inversion audit. LOCK A: Q2 2026 revenue $11,555M / compute $5,558M, Q3 2026 revenue $16,956M / compute $9,863M, 9M 2026 revenue $33,242M / compute $18,808M (implied Q1 2026 $4,731M / $3,387M), Q3 annualized run-rate $67,824M, Q3 monthly average revenue $5,652M, Q3 delta revenue $5,401M / delta compute $4,305M, Q3 marginal compute cost 0.79707462 = 79.7075% (contribution 20.2925%), Q3 short-term compute $5,000M, Q3 GAAP operating loss -$(567)M, 9M 2026 GAAP net loss -$(104,039)M across 273 days = -$381.0952M/day. LOCK B: leaked October 2026 run-rate $80,000M, implied monthly revenue $6,666.6667M, run-rate delta vs Q3 annualized $12,176M (+17.9523%), monthly revenue delta $1,014.6667M, implied incremental monthly compute $808.765M, implied total monthly compute $4,096.4317M, implied annualized compute $49,157.1805M. LOCK C: Opus 5.5 / GSA 40% price cut at constant volume deflates the run-rate to $48,000M (-$32,000M), volume multiplier required to restore $80B = 1.666667x (+66.6667%), post-cut marginal compute cost 0.79707462 / 0.6 = 1.328458 = 132.8458% (marginal gross loss -32.8458%). LOCK D: target valuation $1,500,000M vs skeptical $1,000,000M (haircut -$500,000M = -33.3333%), target raise $100,000M vs reduced $80,000M (haircut -$20,000M = -20.0%), Sep-30 cash $146,600M, post-IPO gross cash $226,600M, operating EV at $1.5T = $1,253,400M and at $1.0T = $773,400M. LOCK E: disclosed 5-piece compute encumbrance $895,400M, all-in [$1,050,100M, $1,075,100M]; encumbrance/EV at $1T disclosed 1.157745x, all-in [1.357771x, 1.390096x]; encumbrance/mcap all-in [1.0501x, 1.0751x]; encumbrance/Sep-30 cash [7.163029x, 7.333561x] (valuation inversion: every all-in ratio exceeds 1.0x). LOCK F: NTM total compute $69,800M (87.25% of the $80B IPO), NTM non-cancelable $65,500M (81.875%); primary dilution 6.6667% / 8.0% / 10.0%; Amazon convert principal $6,200M vs carrying FV $130,500M; Broadcom zero-exit lease $161,200M; uncommenced ASC 842 leases $451,200M + post-Sep-30 LT commitments $100,200M = total uncommenced forward leases $551,400M; developer credit guaranties $4,700M vs prior $800M = 5.875x surge; moratorium scissor direct recourse $231,400M and total uncommenced stack $556,100M; Nasdaq Nov-5 rout $2,500,000M; OpenAI target raise $30,000M vs actual $11,000M (shortfall $19,000M = 63.3333%) at a reduced $1,250,000M valuation. LOCK G: absolute-priority tranche waterfall over the six-rank going-concern senior claim stack totaling $1,028,884M versus the Class A subordinated public equity residual stub, the Section 5 gun-jumping timeline (S-1 2026-10-26 -> S-1/A 2026-11-02 -> moratorium 2026-11-03 -> WSJ leak + Opus 5.5 cut 2026-11-05 -> WSJ print 2026-11-06 -> IPO window 2026-11-16..2026-11-20 -> Q3 staleness 2027-02-14), the six-category security-master ring, and the ISO catalyst calendar. All monetary values USD millions unless suffixed _b ($B) or _x (dimensionless multiple) or _pct (percentage).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "specification_id",
+    "jurisdiction_context",
+    "cfaa_compliance_attestation",
+    "locked_constants_and_outputs",
+    "tranche_waterfall",
+    "entity_and_instrument_ids",
+    "catalyst_calendar"
+  ],
+  "properties": {
+    "specification_id": { "type": "string", "const": "SPEC-ANTHROPIC-NOVEMBER-GUN-JUMPING-AND-VALUATION-INVERSION-AUDIT-v1.0" },
+    "jurisdiction_context": { "type": "string", "pattern": "^[A-Z]{2}$", "const": "US", "description": "ISO 3166-1 alpha-2 jurisdiction context." },
+    "cfaa_compliance_attestation": {
+      "type": "object",
+      "description": "Zero-unauthorized-access attestation under 18 U.S.C. 1030.",
+      "additionalProperties": false,
+      "required": ["cfaa_compliant_18_usc_1030", "basis"],
+      "properties": {
+        "cfaa_compliant_18_usc_1030": { "type": "boolean", "const": true },
+        "basis": { "type": "string", "minLength": 16, "description": "Every measured artifact is a public SEC EDGAR registration statement (Form S-1 / S-1/A, CIK 0002130357), a public federal court docket, or publicly reported print/leak coverage, analyzed read-only." }
+      }
+    },
+    "locked_constants_and_outputs": {
+      "type": "object",
+      "description": "Locked constants and derived outputs across LOCK A-G. Monetary values USD millions unless suffixed _b ($B), _x (multiple), or _pct (percentage).",
+      "additionalProperties": false,
+      "required": ["cik", "proposed_ticker", "s1_initial_date", "s1a_filing_date", "midterm_moratorium_date", "wsj_leak_and_opus55_cut_date", "wsj_print_date", "target_ipo_window_start", "target_ipo_window_end", "q3_financial_staleness_date", "q2_2026_rev_m", "q3_2026_rev_m", "9m_2026_rev_m", "q3_2026_annualized_run_rate_m", "q3_2026_monthly_avg_rev_m", "q2_2026_compute_m", "q3_2026_compute_m", "9m_2026_compute_m", "q3_delta_rev_m", "q3_delta_compute_m", "q3_marginal_compute_cost_ratio", "q3_marginal_compute_cost_pct", "q3_marginal_compute_contribution_pct", "q3_short_term_compute_m", "q3_gaap_op_loss_m", "9m_2026_gaap_net_loss_m", "9m_2026_daily_net_loss_m", "oct_2026_leaked_run_rate_m", "oct_2026_implied_monthly_rev_m", "oct_vs_q3_run_rate_delta_m", "oct_vs_q3_run_rate_growth_pct", "oct_vs_q3_monthly_rev_delta_m", "oct_implied_incremental_monthly_compute_m", "oct_implied_total_monthly_compute_m", "oct_implied_annualized_compute_m", "opus_55_and_gsa_price_cut_ratio", "opus_55_and_gsa_price_cut_pct", "post_cut_constant_volume_run_rate_m", "post_cut_constant_volume_deflation_m", "volume_multiplier_required_for_80b", "volume_increase_required_pct", "post_cut_marginal_compute_cost_ratio", "post_cut_marginal_compute_cost_pct", "post_cut_marginal_gross_loss_pct", "ipo_valuation_target_m", "ipo_valuation_skeptical_m", "ipo_valuation_haircut_m", "ipo_valuation_haircut_pct", "ipo_raise_target_m", "ipo_raise_reduced_m", "ipo_raise_haircut_m", "ipo_raise_haircut_pct", "cash_sep_30_2026_m", "cash_post_ipo_gross_m", "operating_ev_at_1500b_m", "operating_ev_at_1000b_m", "disclosed_5piece_compute_encumbrance_m", "all_in_compute_encumbrance_low_m", "all_in_compute_encumbrance_high_m", "encumbrance_to_ev_disclosed_at_1t_x", "encumbrance_to_ev_all_in_low_at_1t_x", "encumbrance_to_ev_all_in_high_at_1t_x", "encumbrance_to_mcap_all_in_low_at_1t_x", "encumbrance_to_mcap_all_in_high_at_1t_x", "encumbrance_to_sep30_cash_low_x", "encumbrance_to_sep30_cash_high_x", "ntm_total_compute_due_m", "ntm_non_cancelable_compute_m", "ntm_total_share_of_80b_ipo_pct", "ntm_non_cancelable_share_of_80b_ipo_pct", "primary_dilution_at_1500b_100b_pct", "primary_dilution_at_1000b_80b_pct", "primary_dilution_at_1000b_100b_pct", "amazon_convert_principal_m", "amazon_convert_carrying_fv_m", "broadcom_zero_exit_lease_m", "uncommenced_asc842_leases_sep30_m", "post_sep30_lt_commitments_m", "total_uncommenced_forward_leases_m", "developer_credit_guaranties_m", "developer_guaranty_prior_m", "developer_guaranty_surge_x", "moratorium_scissor_direct_recourse_m", "moratorium_scissor_total_uncommenced_stack_m", "nasdaq_nov5_rout_m", "openai_target_raise_m", "openai_actual_raise_m", "openai_shortfall_m", "openai_shortfall_pct", "openai_reduced_valuation_m", "tranche_stack_m"],
+      "properties": {
+        "cik": { "type": "string", "pattern": "^[0-9]{10}$", "const": "0002130357" },
+        "proposed_ticker": { "type": "string", "const": "NASDAQ: ANT" },
+        "s1_initial_date": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$", "const": "2026-10-26" },
+        "s1a_filing_date": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$", "const": "2026-11-02" },
+        "midterm_moratorium_date": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$", "const": "2026-11-03" },
+        "wsj_leak_and_opus55_cut_date": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$", "const": "2026-11-05" },
+        "wsj_print_date": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$", "const": "2026-11-06" },
+        "target_ipo_window_start": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$", "const": "2026-11-16" },
+        "target_ipo_window_end": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$", "const": "2026-11-20" },
+        "q3_financial_staleness_date": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$", "const": "2027-02-14" },
+        "q2_2026_rev_m": { "type": "number", "const": 11555.0 },
+        "q3_2026_rev_m": { "type": "number", "const": 16956.0 },
+        "9m_2026_rev_m": { "type": "number", "const": 33242.0 },
+        "q3_2026_annualized_run_rate_m": { "type": "number", "const": 67824.0 },
+        "q3_2026_monthly_avg_rev_m": { "type": "number", "const": 5652.0 },
+        "q2_2026_compute_m": { "type": "number", "const": 5558.0 },
+        "q3_2026_compute_m": { "type": "number", "const": 9863.0 },
+        "9m_2026_compute_m": { "type": "number", "const": 18808.0 },
+        "q3_delta_rev_m": { "type": "number", "const": 5401.0 },
+        "q3_delta_compute_m": { "type": "number", "const": 4305.0 },
+        "q3_marginal_compute_cost_ratio": { "type": "number", "const": 0.79707462 },
+        "q3_marginal_compute_cost_pct": { "type": "number", "const": 79.7075 },
+        "q3_marginal_compute_contribution_pct": { "type": "number", "const": 20.2925 },
+        "q3_short_term_compute_m": { "type": "number", "const": 5000.0 },
+        "q3_gaap_op_loss_m": { "type": "number", "const": -567.0 },
+        "9m_2026_gaap_net_loss_m": { "type": "number", "const": -104039.0 },
+        "9m_2026_daily_net_loss_m": { "type": "number", "const": -381.0952 },
+        "oct_2026_leaked_run_rate_m": { "type": "number", "const": 80000.0 },
+        "oct_2026_implied_monthly_rev_m": { "type": "number", "const": 6666.6667 },
+        "oct_vs_q3_run_rate_delta_m": { "type": "number", "const": 12176.0 },
+        "oct_vs_q3_run_rate_growth_pct": { "type": "number", "const": 17.9523 },
+        "oct_vs_q3_monthly_rev_delta_m": { "type": "number", "const": 1014.6667 },
+        "oct_implied_incremental_monthly_compute_m": { "type": "number", "const": 808.765 },
+        "oct_implied_total_monthly_compute_m": { "type": "number", "const": 4096.4317 },
+        "oct_implied_annualized_compute_m": { "type": "number", "const": 49157.1805 },
+        "opus_55_and_gsa_price_cut_ratio": { "type": "number", "const": 0.4 },
+        "opus_55_and_gsa_price_cut_pct": { "type": "number", "const": 40.0 },
+        "post_cut_constant_volume_run_rate_m": { "type": "number", "const": 48000.0 },
+        "post_cut_constant_volume_deflation_m": { "type": "number", "const": -32000.0 },
+        "volume_multiplier_required_for_80b": { "type": "number", "const": 1.666667 },
+        "volume_increase_required_pct": { "type": "number", "const": 66.6667 },
+        "post_cut_marginal_compute_cost_ratio": { "type": "number", "const": 1.328458 },
+        "post_cut_marginal_compute_cost_pct": { "type": "number", "const": 132.8458 },
+        "post_cut_marginal_gross_loss_pct": { "type": "number", "const": -32.8458 },
+        "ipo_valuation_target_m": { "type": "number", "const": 1500000.0 },
+        "ipo_valuation_skeptical_m": { "type": "number", "const": 1000000.0 },
+        "ipo_valuation_haircut_m": { "type": "number", "const": -500000.0 },
+        "ipo_valuation_haircut_pct": { "type": "number", "const": -33.3333 },
+        "ipo_raise_target_m": { "type": "number", "const": 100000.0 },
+        "ipo_raise_reduced_m": { "type": "number", "const": 80000.0 },
+        "ipo_raise_haircut_m": { "type": "number", "const": -20000.0 },
+        "ipo_raise_haircut_pct": { "type": "number", "const": -20.0 },
+        "cash_sep_30_2026_m": { "type": "number", "const": 146600.0 },
+        "cash_post_ipo_gross_m": { "type": "number", "const": 226600.0 },
+        "operating_ev_at_1500b_m": { "type": "number", "const": 1253400.0 },
+        "operating_ev_at_1000b_m": { "type": "number", "const": 773400.0 },
+        "disclosed_5piece_compute_encumbrance_m": { "type": "number", "const": 895400.0 },
+        "all_in_compute_encumbrance_low_m": { "type": "number", "const": 1050100.0 },
+        "all_in_compute_encumbrance_high_m": { "type": "number", "const": 1075100.0 },
+        "encumbrance_to_ev_disclosed_at_1t_x": { "type": "number", "const": 1.157745 },
+        "encumbrance_to_ev_all_in_low_at_1t_x": { "type": "number", "const": 1.357771 },
+        "encumbrance_to_ev_all_in_high_at_1t_x": { "type": "number", "const": 1.390096 },
+        "encumbrance_to_mcap_all_in_low_at_1t_x": { "type": "number", "const": 1.0501 },
+        "encumbrance_to_mcap_all_in_high_at_1t_x": { "type": "number", "const": 1.0751 },
+        "encumbrance_to_sep30_cash_low_x": { "type": "number", "const": 7.163029 },
+        "encumbrance_to_sep30_cash_high_x": { "type": "number", "const": 7.333561 },
+        "ntm_total_compute_due_m": { "type": "number", "const": 69800.0 },
+        "ntm_non_cancelable_compute_m": { "type": "number", "const": 65500.0 },
+        "ntm_total_share_of_80b_ipo_pct": { "type": "number", "const": 87.25 },
+        "ntm_non_cancelable_share_of_80b_ipo_pct": { "type": "number", "const": 81.875 },
+        "primary_dilution_at_1500b_100b_pct": { "type": "number", "const": 6.6667 },
+        "primary_dilution_at_1000b_80b_pct": { "type": "number", "const": 8.0 },
+        "primary_dilution_at_1000b_100b_pct": { "type": "number", "const": 10.0 },
+        "amazon_convert_principal_m": { "type": "number", "const": 6200.0 },
+        "amazon_convert_carrying_fv_m": { "type": "number", "const": 130500.0 },
+        "broadcom_zero_exit_lease_m": { "type": "number", "const": 161200.0 },
+        "uncommenced_asc842_leases_sep30_m": { "type": "number", "const": 451200.0 },
+        "post_sep30_lt_commitments_m": { "type": "number", "const": 100200.0 },
+        "total_uncommenced_forward_leases_m": { "type": "number", "const": 551400.0 },
+        "developer_credit_guaranties_m": { "type": "number", "const": 4700.0 },
+        "developer_guaranty_prior_m": { "type": "number", "const": 800.0 },
+        "developer_guaranty_surge_x": { "type": "number", "const": 5.875 },
+        "moratorium_scissor_direct_recourse_m": { "type": "number", "const": 231400.0 },
+        "moratorium_scissor_total_uncommenced_stack_m": { "type": "number", "const": 556100.0 },
+        "nasdaq_nov5_rout_m": { "type": "number", "const": 2500000.0 },
+        "openai_target_raise_m": { "type": "number", "const": 30000.0 },
+        "openai_actual_raise_m": { "type": "number", "const": 11000.0 },
+        "openai_shortfall_m": { "type": "number", "const": 19000.0 },
+        "openai_shortfall_pct": { "type": "number", "const": 63.3333 },
+        "openai_reduced_valuation_m": { "type": "number", "const": 1250000.0 },
+        "tranche_stack_m": {
+          "type": "object",
+          "description": "LOCK G: six-rank going-concern senior claim stack in strict absolute-priority order plus the total. The Class A subordinated public equity residual stub sits below rank 6 and is modeled in tranche_waterfall.",
+          "additionalProperties": false,
+          "required": ["rank_1_developer_guaranties", "rank_2_on_bs_asc842_leases", "rank_3_ntm_non_cancelable_compute", "rank_4_remaining_priced_purchase_obligations", "rank_5_uncommenced_asc842_and_post_sep30_leases", "rank_6_amazon_convertible_notes_carrying_fv", "total_going_concern_senior_claims_m"],
+          "properties": {
+            "rank_1_developer_guaranties": { "type": "number", "const": 4700.0 },
+            "rank_2_on_bs_asc842_leases": { "type": "number", "const": 4484.0 },
+            "rank_3_ntm_non_cancelable_compute": { "type": "number", "const": 65500.0 },
+            "rank_4_remaining_priced_purchase_obligations": { "type": "number", "const": 272300.0 },
+            "rank_5_uncommenced_asc842_and_post_sep30_leases": { "type": "number", "const": 551400.0 },
+            "rank_6_amazon_convertible_notes_carrying_fv": { "type": "number", "const": 130500.0 },
+            "total_going_concern_senior_claims_m": { "type": "number", "const": 1028884.0 }
+          }
+        }
+      }
+    },
+    "tranche_waterfall": {
+      "type": "array",
+      "description": "LOCK G: absolute-priority recovery waterfall over the six-rank going-concern senior claim stack ($1,028,884M total), terminating with the Class A subordinated public equity residual stub (principal null). breakeven_ev_m is the cumulative EV at which each tranche is fully recovered; below $1,028,884M the public equity stub recovers zero (valuation inversion).",
+      "const": [
+        { "tranche": "rank_1_developer_guaranties", "principal_m": 4700.0, "seniority": 1, "breakeven_ev_m": 4700.0 },
+        { "tranche": "rank_2_on_bs_asc842_leases", "principal_m": 4484.0, "seniority": 2, "breakeven_ev_m": 9184.0 },
+        { "tranche": "rank_3_ntm_non_cancelable_compute", "principal_m": 65500.0, "seniority": 3, "breakeven_ev_m": 74684.0 },
+        { "tranche": "rank_4_remaining_priced_purchase_obligations", "principal_m": 272300.0, "seniority": 4, "breakeven_ev_m": 346984.0 },
+        { "tranche": "rank_5_uncommenced_asc842_and_post_sep30_leases", "principal_m": 551400.0, "seniority": 5, "breakeven_ev_m": 898384.0 },
+        { "tranche": "rank_6_amazon_convertible_notes_carrying_fv", "principal_m": 130500.0, "seniority": 6, "breakeven_ev_m": 1028884.0 },
+        { "tranche": "class_a_subordinated_public_equity", "principal_m": null, "seniority": 7, "breakeven_ev_m": 1028884.0 }
+      ],
+      "minItems": 7,
+      "maxItems": 7
+    },
+    "entity_and_instrument_ids": {
+      "type": "object",
+      "description": "Six-category multi-counterparty security-master ring.",
+      "additionalProperties": false,
+      "required": ["primary_target", "bdc_colenders_credit_funds", "insurer_reinsurance_sidecars", "auditors_valuation_agents_fund_admins", "pension_lps_swfs_consultants", "trustees_admin_agents_rating_agencies", "counsel_co_investors"],
+      "properties": {
+        "primary_target": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["entity", "role", "identifiers"],
+          "properties": {
+            "entity": { "type": "string", "const": "Anthropic, PBC" },
+            "role": { "type": "string", "const": "primary" },
+            "identifiers": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["sec_cik", "ticker", "jurisdiction_of_incorporation", "filing"],
+              "properties": {
+                "sec_cik": { "type": "string", "pattern": "^[0-9]{10}$", "const": "0002130357" },
+                "ticker": { "type": "string", "const": "NASDAQ: ANT" },
+                "jurisdiction_of_incorporation": { "type": "string", "const": "Delaware" },
+                "filing": { "type": "string", "minLength": 8 }
+              }
+            }
+          }
+        },
+        "bdc_colenders_credit_funds": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["role", "counterparties"],
+          "properties": {
+            "role": { "type": "string", "const": "vendor_financed_compute_credit_counterparties" },
+            "counterparties": {
+              "type": "array",
+              "minItems": 5,
+              "maxItems": 5,
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["entity", "ticker", "cik", "instrument"],
+                "properties": {
+                  "entity": { "type": "string", "minLength": 3 },
+                  "ticker": { "type": "string", "pattern": "^[A-Z]{1,5}$" },
+                  "cik": { "type": "string", "pattern": "^[0-9]{10}$" },
+                  "instrument": { "type": "string", "minLength": 8 }
+                }
+              }
+            }
+          }
+        },
+        "insurer_reinsurance_sidecars": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["role", "counterparties", "attestation"],
+          "properties": {
+            "role": { "type": "string", "const": "regulated_insurance_balance_sheet_counterparties" },
+            "counterparties": { "type": "array", "maxItems": 0 },
+            "attestation": { "type": "string", "minLength": 16 }
+          }
+        },
+        "auditors_valuation_agents_fund_admins": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["role", "counterparties"],
+          "properties": {
+            "role": { "type": "string", "const": "pcaob_registered_independent_auditors" },
+            "counterparties": {
+              "type": "array",
+              "minItems": 2,
+              "maxItems": 2,
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["entity", "scope"],
+                "properties": {
+                  "entity": { "type": "string", "enum": ["Ernst & Young LLP", "Grant Thornton LLP"] },
+                  "scope": { "type": "string", "minLength": 8 }
+                }
+              }
+            }
+          }
+        },
+        "pension_lps_swfs_consultants": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["role", "counterparties", "attestation"],
+          "properties": {
+            "role": { "type": "string", "const": "fiduciary_passive_index_transfer_vector" },
+            "counterparties": { "type": "array", "maxItems": 0 },
+            "attestation": { "type": "string", "minLength": 16 }
+          }
+        },
+        "trustees_admin_agents_rating_agencies": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["role", "counterparties", "attestation"],
+          "properties": {
+            "role": { "type": "string", "const": "deal_agents_underwriting_syndicate" },
+            "counterparties": {
+              "type": "array",
+              "minItems": 4,
+              "maxItems": 4,
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["entity", "role"],
+                "properties": {
+                  "entity": { "type": "string", "minLength": 3 },
+                  "role": { "type": "string", "enum": ["lead_left_underwriter", "stabilization_agent", "bookrunner"] }
+                }
+              }
+            },
+            "attestation": { "type": "string", "minLength": 16 }
+          }
+        },
+        "counsel_co_investors": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["role", "court_dockets"],
+          "properties": {
+            "role": { "type": "string", "const": "litigation_counsel_and_named_dockets" },
+            "court_dockets": {
+              "type": "array",
+              "minItems": 1,
+              "maxItems": 1,
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["case", "docket", "status"],
+                "properties": {
+                  "case": { "type": "string", "const": "Bartz et al. v. Anthropic PBC" },
+                  "docket": { "type": "string", "const": "N.D. Cal. Case No. 3:24-cv-05417-WHA" },
+                  "status": { "type": "string", "minLength": 4 }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "catalyst_calendar": {
+      "type": "array",
+      "description": "ISO 8601 catalyst calendar spanning the Section 5 gun-jumping timeline and the Q3 2026 financial staleness date, in strict ascending order.",
+      "minItems": 8,
+      "maxItems": 8,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["date", "type", "catalyst"],
+        "properties": {
+          "date": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" },
+          "type": { "type": "string", "enum": ["s1_filing", "s1a_amendment", "regulatory_moratorium", "leak_and_price_cut", "press_print", "ipo_window_open", "ipo_window_close", "financial_staleness"] },
+          "catalyst": { "type": "string", "minLength": 16 }
+        }
+      }
+    }
+  }
+}

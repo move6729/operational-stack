@@ -1,0 +1,120 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:dual_hat_privacy_forensics_conflict_and_posiwid_capture.json",
+  "$comment": "PLAIN-ENGLISH LEGAL NOTICE: This file is an abstract nonprofit-forensic, anonymity-network game-theory, and witness-impeachment equilibrium validation checklist (JSON Schema), NOT an accusation, indictment, or evidentiary filing. Every field encodes a public Form 990 disclosure, a published primary source, or a closed-form algebraic invariant.",
+  "title": "Dual-Hat Privacy-Forensics Constructive Fiduciary Conflict, I2P Hop-Truncation Sybil Compromise, Brady/Giglio Regulatory-Insurance Equilibrium & POSIWID Capture Schema",
+  "description": "Validates the MAGIC Grants (EIN 82-5183590) Form 990 FY2024-FY2025 revenue/expense/net-asset forensics and 6.6708x YoY revenue multiple against the $0 disclosed charity salary, the POSIWID role-capture surface (Cake Wallet 300,000-user base, Privacy Guides 1.0 disclosure-omission rate, LWS 1.0 view-key transaction-visibility fraction, 70.0% PHP web-server share, 12-year GitLab CVE-10 dormancy), EQ1 I2P hop-truncation Sybil compromise (f = 0.10, p_k3 = 0.0010 vs p_k1 = 0.1000, 100.0x deanonymization-risk multiplier, 31.6521-bit to 10.5507-bit Shannon entropy collapse, 66.6667% loss), EQ2 Brady/Giglio witness versus regulatory-insurance equilibrium (gamma = 0.85, $375,000 impeached retainer PV, -$4,625,000 formal-plea utility, $7,125,000 and $7,500,000 net payoff advantages), and EQ3 dual-hat constructive fiduciary conflict index saturation at 1.0.",
+  "type": "object",
+  "required": [
+    "specification_id",
+    "jurisdiction_context",
+    "cfaa_compliance_attestation",
+    "magic_grants_form_990_forensics",
+    "posiwid_role_capture",
+    "i2p_hop_truncation_sybil_compromise",
+    "brady_giglio_regulatory_insurance_equilibrium",
+    "dual_hat_constructive_fiduciary_conflict_index",
+    "induced_demand_boutique_capture_asymmetry"
+  ],
+  "properties": {
+    "specification_id": { "type": "string", "const": "SPEC-DUAL-HAT-PRIVACY-FORENSICS-CONFLICT-AND-POSIWID-CAPTURE-v1.0" },
+    "jurisdiction_context": { "type": "string", "pattern": "^[A-Z]{2}$" },
+    "cfaa_compliance_attestation": { "type": "boolean", "const": true },
+    "magic_grants_form_990_forensics": {
+      "type": "object",
+      "description": "MAGIC Grants Form 990 accounting identities: FY2024 baseline, FY2025 contribution-driven revenue jump, net income, net assets, YoY multiple, and the $0 disclosed charity salary anchor.",
+      "required": ["magic_grants_ein", "magic_fy2024_revenue_usd", "magic_fy2024_expenses_usd", "magic_fy2024_surplus_usd", "magic_fy2025_revenue_usd", "magic_fy2025_contributions_usd", "magic_fy2025_expenses_usd", "magic_fy2025_net_income_usd", "magic_fy2025_net_assets_usd", "magic_fy2025_contribution_share_pct", "magic_revenue_yoy_multiple", "ehrenhofer_charity_salary_usd"],
+      "properties": {
+        "magic_grants_ein": { "type": "string", "const": "82-5183590" },
+        "magic_fy2024_revenue_usd": { "type": "number", "const": 131102.0 },
+        "magic_fy2024_expenses_usd": { "type": "number", "const": 124712.0 },
+        "magic_fy2024_surplus_usd": { "type": "number", "const": 6390.0 },
+        "magic_fy2025_revenue_usd": { "type": "number", "const": 874550.0 },
+        "magic_fy2025_contributions_usd": { "type": "number", "const": 855332.0 },
+        "magic_fy2025_expenses_usd": { "type": "number", "const": 363493.0 },
+        "magic_fy2025_net_income_usd": { "type": "number", "const": 511057.0 },
+        "magic_fy2025_net_assets_usd": { "type": "number", "const": 773639.0 },
+        "magic_fy2025_contribution_share_pct": { "type": "number", "const": 97.8025 },
+        "magic_revenue_yoy_multiple": { "type": "number", "const": 6.6708 },
+        "ehrenhofer_charity_salary_usd": { "type": "number", "const": 0.0 }
+      },
+      "additionalProperties": false
+    },
+    "posiwid_role_capture": {
+      "type": "object",
+      "description": "POSIWID (position-is-what-it-does) capture surface: Cake Wallet user base, Privacy Guides disclosure-omission rate, LWS view-key transaction-visibility fraction, PHP web-server share, and GitLab CVE-10 dormancy window.",
+      "required": ["cake_wallet_user_base", "privacy_guides_disclosure_omission_rate", "lws_view_key_tx_visibility_fraction", "php_web_server_share_pct", "gitlab_cve_10_0_dormancy_years", "posiwid_capture_confirmed"],
+      "properties": {
+        "cake_wallet_user_base": { "type": "integer", "const": 300000 },
+        "privacy_guides_disclosure_omission_rate": { "type": "number", "const": 1.0 },
+        "lws_view_key_tx_visibility_fraction": { "type": "number", "const": 1.0 },
+        "php_web_server_share_pct": { "type": "number", "const": 70.0 },
+        "gitlab_cve_10_0_dormancy_years": { "type": "integer", "const": 12 },
+        "posiwid_capture_confirmed": { "type": "boolean", "const": true }
+      },
+      "additionalProperties": false
+    },
+    "i2p_hop_truncation_sybil_compromise": {
+      "type": "object",
+      "description": "EQ1_I2P_HOP_TRUNCATION_SYBIL_COMPROMISE: Sybil router fraction f = 150/1500 = 0.10, all-hop-compromise probabilities p_k3 = f^3 = 0.0010 versus p_k1 = f^1 = 0.1000, the 100.0x deanonymization-risk multiplier, and the 31.6521-bit to 10.5507-bit Shannon path-entropy collapse (66.6667% loss).",
+      "required": ["i2p_router_pool_nodes", "adversary_sybil_routers", "adversary_router_fraction_f", "i2p_default_hops_k3", "i2p_downgraded_hops_k1", "p_compromise_k3_default", "p_compromise_k1_downgraded", "i2p_deanonymization_risk_multiplier", "shannon_entropy_bits_k3", "shannon_entropy_bits_k1", "shannon_entropy_loss_pct"],
+      "properties": {
+        "i2p_router_pool_nodes": { "type": "integer", "const": 1500 },
+        "adversary_sybil_routers": { "type": "integer", "const": 150 },
+        "adversary_router_fraction_f": { "type": "number", "const": 0.1 },
+        "i2p_default_hops_k3": { "type": "integer", "const": 3 },
+        "i2p_downgraded_hops_k1": { "type": "integer", "const": 1 },
+        "p_compromise_k3_default": { "type": "number", "const": 0.001 },
+        "p_compromise_k1_downgraded": { "type": "number", "const": 0.1 },
+        "i2p_deanonymization_risk_multiplier": { "type": "number", "const": 100.0 },
+        "shannon_entropy_bits_k3": { "type": "number", "const": 31.6521 },
+        "shannon_entropy_bits_k1": { "type": "number", "const": 10.5507 },
+        "shannon_entropy_loss_pct": { "type": "number", "const": 66.6667 }
+      },
+      "additionalProperties": false
+    },
+    "brady_giglio_regulatory_insurance_equilibrium": {
+      "type": "object",
+      "description": "EQ2_BRADY_GIGLIO_WITNESS_VS_REGULATORY_INSURANCE_EQUILIBRIUM: impeachment discount gamma = 0.85 collapses the $2,500,000 unimpeached expert-retainer PV to $375,000; against the $5,000,000 expected 18 U.S.C. 1960 sanction loss, the no-plea pivot ($2,500,000) dominates the formal plea (-$4,625,000) by $7,125,000 and the unshielded regime (-$5,000,000) by $7,500,000.",
+      "required": ["brady_giglio_impeachment_discount_gamma", "expert_retainer_pv_unimpeached_usd", "expert_retainer_pv_impeached_usd", "section_1960_expected_sanction_loss_usd", "u_pivot_no_plea_usd", "u_formal_plea_usd", "regulatory_insurance_net_payoff_advantage_usd", "u_unshielded_operator_usd", "unshielded_operator_net_payoff_advantage_usd"],
+      "properties": {
+        "brady_giglio_impeachment_discount_gamma": { "type": "number", "const": 0.85 },
+        "expert_retainer_pv_unimpeached_usd": { "type": "number", "const": 2500000.0 },
+        "expert_retainer_pv_impeached_usd": { "type": "number", "const": 375000.0 },
+        "section_1960_expected_sanction_loss_usd": { "type": "number", "const": 5000000.0 },
+        "u_pivot_no_plea_usd": { "type": "number", "const": 2500000.0 },
+        "u_formal_plea_usd": { "type": "number", "const": -4625000.0 },
+        "regulatory_insurance_net_payoff_advantage_usd": { "type": "number", "const": 7125000.0 },
+        "u_unshielded_operator_usd": { "type": "number", "const": -5000000.0 },
+        "unshielded_operator_net_payoff_advantage_usd": { "type": "number", "const": 7500000.0 }
+      },
+      "additionalProperties": false
+    },
+    "dual_hat_constructive_fiduciary_conflict_index": {
+      "type": "object",
+      "description": "EQ3_DUAL_HAT_CONSTRUCTIVE_FIDUCIARY_CONFLICT_INDEX: I_conflict = Custody_501c3 (1.0) * Revenue_Forensic (1.0) * (1.0 - delta_Disclosure (0.0)) = 1.0 saturation under zero disclosure delta.",
+      "required": ["custody_501c3_flag", "revenue_forensic_flag", "delta_disclosure", "i_conflict_index"],
+      "properties": {
+        "custody_501c3_flag": { "type": "number", "const": 1.0 },
+        "revenue_forensic_flag": { "type": "number", "const": 1.0 },
+        "delta_disclosure": { "type": "number", "const": 0.0 },
+        "i_conflict_index": { "type": "number", "const": 1.0 }
+      },
+      "additionalProperties": false
+    },
+    "induced_demand_boutique_capture_asymmetry": {
+      "type": "object",
+      "description": "EQ5_INDUCED_DEMAND_BOUTIQUE_CAPTURE_ASYMMETRY: top-of-funnel 501(c)(3) onboarding subsidization induces $100,000,000.00 in marginal illicit volume while boutique forensics (p_capture = 0.05) captures $5,000,000.00 and leaves $95,000,000.00 (95.0%) uncaptured.",
+      "required": ["delta_v_induced_usd", "p_boutique_capture", "captured_forensic_leads_usd", "uncaptured_net_illicit_externality_usd", "uncaptured_escape_share_pct"],
+      "properties": {
+        "delta_v_induced_usd": { "type": "number", "const": 100000000.0 },
+        "p_boutique_capture": { "type": "number", "const": 0.05 },
+        "captured_forensic_leads_usd": { "type": "number", "const": 5000000.0 },
+        "uncaptured_net_illicit_externality_usd": { "type": "number", "const": 95000000.0 },
+        "uncaptured_escape_share_pct": { "type": "number", "const": 95.0 }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,243 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:fiduciary-cutout-mortmain-interdiction-v1.0.json",
+  "title": "Fiduciary Cutout Mortmain Bounty Interdiction Schema",
+  "description": "Formal JSON Schema for SPEC-FIDUCIARY-CUTOUT-MORTMAIN-BOUNTY-INTERDICTION-v1.0 modeling the August 8, 2019 mortmain silence escrow (The 1953 Trust), the $107M/$35M/$72M/$75M fiduciary solvency arbitrage, the 18 U.S.C. 1595(d) x NMSA 30-42-6(C)-(D) parens patriae interdiction and treble clawback, the co-executor asymmetric prisoner's dilemma, and the five Shell_2 upward proffer nodes. All dollar magnitudes in USD millions unless noted.",
+  "type": "object",
+  "required": [
+    "specification_id",
+    "version",
+    "license",
+    "mortmain_silence_escrow",
+    "solvency_arbitrage",
+    "parens_patriae_interdiction",
+    "co_executor_prisoners_dilemma",
+    "shell2_upward_proffer_nodes",
+    "verification_vectors"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "specification_id": {
+      "type": "string",
+      "const": "SPEC-FIDUCIARY-CUTOUT-MORTMAIN-BOUNTY-INTERDICTION-v1.0"
+    },
+    "version": { "type": "string", "const": "1.0" },
+    "license": { "type": "string", "const": "Unlicense" },
+    "mortmain_silence_escrow": {
+      "type": "object",
+      "description": "Self-administering testamentary hostage-and-bounty mechanism executed 48 hours pre-death to lock fiduciary gatekeepers f^* = {c_Legal, c_Accounting} into post-mortem omerta.",
+      "required": ["trust_name", "established", "restated", "hours_pre_death", "case", "triple_hat_capture", "successor_executor", "fiduciary_cutouts"],
+      "additionalProperties": false,
+      "properties": {
+        "trust_name": { "type": "string", "const": "The 1953 Trust" },
+        "established": { "type": "string", "const": "2019-01-18" },
+        "restated": { "type": "string", "const": "2019-08-08" },
+        "hours_pre_death": { "type": "integer", "const": 48 },
+        "case": { "type": "string", "const": "State of New Mexico ex rel. Torrez v. Indyke, Kahn, Estate of Epstein, and The 1953 Trust, No. 1:26-cv-03543 (D.N.M. filed 2026-10-21)" },
+        "triple_hat_capture": {
+          "type": "object",
+          "required": ["hat1", "hat2", "hat3_bequests_usd_m"],
+          "additionalProperties": false,
+          "properties": {
+            "hat1": { "type": "string", "const": "Co-Executors of Estate (control legal defense and settlement checks)" },
+            "hat2": { "type": "string", "const": "Co-Trustees of The 1953 Trust (control corpus concealment and timing)" },
+            "hat3_bequests_usd_m": {
+              "type": "object",
+              "properties": {
+                "indyke": { "type": "number", "const": 50.0 },
+                "kahn": { "type": "number", "const": 25.0 },
+                "total": { "type": "number", "const": 75.0 }
+              }
+            }
+          }
+        },
+        "successor_executor": { "type": "string", "const": "Boris Nikolic (BMGF / bgC3 / Biomatics Capital)" },
+        "fiduciary_cutouts": {
+          "type": "object",
+          "required": ["c_legal", "c_accounting"],
+          "additionalProperties": false,
+          "properties": {
+            "c_legal": { "type": "string", "const": "Darren K. Indyke" },
+            "c_accounting": { "type": "string", "const": "Richard D. Kahn (HBRK Associates)" }
+          }
+        }
+      }
+    },
+    "solvency_arbitrage": {
+      "type": "object",
+      "description": "Closed-form $107M - $35M = $72M arbitrage sizing the Feb. 2026 SDNY class release to preserve 96.0% vesting of the $75M mortmain bequest (+$98.0M joint pre-interdiction retention including $26M 2011-2019 enterprise fees).",
+      "required": ["v_estate", "s_sdny_class", "v_residual", "b_total", "vesting_ratio", "pro_rata_net", "w_total", "fee_window", "usvi_sovereign_settlement", "bequest_share_of_estate", "u_silence_pre", "retention_individual", "arbitrage_gap"],
+      "additionalProperties": false,
+      "properties": {
+        "v_estate": { "type": "number", "const": 107.0 },
+        "s_sdny_class": { "type": "number", "const": 35.0 },
+        "v_residual": { "type": "number", "const": 72.0 },
+        "b_total": { "type": "number", "const": 75.0 },
+        "vesting_ratio": { "type": "number", "const": 0.96 },
+        "pro_rata_net": {
+          "type": "object",
+          "properties": {
+            "indyke": { "type": "number", "const": 48.0 },
+            "kahn": { "type": "number", "const": 24.0 }
+          }
+        },
+        "w_total": { "type": "number", "const": 26.0 },
+        "fee_window": { "type": "string", "const": "2011-2019" },
+        "usvi_sovereign_settlement": { "type": "number", "const": 105.0 },
+        "bequest_share_of_estate": { "type": "number", "const": 0.7009 },
+        "u_silence_pre": { "type": "number", "const": 98.0 },
+        "retention_individual": {
+          "type": "object",
+          "properties": {
+            "indyke": { "type": "number", "const": 64.0 },
+            "kahn": { "type": "number", "const": 34.0 }
+          }
+        },
+        "arbitrage_gap": { "type": "number", "const": 0.04 }
+      }
+    },
+    "parens_patriae_interdiction": {
+      "type": "object",
+      "description": "Dual-statute pincer: 18 U.S.C. 1595(d) x 1591(a)(2) federal parens patriae venture liability fused with NMSA 1978 30-42-6(C)-(D) pre-determination freeze and mandatory treble disgorgement; private class releases cannot bind the sovereign.",
+      "required": ["federal_statute", "venture_liability", "state_racketeering", "freeze_stage", "remedy_divestiture", "remedy_treble", "treble_multiplier", "treble_floor", "b_frozen", "u_silence_post", "delta_u", "post_floors", "uvta_badges", "sovereign_release_immunity", "perjury_1001", "perjury_1621"],
+      "additionalProperties": false,
+      "properties": {
+        "federal_statute": { "type": "string", "const": "18 U.S.C. § 1595(d)" },
+        "venture_liability": { "type": "string", "const": "18 U.S.C. § 1591(a)(2)" },
+        "state_racketeering": { "type": "string", "const": "NMSA 1978 § 30-42-6(C)-(D)" },
+        "freeze_stage": { "type": "string", "const": "NMSA § 30-42-6(C) pre-liability-determination status-quo restraint" },
+        "remedy_divestiture": { "type": "string", "const": "NMSA § 30-42-6(D)(1) enterprise divestiture" },
+        "remedy_treble": { "type": "string", "const": "NMSA § 30-42-6(D)(4) three times the damages proved" },
+        "treble_multiplier": { "type": "number", "const": 3.0 },
+        "treble_floor": { "type": "number", "const": 78.0 },
+        "b_frozen": { "type": "number", "const": 0.0 },
+        "u_silence_post": { "type": "number", "const": -52.0 },
+        "delta_u": { "type": "number", "const": -150.0 },
+        "post_floors": {
+          "type": "object",
+          "properties": {
+            "indyke": { "type": "number", "const": -32.0 },
+            "kahn": { "type": "number", "const": -20.0 }
+          }
+        },
+        "uvta_badges": { "type": "string", "const": "UVTA § 4(b) insider pour-over badges of fraud (48-hour pre-death restatement)" },
+        "sovereign_release_immunity": { "type": "boolean", "const": true },
+        "perjury_1001": { "type": "string", "const": "18 U.S.C. § 1001 (5 years per count)" },
+        "perjury_1621": { "type": "string", "const": "18 U.S.C. § 1621 (5 years per count)" }
+      }
+    },
+    "co_executor_prisoners_dilemma": {
+      "type": "object",
+      "description": "Asymmetric lawyer/accountant dilemma: no federal accountant-client privilege (Arthur Young, 465 U.S. 805), crime-fraud privilege evaporation, zero downward proffer currency, and upward Shell_2 ledger dominance for p_Indict > 0.18.",
+      "required": ["accountant_privilege", "precedent", "downward_proffer_available", "maxwell_sentence_years", "treble_regime_multipliers", "payoff_matrix_usd_m", "statutory_exposure_years", "prison_loss_multiplier_lambda", "cooperation_gain", "p_indict_threshold", "deposition_kahn", "deposition_indyke", "sdny_criminal_probe"],
+      "additionalProperties": false,
+      "properties": {
+        "accountant_privilege": { "type": "boolean", "const": false },
+        "precedent": { "type": "string", "const": "United States v. Arthur Young & Co., 465 U.S. 805 (1984)" },
+        "downward_proffer_available": { "type": "boolean", "const": false },
+        "maxwell_sentence_years": { "type": "integer", "const": 20 },
+        "treble_regime_multipliers": {
+          "type": "object",
+          "required": ["mutual_silence", "unilateral_proffer", "sucker", "mutual_proffer"],
+          "additionalProperties": false,
+          "properties": {
+            "mutual_silence": { "type": "number", "const": 3.0 },
+            "unilateral_proffer": { "type": "number", "const": 2.0 },
+            "sucker": { "type": "number", "const": 4.0 },
+            "mutual_proffer": { "type": "number", "const": 2.5 }
+          }
+        },
+        "payoff_matrix_usd_m": {
+          "type": "object",
+          "description": "Financial floors (Indyke, Kahn): silence = W_i - 3W_i; unilateral proffer = W_i - 2W_i; sucker = W_i - 4W_i; mutual proffer = W_i - 2.5W_i.",
+          "required": ["mutual_silence", "indyke_proffer_kahn_silent", "kahn_proffer_indyke_silent", "mutual_proffer"],
+          "additionalProperties": false,
+          "properties": {
+            "mutual_silence": { "type": "array", "const": [-32.0, -20.0] },
+            "indyke_proffer_kahn_silent": { "type": "array", "const": [-16.0, -30.0] },
+            "kahn_proffer_indyke_silent": { "type": "array", "const": [-48.0, -10.0] },
+            "mutual_proffer": { "type": "array", "const": [-24.0, -15.0] }
+          }
+        },
+        "statutory_exposure_years": { "type": "integer", "const": 25 },
+        "prison_loss_multiplier_lambda": { "type": "number", "const": 2.777778 },
+        "cooperation_gain": {
+          "type": "object",
+          "properties": {
+            "indyke": { "type": "number", "const": 8.0 },
+            "kahn": { "type": "number", "const": 5.0 }
+          }
+        },
+        "p_indict_threshold": { "type": "number", "const": 0.18 },
+        "deposition_kahn": { "type": "string", "const": "2026-03-11 Richard Kahn sworn House Oversight testimony" },
+        "deposition_indyke": { "type": "string", "const": "2026-03-19 Darren Indyke sworn House Oversight testimony" },
+        "sdny_criminal_probe": { "type": "string", "const": "2026-09 SDNY federal criminal investigation (WSJ)" }
+      }
+    },
+    "shell2_upward_proffer_nodes": {
+      "type": "object",
+      "description": "Five concrete Shell_2 (Gates / BMGF / bgC3 / Nikolic) exposure vectors tendered upward via the unprivileged Indyke/Kahn ledgers.",
+      "required": ["node_1", "node_2", "node_3", "node_4", "node_5"],
+      "additionalProperties": false,
+      "properties": {
+        "node_1": {
+          "type": "object",
+          "properties": {
+            "target": { "type": "string", "const": "Southern Trust Company 'tax minimization' general ledgers (26 U.S.C. 934 USVI EDC shell; Ch. 15 55:13 statement)" },
+            "window": { "type": "string", "const": "2011-2015" },
+            "fiduciary_link": { "type": "string", "const": "Kahn (HBRK) maintained ledgers and EDC returns; Indyke corporate officer and legal signatory" }
+          }
+        },
+        "node_2": {
+          "type": "object",
+          "properties": {
+            "target": { "type": "string", "const": "JPMorgan 'Project Molecule' $100M+ donor-advised fund working files (USVI v. JPMorgan, 1:22-cv-10904-JSR)" },
+            "window": { "type": "string", "const": "2011-2013" },
+            "fiduciary_link": { "type": "string", "const": "Indyke and Kahn administered internal working files, fee projections, and draft term sheets exchanged with bgC3 / BMGF personnel" }
+          }
+        },
+        "node_3": {
+          "type": "object",
+          "properties": {
+            "target": { "type": "string", "const": "August 8, 2019 successor-executor bridge naming Boris Nikolic backup executor" },
+            "window": { "type": "string", "const": "2019-08-08" },
+            "fiduciary_link": { "type": "string", "const": "Indyke non-privileged drafting and execution files for The 1953 Trust instrument, now a named defendant in D.N.M. 1:26-cv-03543" }
+          }
+        },
+        "node_4": {
+          "type": "object",
+          "properties": {
+            "target": { "type": "string", "const": "Mila Antonova tuition wire and 2017 Gates reimbursement demand ledger" },
+            "window": { "type": "string", "const": "2013-2017" },
+            "fiduciary_link": { "type": "string", "const": "HBRK Associates administered outgoing wire disbursements and classifications during 2013-2017; Indyke co-signed operating accounts" }
+          }
+        },
+        "node_5": {
+          "type": "object",
+          "properties": {
+            "target": { "type": "string", "const": "Zorro Ranch (Santa Fe County, NM) jurisdictional boundary evaluation via aviation logs, entity books, and grant ledgers" },
+            "window": { "type": "string", "const": "2011-2019" },
+            "fiduciary_link": { "type": "string", "const": "Indyke Secretary and bank signatory of Zorro Development Corp.; Kahn Treasurer and Director of Cypress, Inc." }
+          }
+        }
+      }
+    },
+    "verification_vectors": {
+      "type": "object",
+      "description": "Constants asserted by proofs/verify_fiduciary_cutout_mortmain_interdiction.py (exit code 0).",
+      "required": ["vector_1_residual", "vector_1_vesting_ratio", "vector_1_joint_retention", "vector_2_treble_floor", "vector_2_net_position", "vector_2_swing", "vector_3_p_indict_threshold", "vector_3_lambda", "vector_3_dominant_strategy"],
+      "additionalProperties": false,
+      "properties": {
+        "vector_1_residual": { "type": "number", "const": 72.0 },
+        "vector_1_vesting_ratio": { "type": "number", "const": 0.96 },
+        "vector_1_joint_retention": { "type": "number", "const": 98.0 },
+        "vector_2_treble_floor": { "type": "number", "const": 78.0 },
+        "vector_2_net_position": { "type": "number", "const": -52.0 },
+        "vector_2_swing": { "type": "number", "const": -150.0 },
+        "vector_3_p_indict_threshold": { "type": "number", "const": 0.18 },
+        "vector_3_lambda": { "type": "number", "const": 2.777778 },
+        "vector_3_dominant_strategy": { "type": "string", "const": "unilateral upward proffer of Shell_2 ledgers" }
+      }
+    }
+  }
+}

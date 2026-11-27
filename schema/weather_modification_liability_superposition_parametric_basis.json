@@ -1,0 +1,230 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:weather_modification_liability_superposition_parametric_basis.json",
+  "title": "The Weather Modification Efficacy-Culpability Superposition — Notice-Only Seeding Contracts, Slutsky Tort Causation Bars, and Parametric Weather Derivatives — Structural Contract (v1.0)",
+  "description": "Deterministic structural contract for the weather modification efficacy-culpability superposition. Encodes EQ_01 statistical masking inside natural interannual variance (Delta_mu = 12.0% inside sigma_nat = 24.0%, SNR_1 = 0.50, N_min = 15.3664 instrumented seasons to clear a two-sided z = 1.96 causation bar), EQ_02 the efficacy-culpability superposition spread (P_contract = 2400000 plus V_param = 4500000 gross inflow against suppressed p_tort = 0.04 on D_ext = 35000000, E[L_tort] = 1400000, S_super = +5500000, with the 15 U.S.C. Section 330d notice-only fine capped at 10000), and EQ_03 the 2026 attribution-science phase transition (p_tort* = 0.51 preponderance bar drives E[L_tort]' = 17850000 and inverts operator net payoff to -10950000, collapsing the notice-only shield).",
+  "type": "object",
+  "required": [
+    "spec_version",
+    "theorem_1_statistical_masking_natural_variance",
+    "theorem_2_efficacy_culpability_superposition_spread",
+    "theorem_3_attribution_phase_transition_collapse",
+    "empirical_anchors",
+    "verification"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "spec_version": {
+      "type": "string",
+      "const": "SPEC-WEATHER-MODIFICATION-LIABILITY-SUPERPOSITION-AND-PARAMETRIC-BASIS-v1.0"
+    },
+    "theorem_1_statistical_masking_natural_variance": {
+      "type": "object",
+      "description": "EQ_01: a claimed seeding precipitation shift buried inside natural interannual variance yields a sub-unity single-season signal-to-noise ratio, so a downstream tort plaintiff needs many consecutive instrumented seasons to isolate anthropogenic causation at the 95% confidence bar.",
+      "required": [
+        "delta_mu_pct",
+        "sigma_nat_pct",
+        "snr_single_season",
+        "z_threshold_95pct",
+        "seasons_required_95pct",
+        "masking_holds"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "delta_mu_pct": {
+          "type": "number",
+          "description": "Claimed seeding precipitation yield shift Delta_mu (percent).",
+          "const": 12.0
+        },
+        "sigma_nat_pct": {
+          "type": "number",
+          "description": "Natural interannual precipitation standard deviation sigma_nat (percent).",
+          "const": 24.0
+        },
+        "snr_single_season": {
+          "type": "number",
+          "description": "Single-season signal-to-noise ratio SNR_1 = Delta_mu / sigma_nat.",
+          "const": 0.5
+        },
+        "z_threshold_95pct": {
+          "type": "number",
+          "description": "Two-sided z statistic for the 95% confidence evidentiary threshold.",
+          "const": 1.96
+        },
+        "seasons_required_95pct": {
+          "type": "number",
+          "description": "N_min = (z / SNR_1)^2 consecutive instrumented seasons to isolate anthropogenic causation.",
+          "minimum": 15.36,
+          "maximum": 15.37
+        },
+        "masking_holds": {
+          "type": "boolean",
+          "description": "True when SNR_1 < 1 and N_min > 1, so a single season cannot clear the causation bar.",
+          "const": true
+        }
+      }
+    },
+    "theorem_2_efficacy_culpability_superposition_spread": {
+      "type": "object",
+      "description": "EQ_02: the operator sells commercial efficacy (municipal seeding fee plus parametric derivative payout) while invoking Slutsky and the sub-unity SNR to suppress tort recovery probability, capturing a positive net arbitrage spread against downstream flood/drought damages under a notice-only statutory regime.",
+      "required": [
+        "p_contract_usd",
+        "cme_degree_day_multiplier_usd",
+        "parametric_index_points",
+        "v_param_usd",
+        "gross_inflow_usd",
+        "p_tort",
+        "d_ext_usd",
+        "e_l_tort_usd",
+        "statutory_nonreporting_max_fine_usd",
+        "s_super_usd",
+        "spread_positive"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "p_contract_usd": {
+          "type": "number",
+          "description": "Municipal cloud-seeding contract revenue P_contract.",
+          "const": 2400000.0
+        },
+        "cme_degree_day_multiplier_usd": {
+          "type": "number",
+          "description": "CME Group heating/cooling degree-day index point multiplier (USD per HDD/CDD point).",
+          "const": 20.0
+        },
+        "parametric_index_points": {
+          "type": "number",
+          "description": "Parametric derivative notional in HDD/CDD index points: V_param / multiplier.",
+          "const": 225000.0
+        },
+        "v_param_usd": {
+          "type": "number",
+          "description": "Parametric weather derivative hedge payout V_param.",
+          "const": 4500000.0
+        },
+        "gross_inflow_usd": {
+          "type": "number",
+          "description": "Gross commercial inflow P_contract + V_param.",
+          "const": 6900000.0
+        },
+        "p_tort": {
+          "type": "number",
+          "description": "Suppressed downstream tort recovery probability under Slutsky and SNR_1 = 0.50.",
+          "const": 0.04
+        },
+        "d_ext_usd": {
+          "type": "number",
+          "description": "Downstream flood/drought external damage magnitude D_ext.",
+          "const": 35000000.0
+        },
+        "e_l_tort_usd": {
+          "type": "number",
+          "description": "Expected tort liability E[L_tort] = p_tort * D_ext.",
+          "const": 1400000.0
+        },
+        "statutory_nonreporting_max_fine_usd": {
+          "type": "number",
+          "description": "Maximum statutory fine for non-reporting under 15 U.S.C. Section 330d.",
+          "const": 10000.0
+        },
+        "s_super_usd": {
+          "type": "number",
+          "description": "Net superposition spread S_super = (P_contract + V_param) - E[L_tort].",
+          "const": 5500000.0
+        },
+        "spread_positive": {
+          "type": "boolean",
+          "description": "True when S_super > 0, so the operator arbitrages a positive spread.",
+          "const": true
+        }
+      }
+    },
+    "theorem_3_attribution_phase_transition_collapse": {
+      "type": "object",
+      "description": "EQ_03: when isotopic tracer telemetry and ensemble attribution models push proximate-cause probability across the preponderance bar, expected liability jumps and the operator net payoff inverts negative, collapsing the notice-only statutory shield.",
+      "required": [
+        "p_tort_star",
+        "d_ext_usd",
+        "e_l_tort_post_usd",
+        "gross_inflow_usd",
+        "net_pnl_post_usd",
+        "superposition_collapses",
+        "notice_only_shield_collapses"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "p_tort_star": {
+          "type": "number",
+          "description": "Preponderance-of-evidence proximate-cause threshold p_tort*.",
+          "const": 0.51
+        },
+        "d_ext_usd": {
+          "type": "number",
+          "description": "Downstream flood/drought external damage magnitude D_ext.",
+          "const": 35000000.0
+        },
+        "e_l_tort_post_usd": {
+          "type": "number",
+          "description": "Post-attribution expected liability E[L_tort]' = p_tort* * D_ext.",
+          "const": 17850000.0
+        },
+        "gross_inflow_usd": {
+          "type": "number",
+          "description": "Gross commercial inflow P_contract + V_param carried from EQ_02.",
+          "const": 6900000.0
+        },
+        "net_pnl_post_usd": {
+          "type": "number",
+          "description": "Post-attribution operator net payoff (P_contract + V_param) - E[L_tort]'.",
+          "const": -10950000.0
+        },
+        "superposition_collapses": {
+          "type": "boolean",
+          "description": "True when the post-attribution net payoff inverts strictly negative.",
+          "const": true
+        },
+        "notice_only_shield_collapses": {
+          "type": "boolean",
+          "description": "True when p_tort* > 0.5 and the superposition collapses, piercing the 15 U.S.C. Section 330 notice-only regime.",
+          "const": true
+        }
+      }
+    },
+    "empirical_anchors": {
+      "type": "array",
+      "minItems": 6,
+      "items": {
+        "type": "object",
+        "required": ["source", "claim"],
+        "additionalProperties": false,
+        "properties": {
+          "source": { "type": "string" },
+          "claim": { "type": "string" }
+        }
+      }
+    },
+    "verification": {
+      "type": "object",
+      "required": ["proof", "exit_code", "equations"],
+      "additionalProperties": false,
+      "properties": {
+        "proof": {
+          "type": "string",
+          "const": "proofs/verify_weather_modification_liability_superposition_parametric_basis.py"
+        },
+        "exit_code": { "type": "integer", "const": 0 },
+        "equations": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": { "type": "string" },
+          "const": [
+            "statistical_masking_natural_variance",
+            "efficacy_culpability_superposition_spread",
+            "attribution_phase_transition_collapse"
+          ]
+        }
+      }
+    }
+  }
+}

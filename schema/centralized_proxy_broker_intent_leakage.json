@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:centralized_proxy_broker_intent_leakage.json",
+  "$comment": "PLAIN-ENGLISH LEGAL NOTICE: This file is an information-theoretic and cybersecurity validation schema (JSON Schema) auditing intent leakage and liability externalities in centralized proxy brokerages under 18 U.S.C. § 1030 (CFAA) compliance.",
+  "title": "Centralized Proxy Broker Intent-Leakage & Sovereign Zero-Broker Remediation Schema",
+  "description": "Validates zero demand-side query intent leakage to third-party proxy super-routers, zero supply-side consumer exit-node SDK installation, and CFAA-compliant zero-broker stigmergic ingestion.",
+  "type": "object",
+  "required": [
+    "spec_version",
+    "jurisdiction_context",
+    "cfaa_compliance_attestation",
+    "central_broker_intent_leakage_audit",
+    "supply_side_subscriber_ip_protection",
+    "sovereign_zero_broker_ingestion_metrics"
+  ],
+  "properties": {
+    "spec_version": {
+      "type": "string",
+      "const": "SPEC-2026-CENTRALIZED-PROXY-BROKER-INTENT-LEAKAGE-v1.0"
+    },
+    "jurisdiction_context": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}$"
+    },
+    "cfaa_compliance_attestation": {
+      "type": "boolean",
+      "const": true
+    },
+    "central_broker_intent_leakage_audit": {
+      "type": "object",
+      "required": [
+        "unlocker_mitm_tls_termination_leakage_ratio",
+        "http_connect_sni_metadata_logged_by_broker",
+        "central_proxy_brokers_used_by_sovereign_node",
+        "proprietary_query_intent_leaked_bits"
+      ],
+      "properties": {
+        "unlocker_mitm_tls_termination_leakage_ratio": { "type": "number", "const": 1.0 },
+        "http_connect_sni_metadata_logged_by_broker": { "type": "boolean", "const": true },
+        "central_proxy_brokers_used_by_sovereign_node": { "type": "integer", "const": 0 },
+        "proprietary_query_intent_leaked_bits": { "type": "number", "const": 0.0 }
+      },
+      "additionalProperties": false
+    },
+    "supply_side_subscriber_ip_protection": {
+      "type": "object",
+      "required": [
+        "third_party_bandwidth_sharing_sdks_installed",
+        "unsolicited_reverse_proxy_tunnels_active",
+        "third_party_exit_traffic_relayed_bytes"
+      ],
+      "properties": {
+        "third_party_bandwidth_sharing_sdks_installed": { "type": "integer", "const": 0 },
+        "unsolicited_reverse_proxy_tunnels_active": { "type": "integer", "const": 0 },
+        "third_party_exit_traffic_relayed_bytes": { "type": "integer", "const": 0 }
+      },
+      "additionalProperties": false
+    },
+    "sovereign_zero_broker_ingestion_metrics": {
+      "type": "object",
+      "required": [
+        "kademlia_xor_rate_throttled_direct_fetch",
+        "robots_and_cfaa_gate_respected",
+        "sha256_provenance_verified"
+      ],
+      "properties": {
+        "kademlia_xor_rate_throttled_direct_fetch": { "type": "boolean", "const": true },
+        "robots_and_cfaa_gate_respected": { "type": "boolean", "const": true },
+        "sha256_provenance_verified": { "type": "boolean", "const": true }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

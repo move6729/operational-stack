@@ -1,0 +1,285 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:distressed_infrastructure_absorption_and_btm_power_consolidation.json",
+  "title": "Distressed Infrastructure Absorption and BTM Power Consolidation Bundle",
+  "description": "Schema for the distressed merchant neocloud / behind-the-meter (BTM) power consolidation bundle: double marginalization and TPU economics, GAAP-vs-economic GPU depreciation distortion vs power shell permanence, distressed absorption and fortress liquidity coverage, the fulcrum debt stack waterfall, hard-date catalyst calendar, and the 6-category security-master counterparty cross-index.",
+  "type": "object",
+  "required": [
+    "jurisdiction_context",
+    "statutory_compliance",
+    "double_marginalization_and_tpu_economics",
+    "gpu_depreciation_distortion_vs_power_shell_permanence",
+    "distressed_absorption_and_fortress_liquidity",
+    "debt_stack_and_fulcrum_waterfall",
+    "catalyst_calendar",
+    "entity_and_instrument_ids"
+  ],
+  "properties": {
+    "jurisdiction_context": {
+      "type": "string",
+      "enum": ["US", "EU", "GB"],
+      "description": "ISO 3166-1 jurisdiction context for localized statutory module processing."
+    },
+    "statutory_compliance": {
+      "type": "object",
+      "required": [
+        "cfaa_18_usc_1030_compliant",
+        "fpa_16_usc_824d_824e_compliant",
+        "bankruptcy_11_usc_363_365_compliant",
+        "milkovich_497_us_1_disclosed_facts"
+      ],
+      "properties": {
+        "cfaa_18_usc_1030_compliant": {
+          "type": "boolean",
+          "const": true,
+          "description": "Zero unauthorized access; chain-of-custody attestation gate."
+        },
+        "fpa_16_usc_824d_824e_compliant": {
+          "type": "boolean",
+          "const": true,
+          "description": "Federal Power Act rate and wheeling tariff conformance."
+        },
+        "bankruptcy_11_usc_363_365_compliant": {
+          "type": "boolean",
+          "const": true,
+          "description": "Sale free and clear under 363(f); assumption/assignment under 365."
+        },
+        "milkovich_497_us_1_disclosed_facts": {
+          "type": "boolean",
+          "const": true,
+          "description": "Every inferential claim paired with pin-cited primary records and verbatim on-the-record baseline denials."
+        }
+      }
+    },
+    "double_marginalization_and_tpu_economics": {
+      "type": "object",
+      "required": [
+        "atc_tpu_per_watt",
+        "atc_neocloud_per_watt",
+        "srmc_electricity_per_watt",
+        "atc_advantage_multiple",
+        "unit_cost_reduction_pct",
+        "spv_principal_b",
+        "spv_yield",
+        "neocloud_yield",
+        "annual_financing_savings_m",
+        "six_year_financing_savings_b"
+      ],
+      "properties": {
+        "atc_tpu_per_watt": { "type": "number", "const": 0.68 },
+        "atc_neocloud_per_watt": { "type": "number", "const": 2.18 },
+        "srmc_electricity_per_watt": { "type": "number", "const": 0.18 },
+        "atc_advantage_multiple": { "type": "number", "const": 3.205882 },
+        "unit_cost_reduction_pct": { "type": "number", "const": 68.8073 },
+        "spv_principal_b": { "type": "number", "const": 35.0 },
+        "spv_yield": { "type": "number", "const": 0.071 },
+        "neocloud_yield": { "type": "number", "const": 0.093 },
+        "annual_financing_savings_m": { "type": "number", "const": 770.0 },
+        "six_year_financing_savings_b": { "type": "number", "const": 4.62 }
+      }
+    },
+    "gpu_depreciation_distortion_vs_power_shell_permanence": {
+      "type": "object",
+      "required": [
+        "active_gpu_ppe_m",
+        "cip_ppe_m",
+        "total_tech_cip_m",
+        "tau_gaap_years",
+        "tau_econ_years",
+        "tau_power_shell_years",
+        "d_gaap_m_per_yr",
+        "d_econ_m_per_yr",
+        "unbooked_obsolescence_deficit_m_per_yr",
+        "shell_to_silicon_lifespan_ratio"
+      ],
+      "properties": {
+        "active_gpu_ppe_m": { "type": "number", "const": 33823.0 },
+        "cip_ppe_m": { "type": "number", "const": 11918.0 },
+        "total_tech_cip_m": { "type": "number", "const": 45741.0 },
+        "tau_gaap_years": { "type": "number", "const": 6.0 },
+        "tau_econ_years": { "type": "number", "const": 2.0 },
+        "tau_power_shell_years": { "type": "number", "const": 40.0 },
+        "d_gaap_m_per_yr": { "type": "number", "const": 5637.166667 },
+        "d_econ_m_per_yr": { "type": "number", "const": 16911.5 },
+        "unbooked_obsolescence_deficit_m_per_yr": { "type": "number", "const": 11274.333333 },
+        "shell_to_silicon_lifespan_ratio": { "type": "number", "const": 20.0 }
+      }
+    },
+    "distressed_absorption_and_fortress_liquidity": {
+      "type": "object",
+      "required": [
+        "global_crossing_capex_b",
+        "global_crossing_recovery_b",
+        "dark_fiber_cents_on_dollar",
+        "wulf_hawesville_mw",
+        "wulf_lake_mariner_mw",
+        "cifr_colorado_city_mw",
+        "total_step_in_shell_mw",
+        "queue_bypass_months",
+        "novation_window_days",
+        "equip_trigger_mw",
+        "alphabet_intersect_acq_b",
+        "intersect_btm_pipeline_b",
+        "complex_gross_capex_m",
+        "gpu_capex_m",
+        "btm_shell_capex_m",
+        "gpu_salvage_m",
+        "btm_shell_clearing_m",
+        "btm_shell_clearing_pct_of_replacement",
+        "ev_stressed_m",
+        "ev_stressed_blended_cents",
+        "googl_net_cash_m",
+        "brk_cash_tbills_m",
+        "combined_fortress_cash_m",
+        "fortress_liquidity_coverage_multiple",
+        "pjm_surge_multiple",
+        "averch_johnson_household_surcharge_usd_per_yr",
+        "averch_johnson_aggregate_transfer_m_per_yr"
+      ],
+      "properties": {
+        "global_crossing_capex_b": { "type": "number", "const": 15.0 },
+        "global_crossing_recovery_b": { "type": "number", "const": 2.25 },
+        "dark_fiber_cents_on_dollar": { "type": "number", "const": 15.0 },
+        "wulf_hawesville_mw": { "type": "number", "const": 401.0 },
+        "wulf_lake_mariner_mw": { "type": "number", "const": 360.0 },
+        "cifr_colorado_city_mw": { "type": "number", "const": 168.0 },
+        "total_step_in_shell_mw": { "type": "number", "const": 929.0 },
+        "queue_bypass_months": { "type": "number", "const": 48.0 },
+        "novation_window_days": { "type": "number", "const": 30.0 },
+        "equip_trigger_mw": { "type": "number", "const": 200.5 },
+        "alphabet_intersect_acq_b": { "type": "number", "const": 4.75 },
+        "intersect_btm_pipeline_b": { "type": "number", "const": 20.0 },
+        "complex_gross_capex_m": { "type": "number", "const": 50000.0 },
+        "gpu_capex_m": { "type": "number", "const": 32000.0 },
+        "btm_shell_capex_m": { "type": "number", "const": 18000.0 },
+        "gpu_salvage_m": { "type": "number", "const": 4800.0 },
+        "btm_shell_clearing_m": { "type": "number", "const": 12700.0 },
+        "btm_shell_clearing_pct_of_replacement": { "type": "number", "const": 70.555556 },
+        "ev_stressed_m": { "type": "number", "const": 17500.0 },
+        "ev_stressed_blended_cents": { "type": "number", "const": 35.0 },
+        "googl_net_cash_m": { "type": "number", "const": 114843.0 },
+        "brk_cash_tbills_m": { "type": "number", "const": 377400.0 },
+        "combined_fortress_cash_m": { "type": "number", "const": 492243.0 },
+        "fortress_liquidity_coverage_multiple": { "type": "number", "const": 28.128171 },
+        "pjm_surge_multiple": { "type": "number", "const": 9.333333 },
+        "averch_johnson_household_surcharge_usd_per_yr": { "type": "number", "const": 312.0 },
+        "averch_johnson_aggregate_transfer_m_per_yr": { "type": "number", "const": 468.0 }
+      }
+    },
+    "debt_stack_and_fulcrum_waterfall": {
+      "type": "object",
+      "required": ["complex_gross_capex_m", "stressed_ev_m", "tranches"],
+      "properties": {
+        "complex_gross_capex_m": { "type": "number", "const": 50000.0 },
+        "stressed_ev_m": { "type": "number", "const": 17500.0 },
+        "tranches": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 4,
+          "items": {
+            "type": "object",
+            "required": ["tranche", "principal_m", "recovered_m", "cents_on_dollar", "write_down_pct"],
+            "properties": {
+              "tranche": { "type": "string", "enum": ["T1", "T2", "T3", "T4"] },
+              "principal_m": { "type": "number", "enum": [14000.0, 16000.0, 10000.0] },
+              "recovered_m": { "type": "number", "minimum": 0 },
+              "cents_on_dollar": { "type": "number", "minimum": 0, "maximum": 100 },
+              "write_down_pct": { "type": "number", "minimum": 0, "maximum": 100 }
+            }
+          }
+        }
+      }
+    },
+    "catalyst_calendar": {
+      "type": "array",
+      "description": "Hard-date catalyst and forbearance calendar (ISO 8601 dates).",
+      "items": {
+        "type": "object",
+        "required": ["date", "event_type", "description"],
+        "properties": {
+          "date": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+          "event_type": {
+            "type": "string",
+            "enum": [
+              "forbearance_expiration",
+              "grace_period_cure",
+              "court_hearing",
+              "maturity_cliff",
+              "novation_window",
+              "interconnection_milestone"
+            ]
+          },
+          "description": { "type": "string" }
+        }
+      }
+    },
+    "entity_and_instrument_ids": {
+      "type": "object",
+      "description": "6-category security-master counterparty cross-index (SEC CIK / CRD / NAIC / PCAOB / court dockets).",
+      "required": [
+        "primary_targets_and_consolidators",
+        "public_bdc_co_lenders",
+        "insurers_and_sidecars",
+        "pcaob_auditors_and_valuation_agents",
+        "foia_public_pension_lps_and_consultants",
+        "trustees_rating_agencies_and_dockets"
+      ],
+      "properties": {
+        "primary_targets_and_consolidators": {
+          "type": "array",
+          "description": "Category 1: primary targets / consolidators.",
+          "items": {
+            "$ref": "#/$defs/entity"
+          }
+        },
+        "public_bdc_co_lenders": {
+          "type": "array",
+          "description": "Category 2: public BDC co-lenders and credit funds (NPORT-P / 10-Q Schedule of Investments).",
+          "items": { "$ref": "#/$defs/entity" }
+        },
+        "insurers_and_sidecars": {
+          "type": "array",
+          "description": "Category 3: regulated insurance balance-sheet and Bermuda sidecar counterparties (NAIC / Schedule BA).",
+          "items": { "$ref": "#/$defs/entity" }
+        },
+        "pcaob_auditors_and_valuation_agents": {
+          "type": "array",
+          "description": "Category 4: PCAOB auditors, valuation agents, and fund admins.",
+          "items": { "$ref": "#/$defs/entity" }
+        },
+        "foia_public_pension_lps_and_consultants": {
+          "type": "array",
+          "description": "Category 5: FOIA-subject public pension LPs, SWFs, and gatekeeper consultants.",
+          "items": { "$ref": "#/$defs/entity" }
+        },
+        "trustees_rating_agencies_and_dockets": {
+          "type": "array",
+          "description": "Category 6: indenture trustees, admin agents, rating agencies, restructuring/litigation counsel, and court/regulatory dockets.",
+          "items": { "$ref": "#/$defs/entity" }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "entity": {
+      "type": "object",
+      "required": ["legal_name", "identifiers"],
+      "properties": {
+        "legal_name": { "type": "string" },
+        "ticker": { "type": "string" },
+        "identifiers": {
+          "type": "object",
+          "properties": {
+            "sec_cik": { "type": "string", "pattern": "^\\d{10}$" },
+            "crd": { "type": "string" },
+            "naic": { "type": "string" },
+            "pcaob_id": { "type": "string" },
+            "court_docket": { "type": "string" },
+            "regulatory_docket": { "type": "string" }
+          }
+        },
+        "role": { "type": "string" }
+      }
+    }
+  }
+}

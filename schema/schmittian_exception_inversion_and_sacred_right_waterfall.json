@@ -1,0 +1,227 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:schmittian_exception_inversion_and_sacred_right_waterfall.json",
+  "title": "Schmittian Exception Inversion and Sacred-Right Waterfall Schema",
+  "description": "JSON Draft 2020-12 schema validating contractual state-of-exception inversions (Uptier/Drop-Down LMEs), sacred-right waterfall recoveries (In re Serta Simmons Bedding, L.L.C., 125 F.4th 555; Harrington v. Purdue Pharma L.P., 603 U.S. 204), and Ashby/Landauer cybernetic bounds.",
+  "type": "object",
+  "required": [
+    "specification_id",
+    "version",
+    "jurisdiction_context",
+    "cfaa_compliance_attestation",
+    "entity_and_instrument_ids",
+    "catalyst_calendar",
+    "serta_waterfall_verification",
+    "incora_stack_verification",
+    "purdue_third_party_release_arbitrage",
+    "thermodynamic_and_ashby_invariants"
+  ],
+  "properties": {
+    "specification_id": {
+      "type": "string",
+      "const": "SPEC-SCHMITTIAN-EXCEPTION-INVERSION-AND-SACRED-RIGHT-WATERFALL-v1.0"
+    },
+    "version": {
+      "type": "string",
+      "const": "1.0"
+    },
+    "jurisdiction_context": {
+      "type": "object",
+      "required": ["iso_3166_1_alpha_2", "statutory_frameworks", "judicial_venues"],
+      "properties": {
+        "iso_3166_1_alpha_2": {
+          "type": "array",
+          "items": { "type": "string", "enum": ["US"] },
+          "minItems": 1
+        },
+        "statutory_frameworks": {
+          "type": "array",
+          "items": { "type": "string" },
+          "contains": { "const": "11 U.S.C. § 1123(b)(6)" }
+        },
+        "judicial_venues": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "additionalProperties": false
+    },
+    "cfaa_compliance_attestation": {
+      "type": "object",
+      "required": ["statute", "zero_unauthorized_access", "public_record_provenance_only"],
+      "properties": {
+        "statute": { "type": "string", "const": "18 U.S.C. § 1030" },
+        "zero_unauthorized_access": { "type": "boolean", "const": true },
+        "public_record_provenance_only": { "type": "boolean", "const": true }
+      },
+      "additionalProperties": false
+    },
+    "entity_and_instrument_ids": {
+      "type": "object",
+      "required": ["serta_simmons_bedding", "incora_wesco_aircraft", "purdue_pharma", "clarium_palantir_benchmark"],
+      "properties": {
+        "serta_simmons_bedding": {
+          "type": "object",
+          "required": ["entity_name", "sponsor", "court_dockets", "citation", "pre_lme_1l_usd", "pre_lme_2l_usd"],
+          "properties": {
+            "entity_name": { "type": "string", "const": "Serta Simmons Bedding, LLC" },
+            "sponsor": { "type": "string", "const": "Advent International" },
+            "court_dockets": { "type": "array", "items": { "type": "string" }, "minItems": 2 },
+            "citation": { "type": "string", "const": "In re Serta Simmons Bedding, L.L.C., 125 F.4th 555 (5th Cir. 2024)" },
+            "pre_lme_1l_usd": { "type": "number", "const": 1950000000.0 },
+            "pre_lme_2l_usd": { "type": "number", "const": 450000000.0 }
+          }
+        },
+        "incora_wesco_aircraft": {
+          "type": "object",
+          "required": ["entity_name", "sponsor", "court_dockets", "total_secured_stack_usd"],
+          "properties": {
+            "entity_name": { "type": "string", "const": "Wesco Aircraft Holdings, Inc. (Incora)" },
+            "sponsor": { "type": "string", "const": "Platinum Equity" },
+            "court_dockets": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+            "total_secured_stack_usd": { "type": "number", "const": 2200000000.0 }
+          }
+        },
+        "purdue_pharma": {
+          "type": "object",
+          "required": ["entity_name", "citation", "tort_claims_usd", "pre_petition_extraction_usd"],
+          "properties": {
+            "entity_name": { "type": "string", "const": "Purdue Pharma L.P." },
+            "citation": { "type": "string", "const": "Harrington v. Purdue Pharma L.P., 603 U.S. 204 (2024)" },
+            "tort_claims_usd": { "type": "number", "const": 40000000000.0 },
+            "pre_petition_extraction_usd": { "type": "number", "const": 10700000000.0 }
+          }
+        },
+        "clarium_palantir_benchmark": {
+          "type": "object",
+          "required": ["palantir_ticker", "palantir_cik", "clarium_peak_aum_usd", "clarium_trough_aum_usd"],
+          "properties": {
+            "palantir_ticker": { "type": "string", "const": "PLTR" },
+            "palantir_cik": { "type": "string", "const": "0001321655" },
+            "clarium_peak_aum_usd": { "type": "number", "const": 7800000000.0 },
+            "clarium_trough_aum_usd": { "type": "number", "const": 350000000.0 }
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "catalyst_calendar": {
+      "type": "array",
+      "minItems": 5,
+      "items": {
+        "type": "object",
+        "required": ["date", "entity", "event"],
+        "properties": {
+          "date": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" },
+          "entity": { "type": "string" },
+          "event": { "type": "string" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "serta_waterfall_verification": {
+      "type": "object",
+      "required": [
+        "distressed_ev_usd",
+        "exchange_price_cents",
+        "schmittian_regime",
+        "sacred_right_restored_regime",
+        "full_pari_passu_regime"
+      ],
+      "properties": {
+        "distressed_ev_usd": { "type": "number", "const": 900000000.0 },
+        "exchange_price_cents": { "type": "number", "const": 72.916667 },
+        "schmittian_regime": {
+          "type": "object",
+          "required": ["ptl_first_out_usd", "ptl_second_out_usd", "participating_1l_cents_on_1200m", "excluded_1l_usd"],
+          "properties": {
+            "ptl_first_out_usd": { "type": "number", "const": 200000000.0 },
+            "ptl_second_out_usd": { "type": "number", "const": 700000000.0 },
+            "participating_1l_cents_on_1200m": { "type": "number", "const": 58.333333 },
+            "excluded_1l_usd": { "type": "number", "const": 0.0 }
+          }
+        },
+        "sacred_right_restored_regime": {
+          "type": "object",
+          "required": ["ptl_first_out_usd", "participating_1l_usd", "excluded_1l_usd", "all_1l_cents_on_1950m"],
+          "properties": {
+            "ptl_first_out_usd": { "type": "number", "const": 200000000.0 },
+            "participating_1l_usd": { "type": "number", "const": 430769230.77 },
+            "excluded_1l_usd": { "type": "number", "const": 269230769.23 },
+            "all_1l_cents_on_1950m": { "type": "number", "const": 35.897436 }
+          }
+        },
+        "full_pari_passu_regime": {
+          "type": "object",
+          "required": ["participating_1l_usd", "excluded_1l_usd", "all_1l_cents_on_1950m"],
+          "properties": {
+            "participating_1l_usd": { "type": "number", "const": 553846153.85 },
+            "excluded_1l_usd": { "type": "number", "const": 346153846.15 },
+            "all_1l_cents_on_1950m": { "type": "number", "const": 46.153846 }
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "incora_stack_verification": {
+      "type": "object",
+      "required": ["new_money_1_25l_usd", "exchanged_1_25l_usd", "excluded_notes_usd", "total_stack_usd"],
+      "properties": {
+        "new_money_1_25l_usd": { "type": "number", "const": 250000000.0 },
+        "exchanged_1_25l_usd": { "type": "number", "const": 1050000000.0 },
+        "excluded_notes_usd": { "type": "number", "const": 900000000.0 },
+        "total_stack_usd": { "type": "number", "const": 2200000000.0 }
+      },
+      "additionalProperties": false
+    },
+    "purdue_third_party_release_arbitrage": {
+      "type": "object",
+      "required": [
+        "pre_petition_extraction_usd",
+        "nominal_settlement_usd",
+        "annual_installment_usd",
+        "discount_rate",
+        "pv_settlement_usd",
+        "net_insider_pv_surplus_usd",
+        "insider_pv_retention_pct"
+      ],
+      "properties": {
+        "pre_petition_extraction_usd": { "type": "number", "const": 10700000000.0 },
+        "nominal_settlement_usd": { "type": "number", "const": 6000000000.0 },
+        "annual_installment_usd": { "type": "number", "const": 333333333.33 },
+        "discount_rate": { "type": "number", "const": 0.08 },
+        "pv_settlement_usd": { "type": "number", "const": 3125368959.61 },
+        "net_insider_pv_surplus_usd": { "type": "number", "const": 7574631040.39 },
+        "insider_pv_retention_pct": { "type": "number", "const": 70.790944 }
+      },
+      "additionalProperties": false
+    },
+    "thermodynamic_and_ashby_invariants": {
+      "type": "object",
+      "required": [
+        "ext_cluster_power_watts",
+        "bio_node_power_watts",
+        "wattage_asymmetry_ratio",
+        "ashby_variety_ratio",
+        "discarded_environmental_variety_pct",
+        "clarium_drawdown_pct",
+        "c2_edges_n50",
+        "stigmergic_commits_n50",
+        "c2_to_stigmergic_ratio"
+      ],
+      "properties": {
+        "ext_cluster_power_watts": { "type": "number", "const": 100000000.0 },
+        "bio_node_power_watts": { "type": "number", "const": 20.0 },
+        "wattage_asymmetry_ratio": { "type": "number", "const": 5000000.0 },
+        "ashby_variety_ratio": { "type": "number", "const": 0.04 },
+        "discarded_environmental_variety_pct": { "type": "number", "const": 96.0 },
+        "clarium_drawdown_pct": { "type": "number", "const": 95.512821 },
+        "c2_edges_n50": { "type": "integer", "const": 1225 },
+        "stigmergic_commits_n50": { "type": "integer", "const": 50 },
+        "c2_to_stigmergic_ratio": { "type": "number", "const": 24.5 }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,213 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:ontological_namespace_hijack_v1.json",
+  "title": "Ontological Namespace Hijack — Super Intelligence Semantic Dilution Schema",
+  "type": "object",
+  "required": [
+    "audit_id",
+    "jurisdiction_context",
+    "cfaa_18_usc_1030_compliance",
+    "itar_ear_public_domain_compliance",
+    "empirical_timeline_anchors",
+    "shannon_namespace_dilution_metrics",
+    "cartel_zugzwang_matrix",
+    "thermodynamic_orthogonality_metrics"
+  ],
+  "properties": {
+    "audit_id": {
+      "type": "string",
+      "const": "CTX-2026-10-SI-NAMESPACE-HIJACK"
+    },
+    "jurisdiction_context": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}$"
+    },
+    "cfaa_18_usc_1030_compliance": {
+      "type": "boolean",
+      "const": true
+    },
+    "itar_ear_public_domain_compliance": {
+      "type": "boolean",
+      "const": true
+    },
+    "empirical_timeline_anchors": {
+      "type": "object",
+      "required": [
+        "eo_data_centers_2025_07_23",
+        "eo_american_stack_2025_07_23",
+        "eo_14363_genesis_mission_2025_11_24",
+        "un_speech_2026_09_22",
+        "eo_14434_super_intelligence_2026_09_29",
+        "si_gov_regex_migration_2026_10_13",
+        "treasury_bilateral_push_2026_10_15"
+      ],
+      "properties": {
+        "eo_data_centers_2025_07_23": {
+          "type": "object",
+          "required": ["date", "title", "mechanism"],
+          "properties": {
+            "date": { "type": "string", "const": "2025-07-23" },
+            "title": { "type": "string" },
+            "mechanism": { "type": "string" }
+          }
+        },
+        "eo_american_stack_2025_07_23": {
+          "type": "object",
+          "required": ["date", "title", "mechanism"],
+          "properties": {
+            "date": { "type": "string", "const": "2025-07-23" },
+            "title": { "type": "string" },
+            "mechanism": { "type": "string" }
+          }
+        },
+        "eo_14363_genesis_mission_2025_11_24": {
+          "type": "object",
+          "required": ["date", "title", "agency_count", "mechanism"],
+          "properties": {
+            "date": { "type": "string", "const": "2025-11-24" },
+            "title": { "type": "string" },
+            "agency_count": { "type": "integer", "minimum": 15 },
+            "mechanism": { "type": "string" }
+          }
+        },
+        "un_speech_2026_09_22": {
+          "type": "object",
+          "required": ["date", "verbatim_quote", "rename_direction"],
+          "properties": {
+            "date": { "type": "string", "const": "2026-09-22" },
+            "verbatim_quote": { "type": "string" },
+            "rename_direction": { "type": "string", "const": "artificial_intelligence_to_super_intelligence" }
+          }
+        },
+        "eo_14434_super_intelligence_2026_09_29": {
+          "type": "object",
+          "required": ["date", "title", "verbatim_anchor", "regex_directive"],
+          "properties": {
+            "date": { "type": "string", "const": "2026-09-29" },
+            "title": { "type": "string", "const": "Inaugurating the Era of Super Intelligence" },
+            "verbatim_anchor": { "type": "string" },
+            "regex_directive": { "type": "string", "const": "s/AI/SI/g" }
+          }
+        },
+        "si_gov_regex_migration_2026_10_13": {
+          "type": "object",
+          "required": ["date", "source_domain", "target_domain", "nist_portal", "super_intelligence_force"],
+          "properties": {
+            "date": { "type": "string", "const": "2026-10-13" },
+            "source_domain": { "type": "string", "const": "AI.gov" },
+            "target_domain": { "type": "string", "const": "SI.gov" },
+            "nist_portal": { "type": "string", "const": "nist.gov/super-intelligence" },
+            "super_intelligence_force": { "type": "string", "const": "Super Intelligence Force" }
+          }
+        },
+        "treasury_bilateral_push_2026_10_15": {
+          "type": "object",
+          "required": ["date", "actor", "target", "mechanism"],
+          "properties": {
+            "date": { "type": "string", "const": "2026-10-15" },
+            "actor": { "type": "string", "const": "US Treasury" },
+            "target": { "type": "string" },
+            "mechanism": { "type": "string" }
+          }
+        }
+      }
+    },
+    "shannon_namespace_dilution_metrics": {
+      "type": "object",
+      "required": [
+        "pre_eo_token_probability",
+        "post_eo_token_probability",
+        "pre_eo_surprisal_bits",
+        "post_eo_surprisal_bits",
+        "apocalyptic_panic_valence",
+        "regulatory_moat_retention_ratio"
+      ],
+      "properties": {
+        "pre_eo_token_probability": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 1.0
+        },
+        "post_eo_token_probability": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 1.0
+        },
+        "pre_eo_surprisal_bits": {
+          "type": "number",
+          "minimum": 0.0
+        },
+        "post_eo_surprisal_bits": {
+          "type": "number",
+          "minimum": 0.0
+        },
+        "apocalyptic_panic_valence": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 1.0
+        },
+        "regulatory_moat_retention_ratio": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 1.0
+        }
+      }
+    },
+    "cartel_zugzwang_matrix": {
+      "type": "object",
+      "required": [
+        "refuse_si_federal_contract_loss_usd",
+        "adopt_si_doomer_moat_collapse_pct",
+        "zugzwang_locked"
+      ],
+      "properties": {
+        "refuse_si_federal_contract_loss_usd": {
+          "type": "number",
+          "minimum": 0.0
+        },
+        "adopt_si_doomer_moat_collapse_pct": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 100.0
+        },
+        "zugzwang_locked": {
+          "type": "boolean",
+          "const": true
+        }
+      }
+    },
+    "thermodynamic_orthogonality_metrics": {
+      "type": "object",
+      "required": [
+        "imperial_stack_power_watts",
+        "sovereign_edge_node_power_watts",
+        "opex_ratio_imperial_to_edge",
+        "local_custody_egress_bytes",
+        "ashby_variety_edge_dominance"
+      ],
+      "properties": {
+        "imperial_stack_power_watts": {
+          "type": "number",
+          "minimum": 100000000
+        },
+        "sovereign_edge_node_power_watts": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 25.0
+        },
+        "opex_ratio_imperial_to_edge": {
+          "type": "number",
+          "minimum": 0.0
+        },
+        "local_custody_egress_bytes": {
+          "type": "integer",
+          "const": 0
+        },
+        "ashby_variety_edge_dominance": {
+          "type": "boolean",
+          "const": true
+        }
+      }
+    }
+  }
+}

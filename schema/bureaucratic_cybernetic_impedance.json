@@ -1,0 +1,268 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:bureaucratic_cybernetic_impedance.json",
+  "title": "Bureaucratic Cybernetic Impedance Bundle (SPEC-BUREAUCRATIC-CYBERNETIC-IMPEDANCE-v1.0)",
+  "description": "Deterministic verification envelope for the bureaucratic cybernetic impedance bundle: Holmstroem (1979) pre-Goodharted ERP sensor mutual information, Ashby (1956) requisite-variety series bottleneck, Wiener (1948)/Nyquist (1932) phase-delay instability, Coase (1937)/Jensen & Meckling (1976) agency straitjacket, and the parameterized enterprise-AI transformation debt waterfall.",
+  "type": "object",
+  "required": [
+    "proof",
+    "status",
+    "jurisdiction_context",
+    "cfaa_compliance",
+    "registry_baselines",
+    "law_1_holmstrom_1979_erp_sensor_mutual_information",
+    "law_2_ashby_1956_series_bottleneck",
+    "law_3_wiener_1948_nyquist_1932_phase_delay",
+    "law_4_coase_1937_jensen_meckling_1976_agency",
+    "enterprise_ai_transformation_debt_waterfall"
+  ],
+  "properties": {
+    "proof": { "const": "bureaucratic_cybernetic_impedance" },
+    "status": { "enum": ["verified"] },
+    "jurisdiction_context": {
+      "type": "object",
+      "description": "ISO 3166-1 jurisdiction frame plus governing statutory rails for every harvested registry artifact.",
+      "required": ["iso_3166_1", "statutory_frame"],
+      "properties": {
+        "iso_3166_1": { "const": "US" },
+        "statutory_frame": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": { "type": "string", "enum": ["18 U.S.C. § 1030", "SOX § 404", "10 U.S.C. § 4022"] }
+        }
+      }
+    },
+    "cfaa_compliance": {
+      "type": "object",
+      "description": "Computer Fraud and Abuse Act attestation: zero unauthorized access across all registry harvests.",
+      "required": ["statute", "attestation"],
+      "properties": {
+        "statute": { "const": "18 U.S.C. § 1030" },
+        "attestation": { "type": "string", "minLength": 40 }
+      }
+    },
+    "registry_baselines": {
+      "type": "object",
+      "required": [
+        "pltr",
+        "pltr_fy25_revenue_yoy_pct",
+        "counterparties",
+        "army_maven_w911qx_24_d_0012_p00005_total_usd",
+        "army_titan_ota_usd"
+      ],
+      "properties": {
+        "pltr": { "$ref": "#/$defs/public_company_baseline" },
+        "pltr_fy25_revenue_yoy_pct": { "type": "number", "const": 56.183391 },
+        "pltr_top_20_total_rev_fy25_usd": { "type": "number", "const": 1878000000.0 },
+        "pltr_top_20_rev_share_fy25_pct": { "type": "number", "const": 41.962298 },
+        "pltr_blended_arpu_fy25_usd": { "type": "number", "const": 4691243.19 },
+        "counterparties": {
+          "type": "object",
+          "description": "Security-master cross-index ring: co-lenders, insurers, consultants, and systems integrators.",
+          "minProperties": 6,
+          "propertyNames": { "pattern": "^[A-Z]{2,5}$" },
+          "additionalProperties": { "$ref": "#/$defs/public_company_baseline" }
+        },
+        "army_maven_w911qx_24_d_0012_p00005_total_usd": { "type": "number", "const": 1275000000 },
+        "army_titan_ota_usd": { "type": "number", "const": 178400000 }
+      }
+    },
+    "law_1_holmstrom_1979_erp_sensor_mutual_information": {
+      "type": "object",
+      "description": "Shannon (1948) Gaussian-channel mutual information of the pre-Goodharted ERP shop-floor sensor under Holmstroem (1979) informativeness.",
+      "required": ["snr_erp", "i_erp_bits"],
+      "properties": {
+        "var_lebenswelt_signal": { "type": "number", "const": 1.0 },
+        "var_middle_manager_bonus_gaming": { "type": "number", "const": 19.0 },
+        "var_observation_noise": { "type": "number", "const": 1.0 },
+        "snr_erp": { "type": "number", "const": 0.05 },
+        "i_erp_bits": { "type": "number", "minimum": 0.035, "maximum": 0.036 },
+        "i_erp_bits_full_precision": { "type": "number", "exclusiveMinimum": 0.0 }
+      }
+    },
+    "law_2_ashby_1956_series_bottleneck": {
+      "type": "object",
+      "description": "Requisite-variety series minimum across sensor, brain, and SOP actuator; variety destruction follows (1 - v_loop/v_env)*100.",
+      "required": [
+        "v_env_bits",
+        "v_sop_bits",
+        "v_loop_bureaucracy_bits",
+        "variety_destruction_bureaucracy_pct",
+        "sop_only_variety_destruction_pct",
+        "architecture_comparison"
+      ],
+      "properties": {
+        "v_env_bits": { "type": "number", "const": 12.0 },
+        "v_env_states": { "type": "integer", "const": 4096 },
+        "v_brain_bits": { "type": "number", "const": 30.0 },
+        "v_sop_bits": { "type": "number", "const": 1.584963 },
+        "v_loop_bureaucracy_bits": { "type": "number", "exclusiveMinimum": 0.0, "maximum": 0.036 },
+        "variety_destruction_bureaucracy_pct": { "type": "number", "minimum": 99.7, "maximum": 99.71 },
+        "sop_only_variety_destruction_pct": { "type": "number", "const": 86.791979 },
+        "architecture_comparison": {
+          "type": "array",
+          "minItems": 3,
+          "items": {
+            "type": "object",
+            "required": [
+              "architecture",
+              "v_sensor_bits",
+              "v_actuator_bits",
+              "v_loop_bits",
+              "variety_destruction_pct"
+            ],
+            "properties": {
+              "architecture": {
+                "enum": [
+                  "A_legacy_bureaucracy_bolt_on_ai",
+                  "B_palantir_fde_prosthetic_bypass",
+                  "C_zero_agency_split_turing_complete_principal_node"
+                ]
+              },
+              "v_sensor_bits": { "type": "number", "exclusiveMinimum": 0.0 },
+              "v_actuator_bits": { "type": "number", "exclusiveMinimum": 0.0 },
+              "v_loop_bits": { "type": "number", "exclusiveMinimum": 0.0 },
+              "variety_destruction_pct": { "type": "number", "minimum": 0.0, "maximum": 100.0 }
+            }
+          }
+        }
+      }
+    },
+    "law_3_wiener_1948_nyquist_1932_phase_delay": {
+      "type": "object",
+      "description": "Phase-delay instability of the 100 ms decision clock against the 90-day SOX 404 attestation transport delay over a 30-day close plant.",
+      "required": [
+        "clock_impedance_ratio",
+        "omega_pi_rad_per_sec",
+        "k_crit_nyquist_gain_ceiling",
+        "k_brain_agent_gain",
+        "gain_margin_ratio",
+        "verdict"
+      ],
+      "properties": {
+        "tau_brain_sec": { "type": "number", "const": 0.1 },
+        "tau_delay_sec": { "type": "number", "const": 7776000.0 },
+        "tau_plant_sec": { "type": "number", "const": 2592000.0 },
+        "clock_impedance_ratio": { "type": "number", "const": 77760000.0 },
+        "omega_pi_rad_per_sec": {
+          "type": "number",
+          "description": "Bisection root of omega*tau_delay + atan(omega*tau_plant) = pi.",
+          "minimum": 3.15e-7,
+          "maximum": 3.16e-7
+        },
+        "omega_pi_phase_residual": { "type": "number", "maximum": 1e-10 },
+        "k_crit_nyquist_gain_ceiling": { "type": "number", "minimum": 1.29, "maximum": 1.30 },
+        "k_brain_agent_gain": { "type": "number", "const": 10.0 },
+        "gain_margin_ratio": {
+          "type": "number",
+          "exclusiveMaximum": 1.0,
+          "description": "Below 1.0 proves divergent phase oscillation (bureaucratic thrashing)."
+        },
+        "verdict": { "type": "string", "pattern": "gain_margin_ratio < 1\\.0" }
+      }
+    },
+    "law_4_coase_1937_jensen_meckling_1976_agency": {
+      "type": "object",
+      "description": "Agency moral-hazard loss n*(1-alpha)*c_hazard*(2**v_act - 1) plus Karp manifesto structural-alpha retention decay.",
+      "required": [
+        "loss_sop_actuators_usd",
+        "loss_full_environmental_actuators_usd",
+        "loss_zero_intermediaries_usd",
+        "karp_alpha_net",
+        "karp_alpha_erosion_pct"
+      ],
+      "properties": {
+        "n_agents": { "type": "integer", "const": 10000 },
+        "alpha_agent": { "type": "number", "const": 0.0001 },
+        "c_hazard_usd": { "type": "number", "const": 500.0 },
+        "loss_sop_actuators_usd": { "type": "number", "const": 9999000.0 },
+        "loss_full_environmental_actuators_usd": { "type": "number", "const": 20472952500.0 },
+        "loss_zero_intermediaries_usd": { "type": "number", "const": 0.0 },
+        "karp_alpha_net": { "type": "number", "const": 0.082353 },
+        "karp_alpha_erosion_pct": { "type": "number", "const": 91.764706 }
+      }
+    },
+    "enterprise_ai_transformation_debt_waterfall": {
+      "type": "object",
+      "description": "Parameterized tranche_recovery(ev) absolute-priority waterfall across the $1.25B enterprise-AI transformation stack.",
+      "required": ["total_stack_usd", "total_debt_usd", "tranches", "recovery_by_ev_usd"],
+      "properties": {
+        "total_stack_usd": { "type": "number", "const": 1250000000.0 },
+        "total_debt_usd": { "type": "number", "const": 1000000000.0 },
+        "tranches": {
+          "type": "array",
+          "minItems": 4,
+          "items": {
+            "type": "object",
+            "required": ["tranche", "principal_usd"],
+            "properties": {
+              "tranche": { "enum": ["1L_BDC", "2L_Notes", "Unsecured_SI_FDE", "Sponsor_Equity"] },
+              "principal_usd": { "type": "number", "enum": [500000000.0, 300000000.0, 200000000.0, 250000000.0] }
+            }
+          }
+        },
+        "recovery_by_ev_usd": {
+          "type": "object",
+          "description": "Enterprise-value grid keyed in whole USD; each entry carries per-tranche recovery and residual above stack.",
+          "minProperties": 4,
+          "propertyNames": { "pattern": "^\\d{9,10}$" },
+          "additionalProperties": {
+            "type": "object",
+            "required": ["tranches", "residual_above_stack_usd"],
+            "properties": {
+              "tranches": {
+                "type": "array",
+                "minItems": 4,
+                "items": { "$ref": "#/$defs/tranche_recovery_row" }
+              },
+              "residual_above_stack_usd": { "type": "number", "minimum": 0.0 }
+            }
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "public_company_baseline": {
+      "type": "object",
+      "description": "Public-record counterparty baseline: SEC CIK plus revenue / RPO seams.",
+      "required": ["cik"],
+      "properties": {
+        "ticker": { "type": "string", "pattern": "^[A-Z]{1,6}$" },
+        "cik": { "type": "string", "pattern": "^\\d{10}$" },
+        "revenue_fy23_usd": { "type": "number", "minimum": 0.0 },
+        "revenue_fy24_usd": { "type": "number", "minimum": 0.0 },
+        "revenue_fy25_usd": { "type": "number", "minimum": 0.0 },
+        "fy25_us_commercial_usd": { "type": "number", "minimum": 0.0 },
+        "fy25_us_gov_usd": { "type": "number", "minimum": 0.0 },
+        "fy25_total_us_usd": { "type": "number", "minimum": 0.0 },
+        "q4_2025_total_usd": { "type": "number", "minimum": 0.0 },
+        "q4_2025_us_commercial_usd": { "type": "number", "minimum": 0.0 },
+        "q4_2025_us_commercial_yoy_growth_pct": { "type": "number" },
+        "q4_2025_us_gov_usd": { "type": "number", "minimum": 0.0 },
+        "rpo_fy23_usd": { "type": "number", "minimum": 0.0 },
+        "rpo_fy24_usd": { "type": "number", "minimum": 0.0 },
+        "rpo_fy25_usd": { "type": "number", "minimum": 0.0 },
+        "rule_of_40_pct": { "type": "number" },
+        "total_customers_fy23": { "type": "integer", "const": 497 },
+        "total_customers_fy24": { "type": "integer", "const": 711 },
+        "total_customers_fy25": { "type": "integer", "const": 954 },
+        "top_20_avg_revenue_fy24_usd": { "type": "number", "const": 64600000.0 },
+        "top_20_avg_revenue_fy25_usd": { "type": "number", "const": 93900000.0 },
+        "fy26_revenue_usd": { "type": "number", "minimum": 0.0 },
+        "rpo_usd": { "type": "number", "minimum": 0.0 }
+      }
+    },
+    "tranche_recovery_row": {
+      "type": "object",
+      "required": ["tranche", "principal_usd", "recovery_usd", "cents_on_dollar"],
+      "properties": {
+        "tranche": { "enum": ["1L_BDC", "2L_Notes", "Unsecured_SI_FDE", "Sponsor_Equity"] },
+        "principal_usd": { "type": "number", "minimum": 0.0 },
+        "recovery_usd": { "type": "number", "minimum": 0.0 },
+        "cents_on_dollar": { "type": "number", "minimum": 0.0, "maximum": 100.0 }
+      }
+    }
+  }
+}

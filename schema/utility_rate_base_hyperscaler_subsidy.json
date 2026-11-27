@@ -1,0 +1,146 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:utility_rate_base_hyperscaler_subsidy.json",
+  "$comment": "PLAIN-ENGLISH LEGAL NOTICE: This file is an abstract regulatory-accounting and mechanism-design validation checklist (JSON Schema), NOT an accusation, indictment, or rate-case pleading against any person or utility. Every field encodes a published public record figure (16 U.S.C. 824d-824e, FERC Docket No. ER24-2952, PJM auction results, Averch & Johnson 1962) or a closed-form algebraic invariant.",
+  "title": "Investor-Owned Utility Rate-Base Padding & Hyperscaler Datacenter Cross-Subsidization Schema",
+  "description": "Validates the Averch-Johnson gold-plating identity (10.5% authorized ROE vs 5.5% true capital cost on a $5.0B hyperscaler-induced transmission rate base), the $650.0M/yr revenue requirement waterfall, the 72.0% residential cross-subsidization transfer ($468.0M/yr, $312.00 per captive household), the 9.333333x PJM 2025/2026 Base Residual Auction clearing price surge, the Year-7 stranded-asset duration mismatch against a 40-year depreciation horizon, and the behind-the-meter defection death-spiral step-up.",
+  "type": "object",
+  "required": [
+    "spec_version",
+    "averch_johnson_rate_base",
+    "revenue_requirement",
+    "residential_cross_subsidy",
+    "pjm_capacity_auction",
+    "stranded_duration_mismatch",
+    "defection_death_spiral"
+  ],
+  "properties": {
+    "spec_version": {
+      "type": "string",
+      "const": "SPEC-UTILITY-RATE-BASE-PADDING-AND-HYPERSCALER-CROSS-SUBSIDY-v1.0"
+    },
+    "averch_johnson_rate_base": {
+      "type": "object",
+      "description": "Averch & Johnson (1962) gold-plating identity: Profit = (s - r) * K_RateBase with strictly positive regulatory spread on the hyperscaler-induced transmission capex.",
+      "required": [
+        "puc_authorized_roe_rate",
+        "utility_cost_of_debt_capital_rate",
+        "averch_johnson_roe_spread",
+        "hyperscaler_induced_transmission_capex_usd_billions",
+        "annual_guaranteed_roe_profit_extract_usd_millions",
+        "true_annual_capital_charge_usd_millions",
+        "gold_plating_gradient_usd_per_usd_per_year",
+        "overcapitalization_condition_s_gt_r"
+      ],
+      "properties": {
+        "puc_authorized_roe_rate": { "type": "number", "const": 0.105 },
+        "utility_cost_of_debt_capital_rate": { "type": "number", "const": 0.055 },
+        "averch_johnson_roe_spread": { "type": "number", "const": 0.05 },
+        "hyperscaler_induced_transmission_capex_usd_billions": { "type": "number", "const": 5.0 },
+        "annual_guaranteed_roe_profit_extract_usd_millions": { "type": "number", "const": 525.0 },
+        "true_annual_capital_charge_usd_millions": { "type": "number", "const": 275.0 },
+        "gold_plating_gradient_usd_per_usd_per_year": { "type": "number", "const": 0.05 },
+        "overcapitalization_condition_s_gt_r": { "type": "boolean", "const": true }
+      },
+      "additionalProperties": false
+    },
+    "revenue_requirement": {
+      "type": "object",
+      "description": "Annual revenue requirement waterfall: guaranteed ROE extract plus straight-line depreciation over the 40-year rate-base horizon.",
+      "required": [
+        "rate_base_depreciation_horizon_years",
+        "annual_straight_line_depreciation_charge_usd_millions",
+        "total_annual_revenue_requirement_usd_millions"
+      ],
+      "properties": {
+        "rate_base_depreciation_horizon_years": { "type": "number", "const": 40.0 },
+        "annual_straight_line_depreciation_charge_usd_millions": { "type": "number", "const": 125.0 },
+        "total_annual_revenue_requirement_usd_millions": { "type": "number", "const": 650.0 }
+      },
+      "additionalProperties": false
+    },
+    "residential_cross_subsidy": {
+      "type": "object",
+      "description": "Residential cross-subsidization transfer: 72.0% fixed-cost socialization share across 1.5M captive households while the inducing hyperscaler holds a confidential discounted contract.",
+      "required": [
+        "residential_ratepayer_cost_allocation_share",
+        "residential_annual_cross_subsidy_transfer_usd_millions",
+        "captive_residential_households_millions",
+        "annual_surcharge_per_captive_household_usd"
+      ],
+      "properties": {
+        "residential_ratepayer_cost_allocation_share": { "type": "number", "const": 0.72 },
+        "residential_annual_cross_subsidy_transfer_usd_millions": { "type": "number", "const": 468.0 },
+        "captive_residential_households_millions": { "type": "number", "const": 1.5 },
+        "annual_surcharge_per_captive_household_usd": { "type": "number", "const": 312.0 }
+      },
+      "additionalProperties": false
+    },
+    "pjm_capacity_auction": {
+      "type": "object",
+      "description": "PJM 2025/2026 Base Residual Auction clearing price surge falsifying the H0 load-spreading defense at the margin, with annualized per-MW and per-GW capacity cost step-ups.",
+      "required": [
+        "pjm_prior_capacity_clearing_price_mw_day_usd",
+        "pjm_hyperscaler_spike_capacity_price_mw_day_usd",
+        "pjm_capacity_price_surge_multiplier",
+        "annualized_capacity_cost_prior_usd_per_mw_yr",
+        "annualized_capacity_cost_spike_usd_per_mw_yr",
+        "gigawatt_capacity_cost_step_up_usd_m_per_yr"
+      ],
+      "properties": {
+        "pjm_prior_capacity_clearing_price_mw_day_usd": { "type": "number", "const": 28.92 },
+        "pjm_hyperscaler_spike_capacity_price_mw_day_usd": { "type": "number", "const": 269.92 },
+        "pjm_capacity_price_surge_multiplier": { "type": "number", "const": 9.333333 },
+        "annualized_capacity_cost_prior_usd_per_mw_yr": { "type": "number", "const": 10555.8 },
+        "annualized_capacity_cost_spike_usd_per_mw_yr": { "type": "number", "const": 98520.8 },
+        "gigawatt_capacity_cost_step_up_usd_m_per_yr": { "type": "number", "const": 87.965 }
+      },
+      "additionalProperties": false
+    },
+    "stranded_duration_mismatch": {
+      "type": "object",
+      "description": "Stranded-asset duration mismatch: 5-7 year GPU lease tenors against a 40-year rate-base depreciation horizon; Year-7 stranding leaves a 33-year dead-capex tail earning the guaranteed spread under the Hope end-result framework.",
+      "required": [
+        "gpu_lease_tenor_years_min",
+        "gpu_lease_tenor_years_max",
+        "rate_base_depreciation_horizon_years",
+        "stranding_year",
+        "residual_captive_years",
+        "residual_rate_base_usd_b",
+        "annual_deadweight_revenue_requirement_usd_m",
+        "cumulative_deadweight_usd_b",
+        "residential_deadweight_surcharge_usd_per_household_yr"
+      ],
+      "properties": {
+        "gpu_lease_tenor_years_min": { "type": "number", "const": 5.0 },
+        "gpu_lease_tenor_years_max": { "type": "number", "const": 7.0 },
+        "rate_base_depreciation_horizon_years": { "type": "number", "const": 40.0 },
+        "stranding_year": { "type": "number", "const": 7.0 },
+        "residual_captive_years": { "type": "number", "const": 33.0 },
+        "residual_rate_base_usd_b": { "type": "number", "const": 4.125 },
+        "annual_deadweight_revenue_requirement_usd_m": { "type": "number", "const": 558.125 },
+        "cumulative_deadweight_usd_b": { "type": "number", "const": 18.418125 },
+        "residential_deadweight_surcharge_usd_per_household_yr": { "type": "number", "const": 267.9 }
+      },
+      "additionalProperties": false
+    },
+    "defection_death_spiral": {
+      "type": "object",
+      "description": "Behind-the-meter defection death spiral: at a 10% residential exit share the fixed-cost pool is re-divided across the captive remainder, stepping up the per-household surcharge and compounding further defection.",
+      "required": [
+        "defection_share",
+        "remaining_captive_households_millions",
+        "surcharge_post_defection_usd",
+        "surcharge_step_up_pct"
+      ],
+      "properties": {
+        "defection_share": { "type": "number", "const": 0.1 },
+        "remaining_captive_households_millions": { "type": "number", "const": 1.35 },
+        "surcharge_post_defection_usd": { "type": "number", "minimum": 346.66, "maximum": 346.68 },
+        "surcharge_step_up_pct": { "type": "number", "minimum": 11.1, "maximum": 11.12 }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

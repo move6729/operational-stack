@@ -1,0 +1,249 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:algorithmic_surveillance_pricing_unruh_liquidation.json",
+  "title": "SPEC-ALGORITHMIC-SURVEILLANCE-PRICING-AND-SECTION-1981-UNRUH-LIQUIDATION-v1.0 Schema",
+  "description": "JSON Schema Draft 2020-12 validating algorithmic surveillance pricing, 42 U.S.C. 1981 & California Unruh Civil Rights Act statutory liquidation, AAA mass arbitration fee blow-up, and tranche recovery waterfall.",
+  "type": "object",
+  "required": [
+    "canonical_specification",
+    "entity_and_instrument_ids",
+    "locked_constants_and_outputs",
+    "debt_stack_tranches",
+    "tranche_recovery_waterfall",
+    "catalyst_calendar"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "canonical_specification": {
+      "type": "string",
+      "const": "SPEC-ALGORITHMIC-SURVEILLANCE-PRICING-AND-SECTION-1981-UNRUH-LIQUIDATION-v1.0"
+    },
+    "entity_and_instrument_ids": {
+      "type": "object",
+      "required": [
+        "ring_1_primary_targets",
+        "ring_2_credit_and_institutional_holders",
+        "ring_3_insurance_and_sidecar_counterparties",
+        "ring_4_auditors_and_valuation_agents",
+        "ring_5_public_pension_lps",
+        "ring_6_trustees_agents_ratings_and_counsel",
+        "court_dockets_and_regulatory_orders"
+      ],
+      "properties": {
+        "ring_1_primary_targets": {
+          "type": "array",
+          "minItems": 4,
+          "items": {
+            "type": "object",
+            "required": ["legal_name", "ticker", "cik"],
+            "properties": {
+              "legal_name": { "type": "string" },
+              "ticker": { "type": "string" },
+              "cik": { "type": "string", "pattern": "^[0-9]{10}$" },
+              "role": { "type": "string" }
+            }
+          }
+        },
+        "ring_2_credit_and_institutional_holders": {
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "type": "object",
+            "required": ["legal_name", "cik"],
+            "properties": {
+              "legal_name": { "type": "string" },
+              "ticker": { "type": "string" },
+              "cik": { "type": "string", "pattern": "^[0-9]{10}$" },
+              "crd": { "type": "string" },
+              "sec_file_number": { "type": "string" }
+            }
+          }
+        },
+        "ring_3_insurance_and_sidecar_counterparties": {
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "type": "object",
+            "required": ["legal_name", "naic_code"],
+            "properties": {
+              "legal_name": { "type": "string" },
+              "ticker": { "type": "string" },
+              "cik": { "type": "string" },
+              "naic_code": { "type": "string" }
+            }
+          }
+        },
+        "ring_4_auditors_and_valuation_agents": {
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "type": "object",
+            "required": ["legal_name", "pcaob_id"],
+            "properties": {
+              "legal_name": { "type": "string" },
+              "pcaob_id": { "type": "string" },
+              "audited_entity": { "type": "string" }
+            }
+          }
+        },
+        "ring_5_public_pension_lps": {
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "type": "object",
+            "required": ["legal_name", "cik"],
+            "properties": {
+              "legal_name": { "type": "string" },
+              "cik": { "type": "string", "pattern": "^[0-9]{10}$" }
+            }
+          }
+        },
+        "ring_6_trustees_agents_ratings_and_counsel": {
+          "type": "array",
+          "minItems": 4,
+          "items": {
+            "type": "object",
+            "required": ["legal_name", "role"],
+            "properties": {
+              "legal_name": { "type": "string" },
+              "cik": { "type": "string" },
+              "role": { "type": "string" }
+            }
+          }
+        },
+        "court_dockets_and_regulatory_orders": {
+          "type": "array",
+          "minItems": 5,
+          "items": {
+            "type": "object",
+            "required": ["caption", "docket_number", "forum"],
+            "properties": {
+              "caption": { "type": "string" },
+              "docket_number": { "type": "string" },
+              "forum": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "locked_constants_and_outputs": {
+      "type": "object",
+      "required": [
+        "delta_f_fee_waiver_usd",
+        "n_aaa_claimants",
+        "g_cohort_promo_shift_usd",
+        "f_aaa_filing_usd",
+        "f_aaa_mgmt_usd",
+        "f_aaa_arbitrator_usd",
+        "f_aaa_total_per_claim_usd",
+        "l_aaa_gross_schedule_usd",
+        "l_aaa_net_committed_usd",
+        "n_ca_batch_claimants",
+        "l_ca_batch_invoice_usd",
+        "m_aaa_fee_to_promo_blowup",
+        "ccp_1281_97_default_window_days",
+        "c_edge_pro_se_opex_usd",
+        "c_corp_defense_opex_usd",
+        "m_pro_se_opex_asymmetry",
+        "d_stat_unruh_usd",
+        "l_unruh_31500_cohort_usd",
+        "n_tx_affected",
+        "g_promo_shift_usd",
+        "l_gross_unruh_usd",
+        "m_statutory_blowup_ratio",
+        "p_cert_settled",
+        "l_expected_settlement_usd",
+        "net_ev_destruction_usd",
+        "t_exec_tenure_years",
+        "tau_litigation_lag_years",
+        "u_exec_net_payoff_usd",
+        "uber_total_note_principal_usd_m",
+        "uber_revolver_commitment_usd_m",
+        "uber_total_debt_and_facility_stack_usd_m",
+        "uber_secured_aurora_pledge_notes_usd_m",
+        "uber_unsecured_notes_and_converts_usd_m",
+        "stress_ev_post_judgment_usd_m",
+        "unsecured_pool_total_claims_usd_m",
+        "unsecured_recovery_cents_on_dollar"
+      ],
+      "properties": {
+        "delta_f_fee_waiver_usd": { "type": "number", "const": 3.99 },
+        "n_aaa_claimants": { "type": "integer", "const": 31500 },
+        "g_cohort_promo_shift_usd": { "type": "number", "const": 125685.0 },
+        "f_aaa_filing_usd": { "type": "number", "const": 500.0 },
+        "f_aaa_mgmt_usd": { "type": "number", "const": 1400.0 },
+        "f_aaa_arbitrator_usd": { "type": "number", "const": 1500.0 },
+        "f_aaa_total_per_claim_usd": { "type": "number", "const": 3400.0 },
+        "l_aaa_gross_schedule_usd": { "type": "number", "const": 107100000.0 },
+        "l_aaa_net_committed_usd": { "type": "number", "const": 91600000.0 },
+        "n_ca_batch_claimants": { "type": "integer", "const": 7771 },
+        "l_ca_batch_invoice_usd": { "type": "number", "const": 10879400.0 },
+        "m_aaa_fee_to_promo_blowup": { "type": "number", "const": 728.8061 },
+        "ccp_1281_97_default_window_days": { "type": "integer", "const": 30 },
+        "c_edge_pro_se_opex_usd": { "type": "number", "const": 0.05 },
+        "c_corp_defense_opex_usd": { "type": "number", "const": 16250.0 },
+        "m_pro_se_opex_asymmetry": { "type": "number", "const": 325000.0 },
+        "d_stat_unruh_usd": { "type": "number", "const": 4000.0 },
+        "l_unruh_31500_cohort_usd": { "type": "number", "const": 126000000.0 },
+        "n_tx_affected": { "type": "integer", "const": 2500000 },
+        "g_promo_shift_usd": { "type": "number", "const": 9975000.0 },
+        "l_gross_unruh_usd": { "type": "number", "const": 10000000000.0 },
+        "m_statutory_blowup_ratio": { "type": "number", "const": 1002.5063 },
+        "p_cert_settled": { "type": "number", "const": 0.15 },
+        "l_expected_settlement_usd": { "type": "number", "const": 1500000000.0 },
+        "net_ev_destruction_usd": { "type": "number", "const": -1490025000.0 },
+        "t_exec_tenure_years": { "type": "number", "const": 2.5 },
+        "tau_litigation_lag_years": { "type": "number", "const": 4.0 },
+        "u_exec_net_payoff_usd": { "type": "number", "const": 420000.0 },
+        "uber_total_note_principal_usd_m": { "type": "number", "const": 10600.0 },
+        "uber_revolver_commitment_usd_m": { "type": "number", "const": 5000.0 },
+        "uber_total_debt_and_facility_stack_usd_m": { "type": "number", "const": 15600.0 },
+        "uber_secured_aurora_pledge_notes_usd_m": { "type": "number", "const": 1125.0 },
+        "uber_unsecured_notes_and_converts_usd_m": { "type": "number", "const": 9475.0 },
+        "stress_ev_post_judgment_usd_m": { "type": "number", "const": 12000.0 },
+        "unsecured_pool_total_claims_usd_m": { "type": "number", "const": 19475.0 },
+        "unsecured_recovery_cents_on_dollar": { "type": "number", "const": 55.8408 }
+      }
+    },
+    "debt_stack_tranches": {
+      "type": "array",
+      "minItems": 4,
+      "items": {
+        "type": "object",
+        "required": ["tranche_name", "principal_usd_m", "coupon", "seniority", "collateral_or_guarantor_box", "breakeven_ev_usd_m"],
+        "properties": {
+          "tranche_name": { "type": "string" },
+          "principal_usd_m": { "type": "number" },
+          "coupon": { "type": "string" },
+          "seniority": { "type": "string" },
+          "collateral_or_guarantor_box": { "type": "string" },
+          "breakeven_ev_usd_m": { "type": "number" }
+        }
+      }
+    },
+    "tranche_recovery_waterfall": {
+      "type": "object",
+      "required": ["stress_ev_post_judgment_usd_m", "unruh_judgment_usd_m", "secured_recovery_cents_on_dollar", "unsecured_recovery_cents_on_dollar", "residual_equity_recovery_usd_m"],
+      "properties": {
+        "stress_ev_post_judgment_usd_m": { "type": "number", "const": 12000.0 },
+        "unruh_judgment_usd_m": { "type": "number", "const": 10000.0 },
+        "secured_recovery_cents_on_dollar": { "type": "number", "const": 100.0 },
+        "unsecured_recovery_cents_on_dollar": { "type": "number", "const": 55.8408 },
+        "residual_equity_recovery_usd_m": { "type": "number", "const": 0.0 }
+      }
+    },
+    "catalyst_calendar": {
+      "type": "array",
+      "minItems": 4,
+      "items": {
+        "type": "object",
+        "required": ["date", "event", "docket_or_filing_reference"],
+        "properties": {
+          "date": { "type": "string", "format": "date" },
+          "event": { "type": "string" },
+          "docket_or_filing_reference": { "type": "string" }
+        }
+      }
+    }
+  }
+}

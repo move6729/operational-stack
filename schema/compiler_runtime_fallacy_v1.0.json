@@ -1,0 +1,275 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:compiler_runtime_fallacy_v1.0.json",
+  "$comment": "PLAIN-ENGLISH NOTICE: abstract thermodynamic, reliability, and credit-structural validation checklist. NOT an accusation, indictment, or investment recommendation. Every field encodes a published public filing figure, a physical constant, or a closed-form algebraic invariant.",
+  "title": "Compiler-Runtime Fallacy: Landauer Runtime Penalty, One-Pass Airlock COALESCE Collapse, Agent Equivocation Decay & Neocloud GPU Debt Waterfall Schema",
+  "description": "Validates compile-once/replay-many against runtime-inference substitution: (1) Landauer-bound thermodynamic and latency penalties between deterministic SQL/PLC execution and cloud inference, (2) per-entity and macro recurring-inference demand collapse under one-pass airlock COALESCE caching, (3) multi-step agent equivocation decay versus deterministic state-machine reliability, (4) off-balance-sheet civilizational deadweight loss with coupled Ashby requisite-variety decay and Shannon commons capacity collapse, (5) Acemoglu 10-year task-share/TFP/GDP bounds against the hyperscaler AI revenue deficit, and (6) a parameterized senior-to-junior recovery waterfall over the $42.15B CoreWeave pro-forma GPU debt stack with 91.1744% cumulative parent recourse.",
+  "type": "object",
+  "required": ["spec_version", "jurisdiction_context", "cfaa_compliance_attestation", "entity_and_instrument_ids", "catalyst_calendar", "thermodynamic_runtime_penalty", "coalesce_airlock_collapse", "agent_equivocation_decay", "civilizational_deadweight", "shannon_commons_capacity", "acemoglu_macro_bounds", "revenue_deficit", "capital_structure_waterfall", "security_master_index", "catalyst_calendar_audit"],
+  "properties": {
+    "spec_version": { "type": "string", "const": "SPEC-COMPILER-RUNTIME-FALLACY-v1.0" },
+    "jurisdiction_context": {
+      "type": "object",
+      "description": "ISO 3166-1 jurisdiction binding and locally executed statutory modules; peer nodes process applicable statutes locally with zero cross-custody egress.",
+      "required": ["iso_3166_1", "venue", "statutory_modules"],
+      "properties": {
+        "iso_3166_1": { "type": "string", "const": "US" },
+        "venue": { "type": "string", "const": "SDNY / NY County Commercial Division" },
+        "statutory_modules": { "type": "array", "minItems": 6, "maxItems": 6, "uniqueItems": true, "items": { "type": "string", "enum": ["18_USC_1030_CFAA", "SEC_EXCHANGE_ACT_1934", "DELAWARE_DGCL", "UCC_ARTICLE_9_SECURED_TRANSACTIONS", "32_CFR_170_DOD_CMMC_2_0_DFARS_252_204_7012", "EU_NIS2_DIRECTIVE_2022_2555_ART_27_2_D"] } }
+      },
+      "additionalProperties": false
+    },
+    "cfaa_compliance_attestation": {
+      "type": "object",
+      "description": "Immutable zero-unauthorized-access attestation (18 U.S.C. 1030). Non-compliant state transitions fail cryptographic validation and halt propagation.",
+      "required": ["statute", "attested", "unauthorized_access_count", "data_provenance", "egress_to_external_nodes"],
+      "properties": {
+        "statute": { "type": "string", "const": "18 U.S.C. 1030" },
+        "attested": { "type": "boolean", "const": true },
+        "unauthorized_access_count": { "type": "integer", "const": 0 },
+        "data_provenance": { "type": "string", "const": "public_filings_only" },
+        "egress_to_external_nodes": { "type": "integer", "const": 0 }
+      },
+      "additionalProperties": false
+    },
+    "entity_and_instrument_ids": {
+      "type": "object",
+      "description": "Multi-counterparty security-master cross-index spanning the six-category regulated perimeter: primary target, BDC co-lender, sponsor manager, silicon collateral originator, hyperscaler capex counterparties, disintermediated vertical/horizontal SaaS/ERP issuers (ServiceTitan, Oracle NetSuite, Salesforce), civilian cold-chain ERP fragility canary (United Natural Foods UNFI), Defense Industrial Base CMMC 2.0 / DFARS 252.204-7012 air-gapped enclave nexus, and empirical-bound originator.",
+      "minProperties": 15,
+      "maxProperties": 15,
+      "required": ["primary_target", "bdc_colender", "sponsor_manager", "silicon_counterparty", "hyperscaler_microsoft", "hyperscaler_alphabet", "hyperscaler_amazon", "hyperscaler_meta", "ai_capex_gap_underwriter", "empirical_bound_originator", "vertical_saas_servicetitan", "enterprise_erp_oracle_netsuite", "enterprise_saas_salesforce", "defense_industrial_base_cmmc_enclave", "cold_chain_food_logistics_unfi"],
+      "additionalProperties": { "$ref": "#/$defs/counterparty_entry" }
+    },
+    "catalyst_calendar": {
+      "type": "array",
+      "description": "Hard-date catalyst, amortization, and refinancing-wall calendar in strictly ascending ISO 8601 order.",
+      "minItems": 6,
+      "maxItems": 6,
+      "items": { "$ref": "#/$defs/catalyst_entry" }
+    },
+    "thermodynamic_runtime_penalty": {
+      "type": "object",
+      "description": "Landauer bound E = k_B*T*ln2 at 300 K against deterministic SQL/PLC step energy, cloud inference token energy, and p99 cloud latency versus the deterministic PLC cycle.",
+      "required": ["landauer_min_bit_joules", "landauer_computed_joules", "energy_deterministic_sql_plc_joules", "energy_runtime_llm_query_joules", "energy_runtime_llm_per_token_joules", "implied_tokens_per_query", "thermodynamic_penalty_ratio", "thermodynamic_penalty_log10", "per_query_penalty_ratio", "per_query_penalty_log10", "landauer_bit_erasures_per_token", "landauer_bit_erasures_per_query", "deterministic_bits_per_step", "plc_deterministic_cycle_ms", "cloud_llm_p99_latency_ms", "latency_penalty_multiplier", "joint_energy_latency_penalty", "joint_energy_latency_penalty_per_query"],
+      "properties": {
+        "landauer_min_bit_joules": { "type": "number", "const": 2.87049e-21 },
+        "landauer_computed_joules": { "type": "number", "minimum": 2.8709e-21, "maximum": 2.8711e-21 },
+        "energy_deterministic_sql_plc_joules": { "type": "number", "const": 5.0e-10 },
+        "energy_runtime_llm_query_joules": { "type": "number", "const": 250.0 },
+        "energy_runtime_llm_per_token_joules": { "type": "number", "const": 25.0 },
+        "implied_tokens_per_query": { "type": "number", "const": 10.0 },
+        "thermodynamic_penalty_ratio": { "type": "number", "minimum": 4.9999e10, "maximum": 5.0001e10 },
+        "thermodynamic_penalty_log10": { "type": "number", "minimum": 10.698, "maximum": 10.700 },
+        "per_query_penalty_ratio": { "type": "number", "minimum": 4.9999e11, "maximum": 5.0001e11 },
+        "per_query_penalty_log10": { "type": "number", "minimum": 11.698, "maximum": 11.700 },
+        "landauer_bit_erasures_per_token": { "type": "number", "minimum": 8.709e21, "maximum": 8.710e21 },
+        "landauer_bit_erasures_per_query": { "type": "number", "minimum": 8.709e22, "maximum": 8.710e22 },
+        "deterministic_bits_per_step": { "type": "number", "minimum": 1.7418e11, "maximum": 1.7419e11 },
+        "plc_deterministic_cycle_ms": { "type": "number", "const": 2.0 },
+        "cloud_llm_p99_latency_ms": { "type": "number", "const": 850.0 },
+        "latency_penalty_multiplier": { "type": "number", "const": 425.0 },
+        "joint_energy_latency_penalty": { "type": "number", "minimum": 2.1249e13, "maximum": 2.1251e13 },
+        "joint_energy_latency_penalty_per_query": { "type": "number", "minimum": 2.1249e14, "maximum": 2.1251e14 }
+      },
+      "additionalProperties": false
+    },
+    "coalesce_airlock_collapse": {
+      "type": "object",
+      "description": "One-pass airlock COALESCE caching: R_entity(K) = (K-1)/K at K = 1000 recurring transactions per entity, plus the implied recurring demand share reconciling the 92.5% macro recurring-inference collapse.",
+      "required": ["enterprise_transactions_per_entity_k", "coalesce_cache_token_reduction_pct", "macro_recurring_inference_collapse_pct", "implied_recurring_demand_share", "residual_macro_inference_demand_pct", "naive_runtime_energy_per_entity_joules", "compiled_energy_per_entity_joules", "energy_reduction_pct", "naive_wall_clock_per_entity_ms", "compiled_wall_clock_per_entity_ms", "wall_clock_reduction_pct"],
+      "properties": {
+        "enterprise_transactions_per_entity_k": { "type": "integer", "const": 1000 },
+        "coalesce_cache_token_reduction_pct": { "type": "number", "minimum": 99.899, "maximum": 99.901 },
+        "macro_recurring_inference_collapse_pct": { "type": "number", "minimum": 92.499, "maximum": 92.501 },
+        "implied_recurring_demand_share": { "type": "number", "minimum": 0.925925, "maximum": 0.925927 },
+        "residual_macro_inference_demand_pct": { "type": "number", "minimum": 7.499, "maximum": 7.501 },
+        "naive_runtime_energy_per_entity_joules": { "type": "number", "const": 250000.0 },
+        "compiled_energy_per_entity_joules": { "type": "number", "const": 250.0 },
+        "energy_reduction_pct": { "type": "number", "minimum": 99.899, "maximum": 99.901 },
+        "naive_wall_clock_per_entity_ms": { "type": "number", "const": 850000.0 },
+        "compiled_wall_clock_per_entity_ms": { "type": "number", "const": 2000.0 },
+        "wall_clock_reduction_pct": { "type": "number", "minimum": 99.7647, "maximum": 99.7648 }
+      },
+      "additionalProperties": false
+    },
+    "agent_equivocation_decay": {
+      "type": "object",
+      "description": "Multi-step agent equivocation decay R_agent(N) = (1 - epsilon)^N against unit deterministic state-machine reliability, with half-reliability step count and chain energy penalty.",
+      "required": ["per_step_hallucination_rate_epsilon", "agent_chain_steps_n", "agent_chain_reliability_20_steps", "deterministic_state_machine_reliability", "equivocation_deficit_pct", "expected_defective_steps", "half_reliability_steps_continuous", "half_reliability_steps_integer", "max_steps_for_99pct_reliability", "chain_energy_joules", "deterministic_chain_energy_joules", "chain_energy_penalty_ratio"],
+      "properties": {
+        "per_step_hallucination_rate_epsilon": { "type": "number", "const": 0.03 },
+        "agent_chain_steps_n": { "type": "integer", "const": 20 },
+        "agent_chain_reliability_20_steps": { "type": "number", "minimum": 0.543793, "maximum": 0.543795 },
+        "deterministic_state_machine_reliability": { "type": "number", "const": 1.0 },
+        "equivocation_deficit_pct": { "type": "number", "minimum": 45.6205, "maximum": 45.6206 },
+        "expected_defective_steps": { "type": "number", "const": 0.6 },
+        "half_reliability_steps_continuous": { "type": "number", "minimum": 22.7565, "maximum": 22.7567 },
+        "half_reliability_steps_integer": { "type": "integer", "const": 23 },
+        "max_steps_for_99pct_reliability": { "type": "integer", "const": 0 },
+        "chain_energy_joules": { "type": "number", "const": 5000.0 },
+        "deterministic_chain_energy_joules": { "type": "number", "const": 1.0e-8 },
+        "chain_energy_penalty_ratio": { "type": "number", "minimum": 4.999e11, "maximum": 5.001e11 }
+      },
+      "additionalProperties": false
+    },
+    "civilizational_deadweight": {
+      "type": "object",
+      "description": "Off-balance-sheet human-capital destruction (diverted STEM man-years x wage rate) coupled to a deterministic Ashby requisite-variety parity simulation V_op(t)/V_env(t).",
+      "required": ["global_stem_cohort_diverted_millions", "wrapper_diversion_share", "annual_cognitive_deadweight_man_years", "wage_per_man_year_usd", "opportunity_cost_human_capital_billions_per_yr", "ten_year_cumulative_deadweight_usd_b", "deadweight_to_hyperscaler_capex_pct", "deadweight_sensitivity_usd_b", "ashby_variety_headroom_initial", "ashby_variety_retention_per_year", "ashby_environment_variety_growth_per_year", "ashby_parity_breach_year", "ashby_parity_ratio_year_10", "ashby_parity_trajectory"],
+      "properties": {
+        "global_stem_cohort_diverted_millions": { "type": "number", "const": 2.5 },
+        "wrapper_diversion_share": { "type": "number", "const": 0.7 },
+        "annual_cognitive_deadweight_man_years": { "type": "number", "const": 1750000.0 },
+        "wage_per_man_year_usd": { "type": "number", "const": 200000.0 },
+        "opportunity_cost_human_capital_billions_per_yr": { "type": "number", "minimum": 349.99, "maximum": 350.01 },
+        "ten_year_cumulative_deadweight_usd_b": { "type": "number", "minimum": 3499.9, "maximum": 3500.1 },
+        "deadweight_to_hyperscaler_capex_pct": { "type": "number", "minimum": 77.7777, "maximum": 77.7779 },
+        "deadweight_sensitivity_usd_b": { "type": "array", "minItems": 3, "maxItems": 3, "items": { "type": "number", "enum": [250.0, 350.0, 450.0] } },
+        "ashby_variety_headroom_initial": { "type": "number", "const": 1.35 },
+        "ashby_variety_retention_per_year": { "type": "number", "const": 0.958 },
+        "ashby_environment_variety_growth_per_year": { "type": "number", "const": 0.03 },
+        "ashby_parity_breach_year": { "type": "integer", "const": 5 },
+        "ashby_parity_ratio_year_10": { "type": "number", "minimum": 0.65405, "maximum": 0.65407 },
+        "ashby_parity_trajectory": { "type": "array", "minItems": 11, "maxItems": 11, "items": { "type": "number", "minimum": 0.65, "maximum": 1.35 } }
+      },
+      "additionalProperties": false
+    },
+    "shannon_commons_capacity": {
+      "type": "object",
+      "description": "Shannon commons capacity C = log2(1 + S/N) under a 100x synthetic noise-floor inflation of the shared corpus.",
+      "required": ["shannon_commons_noise_inflation_factor", "baseline_commons_snr", "capacity_baseline_bits", "capacity_inflated_bits", "capacity_collapse_pct"],
+      "properties": {
+        "shannon_commons_noise_inflation_factor": { "type": "number", "const": 100.0 },
+        "baseline_commons_snr": { "type": "number", "const": 100.0 },
+        "capacity_baseline_bits": { "type": "number", "minimum": 6.6582, "maximum": 6.6583 },
+        "capacity_inflated_bits": { "type": "number", "const": 1.0 },
+        "capacity_collapse_pct": { "type": "number", "minimum": 84.9809, "maximum": 84.9811 }
+      },
+      "additionalProperties": false
+    },
+    "acemoglu_macro_bounds": {
+      "type": "object",
+      "description": "Ten-year exposed task share, maximum TFP, and maximum GDP uplift bounds, with the implied cost reduction per exposed task.",
+      "required": ["acemoglu_10yr_task_share_pct", "acemoglu_10yr_tfp_max_pct", "acemoglu_10yr_gdp_max_pct", "implied_cost_reduction_per_exposed_task", "tfp_to_gdp_ratio"],
+      "properties": {
+        "acemoglu_10yr_task_share_pct": { "type": "number", "const": 4.6 },
+        "acemoglu_10yr_tfp_max_pct": { "type": "number", "const": 0.71 },
+        "acemoglu_10yr_gdp_max_pct": { "type": "number", "const": 1.1 },
+        "implied_cost_reduction_per_exposed_task": { "type": "number", "minimum": 0.154347, "maximum": 0.154349 },
+        "tfp_to_gdp_ratio": { "type": "number", "minimum": 0.645454, "maximum": 0.645456 }
+      },
+      "additionalProperties": false
+    },
+    "revenue_deficit": {
+      "type": "object",
+      "description": "Hyperscaler AI capex run-rate against the required AI revenue base and realistic compiler/airlock revenue, yielding the annual deficit and coverage ratio.",
+      "required": ["hyperscaler_annual_ai_capex_b", "sequoia_required_revenue_b", "realistic_compiler_and_airlock_revenue_b", "annual_revenue_deficit_b", "revenue_coverage_ratio_pct", "capex_to_realistic_revenue_multiple"],
+      "properties": {
+        "hyperscaler_annual_ai_capex_b": { "type": "number", "const": 450.0 },
+        "sequoia_required_revenue_b": { "type": "number", "const": 600.0 },
+        "realistic_compiler_and_airlock_revenue_b": { "type": "number", "const": 75.0 },
+        "annual_revenue_deficit_b": { "type": "number", "const": 525.0 },
+        "revenue_coverage_ratio_pct": { "type": "number", "minimum": 12.499, "maximum": 12.501 },
+        "capex_to_realistic_revenue_multiple": { "type": "number", "minimum": 5.999, "maximum": 6.001 }
+      },
+      "additionalProperties": false
+    },
+    "capital_structure_waterfall": {
+      "type": "object",
+      "description": "CoreWeave $42.15B pro-forma GPU debt stack, cumulative parent recourse box, breakeven EV thresholds, and stressed-EV tranche_recovery(ev) output in dollars and cents-on-the-dollar.",
+      "required": ["tranche_1_senior_ddtl_usd_b", "tranche_2_recourse_lease_box_usd_b", "tranche_3_non_recourse_spv_usd_b", "pro_forma_total_usd_b", "cumulative_recourse_usd_b", "recourse_share_pct", "non_recourse_share_pct", "breakeven_ev_thresholds_usd_b", "scenarios", "blue_owl_dual_ai_saas_exposure_low_usd_b", "blue_owl_dual_ai_saas_exposure_high_usd_b", "blue_owl_exposure_midpoint_to_recourse_multiple"],
+      "properties": {
+        "tranche_1_senior_ddtl_usd_b": { "type": "number", "const": 18.5 },
+        "tranche_2_recourse_lease_box_usd_b": { "type": "number", "const": 19.93 },
+        "tranche_3_non_recourse_spv_usd_b": { "type": "number", "const": 3.72 },
+        "pro_forma_total_usd_b": { "type": "number", "const": 42.15 },
+        "cumulative_recourse_usd_b": { "type": "number", "const": 38.43 },
+        "recourse_share_pct": { "type": "number", "minimum": 91.1743, "maximum": 91.1800 },
+        "non_recourse_share_pct": { "type": "number", "minimum": 8.8200, "maximum": 8.8257 },
+        "breakeven_ev_thresholds_usd_b": {
+          "type": "object",
+          "required": ["tranche_1_senior_ddtl", "tranche_2_recourse_lease_box", "tranche_3_non_recourse_spv"],
+          "properties": {
+            "tranche_1_senior_ddtl": { "type": "number", "const": 18.5 },
+            "tranche_2_recourse_lease_box": { "type": "number", "const": 38.43 },
+            "tranche_3_non_recourse_spv": { "type": "number", "const": 42.15 }
+          },
+          "additionalProperties": false
+        },
+        "scenarios": { "type": "array", "minItems": 4, "maxItems": 4, "items": { "$ref": "#/$defs/recovery_scenario" } },
+        "blue_owl_dual_ai_saas_exposure_low_usd_b": { "type": "number", "const": 76.56 },
+        "blue_owl_dual_ai_saas_exposure_high_usd_b": { "type": "number", "const": 99.34 },
+        "blue_owl_exposure_midpoint_to_recourse_multiple": { "type": "number", "minimum": 2.2885, "maximum": 2.2886 }
+      },
+      "additionalProperties": false
+    },
+    "security_master_index": {
+      "type": "object",
+      "description": "Audit receipt for the multi-counterparty security-master cross-index.",
+      "required": ["counterparty_entries", "sec_registered_ciks"],
+      "properties": {
+        "counterparty_entries": { "type": "integer", "const": 15 },
+        "sec_registered_ciks": { "type": "integer", "minimum": 12, "maximum": 15 }
+      },
+      "additionalProperties": false
+    },
+    "catalyst_calendar_audit": {
+      "type": "object",
+      "description": "Audit receipt for the hard-date catalyst calendar: entry count, floor date, and aggregate dated hard flows.",
+      "required": ["catalyst_entries", "calendar_floor", "dated_hard_flows_usd_b"],
+      "properties": {
+        "catalyst_entries": { "type": "integer", "const": 6 },
+        "calendar_floor": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+        "dated_hard_flows_usd_b": { "type": "number", "minimum": 37.329, "maximum": 37.331 }
+      },
+      "additionalProperties": false
+    }
+  },
+  "$defs": {
+    "counterparty_entry": {
+      "type": "object",
+      "description": "One regulated-perimeter counterparty: exact legal name, ticker, exchange, SEC CIK, instrument role, and exposure amount.",
+      "required": ["entity", "role", "ticker", "exchange", "cik", "instrument", "amount_usd_b"],
+      "properties": {
+        "entity": { "type": "string", "minLength": 2 },
+        "role": { "type": "string", "pattern": "^[a-z0-9_]+$" },
+        "ticker": { "type": ["string", "null"], "pattern": "^[A-Z]{1,5}$" },
+        "exchange": { "type": ["string", "null"], "enum": ["NASDAQ", "NYSE", null] },
+        "cik": { "type": "string", "anyOf": [{ "pattern": "^\\d{10}$" }, { "enum": ["private", "n_a"] }] },
+        "instrument": { "type": "string", "minLength": 2 },
+        "amount_usd_b": { "type": ["number", "null"], "exclusiveMinimum": 0.0 }
+      },
+      "additionalProperties": false
+    },
+    "catalyst_entry": {
+      "type": "object",
+      "description": "One hard-date catalyst: ISO 8601 date, event description, evidentiary basis, and dated dollar flow.",
+      "required": ["date", "event", "basis", "usd_b"],
+      "properties": {
+        "date": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+        "event": { "type": "string", "minLength": 10 },
+        "basis": { "type": "string", "enum": ["estimated_filing_window", "sec_note_10_schedule", "contractual_maturity"] },
+        "usd_b": { "type": ["number", "null"], "exclusiveMinimum": 0.0 }
+      },
+      "additionalProperties": false
+    },
+    "recovery_scenario": {
+      "type": "object",
+      "description": "tranche_recovery(ev_billions) output at one stressed enterprise value: dollar recovery and cents-on-the-dollar per tranche, plus aggregate and recourse-box recovery.",
+      "required": ["ev_usd_b", "tranche_1_usd_b", "tranche_1_cents_on_dollar", "tranche_2_usd_b", "tranche_2_cents_on_dollar", "tranche_3_usd_b", "tranche_3_cents_on_dollar", "aggregate_cents_on_dollar", "recourse_cents_on_dollar"],
+      "properties": {
+        "ev_usd_b": { "type": "number", "enum": [15.0, 25.0, 38.43, 42.15] },
+        "tranche_1_usd_b": { "type": "number", "minimum": 0.0, "maximum": 18.5 },
+        "tranche_1_cents_on_dollar": { "type": "number", "minimum": 0.0, "maximum": 100.0 },
+        "tranche_2_usd_b": { "type": "number", "minimum": 0.0, "maximum": 19.93 },
+        "tranche_2_cents_on_dollar": { "type": "number", "minimum": 0.0, "maximum": 100.0 },
+        "tranche_3_usd_b": { "type": "number", "minimum": 0.0, "maximum": 3.72 },
+        "tranche_3_cents_on_dollar": { "type": "number", "minimum": 0.0, "maximum": 100.0 },
+        "aggregate_cents_on_dollar": { "type": "number", "minimum": 0.0, "maximum": 100.0 },
+        "recourse_cents_on_dollar": { "type": "number", "minimum": 0.0, "maximum": 100.0 }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

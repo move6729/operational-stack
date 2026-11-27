@@ -1,0 +1,175 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:defensive_sar_safe_harbor_314b_debanking_cascade.json",
+  "title": "Defensive SAR Safe Harbor & 314(b) Debanking Cascade - Locked Verification Schema",
+  "description": "Deterministic verification contract for proofs/verify_defensive_sar_safe_harbor_314b_debanking_cascade.py. Anchors all 35 locked v1.0 constants and the 5-vector pass receipt: (1) bank loss-to-fee asymmetry and critical audit-probability thresholds p* = F / (L + F) for JPMorgan ($365M TVPA loss vs. $3M fee, p* = 0.00815217) and Deutsche Bank ($225M NYDFS/class loss vs. $2M fee, p* = 0.00881057), (2) faithless-servant clawback ($10M/yr x 8 yr = $80M) and relationship-manager total downside with contribution ($445M), (3) FinCEN bounty / CCO salary defection ratio (33.333333x-100x), (4) 314(b) five-hop correspondent debanking cascade (survival 1.024e-07, certainty 0.9999998976) with contempt-fine dominance, (5) UHNW liquidity cascade ($200M shortfall) and forced-liquidation wealth destruction ($160M = 32% of $500M NAV).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["spec_id", "proof_file", "locked_constants_and_outputs", "vectors", "debanking_cascade_outputs", "all_vectors_pass"],
+  "properties": {
+    "spec_id": { "const": "SPEC-DEFENSIVE-SAR-SAFE-HARBOR-314B-DEBANKING-CASCADE-v1.0" },
+    "proof_file": { "const": "proofs/verify_defensive_sar_safe_harbor_314b_debanking_cascade.py" },
+    "locked_constants_and_outputs": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "jpm_class_settlement_usd", "jpm_usvi_settlement_usd",
+        "jpm_total_tvpa_loss_usd", "jpm_annual_relationship_fee_usd",
+        "jpm_loss_to_fee_ratio", "jpm_critical_audit_prob_threshold",
+        "db_nydfs_penalty_usd", "db_class_settlement_usd",
+        "db_total_loss_usd", "db_annual_relationship_fee_usd",
+        "db_loss_to_fee_ratio", "db_critical_audit_prob_threshold",
+        "staley_annual_comp_usd", "staley_disloyalty_years",
+        "staley_faithless_servant_clawback_usd",
+        "rm_total_downside_with_contribution_usd",
+        "cco_salary_usd", "fincen_bounty_min_usd", "fincen_bounty_max_usd",
+        "analyst_bounty_to_cco_salary_ratio_min",
+        "analyst_bounty_to_cco_salary_ratio_max",
+        "post_314b_bank_accept_prob", "correspondent_bank_hops_m",
+        "five_hop_banking_survival_prob", "five_hop_debanking_certainty",
+        "correspondent_contempt_daily_fine_usd",
+        "uhnw_nav_baseline_usd", "lombard_credit_line_usd",
+        "unfunded_lp_commitments_usd", "liquid_cash_buffer_usd",
+        "liquidity_shortfall_on_debanking_usd",
+        "secondary_lp_fire_sale_haircut", "defaulting_lp_forfeiture_rate",
+        "paid_in_lp_capital_at_risk_usd",
+        "forced_liquidation_wealth_destruction_usd"
+      ],
+      "properties": {
+        "jpm_class_settlement_usd": { "const": 290000000.0 },
+        "jpm_usvi_settlement_usd": { "const": 75000000.0 },
+        "jpm_total_tvpa_loss_usd": { "const": 365000000.0 },
+        "jpm_annual_relationship_fee_usd": { "const": 3000000.0 },
+        "jpm_loss_to_fee_ratio": { "const": 121.666667 },
+        "jpm_critical_audit_prob_threshold": { "const": 0.00815217 },
+        "db_nydfs_penalty_usd": { "const": 150000000.0 },
+        "db_class_settlement_usd": { "const": 75000000.0 },
+        "db_total_loss_usd": { "const": 225000000.0 },
+        "db_annual_relationship_fee_usd": { "const": 2000000.0 },
+        "db_loss_to_fee_ratio": { "const": 112.5 },
+        "db_critical_audit_prob_threshold": { "const": 0.00881057 },
+        "staley_annual_comp_usd": { "const": 10000000.0 },
+        "staley_disloyalty_years": { "const": 8 },
+        "staley_faithless_servant_clawback_usd": { "const": 80000000.0 },
+        "rm_total_downside_with_contribution_usd": { "const": 445000000.0 },
+        "cco_salary_usd": { "const": 450000.0 },
+        "fincen_bounty_min_usd": { "const": 15000000.0 },
+        "fincen_bounty_max_usd": { "const": 45000000.0 },
+        "analyst_bounty_to_cco_salary_ratio_min": { "const": 33.333333 },
+        "analyst_bounty_to_cco_salary_ratio_max": { "const": 100.0 },
+        "post_314b_bank_accept_prob": { "const": 0.04 },
+        "correspondent_bank_hops_m": { "const": 5 },
+        "five_hop_banking_survival_prob": { "const": 1.024e-07 },
+        "five_hop_debanking_certainty": { "const": 0.9999998976 },
+        "correspondent_contempt_daily_fine_usd": { "const": 50000.0 },
+        "uhnw_nav_baseline_usd": { "const": 500000000.0 },
+        "lombard_credit_line_usd": { "const": 125000000.0 },
+        "unfunded_lp_commitments_usd": { "const": 100000000.0 },
+        "liquid_cash_buffer_usd": { "const": 25000000.0 },
+        "liquidity_shortfall_on_debanking_usd": { "const": 200000000.0 },
+        "secondary_lp_fire_sale_haircut": { "const": 0.4 },
+        "defaulting_lp_forfeiture_rate": { "const": 0.5 },
+        "paid_in_lp_capital_at_risk_usd": { "const": 160000000.0 },
+        "forced_liquidation_wealth_destruction_usd": { "const": 160000000.0 }
+      }
+    },
+    "vectors": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 5,
+      "prefixItems": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["vector", "name", "status", "checks"],
+          "properties": {
+            "vector": { "const": 1 },
+            "name": { "const": "bank_loss_to_fee_asymmetry_audit_thresholds" },
+            "status": { "const": "PASS" },
+            "checks": { "$ref": "#/$defs/checks" }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["vector", "name", "status", "checks"],
+          "properties": {
+            "vector": { "const": 2 },
+            "name": { "const": "faithless_servant_clawback_rm_downside" },
+            "status": { "const": "PASS" },
+            "checks": { "$ref": "#/$defs/checks" }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["vector", "name", "status", "checks"],
+          "properties": {
+            "vector": { "const": 3 },
+            "name": { "const": "fincen_bounty_cco_salary_defection_ratio" },
+            "status": { "const": "PASS" },
+            "checks": { "$ref": "#/$defs/checks" }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["vector", "name", "status", "checks"],
+          "properties": {
+            "vector": { "const": 4 },
+            "name": { "const": "s314b_five_hop_debanking_cascade" },
+            "status": { "const": "PASS" },
+            "checks": { "$ref": "#/$defs/checks" }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["vector", "name", "status", "checks"],
+          "properties": {
+            "vector": { "const": 5 },
+            "name": { "const": "uhnw_liquidity_forced_liquidation_destruction" },
+            "status": { "const": "PASS" },
+            "checks": { "$ref": "#/$defs/checks" }
+          }
+        }
+      ],
+      "items": false
+    },
+    "debanking_cascade_outputs": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "jpm_p_star_indifference_usd", "db_p_star_indifference_usd",
+        "contempt_fine_annualized_usd", "wealth_destruction_pct_of_nav",
+        "regime_defection_audit_prob"
+      ],
+      "properties": {
+        "jpm_p_star_indifference_usd": { "const": 2975543.48 },
+        "db_p_star_indifference_usd": { "const": 1982378.85 },
+        "contempt_fine_annualized_usd": { "const": 18250000.0 },
+        "wealth_destruction_pct_of_nav": { "const": 0.32 },
+        "regime_defection_audit_prob": { "const": 0.01 }
+      }
+    },
+    "all_vectors_pass": { "const": true }
+  },
+  "$defs": {
+    "checks": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name", "computed", "expected", "tolerance", "pass"],
+        "properties": {
+          "name": { "type": "string", "minLength": 1 },
+          "computed": { "type": ["number", "string"] },
+          "expected": { "type": ["number", "string"] },
+          "tolerance": { "type": "number", "minimum": 0 },
+          "pass": { "const": true }
+        }
+      }
+    }
+  }
+}

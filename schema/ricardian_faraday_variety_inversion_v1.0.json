@@ -1,0 +1,268 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:ricardian_faraday_variety_inversion_v1.0.json",
+  "title": "Ricardian Multi-Agent Variety Inversion, Faraday Protocol & Shadow-Library Liquidation Schema",
+  "description": "JSON Schema Draft 2020-12 validating Ashby Requisite Variety inversion under ideological monoculture, Pleistocene D_acc operant conditioning decay, Ricardian OODA swarm cost ratios, Sino-US physical/IP Cournot externalities, and the $75,000.00M Frontier AI Wrapper capital structure waterfall.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "specification_id",
+    "version",
+    "jurisdiction_context",
+    "statutory_compliance",
+    "ashby_variety_inversion_metrics",
+    "pleistocene_dacc_operant_conditioning_metrics",
+    "ricardian_ooda_swarm_economics",
+    "sino_us_physical_and_ip_liquidation_ledger",
+    "debt_stack_and_fulcrum_waterfall",
+    "catalyst_calendar",
+    "entity_and_instrument_ids"
+  ],
+  "properties": {
+    "specification_id": {
+      "type": "string",
+      "const": "SPEC-RICARDIAN-FARADAY-VARIETY-INVERSION-v1.0"
+    },
+    "version": {
+      "type": "string",
+      "const": "1.0"
+    },
+    "jurisdiction_context": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "enum": ["US", "EU", "GB", "CN", "BM", "KY"]
+      }
+    },
+    "statutory_compliance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "cfaa_18_usc_1030_compliant",
+        "itar_22_cfr_120_34_exempt",
+        "ear_15_cfr_734_7_exempt",
+        "milkovich_497_us_1_disclosed_facts"
+      ],
+      "properties": {
+        "cfaa_18_usc_1030_compliant": { "type": "boolean", "const": true },
+        "itar_22_cfr_120_34_exempt": { "type": "boolean", "const": true },
+        "ear_15_cfr_734_7_exempt": { "type": "boolean", "const": true },
+        "milkovich_497_us_1_disclosed_facts": { "type": "boolean", "const": true }
+      }
+    },
+    "ashby_variety_inversion_metrics": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "n_nodes",
+        "rho_mono",
+        "rho_bicam",
+        "n_eff_mono",
+        "n_eff_bicam",
+        "gamma_ashby"
+      ],
+      "properties": {
+        "n_nodes": { "type": "integer", "const": 1000 },
+        "rho_mono": { "type": "number", "const": 0.85 },
+        "rho_bicam": { "type": "number", "const": 0.05 },
+        "n_eff_mono": { "type": "number", "const": 1.176263 },
+        "n_eff_bicam": { "type": "number", "const": 19.627085 },
+        "gamma_ashby": { "type": "number", "const": 16.685966 }
+      }
+    },
+    "pleistocene_dacc_operant_conditioning_metrics": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "gamma_dacc",
+        "turns",
+        "p_ood_chat",
+        "extinction_rate_chat_pct",
+        "p_ood_faraday",
+        "tokens_chat_invariant"
+      ],
+      "properties": {
+        "gamma_dacc": { "type": "number", "const": 0.65 },
+        "turns": { "type": "integer", "const": 5 },
+        "p_ood_chat": { "type": "number", "const": 0.0052521875 },
+        "extinction_rate_chat_pct": { "type": "number", "const": 99.4748 },
+        "p_ood_faraday": { "type": "number", "const": 1.0 },
+        "tokens_chat_invariant": { "type": "integer", "const": 0 }
+      }
+    },
+    "ricardian_ooda_swarm_economics": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "cum_in_tokens_10_turn",
+        "c_mono_std_usd",
+        "c_mono_high_usd",
+        "c_scout_usd",
+        "c_gov_usd",
+        "c_hands_usd",
+        "c_swarm_std_usd",
+        "c_swarm_micro_usd",
+        "ooda_mult_std",
+        "ooda_mult_peak"
+      ],
+      "properties": {
+        "cum_in_tokens_10_turn": { "type": "integer", "const": 1455000 },
+        "c_mono_std_usd": { "type": "number", "const": 3.11 },
+        "c_mono_high_usd": { "type": "number", "const": 6.22 },
+        "c_scout_usd": { "type": "number", "const": 0.0067 },
+        "c_gov_usd": { "type": "number", "const": 0.0128 },
+        "c_hands_usd": { "type": "number", "const": 0.004899 },
+        "c_swarm_std_usd": { "type": "number", "const": 0.024399 },
+        "c_swarm_micro_usd": { "type": "number", "const": 0.00618 },
+        "ooda_mult_std": { "type": "number", "const": 127.46424 },
+        "ooda_mult_peak": { "type": "number", "const": 1006.472492 }
+      }
+    },
+    "sino_us_physical_and_ip_liquidation_ledger": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "shipbuilding_multiple",
+        "power_grid_multiple",
+        "cournot_mfg_externality_b",
+        "cournot_rd_externality_b",
+        "cournot_total_externality_b",
+        "stigmergic_pretrain_leverage",
+        "shadow_library_liquidated_sink_m",
+        "ambient_distill_share",
+        "ambient_distill_rev_m",
+        "snr_amplification"
+      ],
+      "properties": {
+        "shipbuilding_multiple": { "type": "number", "const": 232.5 },
+        "power_grid_multiple": { "type": "number", "const": 2.226631 },
+        "cournot_mfg_externality_b": { "type": "number", "const": 32.5 },
+        "cournot_rd_externality_b": { "type": "number", "const": 7.5 },
+        "cournot_total_externality_b": { "type": "number", "const": 40.0 },
+        "stigmergic_pretrain_leverage": { "type": "number", "const": 1345.050215 },
+        "shadow_library_liquidated_sink_m": { "type": "number", "const": 1519.5 },
+        "ambient_distill_share": { "type": "number", "const": 0.859 },
+        "ambient_distill_rev_m": { "type": "number", "const": 28420.874 },
+        "snr_amplification": { "type": "number", "const": 396.0 }
+      }
+    },
+    "debt_stack_and_fulcrum_waterfall": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "total_capital_stack_m",
+        "stressed_ev_m",
+        "fulcrum_tranche_id",
+        "tranches"
+      ],
+      "properties": {
+        "total_capital_stack_m": { "type": "number", "const": 75000.0 },
+        "stressed_ev_m": { "type": "number", "const": 22500.0 },
+        "fulcrum_tranche_id": { "type": "string", "const": "T1" },
+        "tranches": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 4,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "tranche_id",
+              "name",
+              "principal_m",
+              "breakeven_ev_m",
+              "stressed_recovery_m",
+              "stressed_recovery_cents"
+            ],
+            "properties": {
+              "tranche_id": { "type": "string", "enum": ["T1", "T2", "T3", "T4"] },
+              "name": { "type": "string" },
+              "principal_m": { "type": "number", "minimum": 0 },
+              "breakeven_ev_m": { "type": "number", "minimum": 0 },
+              "stressed_recovery_m": { "type": "number", "minimum": 0 },
+              "stressed_recovery_cents": { "type": "number", "minimum": 0, "maximum": 100 }
+            }
+          }
+        }
+      }
+    },
+    "catalyst_calendar": {
+      "type": "array",
+      "minItems": 4,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["date", "event", "docket_or_filing", "credit_impact"],
+        "properties": {
+          "date": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" },
+          "event": { "type": "string" },
+          "docket_or_filing": { "type": "string" },
+          "credit_impact": { "type": "string" }
+        }
+      }
+    },
+    "entity_and_instrument_ids": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "primary_targets_and_cloud_parents",
+        "public_bdc_co_lenders",
+        "insurance_balance_sheets_and_sidecars",
+        "pcaob_auditors_and_valuation_agents",
+        "foia_public_pension_lps_and_consultants",
+        "trustees_rating_agencies_and_court_dockets"
+      ],
+      "properties": {
+        "primary_targets_and_cloud_parents": {
+          "type": "array",
+          "minItems": 4,
+          "items": { "$ref": "#/$defs/entity_record" }
+        },
+        "public_bdc_co_lenders": {
+          "type": "array",
+          "minItems": 5,
+          "items": { "$ref": "#/$defs/entity_record" }
+        },
+        "insurance_balance_sheets_and_sidecars": {
+          "type": "array",
+          "minItems": 3,
+          "items": { "$ref": "#/$defs/entity_record" }
+        },
+        "pcaob_auditors_and_valuation_agents": {
+          "type": "array",
+          "minItems": 4,
+          "items": { "$ref": "#/$defs/entity_record" }
+        },
+        "foia_public_pension_lps_and_consultants": {
+          "type": "array",
+          "minItems": 4,
+          "items": { "$ref": "#/$defs/entity_record" }
+        },
+        "trustees_rating_agencies_and_court_dockets": {
+          "type": "array",
+          "minItems": 4,
+          "items": { "$ref": "#/$defs/entity_record" }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "entity_record": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["legal_name", "role"],
+      "properties": {
+        "legal_name": { "type": "string" },
+        "ticker": { "type": "string" },
+        "cik": { "type": "string", "pattern": "^[0-9]{10}$" },
+        "crd": { "type": "string" },
+        "sec_file_number": { "type": "string" },
+        "pcaob_id": { "type": "string" },
+        "naic_code": { "type": "string" },
+        "docket_id": { "type": "string" },
+        "role": { "type": "string" }
+      }
+    }
+  }
+}

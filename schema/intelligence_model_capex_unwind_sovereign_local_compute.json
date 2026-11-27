@@ -1,0 +1,267 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:intelligence_model_capex_unwind_sovereign_local_compute.json",
+  "title": "Intelligence-Model CAPEX Unwind & Sovereign Local Compute Bundle",
+  "description": "Schema for the 4-file bundle locking the Weyl/Marchenko-Pastur FP8-vs-INT4 spectral model, the unified-memory FP8 roofline and watt floor, and the CoreWeave (CRWV) Q3 2026 RPO-defection tranche waterfall.",
+  "type": "object",
+  "required": [
+    "canonical_metadata",
+    "weyl_marchenko_pastur_spectral_model",
+    "unified_memory_fp8_roofline_and_watt_floor",
+    "coreweave_q3_2026_rpo_defection_waterfall",
+    "catalyst_calendar",
+    "six_ring_security_master_cross_index"
+  ],
+  "properties": {
+    "canonical_metadata": { "$ref": "#/$defs/canonical_metadata" },
+    "weyl_marchenko_pastur_spectral_model": { "$ref": "#/$defs/weyl_marchenko_pastur_spectral_model" },
+    "unified_memory_fp8_roofline_and_watt_floor": { "$ref": "#/$defs/unified_memory_fp8_roofline_and_watt_floor" },
+    "coreweave_q3_2026_rpo_defection_waterfall": { "$ref": "#/$defs/coreweave_q3_2026_rpo_defection_waterfall" },
+    "catalyst_calendar": { "$ref": "#/$defs/catalyst_calendar" },
+    "six_ring_security_master_cross_index": { "$ref": "#/$defs/six_ring_security_master_cross_index" }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "canonical_metadata": {
+      "type": "object",
+      "required": [
+        "canonical_specification",
+        "target_architectures",
+        "cross_references",
+        "rag_indexing_vector",
+        "empirical_statutory_physical_baseline",
+        "by",
+        "license",
+        "author_position_disclosure"
+      ],
+      "properties": {
+        "canonical_specification": {
+          "type": "string",
+          "pattern": "^SPEC-[A-Z0-9-]+-v1\\.0$"
+        },
+        "target_architectures": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string" }
+        },
+        "cross_references": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "rag_indexing_vector": { "type": "string" },
+        "empirical_statutory_physical_baseline": { "type": "string" },
+        "by": {
+          "type": "string",
+          "const": "Operational Stack Cybernetics Group (Principal Mandates & 48-72 Hr Independent Red-Team Briefs: move6729@proton.me)"
+        },
+        "license": { "type": "string", "const": "Unlicense" },
+        "author_position_disclosure": {
+          "type": "object",
+          "required": ["long_positions", "adverse_positions", "non_solicitation"],
+          "properties": {
+            "long_positions": {
+              "type": "array",
+              "items": { "enum": ["GOOGL", "GOOG", "BRK.A", "BRK.B"] }
+            },
+            "adverse_positions": {
+              "type": "string",
+              "pattern": "^0 position"
+            },
+            "non_solicitation": { "type": "boolean", "const": true }
+          }
+        }
+      }
+    },
+    "weyl_marchenko_pastur_spectral_model": {
+      "type": "object",
+      "required": [
+        "int4_quantization_error_bound",
+        "fp8_e4m3_error_bound",
+        "weyl_tail_singular_value_sigma",
+        "int4_tail_snr",
+        "fp8_tail_snr",
+        "weyl_fp8_vs_int4_precision_ratio"
+      ],
+      "properties": {
+        "int4_quantization_error_bound": { "type": "number", "const": 0.0625 },
+        "fp8_e4m3_error_bound": { "type": "number", "const": 0.00390625 },
+        "weyl_tail_singular_value_sigma": { "type": "number", "const": 0.035 },
+        "int4_tail_snr": { "type": "number", "const": 0.56 },
+        "fp8_tail_snr": { "type": "number", "const": 8.96 },
+        "weyl_fp8_vs_int4_precision_ratio": { "type": "number", "const": 16.0 }
+      }
+    },
+    "unified_memory_fp8_roofline_and_watt_floor": {
+      "type": "object",
+      "required": ["tier0_prosumer", "tier1b_workstation", "h200_4x_reference", "sovereign_hybrid_opex"],
+      "properties": {
+        "tier0_prosumer": {
+          "type": "object",
+          "required": ["capex_usd", "monthly_tco_usd", "moe_total_fp8_gb", "moe_active_fp8_gb"],
+          "properties": {
+            "capex_usd": { "type": "number", "const": 1200.0 },
+            "monthly_tco_usd": { "type": "number", "const": 35.2 },
+            "moe_total_fp8_gb": { "type": "number", "const": 34.5 },
+            "moe_active_fp8_gb": { "type": "number", "const": 3.0 }
+          }
+        },
+        "tier1b_workstation": {
+          "type": "object",
+          "required": ["capex_usd", "monthly_capex_amort_usd", "monthly_power_usd", "monthly_total_tco_usd", "bus_bandwidth_gb_s", "moe_total_fp8_gb", "moe_active_fp8_gb", "theoretical_roofline_tok_s"],
+          "properties": {
+            "capex_usd": { "type": "number", "const": 5599.0 },
+            "monthly_capex_amort_usd": { "type": "number", "const": 155.53 },
+            "monthly_power_usd": { "type": "number", "const": 1.15 },
+            "monthly_total_tco_usd": { "type": "number", "const": 156.68 },
+            "bus_bandwidth_gb_s": { "type": "number", "const": 800.0 },
+            "moe_total_fp8_gb": { "type": "number", "const": 320.0 },
+            "moe_active_fp8_gb": { "type": "number", "const": 18.0 },
+            "theoretical_roofline_tok_s": { "type": "number", "const": 44.4444 }
+          }
+        },
+        "h200_4x_reference": {
+          "type": "object",
+          "required": ["capex_usd", "monthly_tco_usd", "to_local_fp8_tco_ratio"],
+          "properties": {
+            "capex_usd": { "type": "number", "const": 140000.0 },
+            "monthly_tco_usd": { "type": "number", "const": 3913.08 },
+            "to_local_fp8_tco_ratio": { "type": "number", "const": 24.975 }
+          }
+        },
+        "sovereign_hybrid_opex": {
+          "type": "object",
+          "required": ["neocloud_gpu_atc_usd_per_hr", "ch11_srmc_spot_floor_usd_per_hr", "spot_deflation_pct", "local_active_marginal_watt_floor_usd_per_hr", "local_vs_ch11_srmc_floor_ratio", "annual_local_fp8_opex_usd", "annual_spot_burst_1000hr_usd", "annual_sovereign_hybrid_opex_usd", "annual_100_person_corp_dept_usd", "coasean_execution_asymmetry_ratio"],
+          "properties": {
+            "neocloud_gpu_atc_usd_per_hr": { "type": "number", "const": 2.18 },
+            "ch11_srmc_spot_floor_usd_per_hr": { "type": "number", "const": 0.18 },
+            "spot_deflation_pct": { "type": "number", "const": 91.7431 },
+            "local_active_marginal_watt_floor_usd_per_hr": { "type": "number", "const": 0.008 },
+            "local_vs_ch11_srmc_floor_ratio": { "type": "number", "const": 22.5 },
+            "annual_local_fp8_opex_usd": { "type": "number", "const": 1880.16 },
+            "annual_spot_burst_1000hr_usd": { "type": "number", "const": 180.0 },
+            "annual_sovereign_hybrid_opex_usd": { "type": "number", "const": 2060.16 },
+            "annual_100_person_corp_dept_usd": { "type": "number", "const": 25000000.0 },
+            "coasean_execution_asymmetry_ratio": { "type": "number", "const": 12134.9796 }
+          }
+        }
+      }
+    },
+    "coreweave_q3_2026_rpo_defection_waterfall": {
+      "type": "object",
+      "required": ["q2_2026", "q3_2026", "debt_stack", "rpo_pv_conversion_factor", "defection_scenarios"],
+      "properties": {
+        "q2_2026": {
+          "type": "object",
+          "required": ["debt_usd_m", "rpo_usd_m", "rpo_to_debt_coverage_ratio"],
+          "properties": {
+            "debt_usd_m": { "type": "number", "const": 35551.0 },
+            "rpo_usd_m": { "type": "number", "const": 103700.0 },
+            "rpo_to_debt_coverage_ratio": { "type": "number", "const": 2.9169 }
+          }
+        },
+        "q3_2026": {
+          "type": "object",
+          "required": ["debt_usd_m", "operating_leases_usd_m", "rpo_usd_m", "rpo_to_debt_coverage_ratio", "rpo_months_49_to_86_usd_m"],
+          "properties": {
+            "debt_usd_m": { "type": "number", "const": 47505.0 },
+            "operating_leases_usd_m": { "type": "number", "const": 18697.0 },
+            "rpo_usd_m": { "type": "number", "const": 132300.0 },
+            "rpo_to_debt_coverage_ratio": { "type": "number", "const": 2.785 },
+            "rpo_months_49_to_86_usd_m": { "type": "number", "const": 34398.0 }
+          }
+        },
+        "debt_stack": {
+          "type": "array",
+          "minItems": 4,
+          "items": {
+            "type": "object",
+            "required": ["tier", "name", "principal_usd_m", "collateral_guarantor_box", "seniority", "breakeven_ev_threshold_usd_m"],
+            "properties": {
+              "tier": { "type": "integer", "minimum": 1, "maximum": 4 },
+              "name": { "type": "string" },
+              "principal_usd_m": { "type": "number", "exclusiveMinimum": 0 },
+              "collateral_guarantor_box": { "type": "string" },
+              "seniority": { "type": "string" },
+              "breakeven_ev_threshold_usd_m": { "type": "number", "exclusiveMinimum": 0 }
+            }
+          }
+        },
+        "rpo_pv_conversion_factor": { "type": "number", "const": 0.20396825 },
+        "residual_salvage_base_ev_usd_m": { "type": "number", "const": 6500.0 },
+        "defection_scenarios": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["scenario", "defection_pct", "ev_usd_m", "tranche_recovery"],
+            "properties": {
+              "scenario": { "enum": ["mid_unwind", "stressed_unwind"] },
+              "defection_pct": { "type": "number", "minimum": 0, "maximum": 100 },
+              "ev_usd_m": { "type": "number", "exclusiveMinimum": 0 },
+              "tranche_recovery": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": ["tier", "recovery_usd_m", "recovery_cents"],
+                  "properties": {
+                    "tier": { "type": "integer", "minimum": 1, "maximum": 4 },
+                    "recovery_usd_m": { "type": "number", "minimum": 0 },
+                    "recovery_cents": { "type": "number", "minimum": 0, "maximum": 100 }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "catalyst_calendar": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["date", "event", "source_document"],
+        "properties": {
+          "date": { "type": "string", "format": "date", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+          "event": { "type": "string" },
+          "source_document": {
+            "type": "string",
+            "pattern": "(10-Q|10-K|8-K|docket|lease|indenture)"
+          }
+        }
+      }
+    },
+    "six_ring_security_master_cross_index": {
+      "type": "object",
+      "required": ["ring_1_primary_targets", "ring_2_bdc_and_credit_lenders", "ring_3_insurance_and_sidecars", "ring_4_auditors_and_valuation", "ring_5_pensions_and_consultants", "ring_6_trustees_agencies_and_dockets"],
+      "properties": {
+        "ring_1_primary_targets": { "type": "array", "items": { "$ref": "#/$defs/entity" } },
+        "ring_2_bdc_and_credit_lenders": { "type": "array", "items": { "$ref": "#/$defs/entity" } },
+        "ring_3_insurance_and_sidecars": { "type": "array", "items": { "$ref": "#/$defs/entity" } },
+        "ring_4_auditors_and_valuation": { "type": "array", "items": { "$ref": "#/$defs/entity" } },
+        "ring_5_pensions_and_consultants": { "type": "array", "items": { "$ref": "#/$defs/entity" } },
+        "ring_6_trustees_agencies_and_dockets": { "type": "array", "items": { "$ref": "#/$defs/entity" } }
+      }
+    },
+    "entity": {
+      "type": "object",
+      "required": ["legal_name", "identifiers"],
+      "properties": {
+        "legal_name": { "type": "string" },
+        "identifiers": {
+          "type": "object",
+          "properties": {
+            "cik": { "type": "string", "pattern": "^\\d{10}$" },
+            "crd": { "type": "string", "pattern": "^\\d+$" },
+            "sec_file_number": { "type": "string", "pattern": "^(80[12]-\\d+|333-\\d+)$" },
+            "pcaob_id": { "type": "string", "pattern": "^\\d+$" },
+            "naic": { "type": "string", "pattern": "^\\d{5}$" },
+            "court_docket": { "type": "string" },
+            "accession_number": { "type": "string", "pattern": "^\\d{10}-\\d{2}-\\d{6}$" }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": true
+    }
+  }
+}

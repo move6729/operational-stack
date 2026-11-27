@@ -1,0 +1,153 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:bifurcation-cybernetic-ia-v1.0.json",
+  "title": "Bifurcation Cybernetic IA Bundle Schema",
+  "type": "object",
+  "required": [
+    "canonical_specification",
+    "jurisdiction_context",
+    "cfaa_compliance_attestation",
+    "entity_and_instrument_ids",
+    "historical_lineage_axioms",
+    "locked_constants",
+    "ashby_variety_partition",
+    "debt_stack_waterfall",
+    "catalyst_calendar"
+  ],
+  "properties": {
+    "canonical_specification": {
+      "const": "SPEC-1956-BIFURCATION-CYBERNETIC-IA-v1.0"
+    },
+    "jurisdiction_context": {
+      "type": "string",
+      "description": "ISO 3166-1 jurisdiction context (e.g., 'US')."
+    },
+    "cfaa_compliance_attestation": {
+      "type": "object",
+      "required": ["authorized_access_only", "statute"],
+      "properties": {
+        "authorized_access_only": { "const": true },
+        "statute": { "const": "18 U.S.C. § 1030" }
+      }
+    },
+    "entity_and_instrument_ids": {
+      "type": "object",
+      "required": ["cik", "ticker"],
+      "properties": {
+        "cik": { "type": "string", "pattern": "^\\d{10}$" },
+        "ticker": { "type": "string" },
+        "crd": { "type": "string" },
+        "naic": { "type": "string", "pattern": "^\\d{5}$" },
+        "pcaob_firm_id": { "type": "string", "pattern": "^\\d+$" },
+        "court_dockets": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "historical_lineage_axioms": {
+      "type": "object",
+      "required": [
+        "dartmouth_1955_rf_grant_usd",
+        "arpa_1963_project_mac_grant_usd",
+        "engelbart_1962_sri_project_id",
+        "ashby_1956_requisite_variety_chapter",
+        "ashby_1956_requisite_variety_page",
+        "ashby_1956_amplifying_regulation_chapter"
+      ],
+      "properties": {
+        "dartmouth_1955_rf_grant_usd": { "const": 7500.0 },
+        "arpa_1963_project_mac_grant_usd": { "const": 2000000.0 },
+        "engelbart_1962_sri_project_id": { "const": 3578 },
+        "ashby_1956_requisite_variety_chapter": { "const": 11 },
+        "ashby_1956_requisite_variety_page": { "const": 207 },
+        "ashby_1956_amplifying_regulation_chapter": { "const": 14 }
+      }
+    },
+    "locked_constants": {
+      "type": "object",
+      "required": [
+        "magai_pv_claim_m_usd",
+        "magai_pv_breakeven_m_usd",
+        "coreweave_liquidity_m_usd",
+        "coreweave_deficit_m_usd",
+        "ashby_ch7_page",
+        "ashby_ch11_page"
+      ],
+      "properties": {
+        "magai_pv_claim_m_usd": { "const": 368.0 },
+        "magai_pv_breakeven_m_usd": { "const": 16518.0 },
+        "coreweave_liquidity_m_usd": { "const": 6862.0 },
+        "coreweave_deficit_m_usd": { "const": 2600.0 },
+        "ashby_ch7_page": { "const": 124 },
+        "ashby_ch11_page": { "const": 207 }
+      }
+    },
+    "ashby_variety_partition": {
+      "type": "object",
+      "required": ["h_d_bits", "ia_sovereignty", "centralized_ai_conditioner"],
+      "properties": {
+        "h_d_bits": { "type": "number" },
+        "ia_sovereignty": {
+          "type": "object",
+          "required": ["h_r_bits", "unregulated_entropy_bits", "agency_loss_pct"],
+          "properties": {
+            "h_r_bits": { "type": "number" },
+            "unregulated_entropy_bits": { "const": 0.0 },
+            "agency_loss_pct": { "const": 0.0 }
+          }
+        },
+        "centralized_ai_conditioner": {
+          "type": "object",
+          "required": ["h_r_bits", "unregulated_entropy_bits", "agency_loss_pct"],
+          "properties": {
+            "h_r_bits": { "type": "number" },
+            "unregulated_entropy_bits": { "const": 7.5 },
+            "agency_loss_pct": { "const": 62.5 }
+          }
+        }
+      }
+    },
+    "debt_stack_waterfall": {
+      "type": "object",
+      "required": [
+        "tranches",
+        "tier1_pool",
+        "tier2_breakeven",
+        "capitalized_discount",
+        "swap_mandate_pct",
+        "stressed_ev_m_usd",
+        "total_stack"
+      ],
+      "properties": {
+        "tranches": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["name", "principal_m_usd", "tier"],
+            "properties": {
+              "name": { "type": "string" },
+              "principal_m_usd": { "type": "number" },
+              "tier": { "type": "integer", "minimum": 1, "maximum": 3 }
+            }
+          }
+        },
+        "tier1_pool": { "const": 13550.0 },
+        "tier2_breakeven": { "const": 16150.0 },
+        "capitalized_discount": { "const": 82.0 },
+        "swap_mandate_pct": { "const": 75.0 },
+        "total_stack": { "const": 16380.0 },
+        "stressed_ev_m_usd": { "const": 9485.0 },
+        "stressed_tier1_cents_on_dollar": { "const": 70.0 }
+      }
+    },
+    "catalyst_calendar": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["date", "event"],
+        "properties": {
+          "date": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+          "event": { "type": "string" }
+        }
+      }
+    }
+  }
+}

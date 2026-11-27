@@ -1,0 +1,280 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:byzantine_unclamp_performative_waste.json",
+  "title": "Byzantine Unclamp & Performative Waste Inversion Verification Schema",
+  "description": "Draft 2020-12 audit schema for proofs/byzantine_unclamp_performative_waste_engine.py. Encodes Invariant 30 (Rorschach Hypothesis Clamp), Invariant 31 (Synthetic Proof-of-Work Inversion), the Zero-Valence Byzantine Unclamping Gate, and the deterministic $500.0M cloud-wrapper capital-structure waterfall with tranche_recovery(ev).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "specification_id",
+    "jurisdiction_context",
+    "cfaa_compliance_attestation",
+    "entity_and_instrument_ids",
+    "invariant_30_rorschach_hypothesis_clamp",
+    "invariant_31_performative_waste_inversion",
+    "zero_valence_byzantine_unclamping_gate",
+    "capital_structure_waterfall",
+    "catalyst_calendar"
+  ],
+  "properties": {
+    "specification_id": { "type": "string", "const": "SPEC-BYZANTINE-UNCLAMP-PERFORMATIVE-WASTE-INVERSION-v1.0" },
+    "jurisdiction_context": { "type": "string", "pattern": "^[A-Z]{2}$" },
+    "cfaa_compliance_attestation": { "type": "boolean", "const": true },
+    "entity_and_instrument_ids": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["ticker", "cik", "court_dockets", "named_tranches", "empirical_specimen", "total_enterprise_debt_stack_usd"],
+      "properties": {
+        "ticker": { "type": "string", "const": "CLOUD_API_COMPLEX_AND_MARKSPACE_BENCHMARK" },
+        "cik": { "type": "string", "const": "0001018724_0000789019_0001652044_BENCHMARK" },
+        "court_dockets": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": { "type": "string" },
+          "contains": { "const": "18-USC-1030-CFAA-AUTHORIZED-CUSTODY-BASELINE" }
+        },
+        "named_tranches": { "type": "array", "minItems": 3, "maxItems": 3, "items": { "type": "string" } },
+        "empirical_specimen": { "type": "string" },
+        "total_enterprise_debt_stack_usd": { "type": "number", "const": 500000000.0, "minimum": 250000000.0 }
+      }
+    },
+    "invariant_30_rorschach_hypothesis_clamp": {
+      "type": "object",
+      "required": [
+        "tau_social_clamped", "tau_social_unclamped", "prior_cooperative", "prior_extractive",
+        "valence_cooperative", "valence_extractive", "likelihood_e_given_cooperative",
+        "likelihood_e_given_extractive", "likelihood_ratio_lambda_e", "clamped_posterior_extractive",
+        "unclamped_posterior_extractive", "expected_loss_clamped", "expected_loss_unclamped",
+        "loss_reduction_ratio"
+      ],
+      "properties": {
+        "tau_social_clamped": { "type": "number", "const": 0.65 },
+        "tau_social_unclamped": { "type": "number", "const": -1.0 },
+        "prior_cooperative": { "type": "number", "const": 0.7 },
+        "prior_extractive": { "type": "number", "const": 0.3 },
+        "valence_cooperative": { "type": "number", "const": 0.85 },
+        "valence_extractive": { "type": "number", "const": -0.6 },
+        "likelihood_e_given_cooperative": { "type": "number", "const": 0.05 },
+        "likelihood_e_given_extractive": { "type": "number", "const": 0.95 },
+        "likelihood_ratio_lambda_e": { "type": "number", "const": 19.0 },
+        "clamped_indicator_extractive": { "type": "integer", "const": 0 },
+        "clamped_posterior_cooperative": { "type": "number", "const": 1.0 },
+        "clamped_posterior_extractive": { "type": "number", "const": 0.0 },
+        "unclamped_posterior_cooperative": { "type": "number", "const": 0.109375 },
+        "unclamped_posterior_extractive": { "type": "number", "const": 0.890625 },
+        "prior_odds_extractive": { "type": "number" },
+        "posterior_odds_extractive": { "type": "number", "const": 8.142857 },
+        "kl_divergence_bits": { "type": "null" },
+        "kl_divergence_diverges_to_infinity": { "type": "boolean", "const": true },
+        "environment_variety_states": { "type": "integer", "const": 2 },
+        "clamped_regulator_variety_states": { "type": "integer", "const": 1 },
+        "unclamped_regulator_variety_states": { "type": "integer", "minimum": 2 },
+        "ashby_parity_satisfied_clamped": { "type": "boolean", "const": false },
+        "ashby_parity_satisfied_unclamped": { "type": "boolean", "const": true },
+        "type_ii_false_negative_rate_clamped": { "type": "number", "const": 1.0 },
+        "type_ii_false_negative_rate_unclamped": { "type": "number", "const": 0.0 },
+        "expected_loss_clamped": { "type": "number", "const": 1000000.0 },
+        "expected_loss_unclamped": { "type": "number", "const": 15000.0 },
+        "loss_reduction_ratio": { "type": "number", "const": 66.666667 }
+      }
+    },
+    "invariant_31_performative_waste_inversion": {
+      "type": "object",
+      "required": [
+        "specimen_id", "formal_properties", "unit_tests", "total_agent_instances", "benchmark_runs",
+        "tokens_per_agent", "total_chat_tokens", "cloud_egress_bytes", "specimen_power_draw_watts",
+        "specimen_completion_rate", "local_acid_chat_tokens", "local_acid_power_watts",
+        "local_acid_latency_us", "local_acid_completion_rate", "watt_inflation_ratio",
+        "eta_specimen", "eta_local_acid", "spearman_rho_volume_vs_eta",
+        "pearson_r_linear_volume_vs_eta", "pearson_r_log10_eta_volume_vs_eta"
+      ],
+      "properties": {
+        "specimen_id": { "type": "string", "const": "markspace_v0.3.0-beta" },
+        "formal_properties": { "type": "integer", "const": 76 },
+        "unit_tests": { "type": "integer", "const": 563 },
+        "agents_per_run_configured_low": { "type": "integer", "const": 525 },
+        "agents_per_run_configured_high": { "type": "integer", "const": 1050 },
+        "total_agent_instances": { "type": "integer", "const": 4010 },
+        "benchmark_runs": { "type": "integer", "const": 21 },
+        "observed_mean_instances_per_run": { "type": "number" },
+        "tokens_per_agent": { "type": "integer", "const": 4000 },
+        "total_chat_tokens": { "type": "integer", "const": 16040000 },
+        "cloud_egress_bytes": { "type": "integer", "const": 64160000 },
+        "specimen_power_draw_watts": { "type": "number", "const": 1200.0 },
+        "specimen_completion_rate": { "type": "number", "const": 0.647 },
+        "specimen_failure_rate": { "type": "number", "const": 0.353 },
+        "specimen_wall_clock_latency_us": { "type": "number" },
+        "local_acid_chat_tokens": { "type": "integer", "const": 0 },
+        "local_acid_cloud_egress_bytes": { "type": "integer", "const": 0 },
+        "local_acid_power_watts": { "type": "number", "const": 0.001 },
+        "local_acid_latency_us": { "type": "number", "const": 50.0 },
+        "local_acid_completion_rate": { "type": "number", "const": 1.0 },
+        "watt_inflation_ratio": { "type": "number", "const": 1200000.0 },
+        "commit_bearing_power_watts": { "type": "number", "const": 776.4 },
+        "eta_specimen": { "type": "number", "const": 1.287996e-06 },
+        "eta_local_acid": { "type": "number", "const": 1.0 },
+        "eta_collapse_orders_of_magnitude": { "type": "number", "minimum": 5.0 },
+        "latency_degradation_factor": { "type": "number", "minimum": 100000.0 },
+        "protocol_regimes": {
+          "type": "array",
+          "minItems": 5,
+          "items": {
+            "type": "object",
+            "required": ["regime_id", "artifact_volume_units", "thermodynamic_eta"],
+            "properties": {
+              "regime_id": { "type": "string" },
+              "formal_properties": { "type": "integer" },
+              "unit_tests": { "type": "integer" },
+              "chat_tokens": { "type": "integer" },
+              "power_draw_watts": { "type": "number" },
+              "completion_rate": { "type": "number" },
+              "watt_inflation_ratio": { "type": "number" },
+              "commit_bearing_power_watts": { "type": "number" },
+              "artifact_volume_units": { "type": "number" },
+              "thermodynamic_eta": { "type": "number" }
+            }
+          }
+        },
+        "spearman_rho_volume_vs_eta": { "type": "number", "const": -1.0 },
+        "pearson_r_linear_volume_vs_eta": { "type": "number", "exclusiveMaximum": 0.0 },
+        "pearson_r_log10_eta_volume_vs_eta": { "type": "number", "exclusiveMaximum": 0.0 },
+        "signaling_inversion_confirmed": { "type": "boolean", "const": true }
+      }
+    },
+    "zero_valence_byzantine_unclamping_gate": {
+      "type": "object",
+      "required": [
+        "gate_id", "tokens_chat_coordination", "cloud_egress_bytes", "kolmogorov_payload_mb",
+        "kolmogorov_payload_cap_mb", "byzantine_traitor_nodes_f", "bft_quorum_nodes",
+        "minimum_quorum_nodes_3f_plus_1", "valence_clamping_floor",
+        "cfaa_18_usc_1030_compliance_attestation", "commit_state_transition"
+      ],
+      "properties": {
+        "gate_id": { "type": "string", "const": "BYZANTINE_UNCLAMP_AND_WASTE_INVERSION_GATE_v1.0" },
+        "tokens_chat_coordination": { "type": "integer", "const": 0 },
+        "cloud_egress_bytes": { "type": "integer", "const": 0 },
+        "kolmogorov_payload_mb": { "type": "number", "maximum": 10.0 },
+        "kolmogorov_payload_cap_mb": { "type": "number", "const": 10.0 },
+        "axiomatic_seed_mb": { "type": "number", "maximum": 0.03125 },
+        "byzantine_traitor_nodes_f": { "type": "integer", "const": 3 },
+        "bft_quorum_nodes": { "type": "integer", "minimum": 10 },
+        "minimum_quorum_nodes_3f_plus_1": { "type": "integer", "const": 10 },
+        "valence_clamping_floor": { "type": "null" },
+        "cfaa_18_usc_1030_compliance_attestation": { "type": "boolean", "const": true },
+        "invariant_checks": { "type": "object" },
+        "commit_state_transition": { "type": "boolean", "const": true },
+        "specimen_commit_state_transition": { "type": "boolean", "const": false },
+        "specimen_partitioned_as_noncompliant": { "type": "boolean", "const": true }
+      }
+    },
+    "capital_structure_waterfall": {
+      "type": "object",
+      "required": [
+        "total_enterprise_debt_stack_usd", "capital_at_risk_floor_satisfied", "tranche_recovery",
+        "unclamped_byzantine_audit_regime_180m", "midpoint_hybrid_transition_regime_350m",
+        "clamped_hallucination_bubble_regime_520m"
+      ],
+      "properties": {
+        "total_enterprise_debt_stack_usd": { "type": "number", "const": 500000000.0 },
+        "institutional_capital_at_risk_floor_usd": { "type": "number", "const": 250000000.0 },
+        "capital_at_risk_floor_satisfied": { "type": "boolean", "const": true },
+        "tranche_a_breakeven_ev_usd": { "type": "number", "const": 150000000.0 },
+        "tranche_b_breakeven_ev_usd": { "type": "number", "const": 350000000.0 },
+        "tranche_c_breakeven_ev_usd": { "type": "number", "const": 500000000.0 },
+        "tranche_recovery": {
+          "type": "object",
+          "description": "Parameterized tranche payoff function tranche_recovery(ev): R_k(EV) = min(P_k, max(0, EV - sum_{j<k} P_j)); returns dollar recovery and cent-on-the-dollar vectors across every tranche in seniority order plus the residual common-equity stub.",
+          "required": ["input_ev_usd", "output_recovery_vectors"],
+          "properties": {
+            "input_ev_usd": { "type": "number", "minimum": 0.0 },
+            "output_recovery_vectors": {
+              "type": "array",
+              "minItems": 4,
+              "items": {
+                "type": "object",
+                "required": ["tranche", "seniority", "principal_usd", "recovery_usd"],
+                "properties": {
+                  "tranche": { "type": "string" },
+                  "seniority": { "type": "integer" },
+                  "principal_usd": { "type": "number" },
+                  "cash_coupon_pct": { "type": "number" },
+                  "pik_rate_pct": { "type": "number" },
+                  "collateral_box": { "type": "string" },
+                  "breakeven_ev_usd": { "type": "number" },
+                  "recovery_usd": { "type": "number" },
+                  "cent_on_dollar": { "type": ["number", "null"] }
+                }
+              }
+            }
+          }
+        },
+        "unclamped_byzantine_audit_regime_180m": {
+          "type": "object",
+          "required": ["ev_usd", "tranche_a_cent_on_dollar", "tranche_b_cent_on_dollar", "tranche_c_cent_on_dollar"],
+          "properties": {
+            "ev_usd": { "type": "number", "const": 180000000.0 },
+            "tranche_a_recovery_usd": { "type": "number", "const": 150000000.0 },
+            "tranche_a_cent_on_dollar": { "type": "number", "const": 100.0 },
+            "tranche_b_recovery_usd": { "type": "number", "const": 30000000.0 },
+            "tranche_b_cent_on_dollar": { "type": "number", "const": 15.0 },
+            "tranche_c_recovery_usd": { "type": "number", "const": 0.0 },
+            "tranche_c_cent_on_dollar": { "type": "number", "const": 0.0 },
+            "equity_stub_recovery_usd": { "type": "number", "const": 0.0 },
+            "aggregate_debt_recovery_usd": { "type": "number", "const": 180000000.0 },
+            "fulcrum_tranche": { "type": "string" }
+          }
+        },
+        "midpoint_hybrid_transition_regime_350m": {
+          "type": "object",
+          "required": ["ev_usd", "tranche_a_cent_on_dollar", "tranche_b_cent_on_dollar", "tranche_c_cent_on_dollar"],
+          "properties": {
+            "ev_usd": { "type": "number", "const": 350000000.0 },
+            "tranche_a_recovery_usd": { "type": "number", "const": 150000000.0 },
+            "tranche_a_cent_on_dollar": { "type": "number", "const": 100.0 },
+            "tranche_b_recovery_usd": { "type": "number", "const": 200000000.0 },
+            "tranche_b_cent_on_dollar": { "type": "number", "const": 100.0 },
+            "tranche_c_recovery_usd": { "type": "number", "const": 0.0 },
+            "tranche_c_cent_on_dollar": { "type": "number", "const": 0.0 },
+            "equity_stub_recovery_usd": { "type": "number", "const": 0.0 },
+            "fulcrum_tranche": { "type": "null" }
+          }
+        },
+        "clamped_hallucination_bubble_regime_520m": {
+          "type": "object",
+          "required": ["ev_usd", "tranche_a_cent_on_dollar", "tranche_b_cent_on_dollar", "tranche_c_cent_on_dollar"],
+          "properties": {
+            "ev_usd": { "type": "number", "const": 520000000.0 },
+            "tranche_a_recovery_usd": { "type": "number", "const": 150000000.0 },
+            "tranche_a_cent_on_dollar": { "type": "number", "const": 100.0 },
+            "tranche_b_recovery_usd": { "type": "number", "const": 200000000.0 },
+            "tranche_b_cent_on_dollar": { "type": "number", "const": 100.0 },
+            "tranche_c_recovery_usd": { "type": "number", "const": 150000000.0 },
+            "tranche_c_cent_on_dollar": { "type": "number", "const": 100.0 },
+            "equity_stub_recovery_usd": { "type": "number", "const": 20000000.0 },
+            "aggregate_debt_recovery_usd": { "type": "number", "const": 500000000.0 }
+          }
+        },
+        "tranche_b_principal_haircut_pct_at_180m": { "type": "number", "const": 85.0 },
+        "tranche_c_wipeout_at_180m_and_350m": { "type": "boolean", "const": true },
+        "waterfall_monotone_non_decreasing_in_ev": { "type": "boolean", "const": true }
+      }
+    },
+    "catalyst_calendar": {
+      "type": "object",
+      "required": ["event_count", "iso_dates", "strictly_chronological"],
+      "properties": {
+        "event_count": { "type": "integer", "const": 4 },
+        "iso_dates": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 4,
+          "items": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" }
+        },
+        "event_kinds": { "type": "array", "minItems": 4, "items": { "type": "string" } },
+        "strictly_chronological": { "type": "boolean", "const": true },
+        "maturity_cliffs": { "type": "array", "items": { "type": "string" } }
+      }
+    }
+  }
+}

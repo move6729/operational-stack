@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:legal_disintermediation.json",
+  "title": "LegalDisintermediationPayload",
+  "type": "object",
+  "required": [
+    "spec_version",
+    "jurisdiction_context",
+    "cfaa_compliance_attestation",
+    "task_id",
+    "matter_type",
+    "claim_elements",
+    "citation_graph",
+    "verification_routing"
+  ],
+  "properties": {
+    "spec_version": {
+      "type": "string",
+      "const": "OPEN-LEGAL-v1.0"
+    },
+    "jurisdiction_context": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}$"
+    },
+    "cfaa_compliance_attestation": {
+      "type": "boolean",
+      "const": true
+    },
+    "task_id": {
+      "type": "string"
+    },
+    "matter_type": {
+      "type": "string"
+    },
+    "claim_elements": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "citation_graph": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "verification_routing": {
+      "type": "object",
+      "required": [
+        "verification_status"
+      ],
+      "properties": {
+        "verifier_jd_bar_id": {
+          "type": "string"
+        },
+        "verification_status": {
+          "type": "string"
+        },
+        "verification_hash": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

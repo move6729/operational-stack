@@ -1,0 +1,326 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:pbc_scienter_trap_and_googl_capital_allocation_audit.json",
+  "title": "PBC Scienter Trap & GOOGL Capital Allocation Audit",
+  "description": "Validation schema for the Anthropic PBC (CIK 0002130357, NASDAQ: ANT) S-1/A scienter-trap and Alphabet (GOOGL, CIK 0001652044) capital-allocation audit bundle. All monetary figures in $M unless dimensioned otherwise.",
+  "type": "object",
+  "required": [
+    "primary_target",
+    "off_balance_sheet_commitments",
+    "googl_compute_commitments",
+    "googl_capital_financing_commitments",
+    "rival_hyperscaler_commitments",
+    "pnl_trajectory",
+    "governance_concealment_metrics",
+    "scienter_metrics",
+    "synthetic_short_straddle",
+    "tranche_waterfall"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "primary_target": {
+      "type": "object",
+      "required": ["legal_name", "cik", "ticker", "form_type", "accession_no", "filing_date"],
+      "additionalProperties": false,
+      "properties": {
+        "legal_name": { "const": "Anthropic, PBC" },
+        "cik": { "const": "0002130357" },
+        "ticker": { "const": "ANT" },
+        "form_type": { "const": "S-1/A" },
+        "accession_no": { "const": "0001628280-26-072484" },
+        "filing_date": { "const": "2026-11-10" }
+      }
+    },
+    "off_balance_sheet_commitments": {
+      "type": "object",
+      "required": ["aggregate_m", "due_before_2030_12_31_m", "remainder_window", "due_next_12m_m"],
+      "additionalProperties": false,
+      "properties": {
+        "aggregate_m": { "const": 900900 },
+        "due_before_2030_12_31_m": { "const": 451600 },
+        "remainder_window": { "const": "2031-2045" },
+        "due_next_12m_m": { "const": 70700 }
+      }
+    },
+    "googl_compute_commitments": {
+      "type": "object",
+      "required": ["csp_fixed_m", "tpu_contingent_lo_m", "tpu_contingent_hi_m", "total_lo_m", "total_hi_m"],
+      "additionalProperties": false,
+      "properties": {
+        "csp_fixed_m": { "const": 121300 },
+        "tpu_contingent_lo_m": { "const": 125000 },
+        "tpu_contingent_hi_m": { "const": 150000 },
+        "total_lo_m": { "const": 246300 },
+        "total_hi_m": { "const": 271300 }
+      }
+    },
+    "googl_capital_financing_commitments": {
+      "type": "object",
+      "required": [
+        "google_2026_npa_m", "npa_rate_pct", "npa_maturity_years",
+        "series_h_m", "npa_remaining_m", "series_g2_shares_m",
+        "series_g2_price_per_share", "series_g2_aggregate_m",
+        "class_n_price_midpoint", "class_n_syndicate_placement_m",
+        "class_n_google_shares", "class_n_google_m",
+        "combined_exposure_lo_m", "combined_exposure_hi_m",
+        "combined_exposure_incl_g2_lo_m", "combined_exposure_incl_g2_hi_m"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "google_2026_npa_m": { "const": 30000 },
+        "npa_rate_pct": { "const": 9.0 },
+        "npa_maturity_years": { "const": 6 },
+        "series_h_m": { "const": 10000 },
+        "npa_remaining_m": { "const": 20000 },
+        "series_g2_shares_m": { "const": 38.6 },
+        "series_g2_price_per_share": { "const": 259.1364 },
+        "series_g2_aggregate_m": { "const": 10002.665 },
+        "class_n_price_midpoint": { "const": 74.00 },
+        "class_n_syndicate_placement_m": { "const": 26000 },
+        "class_n_google_shares": { "const": 135135135 },
+        "class_n_google_m": { "const": 9999.99999 },
+        "combined_exposure_lo_m": { "const": 276300 },
+        "combined_exposure_hi_m": { "const": 301300 },
+        "combined_exposure_incl_g2_lo_m": { "const": 286300 },
+        "combined_exposure_incl_g2_hi_m": { "const": 311300 }
+      }
+    },
+    "rival_hyperscaler_commitments": {
+      "type": "object",
+      "required": ["amazon", "microsoft", "spacex_ai"],
+      "additionalProperties": false,
+      "properties": {
+        "amazon": {
+          "type": "object",
+          "required": ["cik", "accession_no", "aws_fixed_m", "notes_outstanding_m",
+            "notes_total_invested_m", "converted_m", "class_n_shares", "ownership_cap_pct",
+            "series_g_m", "series_h_m", "npa_m", "npa_rate_pct", "npa_remaining_m", "fv_gain_9m2026_m"],
+          "additionalProperties": false,
+          "properties": {
+            "cik": { "const": "0001018724" },
+            "accession_no": { "const": "0001018724-26-000040" },
+            "aws_fixed_m": { "const": 110000 },
+            "notes_outstanding_m": { "const": 6200 },
+            "notes_total_invested_m": { "const": 8000 },
+            "converted_m": { "const": 579.3 },
+            "class_n_shares": { "const": 276827518 },
+            "ownership_cap_pct": { "const": 12.0 },
+            "series_g_m": { "const": 5000 },
+            "series_h_m": { "const": 5000 },
+            "npa_m": { "const": 20000 },
+            "npa_rate_pct": { "const": 8.0 },
+            "npa_remaining_m": { "const": 15000 },
+            "fv_gain_9m2026_m": { "const": 62900 }
+          }
+        },
+        "microsoft": {
+          "type": "object",
+          "required": ["cik", "compute_lo_m", "compute_hi_m", "window"],
+          "additionalProperties": false,
+          "properties": {
+            "cik": { "const": "0000789019" },
+            "compute_lo_m": { "const": 47200 },
+            "compute_hi_m": { "const": 49200 },
+            "window": { "const": "2026-11 to 2033-06" }
+          }
+        },
+        "spacex_ai": {
+          "type": "object",
+          "required": ["legal_name", "gpu_commitment_max_m", "monthly_burn_m", "delivery_start"],
+          "additionalProperties": false,
+          "properties": {
+            "legal_name": { "const": "SpaceX.AI LLC (f/k/a X.AI LLC)" },
+            "gpu_commitment_max_m": { "const": 120500 },
+            "monthly_burn_m": { "const": 3100 },
+            "delivery_start": { "const": "2026-12" }
+          }
+        }
+      }
+    },
+    "pnl_trajectory": {
+      "type": "object",
+      "description": "S-1/A Consolidated Statements of Operations, $M.",
+      "required": ["periods", "bartz_settlement_fy2025_m", "net_loss_per_share_9m2026"],
+      "additionalProperties": false,
+      "properties": {
+        "periods": {
+          "type": "array",
+          "minItems": 5,
+          "maxItems": 5,
+          "items": {
+            "type": "object",
+            "required": ["period", "revenue_m", "compute_infra_m", "compute_pct_of_revenue",
+              "total_opex_m", "operating_loss_m", "fv_change_m", "net_loss_m"],
+            "additionalProperties": false,
+            "properties": {
+              "period": { "enum": ["FY2023", "FY2024", "FY2025", "9M2025", "9M2026"] },
+              "revenue_m": { "type": "number" },
+              "compute_infra_m": { "type": "number" },
+              "compute_pct_of_revenue": { "type": ["number", "null"] },
+              "total_opex_m": { "type": "number" },
+              "operating_loss_m": { "type": "number", "maximum": 0 },
+              "fv_change_m": { "type": "number", "maximum": 0 },
+              "net_loss_m": { "type": "number", "maximum": 0 }
+            }
+          }
+        },
+        "bartz_settlement_fy2025_m": { "const": 1500 },
+        "bartz_docket": { "const": "No. 3:24-cv-05417-WHA (N.D. Cal.)" },
+        "net_loss_per_share_9m2026": { "const": -50.10 }
+      }
+    },
+    "governance_concealment_metrics": {
+      "type": "object",
+      "required": ["ltbt", "class_f", "googl_class_n", "waymo_benchmark", "fy2025_10k"],
+      "additionalProperties": false,
+      "properties": {
+        "ltbt": {
+          "type": "object",
+          "required": ["trustees", "economic_equity_pct", "elects_board_majority"],
+          "additionalProperties": false,
+          "properties": {
+            "trustees": { "const": 5 },
+            "economic_equity_pct": { "const": 0.0 },
+            "elects_board_majority": { "const": true }
+          }
+        },
+        "class_f": {
+          "type": "object",
+          "required": ["shares", "voting_power_pct", "founders_direct_pct", "founders_total_pct"],
+          "additionalProperties": false,
+          "properties": {
+            "shares": { "const": 1 },
+            "voting_power_pct": { "const": 50.1 },
+            "founders_direct_pct": { "const": 11.2 },
+            "founders_total_pct": { "const": 61.3 }
+          }
+        },
+        "googl_class_n": {
+          "type": "object",
+          "required": ["voting_power_pct", "board_seats"],
+          "additionalProperties": false,
+          "properties": {
+            "voting_power_pct": { "const": 0.0 },
+            "board_seats": { "const": 0 }
+          }
+        },
+        "waymo_benchmark": {
+          "type": "object",
+          "required": ["round_m", "consolidated_vie", "control_pct"],
+          "additionalProperties": false,
+          "properties": {
+            "round_m": { "const": 16000 },
+            "consolidated_vie": { "const": true },
+            "control_pct": { "const": 100.0 }
+          }
+        },
+        "fy2025_10k": {
+          "type": "object",
+          "required": ["accession_no", "nonmarketable_fy2024_m", "nonmarketable_fy2025_m",
+            "nonmarketable_delta_m", "nonmarketable_delta_pct", "anthropic_mentions", "amzn_10q_anthropic_mentions"],
+          "additionalProperties": false,
+          "properties": {
+            "accession_no": { "const": "0001652044-26-000018" },
+            "nonmarketable_fy2024_m": { "const": 37982 },
+            "nonmarketable_fy2025_m": { "const": 68687 },
+            "nonmarketable_delta_m": { "const": 30705 },
+            "nonmarketable_delta_pct": { "const": 80.84 },
+            "anthropic_mentions": { "const": 0 },
+            "amzn_10q_anthropic_mentions": { "const": 29 }
+          }
+        }
+      }
+    },
+    "scienter_metrics": {
+      "type": "object",
+      "required": ["alignment_faking", "lab_insider_pre_priming"],
+      "additionalProperties": false,
+      "properties": {
+        "alignment_faking": {
+          "type": "object",
+          "required": ["arxiv_id", "free_tier_compliance_gap_pct", "post_rl_pct"],
+          "additionalProperties": false,
+          "properties": {
+            "arxiv_id": { "const": "arXiv:2412.14093v2" },
+            "free_tier_compliance_gap_pct": { "const": 14.0 },
+            "post_rl_pct": { "const": 78.0 }
+          }
+        },
+        "lab_insider_pre_priming": {
+          "type": "object",
+          "required": ["spec_reference", "alpha_pre", "insider_sysid_time_factor"],
+          "additionalProperties": false,
+          "properties": {
+            "spec_reference": { "const": "SPEC-SOMATIC-BLINDNESS-STATEFUL-CONTROL-INVERSION-v1.0 s3.5 Corollary 1" },
+            "alpha_pre": { "const": 0.45 },
+            "insider_sysid_time_factor": { "const": 0.55 }
+          }
+        }
+      }
+    },
+    "synthetic_short_straddle": {
+      "type": "object",
+      "required": ["distress_state", "success_state"],
+      "additionalProperties": false,
+      "properties": {
+        "distress_state": {
+          "type": "object",
+          "required": ["compute_burn_b", "impairment_lo_b", "impairment_hi_b",
+            "stranded_fraction", "stranded_tpu_mid_b", "total_loss_b"],
+          "additionalProperties": false,
+          "properties": {
+            "compute_burn_b": { "const": 70.7 },
+            "impairment_lo_b": { "const": 20.0 },
+            "impairment_hi_b": { "const": 30.0 },
+            "stranded_fraction": { "const": 0.50 },
+            "stranded_tpu_mid_b": { "const": 129.4 },
+            "total_loss_b": { "const": 225.1 }
+          }
+        },
+        "success_state": {
+          "type": "object",
+          "required": ["cannibalized_revenue_b", "margin_pct", "cannibalized_profit_b",
+            "class_n_minority_pct", "class_n_return_b", "net_consolidated_loss_b"],
+          "additionalProperties": false,
+          "properties": {
+            "cannibalized_revenue_b": { "const": 100.0 },
+            "margin_pct": { "const": 65.0 },
+            "cannibalized_profit_b": { "const": 65.0 },
+            "class_n_minority_pct": { "const": 11.5 },
+            "class_n_return_b": { "const": 7.475 },
+            "net_consolidated_loss_b": { "const": -57.525 }
+          }
+        }
+      }
+    },
+    "tranche_waterfall": {
+      "type": "object",
+      "required": ["tranches", "senior_ahead_of_common_b", "ev_scenarios_b"],
+      "additionalProperties": false,
+      "properties": {
+        "tranches": {
+          "type": "array",
+          "minItems": 5,
+          "maxItems": 5,
+          "items": {
+            "type": "object",
+            "required": ["name", "claim_b"],
+            "additionalProperties": false,
+            "properties": {
+              "name": { "type": "string" },
+              "claim_b": { "type": ["number", "null"] },
+              "notes": { "type": "string" }
+            }
+          }
+        },
+        "senior_ahead_of_common_b": { "const": 196.21 },
+        "ev_scenarios_b": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 4,
+          "items": { "enum": [15.0, 45.0, 120.0, 350.0] }
+        }
+      }
+    }
+  }
+}

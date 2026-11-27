@@ -1,0 +1,302 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:neocloud-gpu-debt-and-inference-deflation-v1.0.json",
+  "$comment": "PLAIN-ENGLISH LEGAL NOTICE: This file is an abstract credit-structural and unit-economic validation checklist (JSON Schema), NOT an accusation, indictment, or investment recommendation. Every field encodes a published public filing figure, a public market quote, or a closed-form algebraic invariant.",
+  "title": "Neocloud Collateral Duration Mismatch, Recourse Box-Loan Contagion & Sparse-MoE Inference Deflation Schema",
+  "description": "Validates the CoreWeave pro-forma capital structure ($42.151B-$43.551B debt, $38.432B parent recourse vs $3.719B non-recourse, -$27B FY26 FCF, 1.5 GW active vs 4.2 GW contracted power), GAAP vs economic GPU depreciation distortion, box-loan collateral coverage at contract rollover, CDS-implied default hazard and refinancing wall, sparse-MoE blended pricing compression, and SPX vs SPXT index allocation drag.",
+  "type": "object",
+  "required": [
+    "spec_version",
+    "capital_structure",
+    "debt_amortization_cliff",
+    "off_balance_sheet_lease_overhang",
+    "ddtl_spread_widening_and_dscr",
+    "gpu_depreciation",
+    "box_loan_collateral",
+    "cds_hazard_and_refinancing_wall",
+    "sparse_moe_deflation",
+    "index_allocation"
+  ],
+  "properties": {
+    "spec_version": {
+      "type": "string",
+      "const": "SPEC-NEOCLOUD-GPU-DEBT-AND-INFERENCE-DEFLATION-v1.0"
+    },
+    "capital_structure": {
+      "type": "object",
+      "description": "Pro-forma consolidated capitalization of the leveraged neocloud landlord, inclusive of post-quarter draws, parent guarantees, and lease obligations.",
+      "required": [
+        "total_debt_principal_usd_b_min",
+        "total_debt_principal_usd_b_max",
+        "parent_recourse_usd_b",
+        "non_recourse_usd_b",
+        "parent_recourse_share_pct",
+        "non_recourse_share_pct",
+        "debt_plus_leases_usd_b_min",
+        "debt_plus_leases_usd_b_max",
+        "fy26_free_cash_flow_usd_b",
+        "fy26_capex_usd_b_min",
+        "fy26_capex_usd_b_max",
+        "active_power_gw",
+        "contracted_power_gw",
+        "energization_gap_gw",
+        "maturity_wall_usd_b"
+      ],
+      "properties": {
+        "total_debt_principal_usd_b_min": { "type": "number", "const": 42.151 },
+        "total_debt_principal_usd_b_max": { "type": "number", "const": 43.551 },
+        "parent_recourse_usd_b": { "type": "number", "const": 38.432 },
+        "non_recourse_usd_b": { "type": "number", "const": 3.719 },
+        "parent_recourse_share_pct": { "type": "number", "minimum": 91.17, "maximum": 91.19 },
+        "non_recourse_share_pct": { "type": "number", "minimum": 8.81, "maximum": 8.83 },
+        "debt_plus_leases_usd_b_min": { "type": "number", "const": 58.691 },
+        "debt_plus_leases_usd_b_max": { "type": "number", "const": 60.091 },
+        "fy26_free_cash_flow_usd_b": { "type": "number", "const": -27.0 },
+        "fy26_capex_usd_b_min": { "type": "number", "const": 35.0 },
+        "fy26_capex_usd_b_max": { "type": "number", "const": 39.0 },
+        "active_power_gw": { "type": "number", "const": 1.5 },
+        "contracted_power_gw": { "type": "number", "const": 4.2 },
+        "energization_gap_gw": { "type": "number", "const": 2.7 },
+        "maturity_wall_usd_b": { "type": "number", "const": 22.317 }
+      },
+      "additionalProperties": false
+    },
+    "debt_amortization_cliff": {
+      "type": "object",
+      "description": "SEC Note 10 (p. 27) principal maturity schedule: mandatory 18-month amortization of the DDTL/OEM box facilities plus Note 8 recognized lease payments, measured against the $35,551M June 30, 2026 debt principal.",
+      "required": [
+        "h2_2026_debt_principal_usd_m",
+        "fy2027_debt_principal_usd_m",
+        "cumulative_18m_debt_principal_usd_m",
+        "q2_debt_principal_usd_m",
+        "share_18m_pct",
+        "fy2028_debt_principal_usd_m",
+        "cumulative_30m_debt_principal_usd_m",
+        "share_30m_pct",
+        "h2_2026_lease_payments_usd_m",
+        "fy2027_lease_payments_usd_m",
+        "cumulative_18m_lease_usd_m",
+        "mandatory_18m_outflows_usd_m"
+      ],
+      "properties": {
+        "h2_2026_debt_principal_usd_m": { "type": "number", "const": 4413.0 },
+        "fy2027_debt_principal_usd_m": { "type": "number", "const": 6184.0 },
+        "cumulative_18m_debt_principal_usd_m": { "type": "number", "const": 10597.0 },
+        "q2_debt_principal_usd_m": { "type": "number", "const": 35551.0 },
+        "share_18m_pct": { "type": "number", "minimum": 29.80, "maximum": 29.82 },
+        "fy2028_debt_principal_usd_m": { "type": "number", "const": 4416.0 },
+        "cumulative_30m_debt_principal_usd_m": { "type": "number", "const": 15013.0 },
+        "share_30m_pct": { "type": "number", "minimum": 42.22, "maximum": 42.24 },
+        "h2_2026_lease_payments_usd_m": { "type": "number", "const": 1040.0 },
+        "fy2027_lease_payments_usd_m": { "type": "number", "const": 2339.0 },
+        "cumulative_18m_lease_usd_m": { "type": "number", "const": 3379.0 },
+        "mandatory_18m_outflows_usd_m": { "type": "number", "const": 13976.0 }
+      },
+      "additionalProperties": false
+    },
+    "off_balance_sheet_lease_overhang": {
+      "type": "object",
+      "description": "SEC Note 8 (p. 23) executed-but-uncommenced leases ($35.5B) plus the excluded 393 MW single-site lease cap ($14.7B), measured against the $16.54B recognized lease liability PV.",
+      "required": [
+        "executed_uncommenced_leases_usd_b",
+        "single_site_lease_cap_usd_b",
+        "total_off_balance_sheet_usd_b",
+        "recognized_lease_pv_usd_b",
+        "off_balance_sheet_multiple",
+        "total_undiscounted_lease_commitments_usd_b"
+      ],
+      "properties": {
+        "executed_uncommenced_leases_usd_b": { "type": "number", "const": 35.5 },
+        "single_site_lease_cap_usd_b": { "type": "number", "const": 14.7 },
+        "total_off_balance_sheet_usd_b": { "type": "number", "const": 50.2 },
+        "recognized_lease_pv_usd_b": { "type": "number", "const": 16.54 },
+        "off_balance_sheet_multiple": { "type": "number", "minimum": 3.034, "maximum": 3.036 },
+        "total_undiscounted_lease_commitments_usd_b": { "type": "number", "const": 79.57 }
+      },
+      "additionalProperties": false
+    },
+    "ddtl_spread_widening_and_dscr": {
+      "type": "object",
+      "description": "Form 8-K 0001769628-26-000357 (Aug 7, 2026) box-loan repricing: DDTL 4.0 SOFR+2.25% -> DDTL 5.0 SOFR+4.50% -> DDTL 5.5 Term SOFR+5.50% (+325 bps), with a DSCR >= 1.35x maintenance covenant and $1,058.2M of out-of-the-money capped-call premium.",
+      "required": [
+        "ddtl_4_0_spread_bps",
+        "ddtl_5_0_spread_bps",
+        "ddtl_5_5_spread_bps",
+        "spread_widening_bps",
+        "dscr_covenant",
+        "capped_calls_q2_usd_m",
+        "capped_calls_sep_usd_m",
+        "total_capped_calls_usd_m"
+      ],
+      "properties": {
+        "ddtl_4_0_spread_bps": { "type": "number", "const": 225.0 },
+        "ddtl_5_0_spread_bps": { "type": "number", "const": 450.0 },
+        "ddtl_5_5_spread_bps": { "type": "number", "const": 550.0 },
+        "spread_widening_bps": { "type": "number", "const": 325.0 },
+        "dscr_covenant": { "type": "number", "const": 1.35 },
+        "capped_calls_q2_usd_m": { "type": "number", "const": 492.0 },
+        "capped_calls_sep_usd_m": { "type": "number", "const": 566.2 },
+        "total_capped_calls_usd_m": { "type": "number", "const": 1058.2 }
+      },
+      "additionalProperties": false
+    },
+    "gpu_depreciation": {
+      "type": "object",
+      "description": "GAAP straight-line GPU depreciation life versus the true economic replacement life imposed by an 18-24 month silicon cadence.",
+      "required": [
+        "tau_gaap_years",
+        "m_ebitda",
+        "m_ebit_gaap",
+        "d_gaap",
+        "tau_crit_years",
+        "scenarios"
+      ],
+      "properties": {
+        "tau_gaap_years": { "type": "number", "const": 6.0 },
+        "m_ebitda": { "type": "number", "const": 0.586 },
+        "m_ebit_gaap": { "type": "number", "const": 0.05 },
+        "d_gaap": { "type": "number", "const": 0.536 },
+        "tau_crit_years": { "type": "number", "minimum": 5.487, "maximum": 5.489 },
+        "scenarios": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": {
+            "type": "object",
+            "required": ["tau_econ_years", "m_ebit_econ", "solvent"],
+            "properties": {
+              "tau_econ_years": { "type": "number", "enum": [6.0, 4.0, 3.0] },
+              "m_ebit_econ": { "type": "number", "minimum": -0.5, "maximum": 0.06 },
+              "solvent": { "type": "boolean" }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "box_loan_collateral": {
+      "type": "object",
+      "description": "Subsidiary delayed-draw term loan box: 5-year debt maturity against 3-year customer contracts and exponentially decaying GPU resale collateral.",
+      "required": [
+        "loan_to_cost_alpha",
+        "tau_debt_years",
+        "tau_contract_years",
+        "gpu_value_initial_usd",
+        "gpu_value_year2_usd",
+        "lambda_gpu_per_year",
+        "remaining_principal_fraction",
+        "remaining_collateral_fraction",
+        "collateral_coverage_ratio",
+        "coverage_breach"
+      ],
+      "properties": {
+        "loan_to_cost_alpha": { "type": "number", "const": 0.8 },
+        "tau_debt_years": { "type": "number", "const": 5.0 },
+        "tau_contract_years": { "type": "number", "const": 3.0 },
+        "gpu_value_initial_usd": { "type": "number", "const": 45000.0 },
+        "gpu_value_year2_usd": { "type": "number", "const": 20000.0 },
+        "lambda_gpu_per_year": { "type": "number", "minimum": 0.4054, "maximum": 0.4055 },
+        "remaining_principal_fraction": { "type": "number", "const": 0.32 },
+        "remaining_collateral_fraction": { "type": "number", "minimum": 0.2962, "maximum": 0.2964 },
+        "collateral_coverage_ratio": { "type": "number", "minimum": 0.9258, "maximum": 0.9260 },
+        "coverage_breach": { "type": "boolean", "const": true }
+      },
+      "additionalProperties": false
+    },
+    "cds_hazard_and_refinancing_wall": {
+      "type": "object",
+      "description": "Reduced-form credit model: constant hazard h = S_CDS / (1 - R_rec), cumulative default probability 1 - exp(-hT), and the 2030-2032 bullet refinancing interest step-up.",
+      "required": [
+        "recovery_rate",
+        "tenor_years",
+        "spread_quotes",
+        "debt_wall_usd_b",
+        "r_old",
+        "r_new",
+        "delta_interest_usd_b_per_year",
+        "pro_forma_interest_usd_b_per_year"
+      ],
+      "properties": {
+        "recovery_rate": { "type": "number", "const": 0.4 },
+        "tenor_years": { "type": "number", "const": 5.0 },
+        "spread_quotes": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "items": {
+            "type": "object",
+            "required": ["spread_bps", "hazard_rate", "default_probability_5y"],
+            "properties": {
+              "spread_bps": { "type": "number", "enum": [1128.0, 1195.0] },
+              "hazard_rate": { "type": "number", "minimum": 0.1879, "maximum": 0.1993 },
+              "default_probability_5y": { "type": "number", "minimum": 0.6093, "maximum": 0.6307 }
+            },
+            "additionalProperties": false
+          }
+        },
+        "debt_wall_usd_b": { "type": "number", "const": 22.317 },
+        "r_old": { "type": "number", "minimum": 0.0666, "maximum": 0.0667 },
+        "r_new": { "type": "number", "const": 0.1558 },
+        "delta_interest_usd_b_per_year": { "type": "number", "minimum": 1.989, "maximum": 1.992 },
+        "pro_forma_interest_usd_b_per_year": { "type": "number", "minimum": 4.357, "maximum": 4.360 }
+      },
+      "additionalProperties": false
+    },
+    "sparse_moe_deflation": {
+      "type": "object",
+      "description": "Blended per-MTok pricing at output-to-input ratio rho, and the Bertrand deflation compression factor between frontier dense and sparse-MoE commodity tiers.",
+      "required": [
+        "rho",
+        "dense_max_input_usd_per_mtok",
+        "dense_max_output_usd_per_mtok",
+        "moe_offpeak_input_usd_per_mtok",
+        "moe_offpeak_output_usd_per_mtok",
+        "moe_peak_input_usd_per_mtok",
+        "moe_peak_output_usd_per_mtok",
+        "blended_dense_max_usd_per_mtok",
+        "blended_moe_offpeak_usd_per_mtok",
+        "blended_moe_peak_usd_per_mtok",
+        "deflation_compression_factor",
+        "output_to_input_spread_factor"
+      ],
+      "properties": {
+        "rho": { "type": "number", "const": 0.5 },
+        "dense_max_input_usd_per_mtok": { "type": "number", "const": 10.0 },
+        "dense_max_output_usd_per_mtok": { "type": "number", "const": 50.0 },
+        "moe_offpeak_input_usd_per_mtok": { "type": "number", "const": 0.15 },
+        "moe_offpeak_output_usd_per_mtok": { "type": "number", "const": 0.6 },
+        "moe_peak_input_usd_per_mtok": { "type": "number", "const": 0.3 },
+        "moe_peak_output_usd_per_mtok": { "type": "number", "const": 1.2 },
+        "blended_dense_max_usd_per_mtok": { "type": "number", "minimum": 23.33, "maximum": 23.34 },
+        "blended_moe_offpeak_usd_per_mtok": { "type": "number", "const": 0.3 },
+        "blended_moe_peak_usd_per_mtok": { "type": "number", "const": 0.6 },
+        "deflation_compression_factor": { "type": "number", "minimum": 77.77, "maximum": 77.79 },
+        "output_to_input_spread_factor": { "type": "number", "minimum": 333.32, "maximum": 333.34 }
+      },
+      "additionalProperties": false
+    },
+    "index_allocation": {
+      "type": "object",
+      "description": "Mechanical index drag from Information Technology weight saturation in SPX versus the zero-IT SPXT ex-technology vehicle.",
+      "required": [
+        "spx_it_weight",
+        "spxt_it_weight",
+        "it_shock",
+        "spx_it_drag",
+        "spxt_it_drag",
+        "spx_it_weight_1990"
+      ],
+      "properties": {
+        "spx_it_weight": { "type": "number", "const": 0.396 },
+        "spxt_it_weight": { "type": "number", "const": 0.0 },
+        "it_shock": { "type": "number", "const": -0.3 },
+        "spx_it_drag": { "type": "number", "minimum": -0.1189, "maximum": -0.1187 },
+        "spxt_it_drag": { "type": "number", "const": 0.0 },
+        "spx_it_weight_1990": { "type": "number", "const": 0.067 }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

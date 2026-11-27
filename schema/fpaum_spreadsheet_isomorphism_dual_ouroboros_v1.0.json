@@ -1,0 +1,350 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:fpaum_spreadsheet_isomorphism_dual_ouroboros_v1.0.json",
+  "title": "FPAUM Spreadsheet Isomorphism and Dual Ouroboros Verification Schema",
+  "description": "JSON Draft 2020-12 validation schema for SPEC-FPAUM-SPREADSHEET-ISOMORPHISM-DUAL-OUROBOROS-v1.0 quantifying the mathematical equivalence between legacy SaaS direct-lending FPAUM (Leg A) and hyperscale AI data-center project-finance FPAUM (Leg B) across Blue Owl Capital Inc. (NYSE: OWL), OBDC, OTF, and BOREC/IPI special purpose vehicles.",
+  "type": "object",
+  "required": [
+    "specification_id",
+    "version",
+    "jurisdiction_context",
+    "cfaa_compliant",
+    "entity_and_instrument_ids",
+    "catalyst_calendar",
+    "locked_constants_and_outputs",
+    "governing_equations",
+    "tranche_waterfall"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "specification_id": {
+      "type": "string",
+      "const": "SPEC-FPAUM-SPREADSHEET-ISOMORPHISM-DUAL-OUROBOROS-v1.0"
+    },
+    "version": {
+      "type": "string",
+      "const": "1.0"
+    },
+    "jurisdiction_context": {
+      "type": "string",
+      "enum": ["US", "EU", "GB", "GLOBAL"],
+      "default": "US",
+      "description": "ISO 3166-1 localized statutory context covering SEC Form 10-K/10-Q, Investment Company Act of 1940 (15 U.S.C. 80a-54), IRC Subchapter M (26 U.S.C. 852), and SDNY federal securities jurisdiction."
+    },
+    "cfaa_compliant": {
+      "type": "boolean",
+      "const": true,
+      "description": "Immutable attestation of 18 U.S.C. 1030 compliance; all empirical metrics derive strictly from public SEC EDGAR filings, federal court dockets, and public inference routing tables."
+    },
+    "entity_and_instrument_ids": {
+      "type": "object",
+      "required": ["tickers", "ciks", "court_dockets", "named_vehicles_and_tranches"],
+      "additionalProperties": false,
+      "properties": {
+        "tickers": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "enum": ["OWL", "OBDC", "OTF", "ORCL", "CRWV", "META", "FSK", "ARCC"]
+          }
+        },
+        "ciks": {
+          "type": "object",
+          "required": ["OWL", "OBDC", "OTF", "ORCL", "META"],
+          "additionalProperties": { "type": "string" },
+          "properties": {
+            "OWL": { "type": "string", "const": "0001823945" },
+            "OBDC": { "type": "string", "const": "0001655888" },
+            "OTF": { "type": "string", "const": "0001747777" },
+            "ORCL": { "type": "string", "const": "0001341439" },
+            "META": { "type": "string", "const": "0001326801" }
+          }
+        },
+        "court_dockets": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string" }
+        },
+        "named_vehicles_and_tranches": {
+          "type": "array",
+          "minItems": 5,
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "catalyst_calendar": {
+      "type": "array",
+      "minItems": 5,
+      "items": {
+        "type": "object",
+        "required": ["date", "entity", "event"],
+        "additionalProperties": false,
+        "properties": {
+          "date": {
+            "type": "string",
+            "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+          },
+          "entity": { "type": "string" },
+          "event": { "type": "string" }
+        }
+      }
+    },
+    "locked_constants_and_outputs": {
+      "type": "object",
+      "required": [
+        "owl_q2_2026_aum_usd_b",
+        "owl_q3_2026_aum_usd_b",
+        "owl_credit_aum_usd_b",
+        "owl_real_assets_aum_usd_b",
+        "owl_gp_strategic_aum_usd_b",
+        "owl_fre_multiple_baseline",
+        "owl_share_price_oct_30_2026_usd",
+        "owl_drawdown_from_jan_2025_peak_pct",
+        "owl_market_cap_oct_30_2026_usd_b",
+        "owl_annual_dividend_per_share_usd",
+        "owl_dividend_yield_pct",
+        "owl_ttm_gaap_net_income_usd_m",
+        "owl_ttm_gaap_eps_usd",
+        "owl_gaap_pe_ratio",
+        "obdc_share_price_oct_30_2026_usd",
+        "obdc_q2_2026_nav_per_share_usd",
+        "obdc_q1_2026_nav_per_share_usd",
+        "obdc_q4_2025_nav_per_share_usd",
+        "obdc_price_to_nav_discount_pct",
+        "obdc_trailing_dividend_per_share_usd",
+        "obdc_reset_quarterly_dividend_usd",
+        "obdc_dividend_yield_pct",
+        "retail_quarterly_redemption_gate_pct",
+        "cox_capital_ocic_tender_date",
+        "leg_a_true_software_pct_range",
+        "leg_a_reported_software_pct",
+        "leg_a_true_software_credit_usd_b_range",
+        "leg_a_hidden_software_usd_b_range",
+        "ipi_initial_agreement_date",
+        "ipi_initial_price_usd_b",
+        "ipi_closing_date",
+        "ipi_final_consideration_usd_b",
+        "ipi_aum_added_usd_b",
+        "ipi_data_centers_count",
+        "ipi_leased_capacity_gw",
+        "abilene_dc1_borec_longhorn_equity_pct",
+        "oracle_1_2_jv_borec_rounded_pct",
+        "abilene_dc1_construction_loan_usd_m",
+        "abilene_dc1_loan_spread_bps",
+        "coreweave_ctp02_total_cost_usd_m",
+        "coreweave_ctp03_total_cost_usd_m",
+        "coreweave_ctp02_03_combined_cost_usd_m",
+        "coreweave_borec_spider_share_pct",
+        "coreweave_borec_spider_committed_usd_m",
+        "meta_hyperion_jv_total_usd_b",
+        "meta_hyperion_owl_equity_pct",
+        "leg_b_direct_infra_aum_usd_b_range",
+        "leg_b_gross_infra_capex_usd_b_range",
+        "combined_dual_ouroboros_direct_aum_usd_b_range",
+        "combined_dual_ouroboros_gross_capital_usd_b_range",
+        "combined_dual_ouroboros_share_of_q2_aum_pct_range",
+        "router_morph_in",
+        "router_morph_out",
+        "router_wafer_in",
+        "router_wafer_out",
+        "router_deepinfra_flex_in",
+        "router_deepinfra_flex_out",
+        "router_sail_in",
+        "router_sail_out",
+        "router_deepseek_official_in",
+        "router_deepseek_official_out",
+        "router_alibaba_in",
+        "router_alibaba_out",
+        "router_baidu_in",
+        "router_baidu_out",
+        "router_crusoe_in",
+        "router_crusoe_out",
+        "router_nebius_together_in",
+        "router_nebius_together_out",
+        "morph_vs_deepseek_input_discount_pct",
+        "morph_vs_deepseek_output_discount_pct",
+        "sail_vs_deepseek_output_discount_pct",
+        "crusoe_vs_morph_input_multiple",
+        "crusoe_vs_morph_output_multiple",
+        "morph_vs_crusoe_input_discount_pct",
+        "morph_vs_crusoe_output_discount_pct",
+        "pik_cash_drain_175",
+        "pik_cash_drain_200",
+        "otf_q1_2026_pik_share_pct",
+        "fsk_q2_2026_pik_share_pct",
+        "arcc_q3_2026_pik_share_pct"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "owl_q2_2026_aum_usd_b": { "type": "number", "const": 307.4 },
+        "owl_q3_2026_aum_usd_b": { "type": "number", "const": 329.9 },
+        "owl_credit_aum_usd_b": { "type": "number", "const": 157.8 },
+        "owl_real_assets_aum_usd_b": { "type": "number", "const": 78.0 },
+        "owl_gp_strategic_aum_usd_b": { "type": "number", "const": 71.6 },
+        "owl_fre_multiple_baseline": { "type": "number", "const": 22.0 },
+        "owl_share_price_oct_30_2026_usd": { "type": "number", "const": 10.29 },
+        "owl_drawdown_from_jan_2025_peak_pct": { "type": "number", "const": 67.0 },
+        "owl_market_cap_oct_30_2026_usd_b": { "type": "number", "const": 16.04 },
+        "owl_annual_dividend_per_share_usd": { "type": "number", "const": 0.92 },
+        "owl_dividend_yield_pct": { "type": "number", "const": 8.91 },
+        "owl_ttm_gaap_net_income_usd_m": { "type": "number", "const": 80.91 },
+        "owl_ttm_gaap_eps_usd": { "type": "number", "const": 0.12 },
+        "owl_gaap_pe_ratio": { "type": "number", "const": 86.20 },
+        "obdc_share_price_oct_30_2026_usd": { "type": "number", "const": 10.43 },
+        "obdc_q2_2026_nav_per_share_usd": { "type": "number", "const": 14.26 },
+        "obdc_q1_2026_nav_per_share_usd": { "type": "number", "const": 14.41 },
+        "obdc_q4_2025_nav_per_share_usd": { "type": "number", "const": 14.81 },
+        "obdc_price_to_nav_discount_pct": { "type": "number", "const": 26.8583 },
+        "obdc_trailing_dividend_per_share_usd": { "type": "number", "const": 1.26 },
+        "obdc_reset_quarterly_dividend_usd": { "type": "number", "const": 0.31 },
+        "obdc_dividend_yield_pct": { "type": "number", "const": 12.08 },
+        "retail_quarterly_redemption_gate_pct": { "type": "number", "const": 5.0 },
+        "cox_capital_ocic_tender_date": { "type": "string", "const": "2026-10-23" },
+        "leg_a_true_software_pct_range": {
+          "type": "array",
+          "items": { "type": "number" },
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "leg_a_reported_software_pct": { "type": "number", "const": 11.1 },
+        "leg_a_true_software_credit_usd_b_range": {
+          "type": "array",
+          "items": { "type": "number" },
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "leg_a_hidden_software_usd_b_range": {
+          "type": "array",
+          "items": { "type": "number" },
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "ipi_initial_agreement_date": { "type": "string", "const": "2024-10-07" },
+        "ipi_initial_price_usd_b": { "type": "number", "const": 1.0 },
+        "ipi_closing_date": { "type": "string", "const": "2025-01-03" },
+        "ipi_final_consideration_usd_b": { "type": "number", "const": 1.3 },
+        "ipi_aum_added_usd_b": { "type": "number", "const": 14.2 },
+        "ipi_data_centers_count": { "type": "integer", "const": 82 },
+        "ipi_leased_capacity_gw": { "type": "number", "const": 2.2 },
+        "abilene_dc1_borec_longhorn_equity_pct": { "type": "number", "const": 92.26 },
+        "oracle_1_2_jv_borec_rounded_pct": { "type": "number", "const": 92.3 },
+        "abilene_dc1_construction_loan_usd_m": { "type": "number", "const": 2288.0 },
+        "abilene_dc1_loan_spread_bps": { "type": "integer", "const": 250 },
+        "coreweave_ctp02_total_cost_usd_m": { "type": "number", "const": 726.895 },
+        "coreweave_ctp03_total_cost_usd_m": { "type": "number", "const": 746.114 },
+        "coreweave_ctp02_03_combined_cost_usd_m": { "type": "number", "const": 1473.009 },
+        "coreweave_borec_spider_share_pct": { "type": "number", "const": 95.0 },
+        "coreweave_borec_spider_committed_usd_m": { "type": "number", "const": 1399.35855 },
+        "meta_hyperion_jv_total_usd_b": { "type": "number", "const": 27.0 },
+        "meta_hyperion_owl_equity_pct": { "type": "number", "const": 80.0 },
+        "leg_b_direct_infra_aum_usd_b_range": {
+          "type": "array",
+          "items": { "type": "number" },
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "leg_b_gross_infra_capex_usd_b_range": {
+          "type": "array",
+          "items": { "type": "number" },
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "combined_dual_ouroboros_direct_aum_usd_b_range": {
+          "type": "array",
+          "items": { "type": "number" },
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "combined_dual_ouroboros_gross_capital_usd_b_range": {
+          "type": "array",
+          "items": { "type": "number" },
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "combined_dual_ouroboros_share_of_q2_aum_pct_range": {
+          "type": "array",
+          "items": { "type": "number" },
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "router_morph_in": { "type": "number", "const": 0.022 },
+        "router_morph_out": { "type": "number", "const": 0.192 },
+        "router_wafer_in": { "type": "number", "const": 0.038 },
+        "router_wafer_out": { "type": "number", "const": 0.50 },
+        "router_deepinfra_flex_in": { "type": "number", "const": 0.0784 },
+        "router_deepinfra_flex_out": { "type": "number", "const": 0.2352 },
+        "router_sail_in": { "type": "number", "const": 0.101 },
+        "router_sail_out": { "type": "number", "const": 0.15 },
+        "router_deepseek_official_in": { "type": "number", "const": 0.15 },
+        "router_deepseek_official_out": { "type": "number", "const": 0.60 },
+        "router_alibaba_in": { "type": "number", "const": 0.165 },
+        "router_alibaba_out": { "type": "number", "const": 0.66 },
+        "router_baidu_in": { "type": "number", "const": 0.28 },
+        "router_baidu_out": { "type": "number", "const": 1.13 },
+        "router_crusoe_in": { "type": "number", "const": 0.29 },
+        "router_crusoe_out": { "type": "number", "const": 1.20 },
+        "router_nebius_together_in": { "type": "number", "const": 0.30 },
+        "router_nebius_together_out": { "type": "number", "const": 1.20 },
+        "morph_vs_deepseek_input_discount_pct": { "type": "number", "const": 85.3333 },
+        "morph_vs_deepseek_output_discount_pct": { "type": "number", "const": 68.00 },
+        "sail_vs_deepseek_output_discount_pct": { "type": "number", "const": 75.00 },
+        "crusoe_vs_morph_input_multiple": { "type": "number", "const": 13.1818 },
+        "crusoe_vs_morph_output_multiple": { "type": "number", "const": 6.25 },
+        "morph_vs_crusoe_input_discount_pct": { "type": "number", "const": 92.4138 },
+        "morph_vs_crusoe_output_discount_pct": { "type": "number", "const": 84.00 },
+        "pik_cash_drain_175": { "type": "number", "const": 0.9175 },
+        "pik_cash_drain_200": { "type": "number", "const": 0.9200 },
+        "otf_q1_2026_pik_share_pct": { "type": "number", "const": 25.00 },
+        "fsk_q2_2026_pik_share_pct": { "type": "number", "const": 34.43 },
+        "arcc_q3_2026_pik_share_pct": { "type": "number", "const": 15.24 }
+      }
+    },
+    "governing_equations": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 5,
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "formula"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string", "enum": ["EQ-1", "EQ-2", "EQ-3", "EQ-4", "EQ-5"] },
+          "name": { "type": "string" },
+          "formula": { "type": "string" }
+        }
+      }
+    },
+    "tranche_waterfall": {
+      "type": "object",
+      "required": ["input_ev_usd_b", "total_stack_principal_usd_b", "tranches"],
+      "additionalProperties": false,
+      "properties": {
+        "input_ev_usd_b": { "type": "number", "minimum": 0 },
+        "total_stack_principal_usd_b": { "type": "number", "const": 99.34 },
+        "tranches": {
+          "type": "array",
+          "minItems": 3,
+          "items": {
+            "type": "object",
+            "required": [
+              "tranche",
+              "principal_usd_b",
+              "breakeven_ev_usd_b",
+              "recovered_usd_b",
+              "recovery_cents_on_dollar"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "tranche": { "type": "string" },
+              "principal_usd_b": { "type": "number" },
+              "breakeven_ev_usd_b": { "type": "number" },
+              "recovered_usd_b": { "type": "number" },
+              "recovery_cents_on_dollar": { "type": "number" }
+            }
+          }
+        }
+      }
+    }
+  }
+}

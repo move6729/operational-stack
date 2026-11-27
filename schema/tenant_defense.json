@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:tenant_defense.json",
+  "title": "OpenTenantDefenseSchema",
+  "type": "object",
+  "properties": {
+    "protocol_version": { "type": "string", "enum": ["OPEN-TENANT-v1.0"] },
+    "case_id": { "type": "string", "format": "uuid" },
+    "monthly_rent_cents": { "type": "integer", "minimum": 0 },
+    "property_address": { "type": "string" },
+    "building_id": { "type": "string" },
+    "tenant_identity": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "contact_hash": { "type": "string" }
+      },
+      "required": ["name"]
+    },
+    "habitability_defects": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "defect_type": { "type": "string" },
+          "severity_factor": { "type": "number", "minimum": 0.0, "maximum": 1.0 },
+          "duration_days": { "type": "integer", "minimum": 0 },
+          "notice_timestamp": { "type": "integer" },
+          "statutory_cure_days": { "type": "integer", "default": 14 }
+        },
+        "required": ["defect_type", "severity_factor", "duration_days", "notice_timestamp"]
+      }
+    },
+    "protected_activities": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "timestamp": { "type": "integer" },
+          "activity": { "type": "string" }
+        },
+        "required": ["timestamp", "activity"]
+      }
+    },
+    "adverse_actions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "timestamp": { "type": "integer" },
+          "action": { "type": "string" }
+        },
+        "required": ["timestamp", "action"]
+      }
+    },
+    "escalation_state": {
+      "type": "integer",
+      "enum": [0, 1, 2, 3],
+      "description": "0: Logging, 1: Statutory Cure Window Active, 2: Rent Escrow Locked, 3: Stigmergic Class Leverage Active"
+    },
+    "stigmergic_proof_hash": { "type": "string" }
+  },
+  "required": [
+    "protocol_version",
+    "case_id",
+    "monthly_rent_cents",
+    "property_address",
+    "habitability_defects"
+  ]
+}

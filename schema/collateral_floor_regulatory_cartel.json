@@ -1,0 +1,180 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:collateral_floor_regulatory_cartel.json",
+  "title": "Collateral Floor & Regulatory Cartel Bundle Schema",
+  "type": "object",
+  "required": [
+    "bundle_id",
+    "epistemic_lattice",
+    "entity_and_instrument_ids",
+    "tranche_waterfall",
+    "collateral_shock_parameters",
+    "ashby_variety_gate",
+    "catalyst_calendar",
+    "milkovich_compliance"
+  ],
+  "properties": {
+    "bundle_id": {
+      "type": "string",
+      "const": "SPEC-COLLATERAL-FLOOR-REGULATORY-CARTEL-v1.0"
+    },
+    "epistemic_lattice": {
+      "type": "object",
+      "required": ["h0_baseline", "h1_mechanism", "falsification_vector"],
+      "properties": {
+        "h0_baseline": {
+          "type": "string",
+          "description": "Null: collateral floors self-stabilize via diversified private balance sheets"
+        },
+        "h1_mechanism": {
+          "type": "string",
+          "description": "Alternative: concentrated Mag-7 collateral + regulatory cartel channels force sovereign backstop"
+        },
+        "falsification_vector": {
+          "type": "string",
+          "description": "Objective accounting identity whose discovery production would falsify H0"
+        }
+      },
+      "additionalProperties": false
+    },
+    "entity_and_instrument_ids": {
+      "type": "object",
+      "required": ["mag7_entities", "regulators"],
+      "properties": {
+        "mag7_entities": {
+          "type": "array",
+          "minItems": 7,
+          "items": {
+            "type": "object",
+            "required": ["legal_name", "ticker", "cik"],
+            "properties": {
+              "legal_name": { "type": "string" },
+              "ticker": { "type": "string" },
+              "cik": {
+                "type": "string",
+                "pattern": "^\\d{10}$"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "regulators": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["name", "jurisdiction"],
+            "properties": {
+              "name": { "type": "string" },
+              "jurisdiction": { "type": "string" },
+              "cik": { "type": ["string", "null"], "pattern": "^\\d{10}$" }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "tranche_waterfall": {
+      "type": "object",
+      "required": ["pool_total_usd_b", "tranches", "fed_backstop_function", "ev_checkpoints"],
+      "properties": {
+        "pool_total_usd_b": { "type": "number", "const": 1000 },
+        "tranches": {
+          "type": "array",
+          "minItems": 4,
+          "items": {
+            "type": "object",
+            "required": ["tranche", "principal_usd_b", "statute"],
+            "properties": {
+              "tranche": { "type": "string" },
+              "principal_usd_b": { "type": "number" },
+              "statute": { "type": "string" }
+            },
+            "additionalProperties": false
+          }
+        },
+        "fed_backstop_function": {
+          "type": "string",
+          "const": "B_Fed(ev) = max(0, 950 - ev)"
+        },
+        "ev_checkpoints": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["ev_usd_b", "t3_recovery_usd_b", "t3_haircut_pct", "fed_backstop_usd_b"],
+            "properties": {
+              "ev_usd_b": { "type": "number" },
+              "t3_recovery_usd_b": { "type": "number" },
+              "t3_haircut_pct": { "type": "number" },
+              "fed_backstop_usd_b": { "type": "number" }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "collateral_shock_parameters": {
+      "type": "object",
+      "required": ["mag7_total_cap_usd", "w_inc", "v_sp500", "shock_deltas"],
+      "properties": {
+        "mag7_total_cap_usd": { "type": "number", "const": 17264000000000 },
+        "w_inc": { "type": "number", "const": 0.332 },
+        "v_sp500": { "type": "number", "const": 52.0 },
+        "shock_deltas": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["delta", "drawdown_usd"],
+            "properties": {
+              "delta": { "type": "number", "enum": [0.4, 0.5, 0.6] },
+              "drawdown_usd": { "type": "number" }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "ashby_variety_gate": {
+      "type": "object",
+      "required": ["v_filter", "v_prompt", "bypass_formula", "bypass_within_12h"],
+      "properties": {
+        "v_filter": { "type": "number" },
+        "v_prompt": { "type": "number" },
+        "bypass_formula": {
+          "type": "string",
+          "const": "P_bypass = 1 - (v_filter / v_prompt)^attempts"
+        },
+        "bypass_within_12h": { "type": "boolean", "const": true }
+      },
+      "additionalProperties": false
+    },
+    "catalyst_calendar": {
+      "type": "array",
+      "minItems": 10,
+      "maxItems": 10,
+      "items": {
+        "type": "object",
+        "required": ["iso_date", "event"],
+        "properties": {
+          "iso_date": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+          "event": { "type": "string" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "milkovich_compliance": {
+      "type": "object",
+      "required": ["disclosed_facts_paired", "zero_uncharged_felony_labels", "zero_motive_assertions", "discovery_trap_preserved"],
+      "properties": {
+        "disclosed_facts_paired": { "type": "boolean", "const": true },
+        "zero_uncharged_felony_labels": { "type": "boolean", "const": true },
+        "zero_motive_assertions": { "type": "boolean", "const": true },
+        "discovery_trap_preserved": { "type": "boolean", "const": true }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

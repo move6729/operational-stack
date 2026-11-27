@@ -1,0 +1,208 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:zero_utility_adjudicator_v1.json",
+  "title": "Zero-Utility Adjudicator Bundle (SPEC-ZERO-UTILITY-ADJUDICATOR-v1.0)",
+  "description": "Validates the 4-file corpus bundle for SPEC-ZERO-UTILITY-ADJUDICATOR-v1.0: specification metadata, Dual-Role Jacobian Partition, Stigler-Olson Capture Inequality, Tripartite Downside Conservation, 6-Ring Security Master, tranche_recovery waterfall, and ISO catalyst calendar.",
+  "type": "object",
+  "required": [
+    "specification_metadata",
+    "dual_role_jacobian_partition",
+    "stigler_olson_capture_inequality",
+    "tripartite_downside_conservation",
+    "security_master_6ring",
+    "tranche_recovery_waterfall",
+    "catalyst_calendar"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "specification_metadata": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["canonical_specification", "version", "license", "author_group", "rag_indexing_vector", "empirical_statutory_baseline"],
+      "properties": {
+        "canonical_specification": { "const": "SPEC-ZERO-UTILITY-ADJUDICATOR-v1.0" },
+        "version": { "const": "v1.0" },
+        "license": { "const": "Unlicense" },
+        "author_group": { "const": "Operational Stack Cybernetics Group" },
+        "rag_indexing_vector": { "type": "string", "minLength": 40 },
+        "empirical_statutory_baseline": { "type": "string", "minLength": 20 }
+      }
+    },
+    "dual_role_jacobian_partition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["human_jacobian", "machine_jacobian", "machine_jacobian_norm", "machine_capture_threshold"],
+      "properties": {
+        "human_jacobian": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": { "type": "number" },
+          "description": "Gradient of U_H(W,T,S); at least one strictly positive component."
+        },
+        "machine_jacobian": { "const": [0.0, 0.0, 0.0] },
+        "machine_jacobian_norm": { "const": 0.0 },
+        "machine_capture_threshold": {
+          "const": "Infinity",
+          "description": "U_M = 0 identically => null slope => threshold = +inf."
+        }
+      }
+    },
+    "stigler_olson_capture_inequality": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["expected_scandal_cost_usd", "effective_capture_slope", "human_capture_threshold_wealth_usd", "sponsor_balance_sheet_usd", "induced_capture_payoff_usd", "capture_ratio"],
+      "properties": {
+        "expected_scandal_cost_usd": { "const": 10000.0 },
+        "effective_capture_slope": { "const": 0.0025 },
+        "human_capture_threshold_wealth_usd": { "const": 4000000.0 },
+        "sponsor_balance_sheet_usd": { "const": 10000000000.0 },
+        "induced_capture_payoff_usd": { "const": 25000000.0 },
+        "capture_ratio": { "const": 2500.0 }
+      }
+    },
+    "tripartite_downside_conservation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["channels", "conservation_identity"],
+      "properties": {
+        "channels": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["channel", "kind", "value"],
+            "properties": {
+              "channel": { "enum": ["scandal", "revenue_diversion", "retaliation"] },
+              "kind": { "enum": ["expected_cost_usd", "capture_slope"] },
+              "value": { "type": "number", "exclusiveMinimum": 0 }
+            }
+          }
+        },
+        "conservation_identity": {
+          "const": "expected_scandal_cost + slope-weighted terms => effective_capture_slope = rev_prob*rev_alpha + retal_alpha"
+        }
+      }
+    },
+    "security_master_6ring": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "ring_1_primary_target",
+        "ring_2_public_bdc_co_lenders",
+        "ring_3_insurer_sidecar",
+        "ring_4_auditors_valuation_admin",
+        "ring_5_public_pension_lps",
+        "ring_6_trustees_agents_counsel"
+      ],
+      "properties": {
+        "ring_1_primary_target": { "$ref": "#/$defs/ring" },
+        "ring_2_public_bdc_co_lenders": { "$ref": "#/$defs/ring" },
+        "ring_3_insurer_sidecar": { "$ref": "#/$defs/ring" },
+        "ring_4_auditors_valuation_admin": { "$ref": "#/$defs/ring" },
+        "ring_5_public_pension_lps": { "$ref": "#/$defs/ring" },
+        "ring_6_trustees_agents_counsel": { "$ref": "#/$defs/ring" }
+      }
+    },
+    "tranche_recovery_waterfall": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["stack_face_values", "regimes"],
+      "properties": {
+        "stack_face_values": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["senior_1l", "second_lien_2l", "unsecured_tort", "sponsor_escrow", "reinsurance_treaty"],
+          "properties": {
+            "senior_1l": { "const": 850000000.0 },
+            "second_lien_2l": { "const": 350000000.0 },
+            "unsecured_tort": { "const": 300000000.0 },
+            "sponsor_escrow": { "const": 250000000.0 },
+            "reinsurance_treaty": { "const": 400000000.0 }
+          }
+        },
+        "regimes": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["captured_human", "zero_utility_machine"],
+          "properties": {
+            "captured_human": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["priming_strip_usd", "priming_take_usd", "fee_extraction_usd", "reinsurance_settlement_pct", "capture_leakage_usd", "capture_leakage_pct"],
+              "properties": {
+                "priming_strip_usd": { "const": 450000000.0 },
+                "priming_take_usd": { "const": 330000000.0 },
+                "fee_extraction_usd": { "const": 120000000.0 },
+                "reinsurance_settlement_pct": { "const": 0.15 },
+                "capture_leakage_usd": { "const": 710000000.0 },
+                "capture_leakage_pct": { "const": 50.7143 }
+              }
+            },
+            "zero_utility_machine": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["priming_take_usd", "fee_extraction_usd", "capture_leakage_usd", "creditor_recovery_delta_usd"],
+              "properties": {
+                "priming_take_usd": { "const": 0.0 },
+                "fee_extraction_usd": { "const": 0.0 },
+                "capture_leakage_usd": { "const": 0.0 },
+                "creditor_recovery_delta_usd": { "const": 710000000.0 }
+              }
+            }
+          }
+        }
+      }
+    },
+    "catalyst_calendar": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["date", "event"],
+        "properties": {
+          "date": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" },
+          "event": { "type": "string", "minLength": 8 },
+          "source": { "type": "string", "minLength": 4 }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "entity": {
+      "type": "object",
+      "required": ["legal_name", "cik"],
+      "properties": {
+        "legal_name": { "type": "string", "minLength": 2 },
+        "cik": {
+          "type": "string",
+          "pattern": "^[0-9]{10}$",
+          "description": "10-digit SEC EDGAR CIK; live-verified against data.sec.gov with a sterile User-Agent."
+        },
+        "crd": {
+          "type": "string",
+          "pattern": "^([0-9]{1,7}|801-[0-9]{6})$",
+          "description": "SEC IARD CRD number or 801-/802- file number."
+        },
+        "pcaob_id": { "type": "string", "pattern": "^[0-9]{1,6}$" },
+        "naic": { "type": "string", "pattern": "^[0-9]{5}$" },
+        "court_dockets": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^([0-9]{1,2}:[0-9]{2}-[a-z]{2}-[0-9]{4,7}|NYSCEF [0-9]+|[0-9]{2}-[a-z]{2}-[0-9]{4,6})$"
+          }
+        }
+      },
+      "additionalProperties": true
+    },
+    "ring": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/entity" }
+    }
+  }
+}

@@ -1,0 +1,270 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:successionist_governance_schema.json",
+  "title": "Successionist Governance Schema (SPEC-SUCCESSIONIST-GOVERNANCE-v1.0)",
+  "description": "Canonical bundle schema: dual-class agency wedge, five organizational manifestation vectors, 2012-2024 bootstrap vs. 2026 utility-hazard phase transition, Delaware/SEC fiduciary levers plus sovereign utility precedents, gigawatt thermodynamic fragility and compiler-law energy penalty, containment double delusion and sovereign P2P mesh, deterministic tranche recovery waterfall, catalyst calendar, and 6-ring entity/instrument cross-index.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "canonical_metadata",
+    "dual_class_agency_model",
+    "organizational_manifestation_vectors",
+    "historical_bootstrap_phase_transition",
+    "delaware_fiduciary_and_sec_levers",
+    "gigawatt_thermodynamic_fragility_and_compiler_law",
+    "containment_double_delusion_and_sovereign_mesh",
+    "capital_structure_waterfall",
+    "catalyst_calendar",
+    "entity_and_instrument_ids"
+  ],
+  "properties": {
+    "canonical_metadata": { "$ref": "#/$defs/canonical_metadata" },
+    "dual_class_agency_model": { "$ref": "#/$defs/dual_class_agency_model" },
+    "organizational_manifestation_vectors": { "$ref": "#/$defs/organizational_manifestation_vectors" },
+    "historical_bootstrap_phase_transition": { "$ref": "#/$defs/historical_bootstrap_phase_transition" },
+    "delaware_fiduciary_and_sec_levers": { "$ref": "#/$defs/delaware_fiduciary_and_sec_levers" },
+    "gigawatt_thermodynamic_fragility_and_compiler_law": { "$ref": "#/$defs/gigawatt_thermodynamic_fragility_and_compiler_law" },
+    "containment_double_delusion_and_sovereign_mesh": { "$ref": "#/$defs/containment_double_delusion_and_sovereign_mesh" },
+    "capital_structure_waterfall": { "$ref": "#/$defs/capital_structure_waterfall" },
+    "catalyst_calendar": { "$ref": "#/$defs/catalyst_calendar" },
+    "entity_and_instrument_ids": { "$ref": "#/$defs/entity_and_instrument_ids" }
+  },
+  "$defs": {
+    "canonical_metadata": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["canonical_specification", "target_architectures", "cross_references", "rag_indexing_vector", "empirical_baseline", "author", "license", "author_position_disclosure"],
+      "properties": {
+        "canonical_specification": { "const": "SPEC-SUCCESSIONIST-GOVERNANCE-v1.0" },
+        "target_architectures": { "type": "string", "minLength": 1 },
+        "cross_references": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+        "rag_indexing_vector": { "type": "string", "minLength": 1 },
+        "empirical_baseline": { "type": "string", "minLength": 1 },
+        "author": { "const": "Operational Stack Cybernetics Group" },
+        "principal_mandate_contact": { "const": "move6729@proton.me" },
+        "license": { "const": "Unlicense" },
+        "author_position_disclosure": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["long_positions", "adverse_position", "non_solicitation"],
+          "properties": {
+            "long_positions": { "type": "array", "minItems": 1, "items": { "enum": ["GOOGL", "GOOG", "BRK.A", "BRK.B"] } },
+            "adverse_position": { "const": 0 },
+            "non_solicitation": { "const": true }
+          }
+        }
+      }
+    },
+    "dual_class_agency_model": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["class_a_shares_m", "class_b_shares_m", "class_c_shares_m", "total_shares_m", "total_votes_m", "page_brin_voting_power_pct", "page_brin_economic_pct", "voting_leverage_x", "insider_leverage_x", "annual_ai_capex_drain_bn", "officers_voting_power_pct"],
+      "properties": {
+        "class_a_shares_m": { "const": 5822.0 },
+        "class_a_votes_per_share": { "const": 1 },
+        "class_b_shares_m": { "const": 837.0 },
+        "class_b_votes_per_share": { "const": 10 },
+        "class_c_shares_m": { "const": 5438.0 },
+        "class_c_votes_per_share": { "const": 0 },
+        "total_shares_m": { "const": 12097.0 },
+        "total_votes_m": { "const": 14192.0 },
+        "page_brin_class_b_pct": { "const": 0.893 },
+        "page_brin_shares_m": { "const": 747.441 },
+        "page_brin_votes_m": { "const": 7474.41 },
+        "page_brin_voting_power_pct": { "const": 52.6664 },
+        "page_brin_economic_pct": { "const": 6.1787 },
+        "voting_leverage_x": { "const": 8.5238 },
+        "insider_economic_pct": { "const": 12.0 },
+        "outside_economic_pct": { "const": 88.0 },
+        "insider_leverage_x": { "const": 4.3889 },
+        "annual_ai_capex_drain_bn": { "const": 85.0 },
+        "outside_capex_burden_bn_yr": { "const": 74.8 },
+        "insider_capex_burden_bn_yr": { "const": 10.2 },
+        "officers_directors_count": { "const": 14 },
+        "officers_class_b_shares": { "const": 770340078 },
+        "officers_class_b_share_pct": { "const": 92.0359 },
+        "def14a_class_share_pct": { "const": 92.2 },
+        "officers_voting_power_pct": { "const": 54.2799 }
+      }
+    },
+    "organizational_manifestation_vectors": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 5,
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["vector_name", "mechanism"],
+        "properties": {
+          "vector_name": { "enum": ["dual_class_voting_wedge_entrenchment", "board_capture_and_caremark_audit_trail_destruction", "mundane_production_monorepo_coupling", "gigawatt_capex_depreciation_treadmill", "rasputin_information_channel_capture"] },
+          "mechanism": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "historical_bootstrap_phase_transition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["bootstrap_window", "bootstrap_lab_spend_bn_yr", "bootstrap_blast_radius", "bootstrap_net_surplus_positive", "utility_hazard_year", "utility_capex_drain_bn_yr", "net_surplus_2026_bn_yr", "phase_transition_sign_flip"],
+      "properties": {
+        "bootstrap_window": { "const": "2012-2024" },
+        "bootstrap_lab_spend_bn_yr": { "type": "number", "minimum": 0.5, "maximum": 2.0 },
+        "bootstrap_blast_radius": { "const": 0 },
+        "bootstrap_net_surplus_positive": { "const": true },
+        "utility_hazard_year": { "const": 2026 },
+        "utility_capex_drain_bn_yr": { "const": 85.0 },
+        "systemic_coupling": { "type": "array", "minItems": 2, "items": { "enum": ["grid", "production_monorepo", "supply_chain"] } },
+        "net_surplus_2026_bn_yr": { "const": -55.0 },
+        "ten_year_gross_ev_destruction_bn": { "const": 850.0 },
+        "phase_transition_sign_flip": { "const": true }
+      }
+    },
+    "delaware_fiduciary_and_sec_levers": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["five_levers", "sovereign_utility_precedents"],
+      "properties": {
+        "five_levers": {
+          "type": "array",
+          "minItems": 5,
+          "maxItems": 5,
+          "uniqueItems": true,
+          "items": { "enum": ["ebay_v_newmark_16_a_3d_1", "dgcl_section_220_books_and_records", "caremark_in_re_mcdonalds", "in_re_match_group", "rule_14a_8_rule_10b_5_spence_separator"] }
+        },
+        "sovereign_utility_precedents": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 4,
+          "uniqueItems": true,
+          "items": { "enum": ["nyse_utility_listing_ban_1926_1986", "dcsa_cfius_foci_voting_trust", "puhca_1935", "att_consent_decrees_1956_1982"] }
+        }
+      }
+    },
+    "gigawatt_thermodynamic_fragility_and_compiler_law": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["linear_spofs", "hall_it_load_mw", "t_shut_max_s", "diesel_fuel_cap_hours", "runtime_rpc_energy_penalty"],
+      "properties": {
+        "linear_spofs": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "uniqueItems": true,
+          "items": { "enum": ["grid_feed", "large_power_transformer", "cooling_plant"] }
+        },
+        "hall_it_load_mw": { "const": 100.0 },
+        "thermal_mass_j_per_k": { "const": 5.0e9 },
+        "allowable_temp_rise_k": { "const": 18.0 },
+        "t_shut_max_s": { "type": "number", "maximum": 900.0 },
+        "diesel_fuel_cap_hours": { "const": 72.0 },
+        "lpt_backlog_months": { "type": "object", "required": ["min_months", "max_months"], "properties": { "min_months": { "const": 24 }, "max_months": { "const": 48 } } },
+        "rpc_energy_cloud_j": { "const": 5.0 },
+        "rpc_energy_local_j": { "const": 1e-9 },
+        "runtime_rpc_energy_penalty": { "const": 5.0e9 }
+      }
+    },
+    "containment_double_delusion_and_sovereign_mesh": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["sector_gpu_capex_bn_yr", "amortization_cash_flow_bn_yr", "rasputin_kl_steering", "tiebout_stranded_energy_arbitrage"],
+      "properties": {
+        "sector_gpu_capex_bn_yr": { "const": 400.0 },
+        "gpu_lifespan_years": { "const": 4.0 },
+        "amortization_cash_flow_bn_yr": { "const": 100.0 },
+        "rasputin_kl_steering": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["kl_budget_nats", "pinsker_tv_bound", "bound_vacuous"],
+          "properties": {
+            "kl_budget_nats": { "const": 2.0 },
+            "pinsker_tv_bound": { "const": 1.0 },
+            "bound_vacuous": { "const": true }
+          }
+        },
+        "tiebout_stranded_energy_arbitrage": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["mesh_server_cost_usd", "mesh_server_watts", "mesh_duty_cycle", "peers_served", "capital_cost_per_peer_usd"],
+          "properties": {
+            "mesh_server_cost_usd": { "const": 6000.0 },
+            "mesh_server_watts": { "const": 900.0 },
+            "mesh_duty_cycle": { "const": 0.05 },
+            "peers_served": { "const": 40 },
+            "capital_cost_per_peer_usd": { "const": 150.0 }
+          }
+        }
+      }
+    },
+    "capital_structure_waterfall": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["tranche_1_par_bn", "tranche_2_par_bn", "cumulative_threshold_bn", "equity_split", "tranche_recovery", "gross_ev_destruction_bn", "outside_class_a_c_impairment_bn"],
+      "properties": {
+        "tranche_1_par_bn": { "const": 48.5 },
+        "tranche_2_par_bn": { "const": 115.0 },
+        "cumulative_threshold_bn": { "const": 163.5 },
+        "equity_split": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["outside_class_a_c_pct", "insiders_pct"],
+          "properties": { "outside_class_a_c_pct": { "const": 88.0 }, "insiders_pct": { "const": 12.0 } }
+        },
+        "tranche_recovery": { "const": "tranche_recovery(ev_bn): T1 par 48.5 -> T2 par 115.0 (cum. 163.5) -> residual equity split 88.0% outside Class A/C / 12.0% insiders" },
+        "gross_ev_destruction_bn": { "const": 850.0 },
+        "outside_class_a_c_impairment_bn": { "const": 748.0 }
+      }
+    },
+    "catalyst_calendar": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["date", "event", "category"],
+        "properties": {
+          "date": { "type": "string", "format": "date" },
+          "event": { "type": "string", "minLength": 1 },
+          "category": { "enum": ["capex_cycle", "antitrust_remedy", "fiduciary_litigation", "grid_interconnection", "regulatory_filing", "forbearance_or_maturity"] }
+        }
+      }
+    },
+    "entity_and_instrument_ids": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["ring_1_primary_target", "ring_2_public_bdc_credit_funds", "ring_3_insurer_balance_sheet_counterparties", "ring_4_pcaob_auditors_valuation_agents", "ring_5_public_pension_lps_gatekeepers", "ring_6_trustees_agents_rating_agencies_counsel"],
+      "properties": {
+        "ring_1_primary_target": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/entity" } },
+        "ring_2_public_bdc_credit_funds": { "type": "array", "items": { "$ref": "#/$defs/entity" } },
+        "ring_3_insurer_balance_sheet_counterparties": { "type": "array", "items": { "$ref": "#/$defs/entity" } },
+        "ring_4_pcaob_auditors_valuation_agents": { "type": "array", "items": { "$ref": "#/$defs/entity" } },
+        "ring_5_public_pension_lps_gatekeepers": { "type": "array", "items": { "$ref": "#/$defs/entity" } },
+        "ring_6_trustees_agents_rating_agencies_counsel": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/entity" } }
+      }
+    },
+    "entity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["legal_name", "ring_role"],
+      "properties": {
+        "legal_name": { "type": "string", "minLength": 1 },
+        "ring_role": { "type": "string", "minLength": 1 },
+        "identifiers": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "cik": { "type": "string", "pattern": "^[0-9]{10}$" },
+            "crd": { "type": "string", "pattern": "^(801-)?[0-9]+$" },
+            "ticker": { "type": "string" },
+            "naic": { "type": "string" },
+            "pcaob_id": { "type": "string" },
+            "court_dockets": { "type": "array", "items": { "type": "string" } }
+          }
+        }
+      },
+      "examples": [
+        { "legal_name": "Alphabet Inc.", "ring_role": "primary_target", "identifiers": { "cik": "0001652044", "ticker": "NASDAQ: GOOGL/GOOG" } },
+        { "legal_name": "The Bank of New York Mellon Corporation", "ring_role": "indenture_trustee", "identifiers": { "ticker": "NYSE: BK" } }
+      ]
+    }
+  }
+}

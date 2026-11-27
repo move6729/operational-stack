@@ -1,0 +1,284 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:network_school_prospera_captive_bank_v1.0.json",
+  "title": "Network School & Próspera Captive Bank Collapse (v1.0) Bundle Schema",
+  "description": "Locked v1.0 constants and structural contract for SPEC-NETWORK-SCHOOL-AND-PROSPERA-CAPTIVE-BANK-COLLAPSE-v1.0.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "specification_id",
+    "entity_and_instrument_ids",
+    "biologics_human_courier_unit_economics",
+    "seshat_bank_captive_reserve_metrics",
+    "tranche_recovery_waterfall",
+    "network_school_immigration_audit",
+    "catalyst_calendar"
+  ],
+  "properties": {
+    "specification_id": {
+      "const": "SPEC-NETWORK-SCHOOL-AND-PROSPERA-CAPTIVE-BANK-COLLAPSE-v1.0"
+    },
+    "entity_and_instrument_ids": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "ring1_primary_targets",
+        "ring2_venture_syndicate",
+        "ring3_captive_bank_and_host",
+        "ring4_regulators",
+        "ring5_injured_parties",
+        "ring6_courts_tribunals"
+      ],
+      "properties": {
+        "ring1_primary_targets": {
+          "type": "array",
+          "minItems": 7,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["name"],
+            "properties": {
+              "name": {
+                "enum": [
+                  "Honduras Próspera Inc.",
+                  "Seshat Bank",
+                  "Minicircle, Inc.",
+                  "NS0 Malaysia Sdn Bhd",
+                  "NS0 Pte Ltd",
+                  "Continuance LLC dba Blueprint",
+                  "NewLimit, Inc."
+                ]
+              },
+              "role": { "type": "string" }
+            }
+          }
+        },
+        "ring2_venture_syndicate": {
+          "type": "array",
+          "minItems": 6,
+          "items": {
+            "enum": [
+              "Founders Fund CIK 0001218710",
+              "Andreessen Horowitz CIK 0001591406 / CRD 160303 / 801-76506",
+              "Coinbase Global Inc. CIK 0001679788",
+              "Thrive Capital CRD 159944 / 801-77087",
+              "Greenoaks CIK 0001606024 / CRD 164729",
+              "Kleiner Perkins CRD 160275"
+            ]
+          }
+        },
+        "ring3_captive_bank_and_host": {
+          "type": "array",
+          "items": { "enum": ["Seshat Bank", "Country Garden 2007.HK"] }
+        },
+        "ring4_regulators": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "Próspera RFSA",
+              "MBIP",
+              "Jabatan Imigresen Malaysia / KDN",
+              "PGR Honduras / Ministerio Público / ATIC",
+              "CA AG Prop 65 2025-00544",
+              "US FDA"
+            ]
+          }
+        },
+        "ring5_injured_parties": {
+          "type": "array",
+          "items": { "enum": ["Minicircle, Inc.", "Magatte Wade", "Republic of Honduras"] }
+        },
+        "ring6_courts_tribunals": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "D. Del. 1:26-cv-01359",
+              "Del. Super. Ct. N26C-08-380 PAW CCLD",
+              "D. Wyo. 25-00285-SAH",
+              "ICSID ARB/23/2"
+            ]
+          }
+        }
+      }
+    },
+    "biologics_human_courier_unit_economics": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "ruo_unit_cost_usd",
+        "retail_injection_price_usd",
+        "unit_gross_profit_usd",
+        "unit_gross_margin",
+        "n_doses",
+        "target_deposit_usd",
+        "gross_profit_usd"
+      ],
+      "properties": {
+        "ruo_unit_cost_usd": { "type": "number", "minimum": 0 },
+        "retail_injection_price_usd": { "const": 25000.0 },
+        "unit_gross_profit_usd": { "const": 24750.0 },
+        "unit_gross_margin": { "const": 0.99 },
+        "margin_at_500_cost": { "const": 0.98 },
+        "margin_at_150_cost": { "const": 0.994 },
+        "n_doses": { "const": 80 },
+        "target_deposit_usd": { "const": 2000000.0 },
+        "gross_profit_usd": { "const": 1980000.0 },
+        "nuremberg_branch_a_ruo_consent_void": { "type": "boolean" },
+        "nuremberg_branch_b_non_waivable_principles_3_8_9_10": { "type": "boolean" }
+      }
+    },
+    "seshat_bank_captive_reserve_metrics": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "mc_deposit_mid_usd",
+        "d_total_usd",
+        "non_minicircle_deposits_usd",
+        "pawley_siphon_usd",
+        "net_insurance_usd",
+        "coverage_ratio",
+        "unindemnified_deficit_usd",
+        "capital_shortfall_usd"
+      ],
+      "properties": {
+        "mc_deposit_low_usd": { "const": 1800000.0 },
+        "mc_deposit_mid_usd": { "const": 2000000.0 },
+        "mc_deposit_high_usd": { "const": 2200000.0 },
+        "mc_deposit_share": { "const": 0.99 },
+        "pawley_siphon_share": { "const": 0.73 },
+        "d_total_usd": { "const": 2020202.02 },
+        "non_minicircle_deposits_usd": { "const": 20202.02 },
+        "pawley_siphon_usd": { "const": 1460000.0 },
+        "pawley_siphon_low_usd": { "const": 1314000.0 },
+        "pawley_siphon_high_usd": { "const": 1606000.0 },
+        "net_insurance_usd": { "const": 50000.0 },
+        "coverage_ratio": { "const": 0.025 },
+        "coverage_ratio_low": { "const": 0.027778 },
+        "coverage_ratio_high": { "const": 0.022727 },
+        "unindemnified_deficit_usd": { "const": 1950000.0 },
+        "unindemnified_deficit_ratio": { "const": 0.975 },
+        "capital_shortfall_usd": { "const": 10000000.0 }
+      }
+    },
+    "tranche_recovery_waterfall": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["tranches", "icsid_claim_revision"],
+      "properties": {
+        "tranches": {
+          "type": "array",
+          "minItems": 4,
+          "items": {
+            "oneOf": [
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["tranche", "label", "principal_usd_m"],
+                "properties": {
+                  "tranche": { "const": "T1" },
+                  "label": { "const": "Sovereign Enforcement & Municipal/Tax Priority Claims" },
+                  "principal_usd_m": { "const": 15.0 },
+                  "insurance_floor_usd_m": { "type": "number", "default": 0.0 }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["tranche", "label", "principal_usd_m", "insurance_floor_usd_m"],
+                "properties": {
+                  "tranche": { "const": "T2" },
+                  "label": { "const": "Seshat Bank Depositor Claims (Minicircle 1:26-cv-01359 + minority depositors)" },
+                  "principal_usd_m": { "const": 2.020202 },
+                  "insurance_floor_usd_m": { "const": 0.05 }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["tranche", "label", "principal_usd_m"],
+                "properties": {
+                  "tranche": { "const": "T3" },
+                  "label": { "const": "Litigation Tort & Spoliation Claims (Wade D. Wyo. 25-00285-SAH & civil claims)" },
+                  "principal_usd_m": { "const": 25.0 },
+                  "insurance_floor_usd_m": { "type": "number", "default": 0.0 }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["tranche", "label", "principal_usd_m"],
+                "properties": {
+                  "tranche": { "const": "T4" },
+                  "label": { "const": "HPI/Pronomos/Venture Syndicate Equity & Residual ICSID ARB/23/2 Claim" },
+                  "principal_usd_m": { "const": 1630.0 },
+                  "insurance_floor_usd_m": { "type": "number", "default": 0.0 }
+                }
+              }
+            ]
+          }
+        },
+        "icsid_claim_revision": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["original_claim_usd_m", "revised_claim_usd_m", "markdown_pct"],
+          "properties": {
+            "original_claim_usd_m": { "const": 10775.0 },
+            "revised_claim_usd_m": { "const": 1630.0 },
+            "markdown_pct": { "const": -84.8724 }
+          }
+        }
+      }
+    },
+    "network_school_immigration_audit": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "total_foreign",
+        "in_country",
+        "departed",
+        "missing",
+        "share_in_country_pct",
+        "share_departed_pct",
+        "share_missing_pct",
+        "annualized_subscription_gross_low_usd",
+        "annualized_subscription_gross_high_usd"
+      ],
+      "properties": {
+        "total_foreign": { "const": 430 },
+        "in_country": { "const": 210 },
+        "departed": { "const": 201 },
+        "missing": { "const": 19 },
+        "share_in_country_pct": { "const": 48.8372 },
+        "share_departed_pct": { "const": 46.7442 },
+        "share_missing_pct": { "const": 4.4186 },
+        "monthly_fee_usd": { "const": 1500.0 },
+        "members_low": { "const": 400 },
+        "members_high": { "const": 2000 },
+        "annualized_subscription_gross_low_usd": { "const": 7200000.0 },
+        "annualized_subscription_gross_high_usd": { "const": 36000000.0 }
+      }
+    },
+    "catalyst_calendar": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["date", "event", "instrument"],
+        "properties": {
+          "date": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+          "event": { "type": "string" },
+          "instrument": {
+            "enum": [
+              "D. Del. 1:26-cv-01359",
+              "Del. Super. Ct. N26C-08-380 PAW CCLD",
+              "D. Wyo. 25-00285-SAH",
+              "ICSID ARB/23/2",
+              "Honduras ZEDE repeal (La Gaceta)"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

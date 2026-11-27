@@ -1,0 +1,343 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:gleichschaltung_endowment_continuity_schema.json",
+  "title": "Gleichschaltung Endowment Continuity: Dual-Class Estate Shield, Bacteriophage State Fusion, and IRC 4945 / 507(c) Statutory Termination Waterfall",
+  "description": "Typed measurement schema for the Gleichschaltung endowment-continuity model: Big 3 private-foundation security master, hard-date catalyst calendar, 1936 Ford Class A/B dual-class 70% estate-tax shield, bacteriophage state-fusion multiplier, 3-prong pincer mosaic DAG trigger, perpetual coupon versus Walsh 20-year sunset amortization, and the parameterized IRC 4945 / IRC 507(c) statutory termination and public-policy clawback waterfall. All monetary values are USD.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "jurisdiction_context",
+    "cfaa_18_usc_1030_compliance_attestation", "itar_ear_public_domain_attestation",
+    "entity_and_instrument_ids", "catalyst_calendar",
+    "ford_dual_class_estate_shield", "bacteriophage_state_fusion",
+    "pincer_mosaic_dag", "perpetual_coupon_vs_walsh_sunset",
+    "statutory_termination_waterfall"
+  ],
+  "properties": {
+    "schema_version": { "type": "string", "const": "1.0" },
+    "jurisdiction_context": { "$ref": "#/$defs/jurisdiction_context" },
+    "cfaa_18_usc_1030_compliance_attestation": { "type": "boolean", "const": true, "description": "Zero unauthorized access under 18 U.S.C. 1030 for all measured conduct and data flows." },
+    "itar_ear_public_domain_attestation": { "type": "boolean", "const": true, "description": "Public-domain game-theoretic and statutory systems specification; zero export-controlled technical data (22 C.F.R. 120.34; 15 C.F.R. 734.7)." },
+    "entity_and_instrument_ids": { "$ref": "#/$defs/entity_and_instrument_ids" },
+    "catalyst_calendar": { "$ref": "#/$defs/catalyst_calendar" },
+    "ford_dual_class_estate_shield": { "$ref": "#/$defs/ford_dual_class_estate_shield" },
+    "bacteriophage_state_fusion": { "$ref": "#/$defs/bacteriophage_state_fusion" },
+    "pincer_mosaic_dag": { "$ref": "#/$defs/pincer_mosaic_dag" },
+    "perpetual_coupon_vs_walsh_sunset": { "$ref": "#/$defs/perpetual_coupon_vs_walsh_sunset" },
+    "statutory_termination_waterfall": { "$ref": "#/$defs/statutory_termination_waterfall" },
+    "origin_to_enclosure_and_actuarial_inversion": { "$ref": "#/$defs/origin_to_enclosure_and_actuarial_inversion" }
+  },
+  "$defs": {
+    "ein": { "type": "string", "pattern": "^[0-9]{2}-[0-9]{7}$" },
+    "pin_cite": { "type": "string", "minLength": 3 },
+    "iso_date": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" },
+    "jurisdiction_context": {
+      "type": "object", "additionalProperties": false,
+      "description": "ISO 3166-1 jurisdiction scoping and primary statutory venue.",
+      "required": ["iso_3166_1_alpha_2", "statutory_venue"],
+      "properties": {
+        "iso_3166_1_alpha_2": { "type": "string", "pattern": "^[A-Z]{2}$" },
+        "statutory_venue": { "type": "string", "description": "Internal Revenue Code Chapter 42 (IRC 4942, 4943, 4945) and IRC 507(c); state attorney general cy pres / quo warranto jurisdiction." }
+      }
+    },
+    "entity_and_instrument_ids": {
+      "type": "object", "additionalProperties": false,
+      "description": "Standardized security-master keys: foundation EINs, dual-class control instruments, seed-grant provenance, and legislative/judicial pin-cites.",
+      "required": ["private_foundation_issuers", "control_instruments", "seed_grant_provenance", "legislative_and_judicial_pin_cites", "court_dockets"],
+      "properties": {
+        "private_foundation_issuers": {
+          "type": "array", "minItems": 3, "maxItems": 3,
+          "items": {
+            "type": "object", "additionalProperties": false,
+            "required": ["name", "ein", "charter_jurisdiction", "charter_iso_date", "fmv_2023_usd"],
+            "properties": {
+              "name": { "type": "string", "enum": ["Ford Foundation", "Rockefeller Foundation", "Carnegie Corporation of New York"] },
+              "ein": { "$ref": "#/$defs/ein" },
+              "charter_jurisdiction": { "type": "string", "pattern": "^[A-Z]{2}$" },
+              "charter_iso_date": { "$ref": "#/$defs/iso_date" },
+              "fmv_2023_usd": { "type": "number", "exclusiveMinimum": 0 }
+            }
+          }
+        },
+        "control_instruments": {
+          "type": "array", "minItems": 2, "maxItems": 2,
+          "items": {
+            "type": "object", "additionalProperties": false,
+            "required": ["instrument", "ticker", "cik", "exchange", "shares", "equity_share_pct", "vote_share_pct"],
+            "properties": {
+              "instrument": { "type": "string" },
+              "ticker": { "type": "string", "const": "F" },
+              "cik": { "type": "string", "const": "0000037996" },
+              "exchange": { "type": "string", "const": "NYSE" },
+              "shares": { "type": "integer", "enum": [3280255, 172645] },
+              "equity_share_pct": { "type": "number", "enum": [95.0, 5.0] },
+              "vote_share_pct": { "type": "number", "enum": [0.0, 100.0] }
+            }
+          }
+        },
+        "seed_grant_provenance": {
+          "type": "array", "minItems": 2, "maxItems": 2,
+          "items": {
+            "type": "object", "additionalProperties": false,
+            "required": ["grantor_ein", "grantee", "amount_usd", "successor_host_pool"],
+            "properties": {
+              "grantor_ein": { "$ref": "#/$defs/ein" },
+              "grantee": { "type": "string" },
+              "fiscal_year": { "type": "integer", "minimum": 1900, "maximum": 2100 },
+              "iso_date": { "$ref": "#/$defs/iso_date" },
+              "amount_usd": { "type": "number", "exclusiveMinimum": 0 },
+              "successor_host_pool": { "type": "string" }
+            }
+          }
+        },
+        "legislative_and_judicial_pin_cites": {
+          "type": "array", "minItems": 12, "maxItems": 14,
+          "items": {
+            "type": "object", "additionalProperties": false,
+            "required": ["pin_cite", "iso_year", "vector"],
+            "properties": {
+              "pin_cite": { "$ref": "#/$defs/pin_cite" },
+              "iso_year": { "type": "integer", "minimum": 1916, "maximum": 2023 },
+              "vector": { "type": "string" }
+            }
+          }
+        },
+        "court_dockets": { "type": "array", "minItems": 6, "maxItems": 6, "items": { "$ref": "#/$defs/pin_cite" } }
+      }
+    },
+    "catalyst_calendar": {
+      "type": "array", "minItems": 20, "maxItems": 20,
+      "description": "Hard-date catalyst and forbearance calendar (20 locked ISO dates, monotonically ordered).",
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["iso_date", "catalyst"],
+        "properties": {
+          "iso_date": {
+            "type": "string",
+            "enum": [
+              "1913-05-14", "1914-04-20", "1922-01-01", "1928-01-01", "1933-07-14",
+              "1935-08-30", "1936-01-15", "1936-06-30", "1938-07-30", "1948-02-26",
+              "1948-07-29", "1952-11-01", "1954-12-16", "1956-01-01", "1968-01-01",
+              "1969-12-30", "1974-12-31", "1976-04-26", "1983-05-24", "2023-06-29"
+            ]
+          },
+          "catalyst": { "type": "string", "minLength": 3 },
+          "pin_cite": { "type": ["string", "null"] }
+        }
+      }
+    },
+    "ford_dual_class_estate_shield": {
+      "type": "object", "additionalProperties": false,
+      "description": "1936 Ford Class A (95.0% equity / 0.0% vote) versus Class B (5.0% equity / 100.0% vote) bifurcation and the Revenue Act 1935 70% estate-tax shield.",
+      "required": [
+        "revenue_act_1935_top_estate_tax_rate", "class_a_non_voting_shares", "class_b_voting_shares",
+        "total_shares", "class_a_equity_share_pct", "class_b_equity_share_pct", "class_a_vote_share_pct",
+        "family_voting_control_pct", "estate_tax_shield_rate", "effective_estate_tax_rate",
+        "estate_tax_eliminated_share", "control_to_equity_wedge", "irc_4943_voting_cap",
+        "irc_4943_formally_compliant", "irc_4943_substantive_excess", "irc_4943_arbitrage_wedge_pp"
+      ],
+      "properties": {
+        "revenue_act_1935_top_estate_tax_rate": { "type": "number", "const": 0.70 },
+        "class_a_non_voting_shares": { "type": "integer", "const": 3280255 },
+        "class_b_voting_shares": { "type": "integer", "const": 172645 },
+        "total_shares": { "type": "integer", "const": 3452900 },
+        "class_a_equity_share_pct": { "type": "number", "const": 95.0 },
+        "class_b_equity_share_pct": { "type": "number", "const": 5.0 },
+        "class_a_vote_share_pct": { "type": "number", "const": 0.0 },
+        "family_voting_control_pct": { "type": "number", "const": 100.0 },
+        "estate_tax_shield_rate": { "type": "number", "const": 0.665, "description": "0.70 x 0.95 Class A equity share." },
+        "effective_estate_tax_rate": { "type": "number", "const": 0.035, "description": "0.70 x 0.05 Class B equity share." },
+        "estate_tax_eliminated_share": { "type": "number", "const": 0.95 },
+        "control_to_equity_wedge": { "type": "number", "const": 20.0, "description": "100.0% vote / 5.0% equity." },
+        "irc_4943_voting_cap": { "type": "number", "const": 0.20 },
+        "irc_4943_formally_compliant": { "type": "boolean", "const": true, "description": "Class A voting attribution 0.0 <= 0.20 cap." },
+        "irc_4943_substantive_excess": { "type": "boolean", "const": true, "description": "0.95 economic ownership exceeds the 0.20 voting cap." },
+        "irc_4943_arbitrage_wedge_pp": { "type": "number", "const": 75.0 }
+      }
+    },
+    "bacteriophage_state_fusion": {
+      "type": "object", "additionalProperties": false,
+      "description": "Lambda_Fusion = Coerced_Host_Capital / Seed_Grant state-fusion leverage across the CFAT-to-TIAA and Big 3-to-host-pool vectors.",
+      "required": [
+        "carnegie_cfat_1905_seed_usd", "tiaa_modern_aum_usd", "tiaa_leverage_multiplier",
+        "rockefeller_kwi_munich_1928_grant_usd", "big_3_combined_2023_expenses_usd",
+        "us_federal_budget_host_usd", "nacubo_university_endowment_host_usd",
+        "coerced_host_capital_pool_usd", "lambda_fusion_big_3_host_pool",
+        "bacteriophage_fusion_multiplier_gate", "fusion_gate_satisfied"
+      ],
+      "properties": {
+        "carnegie_cfat_1905_seed_usd": { "type": "number", "const": 10000000.0 },
+        "tiaa_modern_aum_usd": { "type": "number", "const": 1300000000000.0 },
+        "tiaa_leverage_multiplier": { "type": "number", "const": 130000.0 },
+        "rockefeller_kwi_munich_1928_grant_usd": { "type": "number", "const": 325000.0 },
+        "big_3_combined_2023_expenses_usd": { "type": "number", "const": 1533141254.0 },
+        "us_federal_budget_host_usd": { "type": "number", "const": 6800000000000.0 },
+        "nacubo_university_endowment_host_usd": { "type": "number", "const": 840000000000.0 },
+        "coerced_host_capital_pool_usd": { "type": "number", "const": 7640000000000.0 },
+        "lambda_fusion_big_3_host_pool": { "type": "number", "const": 4983.23 },
+        "bacteriophage_fusion_multiplier_gate": { "type": "number", "const": 1000.0 },
+        "fusion_gate_satisfied": { "type": "boolean", "const": true }
+      }
+    },
+    "pincer_mosaic_dag": {
+      "type": "object", "additionalProperties": false,
+      "description": "3-prong pincer mosaic detector: Continental Ore concerted action, step-transaction integration, and Better Business Bureau substantial non-exempt purpose over an acyclic directed mosaic graph.",
+      "required": [
+        "regime", "coordinated_acts", "common_design", "integrated_steps", "binding_commitment",
+        "non_exempt_purpose_share", "bbb_substantial_purpose_threshold", "prong_1_continental_ore",
+        "prong_2_step_transaction", "prong_3_bbb_substantial_non_exempt_purpose",
+        "acyclic", "root_to_terminal_path", "pincer_triggered"
+      ],
+      "properties": {
+        "regime": { "type": "string", "enum": ["compliant", "defection"] },
+        "coordinated_acts": { "type": "integer", "minimum": 0 },
+        "common_design": { "type": "boolean" },
+        "integrated_steps": { "type": "integer", "minimum": 0 },
+        "binding_commitment": { "type": "boolean" },
+        "non_exempt_purpose_share": { "type": "number", "minimum": 0, "maximum": 1 },
+        "bbb_substantial_purpose_threshold": { "type": "number", "const": 0.05 },
+        "prong_1_continental_ore": { "type": "boolean" },
+        "prong_2_step_transaction": { "type": "boolean" },
+        "prong_3_bbb_substantial_non_exempt_purpose": { "type": "boolean" },
+        "acyclic": { "type": "boolean", "const": true },
+        "root_to_terminal_path": { "type": "boolean" },
+        "pincer_triggered": { "type": "boolean" },
+        "topological_order": {
+          "type": "array", "minItems": 4, "maxItems": 4,
+          "items": {
+            "type": "string",
+            "enum": [
+              "P1_continental_ore_concerted_action",
+              "P2_step_transaction_integration",
+              "P3_bbb_substantial_non_exempt_purpose",
+              "T_irc_507c_termination_call"
+            ]
+          }
+        }
+      }
+    },
+    "perpetual_coupon_vs_walsh_sunset": {
+      "type": "object", "additionalProperties": false,
+      "description": "Perpetual coupon net-retention compounding (r = 0.08 > p = 0.05) versus the Walsh Committee 20-year sunset amortization p_t = 1/(20 - t).",
+      "required": [
+        "perpetual_coupon_rate_r", "perpetual_payout_rate_p", "irc_4942_payout_floor",
+        "century_horizon_years", "perpetual_coupon_century_multiple",
+        "perpetual_coupon_century_multiple_locked_2dp", "walsh_1915_combined_corpus_usd",
+        "walsh_1915_annual_revenue_usd", "walsh_1915_revenue_yield", "sunset_horizon_years",
+        "sunset_level_amortization_usd", "sunset_terminal_corpus_usd",
+        "perpetual_corpus_usd", "big_3_expenditure_intensity"
+      ],
+      "properties": {
+        "perpetual_coupon_rate_r": { "type": "number", "const": 0.08 },
+        "perpetual_payout_rate_p": { "type": "number", "const": 0.05 },
+        "irc_4942_payout_floor": { "type": "number", "const": 0.05 },
+        "century_horizon_years": { "type": "integer", "const": 100 },
+        "perpetual_coupon_century_multiple": { "type": "number", "const": 19.2186, "description": "(1 + (r - p))^100 = 1.03^100." },
+        "perpetual_coupon_century_multiple_locked_2dp": { "type": "number", "const": 19.22 },
+        "walsh_1915_combined_corpus_usd": { "type": "number", "const": 250000000.0 },
+        "walsh_1915_annual_revenue_usd": { "type": "number", "const": 13500000.0 },
+        "walsh_1915_revenue_yield": { "type": "number", "const": 0.054 },
+        "sunset_horizon_years": { "type": "integer", "const": 20 },
+        "sunset_level_amortization_usd": { "type": "number", "const": 12500000.0 },
+        "sunset_terminal_corpus_usd": { "type": "number", "const": 0.0, "description": "p_19 = 1/(20 - 19) = 1.0 exhausts the corpus at t = 20." },
+        "perpetual_corpus_usd": { "type": "number", "const": 4804650000.0 },
+        "big_3_expenditure_intensity": { "type": "number", "const": 0.056542 }
+      }
+    },
+    "statutory_termination_waterfall": {
+      "type": "object", "additionalProperties": false,
+      "description": "Parameterized IRC 4945 / IRC 507(c) statutory termination and public-policy clawback waterfall over the $27,115,146,872 Big 3 endowment stack.",
+      "required": [
+        "ev_usd", "ford_2023_fmv_usd", "rockefeller_2023_fmv_usd", "carnegie_2023_fmv_usd",
+        "big_3_combined_2023_fmv_usd", "irc_4945_first_tier_rate", "irc_4945_second_tier_rate",
+        "irc_507c_net_asset_cap_pct", "taxable_expenditure_base_usd", "compounded_tax_benefit_usd",
+        "tranches", "total_recovery_usd", "total_cents_on_dollar_of_ev",
+        "trustee_residual_cents_on_dollar", "waterfall_exhausts_pool"
+      ],
+      "properties": {
+        "ev_usd": { "type": "number", "exclusiveMinimum": 0 },
+        "ford_2023_fmv_usd": { "type": "number", "const": 16791366964.0 },
+        "rockefeller_2023_fmv_usd": { "type": "number", "const": 6225179743.0 },
+        "carnegie_2023_fmv_usd": { "type": "number", "const": 4098600165.0 },
+        "big_3_combined_2023_fmv_usd": { "type": "number", "const": 27115146872.0 },
+        "irc_4945_first_tier_rate": { "type": "number", "const": 0.20 },
+        "irc_4945_second_tier_rate": { "type": "number", "const": 1.00 },
+        "irc_507c_net_asset_cap_pct": { "type": "number", "const": 100.0 },
+        "taxable_expenditure_base_usd": { "type": "number", "const": 1533141254.0 },
+        "compounded_tax_benefit_usd": { "type": "number", "const": 3195092250.0, "description": "$250,000,000 Walsh corpus x 0.665 shield x 19.2186 century multiple." },
+        "tranches": { "type": "array", "minItems": 4, "maxItems": 4, "items": { "$ref": "#/$defs/tranche" } },
+        "total_recovery_usd": { "type": "number", "const": 27115146872.0 },
+        "total_cents_on_dollar_of_ev": { "type": "number", "const": 100.0 },
+        "trustee_residual_cents_on_dollar": { "type": "number", "const": 0.0 },
+        "waterfall_exhausts_pool": { "type": "boolean", "const": true }
+      }
+    },
+    "tranche": {
+      "type": "object", "additionalProperties": false,
+      "description": "Tranche row: principal claim, coupon/PIK basis, collateral/guarantor box, seniority, breakeven EV threshold, and recovery vector.",
+      "required": [
+        "tranche", "name", "statutory_basis", "coupon_pik", "collateral_guarantor_box",
+        "seniority", "breakeven_ev_threshold_usd", "claim_usd", "recovery_usd",
+        "cents_on_dollar_of_ev", "recovery_rate_on_claim_cents"
+      ],
+      "properties": {
+        "tranche": { "type": "integer", "minimum": 1, "maximum": 4 },
+        "name": {
+          "type": "string",
+          "enum": [
+            "IRC 4945 First/Second-Tier Taxable Expenditure Excise Assessment",
+            "IRC 507(c) Compounded Estate/Income Tax Benefit Termination Clawback",
+            "State AG Cy Pres / Quo Warranto Public Restitution Receiver",
+            "Residual Self-Perpetuating Trustee Discretionary Corpus"
+          ]
+        },
+        "statutory_basis": { "type": "string" },
+        "coupon_pik": { "type": "string" },
+        "collateral_guarantor_box": { "type": "string" },
+        "seniority": { "type": "integer", "minimum": 1, "maximum": 4 },
+        "breakeven_ev_threshold_usd": { "type": ["number", "null"], "description": "EV at which the tranche begins to recover; null for tranche 4, which never recovers at any EV." },
+        "claim_usd": { "type": "number", "minimum": 0 },
+        "recovery_usd": { "type": "number", "minimum": 0 },
+        "cents_on_dollar_of_ev": { "type": "number", "minimum": 0, "maximum": 100 },
+        "recovery_rate_on_claim_cents": { "type": "number", "minimum": 0, "maximum": 100 }
+      }
+    },
+    "origin_to_enclosure_and_actuarial_inversion": {
+      "type": "object", "additionalProperties": false,
+      "description": "1872 South Improvement Co. railroad drawback synthetic-NIRP origin, 1935 Rockefeller-IRC Social Security FICA payroll tax wedge and post-retirement citizen NPV < 0 sign inversion, and the 1995-2002 David Rockefeller -> Jeffrey Epstein institutional peering handoff.",
+      "required": [
+        "south_improvement_posted_tariff_usd", "standard_oil_net_freight_usd",
+        "competitor_drawback_tax_usd", "effective_1to1_outlay_usd",
+        "asymmetry_spread_usd", "asymmetry_pct", "cleveland_massacre_acquired_refineries",
+        "cleveland_massacre_total_refineries", "fica_combined_payroll_tax_rate",
+        "endowment_501c3_fica_tax_rate", "post_65_sovereign_npv_20yr_usd",
+        "czech_smoking_early_death_savings_usd", "canada_pbo_maid_annual_savings_usd",
+        "epstein_trilateral_start_year", "epstein_cfr_start_year",
+        "epstein_rockefeller_univ_board_year", "epstein_harvard_ped_seed_usd",
+        "deep_time_short_gamma_epochs", "plato_static_lot_cap", "tokugawa_zero_growth_years"
+      ],
+      "properties": {
+        "south_improvement_posted_tariff_usd": { "type": "number", "const": 2.56 },
+        "standard_oil_net_freight_usd": { "type": "number", "const": 1.50 },
+        "competitor_drawback_tax_usd": { "type": "number", "const": 1.06 },
+        "effective_1to1_outlay_usd": { "type": "number", "const": 0.44 },
+        "asymmetry_spread_usd": { "type": "number", "const": 2.12 },
+        "asymmetry_pct": { "type": "number", "const": 82.8125 },
+        "cleveland_massacre_acquired_refineries": { "type": "integer", "const": 22 },
+        "cleveland_massacre_total_refineries": { "type": "integer", "const": 26 },
+        "fica_combined_payroll_tax_rate": { "type": "number", "const": 0.153 },
+        "endowment_501c3_fica_tax_rate": { "type": "number", "const": 0.0 },
+        "post_65_sovereign_npv_20yr_usd": { "type": "number", "const": -516432.40 },
+        "czech_smoking_early_death_savings_usd": { "type": "number", "const": 147000000.0 },
+        "canada_pbo_maid_annual_savings_usd": { "type": "number", "const": 86900000.0 },
+        "epstein_trilateral_start_year": { "type": "integer", "const": 1995 },
+        "epstein_cfr_start_year": { "type": "integer", "const": 1995 },
+        "epstein_rockefeller_univ_board_year": { "type": "integer", "const": 2000 },
+        "epstein_harvard_ped_seed_usd": { "type": "number", "const": 6500000.0 },
+        "deep_time_short_gamma_epochs": { "type": "integer", "const": 6 },
+        "plato_static_lot_cap": { "type": "integer", "const": 5040 },
+        "tokugawa_zero_growth_years": { "type": "integer", "const": 125 }
+      }
+    }
+  }
+}

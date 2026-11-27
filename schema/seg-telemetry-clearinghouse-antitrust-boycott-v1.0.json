@@ -1,0 +1,257 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:seg-telemetry-clearinghouse-antitrust-boycott-v1.0.json",
+  "title": "SEG Telemetry Clearinghouse Antitrust Group Boycott Schema",
+  "description": "Machine-readable instance schema for the Secure Email Gateway (SEG) Telemetry Clearinghouse Antitrust Group Boycott bundle. Encodes the standardized security master (Proofpoint CIK 0001288847 / Mimecast CIK 0001644675, 12 controlling dockets, 4 debt tranches), the parameterized sequential-seniority recovery waterfall, governing equations EQ1..EQ6 with AST-locked constants, the catalyst calendar, jurisdiction context, and CFAA compliance attestation. Canonical Specification: SPEC-SEG-TELEMETRY-CLEARINGHOUSE-ANTITRUST-BOYCOTT-v1.0. License: Unlicense.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "jurisdiction_context",
+    "cfaa_compliance_attestation",
+    "entity_and_instrument_ids",
+    "catalyst_calendar",
+    "debt_stack_waterfall",
+    "governing_metrics",
+    "tranche_recovery_scenarios"
+  ],
+  "properties": {
+    "schema_version": { "const": "v1.0" },
+    "jurisdiction_context": { "$ref": "#/$defs/jurisdiction_context" },
+    "cfaa_compliance_attestation": { "$ref": "#/$defs/cfaa_attestation" },
+    "entity_and_instrument_ids": { "$ref": "#/$defs/entity_and_instrument_ids" },
+    "catalyst_calendar": { "$ref": "#/$defs/catalyst_calendar" },
+    "debt_stack_waterfall": { "$ref": "#/$defs/debt_stack_waterfall" },
+    "governing_metrics": { "$ref": "#/$defs/governing_metrics" },
+    "tranche_recovery_scenarios": { "$ref": "#/$defs/tranche_recovery_scenarios" }
+  },
+  "$defs": {
+    "usd": { "type": "number", "minimum": 0, "description": "USD (absolute dollars)" },
+    "cents": { "type": "number", "minimum": 0, "maximum": 100, "description": "Cents on the dollar (0-100); 100 = par" },
+    "rate": { "type": "number", "minimum": 0, "maximum": 1, "description": "Fractional rate (0-1)" },
+    "iso_date": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" },
+    "jurisdiction_context": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["iso_3166_1", "statutory_modules"],
+      "properties": {
+        "iso_3166_1": { "const": "US" },
+        "statutory_modules": {
+          "type": "array",
+          "minItems": 4,
+          "items": { "type": "string" },
+          "contains": { "const": "18 U.S.C. 1030 (CFAA)" }
+        }
+      }
+    },
+    "cfaa_attestation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["statute", "zero_unauthorized_access", "attestation", "data_provenance"],
+      "properties": {
+        "statute": { "const": "18 U.S.C. 1030" },
+        "zero_unauthorized_access": { "const": true },
+        "no_circumvention_of_technological_controls": { "const": true },
+        "attestation": { "type": "string", "minLength": 1 },
+        "data_provenance": { "type": "array", "minItems": 1, "items": { "type": "string" } }
+      }
+    },
+    "entity_and_instrument_ids": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["tickers", "ciks", "court_dockets", "debt_tranches"],
+      "properties": {
+        "tickers": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "items": { "type": "string" },
+          "description": "PFPT (Delisted -- Thoma Bravo LBO); MIME (Delisted -- Permira LBO)"
+        },
+        "ciks": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "items": { "type": "string", "pattern": "^[0-9]{10}" },
+          "description": "0001288847 (Proofpoint, Inc.); 0001644675 (Mimecast Limited)"
+        },
+        "court_dockets": {
+          "type": "array",
+          "minItems": 12,
+          "maxItems": 12,
+          "items": { "type": "string", "minLength": 1 },
+          "description": "RealPage (M.D.N.C. 1:24-cv-00710); Enigma v. Malwarebytes (9th Cir.); FOGA v. FTC (312 U.S. 457); Radiant Burners (364 U.S. 656); Northwest Wholesale (472 U.S. 284); Terminal Railroad (224 U.S. 383); ASME v. Hydrolevel (456 U.S. 556); Allied Tube v. Indian Head (486 U.S. 492); Lorain Journal (342 U.S. 143); FTC v. U.S. Anesthesia Partners (S.D. Tex. 4:23-cv-03560); NSPE v. United States (435 U.S. 679); Lexmark v. Static Control Components (572 U.S. 118)"
+        },
+        "debt_tranches": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 4,
+          "items": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "catalyst_calendar": {
+      "type": "array",
+      "minItems": 4,
+      "maxItems": 4,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["date", "event"],
+        "properties": {
+          "date": { "$ref": "#/$defs/iso_date" },
+          "event": { "type": "string", "minLength": 1 }
+        }
+      },
+      "description": "Locked catalyst dates: 2021-08-31 Thoma Bravo $12.30B Proofpoint LBO; 2022-05-19 Permira $5.80B Mimecast take-private; 2024-08-23 United States v. RealPage (M.D.N.C.); 2026-02-15 Proofpoint $4,300.0M 1L TLB maturity extension."
+    },
+    "debt_stack_waterfall": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["waterfall_rule", "tranches", "proofpoint_1l_total_usd", "proofpoint_total_debt_usd", "combined_seg_debt_stack_usd"],
+      "properties": {
+        "waterfall_rule": {
+          "const": "SEQUENTIAL_SENIORITY: Proofpoint 1L (TLB + Revolver) -> Proofpoint 2L TL -> Mimecast Unitranche -> sponsor equity; recovery_i = min(par_i, max(EV_alloc - sum_{j<i} recovery_j, 0)); cents_i = 100 x recovery_i / par_i"
+        },
+        "tranches": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 4,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["name", "entity", "seniority", "principal_usd", "spread_bps"],
+            "properties": {
+              "name": { "enum": ["proofpoint_1l_tlb", "proofpoint_1l_revolver", "proofpoint_2l_tl", "mimecast_unitranche"] },
+              "entity": { "enum": ["Proofpoint, Inc.", "Mimecast Limited"] },
+              "seniority": { "enum": ["FIRST_LIEN", "SECOND_LIEN", "UNITRANCHE"] },
+              "principal_usd": { "$ref": "#/$defs/usd" },
+              "spread_bps": { "type": "integer", "minimum": 0 },
+              "coupon": { "type": "string" }
+            }
+          }
+        },
+        "proofpoint_1l_total_usd": { "$ref": "#/$defs/usd" },
+        "proofpoint_total_debt_usd": { "$ref": "#/$defs/usd" },
+        "combined_seg_debt_stack_usd": { "$ref": "#/$defs/usd" }
+      }
+    },
+    "governing_metrics": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "combined_lbo_ev_usd",
+        "combined_seg_debt_stack_usd",
+        "annual_cash_interest_burden_usd",
+        "combined_cartel_tenants",
+        "reciprocal_delivery_asymmetry_ratio",
+        "sherman_section_1_corporate_statutory_fine_max_usd",
+        "clayton_section_15_treble_damages_multiplier",
+        "prime_assembly_subtier_part_count",
+        "subtier_unblocked_suppliers_per_1000",
+        "subtier_partitioned_suppliers_per_1000",
+        "subtier_partitioned_supplier_share",
+        "end_of_day_digest_release_rate",
+        "end_of_day_digest_destruction_rate",
+        "equations"
+      ],
+      "properties": {
+        "combined_lbo_ev_usd": { "$ref": "#/$defs/usd" },
+        "proofpoint_ev_usd": { "$ref": "#/$defs/usd" },
+        "mimecast_ev_usd": { "$ref": "#/$defs/usd" },
+        "combined_seg_debt_stack_usd": { "$ref": "#/$defs/usd" },
+        "annual_cash_interest_burden_usd": { "$ref": "#/$defs/usd" },
+        "proofpoint_enterprise_tenants": { "type": "integer", "minimum": 0 },
+        "mimecast_enterprise_tenants": { "type": "integer", "minimum": 0 },
+        "combined_cartel_tenants": { "type": "integer", "minimum": 0 },
+        "cross_tenant_rate_limit_threshold_msgs": { "type": "integer", "minimum": 0 },
+        "new_domain_quarantine_days": { "type": "integer", "minimum": 0 },
+        "non_member_authenticated_delivery_rate": { "$ref": "#/$defs/rate" },
+        "intra_grid_or_certified_member_delivery_rate": { "$ref": "#/$defs/rate" },
+        "reciprocal_delivery_asymmetry_ratio": { "type": "number", "exclusiveMinimum": 1 },
+        "synthetic_threat_inflation_share": { "$ref": "#/$defs/rate" },
+        "ciso_renewal_threshold_blocked_count": { "type": "integer", "minimum": 0 },
+        "whitelist_certification_annual_toll_usd": { "$ref": "#/$defs/usd" },
+        "variety_reduction_procurement_overcharge_pct": { "$ref": "#/$defs/rate" },
+        "sherman_section_1_corporate_statutory_fine_max_usd": { "$ref": "#/$defs/usd" },
+        "clayton_section_15_treble_damages_multiplier": { "type": "number", "minimum": 1 },
+        "prime_assembly_subtier_part_count": { "type": "integer", "minimum": 1 },
+        "subtier_unblocked_suppliers_per_1000": { "type": "integer", "minimum": 0 },
+        "subtier_partitioned_suppliers_per_1000": { "type": "integer", "minimum": 0 },
+        "subtier_partitioned_supplier_share": { "$ref": "#/$defs/rate" },
+        "end_of_day_digest_release_rate": { "$ref": "#/$defs/rate" },
+        "end_of_day_digest_destruction_rate": { "$ref": "#/$defs/rate" },
+        "equations": { "$ref": "#/$defs/equations" }
+      }
+    },
+    "equations": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["EQ1", "EQ2", "EQ3", "EQ4", "EQ5", "EQ6"],
+      "properties": {
+        "EQ1": {
+          "type": "string",
+          "description": "Reciprocal delivery asymmetry (boycott discrimination ratio): reciprocal_delivery_asymmetry_ratio = intra_grid_or_certified_member_delivery_rate / non_member_authenticated_delivery_rate = 0.96 / 0.14 = 6.8571."
+        },
+        "EQ2": {
+          "type": "string",
+          "description": "Combined cartel tenant coverage: combined_cartel_tenants = proofpoint_enterprise_tenants + mimecast_enterprise_tenants = 140000 + 42000 = 182000."
+        },
+        "EQ3": {
+          "type": "string",
+          "description": "Combined SEG leveraged debt stack: combined_seg_debt_stack_usd = (proofpoint_1l_tlb + proofpoint_1l_revolver + proofpoint_2l_tl) + mimecast_unitranche = (5035.0M + 600.0M + 1460.0M) + 2000.0M = 9095.0M."
+        },
+        "EQ4": {
+          "type": "string",
+          "description": "Combined LBO enterprise value: combined_lbo_ev_usd = proofpoint_ev_usd + mimecast_ev_usd = 12300.0M + 5800.0M = 18100.0M."
+        },
+        "EQ5": {
+          "type": "string",
+          "description": "Annual cash interest burden (fully drawn): annual_cash_interest_burden_usd = SUM_i principal_i x (SOFR_base + spread_i) ~= 826.25M at SOFR_base = 4.82%."
+        },
+        "EQ6": {
+          "type": "string",
+          "description": "Non-autarkic industrial & defense supply-chain O-ring partitioning & statutory fine ceiling: subtier_unblocked_suppliers_per_1000 = round(prime_assembly_subtier_part_count x non_member_authenticated_delivery_rate) = round(1000 x 0.14) = 140; subtier_partitioned_suppliers_per_1000 = 1000 - 140 = 860; subtier_partitioned_supplier_share = 860 / 1000 = 0.86 (86.0% of domestic sub-tier machine shops/suppliers partitioned at the MX boundary unless paying $30,000/yr whitelist tolls); Sherman Act Section 1 (15 U.S.C. 1) corporate statutory fine ceiling = $100,000,000; Clayton Act Section 15 (15 U.S.C. 15) treble damages multiplier = 3.0."
+        }
+      }
+    },
+    "tranche_recovery_scenarios": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["stressed_ev_6500m", "antitrust_injunction_ev_4800m", "baseline_lbo_ev_10500m"],
+      "properties": {
+        "stressed_ev_6500m": { "$ref": "#/$defs/recovery_scenario" },
+        "antitrust_injunction_ev_4800m": { "$ref": "#/$defs/recovery_scenario" },
+        "baseline_lbo_ev_10500m": { "$ref": "#/$defs/recovery_scenario" }
+      }
+    },
+    "recovery_scenario": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "enterprise_value_usd",
+        "proofpoint_ev_alloc_usd",
+        "mimecast_ev_alloc_usd",
+        "proofpoint_1l_recovery_usd",
+        "proofpoint_1l_cents",
+        "proofpoint_2l_recovery_usd",
+        "proofpoint_2l_cents",
+        "mimecast_unitranche_recovery_usd",
+        "mimecast_unitranche_cents",
+        "sponsor_equity_recovery_usd"
+      ],
+      "properties": {
+        "enterprise_value_usd": { "$ref": "#/$defs/usd" },
+        "proofpoint_ev_alloc_usd": { "$ref": "#/$defs/usd" },
+        "mimecast_ev_alloc_usd": { "$ref": "#/$defs/usd" },
+        "proofpoint_1l_recovery_usd": { "$ref": "#/$defs/usd" },
+        "proofpoint_1l_cents": { "$ref": "#/$defs/cents" },
+        "proofpoint_2l_recovery_usd": { "$ref": "#/$defs/usd" },
+        "proofpoint_2l_cents": { "$ref": "#/$defs/cents" },
+        "mimecast_unitranche_recovery_usd": { "$ref": "#/$defs/usd" },
+        "mimecast_unitranche_cents": { "$ref": "#/$defs/cents" },
+        "sponsor_equity_recovery_usd": { "$ref": "#/$defs/usd" }
+      }
+    }
+  }
+}

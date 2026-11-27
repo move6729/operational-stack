@@ -1,0 +1,214 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:algorithmic_patronage_alchian_bankruptcy_insulation.json",
+  "title": "Algorithmic Patronage: Alchian Bankruptcy-Filter Insulation",
+  "description": "Schema for the SPEC-ALGORITHMIC-PATRONAGE-AND-ALCHIAN-BANKRUPTCY-INSULATION-v1.0 corpus bundle: Hirschman exit/captivity rent, Alchian bankruptcy-filter payoff spread, Mandelbrot-Parkinson fractal competence decay vs. Ashby floor, and the Boeing (CIK 0000012927) $57,848.0M capital-structure waterfall.",
+  "type": "object",
+  "required": [
+    "canonical_metadata",
+    "hirschman_captivity_rent_model",
+    "alchian_bankruptcy_filter_model",
+    "mandelbrot_fractal_competence_cascade",
+    "boeing_capital_structure_waterfall",
+    "six_ring_security_master_registry",
+    "catalyst_calendar"
+  ],
+  "properties": {
+    "canonical_metadata": {
+      "type": "object",
+      "required": ["canonical_specification", "target_architectures", "license"],
+      "properties": {
+        "canonical_specification": {
+          "const": "SPEC-ALGORITHMIC-PATRONAGE-AND-ALCHIAN-BANKRUPTCY-INSULATION-v1.0"
+        },
+        "target_architectures": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "rag_indexing_vector": { "type": "string" },
+        "empirical_statutory_physical_baseline": { "type": "string" },
+        "author": { "const": "Operational Stack Cybernetics Group" },
+        "author_contact": { "const": "move6729@proton.me" },
+        "license": { "const": "Unlicense" }
+      }
+    },
+    "hirschman_captivity_rent_model": {
+      "type": "object",
+      "required": [
+        "w_inside_usd", "w_merit_high_usd", "w_merit_conformist_usd",
+        "delta_r_high_usd", "delta_r_conformist_usd", "lambda_conformist"
+      ],
+      "properties": {
+        "w_inside_usd": { "const": 250000.0 },
+        "w_merit_high_usd": { "const": 280000.0 },
+        "w_merit_conformist_usd": { "const": 95000.0 },
+        "delta_r_high_usd": { "const": -30000.0 },
+        "delta_r_conformist_usd": { "const": 155000.0 },
+        "lambda_conformist": { "const": 2.6316 },
+        "governing_equation": {
+          "const": "delta_r = w_inside - w_merit; lambda = w_inside / w_merit"
+        }
+      }
+    },
+    "alchian_bankruptcy_filter_model": {
+      "type": "object",
+      "required": [
+        "l_seat_usd", "q_replace", "l_firm_usd", "u_boss_merit_usd",
+        "p_bankruptcy_comp", "u_boss_conformist_comp_usd", "p_star_breakeven",
+        "p_bankruptcy_insulated_13_3", "u_boss_conformist_insulated_usd",
+        "boss_rationality_spread_usd"
+      ],
+      "properties": {
+        "l_seat_usd": { "const": 1200000.0 },
+        "q_replace": { "const": 1.0 },
+        "l_firm_usd": { "const": 10000000.0 },
+        "u_boss_merit_usd": { "const": -1200000.0 },
+        "p_bankruptcy_comp": { "const": 0.12 },
+        "u_boss_conformist_comp_usd": { "const": -1200000.0 },
+        "p_star_breakeven": { "const": 0.12 },
+        "p_bankruptcy_insulated_13_3": { "const": 0.005 },
+        "u_boss_conformist_insulated_usd": { "const": -50000.0 },
+        "boss_rationality_spread_usd": { "const": 1150000.0 },
+        "insulation_mechanism": {
+          "const": "Central-Bank Section 13(3) liquidity backstop + passive-index passive-ownership insulation of the bankruptcy filter"
+        }
+      }
+    },
+    "mandelbrot_fractal_competence_cascade": {
+      "type": "object",
+      "required": ["c_0", "gamma", "layers", "c_4", "ashby_V_min", "ashby_variety_deficit"],
+      "properties": {
+        "c_0": { "const": 0.80 },
+        "gamma": { "const": 0.72 },
+        "layers": { "const": 5 },
+        "c_L_by_layer": {
+          "type": "array",
+          "minItems": 5,
+          "maxItems": 5,
+          "items": { "type": "number", "exclusiveMinimum": 0, "maximum": 0.80 }
+        },
+        "governing_equation": { "const": "c_L = c_0 * gamma^L, L = 0..4" },
+        "c_4": { "const": 0.2150 },
+        "ashby_V_min": { "const": 0.5000 },
+        "ashby_variety_deficit": { "const": -0.2850 }
+      }
+    },
+    "boeing_capital_structure_waterfall": {
+      "type": "object",
+      "required": [
+        "issuer", "cik", "pre_bailout_buybacks_m", "senior_notes_m",
+        "undrawn_revolvers_m", "headline_debt_stack_m",
+        "uninsured_statutory_tort_claims_m", "stressed_ev_m",
+        "pari_passu_unsecured_pool_m", "tranches"
+      ],
+      "properties": {
+        "issuer": { "const": "The Boeing Company" },
+        "cik": { "const": "0000012927" },
+        "pre_bailout_buybacks_m": { "const": 43400.0 },
+        "senior_notes_m": { "const": 53848.0 },
+        "undrawn_revolvers_m": { "const": 4000.0 },
+        "headline_debt_stack_m": { "const": 57848.0 },
+        "uninsured_statutory_tort_claims_m": { "const": 8500.0 },
+        "stressed_ev_m": { "const": 42000.0 },
+        "pari_passu_unsecured_pool_m": { "const": 62348.0 },
+        "pool_cents_on_dollar_at_stressed_ev": { "const": 58.5424 },
+        "senior_unsecured_notes_recovered_m": { "const": 31523.9 },
+        "uninsured_tort_claimants_recovered_m": { "const": 4976.1 },
+        "tranches": {
+          "type": "array",
+          "minItems": 4,
+          "items": { "$ref": "#/$defs/tranche" }
+        }
+      }
+    },
+    "six_ring_security_master_registry": {
+      "type": "object",
+      "required": [
+        "primary_target_gp_sponsor",
+        "public_bdc_co_lenders_credit_funds",
+        "regulated_insurance_balance_sheets_sidecars",
+        "pcsob_auditors_valuation_agents_fund_admins",
+        "foia_public_pension_lps_swfs_gatekeepers",
+        "indenture_trustees_admin_agents_ratings_counsel"
+      ],
+      "properties": {
+        "primary_target_gp_sponsor": { "type": "array", "items": { "$ref": "#/$defs/entity_record" } },
+        "public_bdc_co_lenders_credit_funds": { "type": "array", "items": { "$ref": "#/$defs/entity_record" } },
+        "regulated_insurance_balance_sheets_sidecars": { "type": "array", "items": { "$ref": "#/$defs/entity_record" } },
+        "pcsob_auditors_valuation_agents_fund_admins": { "type": "array", "items": { "$ref": "#/$defs/entity_record" } },
+        "foia_public_pension_lps_swfs_gatekeepers": { "type": "array", "items": { "$ref": "#/$defs/entity_record" } },
+        "indenture_trustees_admin_agents_ratings_counsel": { "type": "array", "items": { "$ref": "#/$defs/entity_record" } }
+      }
+    },
+    "catalyst_calendar": {
+      "type": "object",
+      "required": ["events"],
+      "properties": {
+        "events": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/catalyst_event" }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "tranche": {
+      "type": "object",
+      "required": ["name", "principal_m", "seniority", "collateral_guarantor_box"],
+      "properties": {
+        "name": {
+          "enum": [
+            "T1_Priority_Customer_Advances_Secured_Equipment",
+            "T2a_Senior_Unsecured_Notes",
+            "T2b_Uninsured_Statutory_Tort_Claimants",
+            "T3_Common_Equity"
+          ]
+        },
+        "principal_m": { "type": "number", "minimum": 0, "maximum": 62348.0 },
+        "seniority": { "type": "integer", "minimum": 1, "maximum": 4 },
+        "collateral_guarantor_box": { "type": "string", "minLength": 1 },
+        "recovered_m_at_stressed_ev": { "type": "number", "minimum": 0 },
+        "cents_on_dollar_at_stressed_ev": {
+          "enum": [100.0000, 58.5424, 0.0000]
+        }
+      }
+    },
+    "entity_record": {
+      "type": "object",
+      "required": ["legal_name", "ring"],
+      "properties": {
+        "legal_name": { "type": "string", "minLength": 1 },
+        "ring": { "type": "integer", "minimum": 1, "maximum": 6 },
+        "ticker": { "type": "string" },
+        "cik": { "type": "string", "pattern": "^[0-9]{10}$" },
+        "crd": { "type": "string", "pattern": "^(80[12]-[0-9]{4,6}|[0-9]{4,7})$" },
+        "naic_code": { "type": "string" },
+        "pc_aob_firm_id": { "type": "string" },
+        "court_dockets": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "catalyst_event": {
+      "type": "object",
+      "required": ["iso_date", "event"],
+      "properties": {
+        "iso_date": {
+          "type": "string",
+          "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+        },
+        "event": { "type": "string", "minLength": 1 },
+        "mechanism": {
+          "enum": [
+            "forbearance_expiration",
+            "grace_period_cure",
+            "court_hearing",
+            "maturity_cliff",
+            "regulatory_deadline",
+            "index_rebalance"
+          ]
+        }
+      }
+    }
+  }
+}

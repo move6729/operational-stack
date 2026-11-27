@@ -1,0 +1,296 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:dual_use_silicon_vc_cfius_arbitrage.json",
+  "$comment": "PLAIN-ENGLISH LEGAL NOTICE: Abstract institutional-cybernetic, statutory, and game-theoretic validation checklist (JSON Schema), NOT an accusation, indictment, or evidentiary filing. Every field encodes a published statutory citation, a public federal .gov record, a bipartisan Congressional report, or a closed-form algebraic invariant. Named subjects are framed strictly under a Milkovich disclosed-facts H_0 -> H_1 synthesis; uncharged statutory felony labels are never asserted against un-indicted living principals.",
+  "title": "Dual-Use Silicon Valley <-> PRC Military-Civil Fusion Venture Conduit, Cadence/NUDT EDA Enforcement Proof & CFIUS Outbound Arbitrage Closure Schema",
+  "description": "Validates the constitutional Art. III, Sec. 3 narrow-treason boundary against the four-statute peacetime anti-evasion dragnet, the total dual-use capital and intangible capability transfer identity, the July 2025 Cadence Design Systems -> NUDT $140.6M aggregate net DOJ/BIS criminal + civil penalty and forfeiture, and the EO 14105 / 31 C.F.R. Part 850 outbound arbitrage closure, anchored to the bipartisan Feb. 8, 2024 U.S. House Select Committee on the CCP report (The CCP's Investors: How American Venture Capital Fuels the PRC Military and Human Rights Abuses, 57 pp., which expressly does not allege any illegality) and to adjudicated federal baselines (DOJ Press Release No. 25-793).",
+  "type": "object",
+  "required": [
+    "spec_version",
+    "jurisdiction_context",
+    "public_records_only_attestation",
+    "locked_telemetry",
+    "equation_1_treason_boundary_and_dragnet",
+    "equation_2_capability_transfer_identity",
+    "equation_3_cadence_nudt_enforcement",
+    "cfius_outbound_arbitrage_closure",
+    "attribution_integrity",
+    "milkovich_disclosed_facts_matrix"
+  ],
+  "properties": {
+    "spec_version": { "type": "string", "const": "SPEC-DUAL-USE-SILICON-VC-BRIDGE-AND-CFIUS-OUTBOUND-ARBITRAGE-v1.0" },
+    "jurisdiction_context": { "type": "string", "pattern": "^[A-Z]{2}$" },
+    "public_records_only_attestation": { "type": "boolean", "const": true },
+    "locked_telemetry": {
+      "type": "object",
+      "description": "The nine locked constants; zero numerical drift permitted against the proof engine.",
+      "required": [
+        "house_report_documented_prc_ai_deals_usd_billions",
+        "house_report_documented_prc_semiconductor_deals_usd_billions",
+        "total_audited_dual_use_vc_flow_usd_billions",
+        "walden_documented_prc_semiconductor_investments_count",
+        "cadence_doj_bis_2025_nudt_penalty_usd_millions",
+        "audited_vc_firms_in_congressional_probe",
+        "intangible_value_transfer_multiplier",
+        "effective_strategic_capability_bleed_usd_billions",
+        "ecra_50_usc_4819_max_criminal_prison_years"
+      ],
+      "properties": {
+        "house_report_documented_prc_ai_deals_usd_billions": { "type": "number", "const": 1.9 },
+        "house_report_documented_prc_semiconductor_deals_usd_billions": { "type": "number", "const": 1.2 },
+        "total_audited_dual_use_vc_flow_usd_billions": { "type": "number", "const": 3.1 },
+        "walden_documented_prc_semiconductor_investments_count": { "type": "integer", "const": 100 },
+        "cadence_doj_bis_2025_nudt_penalty_usd_millions": { "type": "number", "const": 140.6 },
+        "audited_vc_firms_in_congressional_probe": { "type": "integer", "const": 5 },
+        "intangible_value_transfer_multiplier": { "type": "number", "const": 3.5 },
+        "effective_strategic_capability_bleed_usd_billions": { "type": "number", "const": 10.85 },
+        "ecra_50_usc_4819_max_criminal_prison_years": { "type": "integer", "const": 20 }
+      },
+      "additionalProperties": false
+    },
+    "equation_1_treason_boundary_and_dragnet": {
+      "type": "object",
+      "description": "Cramer v. United States, 325 U.S. 1 (1945) restricts 18 U.S.C. 2381 to a declared-war enemy; I_DeclaredWar = 0 => Treason = 0, so the four-statute peacetime dragnet carries the enforcement load.",
+      "required": [
+        "cramer_citation",
+        "treason_statute",
+        "i_declared_war",
+        "treason_value",
+        "four_statute_dragnet",
+        "ecra_anti_evasion_clause",
+        "ecra_false_statement_concealment_clause",
+        "ecra_criminal_ceiling_clause",
+        "us_person_support_ban",
+        "foreign_instrumentality_espionage",
+        "conspiracy_obstruction",
+        "ecra_max_criminal_prison_years"
+      ],
+      "properties": {
+        "cramer_citation": { "type": "string", "const": "Cramer v. United States, 325 U.S. 1 (1945)" },
+        "treason_statute": { "type": "string", "const": "18 U.S.C. 2381" },
+        "constitutional_clause": { "type": "string", "const": "U.S. Constitution Art. III, Sec. 3" },
+        "i_declared_war": { "type": "integer", "const": 0 },
+        "treason_value": { "type": "integer", "const": 0 },
+        "four_statute_dragnet": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 4,
+          "items": { "type": "string" }
+        },
+        "ecra_anti_evasion_clause": { "type": "string", "const": "50 U.S.C. 4819(a)(2)(G)" },
+        "ecra_false_statement_concealment_clause": { "type": "string", "const": "50 U.S.C. 4819(a)(2)(F)" },
+        "ecra_criminal_ceiling_clause": { "type": "string", "const": "50 U.S.C. 4819(b)(2)" },
+        "ecra_criminal_forfeiture_clause": { "type": "string", "const": "50 U.S.C. 4819(d)" },
+        "ecra_implementing_regulation": { "type": "string", "const": "15 C.F.R. 764.2(h)" },
+        "us_person_support_ban": { "type": "string", "const": "15 C.F.R. 744.6" },
+        "foreign_instrumentality_espionage": { "type": "string", "const": "18 U.S.C. 1831" },
+        "conspiracy_obstruction": { "type": "string", "const": "18 U.S.C. 371" },
+        "conspiracy_obstruction_precedent": { "type": "string", "const": "Hammerschmidt v. United States, 265 U.S. 182" },
+        "ieepa_unlawful_acts": { "type": "string", "const": "50 U.S.C. 1705(a)" },
+        "ieepa_criminal_ceiling": { "type": "string", "const": "50 U.S.C. 1705(c)" },
+        "ecra_max_criminal_prison_years": { "type": "integer", "const": 20 },
+        "dragnet_fires_without_declared_war": { "type": "boolean", "const": true }
+      },
+      "additionalProperties": false
+    },
+    "equation_2_capability_transfer_identity": {
+      "type": "object",
+      "description": "V_Total_Direct = V_AI + V_Semi = $1.9B + $1.2B = $3.1B across N = 5 audited firms; V_Effective_Bleed = M_Intangible * V_Total_Direct = 3.5 * $3.1B = $10.85B.",
+      "required": [
+        "v_ai_usd_billions",
+        "v_semi_usd_billions",
+        "v_total_direct_usd_billions",
+        "m_intangible",
+        "v_effective_bleed_usd_billions",
+        "audited_vc_firms",
+        "walden_semiconductor_investments",
+        "house_report_title",
+        "house_report_date",
+        "committee_report_alleges_illegality",
+        "m_intangible_is_opstack_stipulation",
+        "walden_count_is_opstack_tally"
+      ],
+      "properties": {
+        "v_ai_usd_billions": { "type": "number", "const": 1.9 },
+        "v_semi_usd_billions": { "type": "number", "const": 1.2 },
+        "v_total_direct_usd_billions": { "type": "number", "const": 3.1 },
+        "m_intangible": { "type": "number", "const": 3.5 },
+        "v_effective_bleed_usd_billions": { "type": "number", "const": 10.85 },
+        "direct_flow_identity": { "type": "string", "const": "V_Total_Direct = V_AI + V_Semi" },
+        "bleed_identity": { "type": "string", "const": "V_Effective_Bleed = M_Intangible * V_Total_Direct" },
+        "audited_vc_firms": {
+          "type": "array",
+          "minItems": 5,
+          "maxItems": 5,
+          "items": { "type": "string" }
+        },
+        "walden_semiconductor_investments": { "type": "integer", "const": 100 },
+        "house_report_title": { "type": "string", "const": "The CCP's Investors: How American Venture Capital Fuels the PRC Military and Human Rights Abuses" },
+        "house_report_date": { "type": "string", "const": "2024-02-08" },
+        "house_report_pages": { "type": "integer", "const": 57 },
+        "house_committee": { "type": "string", "const": "U.S. House Select Committee on the CCP" },
+        "committee_report_alleges_illegality": { "type": "boolean", "const": false },
+        "committee_verified_prc_semiconductor_company_count_floor": { "type": "integer", "const": 150 },
+        "committee_military_linked_semiconductor_flow_usd_millions": { "type": "number", "const": 180 },
+        "walden_smic_capital_usd_millions": { "type": "number", "const": 52 },
+        "m_intangible_is_opstack_stipulation": { "type": "boolean", "const": true },
+        "walden_count_is_opstack_tally": { "type": "boolean", "const": true },
+        "intangible_transfer_channels": {
+          "type": "array",
+          "minItems": 3,
+          "items": { "type": "string" }
+        },
+        "amplification_strict": { "type": "boolean", "const": true }
+      },
+      "additionalProperties": false
+    },
+    "equation_3_cadence_nudt_enforcement": {
+      "type": "object",
+      "description": "July 2025 Cadence Design Systems -> NUDT proof: whitelist evaporation over Feb. 2015 - Apr. 2021 EDA exports to a PLA Entity-List target via the Central South CAD Center (CSCC) alias and associated entity Phytium triggers an 18 U.S.C. 371 + 50 U.S.C. 4819 conspiracy charge in N.D. Cal. and a $140.6M aggregate net criminal + civil penalty and forfeiture (mutually credited from 'nearly $118M' DOJ criminal and 'over $95M' BIS civil).",
+      "required": [
+        "corporate_defendant",
+        "penalty_usd_millions",
+        "resolution_date",
+        "conviction_statutes",
+        "export_window_start",
+        "export_window_end",
+        "front_alias",
+        "entity_list_target",
+        "whitelist_protection",
+        "conviction_fires",
+        "doj_press_release_number",
+        "charge",
+        "doj_criminal_penalty_gross_usd_millions",
+        "bis_civil_penalty_usd_millions",
+        "nudt_entity_list_date",
+        "plea_subject_to_judicial_approval"
+      ],
+      "properties": {
+        "corporate_defendant": { "type": "string", "const": "Cadence Design Systems, Inc." },
+        "subsidiary_attributed": { "type": "string", "const": "Cadence Design Systems Management (Shanghai) Co. Ltd. (Cadence China)" },
+        "penalty_usd_millions": { "type": "number", "const": 140.6 },
+        "aggregate_net_basis": { "type": "string", "const": "mutually credited DOJ criminal + BIS civil penalties and forfeiture" },
+        "doj_criminal_penalty_gross_usd_millions": { "type": "number", "const": 118 },
+        "bis_civil_penalty_usd_millions": { "type": "number", "const": 95 },
+        "criminal_fine_reduction_off_statutory_max_pct": { "type": "integer", "const": 20 },
+        "voluntary_disclosure": { "type": "boolean", "const": false },
+        "resolution_date": { "type": "string", "const": "2025-07-28" },
+        "doj_press_release_number": { "type": "string", "const": "25-793" },
+        "court": { "type": "string", "const": "U.S. District Court for the Northern District of California" },
+        "charge": { "type": "string", "const": "conspiracy to commit export control violations" },
+        "plea_subject_to_judicial_approval": { "type": "boolean", "const": true },
+        "individual_officer_charged": { "type": "boolean", "const": false },
+        "enforcement_authorities": {
+          "type": "array",
+          "minItems": 2,
+          "items": { "type": "string" }
+        },
+        "conviction_statutes": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "items": { "type": "string" }
+        },
+        "export_window_start": { "type": "integer", "const": 2015 },
+        "export_window_end": { "type": "integer", "const": 2021 },
+        "nudt_entity_list_date": { "type": "string", "const": "2015-02-18" },
+        "minimum_export_count_through_2020_09": { "type": "integer", "const": 59 },
+        "front_alias": { "type": "string", "const": "Central South CAD Center (CSCC), an alias for NUDT" },
+        "second_associated_entity": { "type": "string", "const": "Phytium Technology Co. Ltd." },
+        "entity_list_target": { "type": "string", "const": "National University of Defense Technology (NUDT)" },
+        "restricted_artifact": { "type": "string", "const": "EDA hardware, software, and semiconductor design IP technology" },
+        "whitelist_protection": { "type": "integer", "const": 0 },
+        "conviction_fires": { "type": "boolean", "const": true },
+        "forfeiture_positive": { "type": "boolean", "const": true }
+      },
+      "additionalProperties": false
+    },
+    "cfius_outbound_arbitrage_closure": {
+      "type": "object",
+      "description": "EO 14105 / 31 C.F.R. Part 850 (effective Jan. 2, 2025) plus 15 C.F.R. 744.6 terminate the Cayman-LP / foreign-subsidiary arbitrage; every escape hatch maps to >= 1 closing instrument.",
+      "required": [
+        "executive_order",
+        "outbound_regulation",
+        "effective_date",
+        "escape_hatches",
+        "arbitrage_terminated"
+      ],
+      "properties": {
+        "executive_order": { "type": "string", "const": "EO 14105" },
+        "outbound_regulation": { "type": "string", "const": "31 C.F.R. Part 850" },
+        "program_name": { "type": "string", "const": "Treasury Outbound Investment Security Program" },
+        "effective_date": { "type": "string", "const": "2025-01-02" },
+        "endowment_lp_allocator_statute": { "type": "string", "const": "26 U.S.C. 501(c)(3) Schedule F" },
+        "escape_hatches": {
+          "type": "object",
+          "required": [
+            "cayman_lp_passive_coinvest",
+            "foreign_subsidiary_us_person",
+            "front_alias_eda_routing",
+            "knowhow_transfer"
+          ],
+          "properties": {
+            "cayman_lp_passive_coinvest": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+            "foreign_subsidiary_us_person": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+            "front_alias_eda_routing": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+            "knowhow_transfer": { "type": "array", "minItems": 1, "items": { "type": "string" } }
+          },
+          "additionalProperties": false
+        },
+        "arbitrage_terminated": { "type": "boolean", "const": true }
+      },
+      "additionalProperties": false
+    },
+    "attribution_integrity": {
+      "type": "object",
+      "description": "Invariant I3 (zero-speculation evidentiary attribution): every contested empirical predicate is bound to its exact documentary vector, and every OPSTACK-derived parameter is explicitly distinguished from a primary-source verbatim.",
+      "required": [
+        "m_intangible_is_opstack_stipulation",
+        "walden_count_is_opstack_tally",
+        "committee_report_alleges_illegality",
+        "uncharged_felony_labels_asserted_against_unindicted_principals"
+      ],
+      "properties": {
+        "m_intangible_is_opstack_stipulation": { "type": "boolean", "const": true },
+        "walden_count_is_opstack_tally": { "type": "boolean", "const": true },
+        "committee_report_alleges_illegality": { "type": "boolean", "const": false },
+        "uncharged_felony_labels_asserted_against_unindicted_principals": { "type": "boolean", "const": false },
+        "primary_document_vectors": {
+          "type": "array",
+          "minItems": 4,
+          "items": { "type": "string" }
+        },
+        "structural_accounting_descriptors_used": {
+          "type": "array",
+          "minItems": 3,
+          "items": { "type": "string" }
+        }
+      },
+      "additionalProperties": false
+    },
+    "milkovich_disclosed_facts_matrix": {
+      "type": "array",
+      "description": "Milkovich v. Lorain Journal Co., 497 U.S. 1 disclosed-facts synthesis: every inferential claim pairs the subject's verbatim on-the-record H_0 baseline, the pin-cited primary record, the protected H_1 analytical synthesis with an explicit falsification condition, and a Rule 26 discovery trap.",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["subject", "h0_baseline", "h1_synthesis", "falsification_condition", "rule_26_trap"],
+        "properties": {
+          "subject": { "type": "string" },
+          "h0_baseline": { "type": "string" },
+          "h1_synthesis": { "type": "string" },
+          "falsification_condition": { "type": "string" },
+          "rule_26_trap": { "type": "string" },
+          "primary_record_vectors": {
+            "type": "array",
+            "minItems": 1,
+            "items": { "type": "string" }
+          },
+          "uncharged_felony_labels_asserted": { "type": "boolean", "const": false }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,274 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:sovereign_monopsony_spof_liquidation_v1.0.json",
+  "title": "Sovereign Monopsony SPOF Liquidation Schema",
+  "description": "Formal JSON Schema for SPEC-SOVEREIGN-MONOPSONY-SPOF-LIQUIDATION-v1.0 validating the post-inauguration patronage leverage inversion (E1), the state-remedy cost asymmetry (E2), the ring-fenced utility equity-compression chain (E3), the four-vector enforcement liquidation cascade (E4), the DEF 14(a) pledged-debt collateral floor (E5), the asymmetric-ownership bilateral minority shareholder harm (E6), the cash-furnace bailout imperative (E7), and the Modigliani-Miller zero-diversification falsification with 32 C.F.R. 117.11 FOCI trigger (E8).",
+  "type": "object",
+  "required": [
+    "specification_id",
+    "version",
+    "license",
+    "jurisdiction_context",
+    "cfaa_compliance_attestation",
+    "itar_ear_public_domain_attestation",
+    "patronage_leverage_e1",
+    "state_remedy_asymmetry_e2",
+    "equity_compression_e3",
+    "liquidation_cascade_e4",
+    "collateral_floor_e5",
+    "bilateral_shareholder_harm_e6",
+    "cash_furnace_bailout_e7",
+    "merger_falsification_foci_e8",
+    "spof_trigger_regimes",
+    "verification_vectors"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "specification_id": {
+      "type": "string",
+      "const": "SPEC-SOVEREIGN-MONOPSONY-SPOF-LIQUIDATION-v1.0"
+    },
+    "version": { "type": "string", "const": "1.0" },
+    "license": { "type": "string", "const": "Unlicense" },
+    "jurisdiction_context": {
+      "type": "string",
+      "const": "US",
+      "description": "ISO 3166-1 jurisdiction context; statutory modules (18 U.S.C. 208, FAR 9.4, 47 U.S.C. 312, DEF 14(a)) processed locally per node identity."
+    },
+    "cfaa_compliance_attestation": {
+      "type": "boolean",
+      "const": true,
+      "description": "18 U.S.C. 1030 zero-unauthorized-access attestation; all inputs derive from public-record filings and open sources."
+    },
+    "itar_ear_public_domain_attestation": {
+      "type": "boolean",
+      "const": true,
+      "description": "22 C.F.R. 120.34 / 15 C.F.R. 734.7 public-domain systems-spec boundary; zero export-controlled hardware blueprints."
+    },
+    "patronage_leverage_e1": {
+      "type": "object",
+      "description": "E1: B_patron = beta_term_limited_salvage * C_pol_sunk - (1.0 - 0.0) * V_contracts_sovereign = -22000000000.0; R_leverage = V_contracts_sovereign / C_pol_sunk = 75.862069.",
+      "required": [
+        "c_pol_sunk_usd",
+        "c_america_pac_direct_usd",
+        "beta_term_limited_salvage",
+        "v_contracts_sovereign_usd",
+        "v_starshield_nro_usd",
+        "b_patron_post_inauguration_usd",
+        "r_patronage_leverage_ratio"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "c_pol_sunk_usd": { "type": "number", "const": 290000000.0 },
+        "c_america_pac_direct_usd": { "type": "number", "const": 238500000.0 },
+        "beta_term_limited_salvage": { "type": "number", "const": 0.0 },
+        "v_contracts_sovereign_usd": { "type": "number", "const": 22000000000.0 },
+        "v_starshield_nro_usd": { "type": "number", "const": 1800000000.0 },
+        "b_patron_post_inauguration_usd": { "type": "number", "const": -22000000000.0 },
+        "r_patronage_leverage_ratio": { "type": "number", "const": 75.862069 }
+      }
+    },
+    "state_remedy_asymmetry_e2": {
+      "type": "object",
+      "description": "E2: R_state_remedy_asymmetry = C_switch_state_nationalization / C_switch_kmp_voting_trust = 1800.0.",
+      "required": [
+        "c_switch_state_nationalization_usd",
+        "c_switch_kmp_voting_trust_usd",
+        "r_state_remedy_asymmetry",
+        "t_statute_limitations_18usc208_years"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "c_switch_state_nationalization_usd": { "type": "number", "const": 45000000000.0 },
+        "c_switch_kmp_voting_trust_usd": { "type": "number", "const": 25000000.0 },
+        "r_state_remedy_asymmetry": { "type": "number", "const": 1800.0 },
+        "t_statute_limitations_18usc208_years": { "type": "integer", "const": 5 }
+      }
+    },
+    "equity_compression_e3": {
+      "type": "object",
+      "description": "E3: V_ringfenced_floor = E_ebitda * M_ringfenced = 210000000000.0; Delta_V = V_peak - V_floor = 1040000000000.0; pct = 83.2; Delta_W = alpha * Delta_V = 436800000000.0.",
+      "required": [
+        "v_private_consolidated_peak_usd",
+        "v_spacex_standalone_tender_usd",
+        "e_ebitda_defense_core_usd",
+        "m_sovereign_favored_multiple",
+        "m_ringfenced_utility_multiple",
+        "v_ringfenced_utility_floor_usd",
+        "delta_v_equity_compression_usd",
+        "pct_equity_compression",
+        "alpha_musk_ownership_share",
+        "delta_w_principal_net_worth_loss_usd"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "v_private_consolidated_peak_usd": { "type": "number", "const": 1250000000000.0 },
+        "v_spacex_standalone_tender_usd": { "type": "number", "const": 350000000000.0 },
+        "e_ebitda_defense_core_usd": { "type": "number", "const": 15000000000.0 },
+        "m_sovereign_favored_multiple": { "type": "number", "const": 83.333333 },
+        "m_ringfenced_utility_multiple": { "type": "number", "const": 14.0 },
+        "v_ringfenced_utility_floor_usd": { "type": "number", "const": 210000000000.0 },
+        "delta_v_equity_compression_usd": { "type": "number", "const": 1040000000000.0 },
+        "pct_equity_compression": { "type": "number", "const": 83.2 },
+        "alpha_musk_ownership_share": { "type": "number", "const": 0.42 },
+        "delta_w_principal_net_worth_loss_usd": { "type": "number", "const": 436800000000.0 }
+      }
+    },
+    "liquidation_cascade_e4": {
+      "type": "object",
+      "description": "E4: P_liquidation_cascade = 1 - (1 - p_DCSA_KMP)(1 - p_18USC208_DOJ)(1 - p_FAR94_Debarment)(1 - p_FCC_312_Spectrum) = 0.9910.",
+      "required": [
+        "p_dcsa_kmp",
+        "p_18usc208_doj",
+        "p_far94_debarment",
+        "p_fcc_312_spectrum",
+        "p_liquidation_cascade"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "p_dcsa_kmp": { "type": "number", "const": 0.85 },
+        "p_18usc208_doj": { "type": "number", "const": 0.7 },
+        "p_far94_debarment": { "type": "number", "const": 0.6 },
+        "p_fcc_312_spectrum": { "type": "number", "const": 0.5 },
+        "p_liquidation_cascade": { "type": "number", "const": 0.991 }
+      }
+    },
+    "collateral_floor_e5": {
+      "type": "object",
+      "description": "E5: C_collateral_min_required = D_pledged_debt_ceiling / LTV_cap_def14a = 14000000000.0.",
+      "required": [
+        "ltv_cap_def14a",
+        "d_pledged_debt_ceiling_usd",
+        "c_collateral_min_required_usd"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "ltv_cap_def14a": { "type": "number", "const": 0.25 },
+        "d_pledged_debt_ceiling_usd": { "type": "number", "const": 3500000000.0 },
+        "c_collateral_min_required_usd": { "type": "number", "const": 14000000000.0 }
+      }
+    },
+    "bilateral_shareholder_harm_e6": {
+      "type": "object",
+      "description": "E6: Asymmetric ownership rent extraction. Controller holds alpha_spcx_economic = 0.49 (84.0% super-voting) vs. alpha_tsla_economic in [0.13, 0.20]; ownership spread [0.29, 0.36] > 0 proves a strictly positive incentive to price the merger at SpaceX's inflated 83.33x multiple, transferring wealth from outside TSLA holders to the controller while triggering the $1.0T comp package.",
+      "required": [
+        "alpha_spcx_economic",
+        "alpha_spcx_supervoting",
+        "alpha_tsla_economic_low",
+        "alpha_tsla_economic_high",
+        "ownership_spread_low",
+        "ownership_spread_high",
+        "tsla_comp_package_usd",
+        "combined_merger_mcap_low_usd",
+        "combined_merger_mcap_high_usd"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "alpha_spcx_economic": { "type": "number", "const": 0.49 },
+        "alpha_spcx_supervoting": { "type": "number", "const": 0.84 },
+        "alpha_tsla_economic_low": { "type": "number", "const": 0.13 },
+        "alpha_tsla_economic_high": { "type": "number", "const": 0.2 },
+        "ownership_spread_low": { "type": "number", "const": 0.29 },
+        "ownership_spread_high": { "type": "number", "const": 0.36 },
+        "tsla_comp_package_usd": { "type": "number", "const": 1000000000000.0 },
+        "combined_merger_mcap_low_usd": { "type": "number", "const": 3500000000000.0 },
+        "combined_merger_mcap_high_usd": { "type": "number", "const": 3700000000000.0 }
+      }
+    },
+    "cash_furnace_bailout_e7": {
+      "type": "object",
+      "description": "E7: Cash-furnace bailout imperative. SpaceX FY2025 posted -$2.6B operating income and -$4.9B net loss on $18.7B revenue; xAI posted -$6.4B operating loss on $3.2B revenue. Combined 2025 deficit = -$11.3B, plus $12.0B X Corp LBO debt and $16.0B Terafab CapEx. Tesla's ~$30.0B cash reserves provide only 2.654867 years of runway against the combined annual burn, motivating the merger to erase the related-party firewall.",
+      "required": [
+        "spacex_fy2025_revenue_usd",
+        "spacex_fy2025_operating_income_usd",
+        "spacex_fy2025_net_loss_usd",
+        "xai_2025_operating_loss_usd",
+        "xai_2025_revenue_usd",
+        "x_corp_lbo_debt_usd",
+        "terafab_capex_usd",
+        "combined_spacex_xai_2025_loss_usd",
+        "tesla_cash_reserves_usd",
+        "tesla_cash_runway_years"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "spacex_fy2025_revenue_usd": { "type": "number", "const": 18700000000.0 },
+        "spacex_fy2025_operating_income_usd": { "type": "number", "const": -2600000000.0 },
+        "spacex_fy2025_net_loss_usd": { "type": "number", "const": -4900000000.0 },
+        "xai_2025_operating_loss_usd": { "type": "number", "const": -6400000000.0 },
+        "xai_2025_revenue_usd": { "type": "number", "const": 3200000000.0 },
+        "x_corp_lbo_debt_usd": { "type": "number", "const": 12000000000.0 },
+        "terafab_capex_usd": { "type": "number", "const": 16000000000.0 },
+        "combined_spacex_xai_2025_loss_usd": { "type": "number", "const": -11300000000.0 },
+        "tesla_cash_reserves_usd": { "type": "number", "const": 30000000000.0 },
+        "tesla_cash_runway_years": { "type": "number", "const": 2.654867 }
+      }
+    },
+    "merger_falsification_foci_e8": {
+      "type": "object",
+      "description": "E8: Modigliani-Miller public-market falsification and FOCI trigger. Both SPCX (post June 12, 2026 $86.0B IPO) and TSLA are publicly traded, so combined portfolio exposure is achievable at zero cost -> mm_diversification_upside = 0.0. Gigafactory Shanghai PRC exposure combined with SpaceX TS/SCI clearance triggers mandatory 32 C.F.R. 117.11 FOCI review (foci_trigger_32cfr117 = true). The 2022 ~$23.0B TSLA open-market sales precedent exceeds the $14.0B DEF 14(a) collateral floor.",
+      "required": [
+        "spacex_public_post_ipo",
+        "tesla_public",
+        "spacex_ipo_raised_usd",
+        "mm_diversification_upside",
+        "giga_shanghai_prc_exposure",
+        "spacex_ts_sci_clearance",
+        "foci_trigger_32cfr117",
+        "tsla_2022_open_market_sales_usd",
+        "tsla_q3_2026_net_income_drop_pct"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "spacex_public_post_ipo": { "type": "boolean", "const": true },
+        "tesla_public": { "type": "boolean", "const": true },
+        "spacex_ipo_raised_usd": { "type": "number", "const": 86000000000.0 },
+        "mm_diversification_upside": { "type": "number", "const": 0.0 },
+        "giga_shanghai_prc_exposure": { "type": "boolean", "const": true },
+        "spacex_ts_sci_clearance": { "type": "boolean", "const": true },
+        "foci_trigger_32cfr117": { "type": "boolean", "const": true },
+        "tsla_2022_open_market_sales_usd": { "type": "number", "const": 23000000000.0 },
+        "tsla_q3_2026_net_income_drop_pct": { "type": "number", "const": 43.0 }
+      }
+    },
+    "spof_trigger_regimes": {
+      "type": "object",
+      "description": "Single-point-of-failure trigger probabilities under compliant vs. defection regimes with the expected-cascade gate (0.01982 vs. 0.9910).",
+      "required": [
+        "p_spof_trigger_compliant",
+        "p_spof_trigger_defection",
+        "regime_ratio",
+        "expected_cascade_compliant",
+        "expected_cascade_defection"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "p_spof_trigger_compliant": { "type": "number", "const": 0.02 },
+        "p_spof_trigger_defection": { "type": "number", "const": 1.0 },
+        "regime_ratio": { "type": "number", "const": 50.0 },
+        "expected_cascade_compliant": { "type": "number", "const": 0.01982 },
+        "expected_cascade_defection": { "type": "number", "const": 0.991 }
+      }
+    },
+    "verification_vectors": {
+      "type": "array",
+      "minItems": 10,
+      "maxItems": 10,
+      "items": {
+        "type": "string",
+        "enum": [
+          "patronage_leverage_inversion",
+          "state_remedy_asymmetry",
+          "equity_compression_chain",
+          "liquidation_cascade",
+          "collateral_floor",
+          "cross_equation_consistency",
+          "bilateral_shareholder_harm",
+          "cash_furnace_bailout",
+          "merger_falsification_foci",
+          "schema_integrity_gate"
+        ]
+      }
+    }
+  }
+}

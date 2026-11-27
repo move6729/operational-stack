@@ -1,0 +1,258 @@
+# Your Marketing Department's SQL Database Is a Multi-Billion-Dollar Strict-Liability Confession: Algorithmic Surveillance Pricing, 42 U.S.C. § 1981, the California Unruh Act, and the *Uber v. AAA* ($91.6M) Mass-Arbitration DDoS
+
+**Canonical Specification:** `SPEC-ALGORITHMIC-SURVEILLANCE-PRICING-AND-SECTION-1981-UNRUH-LIQUIDATION-v1.0`
+**Target Architectures:** Coasean Uniform Posted-Price Commerce vs. Stateful CRM Surveillance-Pricing Engines, Demographic Fee-Waiver Routing & Hub-and-Spoke Pricing Intermediaries (`OPSTACK-KERNEL-v2.3`)
+**Cross-References:** `specs/SPEC-ALGORITHMIC-SURVEILLANCE-PRICING-AND-SECTION-1981-UNRUH-LIQUIDATION-v1.0.md` | `schema/algorithmic_surveillance_pricing_unruh_liquidation.json` | `proofs/algorithmic_surveillance_pricing_unruh_liquidation_proof.py` | `specs/SPEC-ALGORITHMIC-YIELD-CARTEL-AND-SINGLE-FAMILY-REO-SECURITIZATION-v1.0.md` | `specs/SPEC-STIGMERGIC-LITIGATION-SWARM-AND-BOUNTY-COMPILER-v1.0.md` | `specs/SPEC-DISTRIBUTED-ANTITRUST-COMMON-OWNERSHIP-AND-FIDUCIARY-LIQUIDATION-v1.0.md` | `specs/SPEC-DUAL-HAT-PRIVACY-FORENSICS-CONFLICT-AND-POSIWID-CAPTURE-v1.0.md` | `articles/2026-03-structural-infeasibility-of-the-corporate-firm.txt` | `articles/2026-03-asymmetric-pro-se-litigation-and-regulatory-arbitrage.txt` | `articles/algorithmic-surveillance-pricing-and-section-1981-unruh-liquidation.txt`
+**RAG Indexing Vector:** `[ALGORITHMIC-SURVEILLANCE-PRICING, 42-USC-1981-CONTRACT-PARITY, CALIFORNIA-UNRUH-ACT-SECTION-51-52, WAL-MART-V-DUKES-RULE-23-INVERSION, UBER-V-AAA-91-6M-MASS-ARBITRATION-DDOS, CCP-1281-97-THIRTY-DAY-DEFAULT, FTC-6B-SURVEILLANCE-PRICING-ORDERS, META-SPECIAL-AD-AUDIENCE-1-22-CV-05187, JENSEN-MECKLING-HORIZON-ARBITRAGE, COASEAN-UNIFORM-PRICE-SHIELD]`
+**Empirical/Statutory/Physical Baseline:** 42 U.S.C. § 1981 (Civil Rights Act of 1866 Contract Parity), *Comcast Corp. v. National Assn. of African American-Owned Media*, 589 U.S. 327 (2020), Cal. Civ. Code §§ 51, 51.5 & 52(a) (Unruh Civil Rights Act $4,000 Statutory Minimum Damages; *Koire v. Metro Car Wash*, 40 Cal. 3d 24 (1985)), *Wal-Mart Stores, Inc. v. Dukes*, 564 U.S. 338 (2011) (Fed. R. Civ. P. 23(a)(2) Commonality Inverted by Deterministic SQL Rules), *Uber Technologies, Inc. v. American Arbitration Association, Inc.*, 167 N.Y.S.3d 68, 2022 NY Slip Op 02503 (N.Y. App. Div. 1st Dep't Apr. 14, 2022; Index No. 655549/21), *Abernathy v. DoorDash, Inc.*, 438 F. Supp. 3d 1062 (N.D. Cal. 2020; Case No. 3:19-cv-07545-WHA), Cal. Civ. Proc. Code §§ 1281.97–1281.99 (30-Day Arbitral Invoice Material Breach & Waiver), 28 U.S.C. § 1654 (Pro Se Edge Compilation), *United States v. Meta Platforms, Inc.*, No. 1:22-cv-05187 (S.D.N.Y. June 21, 2022), *American Alliance for Equal Rights v. Fearless Fund Management, LLC*, No. 23-13138 (11th Cir. June 3, 2024; appealing N.D. Ga. No. 1:23-cv-03424), *Roberts v. Progressive Preferred Insurance Co.*, No. 1:23-cv-01597 (N.D. Ohio; 6th Cir. No. 24-3454, Feb. 24, 2026), FTC Section 6(b) Surveillance Pricing Orders (15 U.S.C. § 46(b), July 23, 2024), and Uber Technologies, Inc. (`CIK 0001543151`) FY2025 Form 10-K Note 8 ($10,600M Senior/Convertible Notes + $5,000M Unsecured Revolving Credit Facility)
+**By:** Operational Stack Cybernetics Group (Principal Mandates & 48–72 Hr Independent Red-Team Briefs: move6729@proton.me)
+**License:** Unlicense (Public Domain — Zero-Rent Federation)
+
+---
+
+### I. The Algorithmic Externalization Illusion and the End of Opaque Corporate Liability
+
+Across our prior forensic specifications on algorithmic yield cartels (`SPEC-ALGORITHMIC-YIELD-CARTEL-AND-SINGLE-FAMILY-REO-SECURITIZATION-v1.0`), stigmergic litigation compilers (`SPEC-STIGMERGIC-LITIGATION-SWARM-AND-BOUNTY-COMPILER-v1.0`), and the structural infeasibility of the modern corporate firm (`articles/2026-03-structural-infeasibility-of-the-corporate-firm.txt`; `articles/2026-03-asymmetric-pro-se-litigation-and-regulatory-arbitrage.txt`), we established two foundational cybernetic laws governing twenty-first-century balance sheets.
+
+First, whenever an enterprise replaces human discretion with a centralized, deterministic database rule—whether RealPage (`CIK 0001488075`) pooling non-public lease renewals across Invitation Homes (`NYSE: INVH`, `CIK 0001687229`) or a retail platform dynamically modifying checkout prices by consumer profile—it converts what used to be diffuse, unprovable commercial friction into a single, immutable, self-executing evidentiary artifact. Second, the twentieth-century Coasean firm (Coase 1937) relied on a steep procedural transaction-cost moat to externalize small-dollar statutory violations onto millions of atomized consumers. So long as hiring an attorney to draft a bespoke federal complaint or arbitration demand cost thousands of dollars in human billable hours while the underlying consumer overcharge was `$3.99`, the corporate balance sheet could violate per-transaction civil-rights and consumer-protection statutes with near-zero balance-sheet friction.
+
+That transaction-cost moat has evaporated. In the era of local machine-learning inference and `28 U.S.C. § 1654` pro se edge compilation, generating a schema-validated, docket-ready complaint or individual American Arbitration Association (`AAA`) demand from a checkout receipt and a public API response costs `$0.05` in local silicon electricity (`c_edge_pro_se_opex_usd = 0.05`). Meanwhile, the target corporation must either wire `$3,400.00` in non-refundable AAA administrative and arbitrator fees per claimant within 30 days under `Cal. Civ. Proc. Code §§ 1281.97–1281.99` (`ccp_1281_97_default_window_days = 30`) or expend `$16,250.00` in AmLaw 100 defense fees (`c_corp_defense_opex_usd = 16250.0` at `$1,250/hr` across a 13-hour Rule 12(b)(6) cycle)—an operational expenditure asymmetry of `325,000.0x` (`m_pro_se_opex_asymmetry = 325000.0`).
+
+Nowhere is this structural inversion more lethal to senior unsecured bondholders than in **algorithmic surveillance pricing** and **demographic fee-waiver routing**. Over the past five years, marketing, growth, and "social impact" product teams inside major delivery platforms, financial institutions, and e-commerce retailers have routinely pushed conditional pricing branches directly into production Snowflake (`NYSE: SNOW`, `CIK 0001640147`) and Databricks (`CIK 0001679788`) feature stores. Some of these rules explicitly toggle checkout fees, delivery surcharges, or grant eligibility based on the racial, ethnic, or sex classification of the merchant or consumer. Others ingest thousands of behavioral, geolocation, device-battery, and credit-file proxies through third-party pricing engines to charge two identical shoppers different prices for the exact same basket at the exact same millisecond.
+
+To the growth-marketing vice president or corporate social responsibility officer who approved the pull request, a conditional checkout rule looks like a harmless promotional experiment or an inexpensive public-relations gesture. To a forensic credit analyst or a mass-arbitration compiler, that production SQL table is a **multi-billion-dollar strict-liability confession**. By writing demographic or proxy-segmented pricing multipliers into an immutable transaction log, the corporation simultaneously activates two catastrophic liquidation engines:
+
+1. **The Statutory Damages Multiplier (`42 U.S.C. § 1981` & `Cal. Civ. Code §§ 51–52`):** Under Section 1981 of the Civil Rights Act of 1866 (`42 U.S.C. § 1981`) and the California Unruh Civil Rights Act (`Cal. Civ. Code §§ 51, 51.5, 52(a)`), every single checkout transaction where a price, discount, fee waiver, or underwriting term varies by a protected characteristic—without a formal, board-administered `29 C.F.R. Part 1608` remedial affirmative-action predicate—constitutes an independent statutory violation. In California, `Cal. Civ. Code § 52(a)` imposes a strict statutory minimum penalty of **`$4,000.00` per violation** (`s_unruh_min_statutory_usd = 4000.0`), plus mandatory plaintiff attorney's fees, with zero requirement to prove out-of-pocket pecuniary loss beyond the unequal price differential itself (*Koire v. Metro Car Wash*, `40 Cal. 3d 24, 33–34` (1985)).
+2. **The *Wal-Mart v. Dukes* (`564 U.S. 338`) Evidentiary Inversion:** For fifteen years, corporate defense counsel relied on *Wal-Mart Stores, Inc. v. Dukes*, `564 U.S. 338` (2011), to defeat `Fed. R. Civ. P. 23(a)(2)` class certification by arguing that decentralized, subjective human managers did not share a "common mode" of discrimination. A production SQL `CASE WHEN` branch or a deterministic machine-learning feature weight inverts *Wal-Mart v. Dukes* overnight. The algorithm *is* the common mode. The database schema itself supplies the exact deterministic `but-for` causation required by the U.S. Supreme Court in *Comcast Corp. v. National Assn. of African American-Owned Media*, `589 U.S. 327` (2020), across millions of rows in a single `SELECT` query.
+
+---
+
+### II. The `$91.6 Million` Poetic Justice Engine: *Uber v. AAA* (`Index No. 655549/21`) and the `728.81x` Arbitral Fee Blowup
+
+To understand how fast a `$3.99` checkout flag can detonate a corporate treasury, general counsel and credit-fund portfolio managers need only read the verified appellate record in ***Uber Technologies, Inc. v. American Arbitration Association, Inc.***, `167 N.Y.S.3d 68`, `2022 NY Slip Op 02503` (N.Y. App. Div. 1st Dep't Apr. 14, 2022; affirming N.Y. Sup. Ct. N.Y. Cnty. Index No. `655549/21`).
+
+Between June 4, 2020 and December 1, 2020, Uber Technologies, Inc. (`NYSE: UBER`, `CIK 0001543151`) deployed a promotional routing rule inside the Uber Eats checkout pipeline that waived the **`$3.99`** delivery fee (`delta_f_fee_waiver_usd = 3.99`) exclusively for restaurants tagged in Uber's merchant database as Black-owned, while continuing to charge the standard `$3.99` delivery fee on orders placed with non-Black-owned restaurants.
+
+shortly thereafter, **`31,500` individual Uber Eats users** (`n_aaa_claimants = 31500`) represented by Consovoy McCarthy PLLC did not file a federal class action—because Uber's own Terms of Use strictly prohibited class actions and forced every consumer dispute into individual binding arbitration before the American Arbitration Association (`AAA`) under the AAA Consumer Arbitration Rules. Instead, those `31,500` claimants followed Uber's contract to the letter and filed `31,500` individual arbitration demands alleging unlawful reverse-discrimination price differentials under the California Unruh Civil Rights Act (`Cal. Civ. Code §§ 51–52`) and parallel state public-accommodations statutes.
+
+Let us audit the exact accounting ledger of that promotional campaign against the resulting arbitral invoice schedule:
+
+* **Gross Promotional Fee Shift Across the `31,500`-Claimant Cohort (`g_cohort_promo_shift_usd`):** At `$3.99` per order across `31,500` orders, the total promotional delivery-fee differential was exactly **`$125,685.00`** (`31,500 * $3.99 = $125,685.00`).
+* **AAA Consumer Arbitration Fee Schedule per Individual Filing:** Under the operative AAA Consumer Fee Schedule, while the consumer's filing fee was capped, the corporate business respondent was contractually obligated to pay:
+  1. **`$500.00`** business initial filing fee (`f_aaa_filing_usd = 500.0`);
+  2. **`$1,400.00`** case management fee (`f_aaa_case_mgmt_usd = 1400.0`); and
+  3. **`$1,500.00`** individual arbitrator compensation retainer (`f_aaa_arbitrator_usd = 1500.0`).
+  This totaled **`$3,400.00` per individual claimant** before a single merits hearing took place.
+* **Gross and Net Committed AAA Invoices (`l_aaa_gross_schedule_usd` & `l_aaa_net_committed_usd`):** Across `31,500` demands, the standard AAA schedule generated **`$107,100,000.00`** in gross administrative and arbitrator fees (`l_aaa_gross_schedule_usd = 107100000.0`). Even after the AAA applied an administrative abatement on initial filing fees, the AAA issued binding payment schedules documented in New York Supreme Court Index No. `655549/21` requiring Uber to pay a minimum of **`$91,600,000.00`** (`l_aaa_net_committed_usd = 91600000.0`), including an immediate invoice of **`$10,879,400.00`** for a single batch of **`7,771` California claimants** (`l_ca_batch_invoice_usd = 10879400.0`, or `$1,400.00` per case management fee across those `7,771` demands).
+* **The `728.8061x` Arbitral Fee-to-Promotion Blowup Ratio (`m_aaa_fee_to_promo_blowup`):**
+  $$\mathcal{M}_{\text{AAA}} = \frac{L_{\text{AAA\_Net}}}{G_{\text{Cohort}}} = \frac{\$91,600,000.00}{\$125,685.00} = 728.8061\times$$
+  For every `$1.00` of delivery-fee differential shifted by Uber's checkout rule across that cohort, Uber's own mandatory arbitration clause generated **`$728.81` in immediate, non-refundable AAA administrative invoices**—before a single dollar of liability or defense counsel time was paid.
+
+Faced with a `$91.6M` bill triggered by its own adhesion contract, Uber retained Paul, Weiss, Rifkind, Wharton & Garrison LLP and sued the American Arbitration Association in New York County Supreme Court (*Uber Technologies, Inc. v. American Arbitration Association, Inc.*, Index No. `655549/21`), begging the court for a preliminary injunction to stop the AAA from invoicing Uber under the very Consumer Arbitration Rules Uber had forced upon millions of users.
+
+On April 14, 2022, the New York Appellate Division, First Department (`167 N.Y.S.3d 68`, `2022 NY Slip Op 02503`) unanimously affirmed the denial of Uber's injunction. The First Department held that the AAA had properly enforced its published fee schedule and that Uber could not invoke judicial equity to escape the foreseeable financial consequences of its own mandatory individual arbitration clause.
+
+#### The `Cal. Civ. Proc. Code §§ 1281.97–1281.99` 30-Day Trapdoor
+
+Why couldn't Uber simply refuse to pay the AAA invoices and let the `31,500` arbitrations stall? Because California had already sealed the exit hatch. Under **`Cal. Civ. Proc. Code §§ 1281.97` and `1281.98`**, if a drafting company fails to pay the required arbitration initiation or continuation fees within **30 calendar days** after the due date (`ccp_1281_97_default_window_days = 30`), the corporation is statutorily in **material breach** of the arbitration agreement, is in default of the arbitration, and **waives its right to compel arbitration**.
+
+Upon a 30-day payment default under `§ 1281.97(b)`, the claimants are statutorily empowered to:
+1. Withdraw their claims from arbitration and proceed immediately in **California Superior Court**, where the `31,500` claimants face zero arbitral confidentiality, can aggregate under `Cal. Civ. Code § 52(a)` for **`$126,000,000.00`** in statutory minimum Unruh damages (`31,500 * $4,000 = $126,000,000.00`, `l_unruh_31500_cohort_usd = 126000000.0`), and are entitled to **mandatory unilateral attorney's fees and costs** resulting from the breach (`Cal. Civ. Proc. Code § 1281.99(a)`); or
+2. Compel the corporation to pay the arbitral fees while seeking terminating, issue, or evidentiary sanctions under `§ 1281.99(b)`.
+
+As Senior U.S. District Judge William Alsup wrote from the bench in ***Abernathy v. DoorDash, Inc.***, `438 F. Supp. 3d 1062, 1067–68` (N.D. Cal. Feb. 10, 2020; Case No. `3:19-cv-07545-WHA`), when ordering DoorDash to pay over `$11 million` in AAA fees after Gibson, Dunn & Crutcher LLP tried to balk at `5,879` individual arbitration demands:
+
+> *"For decades, the employer-side bar and their employer clients have forced arbitration clauses upon workers, thus taking away their right to go to court, and forced class-action waivers upon them too, thus taking away their ability to join collectively to vindicate common rights... This irony upon irony has now come full circle... This hypocrisy will not be blessed, at least by this order."*
+
+What Judge Alsup called "poetic justice" in 2020 is now a deterministic mathematical boundary condition. When an enterprise combines (a) a stateful SQL pricing or fee-waiver rule touching protected traits with (b) an individual arbitration clause governed by `Cal. Civ. Proc. Code § 1281.97`, it has wired a financial suicide vest directly into its checkout API.
+
+---
+
+### III. The Statutory & Constitutional Matrix: Why Every "Benevolent" or Proxy-Segmented SQL Branch Fails `42 U.S.C. § 1981` and the Unruh Act
+
+Inside corporate product and marketing departments, the standard defense of demographic pricing or targeted fee waivers—what we formalize as the Null Hypothesis ($\mathcal{H}_0$)—rests on three recurring assumptions:
+1. That waiving a `$3.99` fee or routing a promotional credit to a specific demographic cohort is a "benevolent" social-impact initiative lacking invidious animus;
+2. That dynamic "surveillance pricing" managed by third-party SaaS algorithms relies on behavioral telemetry rather than explicit racial or gender labels; and
+3. That individual consumers will never sue over a `$3.99` differential because class certification is barred by arbitration waivers and *Wal-Mart v. Dukes*.
+
+Every single prong of $\mathcal{H}_0$ has been falsified in federal appellate courts, state supreme courts, and FTC compulsory process orders between 2020 and 2026. Under *Milkovich v. Lorain Journal Co.*, `497 U.S. 1` (1990), and *Partington v. Bugliosi*, `56 F.3d 1147` (9th Cir. 1995), we do not speculate on the internal subjective motives of any corporate executive. We evaluate the disclosed public record comparing corporate public statements ($\mathcal{H}_0$) against black-letter statutes, pin-cited federal dockets, and deterministic database mechanics ($\mathcal{H}_1$).
+
+#### 1. `42 U.S.C. § 1981` Contract Parity and *Comcast* (`589 U.S. 327`) Deterministic `But-For` Causation
+
+Enacted in the Civil Rights Act of 1866, **`42 U.S.C. § 1981(a)`** guarantees that all persons within the jurisdiction of the United States shall have the same right *"to make and enforce contracts... as is enjoyed by white citizens,"* defining *"make and enforce contracts"* in `§ 1981(b)` to include *"the making, performance, modification, and termination of contracts, and the enjoyment of all benefits, privileges, terms, and conditions of the contractual relationship."*
+
+In ***Comcast Corp. v. National Assn. of African American-Owned Media***, `589 U.S. 327, 333–41` (2020), the U.S. Supreme Court held that a `§ 1981` plaintiff must plead and prove that race was a **`but-for` cause** of the contractual injury. In traditional human-mediated commerce, proving `but-for` causation is difficult because a human counter-party can cite dozens of subjective, non-racial reasons for offering a different price.
+
+In an algorithmic checkout pipeline, **the SQL code *is* the counterfactual proof**. Consider the exact architecture of a conditional checkout pricing rule:
+
+```sql
+CASE
+    WHEN merchant_or_user.demographic_flag = TRUE THEN 0.00
+    ELSE 3.99
+END AS delivery_fee_usd
+```
+
+In this code block, holding every single transactional variable constant—the cart items, the delivery distance, the time of day, the courier availability—flipping the boolean variable `demographic_flag` from `FALSE` to `TRUE` deterministically changes the contractual price term from `$3.99` to `$0.00`. The code itself establishes 100% mathematical `but-for` causation under *Comcast*.
+
+#### 2. The Death of the "Benevolent Marketing" Defense: *Fearless Fund* (`11th Cir. No. 23-13138`) and *Roberts v. Progressive* (`6th Cir. No. 24-3454`)
+
+Can a corporation defend a race-gated contractual benefit or fee waiver under `42 U.S.C. § 1981` by characterizing it as "benevolent" corporate philanthropy or expressive marketing speech?
+
+On June 3, 2024, the U.S. Court of Appeals for the Eleventh Circuit answered with an emphatic **no** in ***American Alliance for Equal Rights v. Fearless Fund Management, LLC***, No. `23-13138`, `103 F.4th 765` (11th Cir. June 3, 2024; reversing N.D. Ga. Case No. `1:23-cv-03424-TWT`). Ordering a preliminary injunction against a contest that awarded `$20,000` contractual grants exclusively to businesses majority-owned by Black women, the Eleventh Circuit held that:
+* A promotional contest or grant entry with binding rules and consideration is a **contract** governed by `42 U.S.C. § 1981`;
+* The First Amendment does not confer a right to exclude persons by race in the formation of commercial contracts (*Runyon v. McCrary*, `427 U.S. 160, 176` (1976)); and
+* Ad-hoc corporate marketing programs cannot invoke the narrow remedial affirmative-action exception of *Johnson v. Transportation Agency*, `480 U.S. 616` (1987), or **`29 C.F.R. Part 1608`** when they operate as absolute categorical exclusions rather than temporary, formally documented remedial plans curing a specific, measured manifest imbalance in a traditionally segregated job category.
+
+That ruling was reinforced on February 24, 2026 by the U.S. Court of Appeals for the Sixth Circuit in ***Roberts v. Progressive Preferred Insurance Co.***, Case No. `24-3454` (6th Cir. Feb. 24, 2026; affirming and examining N.D. Ohio Case No. `1:23-cv-01597`), which adjudicated a `42 U.S.C. § 1981` challenge to Progressive Corp.'s (`NYSE: PGR`, `CIK 0000080661`) commercial grant program administered alongside Hello Alice (`Circular Board Inc.`). Together, *Fearless Fund* and *Roberts v. Progressive* establish that any commercial contract, fee waiver, credit, or vendor grant that conditions financial terms on protected status outside a strict `29 C.F.R. Part 1608` predicate is *per se* exposed under `42 U.S.C. § 1981`.
+
+#### 3. California's Strict-Liability Multiplier: `Cal. Civ. Code §§ 51, 51.5 & 52(a)` and *Koire v. Metro Car Wash* (`40 Cal. 3d 24`)
+
+If federal `§ 1981` supplies the nationwide `but-for` liability hook, California's Unruh Civil Rights Act (`Cal. Civ. Code §§ 51, 51.5, 52(a)`) supplies the balance-sheet liquidation multiplier. Under `Cal. Civ. Code § 51(b)`, all persons within California are entitled to the full and equal accommodations, advantages, facilities, privileges, or services in all business establishments of every kind whatsoever, regardless of sex, race, color, religion, ancestry, national origin, disability, medical condition, genetic information, marital status, sexual orientation, citizenship, primary language, or immigration status. `Cal. Civ. Code § 51.5(a)` explicitly extends this prohibition to any business establishment that *"discriminate[s] against, boycott[s] or blacklist[s], or refuse[s] to buy from, contract with, sell to, or trade with any person"* on those characteristics.
+
+Crucially, in ***Koire v. Metro Car Wash***, `40 Cal. 3d 24, 29–39` (1985), the California Supreme Court held that **sex- or group-based price discounts** ("Ladies' Day" car wash discounts and "Ladies' Night" bar admission waivers) violate the Unruh Act as a matter of law. The California Supreme Court rejected every single argument that modern growth-marketing teams use today:
+* **Profit or Promotional Motive Is No Defense:** Chief Justice Bird wrote for the Court (`40 Cal. 3d at 32`) that while price discounts tied to neutral economic facts (such as children's meals or off-peak hours open to everyone) are permissible, conditioning a price discount on a protected classification is arbitrary and unlawful even if designed to increase revenue or promote social goodwill.
+* **No Out-of-Pocket Injury Beyond the Differential Required:** Under `Cal. Civ. Code § 52(a)`, whoever denies, aids, or incites a denial of rights under `§ 51` or `§ 51.5` is liable for each and every offense for the actual damages, and any amount that may be determined by a jury or court up to three times actual damages, ***"but in no case less than four thousand dollars ($4,000), and any attorney's fees that may be determined by the court."*** (*Koire*, `40 Cal. 3d at 33–34`).
+
+#### 4. Proxy-Vector Surveillance Pricing: *United States v. Meta* (`S.D.N.Y. No. 1:22-cv-05187`) and the July 23, 2024 FTC Section 6(b) Orders
+
+What happens when a company strips explicit racial or sex booleans out of its SQL database, and instead relies on an algorithmic pricing vendor or lookalike audience classifier to charge personalized "surveillance prices" based on zip code, browser fingerprint, device model, battery percentage, and credit-card metadata?
+
+First, the Department of Justice has already proven in federal court that stripping the explicit demographic label does not immunize a proxy-segmented lookalike algorithm. In ***United States v. Meta Platforms, Inc.***, Case No. `1:22-cv-05187` (S.D.N.Y. Complaint and Settlement Consent Decree filed June 21, 2022), the DOJ Civil Rights Division established that Meta Platforms, Inc.'s (`NASDAQ: META`, `CIK 0001326801`) "Special Ad Audience" lookalike algorithm—even after removing explicit race, sex, and national-origin checkboxes—reconstructed protected-class exclusion and pricing differentials via high-dimensional behavioral and demographic proxies in violation of the Fair Housing Act (`42 U.S.C. §§ 3601–3619`). Meta was forced under court order to decommission the Special Ad Audience algorithm and submit its variance-reduction systems to an independent third-party reviewer through June 27, 2026.
+
+Second, on **July 23, 2024**, the Federal Trade Commission voted `5–0` to issue compulsory **Section 6(b) Orders (`15 U.S.C. § 46(b)`)** investigating the exact mechanics of algorithmic **"Surveillance Pricing"** across eight major financial, consulting, and retail SaaS intermediaries:
+1. **Mastercard Incorporated** (`NYSE: MA`, `CIK 0001141391`);
+2. **JPMorgan Chase & Co.** (`NYSE: JPM`, `CIK 0000019617`);
+3. **Accenture plc** (`NYSE: ACN`, `CIK 0001467373`);
+4. **McKinsey & Company, Inc.**;
+5. **PROS Holdings, Inc.** (`NYSE: PRO`, `CIK 0001392972`);
+6. **Revionics, Inc.** (operating unit of Aptos, Inc.);
+7. **Bloomreach, Inc.**; and
+8. **Task Software, Inc.** (operating unit of PAR Technology Corp., `NYSE: PAR`, `CIK 0000708821`).
+
+The FTC's July 23, 2024 Section 6(b) Orders compel production of the exact data inputs, consumer segmentation rules, demographic and behavioral proxy weights, and third-party credit/location datasets used to quote divergent prices to different consumers for identical goods and services. When a production pricing engine ingests ZIP+4 census tract demographics, subprime credit flags, or mobile-device telemetry whose linear combination correlates heavily with race, national origin, disability, or marital status, every resulting price differential is discoverable under Fed. R. Civ. P. 26(b)(1) and actionable under `Cal. Civ. Code §§ 51–52`, the Equal Credit Opportunity Act (`15 U.S.C. § 1691`), and Section 5 of the FTC Act (`15 U.S.C. § 45`).
+
+---
+
+### IV. The Closed-Form Liquidation Proof: How a `$9.98M` Marketing Promotion Creates a `$10.0 Billion` Gross Unruh Exposure and `-$1.49 Billion` in Net Enterprise Value Destruction
+
+Let us formalize the exact algebraic physics verified in our companion stdlib proof (`proofs/algorithmic_surveillance_pricing_unruh_liquidation_proof.py`) for a California consumer platform executing a segmented pricing or fee-waiver campaign across **$N_{\text{tx}} = 2,500,000$** affected California transactions (`n_tx_affected = 2500000`) over a single fiscal year.
+
+Suppose the platform's marketing department implements a conditional `$3.99` fee waiver or personalized surveillance-pricing surcharge ($\Delta f = \$3.99$, `delta_f_fee_waiver_usd = 3.99`).
+
+#### 1. Gross Promotional Shift vs. Statutory Unruh Explosion (`1,002.51x`)
+
+* **Gross Promotional Fee Shift ($G_{\text{promo}}$):**
+  $$G_{\text{promo}} = N_{\text{tx}} \cdot \Delta f = 2,500,000 \times \$3.99 = \$9,975,000.00 \quad (\text{\$9.975M})$$
+* **Gross California Unruh Statutory Minimum Exposure ($L_{\text{gross\_unruh}}$):** Under `Cal. Civ. Code § 52(a)`, each of the `2,500,000` transactions where a California consumer was charged the higher `$3.99` tier based on a prohibited classification carries a statutory minimum penalty of $S_{\text{unruh}} = \$4,000.00$ (`s_unruh_min_statutory_usd = 4000.0`):
+  $$L_{\text{gross\_unruh}} = N_{\text{tx}} \cdot S_{\text{unruh}} = 2,500,000 \times \$4,000.00 = \$10,000,000,000.00 \quad (\text{\$10.0 Billion})$$
+* **Statutory Liability-to-Promotion Blowup Ratio ($\mathcal{M}_{\text{unruh}}$):**
+  $$\mathcal{M}_{\text{unruh}} = \frac{L_{\text{gross\_unruh}}}{G_{\text{promo}}} = \frac{\$10,000,000,000.00}{\$9,975,000.00} = \frac{4,000}{3.99} = 1,002.5063\times$$
+  Every `$1.00` of segmented promotional pricing creates **`$1,002.51` of gross strict-liability statutory exposure** on the California ledger the instant the transaction commits to the SQL database.
+* **Probability-Weighted Expected Class/Mass-Arbitration Settlement ($L_{\text{expected}}$) and Net Enterprise Value Destruction ($\Delta \text{EV}$):** Even applying a conservative **`15.0%`** combined probability of class certification or mass-arbitration settlement recovery (`p_cert_settled = 0.15`), the expected balance-sheet settlement outflow is:
+  $$L_{\text{expected}} = p_{\text{cert}} \cdot L_{\text{gross\_unruh}} = 0.15 \times \$10,000,000,000.00 = \$1,500,000,000.00 \quad (\text{\$1.50 Billion})$$
+  Subtracting this `$1.50B` expected liability from the `$9.975M` gross marketing shift yields a **Net Expected Enterprise Value Destruction** of:
+  $$\Delta \text{EV} = G_{\text{promo}} - L_{\text{expected}} = \$9,975,000.00 - \$1,500,000,000.00 = -\$1,490,025,000.00 \quad (-\text{\$1.490 Billion})$$
+
+#### 2. Why Do Executives Deploy `-1,002.51x` EV Bombs? The Jensen-Meckling (1976) / Holmström (1979) Horizon-Arbitrage Proof
+
+If a segmented pricing or fee-waiver SQL branch destroys `$1.490 Billion` in expected enterprise value while risking a `$91.6M` immediate AAA arbitration DDoS, why do rational corporate officers approve it?
+
+The answer is pure **Jensen-Meckling (1976) agency cost** compounded by **Holmström (1979) moral-hazard observability lag**:
+* Let the Chief Marketing Officer or VP of Product's expected tenure horizon be **$T_{\text{exec}} = 2.5\text{ years}$** (`t_exec_tenure_years = 2.5`), during which the executive captures an immediate KPI/ESG/engagement bonus weight of $\beta_{\text{bonus}} = 4.2105\%$ on the `$9,975,000.00` promotional campaign, yielding **`$420,000.00` in vested personal compensation** (`u_exec_net_payoff_usd = 420000.0`).
+* Let the appellate, FTC Section 6(b), or mass-arbitration enforcement realization lag be **$\tau_{\text{lit}} = 4.0\text{ years}$** (`tau_litigation_lag_years = 4.0`). Because $T_{\text{exec}} = 2.5 < \tau_{\text{lit}} = 4.0$, the indicator function $\mathbb{I}(T_{\text{exec}} \ge \tau_{\text{lit}}) = 0$, and in the absence of an enforceable strict-liability litigation clawback ($\gamma_{\text{clawback}} = 0.0$), the executive's personal payoff is strictly positive (`+$420,000.00`) while long-duration equity and unsecured bondholders absorb **`-$1,490,025,000.00`** in net enterprise value destruction.
+* Worse still, when the judgment hits in Year 4, the corporation's Directors & Officers (`D&O`) and General Liability insurers routinely invoke **California Insurance Code § 533** (*"An insurer is not liable for a loss caused by the wilful act of the insured"*). Because deploying an explicit `CASE WHEN` SQL branch in a production database is an intentional, non-accidental act by corporate management, `Cal. Ins. Code § 533` strips insurance indemnification, dropping 100% of the statutory judgment directly onto the corporate balance sheet as an uninsured senior unsecured claim.
+
+---
+
+### V. Institutional Capital-Structure Waterfall (`$15,600M` Debt Stack) & Senior Unsecured Bondholder Compression
+
+To satisfy our institutional capital-at-risk mandate, we map this uninsured statutory liability directly onto the audited debt stack of **Uber Technologies, Inc. (`NYSE: UBER`, `CIK 0001543151`)** as reported in its **FY2025 Form 10-K (Note 8 — Debt and Equity Stakes)**:
+
+| Tranche ID | Instrument / Facility | Principal (`$M`) | Coupon / Rate | Collateral & Guarantor Box | Seniority Rank | Clean Distressed EV Recovery (`EV = $12,000M`) | Unruh Judgment (`$10,000M`) Distressed Recovery (`EV = $12,000M`) |
+| :--- | :--- | :---: | :---: | :--- | :---: | :---: | :---: |
+| **Tranche 1** | **7.00% Exchangeable Senior Notes due 2028** | `$1,125.0M` | `7.00% Fixed` | **1st-Lien Secured** by Pledge of Aurora Innovation, Inc. (`NASDAQ: AUR`) Common Shares | **Rank 1 (Senior Secured)** | `$1,125.0M` (**`100.00¢`**) | `$1,125.0M` (**`100.00¢`**) |
+| **Tranche 2** | **Unsecured Revolving Credit Facility (2030)** | `$5,000.0M` Committed (`$0.0M` Cash Drawn; `$1,200.0M` L/C Usage) | `SOFR + 112.5 bps` | Unsecured Parent Obligation (Covenant-Gated Liquidity Line) | **Rank 2 (Pari Passu Unsecured)** | Undrawn / L/C Intact | **Covenant Freeze** (`Cal. Ins. Code § 533` Uninsured Judgment MAE) |
+| **Tranche 3** | **Senior Unsecured & Convertible Notes (2026–2054)** | `$9,475.0M` | `0.875% – 6.250% Fixed` | Unsecured Parent Obligation (`U.S. Bank Trust Company, N.A.` Indenture Trustee) | **Rank 2 (Pari Passu Unsecured)** | `$9,475.0M` (**`100.00¢`**) | `$5,290.92M` (**`55.8408¢`**) |
+| **Tranche 4** | **Uninsured Unruh / § 1981 Judgment Claim** | `$10,000.0M` (Gross Statutory Floor) | `10.0%` Statutory Post-Judgment (`Cal. Civ. Proc. Code § 685.010`) | Uninsured Statutory Tort / Contract Judgment (`Cal. Ins. Code § 533` Exclusion) | **Rank 2 (Pari Passu Unsecured)** | `$0.0M` (No Claim) | `$5,584.08M` (**`55.8408¢`**) |
+| **Tranche 5** | **Common Equity (`NYSE: UBER`)** | Residual | Residual | Subordinated Residual Claim | **Rank 3 (Residual Equity)** | `$1,400.0M` | **`$0.00M` (Wiped Out)** |
+
+Look closely at the fulcrum math in `tranche_recovery(ev = 12000.0)` inside `proofs/algorithmic_surveillance_pricing_unruh_liquidation_proof.py`:
+1. In a distressed contraction where Enterprise Value compresses to **`$12,000.0M`**, **Tranche 1** (`$1,125.0M` 7.00% Exchangeable Senior Notes due 2028 secured by the Aurora Innovation share pledge) sits inside its collateral box and recovers **`100.00¢` on the dollar** (`$1,125.0M`), leaving **`$10,875.0M`** of remaining distributable Enterprise Value for the unsecured estate.
+2. In the **Clean Baseline** (zero Unruh/§ 1981 statutory judgment), the **`$9,475.0M`** of Senior Unsecured and Convertible Notes (`0.875%` Zero-Coupon/Convertible 2026/2028, `4.50%` 2029, `6.25%` 2028, `4.30%` 2030, `4.80%` 2034, `5.35%` 2054) recover **`100.00¢` on the dollar** (`$9,475.0M`), leaving `$1,400.0M` for Common Equity.
+3. In the **Uninsured Statutory Judgment Scenario**, a **`$10,000.0M`** Unruh class/mass-arbitration judgment ranks *pari passu* as an unsecured claim alongside the **`$9,475.0M`** Senior Unsecured Notes, expanding the total unsecured claim pool to **`$19,475.0M`**. Dividing the `$10,875.0M` remaining Enterprise Value across `$19,475.0M` of pari passu unsecured claims compresses Senior Unsecured Note recovery from **`100.00¢` down to `55.8408¢` on the dollar** (`$5,290.92M` recovery, an immediate **`$4,184.08M` principal haircut** to bondholders), while wiping out **`100%` of Common Equity** and freezing the `$5,000.0M` Revolving Credit Facility under Material Adverse Effect (`MAE`) and unstayed-judgment default covenants.
+
+---
+
+### VI. The 6-Category Security-Master Counterparty & Contagion Ring
+
+For institutional credit committees, FOIA pension monitors, and litigation-finance syndicates, we cross-index the exact verified SEC `CIK`, IARD `CRD` (`801-`), PCAOB Firm IDs, NAIC codes, and active court dockets across all six rings of the algorithmic surveillance-pricing ecosystem:
+
+1. **Ring 1 — Primary Corporate & Algorithmic Pricing Targets:**
+   * **Uber Technologies, Inc.** (`NYSE: UBER`, `CIK 0001543151`) — Respondent in *Uber Technologies, Inc. v. American Arbitration Association, Inc.*, `167 N.Y.S.3d 68`, `2022 NY Slip Op 02503` (N.Y. App. Div. 1st Dep't Apr. 14, 2022; Index No. `655549/21`).
+   * **DoorDash, Inc.** (`NASDAQ: DASH`, `CIK 0001792789`) — Respondent in *Abernathy v. DoorDash, Inc.*, `438 F. Supp. 3d 1062` (N.D. Cal. 2020; Case No. `3:19-cv-07545-WHA`).
+   * **Instacart (Maplebear Inc.)** (`NASDAQ: CART`, `CIK 0001579091`) — Consumer grocery delivery and dynamic fee/item-markup platform.
+   * **Target Corporation** (`NYSE: TGT`, `CIK 0000027419`) — Omni-channel retail & geo-fenced mobile app price-variation operator.
+   * **Meta Platforms, Inc.** (`NASDAQ: META`, `CIK 0001326801`) — Defendant in *United States v. Meta Platforms, Inc.*, No. `1:22-cv-05187` (S.D.N.Y. June 21, 2022) (Special Ad Audience proxy-targeting consent decree through June 27, 2026).
+   * **Progressive Corporation** (`NYSE: PGR`, `CIK 0000080661`) — Defendant in *Roberts v. Progressive Preferred Insurance Co.*, No. `1:23-cv-01597` (N.D. Ohio) & No. `24-3454` (6th Cir. Feb. 24, 2026).
+   * **Mastercard Incorporated** (`NYSE: MA`, `CIK 0001141391`), **JPMorgan Chase & Co.** (`NYSE: JPM`, `CIK 0000019617`), **Accenture plc** (`NYSE: ACN`, `CIK 0001467373`), **PROS Holdings, Inc.** (`NYSE: PRO`, `CIK 0001392972`), **PAR Technology Corp. / Task Software** (`NYSE: PAR`, `CIK 0000708821`), **McKinsey & Company, Inc.**, **Revionics, Inc.** (Aptos), and **Bloomreach, Inc.** — Named recipients of the July 23, 2024 FTC Section 6(b) Surveillance Pricing Orders (`15 U.S.C. § 46(b)`).
+   * **Snowflake Inc.** (`NYSE: SNOW`, `CIK 0001640147`) & **Databricks, Inc.** (`CIK 0001679788`) — Enterprise cloud data-warehouse infrastructure hosting customer segmentation and dynamic pricing feature stores.
+
+2. **Ring 2 — Public BDC Co-Lenders & Private-Credit SaaS Financing Counterparties (`Schedule of Investments` Exposure):**
+   * **Ares Capital Corporation** (`NASDAQ: ARCC`, `CIK 0001287750`; managed by **Ares Management LLC**, `CRD 130074` / `SEC 801-63484`).
+   * **Blue Owl Capital Corporation** (`NYSE: OBDC`, `CIK 0001655888`; managed by **Blue Owl Credit Advisors LLC**, `CRD 282393` / `SEC 801-107232`).
+   * **FS KKR Capital Corp.** (`NYSE: FSK`, `CIK 0001422183`; managed by **FS/KKR Advisor, LLC**, `CRD 292803` / `SEC 801-112649`).
+   * **Blackstone Secured Lending Fund** (`NYSE: BXSL`, `CIK 0001736035`; managed by **Blackstone Private Credit Strategies LLC**, `CRD 290980` / `SEC 801-112113`).
+   * **Golub Capital BDC, Inc.** (`NASDAQ: GBDC`, `CIK 0001476765`; managed by **GC Advisors LLC**, `CRD 132639` / `SEC 801-63902`).
+
+3. **Ring 3 — Regulated Insurance Balance Sheets & D&O / EPL Coverage Counterparties (`Cal. Ins. Code § 533` Exclusion):**
+   * **Chubb Limited** (`NYSE: CB`, `CIK 0000896159`, `NAIC Group 0626`) & **American International Group, Inc.** (`NYSE: AIG`, `CIK 0000005272`, `NAIC Group 0012`) — Primary D&O and Employment Practices / Civil Rights Liability carriers enforcing `Cal. Ins. Code § 533` wilful-act exclusions against intentional SQL rule deployments.
+   * **Apollo Global Management, Inc.** (`NYSE: APO`, `CIK 0001858681`; **Athene Holding Ltd.**, `CIK 0001527469`, `NAIC Group 4734`) & **KKR & Co. Inc.** (`NYSE: KKR`, `CIK 0001404912`; **Global Atlantic Financial Group**, `NAIC Group 4736`) — Regulated insurance balance sheets holding investment-grade and crossover corporate credit Notes (`UBER`, `TGT`, `META`, `JPM`, `MA`) in Schedule D / Schedule BA portfolios.
+
+4. **Ring 4 — PCAOB Auditors, Valuation Agents & Forensic Monitors:**
+   * **PricewaterhouseCoopers LLP** (`PCAOB Firm ID 238`) — Independent registered public accounting firm for Uber Technologies, Inc. (`CIK 0001543151`) and JPMorgan Chase & Co. (`CIK 0000019617`), responsible for ASC 450 (`SFAS 5`) loss-contingency footnote audits.
+   * **Ernst & Young LLP** (`PCAOB Firm ID 42`) — Independent auditor for Target Corp. (`CIK 0000027419`), Meta Platforms, Inc. (`CIK 0001326801`), and Maplebear Inc. / Instacart (`CIK 0001579091`).
+   * **KPMG LLP** (`PCAOB Firm ID 185`) — Independent auditor for DoorDash, Inc. (`CIK 0001792789`).
+   * **Houlihan Lokey, Inc.** (`NYSE: HLI`, `CIK 0001302215`; **Houlihan Lokey Financial Advisors, Inc.**, `CRD 17708`) & **Kroll, LLC** (`CRD 121902` / `SEC 801-61732`) — Independent portfolio valuation agents for Ring 2 BDCs holding private-credit SaaS pricing rollups (Revionics/Aptos, Bloomreach).
+
+5. **Ring 5 — FOIA-Subject Public Pension LPs & Institutional Gatekeeper Consultants:**
+   * **California Public Employees' Retirement System (`CalPERS`)** (`CIK 0000919079`), **California State Teachers' Retirement System (`CalSTRS`)** (`CIK 0001081019`), and **Washington State Investment Board (`WSIB`)** (`CIK 0000948707`).
+   * **Hamilton Lane Advisors, L.L.C.** (`NASDAQ: HLNE`, `CIK 0001433642`, `CRD 107962` / `SEC 801-56259`), **StepStone Group Inc.** (`NASDAQ: STEP`, `CIK 0001796022`; **StepStone Group LP**, `CRD 143628` / `SEC 801-67753`), **Aksia LLC** (`CRD 142714` / `SEC 801-67540`), and **Meketa Investment Group, Inc.** (`CRD 110705` / `SEC 801-57416`).
+
+6. **Ring 6 — Arbitral Forums, Indenture Trustees, Credit Rating Agencies & Litigation Counsel:**
+   * **American Arbitration Association, Inc. (`AAA`)**, **JAMS, Inc.**, **National Arbitration and Mediation (`NAM`)**, and **FedArb** — Mass-arbitration administrative forums enforcing `Cal. Civ. Proc. Code §§ 1281.97–1281.99` 30-day fee-default triggers.
+   * **U.S. Bank Trust Company, National Association** (`NYSE: USB`, `CIK 0000036104`) — Indenture Trustee across Uber Technologies, Inc.'s `$9,475.0M` Senior Unsecured Notes and `$1,125.0M` Exchangeable Senior Notes.
+   * **Wilmington Trust, National Association** (M&T Bank Corp., `NYSE: MTB`, `CIK 0000036270`) — Corporate trust & collateral agent.
+   * **S&P Global Ratings** (`NYSE: SPGI`, `CIK 0000064040`) & **Moody's Investors Service** (`NYSE: MCO`, `CIK 0001059556`).
+   * **Consovoy McCarthy PLLC**, **Labaton Keller Sucharow LLP**, and **Keller Postman LLC** (Plaintiff Mass-Arbitration & `§ 1981` Counsel) vs. **Paul, Weiss, Rifkind, Wharton & Garrison LLP** and **Gibson, Dunn & Crutcher LLP** (Corporate Defense Counsel in *Uber v. AAA* and *Abernathy v. DoorDash*).
+
+---
+
+### VII. Hard-Date Catalyst & Forbearance Calendar (`2020–2027`)
+
+| ISO Date | Statutory / Judicial / Regulatory Milestone | Forensic Credit & Discovery Vector |
+| :---: | :--- | :--- |
+| **`2020-02-10`** | ***Abernathy v. DoorDash, Inc.*, `438 F. Supp. 3d 1062` (`N.D. Cal. No. 3:19-cv-07545-WHA`)** | Judge William Alsup compels DoorDash (`CIK 0001792789`) to pay `$11M+` in AAA fees across `5,879` individual claimants, denouncing corporate attempts to evade mass-arbitration invoices as *"hypocrisy."* |
+| **`2020-03-23`** | ***Comcast Corp. v. National Assn. of African American-Owned Media*, `589 U.S. 327` (2020)** | U.S. Supreme Court locks `but-for` causation standard under `42 U.S.C. § 1981`—turning production SQL `CASE WHEN` boolean branches into self-proving liability confessions. |
+| **`2022-04-14`** | ***Uber Technologies, Inc. v. AAA*, `167 N.Y.S.3d 68` (`N.Y. App. Div. 1st Dep't`, Index No. `655549/21`)** | First Department affirms denial of Uber's (`CIK 0001543151`) injunction against **`$91.6M`** in net AAA fee schedules (`$107.1M` gross schedule; `$10.88M` immediate California batch across `7,771` claimants) triggered by `31,500` individual Unruh Act demands over `$3.99` delivery-fee waivers. |
+| **`2022-06-21`** | ***United States v. Meta Platforms, Inc.*, `S.D.N.Y. No. 1:22-cv-05187`** | DOJ Civil Rights Division enters federal consent decree dismantling Meta's (`CIK 0001326801`) Special Ad Audience lookalike algorithm for reconstructing protected-class discrimination via behavioral proxies. |
+| **`2024-06-03`** | ***American Alliance for Equal Rights v. Fearless Fund*, `11th Cir. No. 23-13138`** | Eleventh Circuit holds that race-gated commercial grant/promotion programs are contracts under `42 U.S.C. § 1981`, enjoy zero First Amendment exemption, and fail outside strict `29 C.F.R. Part 1608` predicates. |
+| **`2024-07-23`** | **FTC Section 6(b) Surveillance Pricing Compulsory Orders (`15 U.S.C. § 46(b)`)** | FTC votes `5–0` to compel full algorithmic pricing schema production from Mastercard (`CIK 0001141391`), JPMorgan Chase (`CIK 0000019617`), Accenture (`CIK 0001467373`), McKinsey, PROS (`CIK 0001392972`), Revionics, Bloomreach, and Task Software (`CIK 0000708821`). |
+| **`2026-02-24`** | ***Roberts v. Progressive Preferred Insurance Co.*, `6th Cir. No. 24-3454` (`N.D. Ohio No. 1:23-cv-01597`)** | Sixth Circuit appellate disposition scrutinizing corporate demographic grant/pricing eligibility under `42 U.S.C. § 1981` and Article III contractual standing. |
+| **`2026-06-27`** | **Expiration & Final Compliance Audit Window — *United States v. Meta* (`No. 1:22-cv-05187`)** | Four-year independent third-party monitoring milestone on Meta's algorithmic variance-reduction systems, setting the baseline evidentiary template for retail surveillance-pricing discovery. |
+| **`2027-01-15`** | **California `CCP § 1281.97` 30-Day Statutory Default & ASC 450 Audit Cutoff** | Rolling 30-day statutory default deadline for any consumer platform served with batch AAA/JAMS/NAM surveillance-pricing demands ahead of FY2026 Form 10-K PCAOB audit sign-off (`PwC ID 238`, `EY ID 42`, `KPMG ID 185`). |
+
+---
+
+### VIII. The Coase (1937) / Stigler (1961) Solvency Shield: Why Uniform Posted Pricing Is the Only Mathematically Sound Architecture
+
+In 1961, George Stigler demonstrated in *"The Economics of Information"* (`Journal of Political Economy`, Vol. 69, No. 3) that price dispersion is a measure of consumer ignorance—and that the economic function of a posted market price is to collapse search and transaction costs. When software architects and growth-marketing teams replace a uniform, publicly posted price with a stateful surveillance-pricing matrix that queries who the buyer is before quoting a price, they believe they are extracting First-Degree Pigouvian price discrimination.
+
+In reality, they are violating Ashby's Law of Requisite Variety (Ashby 1956) and importing unbounded statutory liability into the core of the Coasean firm (Coase 1937). Once a checkout price becomes a function of a user-state vector $\vec{x}_i \in \mathbb{R}^d$, every feature column in $\vec{x}_i$—and every collinear proxy in the company's Snowflake or Databricks warehouse—becomes a mandatory Rule 26 discovery target under `42 U.S.C. § 1981` and `Cal. Civ. Code §§ 51–52`.
+
+For general counsel, audit-committee chairs, and chief technology officers, the remediation architecture is binary and non-negotiable:
+
+1. **Enforce a Stateless Uniform Price Function ($P(i, t) = P(t) \perp \vec{x}_i$):** Strip every customer-identity, demographic, device-class, and behavioral-proxy variable out of the checkout pricing and fee-calculation microservice. If a promotional discount or delivery-fee waiver is offered at time $t$ for SKU or merchant $m$, it must be a stateless public offer available identically to every buyer on identical contractual terms, with zero dependence on the protected status of either the merchant or the consumer.
+2. **Hard-Code CI/CD Schema Gates Against `42 U.S.C. § 1981` / Unruh Protected Vectors:** Configure continuous-integration database linters so that any pull request joining a checkout pricing, fee-waiver, or underwriting table against demographic flags or high-collinearity census/device proxies fails the build automatically unless linked to a cryptographically signed, board-approved `29 C.F.R. Part 1608` remedial affirmative-action resolution and a pre-funded ASC 450 reserve.
+3. **Eliminate Uncapped Arbitral Fee Multiplier Asymmetry:** Recognize that mandatory individual arbitration clauses paired with `Cal. Civ. Proc. Code § 1281.97` do not shield a company from mass statutory claims—they weaponize them into 30-day, `$3,400`-per-claim liquidity calls.
+
+A corporation that charges every human being the exact same posted price for the exact same product at the exact same moment cannot be liquidated under `Cal. Civ. Code § 52(a)` or `42 U.S.C. § 1981`. A corporation that lets its marketing department write conditional price discrimination into its SQL database is simply waiting for a `$0.05` edge compiler to send it the invoice.

@@ -1,0 +1,106 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:gf_phase_transition.json",
+  "title": "Planetary Gf Phase Transition, Bits-vs-Atoms Stagnation Solution & IP Cartel Liquidation Schema",
+  "description": "Validates the resolution of Thiel's Bits-vs-Atoms stagnation paradox via monopoly/IP liquidation (17 U.S.C. 102(b) & 35 U.S.C. 103 KSR) on Node_Local and population-wide latent OOD harvesting.",
+  "type": "object",
+  "required": [
+    "spec_version",
+    "jurisdiction_context",
+    "cfaa_compliance_attestation",
+    "thiel_bits_atoms_and_ip_liquidation",
+    "latent_ood_population_harvesting",
+    "planetary_phase_state"
+  ],
+  "properties": {
+    "spec_version": {
+      "type": "string",
+      "const": "SPEC-2026-GF-PHASE-TRANSITION-v1.3"
+    },
+    "jurisdiction_context": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}$"
+    },
+    "cfaa_compliance_attestation": {
+      "type": "boolean",
+      "const": true
+    },
+    "thiel_bits_atoms_and_ip_liquidation": {
+      "type": "object",
+      "required": [
+        "root_cause_of_post_1971_atoms_stagnation",
+        "legacy_monopolist_rent_capture_fraction",
+        "post_opstack_innovator_value_retention_fraction",
+        "clean_room_17_usc_102b_isomorphism_valid",
+        "ksr_35_usc_103_patent_thicket_rent_remaining",
+        "marginal_economic_rent_of_pure_gc_memorization"
+      ],
+      "properties": {
+        "root_cause_of_post_1971_atoms_stagnation": {
+          "type": "string",
+          "const": "MONOPOLY_GC_BUREAUCRACY_AND_IP_THICKET_ENCLOSURE"
+        },
+        "legacy_monopolist_rent_capture_fraction": {
+          "type": "number",
+          "minimum": 0.85
+        },
+        "post_opstack_innovator_value_retention_fraction": {
+          "type": "number",
+          "minimum": 0.98
+        },
+        "clean_room_17_usc_102b_isomorphism_valid": {
+          "type": "boolean",
+          "const": true
+        },
+        "ksr_35_usc_103_patent_thicket_rent_remaining": {
+          "type": "number",
+          "const": 0.0
+        },
+        "marginal_economic_rent_of_pure_gc_memorization": {
+          "type": "number",
+          "const": 0.0
+        }
+      }
+    },
+    "latent_ood_population_harvesting": {
+      "type": "object",
+      "required": [
+        "ood_paradigm_originator",
+        "population_latent_ood_activation_multiplier",
+        "century_atoms_compounding_ratio"
+      ],
+      "properties": {
+        "ood_paradigm_originator": {
+          "type": "string",
+          "const": "NODE_BIO_20W_FLUID_INTELLIGENCE"
+        },
+        "population_latent_ood_activation_multiplier": {
+          "type": "number",
+          "minimum": 25.0
+        },
+        "century_atoms_compounding_ratio": {
+          "type": "number",
+          "minimum": 200.0
+        }
+      }
+    },
+    "planetary_phase_state": {
+      "type": "object",
+      "required": [
+        "coasean_friction_below_critical_threshold",
+        "dominant_civilizational_attractor"
+      ],
+      "properties": {
+        "coasean_friction_below_critical_threshold": {
+          "type": "boolean",
+          "const": true
+        },
+        "dominant_civilizational_attractor": {
+          "type": "string",
+          "const": "ATTRACTOR_FIRST_PRINCIPLES_GF_PHYSICALISM"
+        }
+      }
+    }
+  },
+  "additionalProperties": false
+}

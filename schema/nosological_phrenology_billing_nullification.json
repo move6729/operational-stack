@@ -1,0 +1,208 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:nosological_phrenology_billing_nullification.json",
+  "title": "Nosological Phrenology Billing Nullification Record",
+  "description": "Machine-readable record binding the sovereign-outlier screen, FRE 702 reliability collapse, Bayes-inversion exaggeration factor, non-falsifiability identity, and False Claims Act liquidation of phrenologically derived psychiatric billing.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "jurisdiction_context": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}$",
+      "description": "ISO 3166-1 alpha-2 jurisdiction code governing the statutory module."
+    },
+    "cfaa_18_usc_1030_compliance_attestation": {
+      "type": "object",
+      "description": "Zero-unauthorized-access attestation under 18 U.S.C. 1030.",
+      "additionalProperties": false,
+      "properties": {
+        "attested": { "const": true },
+        "unauthorized_access_events": { "const": 0 },
+        "data_provenance_basis": { "type": "string", "minLength": 1 }
+      },
+      "required": ["attested", "unauthorized_access_events", "data_provenance_basis"]
+    },
+    "sovereign_outlier_screen": {
+      "type": "object",
+      "description": "EQ_01: 2D->1D phrenological dimensional collapse.",
+      "additionalProperties": false,
+      "properties": {
+        "theta_g": { "const": 0.8 },
+        "theta_e": { "const": 0.5 },
+        "s_crit_threshold": { "const": 0.8 },
+        "observed_g": { "type": "number", "minimum": 0.99, "maximum": 1.0 },
+        "observed_e": { "type": "number", "minimum": 0.99, "maximum": 1.0 },
+        "true_clinical_dysfunction_d": { "const": 0.0 },
+        "surface_checklist_score_s_c": { "const": 0.99 },
+        "p_false_positive_given_sovereign_outlier": { "const": 1.0 }
+      },
+      "required": [
+        "theta_g",
+        "theta_e",
+        "s_crit_threshold",
+        "observed_g",
+        "observed_e",
+        "true_clinical_dysfunction_d",
+        "surface_checklist_score_s_c",
+        "p_false_positive_given_sovereign_outlier"
+      ]
+    },
+    "diagnostic_reliability": {
+      "type": "object",
+      "description": "EQ_02: inter-rater kappa reliability below the Daubert floor.",
+      "additionalProperties": false,
+      "properties": {
+        "kappa_gad": { "const": 0.2 },
+        "kappa_aspd": { "const": 0.21 },
+        "kappa_mixed": { "const": 0.24 },
+        "kappa_mdd": { "const": 0.28 },
+        "kappa_schizoaffective": { "const": 0.46 },
+        "inter_rater_disagreement_min": { "const": 0.54 },
+        "inter_rater_disagreement_max": { "const": 0.8 }
+      },
+      "required": [
+        "kappa_gad",
+        "kappa_aspd",
+        "kappa_mixed",
+        "kappa_mdd",
+        "kappa_schizoaffective",
+        "inter_rater_disagreement_min",
+        "inter_rater_disagreement_max"
+      ]
+    },
+    "bayesian_ppv_collapse": {
+      "type": "object",
+      "description": "EQ_02: PPV collapse below the FRE 702 preponderance threshold.",
+      "additionalProperties": false,
+      "properties": {
+        "prevalence_pi": { "const": 0.08 },
+        "sensitivity_se": { "const": 0.6 },
+        "specificity_sp": { "const": 0.85 },
+        "ppv_exact": { "const": 0.25806451612903225 },
+        "ppv_pct_rounded": { "const": 25.81 },
+        "fre_702_preponderance_threshold": { "const": 0.5 },
+        "fre_702_preponderance_satisfied": { "const": false }
+      },
+      "required": [
+        "prevalence_pi",
+        "sensitivity_se",
+        "specificity_sp",
+        "ppv_exact",
+        "ppv_pct_rounded",
+        "fre_702_preponderance_threshold",
+        "fre_702_preponderance_satisfied"
+      ]
+    },
+    "neural_crest_validation": {
+      "type": "object",
+      "description": "EQ_03: Bayes-inversion phrenology exaggeration factor.",
+      "additionalProperties": false,
+      "properties": {
+        "neural_crest_correlation_r": { "const": 0.15 },
+        "variance_explained_r2": { "const": 0.0225 },
+        "unpredicted_sovereign_variance_u": { "const": 0.9775 },
+        "phrenology_exaggeration_factor_lambda": { "const": 44.44444444444444 }
+      },
+      "required": [
+        "neural_crest_correlation_r",
+        "variance_explained_r2",
+        "unpredicted_sovereign_variance_u",
+        "phrenology_exaggeration_factor_lambda"
+      ]
+    },
+    "information_theoretic_falsifiability": {
+      "type": "object",
+      "description": "EQ_04: anosognosia / Criterion-B non-falsifiability identity.",
+      "additionalProperties": false,
+      "properties": {
+        "p_confirm_given_observation": { "const": 1.0 },
+        "shannon_mutual_information_bits": { "const": 0.0 },
+        "falsifiable": { "const": false }
+      },
+      "required": [
+        "p_confirm_given_observation",
+        "shannon_mutual_information_bits",
+        "falsifiable"
+      ]
+    },
+    "historical_baseline": {
+      "type": "object",
+      "description": "Locked historical and institutional baseline constants.",
+      "additionalProperties": false,
+      "properties": {
+        "rockefeller_dfa_munich_grant_usd": { "const": 325000.0 },
+        "sterilization_statute_1933_victims": { "const": 400000 },
+        "aktion_t4_meldebogen_victims_min": { "const": 250000 },
+        "aktion_t4_meldebogen_victims_max": { "const": 300000 },
+        "dsm5_task_force_pharma_tie_pct": { "const": 69.0 },
+        "dsm5_mood_psychotic_pharma_tie_pct": { "const": 83.0 },
+        "dsm5_sleep_wake_pharma_tie_pct": { "const": 100.0 },
+        "doj_fca_historical_settlements_total_usd": { "const": 4436800000.0 },
+        "settlement_components_usd": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "risperdal": { "const": 2200000000.0 },
+            "zyprexa": { "const": 1415000000.0 },
+            "seroquel": { "const": 520000000.0 },
+            "geodon": { "const": 301800000.0 }
+          },
+          "required": ["risperdal", "zyprexa", "seroquel", "geodon"]
+        }
+      },
+      "required": [
+        "rockefeller_dfa_munich_grant_usd",
+        "sterilization_statute_1933_victims",
+        "aktion_t4_meldebogen_victims_min",
+        "aktion_t4_meldebogen_victims_max",
+        "dsm5_task_force_pharma_tie_pct",
+        "dsm5_mood_psychotic_pharma_tie_pct",
+        "dsm5_sleep_wake_pharma_tie_pct",
+        "doj_fca_historical_settlements_total_usd",
+        "settlement_components_usd"
+      ]
+    },
+    "fca_liquidation": {
+      "type": "object",
+      "description": "EQ_05: CPT / neuroleptic capitation and False Claims Act liquidation.",
+      "additionalProperties": false,
+      "properties": {
+        "fca_block_claims_n": { "const": 10000 },
+        "cpt_eval_cost_usd": { "const": 180.0 },
+        "annual_neuroleptic_rx_cost_usd": { "const": 4200.0 },
+        "per_claim_damages_usd": { "const": 4380.0 },
+        "fca_single_damages_usd": { "const": 43800000.0 },
+        "fca_treble_damages_usd": { "const": 131400000.0 },
+        "fca_min_penalty_per_claim_usd": { "const": 13946.0 },
+        "fca_max_penalty_per_claim_usd": { "const": 27894.0 },
+        "fca_total_min_penalties_usd": { "const": 139460000.0 },
+        "fca_total_liability_min_usd": { "const": 270860000.0 },
+        "fca_relator_bounty_25pct_usd": { "const": 67715000.0 }
+      },
+      "required": [
+        "fca_block_claims_n",
+        "cpt_eval_cost_usd",
+        "annual_neuroleptic_rx_cost_usd",
+        "per_claim_damages_usd",
+        "fca_single_damages_usd",
+        "fca_treble_damages_usd",
+        "fca_min_penalty_per_claim_usd",
+        "fca_max_penalty_per_claim_usd",
+        "fca_total_min_penalties_usd",
+        "fca_total_liability_min_usd",
+        "fca_relator_bounty_25pct_usd"
+      ]
+    }
+  },
+  "required": [
+    "jurisdiction_context",
+    "cfaa_18_usc_1030_compliance_attestation",
+    "sovereign_outlier_screen",
+    "diagnostic_reliability",
+    "bayesian_ppv_collapse",
+    "neural_crest_validation",
+    "information_theoretic_falsifiability",
+    "historical_baseline",
+    "fca_liquidation"
+  ]
+}

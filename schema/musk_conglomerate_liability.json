@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:musk_conglomerate_liability.json",
+  "title": "Systemic Conglomerate Liability & Actuarial Exposure Schema",
+  "type": "object",
+  "required": [
+    "spec_version",
+    "jurisdiction_context",
+    "cfaa_compliance_attestation",
+    "conglomerate_contagion_metrics"
+  ],
+  "properties": {
+    "spec_version": {
+      "type": "string",
+      "const": "AUDIT-2026-MUSK-CONGLOMERATE-LIABILITY-v1.4"
+    },
+    "jurisdiction_context": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}$"
+    },
+    "cfaa_compliance_attestation": {
+      "type": "boolean",
+      "const": true
+    },
+    "conglomerate_contagion_metrics": {
+      "type": "object",
+      "required": [
+        "fsd_level4_liability_shift_to_oem",
+        "kessler_syndrome_orbital_uninsured_tail",
+        "share_pledging_margin_call_contagion_active"
+      ],
+      "properties": {
+        "fsd_level4_liability_shift_to_oem": {
+          "type": "boolean",
+          "const": true
+        },
+        "kessler_syndrome_orbital_uninsured_tail": {
+          "type": "boolean",
+          "const": true
+        },
+        "share_pledging_margin_call_contagion_active": {
+          "type": "boolean",
+          "const": true
+        }
+      }
+    }
+  }
+}

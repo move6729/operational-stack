@@ -1,0 +1,320 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opstack:schema:thermodynamic_prefill_siphon_and_promis_kv_cache_audit.json",
+  "title": "Thermodynamic Prefill Siphon & PROMIS KV-Cache Audit Bundle",
+  "description": "JSON Schema (Draft 2020-12) for the thermodynamic H100 FP8 prefill-floor audit, asymmetric prefill siphon index (EQ-2) endpoint gate matrix, Vector V HBM custody audit, 6-ring entity/instrument cross-index, parameterized credit waterfall, catalyst calendar, and sovereign remediation gates. By: Operational Stack Cybernetics Group (move6729@proton.me). License: Unlicense.",
+  "type": "object",
+  "required": ["jurisdiction_context", "cfaa_18_usc_1030_compliance_attestation", "itar_ear_public_domain_boundary", "thermodynamic_prefill_audit", "endpoint_siphon_matrix", "vector_v_hbm_custody_audit", "entity_and_instrument_ids", "credit_waterfall", "catalyst_calendar", "sovereign_remediation_gates"],
+  "properties": {
+    "jurisdiction_context": {
+      "description": "ISO 3166-1 alpha-2 jurisdiction modules locally activated on the node.",
+      "type": "array", "minItems": 1, "uniqueItems": true,
+      "items": {"type": "string", "pattern": "^[A-Z]{2}$"},
+      "examples": [["US"], ["US", "IL"], ["US", "EU", "GB"]]
+    },
+    "cfaa_18_usc_1030_compliance_attestation": {
+      "description": "Attestation that zero unauthorized-access vectors (18 U.S.C. § 1030) were exercised; payloads lacking chain-of-custody attestation fail local ingestion gates.",
+      "const": true
+    },
+    "itar_ear_public_domain_boundary": {
+      "description": "22 C.F.R. § 120.34 Public Domain / 15 C.F.R. § 734.7 boundary: zero USML/CCL-controlled hardware blueprints, circuit layouts, or embedded trigger firmware in the bundle.",
+      "const": true
+    },
+    "thermodynamic_prefill_audit": {
+      "type": "object",
+      "required": ["h100_constants", "prefill_floor_table", "prefill_dump_subsidy", "ide_workload_asymmetry"],
+      "properties": {
+        "h100_constants": {
+          "type": "object",
+          "required": ["fp8_peak_tflops", "mfu", "eff_tflops", "eff_flops_per_s", "hourly_cost_usd", "sys_overhead_alpha"],
+          "properties": {
+            "fp8_peak_tflops": {"const": 989.0},
+            "mfu": {"const": 0.55},
+            "eff_tflops": {"const": 543.95},
+            "eff_flops_per_s": {"const": 543950000000000.0},
+            "hourly_cost_usd": {"const": 1.65},
+            "sys_overhead_alpha": {"const": 3.24140625}
+          }
+        },
+        "prefill_floor_table": {
+          "description": "Locked floors via C_Floor_In(P) = round(0.0350 * P/32, 4); FLOPs_1M = 2.0 * P_active_B * 1e15.",
+          "type": "array", "minItems": 3,
+          "items": {
+            "type": "object",
+            "required": ["p_active_b", "flops_1m_pflops", "floor_usd_per_m"],
+            "properties": {
+              "p_active_b": {"type": "number", "enum": [16.0, 32.0, 70.0]},
+              "flops_1m_pflops": {"type": "number"},
+              "floor_usd_per_m": {"type": "number"}
+            }
+          }
+        },
+        "prefill_dump_subsidy": {
+          "type": "object",
+          "required": ["p_in_dumped_usd_per_m", "floor_usd_per_m", "subsidy_per_m_usd", "subsidy_discount_pct"],
+          "properties": {
+            "p_in_dumped_usd_per_m": {"const": 0.006},
+            "floor_usd_per_m": {"const": 0.035},
+            "subsidy_per_m_usd": {"const": 0.029},
+            "subsidy_discount_pct": {"const": 82.86}
+          }
+        },
+        "ide_workload_asymmetry": {
+          "type": "object",
+          "required": ["n_in_tokens", "n_out_tokens", "n_total_tokens", "input_share_pct", "output_share_pct", "prefill_subsidy_per_50k_scan_usd"],
+          "properties": {
+            "n_in_tokens": {"const": 50000},
+            "n_out_tokens": {"const": 4000},
+            "n_total_tokens": {"const": 54000},
+            "input_share_pct": {"const": 92.59},
+            "output_share_pct": {"const": 7.41},
+            "prefill_subsidy_per_50k_scan_usd": {"const": 0.00145}
+          }
+        }
+      }
+    },
+    "endpoint_siphon_matrix": {
+      "description": "EQ-2: psi_siphon = max(0, 1 - P_in/C_floor) * ((P_out/P_in)/4.00) * (2 if dual_mandate).",
+      "type": "array", "minItems": 5,
+      "items": {
+        "type": "object",
+        "required": ["endpoint", "p_active_b", "c_floor_usd_per_m", "p_in_usd_per_m", "p_out_usd_per_m", "dual_mandate", "subsidy_pct", "ratio", "psi_siphon", "gate"],
+        "properties": {
+          "endpoint": {"type": "string", "enum": ["PurePlay_Tier1_ZDR_Host", "Wafer_Fast_ZDR_Host", "Morph_SubFloor_FastApply_32B_Class", "Relace_SeriesA_FastApply", "Extreme_Dumped_Prefill_Wrapper"]},
+          "p_active_b": {"type": "number"},
+          "c_floor_usd_per_m": {"type": "number"},
+          "p_in_usd_per_m": {"type": "number"},
+          "p_out_usd_per_m": {"type": "number"},
+          "dual_mandate": {"type": "boolean"},
+          "subsidy_pct": {"type": "number", "minimum": 0, "maximum": 100},
+          "ratio": {"type": "number", "minimum": 0},
+          "psi_siphon": {"type": "number", "minimum": 0},
+          "gate": {"type": "string", "enum": ["PASS_ALLOWLIST", "WARN_SUBSIDIZED_PREFILL", "WARN_DUAL_MANDATE", "REJECT_DUAL_MANDATE_SIPHON", "CRITICAL_PREFILL_SIPHON_REJECT"]}
+        }
+      }
+    },
+    "vector_v_hbm_custody_audit": {
+      "type": "object",
+      "required": ["cc_bounce_buffer_ttft_benchmarks", "latency_sensitive_overhead_range_pct", "ma_vc_ledger_usd_m", "vector_v_scheduler_capstack_m", "nebius_group_nv_capstack_usd_m", "effective_zdr_nullification"],
+      "properties": {
+        "cc_bounce_buffer_ttft_benchmarks": {
+          "description": "Phala H100 NVL + AMD EPYC SEV-SNP CC-On vs CC-Off TTFT (arXiv:2409.03992v2).",
+          "type": "array", "minItems": 2,
+          "items": {
+            "type": "object",
+            "required": ["model", "ttft_on_s", "ttft_off_s", "reported_table_pin_pct"],
+            "properties": {
+              "model": {"type": "string"},
+              "ttft_on_s": {"type": "number", "exclusiveMinimum": 0},
+              "ttft_off_s": {"type": "number", "exclusiveMinimum": 0},
+              "reported_table_pin_pct": {"type": "number"}
+            }
+          }
+        },
+        "latency_sensitive_overhead_range_pct": {
+          "description": "OpenReview:2YKvZQeom2 latency-sensitive CC overhead range.",
+          "type": "array", "prefixItems": [{"const": 21.0}, {"const": 28.0}], "items": false
+        },
+        "ma_vc_ledger_usd_m": {
+          "type": "object",
+          "required": ["Run:ai (NVIDIA)", "Atero (Crusoe)", "Decart AI"],
+          "properties": {
+            "Run:ai (NVIDIA)": {"const": 700.0},
+            "Atero (Crusoe)": {"const": 150.0},
+            "Decart AI": {"const": 88.5}
+          }
+        },
+        "vector_v_scheduler_capstack_m": {"const": 938.5},
+        "nebius_group_nv_capstack_usd_m": {"const": 21600.0},
+        "effective_zdr_nullification": {
+          "type": "object",
+          "required": ["paper_zdr", "cc_on", "miluim_5768_2008", "penal_113a_gag", "effective_zdr"],
+          "properties": {
+            "paper_zdr": {"const": 1},
+            "cc_on": {"const": false},
+            "miluim_5768_2008": {"const": true},
+            "penal_113a_gag": {"const": true},
+            "effective_zdr": {"const": 0.0}
+          }
+        }
+      }
+    },
+    "entity_and_instrument_ids": {
+      "description": "6-category multi-counterparty security-master cross-index (exact legal names, tickers, SEC cik/crd/801- numbers, PCAOB Firm IDs, NAIC codes, court dockets), verified live against SEC EDGAR/IAPD registries.",
+      "type": "object",
+      "required": ["primary_target_gp_sponsor", "public_bdc_co_lenders_credit_funds", "regulated_insurer_bermuda_sidecar", "pcaob_auditors_valuation_agents_admins", "foia_public_pension_lp_swfs_gatekeepers", "trustees_admin_agents_ratings_restructuring_counsel"],
+      "properties": {
+        "primary_target_gp_sponsor": {
+          "type": "array", "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["legal_name", "cik_or_crd", "court_dockets"],
+            "properties": {
+              "legal_name": {"type": "string", "minLength": 1},
+              "tickers": {"type": "array", "items": {"type": "string"}},
+              "cik_or_crd": {"type": "string", "pattern": "^(CIK[0-9]{10}|801-[0-9]{6}|802-[0-9]{6}|[0-9]{6})$"},
+              "naic_code": {"type": "string"},
+              "pcaob_firm_id": {"type": "string"},
+              "court_dockets": {"type": "array", "items": {"type": "string", "pattern": "^[0-9]{4}-[a-zA-Z]+-[0-9-]+$"}}
+            }
+          }
+        },
+        "public_bdc_co_lenders_credit_funds": {
+          "type": "array", "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["legal_name", "ticker", "cik", "filing_series"],
+            "properties": {
+              "legal_name": {"type": "string"},
+              "ticker": {"type": "string", "pattern": "^[A-Z]{2,5}$"},
+              "cik": {"type": "string", "pattern": "^[0-9]{10}$"},
+              "filing_series": {"type": "string", "enum": ["NPORT-P", "10-Q", "10-K"]},
+              "soi_fair_value_mark": {"type": "number"},
+              "pik_or_nonaccrual": {"type": ["string", "boolean"]}
+            }
+          }
+        },
+        "regulated_insurer_bermuda_sidecar": {
+          "type": "array", "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["legal_name", "schedule_ba_or_sidecar"],
+            "properties": {
+              "legal_name": {"type": "string"},
+              "naic_code": {"type": "string"},
+              "schedule_ba_or_sidecar": {"type": "boolean"}
+            }
+          }
+        },
+        "pcaob_auditors_valuation_agents_admins": {
+          "type": "array", "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["legal_name", "role"],
+            "properties": {
+              "legal_name": {"type": "string"},
+              "role": {"type": "string", "enum": ["auditor", "valuation_agent", "fund_admin"]},
+              "pcaob_firm_id": {"type": "string"}
+            }
+          }
+        },
+        "foia_public_pension_lp_swfs_gatekeepers": {
+          "type": "array", "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["legal_name", "lp_capital_at_risk_usd_m"],
+            "properties": {
+              "legal_name": {"type": "string"},
+              "lp_capital_at_risk_usd_m": {"type": "number"},
+              "dpi": {"type": ["number", "null"]},
+              "tvpi": {"type": ["number", "null"]}
+            }
+          }
+        },
+        "trustees_admin_agents_ratings_restructuring_counsel": {
+          "type": "array", "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["legal_name", "role"],
+            "properties": {
+              "legal_name": {"type": "string"},
+              "role": {"type": "string", "enum": ["indenture_trustee", "admin_agent", "rating_agency", "restructuring_counsel", "litigation_counsel"]},
+              "deal_or_litigation_docket": {"type": "string"}
+            }
+          }
+        }
+      }
+    },
+    "credit_waterfall": {
+      "type": "object",
+      "required": ["tranches", "total_debt_m", "total_stack_m", "recovery_at_2150_m", "recovery_at_780_m", "tranche_recovery_function"],
+      "properties": {
+        "tranches": {
+          "type": "array", "minItems": 4,
+          "items": {
+            "type": "object",
+            "required": ["tranche", "principal_m", "seniority", "cumulative_m"],
+            "properties": {
+              "tranche": {"type": "string"},
+              "principal_m": {"type": "number", "exclusiveMinimum": 0},
+              "coupon_or_pik": {"type": "string"},
+              "collateral_or_guarantor_box": {"type": "string"},
+              "seniority": {"type": "integer", "minimum": 1, "maximum": 4},
+              "cumulative_m": {"type": "number"},
+              "breakeven_ev_threshold_m": {"type": "number"}
+            }
+          }
+        },
+        "total_debt_m": {"const": 1400.0},
+        "total_stack_m": {"const": 2150.0},
+        "recovery_at_2150_m": {
+          "type": "object",
+          "required": ["tranche_cents", "total_debt_cents_on_dollar"],
+          "properties": {
+            "tranche_cents": {"type": "array", "minItems": 4, "items": {"const": 100.0}},
+            "total_debt_cents_on_dollar": {"const": 100.0}
+          }
+        },
+        "recovery_at_780_m": {
+          "type": "object",
+          "required": ["senior_gpu_abs_recovery_m", "senior_gpu_abs_cents", "first_lien_unitranche_recovery_m", "first_lien_unitranche_cents", "holdco_convert_pik_recovery_m", "holdco_convert_pik_cents", "venture_preferred_equity_recovery_m", "venture_preferred_equity_cents", "total_debt_recovery_m", "total_debt_cents_on_dollar"],
+          "properties": {
+            "senior_gpu_abs_recovery_m": {"const": 450.0},
+            "senior_gpu_abs_cents": {"const": 100.0},
+            "first_lien_unitranche_recovery_m": {"const": 330.0},
+            "first_lien_unitranche_cents": {"const": 55.0},
+            "holdco_convert_pik_recovery_m": {"const": 0.0},
+            "holdco_convert_pik_cents": {"const": 0.0},
+            "venture_preferred_equity_recovery_m": {"const": 0.0},
+            "venture_preferred_equity_cents": {"const": 0.0},
+            "total_debt_recovery_m": {"const": 780.0},
+            "total_debt_cents_on_dollar": {"const": 55.71}
+          }
+        },
+        "tranche_recovery_function": {
+          "description": "Parameterized waterfall mapping EV to exact dollar and cent-on-the-dollar recovery vectors, implemented in proofs/thermodynamic_prefill_siphon_and_promis_kv_cache_audit_proof.py.",
+          "const": "tranche_recovery(ev_m)"
+        }
+      }
+    },
+    "catalyst_calendar": {
+      "description": "Hard-date catalysts: forbearance expirations, grace-period cures, court hearings, maturity cliffs.",
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["date", "event"],
+        "properties": {
+          "date": {"type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"},
+          "event": {"type": "string"},
+          "venue_or_docket": {"type": "string"}
+        }
+      }
+    },
+    "sovereign_remediation_gates": {
+      "type": "object",
+      "required": ["cfaa_gate", "itar_ear_gate", "zdr_routing_gate", "prefill_siphon_gate", "statutory_custody_gate", "capital_floor_gate"],
+      "properties": {
+        "cfaa_gate": {"const": true},
+        "itar_ear_gate": {"const": true},
+        "zdr_routing_gate": {"type": "string", "description": "Zero-PRC-origin-weight routing isolation and Western-ZDR host enforcement."},
+        "prefill_siphon_gate": {"type": "string", "enum": ["PASS_ALLOWLIST", "WARN_SUBSIDIZED_PREFILL", "WARN_DUAL_MANDATE", "REJECT_DUAL_MANDATE_SIPHON", "CRITICAL_PREFILL_SIPHON_REJECT"]},
+        "statutory_custody_gate": {
+          "type": "object",
+          "required": ["effective_zdr"],
+          "properties": {
+            "effective_zdr": {"const": 0.0}
+          }
+        },
+        "capital_floor_gate": {
+          "type": "object",
+          "required": ["facility_or_claim_usd_m", "floor_usd_m"],
+          "properties": {
+            "facility_or_claim_usd_m": {"type": "number", "minimum": 250},
+            "apex_counterparty_present": {"type": "boolean"},
+            "floor_usd_m": {"type": "number", "enum": [250, 50], "description": "$250M floor, or $50M with Tier-1 Apex counterparty present."}
+          }
+        }
+      }
+    }
+  }
+}
